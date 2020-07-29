@@ -5,12 +5,12 @@ helpviewer_keywords:
 - operators [C], unary
 - unary operators
 ms.assetid: 743e00b1-f874-4c0d-b211-8c24d4af9739
-ms.openlocfilehash: c0978464c21eff315936b75aa46e1df24e72506d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6c621bedca71f33595a7a282d0009a9ced242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312737"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217138"
 ---
 # <a name="c-unary-operators"></a>C 一元運算子
 
@@ -22,16 +22,16 @@ ms.locfileid: "62312737"
 
 **++**  *一元運算式*
 
-`--`  *一元運算式*
+`--`  *unary-expression*
 
 *unary-operator cast-expression*
 
-**sizeof**  *unary-expression*
+**`sizeof`**  *一元運算式*
 
 **sizeof (**  *type-name*  **)**
 
 *一元運算子*： ** &  \* +-** `~` **！** 的其中一個
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 運算子](../c-language/c-operators.md)

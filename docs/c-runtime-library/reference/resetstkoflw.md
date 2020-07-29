@@ -29,12 +29,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: b19b66279427aa4623cff037e67067096eb6bd42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f4d5d930ebdc487c3c2bcc2f93494a25528c438
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917790"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216774"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -79,7 +79,7 @@ int _resetstkoflw( void );
 
 請注意，此時，堆疊不再有防護頁面。 下次程式堆疊一直成長到最後時，在該處應該有防護頁面，程式會寫入超過堆疊的結尾，並造成存取違規。
 
-呼叫 **_resetstkoflw** ，在堆疊溢位例外狀況之後執行復原時，還原 [保護] 頁面。 此函式可以從 **__except**區塊的主體內或 **__except**區塊外部呼叫。 不過，它的使用時機有一些限制。 永遠不應該從呼叫 **_resetstkoflw** ：
+呼叫 **_resetstkoflw** ，在堆疊溢位例外狀況之後執行復原時，還原 [保護] 頁面。 此函式可以從區塊的主要主體內 **`__except`** 或區塊外呼叫 **`__except`** 。 不過，它的使用時機有一些限制。 永遠不應該從呼叫 **_resetstkoflw** ：
 
 - 篩選條件運算式。
 
@@ -87,17 +87,17 @@ int _resetstkoflw( void );
 
 - 從篩選函式呼叫的函式。
 
-- **catch** 區塊。
+- **`catch`** 區塊。
 
-- **__Finally**區塊。
+- **`__finally`** 區塊。
 
 在這些點，堆疊尚無法充分回溯。
 
-堆疊溢位例外狀況會產生為結構化例外狀況，而不是 c + + 例外狀況，因此 **_resetstkoflw**在一般**catch**區塊中沒有用處，因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。
+堆疊溢位例外狀況會產生為結構化例外狀況，而不是 c + + 例外狀況，因此 **_resetstkoflw**在一般區塊中沒有用處， **`catch`** 因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。
 
 在從結構化例外狀況翻譯器函式所擲回例外狀況達到的 C++ catch 區塊中呼叫 **_resetstkoflw** 並不安全。 在此情況下，不會釋放堆疊空間，而且一直達到 catch 區塊之外以前都不會重設堆疊指標，即使已經在 catch 區塊之前呼叫任何可破壞物件的解構函式。 在堆疊空間釋放且堆疊指標重設之前，不應該呼叫此函式。 因此，它只應該在結束 catch 區塊之後呼叫。 在 catch 區塊中應該盡可能減少使用堆疊空間，因為如果堆疊溢位發生在 catch 區塊中，而 catch 區塊本身正在嘗試從先前堆疊溢位復原時，這樣的堆疊溢位是無法復原的，並且可能造成程式停止回應，因為 catch 區塊中的溢位會觸發例外狀況，該例外狀況又是由相同的 catch 區塊處理。
 
-在有些情況下 **_resetstkoflw** 可能會失敗，即使是使用於正確的位置，例如在 **__except** 區塊內。 如果即使是在回溯堆疊之後，仍沒有足夠的堆疊空間可執行 **_resetstkoflw** 而不寫入至堆疊的最後一頁，那麼 **_resetstkoflw** 便無法將堆疊的最後一頁重設為防護頁面，並且會傳回 0，表示失敗。 因此，安全地使用此函式應該要包含檢查傳回值，而不是假設堆疊的使用是安全的。
+在某些情況下，即使在正確的位置（例如在區塊內）使用 **_resetstkoflw**也會失敗 **`__except`** 。 如果即使是在回溯堆疊之後，仍沒有足夠的堆疊空間可執行 **_resetstkoflw** 而不寫入至堆疊的最後一頁，那麼 **_resetstkoflw** 便無法將堆疊的最後一頁重設為防護頁面，並且會傳回 0，表示失敗。 因此，安全地使用此函式應該要包含檢查傳回值，而不是假設堆疊的使用是安全的。
 
 使用 **/clr**編譯應用程式時，結構化例外狀況處理不會攔截**STATUS_STACK_OVERFLOW**例外狀況（請參閱[/Clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)）。
 
@@ -217,7 +217,7 @@ loop #10
 resetting stack overflow
 ```
 
-### <a name="description"></a>描述
+### <a name="description"></a>說明
 
 下列範例顯示在結構化例外狀況轉換成 c + + 例外狀況的程式中，建議使用 **_resetstkoflw** 。
 

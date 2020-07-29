@@ -28,12 +28,12 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c87a63a9ed94eb1473230aedb5e9c17fcc6410b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216839"
 ---
 # <a name="_query_new_handler"></a>_query_new_handler
 
@@ -53,7 +53,7 @@ _PNH _query_new_handler(
 
 ## <a name="remarks"></a>備註
 
-C++ **_Query_new_handler**函數會傳回C++ [_set_new_handler](set-new-handler.md)函數所設定的目前例外狀況處理函式的位址。 如果**new**運算子無法配置記憶體，則會使用 **_set_new_handler**來指定要取得控制的例外狀況處理函式。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
+C + + **_query_new_handler**函式會傳回 c + + [_set_new_handler](set-new-handler.md)函數所設定的目前例外狀況處理函式的位址。 **_set_new_handler**如果 **`new`** 運算子無法配置記憶體，則會使用 _set_new_handler 來指定要取得控制的例外狀況處理函數。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
 
 ## <a name="requirements"></a>需求
 
@@ -61,7 +61,7 @@ C++ **_Query_new_handler**函數會傳回C++ [_set_new_handler](set-new-handler.
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -70,4 +70,4 @@ C++ **_Query_new_handler**函數會傳回C++ [_set_new_handler](set-new-handler.
 ## <a name="see-also"></a>另請參閱
 
 [記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[受](free.md)<br/>

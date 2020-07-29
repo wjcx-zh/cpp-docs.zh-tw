@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917826"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216787"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -71,13 +71,13 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ## <a name="return-value"></a>傳回值
 
-**remquo**會傳回*x* / *y*的浮點餘數。 如果*y*的值是0.0，則**remquo**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**會傳回*x*  /  *y*的浮點餘數。 如果*y*的值是0.0，則**remquo**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**Remquo**函數會計算*x* / *y*的浮點餘數*f* ，例如*x* = *i* \* *y* + *f*，其中*i*是整數， *f*具有與*x*相同的正負號，而*f*的絕對值小於*y*的絕對值。
+**Remquo**函數會計算*x*y 的浮點餘數*f*  /  *y* ，例如*x*  =  *i* \* *y*  +  *f*，其中*i*是整數， *f*具有與*x*相同的正負號，而*f*的絕對值小於*y*的絕對值。
 
-C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**值之**remquo**的多載。 在 C 程式中， **remquo**一律採用兩個**雙**精確度引數，並傳回**雙精度浮點數**。
+C + + 允許多載，因此您可以呼叫採用並傳回或值之**remquo**的多載 **`float`** **`long double`** 。 在 C 程式中， **remquo**一律會接受兩個 **`double`** 引數，並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

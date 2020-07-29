@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917854"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216800"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -68,13 +68,13 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="return-value"></a>傳回值
 
-*X* / *y*的浮點餘數。 如果*y*的值是0.0，**餘數**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+*X*  /  *y*的浮點餘數。 如果*y*的值是0.0，**餘數**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**餘數**函數會計算*x* / *y*的浮點餘數*r* ，例如*x* = *n* \* *y* + *r*，其中*n*是最接近*x* / *y*值的整數，而*n*則是在每次 &#124; *n* - *x* / *y* &#124; = 1/2 時。 *R* = 0 時， *r*的正負號與*x*相同。
+**餘數**函數會計算*x*y 的浮點餘數*r*  /  *y* ，例如*x*  =  *n* \* *y*  +  *r*，其中*n*是最接近*x*  /  *y*值的整數，而*n*則是在每次 &#124; *n*  -  *x*  /  *y* &#124; = 1/2 時。 *R* = 0 時， *r*的正負號與*x*相同。
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**餘數**的多載。 在 C 程式中，**餘數**一律採用兩個**雙**精確度引數，並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回或值之**餘數**的多載 **`float`** **`long double`** 。 在 C 程式中，**餘數**一律接受兩個 **`double`** 引數，並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

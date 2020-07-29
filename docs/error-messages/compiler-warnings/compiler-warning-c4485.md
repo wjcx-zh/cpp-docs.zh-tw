@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: c92f805eb2960336ed34f5da93b6c13f46bf15ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d730441772f021bbece9af8313229543e432b2d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165141"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197289"
 ---
 # <a name="compiler-warning-c4485"></a>編譯器警告 C4485
 
 ' override_function '：符合基底 ref 類別方法 ' base_class_function '，但未標記為 ' new ' 或 ' override ';假設為 ' new ' （和 ' virtual '）
 
-存取子會覆寫，包含或不含 `virtual` 關鍵字、基類存取子函式，但 `override` 或 `new` 規範不屬於覆寫函式簽章的一部分。 新增 `new` 或 `override` 規範，以解決這個警告。
+存取子會覆寫具有或不含 **`virtual`** 關鍵字的基類存取子函式，但 `override` 或規範不屬於覆寫函式簽章的 **`new`** 一部分。 加入 **`new`** 或 `override` 規範來解決這個警告。
 
 如需詳細資訊，請參閱[override](../../extensions/override-cpp-component-extensions.md)和[new （vtable 中的新位置）](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) 。
 

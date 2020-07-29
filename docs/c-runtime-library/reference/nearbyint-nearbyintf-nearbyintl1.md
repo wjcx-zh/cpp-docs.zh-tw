@@ -37,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216852"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 
@@ -84,7 +84,7 @@ long double nearbyint( long double x ); //C++ only
 
 因為最大浮點值是精確的整數，所以此函式自身永遠不會溢位；相反地，根據您使用的函式版本，輸出可能會造成傳回值溢位。
 
-C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**參數的**nearbyint**多載。 在 C 程式中， **nearbyint**一律會採用兩個雙精度浮點數，並傳回雙精度值。
+C + + 允許多載，因此您可以呼叫採用並傳回或參數之**nearbyint**的多載 **`float`** **`long double`** 。 在 C 程式中， **nearbyint**一律會採用兩個雙精度浮點數，並傳回雙精度值。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
@@ -98,5 +98,5 @@ C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long** **
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [數學與浮點支援](../floating-point-support.md)<br/>

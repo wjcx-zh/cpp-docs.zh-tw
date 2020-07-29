@@ -3,12 +3,12 @@ title: x64 呼叫慣例
 description: 預設 x64 呼叫慣例的詳細資料。
 ms.date: 07/06/2020
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 9bfecd0fb154658a299d3dac7d9e45398ebe450b
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: b615d2e4473fed1d090b7411211c08b0b824bc8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058629"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200851"
 ---
 # <a name="x64-calling-convention"></a>x64 呼叫慣例
 
@@ -44,7 +44,7 @@ X64 應用程式二進位介面（ABI）預設會使用四個註冊的快速呼�
 
 前四個參數中的任何浮點和雙精確度引數會在 XMM0-XMM3 中傳遞，視位置而定。 只有在具有 varargs 引數的情況下，浮點值才會放在整數暫存器 RCX、RDX、R8 和 R9 中。 如需詳細資訊，請參閱[Varargs](#varargs)。 同樣地，當對應的引數是整數或指標類型時，會忽略 XMM0-XMM3 暫存器。
 
-[`__m128`](../cpp/m128.md)立即值不會傳遞類型、陣列和字串。 相反地，指標會傳遞至呼叫端所配置的記憶體。 大小8、16、32或64位和類型的結構和聯集 `__m64` ，會如同它們是相同大小的整數傳遞。 其他大小的結構或等位會以指標的形式傳遞給呼叫端所配置的記憶體。 針對當做指標傳遞的這些匯總類型（包括 `__m128` ），呼叫端配置的暫存記憶體必須是16個位元組的對齊。
+[`__m128`](../cpp/m128.md)立即值不會傳遞類型、陣列和字串。 相反地，指標會傳遞至呼叫端所配置的記憶體。 大小8、16、32或64位和類型的結構和聯集 **`__m64`** ，會如同它們是相同大小的整數傳遞。 其他大小的結構或等位會以指標的形式傳遞給呼叫端所配置的記憶體。 針對當做指標傳遞的這些匯總類型（包括 **`__m128`** ），呼叫端配置的暫存記憶體必須是16個位元組的對齊。
 
 內建函式不會配置堆疊空間，也不會呼叫其他函式，有時會使用其他 volatile 暫存器來傳遞額外的暫存器引數。 編譯器與內建函式執行之間的緊密系結可以達成這項優化。
 
@@ -56,9 +56,9 @@ X64 應用程式二進位介面（ABI）預設會使用四個註冊的快速呼�
 |-|-|-|-|-|-|
 | 浮點 | 堆疊 | XMM3 | XMM2 | XMM1 | XMM0 |
 | integer | 堆疊 | R9 | R8 | RDX | RCX |
-| 匯總（8、16、32或64位）和`__m64` | 堆疊 | R9 | R8 | RDX | RCX |
+| 匯總（8、16、32或64位）和**`__m64`** | 堆疊 | R9 | R8 | RDX | RCX |
 | 其他匯總，做為指標 | 堆疊 | R9 | R8 | RDX | RCX |
-| `__m128`作為指標 | 堆疊 | R9 | R8 | RDX | RCX |
+| **`__m128`** 作為指標 | 堆疊 | R9 | R8 | RDX | RCX |
 
 ### <a name="example-of-argument-passing-1---all-integers"></a>傳遞 1-所有整數的引數範例
 
@@ -106,7 +106,7 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 ## <a name="return-values"></a>傳回值
 
-可納入64位（包括類型）的純量傳回值， `__m64` 會透過 RAX 傳回。 非純量類型（包含浮點數、雙精確度和向量類型，例如 [`__m128`](../cpp/m128.md) 、 [`__m128i`](../cpp/m128i.md) ） [`__m128d`](../cpp/m128d.md) 會在 XMM0 中傳回。 對於 RAX 或 XMM0 中傳回的值，其中未使用之位元的狀態尚未定義。
+可納入64位（包括類型）的純量傳回值， **`__m64`** 會透過 RAX 傳回。 非純量類型（包含浮點數、雙精確度和向量類型，例如 [`__m128`](../cpp/m128.md) 、 [`__m128i`](../cpp/m128i.md) ） [`__m128d`](../cpp/m128d.md) 會在 XMM0 中傳回。 對於 RAX 或 XMM0 中傳回的值，其中未使用之位元的狀態尚未定義。
 
 使用者定義的類型可透過全域函式和靜態成員函式的值傳回。 若要在 RAX 中以傳值方式傳回使用者定義型別，它的長度必須是1、2、4、8、16、32或64位。 它也必須沒有使用者定義的「函數」、「析構函式」或「複製指派運算子」。 它不能有私用或受保護的非靜態資料成員，也不能有參考型別的非靜態資料成員。 它不能有基類或虛擬函式。 而且，它只能有也符合這些需求的資料成員。 （此定義基本上與 c + + 03 POD 類型相同。 由於在 c + + 11 標準中的定義已變更，因此不建議在這項測試中使用 `std::is_pod` 。）否則，呼叫端必須為傳回值配置記憶體，並將它的指標當做第一個引數傳遞給它。 其餘的引數接著會將一個引數向右移位。 在 RAX 中的被呼叫端必須傳回相同的指標。
 
@@ -212,7 +212,7 @@ X64 ABI 會考慮暫存器 RBX、RBP、RDI、RSI、.RSP、R12、R13、R14、R15 
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-當您包含 setjmpex.h 或 setjmp 時，所有對或的呼叫都會 [`setjmp`](../c-runtime-library/reference/setjmp.md) [`longjmp`](../c-runtime-library/reference/longjmp.md) 導致叫用析構函數和呼叫的回溯 `__finally` 。  這種行為與 x86 不同，其中包括不會叫用在 `__finally` 子句和析構函數中的 setjmp. h 結果。
+當您包含 setjmpex.h 或 setjmp 時，所有對或的呼叫都會 [`setjmp`](../c-runtime-library/reference/setjmp.md) [`longjmp`](../c-runtime-library/reference/longjmp.md) 導致叫用析構函數和呼叫的回溯 **`__finally`** 。  這種行為與 x86 不同，其中包括不會叫用在 **`__finally`** 子句和析構函數中的 setjmp. h 結果。
 
 的呼叫會 `setjmp` 保留目前的堆疊指標、非 volatile 暫存器和 MXCSR 暫存器。  呼叫以 `longjmp` 返回最新的 `setjmp` 呼叫位置，並將堆疊指標、非 volatile 暫存器和 MXCSR 暫存器重設回最近一次呼叫所保留的狀態 `setjmp` 。
 

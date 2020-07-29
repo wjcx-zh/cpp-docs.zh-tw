@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: d468226028928e3edfe67cc7f9b9eec06e06bd56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914882"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216956"
 ---
 # <a name="fopen-_wfopen"></a>fopen、_wfopen
 
@@ -64,7 +64,7 @@ FILE *_wfopen(
 
 ### <a name="parameters"></a>參數
 
-*名稱*<br/>
+*filename*<br/>
 檔案名稱
 
 *mode*<br/>
@@ -94,7 +94,7 @@ FILE *_wfopen(
 
 允許的*編碼*值為**UNICODE**、 **utf-8**和**utf-16le**。
 
-當以 Unicode 模式開啟檔案時，輸入函式會將從檔案讀取的資料轉譯為儲存為類型**wchar_t**的 utf-16 資料。 寫入以 Unicode 模式開啟之檔案的函式，會預期包含以類型**wchar_t**儲存之 utf-16 資料的緩衝區。 若檔案是編碼為 UTF-8，則會在寫入 UTF-16 資料時轉譯為 UTF-8，且會在讀取檔案的 UTF-8 編碼內容時轉譯成 UTF-16。 嘗試以 Unicode 模式讀取或寫入奇數位元的位元組，會導致[參數驗證](../../c-runtime-library/parameter-validation.md)錯誤。 若要讀取或寫入作為 UTF-8 儲存在您程式裡的資料時，請使用文字或二進位檔案模式，不要使用 Unicode 模式。 您要負責所有必要的編碼轉譯。
+當以 Unicode 模式開啟檔案時，輸入函式會將從檔案讀取的資料轉譯為儲存為類型的 UTF-16 資料 **`wchar_t`** 。 寫入以 Unicode 模式開啟之檔案的函式，會預期包含儲存為類型之 UTF-16 資料的緩衝區 **`wchar_t`** 。 若檔案是編碼為 UTF-8，則會在寫入 UTF-16 資料時轉譯為 UTF-8，且會在讀取檔案的 UTF-8 編碼內容時轉譯成 UTF-16。 嘗試以 Unicode 模式讀取或寫入奇數位元的位元組，會導致[參數驗證](../../c-runtime-library/parameter-validation.md)錯誤。 若要讀取或寫入作為 UTF-8 儲存在您程式裡的資料時，請使用文字或二進位檔案模式，不要使用 Unicode 模式。 您要負責所有必要的編碼轉譯。
 
 如果檔案已經存在，而且已開啟來進行讀取或附加，則位元順序標記 (BOM) (如果已在檔案中) 會決定編碼方式。 BOM 編碼優先于**ccs**旗標所指定的編碼方式。 只有在沒有 BOM 存在或檔案是新檔案時，才會使用**ccs**編碼。
 
@@ -159,8 +159,8 @@ FILE *_wfopen(
 |-|-|
 | **c** | 啟用相關聯*檔案名*的認可旗標，以便在呼叫**fflush**或 **_flushall**時，將檔案緩衝區的內容直接寫入磁片。 |
 | **n** | 將相關聯*檔案名*的認可旗標重設為「未認可」。 這是預設值。 如果將程式與 COMMODE.OBJ 連結，也會覆寫全域認可旗標。 除非您明確連結程式與 COMMODE.OBJ，否則全域認可旗標的預設值為 "no-commit" (請參閱[連結選項](../../c-runtime-library/link-options.md))。 |
-| **位** | 指定子處理序不繼承檔案。 |
-| **今日** | 指定針對但不限於磁碟的循序存取進行快取最佳化。 |
+| **N** | 指定子處理序不繼承檔案。 |
+| **S** | 指定針對但不限於磁碟的循序存取進行快取最佳化。 |
 | **R** | 指定針對但不限於磁碟的隨機存取進行快取最佳化。 |
 | **T** | 指定檔案做為暫存檔。 可能的話，不將其清除至磁碟。 |
 | **D** | 指定檔案做為暫存檔。 當最後一個檔案指標關閉時，將其刪除。 |
@@ -168,25 +168,25 @@ FILE *_wfopen(
 
 **Fopen**和 **_fdopen**中所使用之*模式*字串的有效字元，會對應至[_open](open-wopen.md)和[_sopen](sopen-wsopen.md)中使用的*oflag*引數，如下所示。
 
-|*模式*字串中的字元|Open/\_sopen 的\_對等*oflag*值|
+|*模式*字串中的字元|*oflag* \_ Open/sopen 的對等 oflag 值 \_|
 |-------------------------------|----------------------------------------------------|
-|**為**|**\_O\_WRONLY** &#124; ** \_o\_附加**（通常** \_是\_o WRONLY** &#124; ** \_ \_o**會** \_&#124;\_o append**）|
-|**a +**|**\_O\_RDWR** &#124; ** \_o\_附加**（通常** \_是\_O RDWR** &#124; ** \_ \_o 附加**&#124; ** \_o\_ ** ）|
-|**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** （通常** \_是\_o WRONLY** &#124; ** \_ \_o**會** \_&#124;\_o TRUNC**）|
-|**w +**|**\_O\_RDWR** （通常** \_是\_o RDWR** &#124; ** \_ \_o**會** \_&#124;\_o TRUNC**）|
-|**位元組**|**\_O\_二進位**|
-|**而已**|**\_O\_文字**|
+|**為**|** \_ O \_ WRONLY** &#124; ** \_ o \_ 附加**（通常是** \_ o \_ WRONLY** &#124; ** \_ o \_ **會 &#124; ** \_ o \_ append**）|
+|**a +**|** \_ O \_ RDWR** &#124; ** \_ o \_ 附加**（通常是** \_ O \_ RDWR** &#124; ** \_ o \_ 附加**&#124; ** \_ o \_ ** ）|
+|**r**|**\_O \_ RDONLY**|
+|**r +**|**\_O \_ RDWR**|
+|**w**|** \_ O \_ WRONLY** （通常是** \_ o \_ WRONLY** &#124; ** \_ o \_ **會 &#124; ** \_ o \_ TRUNC**）|
+|**w +**|** \_ O \_ RDWR** （通常是** \_ o \_ RDWR** &#124; ** \_ o \_ **會 &#124; ** \_ o \_ TRUNC**）|
+|**位元組**|**\_O \_ 二進位**|
+|**而已**|**\_O \_ 文字**|
 |**c**|無|
 |**n**|無|
-|**今日**|**\_O\_順序**|
-|**R**|**\_O\_隨機**|
-|**T**|**\_O\_SHORTLIVED**|
-|**D**|**\_O\_暫存**|
-|**ccs=UNICODE**|**\_O\_WTEXT**|
-|**ccs=UTF-8**|**\_O\_UTF8**|
-|**ccs=UTF-16LE**|**\_O\_UTF16**|
+|**S**|**\_O \_ 順序**|
+|**R**|**\_O \_ 隨機**|
+|**T**|**\_O \_ SHORTLIVED**|
+|**D**|**\_O \_ 暫存**|
+|**ccs=UNICODE**|**\_O \_ WTEXT**|
+|**ccs=UTF-8**|**\_O \_ UTF8**|
+|**ccs=UTF-16LE**|**\_O \_ UTF16**|
 
 如果您使用的是**rb**模式，則不需要移植您的程式碼，而且如果您想要讀取大部分大型檔案或不在意網路效能，您也可以考慮是否要使用記憶體對應的 Win32 檔案做為選項。
 
@@ -315,7 +315,7 @@ int main(int argc, char** argv)
 ## <a name="see-also"></a>另請參閱
 
 [資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [fclose、_fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen、_wfdopen](fdopen-wfdopen.md)<br/>
 [ferror](ferror.md)<br/>

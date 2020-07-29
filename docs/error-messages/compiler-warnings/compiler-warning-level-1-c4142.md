@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: c1721d472c81c62ba01282f43c7e678d7f84206b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3c9ab9c22d41e7732c86d43f5c6b4f09c50bbda8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200079"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196847"
 ---
 # <a name="compiler-warning-level-1-c4142"></a>編譯器警告（層級1） C4142
 
@@ -23,7 +23,7 @@ ms.locfileid: "80200079"
 
 - 衍生類別的成員函式具有不同于基類之對應成員函式的傳回型別。
 
-- 以 `typedef` 命令定義的類型會使用不同的語法重新定義。
+- 以命令定義的類型 **`typedef`** 會使用不同的語法重新定義。
 
 下列範例會產生 C4142：
 

@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - _bstr_t [C++]
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
-ms.openlocfilehash: a4126eb7771e17db5fb813898d6fa4917f6983bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8fc163255a5ab342938f56f8a22af3984a48e56a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190309"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216618"
 ---
 # <a name="_bstr_t-relational-operators"></a>_bstr_t 關係運算子
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 比較兩個 `_bstr_t` 物件。
 
@@ -39,9 +39,9 @@ bool operator>=(const _bstr_t& str) const throw( );
 
 ## <a name="remarks"></a>備註
 
-這些運算子會針對兩個 `_bstr_t` 物件進行字彙上的比較。 如果比較保留，則運算子會傳回 TRUE，否則會傳回 FALSE。
+這些運算子會針對兩個 `_bstr_t` 物件進行字彙上的比較。 **`true`** 如果比較保留，則運算子會傳回，否則會傳回 **`false`** 。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

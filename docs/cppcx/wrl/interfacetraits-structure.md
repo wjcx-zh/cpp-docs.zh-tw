@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: 17f743a38af3ddc600a55e38905d19868d076a22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371363"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216566"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 結構
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ## <a name="syntax"></a>語法
 
@@ -50,38 +50,38 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 *I0*<br/>
 介面的名稱。
 
-*隱形型*<br/>
-`Implements`和`RuntimeClass`的介面不會位於受支援的介面指示`ChainInterfaces`的清單中。
+*CloakedType*<br/>
+針對 `RuntimeClass` 、 `Implements` 和 `ChainInterfaces` ，此介面不會出現在支援的介面識別碼清單中。
 
 ## <a name="remarks"></a>備註
 
-實現介面的通用特性。
+執行介面的一般特性。
 
-第二個範本是掩蔽介面的專門化。 第三個範本是 Nil 參數的專門化。
+第二個範本是已遮蓋介面的特製化。 第三個範本是 Nil 參數的特製化。
 
 ## <a name="members"></a>成員
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>公開類型
+### <a name="public-typedefs"></a><a name="public-typedefs"></a>公用 Typedef
 
-名稱   | 描述
+名稱   | 說明
 ------ | ------------------------------------------
-`Base` | *I0*模板參數的同義詞。
+`Base` | *I0*範本參數的同義字。
 
 ### <a name="public-methods"></a>公用方法
 
-名稱                                                   | 描述
+名稱                                                   | 說明
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------
-[介面特徵::坎卡斯特托](#cancastto)               | 指示指定指標是否可以轉換為指向`Base`的指標。
-[介面特徵::CasttoBase](#casttobase)             | 將指定的指標強制轉換為指向`Base`的指標。
-[介面特徵::強制未知](#casttounknown)       | 將指定的指標強制轉換為指向`IUnknown`的指標。
-[介面特徵::填充帶](#fillarraywithiid) | 將的`Base`介面識別碼分配給索引參數指定的陣列元素。
-[介面特徵:驗證](#verify)                     | 驗證`Base`正確派生的。
+[InterfaceTraits：： CanCastTo](#cancastto)               | 指出是否可以將指定的指標轉換為的指標 `Base` 。
+[InterfaceTraits：： CastToBase](#casttobase)             | 將指定的指標轉換為的指標 `Base` 。
+[InterfaceTraits：： CastToUnknown](#casttounknown)       | 將指定的指標轉換為的指標 `IUnknown` 。
+[InterfaceTraits：： FillArrayWithIid](#fillarraywithiid) | 將的介面識別碼指派 `Base` 給索引引數所指定的陣列元素。
+[InterfaceTraits：： Verify](#verify)                     | 驗證 `Base` 是否已正確衍生。
 
 ### <a name="public-constants"></a>公用常數
 
-名稱                                   | 描述
+名稱                                   | 說明
 -------------------------------------- | ---------------------------------------------------------------------------------------
-[介面特徵::IidCount](#iidcount) | 保存與當前`InterfaceTraits`物件關聯的介面指示數。
+[InterfaceTraits：： IidCount](#iidcount) | 保留與目前物件相關聯的介面識別碼數目 `InterfaceTraits` 。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -89,13 +89,13 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ## <a name="requirements"></a>需求
 
-**標題:** 實現.h
+**標頭：** implements。h
 
-**命名空間:** 微軟::WRL::D
+**命名空間：** Microsoft：： WRL：:D etails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>介面特徵::坎卡斯特托
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits：： CanCastTo
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 template<typename T>
@@ -108,28 +108,28 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>參數
 
-*Ptr*<br/>
-指向類型的指標的名稱。
+*ptr*<br/>
+類型的指標名稱。
 
 *riid*<br/>
-的介面`Base`識別碼。
+的介面識別碼 `Base` 。
 
-*Ppv*<br/>
-如果此操作成功 *,ppv*將指向`Base`指定的 介面。 否則 *,ppv*`nullptr`設定為 。
+*ppv*<br/>
+如果這項作業成功， *ppv*會指向所指定的介面 `Base` 。 否則， *ppv*會設定為 **`nullptr`** 。
 
 ### <a name="return-value"></a>傳回值
 
-如果此操作成功,並且*ptr*被強制轉換`Base`為指向的指標,**則為 true。** 否則,**假**。
+**`true`** 如果此作業成功，且*ptr*轉換成的指標， `Base` 則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
-指示指定指標是否可以轉換為指向`Base`的指標。
+指出是否可以將指定的指標轉換為的指標 `Base` 。
 
-有關的詳細資訊`Base`,請參閱[公共類型防禦區](#public-typedefs)部分。
+如需的詳細資訊 `Base` ，請參閱[公用 typedef](#public-typedefs)一節。
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>介面特徵::CasttoBase
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits：： CastToBase
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 template<typename T>
@@ -143,8 +143,8 @@ static __forceinline Base* CastToBase(
 *T*<br/>
 參數*ptr*的類型。
 
-*Ptr*<br/>
-指向類型*T*的指標。
+*ptr*<br/>
+*T*類型的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -152,13 +152,13 @@ static __forceinline Base* CastToBase(
 
 ### <a name="remarks"></a>備註
 
-將指定的指標強制轉換為指向`Base`的指標。
+將指定的指標轉換為的指標 `Base` 。
 
-有關的詳細資訊`Base`,請參閱[公共類型防禦區](#public-typedefs)部分。
+如需的詳細資訊 `Base` ，請參閱[公用 typedef](#public-typedefs)一節。
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>介面特徵::強制未知
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits：： CastToUnknown
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 template<typename T>
@@ -172,22 +172,22 @@ static __forceinline IUnknown* CastToUnknown(
 *T*<br/>
 參數*ptr*的類型。
 
-*Ptr*<br/>
-指向類型*T 的*指標。
+*ptr*<br/>
+類型*T*的指標。
 
 ### <a name="return-value"></a>傳回值
 
-指向派生的 I`Base`未知項的指標。
+衍生之 IUnknown 的指標 `Base` 。
 
 ### <a name="remarks"></a>備註
 
-將指定的指標強制轉換為指向`IUnknown`的指標。
+將指定的指標轉換為的指標 `IUnknown` 。
 
-有關的詳細資訊`Base`,請參閱[公共類型防禦區](#public-typedefs)部分。
+如需的詳細資訊 `Base` ，請參閱[公用 typedef](#public-typedefs)一節。
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>介面特徵::填充帶
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits：： FillArrayWithIid
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -199,22 +199,22 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>參數
 
 *指數*<br/>
-指向包含零基索引值的欄位的指標。
+包含以零為基底之索引值的欄位指標。
 
-*伊德*<br/>
-介面指示的陣列。
+*iid*<br/>
+介面識別碼的陣列。
 
 ### <a name="remarks"></a>備註
 
-將的`Base`介面識別碼分配給索引參數指定的陣列元素。
+將的介面識別碼指派 `Base` 給索引引數所指定的陣列元素。
 
-與此 API 的名稱相反,只修改一個陣組元素;而不是整個陣列。
+相反于此 API 的名稱，只會修改一個陣列元素;不是整個陣列。
 
-有關的詳細資訊`Base`,請參閱[公共類型防禦區](#public-typedefs)部分。
+如需的詳細資訊 `Base` ，請參閱[公用 typedef](#public-typedefs)一節。
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>介面特徵::IidCount
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits：： IidCount
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 static const unsigned long IidCount = 1;
@@ -222,11 +222,11 @@ static const unsigned long IidCount = 1;
 
 ### <a name="remarks"></a>備註
 
-保存與當前`InterfaceTraits`物件關聯的介面指示數。
+保留與目前物件相關聯的介面識別碼數目 `InterfaceTraits` 。
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>介面特徵:驗證
+## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits：： Verify
 
-支援 WRL 基礎結構,不打算直接從代碼中使用。
+支援 WRL 基礎結構，但不適合直接從您的程式碼使用。
 
 ```cpp
 __forceinline static void Verify();
@@ -234,6 +234,6 @@ __forceinline static void Verify();
 
 ### <a name="remarks"></a>備註
 
-驗證`Base`正確派生的。
+驗證 `Base` 是否已正確衍生。
 
-有關的詳細資訊`Base`,請參閱[公共類型防禦區](#public-typedefs)部分。
+如需的詳細資訊 `Base` ，請參閱[公用 typedef](#public-typedefs)一節。

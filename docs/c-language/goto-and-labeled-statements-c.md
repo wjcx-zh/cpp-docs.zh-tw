@@ -8,16 +8,16 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d84aa6701ef030dc494f6a40a7223d6f9bcd5073
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299113"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199980"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和標記陳述式 (C)
 
-`goto` 陳述式會將控制項傳輸至標籤。 所指的標籤必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。
+語句會將 **`goto`** 控制項傳輸至標籤。 所指的標籤必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。
 
 ## <a name="syntax"></a>語法
 
@@ -26,18 +26,18 @@ ms.locfileid: "75299113"
 &nbsp;&nbsp;&nbsp;&nbsp;*跳躍語句*
 
 *跳躍語句*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *識別碼*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**`goto`**  *識別碼*  **;**
 
 加上*標籤的語句*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **：**  *語句*
 
-陳述式標籤只對 `goto` 陳述式有意義，在任何其他內容中，加上標籤的陳述式都會執行，而不考慮標籤。
+語句標籤只對語句有意義 **`goto`** ; 在任何其他內容中，會執行標示的語句，而不考慮標籤。
 
-*jump-statement* 必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。 `goto` 後面的一組 *identifier* 名稱都有自己的命名空間，因此這些名稱不會干擾其他識別項。 標籤不能重新宣告。 如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md)。
+*jump-statement* 必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。 後面的一組*識別碼*名稱 **`goto`** 有自己的命名空間，因此這些名稱不會干擾其他識別碼。 標籤不能重新宣告。 如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md)。
 
-理想的程式設計風格是盡可能先使用 **break**、**continue** 和 `return` 陳述式，而不是 `goto`。 由於 **break** 陳述式只會從一個迴圈層級結束，因此可能需要使用 `goto` 才能從深層的巢狀迴圈內結束迴圈。
+這是很好的程式設計風格 **`break`** ，可盡可能使用、 **`continue`** 和 **`return`** 語句 **`goto`** 。 由於 **`break`** 語句只會從一個迴圈層級結束，因此 **`goto`** 可能需要從深度的嵌套迴圈中結束迴圈。
 
-這個範例將示範 `goto` 陳述式：
+這個範例會示範 **`goto`** 語句：
 
 ```c
 // goto.c
@@ -65,8 +65,8 @@ int main()
 }
 ```
 
-在這個範例中，當 `goto` 等於 5 時，`stop` 陳述式會將控制項傳送至標記 `i` 的點。
+在此範例中， **`goto`** `stop` 當等於5時，語句會將控制項傳輸至標示的點 `i` 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [陳述式](../c-language/statements-c.md)

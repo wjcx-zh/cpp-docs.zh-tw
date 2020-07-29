@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914630"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216865"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -78,7 +78,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 **modf**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**參數的**modf**多載。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數，並傳回雙精度值。
+C + + 允許多載，因此您可以呼叫採用並傳回或參數之**modf**的多載 **`float`** **`long double`** 。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數，並傳回雙精度值。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
@@ -86,7 +86,7 @@ C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long** **
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**modf**、 **modff**、 **modfl**|C：\<math.h><br /><br /> C++：\<cmath> 或 \<math.h>|
+|**modf**、 **modff**、 **modfl**|C\<math.h><br /><br /> C + +：、 \<cmath> 或\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

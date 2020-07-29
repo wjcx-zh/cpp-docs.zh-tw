@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507023"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217203"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (標準一致性)
 
@@ -40,7 +40,7 @@ Visual Studio 2017 和更新版本支援此選項。
 
 從 Visual Studio 2017 版15.3 開始的編譯器版本中，選項會 **`/permissive-`** 設定 [**`/Zc:ternary`**](zc-ternary.md) 選項。 編譯器也會執行兩階段名稱查閱的更多需求。 **`/permissive-`** 設定選項時，編譯器會剖析函式和類別樣板定義，並識別範本中使用的相依和非相依名稱。 在此版本中，只會執行名稱相依性分析。
 
-環境專屬的擴充功能和標準在執行上的語言區域不會受到的影響 **`/permissive-`** 。 例如，Microsoft 專有的 `__declspec` 呼叫慣例和結構化例外狀況處理關鍵字，以及編譯器專屬的 pragma 指示詞或屬性，在模式中不會標示為編譯器 **`/permissive-`** 。
+環境專屬的擴充功能和標準在執行上的語言區域不會受到的影響 **`/permissive-`** 。 例如，Microsoft 專有的 **`__declspec`** 呼叫慣例和結構化例外狀況處理關鍵字，以及編譯器專屬的 pragma 指示詞或屬性，在模式中不會標示為編譯器 **`/permissive-`** 。
 
 **`/permissive-`** 選項會使用目前編譯器版本中的一致性支援來判斷哪些語言結構不符合規範。 選項不會判斷您的程式碼是否符合 c + + standard 的特定版本。 若要針對最新的草稿標準啟用所有已實現的編譯器支援，請使用 [**`/std:c++latest`**](std-specify-language-standard-version.md) 選項。 若要將編譯器支援限制為目前所實行的 c + + 17 標準，請使用 [**`/std:c++17`**](std-specify-language-standard-version.md) 選項。 若要限制編譯器支援，使其更符合 c + + 14 標準，請使用 [**`/std:c++14`**](std-specify-language-standard-version.md) 選項，這是預設值。
 
@@ -461,7 +461,7 @@ Windows 2018 年4月更新 SDK （10.0.17134.0）中發行的這些使用者模�
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>＞。
+- 請參閱＜ <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> ＞。
 
 ## <a name="see-also"></a>另請參閱
 

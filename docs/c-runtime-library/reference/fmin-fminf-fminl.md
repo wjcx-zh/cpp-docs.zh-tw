@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957085"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216982"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -85,7 +85,7 @@ long double fminl(
 
 如果成功，會傳回*x*或*y*的較小者。
 
-|Input|結果|
+|輸入|結果|
 |-----------|------------|
 |*x*是 NaN|*y*|
 |*y*是 NaN|*x*|
@@ -95,17 +95,17 @@ long double fminl(
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**fmin**的多載。 在 C 程式中， **fmin**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**fmin**的多載 **`float`** **`long double`** 。 在 C 程式中， **fmin**一律會採用並傳回 **`double`** 。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**fmin**、 **fminf**、 **fminl**|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|
+|**fmin**、 **fminf**、 **fminl**|C\<math.h><br />C + +： \<math.h> 或\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [fmax、fmaxf、fmaxl](fmax-fmaxf-fmaxl.md)<br/>

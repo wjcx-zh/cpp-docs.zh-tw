@@ -1,17 +1,17 @@
 ---
-title: transmit_as （C++ COM 屬性）
+title: transmit_as （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a34d57cc60dcc65e8b111c595fdd819dea407b78
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214483"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201124"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -30,7 +30,7 @@ ms.locfileid: "80214483"
 
 ## <a name="remarks"></a>備註
 
-**Transmit_as** C++屬性具有與[transmit_as](/windows/win32/Midl/transmit-as) MIDL 屬性相同的功能。
+**Transmit_as** c + + 屬性具有與[transmit_as](/windows/win32/Midl/transmit-as) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -70,10 +70,10 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**適用於**|**typedef**|
+|**適用於**|**`typedef`**|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -81,4 +81,4 @@ struct _TREE_NODE_TYPE * right;
 
 [IDL 屬性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[進出口](export.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 354b354a72b5a96a190ce2322eb160b7d6bff1c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158341"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199395"
 ---
 # <a name="scope-and-visibility"></a>範圍和可視性
 
@@ -27,8 +27,8 @@ ms.locfileid: "62158341"
 
 函式原型範圍：具有函式原型範圍的識別項宣告子或類型指定名稱，會出現在函式原型中的參數宣告清單內 (不屬於參數宣告的一部分)。 其範圍會在函式宣告子的結尾終止。
 
-有關讓變數在其他原始程式檔中可見的適當宣告，將在[儲存類別](../c-language/c-storage-classes.md)中說明。 不過，在外部層級使用 **static** 儲存類別指定名稱宣告的變數和函式，只有在本身定義所在的原始程式碼內才可見。 所有其他函式都是全域可見。
+有關讓變數在其他原始程式檔中可見的適當宣告，將在[儲存類別](../c-language/c-storage-classes.md)中說明。 不過，在外部層級使用儲存類別規範宣告的變數和函式，只有在其 **`static`** 定義所在的來源檔案中才可見。 所有其他函式都是全域可見。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)

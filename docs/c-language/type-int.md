@@ -7,18 +7,18 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: ebce276c8c4efa822601fe36652057b37e922570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2bfd9e108b36f073635c6d9e55e2299764dcb309
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334440"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198862"
 ---
 # <a name="type-int"></a>類型 int
 
-帶正負號或不帶正負號 `int` 項目的大小是特定電腦上整數的標準大小。 例如，在 16 位元作業系統中，`int` 類型通常是 16 位元或 2 個位元組。 在 32 位元作業系統中，`int` 類型通常是 32 位元或 4 個位元組。 因此，根據目標環境而定，`int` 類型相當於 `short int` 或 **long int** 類型，而 `unsigned int` 類型相當於 **unsigned short** 或 `unsigned long` 類型。 除非另有指定，否則 `int` 類型皆表示帶正負號的值。
+或專案的大小 **`signed int`** **`unsigned int`** 是特定電腦上整數的標準大小。 例如，在16位作業系統中， **`int`** 類型通常是16位或2個位元組。 在32位作業系統中， **`int`** 類型通常是32位或4個位元組。 因此， **`int`** 類型相當於 **`short int`** 或 **`long int`** 型別，而且型別等同于 **`unsigned int`** **`unsigned short`** 或型別 **`unsigned long`** ，視目標環境而定。 **`int`** 除非另有指定，否則所有類型都代表帶正負號的值。
 
-類型指定名稱 `int` 和 `unsigned int` (或 `unsigned`) 會定義 C 語言的某些功能 (例如，`enum` 類型)。 在這些情況下，`int` 的定義和特定實作的 unsigned int 會判斷實際儲存區。
+型別規範 **`int`** 和 **`unsigned int`** （或直接 **`unsigned`** ）定義 C 語言的特定功能（例如， **`enum`** 型別）。 在這些情況下， **`int`** 特定執行的和定義會 **`unsigned int`** 決定實際的儲存體。
 
 **Microsoft 特定的**
 
@@ -27,8 +27,8 @@ ms.locfileid: "81334440"
 **結束 Microsoft 專有**
 
 > [!NOTE]
-> int 和 unsigned int 類型指定名稱廣泛使用在 C 程式中，因為它們允許特定電腦以該電腦的最有效的方法處理整數值。 不過，由於 int 和 unsigned int 類型的大小不同，取決於特定 int 大小的程式可能無法移植至其他電腦。 若要使程式更具有可移植性，您可以使用含 sizeof 運算子的運算式 (如 [sizeof 運算子](../c-language/sizeof-operator-c.md)中所述) 而不是硬式編碼的資料大小。
+> **`int`** 和 **`unsigned int`** 類型規範廣泛用於 C 程式，因為它們允許特定電腦以最有效率的方式處理該電腦的整數值。 不過，由於和類型的大小 **`int`** **`unsigned int`** 不同，相依于特定大小的程式 **`int`** 可能無法移植到其他電腦。 若要讓程式更具可攜性，您可以使用運算式搭配 **`sizeof`** 運算子（[如 `sizeof` 運算子](../c-language/sizeof-operator-c.md)中所述），而不是硬式編碼的資料大小。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[基本類型的儲存空間](../c-language/storage-of-basic-types.md)
+[基本類型的儲存](../c-language/storage-of-basic-types.md)

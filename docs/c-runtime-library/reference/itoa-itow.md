@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914658"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216930"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
@@ -179,7 +179,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 要轉換的數字。
 
 *緩衝區*<br/>
@@ -197,7 +197,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>備註
 
-**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函式會將指定*值*引數的數位轉換成以 null 結束的字元字串，並將結果（最多33個字元**用於 _itoa**、 **_ltoa**和 **_ultoa**，而65用於 **_i64toa**和 **_ui64toa**）儲存在*緩衝區*中。 如果*基數*等於10且*值*為負數，則儲存字串的第一個字元是減號（**-**）。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函數分別是寬字元版本的 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**。
+**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函式會將指定*值*引數的數位轉換成以 null 結束的字元字串，並將結果（最多33個字元**用於 _itoa**、 **_ltoa**和 **_ultoa**，而65用於 **_i64toa**和 **_ui64toa**）儲存在*緩衝區*中。 如果*基數*等於10且*值*為負數，則儲存字串的第一個字元是減號（ **-** ）。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函數分別是寬字元版本的 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**。
 
 > [!IMPORTANT]
 > 這些函式可以寫入超過緩衝區結尾太小的部分。 若要防止緩衝區溢位，請確定*緩衝區*夠大，足以容納轉換的數位加上尾端的 null 字元和正負號字元。 誤用這些函式可能會在您的程式碼中造成嚴重的安全性問題。
@@ -240,7 +240,7 @@ POSIX 名稱**itoa**、 **ltoa**和**ultoa**會當做 **_itoa**、 **_ltoa**和 
 |**_i64toa**， **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**， **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-這個範例會使用「轉換計數」宏，將緩衝區定義為足以包含「基底2」中不**帶正負號的長長時間**：
+這個範例會使用「轉換計數」宏來定義緩衝區，使其夠大，以包含 **`unsigned long long`** 基底2中的：
 
 ```cpp
 #include <wchar.h>

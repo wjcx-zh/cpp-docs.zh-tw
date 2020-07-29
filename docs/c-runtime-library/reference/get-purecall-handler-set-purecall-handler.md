@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955668"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216943"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler、_set_purecall_handler
 
@@ -60,30 +60,30 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 ### <a name="parameters"></a>參數
 
-*function*<br/>
-呼叫純虛擬函式時要呼叫的函式。 **_Purecall_handler**函數的傳回類型必須是 void。
+*函數*<br/>
+呼叫純虛擬函式時要呼叫的函式。 **_Purecall_handler**函數必須有 void 傳回類型。
 
 ## <a name="return-value"></a>傳回值
 
-先前的 **_purecall_handler**。 如果沒有先前的處理常式，則會傳回**nullptr** 。
+先前的 **_purecall_handler**。 **`nullptr`** 如果沒有先前的處理常式，則傳回。
 
 ## <a name="remarks"></a>備註
 
-**_Get_purecall_handler**和 **_set_purecall_handler**函式是 Microsoft 特有的，而且只適用C++于程式碼。
+**_Get_purecall_handler**和 **_set_purecall_handler**函式是 Microsoft 特有的，而且只適用于 c + + 程式碼。
 
-呼叫純虛擬函式會產生錯誤，因為它有沒有實作。 根據預設，呼叫純虛擬函式時，編譯器會產生程式碼來叫用錯誤處理常式函式，該函式會終止程式。 您可以為純虛擬函式呼叫安裝您自己的錯誤處理函式，以攔截它們，用於偵錯或報告目的。 若要使用您自己的錯誤處理常式，請建立具有 **_purecall_handler**簽章的函式，然後使用 **_set_purecall_handler**將它設為目前的處理常式。
+呼叫純虛擬函式會產生錯誤，因為它有沒有實作。 根據預設，呼叫純虛擬函式時，編譯器會產生程式碼來叫用錯誤處理常式函式，該函式會終止程式。 您可以為純虛擬函式呼叫安裝您自己的錯誤處理常式函式，以攔截它們，用於偵錯或報告目的。 若要使用您自己的錯誤處理常式，請建立具有 **_purecall_handler**簽章的函式，然後使用 **_set_purecall_handler**將它設為目前的處理常式。
 
-由於每個進程只有一個 **_purecall_handler** ，因此當您呼叫 **_set_purecall_handler**時，它會立即影響所有線程。 任何執行緒的上一個呼叫端會設定處理常式。
+由於每個進程只有一個 **_purecall_handler** ，因此當您呼叫 **_set_purecall_handler**它會立即影響所有線程。 任何執行緒的上一個呼叫端會設定處理常式。
 
-若要還原預設行為，請使用**nullptr**引數呼叫 **_set_purecall_handler** 。
+若要還原預設行為，請 **_set_purecall_handler**使用 **`nullptr`** 引數呼叫 _set_purecall_handler。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_get_purecall_handler**、 **_set_purecall_handler**|\<cstdlib> 或 \<stdlib.h>|
+|**_get_purecall_handler**， **_set_purecall_handler**|\<cstdlib> 或 \<stdlib.h>|
 
-如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

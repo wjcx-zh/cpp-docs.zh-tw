@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1dacf23b6c4f698b61c5bfe2dd2fb1ff7ee389f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625858"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216748"
 ---
 # <a name="signal"></a>signal
 
@@ -61,7 +61,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 **信號**函式可讓處理常式選擇數種方式的其中一種，以處理來自作業系統的插斷信號。 *Sig*引數是指**信號**回應的中斷;它必須是下列其中一個資訊清單常數，其定義為 [信號]。H.
 
-|*sig*值|描述|
+|*sig*值|說明|
 |-----------------|-----------------|
 |**SIGABRT**|異常終止|
 |**SIGFPE**|浮點錯誤|
@@ -77,7 +77,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 > [!NOTE]
 > 任何 Win32 應用程式都不支援**SIGINT** 。 發生 CTRL+C 插斷時，Win32 作業系統會產生新的執行緒來專門處理該插斷。 這會讓單一執行緒應用程式 (例如 UNIX 中的應用程式) 成為多執行緒，並造成未預期的行為。
 
-*Func*引數是您所撰寫之信號處理常式的位址，或其中一個預先定義的常數**SIG_DFL**或**SIG_IGN**，這也會在 [信號] 中定義。H. 如果*func*是函式，它會安裝為指定信號的信號處理常式。 信號處理常式的原型需要類型為**int**的一個正式引數（ *sig*）。當發生中斷時，作業系統會透過*sig*提供實際的引數;引數是產生中斷的信號。 因此，您可以在訊號處理常式中使用上表所列出的六個資訊清單常數，來決定發生何種插斷並採取適當動作。 例如，您可以呼叫**信號**兩次，將相同的處理常式指派給兩個不同的信號，然後測試處理常式中的*sig*引數，以根據收到的信號採取不同的動作。
+*Func*引數是您所撰寫之信號處理常式的位址，或其中一個預先定義的常數**SIG_DFL**或**SIG_IGN**，這也會在 [信號] 中定義。H. 如果*func*是函式，它會安裝為指定信號的信號處理常式。 信號處理常式的原型需要一個類型的正式引數（ *sig*） **`int`** 。 當發生中斷時，作業系統會透過*sig*提供實際的引數;引數是產生中斷的信號。 因此，您可以在訊號處理常式中使用上表所列出的六個資訊清單常數，來決定發生何種插斷並採取適當動作。 例如，您可以呼叫**信號**兩次，將相同的處理常式指派給兩個不同的信號，然後測試處理常式中的*sig*引數，以根據收到的信號採取不同的動作。
 
 如果您測試的是浮點例外狀況（**SIGFPE**）， *func*會指向接受選擇性第二個引數的函式，而這是在 FLOAT 中定義的數個資訊清單常數之一。H，格式為**FPE_xxx**。 當**SIGFPE**信號發生時，您可以測試第二個引數的值來判斷浮點例外狀況的類型，然後採取適當的動作。 此引數和其可能值是 Microsoft 延伸模組。
 
@@ -115,7 +115,7 @@ volatile double d = 0.0f;
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -160,11 +160,11 @@ R6010
 - abort() has been called
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[進程和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>
-[_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[_exec，_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_fpreset](fpreset.md)<br/>
-[_spawn、_wspawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn，_wspawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

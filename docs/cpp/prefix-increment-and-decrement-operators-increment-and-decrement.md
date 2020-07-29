@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-ms.openlocfilehash: ce066a3349d56b278739f586fe851b020da78885
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b84360f41c665707a03ad453909c054ac741405
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366226"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231152"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>前置遞增和遞減運算子：++ 和 --
 
@@ -31,13 +31,13 @@ ms.locfileid: "81366226"
 
 ## <a name="remarks"></a>備註
 
-首碼增量運算子**++**( ) 向其操作數中添加一個,此增量值是表達式的結果。 操作數必須是 l 值,而不是類型**const**。 結果會是與運算元相同類型的左值。
+前置遞增運算子（ **++** ）會在其運算元中加入一個，而這個遞增的值就是運算式的結果。 運算元必須是不是類型的左值 **`const`** 。 結果會是與運算元相同類型的左值。
 
-首碼遞減運算符 (**--**) 類似於前置字元增量運算符,只不過操作數被遞減為 1,結果是此遞減值。
+前置遞減運算子（ **--** ）類似前置遞增運算子，不同之處在于運算元會減一，而結果為這個遞減的值。
 
-**Visual Studio 2017 版本 15.3 及更高版本**(提供[/std:c_17](../build/reference/std-specify-language-standard-version.md)): 增量或遞減運算子的操作數可能不是**bool**類型 。
+**Visual Studio 2017 15.3 和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）：遞增或遞減運算子的運算元不可以是類型 **`bool`** 。
 
-前置和後置遞增和遞減運算子都會影響其運算元。 它們之間的主要差異在於遞增或遞減在運算式評估中發生的順序 。 (有關詳細資訊,請參閱[後修復增量和遞減運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)。在首碼窗體中,增量或遞減發生在運算式計算中使用值之前,因此表達式的值與操作數的值不同。 在後置形式中，遞增或遞減會在運算式評估中使用值之後發生，因此運算式的值會與運算元的值相同。 例如，下列程式會列印 "`++i = 6`"：
+前置和後置遞增和遞減運算子都會影響其運算元。 它們之間的主要差異在於遞增或遞減在運算式評估中發生的順序 。 （如需詳細資訊，請參閱後置[遞增和遞減運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)）。在前置詞形式中，遞增或遞減會在運算式評估中使用值之前進行，因此運算式的值會與運算元的值不同。 在後置形式中，遞增或遞減會在運算式評估中使用值之後發生，因此運算式的值會與運算元的值相同。 例如，下列程式會列印 "`++i = 6`"：
 
 ```cpp
 // expre_Increment_and_Decrement_Operators.cpp
@@ -54,7 +54,7 @@ int main() {
 
 整數或浮點類型的運算元會以整數值 1 遞增或遞減。 結果的類型與運算元類型相同。 指標類型的運算元會以其定址之物件的大小遞增或遞減。 遞增指標會指向下一個物件，遞減指標則指向上一個物件。
 
-由於增量和遞減運算符有副作用,因此在[預處理器宏](../preprocessor/macros-c-cpp.md)中使用增量或遞減運算符的表達式可能會產生不良的結果。 請思考此範例：
+因為遞增和遞減運算子具有副作用，所以在[預處理器宏中](../preprocessor/macros-c-cpp.md)使用具有遞增或遞減運算子的運算式可能會有不想要的結果。 請思考此範例：
 
 ```cpp
 // expre_Increment_and_Decrement_Operators2.cpp

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 897eb80c713f786ecf0f7e6c9cf24cd8bdfc0aa8
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 9a5c99c78623f2192b59a73f270f3ad5d2a34516
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032274"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231165"
 ---
 # <a name="postfix-expressions"></a>後置運算式
 
@@ -21,9 +21,9 @@ ms.locfileid: "82032274"
 
 |運算子名稱|運算子標記法|
 |-------------------|-----------------------|
-|[副文稿運算子](../cpp/subscript-operator.md)|**[ ]**|
+|[注標運算子](../cpp/subscript-operator.md)|**[ ]**|
 |[函式呼叫運算子](../cpp/function-call-operator-parens.md)|**( )**|
-|[明確類型轉換運算子](../cpp/explicit-type-conversion-operator-parens.md)|*型態名稱***( )**|
+|[明確類型轉換運算子](../cpp/explicit-type-conversion-operator-parens.md)|*類型名稱* **（）**|
 |[成員存取運算子](../cpp/member-access-operators-dot-and.md)|**.** 或**->**|
 |[後置遞增運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[後置遞減運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -35,13 +35,13 @@ primary-expression
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
-上面的*后修復表達式*可以是主表達式或其他後綴表達式。  請參考**主表示式**。  後置運算式由左至右分組，因此可讓運算式鏈結在一起，如下所示：
+以上的後置*運算式*可能是[主要運算式](primary-expressions.md)或另一個後置運算式。 後置運算式由左至右分組，因此可讓運算式鏈結在一起，如下所示：
 
 ```cpp
 func(1)->GetValue()++
 ```
 
-在上面的運算式中,`func`是一個主運算`func(1)`式 ,是函數後綴表達`func(1)->GetValue`式, 是指定類成員的後綴`func(1)->GetValue()`表達式, 是另一個函數後綴表達式,整個表達式是遞修復表達式,遞增表達式,遞價表達式增加了 GetValue 的返回值。  整個運算式的意義是傳遞 1 做為呼叫 func 的引數，並取得類別的指標做為傳回值。  然後調用`GetValue()`該類,然後增加返回的值。
+在上述運算式中， `func` 是一個主要運算式， `func(1)` 它是一個函式後置運算式， `func(1)->GetValue` 是指定類別成員的後置運算式， `func(1)->GetValue()` 是另一個函式後置運算式，而整個運算式是後置運算式，會遞增 GetValue 的傳回值。  整個運算式的意義是傳遞 1 做為呼叫 func 的引數，並取得類別的指標做為傳回值。  然後 `GetValue()` 在該類別上呼叫，然後遞增傳回的值。
 
 以上列出的運算式為指派運算式，表示這些運算式的結果必須是右值。
 
@@ -53,9 +53,9 @@ simple-type-name ( expression-list )
 
 表示建構函式的引動過程。  如果 simple-type-name 是一個基本類型，則運算式清單必須是單一運算式，而這個運算式表示將運算式的值轉型為基本類型。  此種轉型運算式會模擬建構函式。  由於這個格式允許使用相同的語法建構基本類型和類別，因此該格式在定義樣板類別時會特別有用。
 
-*強制關鍵字*是**dynamic_cast、static_cast****static_cast**或**reinterpret_cast**之 一。  更多資訊可在**dynamic_cast、static_cast**與**static_cast****reinterpet_cast**中找到 。
+*Cast-關鍵字*是、或的其中一個 **`dynamic_cast`** **`static_cast`** **`reinterpret_cast`** 。  如需詳細資訊 [`dynamic_cast`](dynamic-cast-operator.md) ，請參閱、 [`static_cast`](static-cast-operator.md) 和 [`reinterpet_cast`](reinterpret-cast-operator.md) 。
 
-**類型 id**運算符被視為後綴運算式。  請參考**型態化運算子**。
+**`typeid`** 運算子會被視為後置運算式。  請參閱**typeid 運算子**。
 
 ## <a name="formal-and-actual-arguments"></a>型式和實質引數
 
@@ -65,7 +65,7 @@ simple-type-name ( expression-list )
 
 - 所有實質引數 (呼叫端所提供的引數) 都會進行評估。 這些引數並不需要遵循任何隱含的評估順序，但是會在所有引數都經過評估且所有副作用都已完成之後，才進入函式。
 
-- 每個型式引數都會使用它在運算式清單中的對應實質引數初始化  (正式參數是在函數標頭中聲明並在函數正文中使用的參數。轉換就像透過初始化來完成一樣 - 在將實際參數轉換為正確的類型時,執行標準和使用者定義的轉換。 所執行的初始化將以下列程式碼提供概念上的說明：
+- 每個型式引數都會使用它在運算式清單中的對應實質引數初始化  （型式引數是在函式標頭中宣告並在函式主體中使用的引數）。轉換的完成方式就如同初始化一樣，在將實際引數轉換成正確的型別時，也會執行標準和使用者定義的轉換。 所執行的初始化將以下列程式碼提供概念上的說明：
 
     ```cpp
     void Func( int i ); // Function prototype
@@ -80,13 +80,13 @@ simple-type-name ( expression-list )
     Func( Temp_i );
     ```
 
-   請注意，初始化的執行方式就如同使用等號語法，而不是括號語法。 將值傳遞至函式之前，會先製作 `i` 的複本  (關於詳細資訊,請參考[初始化器](../cpp/initializers.md)與[轉換](../cpp/user-defined-type-conversions-cpp.md)。
+   請注意，初始化的執行方式就如同使用等號語法，而不是括號語法。 將值傳遞至函式之前，會先製作 `i` 的複本  （如需詳細資訊，請參閱[初始化運算式](../cpp/initializers.md)和[轉換](../cpp/user-defined-type-conversions-cpp.md)）。
 
-   因此,如果函數原型(聲明)調用類型**為長**的參數,並且調用程式提供**類型 int**的實際參數,則使用標準類型轉換將實際參數提升到**類型長**(請參閱[標準轉換](../cpp/standard-conversions.md))。
+   因此，如果函式原型（宣告）呼叫類型的引數 **`long`** ，而且呼叫程式提供類型的實質引數 **`int`** ，則會使用類型的標準類型轉換來升級實際的引數 **`long`** （請參閱[標準轉換](../cpp/standard-conversions.md)）。
 
    提供沒有轉換成型式引數類型之標準或使用者定義轉換的實質引數是不正確的做法。
 
-   對於類別類型的實質引數，型式引數會藉由呼叫類別的建構函式進行初始化。 (有關這些特殊類成員函數的更多,請參閱[建構函數](../cpp/constructors-cpp.md)。
+   對於類別類型的實質引數，型式引數會藉由呼叫類別的建構函式進行初始化。 （如需這些特殊類別成員函式的詳細[資訊，請](../cpp/constructors-cpp.md)參閱函式）。
 
 - 函式呼叫將會執行。
 
@@ -111,11 +111,11 @@ void func( long param1, double param2 )
 }
 ```
 
-當`func`從 main 調用時`param1`,正式`i`參數用`i`的值初始化(轉換為類型**長**,以對應於使用標準轉換的正確類型),`param2``j``j`並且用值 (使用標準轉換轉換為類型**雙**號)來初始化形式參數。
+`func`從 main 呼叫時，會使用 `param1` 的值來初始化正式參數 `i` （ `i` 會轉換成類型 **`long`** ，以對應至使用標準轉換的正確類型），而正式參數會使用的 `param2` 值初始化 `j` （ `j` 會使用標準轉換來轉換為類型 **`double`** ）。
 
 ## <a name="treatment-of-argument-types"></a>引數類型的處理方式
 
-宣告為 const 類型的正式引數無法在函式主體內變更。 函數可以更改任何不是類型**const**的參數。 但是,更改是函數的局部更改,不會影響實際參數的值,除非實際參數是對類型**const**物件的引用。
+宣告為類型的型式引數無法在函式 **`const`** 主體中變更。 函式可以變更任何不屬於類型的引數 **`const`** 。 不過，這項變更對函式而言是本機的，而且不會影響實際引數的值，除非實際的引數是不屬於類型之物件的參考 **`const`** 。
 
 下列函式將說明一些這類概念：
 
@@ -135,23 +135,23 @@ double& func2( double& d, const char *c ) {
 }
 ```
 
-## <a name="ellipsis-and-default-arguments"></a>省略碼和預設參數
+## <a name="ellipsis-and-default-arguments"></a>省略號和預設引數
 
 如需傳遞可變引數數目的詳細資訊只要使用下列兩種方法的其中一種，函式就可以宣告為接受比函式定義中所指定數目少的引數：省略符號 (`...`) 或預設引數。
 
-橢圓表示可能需要參數,但聲明中未指定數字和類型。 一般來說，這並不是理想的 C++ 程式設計做法，因為它會失去其中一項 C++ 的優點：類型安全。 與已知形式參數類型和實際參數類型的函數相比,使用省略號聲明的函數的轉換不同:
+省略號表示可能需要引數，但宣告中未指定數位和類型。 一般來說，這並不是理想的 C++ 程式設計做法，因為它會失去其中一項 C++ 的優點：類型安全。 不同的轉換會套用至以省略號宣告的函式，而不是已知型式和實際引數類型的函式：
 
-- 如果實際參數為 **「浮點**」類型,則在函數調用之前將其提升為**雙**精度類型。
+- 如果實際引數的類型為 **`float`** ，則會在 **`double`** 函式呼叫之前提升為類型。
 
-- 使用積分提升將任何已簽名或未簽名**的字元**、**短**字元、枚舉類型或位欄位轉換為已簽名或未簽名**的 int。**
+- 任何 **`signed char`** or **`unsigned char`** 、 **`signed short`** or **`unsigned short`** 、列舉類型或位欄位都會轉換成 **`signed int`** 或 **`unsigned int`** 使用整數提升。
 
 - 任何類別類型的引數都會以傳值的方式做為資料結構傳遞，而複本會以二進位檔複製的方式建立，而不會以叫用類別之複製建構函式 (如果有的話) 的方式建立。
 
-如果使用橢圓,則必須在參數清單中最後聲明。 有關傳遞可變參數數的詳細資訊,請參閱*運行時庫參考*中討論[va_arg、va_start和va_list。](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+如果使用省略號，必須在引數清單中的最後一個宣告。 如需傳遞可變引數數目的詳細資訊，請參閱《*執行時間程式庫參考*》中[va_arg、va_start 和 va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)的討論。
 
-有關 CLR 程式設計中的預設參數的資訊,請參閱[變數參數清單 (...) (C++/CLI)。](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)
+如需 CLR 程式設計中預設引數的詳細資訊，請參閱[Variable 引數清單（...）（c + +/cli）](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)。
 
-預設引數可讓您指定函式呼叫中未提供值時，引數應該假設的值。 下列程式碼片段將示範預設引數的運作方式。 有關指定預設參數的限制的詳細資訊,請參閱[預設參數](../cpp/default-arguments.md)。
+預設引數可讓您指定函式呼叫中未提供值時，引數應該假設的值。 下列程式碼片段將示範預設引數的運作方式。 如需有關指定預設引數之限制的詳細資訊，請參閱[預設引數](../cpp/default-arguments.md)。
 
 ```cpp
 // expre_Ellipsis_and_Default_Arguments.cpp
@@ -184,7 +184,7 @@ void print( const char *string, const char *terminator )
 }
 ```
 
-上述程式會宣告接受兩個引數的函式 `print`。 但是,第二個參數*終止符*,`"\n"`具有預設值 。 在`main`中,前兩`print`個調用允許預設第二個參數提供新行以終止列印的字串。 第三個呼叫會為第二個引數指定明確的值。 程式的輸出為
+上述程式會宣告接受兩個引數的函式 `print`。 不過，第二個引數（*結束字元*）具有預設值 `"\n"` 。 在中 `main` ，的前兩個呼叫 `print` 允許預設的第二個引數提供新的行來結束列印的字串。 第三個呼叫會為第二個引數指定明確的值。 程式的輸出為
 
 ```Output
 hello,

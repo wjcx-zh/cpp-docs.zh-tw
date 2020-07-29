@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c09832a4f27bff51cbb5bd847a3123e62c9ee8d5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 068bdb2c7c87e8fe7cd3e482f53934de098a6166
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991009"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218087"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>編譯器警告 (層級 4) C4512
 
@@ -23,13 +23,13 @@ ms.locfileid: "74991009"
 
 若要避免這個警告，請為該類別指定使用者定義的指派運算子。
 
-編譯器也會為未定義的類別產生指派運算子函式。 此指派運算子是物件資料成員的成員複本。 由於在初始設定之後無法修改 `const` 資料項目，因此如果類別含有 `const` 項目，則預設指派運算子將無法運作。 C4512 警告的另一個原因是宣告參考類型的非靜態資料成員。 如果目的是要建立不可複製的類型，您也必須防止建立預設複製建構函式。
+編譯器也會為未定義的類別產生指派運算子函式。 此指派運算子是物件資料成員的成員複本。 由於 **`const`** 無法在初始化之後修改資料項目，因此，如果類別包含 **`const`** 專案，預設指派運算子將無法使用。 C4512 警告的另一個原因是宣告參考類型的非靜態資料成員。 如果目的是要建立不可複製的類型，您也必須防止建立預設複製建構函式。
 
 您可以用三種方式之一來解決程式碼的 C4512 警告：
 
 - 明確地定義類別的指派運算子。
 
-- 從類別中的資料項目移除**const**或 reference 運算子。
+- **`const`** 從類別中的資料項目移除或參考運算子。
 
 - 請使用 #pragma [warning](../../preprocessor/warning.md)語句來隱藏警告。
 

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218724"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol、_atol_l、_wtol、_wtol_l
 
@@ -83,7 +83,7 @@ long _wtol_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 要轉換的字串。
 
 *locale*<br/>
@@ -91,7 +91,7 @@ long _wtol_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式都會傳回將輸入字元解讀為數字所產生的**完整**值。 如果輸入無法轉換成該類型的值，則會針對**Atol** 0L 傳回值。
+每個函式都會傳回將 **`long`** 輸入字元解讀為數字所產生的值。 如果輸入無法轉換成該類型的值，則會針對**Atol** 0L 傳回值。
 
 如果溢位具有大型正整數值， **atol**會傳回**LONG_MAX**;如果溢位具有大型負整數值，則會傳回**LONG_MIN** 。 在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
@@ -180,7 +180,7 @@ Overflow condition occurred.
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

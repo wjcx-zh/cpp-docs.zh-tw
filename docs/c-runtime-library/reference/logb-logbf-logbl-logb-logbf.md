@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911406"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218568"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -97,7 +97,7 @@ float _logbf(
 
 **Logb**函式會將浮點引數*x*的指數值解壓縮，如同*x*是以無限範圍表示。 如果引數*x*反正規化，則會將它視為正規化。
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**logb**的多載。 在 C 程式中， **logb**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回或值之**logb**的多載 **`float`** **`long double`** 。 在 C 程式中， **logb**一律會採用並傳回 **`double`** 。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: b55a7ec92787cb6b3103bf71b65d137d24ffff04
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204998"
 ---
 # <a name="allocator_base-class"></a>allocator_base 類別
 
@@ -65,19 +65,19 @@ class allocator_base
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[allocator_base](#allocator_base)|建構類型 `allocator_base` 的物件。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[const_pointer](#const_pointer)|一種類型，可提供配置器管理之物件類型的常數指標。|
 |[const_reference](#const_reference)|一種類型，可提供配置器管理之物件類型的常數參考。|
 |[difference_type](#difference_type)|帶正負號整數類型，可以表示配置器所管理的物件類型的指標值之間的差異。|
 |[滑鼠](#pointer)|一種類型，可提供配置器管理之物件類型的指標。|
-|[證明](#reference)|一種類型，可提供配置器管理之物件類型的參考。|
+|[reference](#reference)|一種類型，可提供配置器管理之物件類型的參考。|
 |[size_type](#size_type)|不帶正負號的整數類型，可以表示類型物件可以配置的任何序列的長度 `allocator_base` 。|
 |[value_type](#value_type)|配置器所管理的類型。|
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |成員函數|描述|
 |-|-|
-|[_Charalloc](#charalloc)|為**char**類型的陣列配置儲存體。|
-|[_Chardealloc](#chardealloc)|釋放包含**char**類型元素之陣列的儲存體。|
+|[_Charalloc](#charalloc)|為類型的陣列配置儲存區 **`char`** 。|
+|[_Chardealloc](#chardealloc)|釋放包含類型元素之陣列的儲存區 **`char`** 。|
 |[address](#address)|尋找指定值所屬物件的位址。|
 |[allocate](#allocate)|配置夠大的記憶體區塊，至少儲存某些指定的項目數。|
 |[建構](#construct)|在指定值初始化的指定位址上，建構特定類型的物件。|
@@ -94,7 +94,7 @@ class allocator_base
 |[予以](#destroy)|呼叫物件解構函式，而不取消配置儲存物件的記憶體。|
 |[max_size](#max_size)|傳回在可用記憶體用完之前，無法由 allocator 類別的物件所配置之類型 *Type* 的元素數。|
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<allocators>
 
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base：： _Charalloc
 
-為**char**類型的陣列配置儲存體。
+為類型的陣列配置儲存區 **`char`** 。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -124,7 +124,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base：： _Chardealloc
 
-釋放包含**char**類型元素之陣列的儲存體。
+釋放包含類型元素之陣列的儲存區 **`char`** 。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -139,7 +139,7 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="remarks"></a>備註
 
-使用無法編譯重新繫結的編譯器進行編譯時，容器會使用此成員函式。 它會實作使用者定義配置器的 `_Chardealloc`，方法是呼叫同步處理篩選的 `deallocate` 函式。 之前必須已傳回指標 ptr，方法是呼叫等於 `*this` 之配置器物件的 `_Charalloc`，並配置相同大小和類型的陣列物件。 `_Chardealloc` 絕不會擲回例外狀況。
+使用無法編譯重新繫結的編譯器進行編譯時，容器會使用此成員函式。 它會實作使用者定義配置器的 `_Chardealloc`，方法是呼叫同步處理篩選的 `deallocate` 函式。 `_Charalloc`針對比較等於的配置器物件呼叫 **`*this`** （配置相同大小和類型的陣列物件）時，指標 ptr 必須稍早傳回。 `_Chardealloc` 絕不會擲回例外狀況。
 
 ## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base：： address
 
@@ -203,7 +203,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*再*|要複製的配置器物件。|
 
@@ -237,7 +237,7 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*ptr*|要建構物件之位置的指標。|
 |*初始值*|用來初始化所建構物件的值。|
@@ -256,7 +256,7 @@ void deallocate(pointer ptr, size_type _Nx);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*ptr*|要從儲存空間解除配置之第一個物件的指標。|
 |*_Nx*|要從儲存空間解除配置的物件數目。|
@@ -275,7 +275,7 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*ptr*|指定要終結之物件位址的指標。|
 

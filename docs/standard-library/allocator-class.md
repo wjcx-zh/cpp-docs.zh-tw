@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 5459fdbd445e7823dcc28096a7b7da3c0c5b38cf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617502"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204985"
 ---
 # <a name="allocator-class"></a>allocator 類別
 
@@ -95,7 +95,7 @@ class allocator
 |[const_reference](#const_reference)|一種類型，可提供配置器管理之物件類型的常數參考。|
 |[difference_type](#difference_type)|帶正負號整數類型，可以表示配置器所管理的物件類型的指標值之間的差異。|
 |[滑鼠](#pointer)|一種類型，可提供配置器管理之物件類型的指標。|
-|[證明](#reference)|一種類型，可提供配置器管理之物件類型的參考。|
+|[reference](#reference)|一種類型，可提供配置器管理之物件類型的參考。|
 |[size_type](#size_type)|不帶正負號的整數類型，可以表示類型物件可以配置的任何序列的長度 `allocator` 。|
 |[value_type](#value_type)|配置器所管理的類型。|
 
@@ -468,7 +468,7 @@ template <class _Other>
 
 #### <a name="remarks"></a>備註
 
-第一個成員函式相當於**new** （（ `void` \* ） `ptr` ）**型**別（ `val` ）。
+第一個成員函式相當於 `new ((void *) ptr) Type(val)` 。
 
 #### <a name="example"></a>範例
 
@@ -874,7 +874,7 @@ struct rebind { typedef allocator<_Other> other; };
 
 如果類型與所實作容器的元素類型不同，則此結構適用於配置這類類型的記憶體。
 
-成員類別範本會定義其他類型。 其唯一目的是要提供**類型名稱配置**器 \<_ **Other**> ，並指定類型名稱**allocator**配置器 \< **Type**> 。
+成員類別範本會定義其他類型。 其唯一目的是要提供型別名稱 `allocator<_Other>` `allocator<Type>` 。
 
 例如，假設有一個 `al` 類型的配置器物件 `A` ，您可以使用運算式來配置類型的物件 `_Other` ：
 

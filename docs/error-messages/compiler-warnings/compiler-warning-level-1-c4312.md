@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: d76b08a31cacdc4e2e367a236ce98ec5204ac3e7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 379803260492449da4985e62d36750f121b4e7fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163059"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233258"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>編譯器警告 (層級 1) C4312
 
 'operation' : 將 'type1' 轉換為較大的 'type2'
 
-這項警告偵測到嘗試將 32 位元值指派給 64 位元指標類型的動作，例如，將 32 位元 `int` 或 `long` 轉型為 64 位元指標。
+此警告會偵測到將32位值指派給64位指標類型的嘗試，例如，將32位 **`int`** 或轉換 **`long`** 成64位指標。
 
 這可能是不安全的轉換，即使在發生正負號擴充時納入 32 位元指標值也是如此。 負的 32 位元整數指派給 64 位元指標類型，正負號擴充會使指標值參考不同於整數值的記憶體位址。
 

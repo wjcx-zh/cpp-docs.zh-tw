@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2378
 ms.assetid: 507a91c6-ca72-48df-b3a4-2cf931c86806
-ms.openlocfilehash: 63063ec98bbc4d42f3237fd42e42b9fdce489892
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c72a46bbc5778bf95ddc49426f97df0320b22a30
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745417"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218230"
 ---
 # <a name="compiler-error-c2378"></a>編譯器錯誤 C2378
 
 'identifier' : 重複定義; 符號無法以 typedef 多載
 
-識別項已重新定義為 `typedef`。
+已將識別碼重新定義為 **`typedef`** 。
 
 下列範例會產生 C2378：
 

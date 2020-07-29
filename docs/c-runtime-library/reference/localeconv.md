@@ -28,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916400"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218633"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -57,12 +57,12 @@ struct lconv *localeconv( void );
 |-|-|
 decimal_point、<br/>_W_decimal_point|非貨幣數量的小數點字元指標。
 thousands_sep、<br/>_W_thousands_sep|字元的指標，用來分隔非貨幣數量的小數點左邊數位群組。
-群組|**Char**大小的整數指標，其中包含非貨幣數量中每個數位群組的大小。
+群組|**`char`** 大小的整數指標，其中包含非貨幣數量中每個數位群組的大小。
 int_curr_symbol、<br/>_W_int_curr_symbol|目前地區設定的國際貨幣符號指標。 前三個字元依照「ISO 4217 貨幣和資金代碼」** 標準的定義，指定字母國際貨幣符號。 第四個字元 (緊接在 Null 字元之前) 會分隔國際貨幣符號與貨幣的數量。
 currency_symbol、<br/>_W_currency_symbol|目前地區設定的當地貨幣符號指標。
 mon_decimal_point、<br/>_W_mon_decimal_point|貨幣數量之小數點字元的指標。
 mon_thousands_sep、<br/>_W_mon_thousands_sep|貨幣數量中小數點左邊數位群組的分隔符號指標。
-mon_grouping|**Char**大小的整數指標，其中包含貨幣數量中每個數位群組的大小。
+mon_grouping|**`char`**-大小的整數指標，其中包含貨幣數量中每個數位群組的大小。
 positive_sign、<br/>_W_positive_sign|表示非負值貨幣數量之正負號的字串。
 negative_sign、<br/>_W_negative_sign|表示負值貨幣數量之正負號的字串。
 int_frac_digits|國際格式化貨幣數量之小數點右邊的數字數目。
@@ -74,9 +74,9 @@ n_sep_by_space|如果貨幣符號與負值格式化貨幣數量之間以空格�
 p_sign_posn|非負值格式化貨幣數量的正號位置。
 n_sign_posn|負值的格式化貨幣數量的正號位置。
 
-除了指定以外，具有`char *`和`wchar_t *`版本之**lconv**結構的成員是指向字串的指標。 上述任何一項都等於 **""** （或**wchar_t** <strong>\*</strong>的**L ""** ），其長度為零，或在目前的地區設定中不受支援。 請注意， **decimal_point**和 **_W_decimal_point**一律受支援且長度不為零。
+除了指定以外，具有和版本之**lconv**結構的 `char *` 成員 `wchar_t *` 是指向字串的指標。 其中任何等於 **""** （或**L ""** **`wchar_t`** <strong>\*</strong> ）的都是零長度，或在目前的地區設定中不受支援。 請注意， **decimal_point**和 **_W_decimal_point**一律受支援且長度不為零。
 
-結構的**char**成員是小型非負數值，而不是字元。 任何一項若等於 **CHAR_MAX**，則其於目前地區設定中不受支援。
+**`char`** 結構的成員是小型非負數值，而不是字元。 任何一項若等於 **CHAR_MAX**，則其於目前地區設定中不受支援。
 
 **群組**和**mon_grouping**的值會根據下列規則來進行轉譯：
 
@@ -132,8 +132,8 @@ n_sign_posn|負值的格式化貨幣數量的正號位置。
 
 ## <a name="see-also"></a>另請參閱
 
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll 函式](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime、wcsftime、_strftime_l、_wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 9d4397c11c4d2f0f9013c7df914cbc4be9fd4e9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: afca92602aa6033c56869d3f84192ca0f029a23e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198480"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218113"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>編譯器警告 (層級 4) C4127
 
@@ -19,9 +19,9 @@ ms.locfileid: "80198480"
 
 ## <a name="remarks"></a>備註
 
-**If**語句或**while**迴圈的控制運算式會評估為常數。 由於其常見的慣用使用方式，從 Visual Studio 2015 update 3 開始，簡單的常數（例如1或**true** ）不會觸發警告，除非它們是運算式中的運算結果。
+**`if`** 語句或迴圈的控制運算式會 **`while`** 評估為常數。 由於常見的慣用使用方式，從 Visual Studio 2015 update 3 開始，簡單的常數（例如1或） **`true`** 不會觸發警告，除非它們是運算式中的作業結果。
 
-如果**while**迴圈的控制運算式是常數，因為迴圈會在中間結束，請考慮將**while**迴圈取代**為 for**迴圈。 您可以省略「 **for**迴圈」的初始化、終止測試和迴圈增量，這會使迴圈成為無限的，就像 `while(1)`一樣，您也可以從**for**語句的主體結束迴圈。
+如果迴圈的控制運算式 **`while`** 是常數，因為迴圈會在中間結束，請考慮 **`while`** 以迴圈取代迴圈 **`for`** 。 您可以省略迴圈的初始化、終止測試和迴圈增量 **`for`** ，這會使迴圈成為無限的，就像一樣 `while(1)` ，您也可以從語句的主體結束迴圈 **`for`** 。
 
 ## <a name="example"></a>範例
 

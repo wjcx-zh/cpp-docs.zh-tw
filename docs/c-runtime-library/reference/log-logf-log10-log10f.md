@@ -48,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507036"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218594"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -96,11 +96,11 @@ long double log10( long double x );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此您可以呼叫採用並傳回**float**或**long double**值的**log**和**log10**多載。 在 C 程式中， **log**和**log10**一律會採用並傳回**雙精度浮點數**。
+C + + 允許多載，因此您可以呼叫採用並傳回或值之**log**和**log10**的多載 **`float`** **`long double`** 。 在 C 程式中， **log**和**log10**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

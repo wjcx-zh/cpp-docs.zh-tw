@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: f981b86ed8f5d3b240d9f02380a603eb4f2605bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623585"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204881"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -80,7 +80,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](sync-per-thread-class.md)同步處理篩選。
 
-區塊配置器是快取或篩選。 快取是一個類別樣板，其接受 std：： size_t 類型的一個引數。 它會定義區塊配置器，以配置和解除配置單一大小的記憶體區塊。 它必須使用**new**運算子來取得記憶體，但不需要對每個區塊進行個別的 operator **new**呼叫。 例如，它會從較大的區塊進行子配置，或快取已解除配置的區塊以進行後續重新配置。
+區塊配置器是快取或篩選。 快取是一個類別樣板，其接受 std：： size_t 類型的一個引數。 它會定義區塊配置器，以配置和解除配置單一大小的記憶體區塊。 它必須使用運算子取得記憶體 **`new`** ，但不需要對每個區塊進行個別呼叫運算子 **`new`** 。 例如，它會從較大的區塊進行子配置，或快取已解除配置的區塊以進行後續重新配置。
 
 若編譯器無法重新系結樣板時所使用之 std：： size_t 引數的值，則不一定是傳遞至快取成員函式的引數值 _Sz 會配置和解除配置。
 
@@ -122,7 +122,7 @@ _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](sy
 
 ### <a name="macros"></a>巨集
 
-|巨集|描述|
+|巨集|說明|
 |-|-|
 |[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)|產生配置器類別範本。|
 |[CACHE_CHUNKLIST](allocators-functions.md#cache_chunklist)|產生 `stdext::allocators::cache_chunklist<sizeof(Type)>`。|
@@ -162,7 +162,7 @@ _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](sy
 |[sync_per_thread](sync-per-thread-class.md)|描述可為每個執行緒提供不同快取物件的同步處理篩選。|
 |[sync_shared](sync-shared-class.md)|描述同步處理篩選，使用 Mutex 來控制對所有配置器共用之快取物件的存取。|
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<allocators>
 

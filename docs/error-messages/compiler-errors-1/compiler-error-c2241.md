@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2241
 ms.assetid: 2f4e2c2c-b95c-4afe-bbe0-4214cd39d140
-ms.openlocfilehash: 4d09af5b29318e1481c666fcfe56b3f80434d4a0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c02651df5f06b12fd57667fa3d5b470179fd35f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206484"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87208872"
 ---
 # <a name="compiler-error-c2241"></a>編譯器錯誤 C2241
 
@@ -23,4 +23,4 @@ ms.locfileid: "80206484"
 
 1. 變更成員的存取層級。
 
-1. 宣告成員為存取函式的 `friend` 。
+1. 宣告存取函數的成員 a **`friend`** 。

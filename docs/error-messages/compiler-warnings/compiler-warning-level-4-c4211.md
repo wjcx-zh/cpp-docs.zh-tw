@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-ms.openlocfilehash: 6387f58430098e49e7add25e8915bf6b181634e9
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: df19f90e17d6737a2639eb1245da197881e35c96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541835"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218100"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>編譯器警告 (層級 4) C4211
 
 使用非標準的擴充：已將 extern 重新定義為靜態
 
-使用預設的 Microsoft 擴充功能（/Ze）時，您可以將 `extern` 識別碼重新定義為**靜態**。
+使用預設的 Microsoft 擴充功能（/Ze）時，您可以將識別碼重新定義 **`extern`** 為 **`static`** 。
 
 ## <a name="example"></a>範例
 

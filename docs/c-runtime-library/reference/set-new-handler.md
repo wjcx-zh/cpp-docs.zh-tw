@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913962"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218542"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-若 **new** 運算子無法配置記憶體，則將控制項傳送至您的錯誤處理機制。
+如果運算子無法配置記憶體，則將控制權轉移至您的錯誤處理機制 **`new`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -58,7 +58,7 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="remarks"></a>備註
 
-如果**new**運算子無法配置記憶體，c + + **_set_new_handler**函式會指定可取得控制權的例外狀況處理函數。 如果**new**失敗，則執行時間系統會自動呼叫當做引數傳遞至 **_set_new_handler**的例外狀況處理函式。 **_PNH**（定義于 New .h 中）是函式的指標，該函式會傳回類型**int**並接受類型為**size_t**的引數。 使用**size_t**來指定要配置的空間量。
+如果 **_set_new_handler** **`new`** 運算子無法配置記憶體，c + + _set_new_handler 函式會指定可取得控制權的例外狀況處理函數。 如果 **`new`** 失敗，執行時間系統會自動呼叫當做引數傳遞至 **_set_new_handler**的例外狀況處理函式。 **_PNH**（定義于 New .h 中）是函式的指標，該函式會傳回類型 **`int`** ，並接受**size_t**類型的引數。 使用**size_t**來指定要配置的空間量。
 
 沒有預設處理常式。
 
@@ -95,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-C++ [_set_new_mode](set-new-mode.md) 函式會設定 [malloc](malloc.md) 的新處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫 **_set_new_handler**所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**malloc**無法配置記憶體時， **malloc**會呼叫新的處理常式，其方式會與**新**的運算子在因相同原因而失敗時所執行的相同。 若要覆寫預設值，請及早在程式中呼叫：
+C++ [_set_new_mode](set-new-mode.md) 函式會設定 [malloc](malloc.md) 的新處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫 **_set_new_handler**所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**malloc**無法配置記憶體時， **malloc**會呼叫新的處理常式常式， **`new`** 其方式與運算子因相同原因而失敗時所執行的相同。 若要覆寫預設值，請及早在程式中呼叫：
 
 ```cpp
 _set_new_mode(1);
@@ -103,7 +103,7 @@ _set_new_mode(1);
 
 ，或使用 Newmode.obj 連結。
 
-如果提供使用者定義`operator new` ，則不會在失敗時自動呼叫新的處理常式函數。
+如果提供使用者定義 `operator new` ，則不會在失敗時自動呼叫新的處理常式函數。
 
 如需詳細資訊，請參閱《C++ 語言參考》** 中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md)。
 

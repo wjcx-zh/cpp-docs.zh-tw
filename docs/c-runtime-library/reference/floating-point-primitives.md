@@ -157,12 +157,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916689"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218675"
 ---
 # <a name="floating-point-primitives"></a>浮點數基本類型
 
@@ -189,7 +189,7 @@ short __cdecl _fdclass(float x);
 
 這些浮點基本型別會針對浮點類型，實作為 CRT 宏[fpclassify](fpclassify.md)的 C 版本。 引數*x*的分類會當做其中一個常數（定義于 math. h 中）傳回：
 
-|值|描述|
+|值|說明|
 |-----------|-----------------|
 | **FP_NAN** | 無訊息、訊號或不確定的 NaN |
 | **FP_INFINITE** | 正或負無限大 |
@@ -237,7 +237,7 @@ int __cdecl _fdpcomp(float x, float y);
 
 這些浮點基本類型會採用兩個引數*x*和*y*，並傳回值，以顯示其順序關聯性（以這些常數的位 or 表示），定義于 math 中：
 
-| 值 | 描述 |
+| 值 | 說明 |
 |------------|-----------------|
 | **_FP_LT** | *x*可視為小於*y* |
 | **_FP_EQ** | *x*可以視為等於*y* |
@@ -264,7 +264,7 @@ short __cdecl _fdtest(float* px);
 
 這些浮點基本型別會針對浮點型別，實作用的 CRT 函式[fpclassify](fpclassify.md)的 c + + 版本。 會評估引數*x* ，並傳回分類作為下列其中一個常數（定義于 math. h 中）：
 
-|值|描述|
+|值|說明|
 |-----------|-----------------|
 | **FP_NAN** | 無訊息、訊號或不確定的 NaN |
 | **FP_INFINITE** | 正或負無限大 |
@@ -376,12 +376,12 @@ short __cdecl _fdnorm(unsigned short* ps);
 
 ### <a name="parameters"></a>參數
 
-*ps*<br/>
-以不**帶正負**號的**short**陣列表示的浮點值之位表示的指標。
+*專業*<br/>
+以陣列表示之浮點值的位表示的指標 **`unsigned short`** 。
 
 ### <a name="remarks"></a>備註
 
-這些浮點基本類型會將 underflowed 浮點值的小數部分正規化，並調整*特性*或偏誤指數以符合。 此值會傳遞為浮點類型的位標記法，而轉換成不**帶正負****號 short**的陣列， `_double_val`方法`_ldouble_val`是透過`_float_val`在 math 中宣告的、或類型 punning 聯集。 傳回值是在輸入浮點值上**fpclassify**的結果（如果它是 NaN 或無限大），否則為輸出值。
+這些浮點基本類型會將 underflowed 浮點值的小數部分正規化，並調整*特性*或偏誤指數以符合。 此值會當做浮點類型的位表示來傳遞，該型別會 **`unsigned short`** 透過 `_double_val` 、 `_ldouble_val` 或 `_float_val` 在 math 中宣告的 punning 聯集來轉換成陣列。 傳回值是在輸入浮點值上**fpclassify**的結果（如果它是 NaN 或無限大），否則為輸出值。
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly、_ldpoly、_fdpoly
 
@@ -406,7 +406,7 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="remarks"></a>備註
 
-這些浮點基本型別會在 order *n*的多項式中傳回*x*的評估，其係數是由*資料表*中對應的常數值表示。 例如，如果*資料表*\[0] = 3.0、[*資料表*\[1] = 4.0、 *[資料表*\[2] = 5.0 和*n* = 2，則表示多項式 5.0 x<sup>2</sup> + 4.0 x + 3.0。 如果評估此多項式的*x*為2.0，則結果為31.0。 這些函數不會在內部使用。
+這些浮點基本型別會在 order *n*的多項式中傳回*x*的評估，其係數是由*資料表*中對應的常數值表示。 例如，如果*資料表* \[ 0] = 3.0、[*資料表* \[ 1] = 4.0、[*資料表* \[ 2] = 5.0 和*n* = 2，則表示多項式 5.0 x<sup>2</sup> + 4.0 x + 3.0。 如果評估此多項式的*x*為2.0，則結果為31.0。 這些函數不會在內部使用。
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog、_dlog、_dlog
 
@@ -446,7 +446,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 浮點函數引數。
 
 *四分之一*<br/>
-0、1、2或3的象限位移，用來`sin`產生、 `cos`、 `-sin`和`-cos`結果。
+0、1、2或3的象限位移，用來產生 `sin` 、 `cos` 、 `-sin` 和 `-cos` 結果。
 
 ### <a name="remarks"></a>備註
 
@@ -454,7 +454,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ## <a name="requirements"></a>需求
 
-Header： \<math. h>
+標題：\<math.h>
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

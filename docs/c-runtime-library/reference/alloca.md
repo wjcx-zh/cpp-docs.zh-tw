@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 159f474927b4aaf364ad6972450edbe513a3c0b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821430"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218737"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -52,7 +52,7 @@ void *_alloca(
 
 ## <a name="return-value"></a>傳回值
 
-**_Alloca**常式會傳回已配置空間的**void**指標，保證會適當地對齊任何物件類型的儲存。 如果*size*為0， **_alloca**會配置零長度專案，並傳回該專案的有效指標。
+**_Alloca**常式 **`void`** 會傳回已配置空間的指標，保證會適當地對齊任何物件類型的儲存。 如果*size*為0， **_alloca**會配置零長度專案，並傳回該專案的有效指標。
 
 如果無法配置空間，則會產生堆疊溢位例外狀況。 堆疊溢位例外狀況不是 C++ 例外狀況，而是結構化例外狀況。 您必須使用[結構化例外狀況處理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而不是使用 C++ 例外狀況處理。
 
@@ -62,9 +62,9 @@ void *_alloca(
 
 在例外狀況處理常式（EH）中明確呼叫 **_alloca**有一些限制。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，在下列任一情況下明確呼叫 **_alloca** ，會導致在傳回呼叫 EH 常式期間發生程式失敗：
 
-- Windows NT SEH 例外狀況篩選運算式： `__except ( _alloca() )`
+- Windows NT SEH 例外狀況篩選條件運算式：`__except ( _alloca() )`
 
-- Windows NT SEH 最終例外狀況處理常式： `__finally { _alloca() }`
+- Windows NT SEH 最終例外狀況處理常式：`__finally { _alloca() }`
 
 - C++ EH catch 子句運算式
 
@@ -73,7 +73,7 @@ void *_alloca(
 > [!IMPORTANT]
 > 在 Windows XP 中，如果在 try/catch 區塊內呼叫 **_alloca** ，您必須在 catch 區塊中呼叫[_resetstkoflw](resetstkoflw.md) 。
 
-除了上述限制以外，使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項時， **_alloca**不能用在 **__except**區塊中。 如需詳細資訊，請參閱 [/clr 限制](../../build/reference/clr-restrictions.md)。
+除了上述限制以外，使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項時， **_alloca**不能用在 **`__except`** 區塊中。 如需詳細資訊，請參閱 [/clr 限制](../../build/reference/clr-restrictions.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -139,7 +139,7 @@ int main()
 Allocated 1000 bytes of stack at 0x0012FB50
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

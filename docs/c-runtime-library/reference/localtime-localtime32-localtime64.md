@@ -38,12 +38,12 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: 764a3768610d97df2eb3af4ed0425065aba4b4fa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cacc0317bf48b7f4d33027558c3dc6c739e474dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218620"
 ---
 # <a name="localtime-_localtime32-_localtime64"></a>localtime，_localtime32，_localtime64
 
@@ -76,9 +76,9 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 **localtime**是評估為 **_localtime64**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊的32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**localtime**評估為 **_localtime32**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
 
-結構類型[tm](../../c-runtime-library/standard-types.md)的欄位會儲存下列值，其中每一個都是**int**：
+結構類型[tm](../../c-runtime-library/standard-types.md)的欄位會儲存下列值，其中每一個都是 **`int`** ：
 
-|欄位|描述|
+|欄位|說明|
 |-|-|
 |**tm_sec**|分鐘後的秒數（0-59）。|
 |**tm_min**|小時之後的分鐘（0-59）。|
@@ -94,7 +94,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 ## <a name="remarks"></a>備註
 
-**Localtime**函式會將儲存的時間轉換為[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在類型為[tm](../../c-runtime-library/standard-types.md)的結構中。 **Long**值*sourceTime*代表自1970年1月1日午夜（00:00:00）起算的秒數（UTC）。 這個值通常是從[time](time-time32-time64.md)函數取得。
+**Localtime**函式會將儲存的時間轉換為[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在類型為[tm](../../c-runtime-library/standard-types.md)的結構中。 **`long`** 值*sourceTime*代表自1970年1月1日午夜（00:00:00）起算的秒數（UTC）。 這個值通常是從[time](time-time32-time64.md)函數取得。
 
 32位和64位版本的[gmtime](gmtime-gmtime32-gmtime64.md)、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)和**localtime**都使用每個執行緒的單一**tm**結構來進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。
 
@@ -111,7 +111,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime> 或\<time. h>|
+|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime> 或 \<time.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

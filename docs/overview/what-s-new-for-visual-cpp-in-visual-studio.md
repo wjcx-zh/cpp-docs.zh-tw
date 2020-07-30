@@ -3,12 +3,12 @@ title: Visual Studio 中 C++ 的新功能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226785"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389996"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
@@ -513,12 +513,11 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 
 使用 IntelliSense 引擎進行重構和程式碼瀏覽的數項 C++ 作業執行速度更快。 下列數值是根據含有 3500 個專案的 Visual Studio Chromium 方案而來：
 
-|||
-|-|-|
-|功能|效能改善|
-|重新命名|5.3 倍|
-|變更簽章 |4.5 倍|
-|尋找所有參考|4.7 倍|
+| 功能 | 效能改善 |
+|--|--|
+| 重新命名 | 5.3 倍 |
+| 變更簽章 | 4.5 倍 |
+| 尋找所有參考 | 4.7 倍 |
 
 C++ 現在支援以 Ctrl+按一下 [移至定義]****，如此可輕鬆使用滑鼠瀏覽至定義。 Productivity Power Tools 套件的 Structure Visualizer 現在預設也會隨附於產品。
 
@@ -667,7 +666,7 @@ C++ 以通用 Windows app 工作負載的選用元件形式提供。 目前，�
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
-- 新增對 [/analyze:ruleset](../build/reference/analyze-code-analysis.md) 的支援，這可讓您指定要執行的程式碼分析規則。
+- 為新增的支援 [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) ，可讓您指定要執行的程式碼分析規則。
 - 新增對其他 C++ Core Guidelines 規則的支援。  如需詳細資訊，請參閱[使用 C++ 核心指南檢查工具](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Visual Studio 2017 中的單元測試

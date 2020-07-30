@@ -2,12 +2,12 @@
 title: 從 2003 到 2015 的 Visual C++ 新功能
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e0fc576e8478a8d86d54daee22d797744eb870b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c73cf5fbd35c747f648ad2475a9ad49162a58d9
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219452"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389931"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1850,7 +1850,7 @@ Microsoft 專有的 **__nullptr**關鍵字與具有相同的意義 **`nullptr`**
 
 #### <a name="analyze-warnings"></a>/analyze 警告
 
-已從 C 執行階段 (CRT)、MFC 和 ATL 程式庫移除大部分 `/analyze` (企業程式碼分析) 警告。
+大部分 **`/analyze`** （企業程式碼分析）警告已從 C 執行時間（CRT）、MFC 和 ATL 程式庫中移除。
 
 #### <a name="animation-and-d2d-support"></a>動畫和 D2D 支援
 

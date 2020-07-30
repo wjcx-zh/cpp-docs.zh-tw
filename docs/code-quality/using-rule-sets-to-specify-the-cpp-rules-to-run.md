@@ -1,21 +1,21 @@
 ---
 title: 使用規則集指定要執行的 C++ 規則
-ms.date: 07/13/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373849"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389814"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>使用規則集來指定要執行的 C++ 規則
 
-在 Visual Studio 中，您可以建立和修改自訂*規則集*，以符合與程式碼分析相關聯的特定專案需求。 預設的規則集會儲存在中 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` 。
+在 Visual Studio 中，您可以建立和修改自訂*規則集*，以符合與程式碼分析相關聯的特定專案需求。 預設的規則集會儲存在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* 。
 
-**Visual Studio 2017 15.7 版和更新版本：** 您可以使用任何文字編輯器來建立自訂規則集，並將其套用在命令列組建中，不論您使用的組建系統為何。 如需詳細資訊，請參閱[/analyze：規則集](/cpp/build/reference/analyze-code-analysis)。
+**Visual Studio 2017 15.7 版和更新版本：** 您可以使用任何文字編輯器來建立自訂規則集，並將其套用在命令列組建中，不論您使用的組建系統為何。 如需詳細資訊，請參閱 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis)。
 
 若要在 Visual Studio 中建立自訂 c + + 規則集，必須在 Visual Studio IDE 中開啟 C/c + + 專案。 接著，您可以在 [規則集編輯器] 中開啟標準規則集，然後新增或移除特定規則，並選擇性地變更程式碼分析判斷違反規則時所發生的動作。
 
@@ -23,9 +23,11 @@ ms.locfileid: "86373849"
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>從單一現有規則集建立自訂規則
 
-1. 在 [方案總管中，開啟專案的快捷方式功能表，然後選擇 [**屬性**]。
+::: moniker range="<=vs-2017"
 
-1. 在 [**屬性**] 索引標籤上，選擇 [程式**代碼分析**]。
+1. 在方案總管中，開啟專案的快捷方式功能表，然後選擇 [**屬性**]。
+
+1. 在 [**屬性頁**] 對話方塊中，選取 [設定**屬性**程式 > **代碼分析** > **一般**] 屬性頁。
 
 1. 在 [**規則集**] 下拉式清單中，執行下列其中一項動作：
 
@@ -36,6 +38,25 @@ ms.locfileid: "86373849"
    - 選擇 **\<Browse...>** 指定不在清單中的現有規則集。
 
 1. 選擇 [**開啟**] 以顯示規則集編輯器中的規則。
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+1. 在方案總管中，開啟專案的快捷方式功能表，然後選擇 [**屬性**]。
+
+1. 在 [**屬性頁**] 對話方塊中，選取 [設定**屬性**] [程式 > **代碼分析**] [ > **Microsoft** ] 屬性頁。
+
+1. 在 [作用中**規則**] 下拉式清單中，執行下列其中一項：
+
+   - 選擇您想要自訂的規則集。
+
+     \- 或 -
+
+   - 選擇 **\<Browse...>** 指定不在清單中的現有規則集。
+
+1. 選擇 [**開啟**] 以顯示規則集編輯器中的規則。
+
+::: moniker-end
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>若要在規則集編輯器中修改規則集
 
@@ -77,41 +98,23 @@ ms.locfileid: "86373849"
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>在文字編輯器中建立規則集
 
-您可以在文字編輯器中建立自訂規則集，並將它儲存在具有副檔名的任何位置， `.ruleset` 然後使用[/analyze：規則集](/cpp/build/reference/analyze-code-analysis)編譯器選項來套用。
+您可以在文字編輯器中建立自訂規則集，並將它儲存在具有副檔名的任何位置， *`.ruleset`* 然後使用 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) 編譯器選項來套用。
 
 下列範例顯示基本的規則集檔案，可供您做為起點：
 
-::: moniker range="<=vs-2017"
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+<RuleSet Name="New Rule Set" Description="New rules to apply." ToolsVersion="10.0">
   <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
     <Rule Id="C6001" Action="Warning" />
     <Rule Id="C26494" Action="Warning" />
   </Rules>
 </RuleSet>
 ```
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
-    <Rule Id="C6001" Action="Warning" />
-    <Rule Id="C26494" Action="Warning" />
-  </Rules>
-</RuleSet>
-```
-
-::: moniker-end
 
 ## <a name="ruleset-schema"></a>規則集架構
 
-下列規則集架構描述規則集檔案的 XML 架構。 規則集架構會儲存在中 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` 。 您可以用程式設計的方式撰寫自己的規則集，或驗證您的自訂規則集是否遵守正確的格式。 如需詳細資訊，請參閱[如何：根據 XSD 架構建立 XML 檔](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)。
+下列規則集架構描述規則集檔案的 XML 架構。 規則集架構會儲存在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* 。 您可以用程式設計的方式撰寫自己的規則集，或驗證您的自訂規則集是否遵守正確的格式。 如需詳細資訊，請參閱[如何：根據 XSD 架構建立 XML 檔](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

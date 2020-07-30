@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: 87f3440dc71246c3a925ed3d64f8ccf1b2c28cd1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404277"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389775"
 ---
 # <a name="fatal-error-c1083"></a>嚴重錯誤 C1083
 
@@ -29,7 +29,7 @@ ms.locfileid: "86404277"
 
 `#include <algorithm>`
 
-某些 C 執行階段程式庫標頭位於標準 Include 目錄的子目錄中。 例如，若要包含 sys/types .h，您必須在指示詞中包含 sys 子目錄名稱 `#include` ：
+某些 C 執行階段程式庫標頭位於標準 Include 目錄的子目錄中。 例如，若要包含 *`sys/types.h`* ，您必須在指示詞 *`sys`* 中包含子目錄名稱 `#include` ：
 
 `#include <sys/types.h>`
 
@@ -45,9 +45,9 @@ ms.locfileid: "86404277"
 
 `#include <stdio.h>`
 
-編譯器會遵循由組建環境、 **/i**編譯器選項、 **/x**編譯器選項和**INCLUDE**環境變數所定義的搜尋路徑。 如需詳細資訊，包括用來尋找檔案之搜尋順序的特定詳細資料，請參閱 #include 指示詞[（c/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import](../../preprocessor/hash-import-directive-cpp.md)指示詞。
+編譯器會遵循由組建環境、 **`/I`** 編譯器選項、 **`/X`** 編譯器選項和**INCLUDE**環境變數所定義的搜尋路徑。 如需詳細資訊，包括用來尋找檔案之搜尋順序的特定詳細資料，請參閱 #include 指示詞[（c/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import](../../preprocessor/hash-import-directive-cpp.md)指示詞。
 
-如果您的 include 檔案位於與來原始目錄相對的另一個目錄中，而且您在 include 指示詞中使用相對路徑，則必須使用雙引號，而不是角括弧。 例如，如果您的標頭檔 myheader.h 是在名為標頭的專案來源子目錄中，則此範例找不到檔案並導致 C1083：
+如果您的 include 檔案位於與來原始目錄相對的另一個目錄中，而且您在 include 指示詞中使用相對路徑，則必須使用雙引號，而不是角括弧。 例如，如果您的標頭檔位於 *`myheader.h`* 名為 header 的專案來源子目錄中，則此範例找不到檔案並導致 C1083：
 
 `#include <headers\myheader.h>`
 
@@ -55,23 +55,23 @@ ms.locfileid: "86404277"
 
 `#include "headers\myheader.h"`
 
-相對路徑也可以與 include 搜尋路徑上的目錄搭配使用。 如果您在 Visual Studio 中將目錄新增至**include**環境變數或**include 目錄**路徑，請勿同時將部分的路徑新增至 include 指示詞。 例如，如果您的標頭位於 \path\example\headers\myheader.h，而您將 \path\example\headers\ 新增至 Visual Studio 中的**Include 目錄**路徑，但您 `#include` 的指示詞將檔案稱為
+相對路徑也可以與 include 搜尋路徑上的目錄搭配使用。 如果您在 Visual Studio 中將目錄新增至**include**環境變數或**include 目錄**路徑，請勿同時將部分的路徑新增至 include 指示詞。 例如，如果您的標頭位於 *`\path\example\headers\myheader.h`* ，而且您 *`\path\example\headers\`* 在 Visual Studio 中新增至**Include 目錄**路徑，但您的指示詞將檔案 `#include` 稱為
 
 `#include <headers\myheader.h>`
 
-但找不到檔案。 請使用與 include 搜尋路徑中指定之目錄相對的正確路徑。 在此範例中，您可以將 include 搜尋路徑變更為 \path\example， \, 或從指示詞中移除標頭 \ 路徑區段 `#include` 。
+但找不到檔案。 請使用與 include 搜尋路徑中指定之目錄相對的正確路徑。 在此範例中，您可以將 include 搜尋路徑變更為 *`\path\example\`* ，或從指示詞 *`headers\`* 中移除路徑區段 `#include` 。
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>協力廠商程式庫問題和 vcpkg
 
-如果您在嘗試將協力廠商程式庫設定為組建的一部分時看到此錯誤，請考慮使用 c + + 套件管理員[vcpkg](../../vcpkg.md)來安裝和建立程式庫。 vcpkg 支援大量且不斷成長[的協力廠商程式庫清單](https://github.com/Microsoft/vcpkg/tree/master/ports)，並將成功組建所需的所有設定屬性和相依性設為專案的一部分。
+如果您在嘗試將協力廠商程式庫設定為組建的一部分時看到此錯誤，請考慮使用 [`vcpkg`](../../vcpkg.md) c + + 封裝管理員來安裝和建立程式庫。 vcpkg 支援大量且不斷成長[的協力廠商程式庫清單](https://github.com/Microsoft/vcpkg/tree/master/ports)，並將成功組建所需的所有設定屬性和相依性設為專案的一部分。
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>檔案位於您的專案中，但不是包含搜尋路徑
 
-即使標頭檔列于**方案總管**中做為專案的一部分，只有在原始程式檔中的或指示詞參考檔案時，編譯器才會找到這些檔案 `#include` ，而且這些檔案 `#import` 位於 include 搜尋路徑中。 不同類型的組建可能會使用不同的搜尋路徑。 **/X**編譯器選項可以用來排除 include 搜尋路徑中的目錄。 這樣可讓不同的組建使用同名但存放在不同目錄下的 Include 檔案。 這是除了使用前置處理器命令進行條件式編譯以外的另一種作法。 如需 **/x**編譯器選項的詳細資訊，請參閱[/X （忽略標準的 Include 路徑）](../../build/reference/x-ignore-standard-include-paths.md)。
+即使標頭檔列于**方案總管**中做為專案的一部分，只有在原始程式檔中的或指示詞參考檔案時，編譯器才會找到這些檔案 `#include` ，而且這些檔案 `#import` 位於 include 搜尋路徑中。 不同類型的組建可能會使用不同的搜尋路徑。 **`/X`** 編譯器選項可以用來排除 include 搜尋路徑中的目錄。 這樣可讓不同的組建使用同名但存放在不同目錄下的 Include 檔案。 這是除了使用前置處理器命令進行條件式編譯以外的另一種作法。 如需編譯器選項的詳細資訊 **`/X`** ，請參閱[ `/X` （忽略標準的 Include 路徑）](../../build/reference/x-ignore-standard-include-paths.md)。
 
-若要修正此問題，請修正編譯器用來搜尋包含或匯入之檔案的路徑。 新的專案會使用預設包含搜尋路徑。 您可能必須修改 [包含搜尋路徑]，才能為您的專案新增目錄。 如果您要在命令列上進行編譯，請新增**INCLUDE**環境變數或 **/i**編譯器選項的路徑，以指定檔案的路徑。
+若要修正此問題，請修正編譯器用來搜尋包含或匯入之檔案的路徑。 新的專案會使用預設包含搜尋路徑。 您可能必須修改 [包含搜尋路徑]，才能為您的專案新增目錄。 如果您要在命令列上進行編譯，請新增**INCLUDE**環境變數或編譯器選項的路徑， **`/I`** 以指定檔案的路徑。
 
-若要在 Visual Studio 中設定 include 目錄路徑，請開啟專案的 [**屬性頁**] 對話方塊。 在左窗格的 [設定] [**屬性**] 下選取 [ **VC + + 目錄**]，然後編輯 [ **Include 目錄**] 屬性。 如需 Visual Studio 中編譯器所搜尋之每個使用者和每個專案目錄的詳細資訊，請參閱[VC + + 目錄屬性頁](../../build/reference/vcpp-directories-property-page.md)。 如需 **/i**編譯器選項的詳細資訊，請參閱[/I （其他 Include 目錄）](../../build/reference/i-additional-include-directories.md)。
+若要在 Visual Studio 中設定 include 目錄路徑，請開啟專案的 [**屬性頁**] 對話方塊。 在左窗格的 [設定] [**屬性**] 下選取 [ **VC + + 目錄**]，然後編輯 [ **Include 目錄**] 屬性。 如需 Visual Studio 中編譯器所搜尋之每個使用者和每個專案目錄的詳細資訊，請參閱[VC + + 目錄屬性頁](../../build/reference/vcpp-directories-property-page.md)。 如需編譯器選項的詳細資訊 **`/I`** ，請參閱[ `/I` （其他 Include 目錄）](../../build/reference/i-additional-include-directories.md)。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>未設定命令列包含或 LIB 環境
 
@@ -87,15 +87,15 @@ C1083 錯誤也可能表示包含了錯誤版本的檔案。 包含錯誤檔案�
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>先行編譯標頭檔未經先行編譯
 
-當專案已設定為使用先行編譯標頭檔時，必須已建立相關的 .pch 檔案，才能編譯用到標頭內容的檔案。 例如，在新專案的專案目錄中，會自動建立*pch*檔案（Visual Studio 2017 和更早版本中的*stdafx.h* ）。 請先編譯該檔案以建立先行編譯標頭檔  在一般的組建流程設計中，這會自動完成。 如需詳細資訊，請參閱[建立先行編譯標頭檔](../../build/creating-precompiled-header-files.md)。
+當專案設定為使用先行編譯標頭檔時，您必須建立相關的檔案， *`.pch`* 才能編譯使用標頭內容的檔案。 例如，檔案 *`pch.cpp`* （ *`stdafx.cpp`* 在 Visual Studio 2017 和更早版本中）會自動在新專案的專案目錄中建立。 請先編譯該檔案以建立先行編譯標頭檔  在一般的組建流程設計中，這會自動完成。 如需詳細資訊，請參閱[建立先行編譯標頭檔](../../build/creating-precompiled-header-files.md)。
 
 ## <a name="additional-causes"></a>其他原因
 
 - 您已安裝 SDK 或協力廠商程式庫，但在安裝 SDK 或程式庫之後，尚未開啟新的開發人員命令提示字元視窗。 如果 SDK 或程式庫將檔案新增至**INCLUDE**路徑，您可能需要開啟新的開發人員命令提示字元視窗，以挑選這些環境變數變更。
 
-- 檔案使用 managed 程式碼，但未指定編譯器選項 **/clr** 。 如需詳細資訊，請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)。
+- 檔案使用 managed 程式碼，但 **`/clr`** 未指定編譯器選項。 如需詳細資訊，請參閱[ `/clr` （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)。
 
-- 檔案是使用不同的 **/analyze**編譯器選項設定進行編譯，而不是用來先行編譯標頭。 當專案的標頭先行編譯時，全部都應該使用相同的 **/analyze**設定。 如需詳細資訊，請參閱 [/analyze (程式碼分析)](../../build/reference/analyze-code-analysis.md)。
+- 檔案是使用不同的編譯器選項設定進行編譯， **`/analyze`** 而不是用來先行編譯標頭。 當專案的標頭先行編譯時，全部都應該使用相同的 **`/analyze`** 設定。 如需詳細資訊，請參閱[ `/analyze` （程式碼分析）](../../build/reference/analyze-code-analysis.md)。
 
 - 檔案或目錄是由適用于 Linux 的 Windows 子系統所建立、每個目錄的區分大小寫已啟用，而且指定的路徑或檔案大小寫不符合磁片上路徑或檔案的大小寫。
 

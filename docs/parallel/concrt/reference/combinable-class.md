@@ -39,14 +39,14 @@ class combinable;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[combinable](#ctor)|已多載。 建構新的 `combinable` 物件。|
 |[~ 組合的析構函式](#dtor)|終結 `combinable` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[明確](#clear)|清除先前使用方式的任何中繼計算結果。|
 |[起來](#combine)|藉由呼叫所提供的結合仿函數，從執行緒區域子計算的集合中計算出最後的值。|
@@ -55,7 +55,7 @@ class combinable;
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[operator =](#operator_eq)|`combinable`從另一個物件指派給 `combinable` 物件。|
 

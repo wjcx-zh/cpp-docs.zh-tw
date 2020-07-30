@@ -35,13 +35,13 @@ class CBitmapButton : public CButton
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CBitmapButton：： CBitmapButton](#cbitmapbutton)|建構 `CBitmapButton` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CBitmapButton：： AutoLoad](#autoload)|將對話方塊中的按鈕與類別的物件產生關聯 `CBitmapButton` 、依名稱載入點陣圖，然後調整按鈕大小以符合點陣圖。|
 |[CBitmapButton：： LoadBitmaps](#loadbitmaps)|從應用程式的資源檔載入一或多個名為點陣圖資源，並將點陣圖附加至物件，以初始化物件。|
@@ -57,7 +57,7 @@ class CBitmapButton : public CButton
 
 各種應用程式需要不同的點陣圖影像組合：
 
-|Up|Down|已取得焦點|停用|應用程式|
+|Up|Down|已取得焦點|已停用|應用程式|
 |--------|----------|-------------|--------------|-----------------|
 |×||||點陣圖|
 |×|×|||沒有 WS_TABSTOP 樣式的按鈕|

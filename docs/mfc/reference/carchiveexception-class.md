@@ -33,13 +33,13 @@ class CArchiveException : public CException
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CArchiveException::CArchiveException](#carchiveexception)|建構 `CArchiveException` 物件。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CArchiveException：： m_cause](#m_cause)|指出例外狀況的原因。|
 |[CArchiveException：： m_strFileName](#m_strfilename)|指定此例外狀況條件的檔案名。|

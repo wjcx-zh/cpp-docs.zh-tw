@@ -2,12 +2,12 @@
 title: 轉譯單位和連結（c + +）
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: e964a3c70c138caf8848e6a6366097cbfb90f548
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: 5a166efc7ae926f6b028c35007b0972d0a652d6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108389"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227188"
 ---
 # <a name="translation-units-and-linkage"></a>編譯單位和連結
 
@@ -44,7 +44,7 @@ public:
 
 *Free 函數*是在全域或命名空間範圍中定義的函式。 非 const global 變數和 free 函數預設具有*外部連結*;您可以從程式中的任何轉譯單位看到它們。 因此，沒有其他全域物件可以擁有該名稱。 具有*內部連結*或*沒有連結*的符號，只有在宣告它的轉譯單位內才可見。 當名稱具有內部連結時，相同的名稱可能會存在於另一個轉譯單位中。 在類別定義或函式主體內宣告的變數沒有連結。
 
-您可以將全域名稱明確宣告為**static**，以強制使用內部連結。 這會限制其在宣告時的相同轉譯單位可見度。 在此內容中，**靜態**表示與套用至本機變數時不同的內容。
+您可以將全域名稱明確宣告為，以強制使用內部連結 **`static`** 。 這會限制其在宣告時的相同轉譯單位可見度。 在此內容中， **`static`** 表示套用至本機變數時的內容不同。
 
 下列物件預設具有內部連結：
 
@@ -53,7 +53,7 @@ public:
 - typedefs
 - 命名空間範圍中的靜態物件
 
-若要提供常數物件外部連結，請將它宣告為**extern** ，並為其指派一個值：
+若要提供常數物件外部連結，請將它宣告為 **`extern`** ，並將值指派給它：
 
 ```cpp
 extern const int value = 42;

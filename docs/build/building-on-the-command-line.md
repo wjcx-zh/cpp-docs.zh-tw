@@ -1,8 +1,8 @@
 ---
 title: 從命令列使用 Microsoft c + + 工具組
-description: 在 Visual Studio IDE 外部從命令列使用 MicrosoftC++ 編譯器工具鏈 (MSVC)。
+description: 在 Visual Studio IDE 以外的命令列中，使用 Microsoft c + + （MSVC）編譯器工具組。
 ms.custom: conceptual
-ms.date: 11/12/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,19 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417436"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229892"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>從命令列使用 Microsoft c + + 工具組
 
-您可以使用 Visual Studio 中包含的工具，在命令列上建置 C 和 C++ 應用程式。 Microsoft c + + （MSVC）編譯器工具組也可下載為不包含 Visual Studio IDE 的獨立套件。
+您可以使用 Visual Studio 中包含的工具，在命令列上建置 C 和 C++ 應用程式。 Microsoft c + + （MSVC）編譯器工具組也可下載為獨立封裝。 如果您不打算使用 Visual Studio IDE，就不需要安裝它。
+
+> [!NOTE]
+> 本文說明如何設定環境以使用個別的編譯器、連結器、管理員和其他基本工具。 原生專案組建系統 MSBuild 不會使用這篇文章中所述的環境。 如需如何從命令列使用 MSBuild 的詳細資訊，請參閱[命令列上的 msbuild-c + +](msbuild-visual-cpp.md)。
 
 ## <a name="download-and-install-the-tools"></a>下載並安裝工具
 
@@ -75,30 +78,30 @@ ms.locfileid: "79417436"
 
 ::: moniker range=">= vs-2019"
 
-命令檔位置取決於您安裝的 Visual Studio 版本，以及您在安裝期間所做的選擇。 針對 Visual Studio 2019，64位系統上的一般安裝位置是在 Program Files \\（x86）\\Microsoft Visual Studio\\2019\\*版*中。 *版本*可以是 [社區]、[Professional]、[Enterprise]、[BuildTools] 或您提供的其他昵稱。
+命令檔位置取決於您安裝的 Visual Studio 版本，以及您在安裝期間所做的選擇。 針對 Visual Studio 2019，64位系統上的一般安裝位置是在 \\ Program Files （x86） \\ Microsoft Visual Studio \\ 2019 \\ *版*中。 *版本*可以是 [社區]、[Professional]、[Enterprise]、[BuildTools] 或您提供的其他昵稱。
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-命令檔位置取決於您安裝的 Visual Studio 版本，以及您在安裝期間所做的選擇。 針對 Visual Studio 2017，64位系統上的一般安裝位置是在 Program Files \\（x86）\\Microsoft Visual Studio\\2017\\*版*中。 *版本*可以是 [社區]、[Professional]、[Enterprise]、[BuildTools] 或您提供的其他昵稱。
+命令檔位置取決於您安裝的 Visual Studio 版本，以及您在安裝期間所做的選擇。 針對 Visual Studio 2017，64位系統上的一般安裝位置是在 \\ Program Files （x86） \\ Microsoft Visual Studio \\ 2017 \\ *版*中。 *版本*可以是 [社區]、[Professional]、[Enterprise]、[BuildTools] 或您提供的其他昵稱。
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-命令檔位置取決於 Visual Studio 版本和安裝目錄。 針對 Visual Studio 2015，一般安裝位置是在 Program \\Files （x86）\\Microsoft Visual Studio 14.0 中。
+命令檔位置取決於 Visual Studio 版本和安裝目錄。 針對 Visual Studio 2015，一般安裝位置是在 \\ Program Files （x86） \\ Microsoft Visual Studio 14.0 中。
 
 ::: moniker-end
 
-主要的開發人員命令提示字元命令檔（Vsdevcmd.bat）位於 Common7\\Tools 子目錄中。 若未指定任何參數，則會將環境設定為使用 x86 原生工具來建立32位 x86 程式碼。
+主要的開發人員命令提示字元命令檔（VsDevCmd.bat）位於 Common7 \\ Tools 子目錄中。 若未指定任何參數，則會將環境設定為使用 x86 原生工具來建立32位 x86 程式碼。
 
 ::: moniker range=">= vs-2017"
 
-有更多命令檔可用來設定特定的組建架構。 可用的命令檔取決於您已安裝的 Visual Studio 工作負載和選項。 在 Visual Studio 2017 和 Visual Studio 2019 中，您會在 VC\\輔助\\組建子目錄中找到它們。
+有更多命令檔可用來設定特定的組建架構。 可用的命令檔取決於您已安裝的 Visual Studio 工作負載和選項。 在 Visual Studio 2017 和 Visual Studio 2019 中，您會在 VC \\ 輔助組建子目錄中找到它們 \\ 。
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-有更多命令檔可用來設定特定的組建架構。 可用的命令檔取決於您已安裝的 Visual Studio 工作負載和選項。 在 Visual Studio 2015 中，它們位於 vc、vc\\bin 或 vc\\bin\\*架構*子目錄中，其中的*架構*是其中一個原生或跨編譯器選項。
+有更多命令檔可用來設定特定的組建架構。 可用的命令檔取決於您已安裝的 Visual Studio 工作負載和選項。 在 Visual Studio 2015 中，它們位於 VC、VC \\ bin 或 vc \\ bin \\ *架構*子目錄中，其中的*架構*是其中一個原生或跨編譯器選項。
 
 ::: moniker-end
 
@@ -121,9 +124,9 @@ ms.locfileid: "79417436"
 
 ## <a name="use-the-developer-tools-in-an-existing-command-window"></a>在現有的命令視窗中使用開發人員工具
 
-要在現有的命令視窗中指定特定的組建架構，最簡單的方式是使用 vcvarsall.bat 檔案。 使用 vcvarsall.bat 設定環境變數，以設定原生32位或64位編譯的命令列。 引數可讓您指定跨編譯 x86、x64、ARM 或 ARM64 處理器。 您可以將 Microsoft Store、通用 Windows 平臺或 Windows 桌面平臺作為目標。 您甚至可以指定要使用的 Windows SDK，然後選取平臺工具組版本。
+要在現有的命令視窗中指定特定的組建架構，最簡單的方式是使用 vcvarsall.bat 檔案。 請使用 vcvarsall.bat 來設定環境變數，以設定原生32位或64位編譯的命令列。 引數可讓您指定跨編譯 x86、x64、ARM 或 ARM64 處理器。 您可以將 Microsoft Store、通用 Windows 平臺或 Windows 桌面平臺作為目標。 您甚至可以指定要使用的 Windows SDK，然後選取平臺工具組版本。
 
-搭配沒有引數使用時，vcvarsall.bat 會設定環境變數，以針對32位 Windows 桌面目標使用目前的 x86 原生編譯器。 您可以新增引數，將環境設定為使用任何原生或跨編譯器工具。 如果您指定的設定在您的電腦上未安裝或無法使用，vcvarsall.bat 會顯示錯誤訊息。
+搭配沒有引數使用時，vcvarsall.bat 會設定環境變數，以針對32位 Windows 桌面目標使用目前的 x86 原生編譯器。 您可以新增引數，將環境設定為使用任何原生或跨編譯器工具。 如果您指定未安裝或在您的電腦上無法使用的設定，vcvarsall.bat 會顯示錯誤訊息。
 
 ### <a name="vcvarsall-syntax"></a>vcvarsall 語法
 
@@ -171,7 +174,7 @@ ms.locfileid: "79417436"
 
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a>在現有的命令提示字元視窗中設定組建環境
 
-1. 在命令提示字元中，使用 CD 命令切換至 Visual Studio 安裝目錄。 然後，再次使用 CD 變更至包含組態特定指令檔的子目錄。 針對 Visual Studio 2019 和 Visual Studio 2017，請使用*VC\\輔助\\組建*子目錄。 針對 Visual Studio 2015，請使用*VC*子目錄。
+1. 在命令提示字元中，使用 CD 命令切換至 Visual Studio 安裝目錄。 然後，再次使用 CD 變更至包含組態特定指令檔的子目錄。 針對 Visual Studio 2019 和 Visual Studio 2017，請使用*VC \\ 輔助 \\ 組建*子目錄。 針對 Visual Studio 2015，請使用*VC*子目錄。
 
 1. 針對您慣用的開發人員環境輸入命令。 例如，若要使用最新的 Windows SDK 和 Visual Studio 編譯器工具組，在64位平臺上建立 UWP 的 ARM 程式碼，請使用此命令列：
 
@@ -201,7 +204,7 @@ ms.locfileid: "79417436"
 
 ::: moniker-end
 
-架構特定批次檔會設定 *architecture* 參數並呼叫 vcvarsall.bat。 當您傳遞至 vcvarsall.bat 時，您可以將相同的選項傳遞至這些批次檔，或者只是直接呼叫 vcvarsall.bat。 若要為您自己的命令捷徑指定參數，請將參數新增至命令結尾處，並以雙引號括住。 例如，這裡有一個快捷方式，可使用最新的 Windows SDK，在64位平臺上建立 UWP 的 ARM 程式碼。 若要使用舊版的編譯器工具組，請指定版本號碼。 請在您的捷徑中使用如下的命令目標：
+架構特定批次檔會設定 *architecture* 參數並呼叫 vcvarsall.bat。 您可以將相同的選項傳遞至這些批次檔，就像傳遞給 vcvarsall.bat 一樣，也可以直接呼叫 vcvarsall.bat。 若要為您自己的命令捷徑指定參數，請將參數新增至命令結尾處，並以雙引號括住。 例如，這裡有一個快捷方式，可使用最新的 Windows SDK，在64位平臺上建立 UWP 的 ARM 程式碼。 若要使用舊版的編譯器工具組，請指定版本號碼。 請在您的捷徑中使用如下的命令目標：
 
 ::: moniker range=">= vs-2019"
 
@@ -231,16 +234,20 @@ ms.locfileid: "79417436"
 [連結](reference/linking.md)<br/>
 使用連結器 (link.exe)，將已編譯的物件檔及程式庫，連結至應用程式及 DLL。
 
-[MSBuild](msbuild-visual-cpp.md)<br/>
-使用 MSBuild (msbuild.exe) 和專案檔 (.vcxproj) 來設定組建並間接叫用工具組。 這相當於在 Visual Studio IDE 中執行 [**組建**專案] 或 [**建立方案**] 命令。 從命令列執行 MSBuild 是一個先進的案例，並不是一般建議的做法。
-
-[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-使用 DEVENV （devenv）與命令列參數（例如 **/Build**或 **/Clean** ）結合，以執行特定組建命令，而不顯示 Visual Studio IDE。 一般而言，因為您可以讓 Visual Studio 處理 MSBuild 的複雜性，所以慣用的是直接使用 MSBuild。
-
 [NMAKE](reference/nmake-reference.md)<br/>
 在 Windows 上使用 NMAKE (nmake.exe) 根據傳統 Makefile 建置 C++ 專案。
 
-當您在命令列上建立時，F1 命令無法提供立即協助。 此時，您可以使用搜尋引擎來取得警告、錯誤和訊息的相關資訊，或者可以使用離線說明檔案。 若要使用[docs.microsoft.com](https://docs.microsoft.com/cpp/)中的搜尋，請使用頁面頂端的 [搜尋] 方塊。
+當您在命令列上建立時，F1 命令無法提供立即協助。 相反地，您可以使用搜尋引擎來取得警告、錯誤和訊息的相關資訊。 您也可以下載並使用離線說明檔案。 若要使用[docs.microsoft.com](https://docs.microsoft.com/cpp/)中的搜尋，請在任何文章頂端的 [搜尋] 方塊中輸入您的查詢。
+
+## <a name="command-line-project-management-tools"></a>命令列專案管理工具
+
+Visual Studio IDE 會使用以 MSBuild 為基礎的原生專案組建系統。 您可以直接叫用 MSBuild，或使用原生專案系統，而不使用 IDE：
+
+[MSBuild](msbuild-visual-cpp.md)<br/>
+使用 MSBuild (msbuild.exe) 和專案檔 (.vcxproj) 來設定組建並間接叫用工具組。 這相當於在 Visual Studio IDE 中執行 [**組建**專案] 或 [**建立方案**] 命令。 從命令列執行 MSBuild 是一個先進的案例，並不是一般建議的做法。 從 Visual Studio 版本16.5 開始，MSBuild 不會使用命令列環境來控制所使用的工具組和程式庫。
+
+[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
+使用 DEVENV （devenv.exe）搭配命令列參數（例如 **/Build**或 **/Clean** ）來執行某些組建命令，而不顯示 Visual Studio IDE。 一般而言，因為您可以讓 Visual Studio 處理 MSBuild 的複雜性，所以慣用的是直接使用 MSBuild。 從 Visual Studio 版本16.5 開始，DEVENV 不會使用命令列環境來控制所使用的工具組和程式庫。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -249,13 +256,13 @@ ms.locfileid: "79417436"
 [逐步解說：在命令列上編譯原生 c + + 程式](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 提供範例，說明如何在命令列上建立和編譯 c + + 程式。
 
-[逐步解說：在命令列上編譯 C 程式](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+[逐步解說：在命令列編譯 C 程式](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 描述如何編譯以 C 程式設計語言撰寫的程式。
 
-[逐步解說：在命令列上編譯 c + +/CLI 程式](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
+[逐步解說：在命令列編譯 C++/CLI 程式](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
 描述如何建立及編譯使用 .NET Framework 的 C++/CLI 程式。
 
-[逐步解說：在命令列上編譯 c + +/CX 程式](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
+[逐步解說：在命令列編譯 C++/CX 程式](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
 描述如何建立及編譯使用 Windows 執行階段的 C++/CX 程式。
 
 [設定命令列組建的路徑及環境變數](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
@@ -281,6 +288,6 @@ ms.locfileid: "79417436"
 [其他 MSVC 建置工具](reference/c-cpp-build-tools.md)<br/>
 提供 Visual Studio 中包含的 C/C++ 建置工具的連結。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[專案和建置系統](projects-and-build-systems-cpp.md)
+[專案與建置系統](projects-and-build-systems-cpp.md)

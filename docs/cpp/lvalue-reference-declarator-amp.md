@@ -1,5 +1,5 @@
 ---
-title: 左值參考宣告子： &amp;
+title: 左值參考宣告子：&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30dd6ba9cb91395f72124cad71908a4e6bcdf7dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178063"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225978"
 ---
-# <a name="lvalue-reference-declarator-amp"></a>左值參考宣告子： &amp;
+# <a name="lvalue-reference-declarator-amp"></a>左值參考宣告子：&amp;
 
 保存物件的位址，但語法上的行為與物件相似。
 
@@ -30,7 +30,7 @@ type-id & cast-expression
 
 只要物件的位址可以轉換為指定的指標類型，則該物件也可轉換為類似的參考類型。 例如，只要物件的位址可以轉換成 `char *` 類型，該物件也可轉換成 `char &` 類型。
 
-請勿將參考宣告與使用[位址運算子](../cpp/address-of-operator-amp.md)混淆。 當 `&`*識別碼*前面加上類型（例如**int**或**char**）時， *identifier*會宣告為該類型的參考。 當 `&`*識別碼*的前面沒有類型時，其使用方式就是傳址運算子的用法。
+請勿將參考宣告與使用[位址運算子](../cpp/address-of-operator-amp.md)混淆。 當 `&` *識別碼*前面加上類型（例如 **`int`** 或 **`char`** ）時，會將*識別碼*宣告為類型的參考。 當 `&` *identifier*前面沒有一個型別時，其使用方式就是傳址運算子的用法。
 
 ## <a name="example"></a>範例
 

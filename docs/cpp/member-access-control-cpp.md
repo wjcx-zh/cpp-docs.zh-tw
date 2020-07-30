@@ -6,16 +6,16 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: e8f62e82ebb7fcc18be5ac7d203df0fb46c9b635
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369842"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186967"
 ---
 # <a name="member-access-control-c"></a>成員存取控制 (C++)
 
-訪問控制項使您能夠將類[的公共](../cpp/public-cpp.md)介面與[專用](../cpp/private-cpp.md)實現詳細資訊和僅供派生類使用的[受保護](../cpp/protected-cpp.md)成員分開。 除非發現下一個存取規範，否則存取規範會套用至在其後宣告的所有成員。
+存取控制可讓您將類別的[公用](../cpp/public-cpp.md)介面與[私](../cpp/private-cpp.md)用執行詳細資料和僅供衍生類別使用的[受保護](../cpp/protected-cpp.md)成員分開。 除非發現下一個存取規範，否則存取規範會套用至在其後宣告的所有成員。
 
 ```cpp
 class Point
@@ -35,15 +35,15 @@ protected:      // Declare protected function for derived classes only.
 };
 ```
 
-默認訪問在類中是**私有**的,並且在結構或聯合中**是公共**的。 您可以依任意順序使用類別中的存取規範任何次數。 類別類型物件的儲存配置依實作而定，不過，成員一定會具有存取指定名稱之間指派的後續較高之記憶體位址。
+預設存取是 **`private`** 在類別中，而 **`public`** 在結構或等位中。 您可以依任意順序使用類別中的存取規範任何次數。 類別類型物件的儲存配置依實作而定，不過，成員一定會具有存取指定名稱之間指派的後續較高之記憶體位址。
 
 ## <a name="member-access-control"></a>成員存取控制
 
 |存取的類型|意義|
 |--------------------|-------------|
-|[私人](../cpp/private-cpp.md)|聲明為**私有**的類成員只能由類的成員函數和好友(類或函數)使用。|
-|[protected](../cpp/protected-cpp.md)|聲明為**受保護**的類成員可以由類的成員函數和好友(類或函數)使用。 此外，類別所衍生的類別也可以使用這些類別成員。|
-|[public](../cpp/public-cpp.md)|聲明為**公共**的類成員可以由任何函數使用。|
+|[私人](../cpp/private-cpp.md)|宣告為的類別成員只能 **`private`** 由類別的成員函式和朋友（類別或函式）使用。|
+|[受保護](../cpp/protected-cpp.md)|宣告為的類別成員可供類別的成員函式 **`protected`** 和朋友（類別或函式）使用。 此外，類別所衍生的類別也可以使用這些類別成員。|
+|[public](../cpp/public-cpp.md)|宣告為的類別成員 **`public`** 可以由任何函數使用。|
 
 存取控制有助於避免您誤用物件。 執行明確類型轉換 (轉型) 時，會失去這項保護。
 
@@ -54,7 +54,7 @@ protected:      // Declare protected function for derived classes only.
 
 在衍生類別中可存取哪些基底類別的成員是由兩個因素所控制，這些相同的因素可控制在衍生類別中對於繼承成員的存取：
 
-- 派生類是否使用**公共**訪問指定器聲明基類。
+- 衍生類別是否使用存取規範來宣告基類 **`public`** 。
 
 - 要存取哪些基底類別的成員。
 
@@ -116,7 +116,7 @@ int main()
 
 在 `DerivedClass2` 中，因為 `PublicFunc` 是 private 基底類別，因此會將函式 `ProtectedFunc` 和 `BaseClass` 視為是 private 成員。 同樣地，`PrivateFunc` 對 `BaseClass` 而言是 private，且無法存取任何衍生類別。
 
-您可以在未使用基底類別存取指定名稱的情況下宣告衍生類別。 在這種情況下,如果派生類聲明使用**類**關鍵字,則派生被視為私有。 如果派生類聲明使用**結構**關鍵字,則派生被視為公共。 例如，下列程式碼：
+您可以在未使用基底類別存取指定名稱的情況下宣告衍生類別。 在這種情況下，如果衍生類別宣告使用關鍵字，則會將衍生視為私用 **`class`** 。 如果衍生類別宣告使用關鍵字，則會將衍生視為公用 **`struct`** 。 例如，下列程式碼：
 
 ```cpp
 class Derived : Base
@@ -144,16 +144,16 @@ struct Derived : public Base
 ...
 ```
 
-請注意,聲明為具有私有訪問許可權的成員不能訪問函數或派生類,除非這些函數或類使用基類中的**frienda**聲明聲明。
+請注意，宣告為具有私用存取權的成員無法存取函式或衍生類別，除非使用基類中的宣告來宣告這些函式或類別 **`friend`** 。
 
-**聯合**類型不能具有基類。
+**`union`** 類型不能有基類。
 
 > [!NOTE]
-> 指定私有基類時,建議顯式使用**私有**關鍵字,以便派生類的使用者了解成員訪問許可權。
+> 指定私用基類時，建議明確使用 **`private`** 關鍵字，讓衍生類別的使用者瞭解成員存取權。
 
 ## <a name="access-control-and-static-members"></a>存取控制和靜態成員
 
-將基類指定為**私有**類時,它只影響非靜態成員。 在衍生類別中仍然可以存取公用的靜態成員。 不過，使用指標、參考或物件存取基底類別的成員可能需要進行轉換，此時會重新套用存取控制。 請考慮下列範例：
+當您將基類指定為時 **`private`** ，它只會影響非靜態成員。 在衍生類別中仍然可以存取公用的靜態成員。 不過，使用指標、參考或物件存取基底類別的成員可能需要進行轉換，此時會重新套用存取控制。 請考慮下列範例：
 
 ```cpp
 // access_control.cpp
@@ -187,7 +187,7 @@ int Derived2::ShowCount()
 }
 ```
 
-在上述程式碼中，存取控制項禁止從 `Derived2` 的指標轉換為 `Base` 的指標。 **這個**指標是隱式型態`Derived2 *`。 要選擇函數`CountOf`,必須**將轉換**為類型`Base *`。 由於 `Base` 是 `Derived2` 的私用間接基底類別，因此不允許進行這類轉換。 只有直接衍生類別的指標可以轉換為私用的基底類別類型。 因此，`Derived1 *` 類型的指標可以轉換成 `Base *` 類型。
+在上述程式碼中，存取控制項禁止從 `Derived2` 的指標轉換為 `Base` 的指標。 **`this`** 指標的類型是隱含的 `Derived2 *` 。 若要選取 `CountOf` 函數， **`this`** 必須將轉換成類型 `Base *` 。 由於 `Base` 是 `Derived2` 的私用間接基底類別，因此不允許進行這類轉換。 只有直接衍生類別的指標可以轉換為私用的基底類別類型。 因此，`Derived1 *` 類型的指標可以轉換成 `Base *` 類型。
 
 請注意，明確呼叫 `CountOf` 函式，而不使用指標、參考或物件加以選取，表示沒有進行轉換。 因此，可以進行呼叫。
 
@@ -195,7 +195,7 @@ int Derived2::ShowCount()
 
 ## <a name="access-to-virtual-functions"></a>存取虛擬函式
 
-應用於[虛擬](../cpp/virtual-cpp.md)函數的訪問控制由用於進行函數調用的類型確定。 覆寫函式的宣告不會影響特定類型的存取控制。 例如：
+套用至[虛擬](../cpp/virtual-cpp.md)函式的存取控制取決於用來進行函式呼叫的型別。 覆寫函式的宣告不會影響特定類型的存取控制。 例如：
 
 ```cpp
 // access_to_virtual_functions.cpp
@@ -241,4 +241,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[C++語言參考](../cpp/cpp-language-reference.md)
+[C + + 語言參考](../cpp/cpp-language-reference.md)

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 039b86eec024daf8e3473bba5d89f190507f3cfd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a2cc8062368b89e38b5f96b3134742123af24310
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335449"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231477"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>改善時間關鍵程式碼的秘訣
 
@@ -107,19 +107,19 @@ CPU 快取點擊可能會降低您的程式10-20 頻率週期。 外部快取點
 
 Microsoft Foundation Class (MFC) 可大幅簡化程式碼的撰寫。 在撰寫時間關鍵的程式碼時，您應該注意在部分類別中固有的額外負荷。 請檢查您的時間關鍵程式碼所使用的 MFC 程式碼，查看它是否符合您的效能要求。 下列清單顯示您應該注意的 MFC 類別和函式：
 
-- `CString`MFC 會呼叫 C 執行時間程式庫，以動態方式配置[CString](../atl-mfc-shared/reference/cstringt-class.md)的記憶體。 一般而言，`CString` 效率和任何其他動態配置的字串一樣。 如同任何動態配置的字串，它也有動態配置和釋放的額外負荷。 堆疊上的簡單 `char` 陣列便經常可以達到相同的目的，且更快速。 請不要使用 `CString` 來存放常數字串。 請改用 `const char *`。 您對 `CString` 物件執行的任何作業都有一些額外負荷。 使用執行時間程式庫[字串](../c-runtime-library/string-manipulation-crt.md)函式可能會更快。
+- `CString`MFC 會呼叫 C 執行時間程式庫，以動態方式配置[CString](../atl-mfc-shared/reference/cstringt-class.md)的記憶體。 一般而言，`CString` 效率和任何其他動態配置的字串一樣。 如同任何動態配置的字串，它也有動態配置和釋放的額外負荷。 堆疊上的簡單 **`char`** 陣列通常可以提供相同的目的，而且速度更快。 請不要使用 `CString` 來存放常數字串。 請改用 `const char *`。 您對 `CString` 物件執行的任何作業都有一些額外負荷。 使用執行時間程式庫[字串](../c-runtime-library/string-manipulation-crt.md)函式可能會更快。
 
 - `CArray`[CArray](../mfc/reference/carray-class.md)可提供一般陣列沒有的彈性，但您的程式可能不需要這樣做。 如果您知道陣列的特定限制，可以改用全域固定陣列。 如果使用 `CArray`，請使用 `CArray::SetSize` 來建立其大小，並指定當需要重新配置時，它成長的項目個數。 否則，加入項目可能會導致您的陣列經常重新配置和複製，這樣沒有效率，且可能導致記憶體片段化。 另外也請注意，如果您在陣列中插入項目，`CArray` 會將後續項目移入記憶體，而可能需要加大陣列。 這些動作可能導致快取遺漏和分頁錯誤。 如果您瀏覽過 MFC 使用的程式碼，可能會發現您可以撰寫更專屬於您情節的程式碼，以改善效能。 例如，由於 `CArray` 是一個範本，您可能會針對特定類型提供 `CArray` 特製化。
 
-- `CList`[CList](../mfc/reference/clist-class.md)是雙向連結清單，因此在前端、結尾和清單中的已知位置（`POSITION`）插入專案會快速。 不過，以值或索引來查閱項目需要進行循序搜尋，如果清單很長便可能速度緩慢。 如果您的程式碼不需要雙向連結清單，可以重新考慮是否使用 `CList`。 使用單向連結清單可以節省針對所有作業更新額外指標的額外負荷，以及該指標的記憶體。 額外記憶體不太好，它是另一個可能出現快取遺漏或分頁錯誤的機會。
+- `CList`[CList](../mfc/reference/clist-class.md)是雙向連結清單，因此在前端、結尾和清單中的已知位置（）插入專案會快速 `POSITION` 。 不過，以值或索引來查閱項目需要進行循序搜尋，如果清單很長便可能速度緩慢。 如果您的程式碼不需要雙向連結清單，可以重新考慮是否使用 `CList`。 使用單向連結清單可以節省針對所有作業更新額外指標的額外負荷，以及該指標的記憶體。 額外記憶體不太好，它是另一個可能出現快取遺漏或分頁錯誤的機會。
 
 - `IsKindOf`此函式可以產生許多呼叫，並存取不同資料區域中的大量記憶體，而導致參考的位置不正確。 它適用於偵錯組建 (例如在 ASSERT 呼叫中)，但在發行組建裡請試著避免用它。
 
-- `PreTranslateMessage`當`PreTranslateMessage`特定的 windows 樹狀目錄需要不同的鍵盤加速器，或當您必須在訊息提取中插入訊息處理時，請使用。 `PreTranslateMessage` 會修改 MFC 分派訊息。 如果您覆寫 `PreTranslateMessage`，請只在需要的層級上進行。 例如，如果您只對送到特定檢視之子系的訊息有興趣，就不必覆寫 `CMainFrame::PreTranslateMessage`。 請改成覆寫檢視類別的 `PreTranslateMessage`。
+- `PreTranslateMessage``PreTranslateMessage`當特定的 windows 樹狀目錄需要不同的鍵盤加速器，或當您必須在訊息提取中插入訊息處理時，請使用。 `PreTranslateMessage` 會修改 MFC 分派訊息。 如果您覆寫 `PreTranslateMessage`，請只在需要的層級上進行。 例如，如果您只對送到特定檢視之子系的訊息有興趣，就不必覆寫 `CMainFrame::PreTranslateMessage`。 請改成覆寫檢視類別的 `PreTranslateMessage`。
 
    請不要使用 `PreTranslateMessage` 處理送往任何視窗的任何訊息，而避開正常的分派路徑。 針對該目的使用[視窗程式](../mfc/registering-window-classes.md)和 MFC 訊息對應。
 
-- `OnIdle`閒置事件可能會在您不預期的時間發生，例如和`WM_KEYDOWN` `WM_KEYUP`事件之間。 計時器可能是觸發程式碼更有效率的方式。 請不要藉由產生假訊息或一律從覆寫 `OnIdle` 傳回 `TRUE`，強制重複呼叫 `OnIdle`，這會永遠不允許您的執行緒睡眠。 同樣地，計時器或個別執行緒可能較適合。
+- `OnIdle`閒置事件可能會在您不預期的時間發生，例如 `WM_KEYDOWN` 和 `WM_KEYUP` 事件之間。 計時器可能是觸發程式碼更有效率的方式。 請不要藉由產生假訊息或一律從覆寫 `OnIdle` 傳回 `TRUE`，強制重複呼叫 `OnIdle`，這會永遠不允許您的執行緒睡眠。 同樣地，計時器或個別執行緒可能較適合。
 
 ## <a name="shared-libraries"></a><a name="vcovrsharedlibraries"></a>共用程式庫
 
@@ -157,6 +157,6 @@ Microsoft Foundation Class (MFC) 可大幅簡化程式碼的撰寫。 在撰寫�
 
 - 若要檢視工作集的大小，請使用 Spy++。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[最佳化程式碼](optimizing-your-code.md)
+[優化您的程式碼](optimizing-your-code.md)

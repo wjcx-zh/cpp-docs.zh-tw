@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 0ff9178679792929bbd6eb92bb6148cfa008dcad
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621686"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231906"
 ---
 # <a name="handlers-for-message-map-ranges"></a>訊息對應範圍的處理常式
 
@@ -143,7 +143,7 @@ ms.locfileid: "84621686"
 
 `OnButtonClicked`單一**BN_CLICKED**訊息的處理常式不接受任何參數。 針對某個範圍的按鈕，相同的處理常式會採用一個**UINT**。 額外的參數可讓您識別負責產生**BN_CLICKED**訊息的特定控制項。
 
-範例中顯示的程式碼是典型的：將傳遞至的值轉換為 `int` 訊息範圍內的，並判斷提示這種情況。 然後，您可能會根據按下的按鈕，採取一些不同的動作。
+範例中顯示的程式碼是典型的：將傳遞至的值轉換為 **`int`** 訊息範圍內的，並判斷提示這種情況。 然後，您可能會根據按下的按鈕，採取一些不同的動作。
 
 ## <a name="see-also"></a>另請參閱
 

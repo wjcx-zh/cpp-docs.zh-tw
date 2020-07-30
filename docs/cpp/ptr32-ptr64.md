@@ -16,18 +16,18 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: c3ebe642284c6ee269dbfc39985630b7d949435f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5ff2fa22c8a466252cfaf8b80dc8d56774aff58e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179207"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227149"
 ---
 # <a name="__ptr32-__ptr64"></a>__ptr32、__ptr64
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-**__ptr32**代表32位系統上的原生指標，而 **__ptr64**代表64位系統上的原生指標。
+**`__ptr32`** 表示32位系統上的原生指標，而 **`__ptr64`** 表示64位系統上的原生指標。
 
 下列範例將示範如何宣告每一個這些類型的指標：
 
@@ -36,16 +36,16 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-在32位系統上，使用 **__ptr64**宣告的指標會被截斷為32位指標。 在64位系統上，使用 **__ptr32**宣告的指標會強制轉型為64位指標。
+在32位系統上，使用宣告的指標 **`__ptr64`** 會被截斷為32位指標。 在64位系統上，使用宣告的指標 **`__ptr32`** 會強制轉型為64位指標。
 
 > [!NOTE]
-> 使用 **/clr： pure**進行編譯時，您無法使用 **__ptr32**或 **__ptr64** 。 否則，將會產生編譯器錯誤 C2472。 **/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
+> 使用 **`__ptr32`** **`__ptr64`** **/clr： pure**進行編譯時，您無法使用或。 否則，將會產生編譯器錯誤 C2472。 **/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
-為了與舊版相容，除非指定了編譯器選項[/za \(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) ，否則 **_ptr32**和 **_ptr64**就是 **__ptr32**和 **__ptr64**的同義字。
+為了與舊版相容， **_ptr32**和 **_ptr64**都是和的同義字， **`__ptr32`** **`__ptr64`** 除非指定了編譯器選項[/za 停用 \( 語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>範例
 
-下列範例顯示如何使用 **__ptr32**和 **__ptr64**關鍵字來宣告和配置指標。
+下列範例顯示如何使用和關鍵字宣告和配置指標 **`__ptr32`** **`__ptr64`** 。
 
 ```cpp
 #include <cstdlib>
@@ -73,7 +73,7 @@ int main()
 64
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

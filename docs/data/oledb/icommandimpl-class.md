@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212158"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232153"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
 
@@ -72,10 +72,10 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自 `ICommandImpl`的類別。
+衍生自的類別 `ICommandImpl` 。
 
 *CommandBase*<br/>
-命令介面。 預設值為 `ICommand`。
+命令介面。 預設為 `ICommand`。
 
 ## <a name="requirements"></a>需求
 
@@ -152,30 +152,30 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 範本類別成員，代表使用者的資料列集類別。 通常由 wizard 產生。
 
 *pUnkOuter*<br/>
-在如果將資料列集建立為匯總的一部分，則為控制 `IUnknown` 介面的指標;否則，它會是 null。
+在如果要建立資料列 `IUnknown` 集做為匯總的一部分，則為控制介面的指標，否則為 null。
 
 *riid*<br/>
-在對應至 `ICommand::Execute`中的*riid* 。
+在對應至中的*riid* `ICommand::Execute` 。
 
 *pParams*<br/>
-[in/out]對應至 `ICommand::Execute`中的*pParams* 。
+[in/out]對應至中的*pParams* `ICommand::Execute` 。
 
 *pcRowsAffected*<br/>
-對應至 `ICommand::Execute`中的*pcRowsAffected* 。
+對應至中的*pcRowsAffected* `ICommand::Execute` 。
 
 *ppRowset*<br/>
-[in/out]對應至 `ICommand::Execute`中的*ppRowset* 。
+[in/out]對應至中的*ppRowset* `ICommand::Execute` 。
 
 *pRowsetObj*<br/>
 脫銷資料列集物件的指標。 通常不會使用這個參數，但如果您必須在資料列集上執行更多工做，然後才將它傳遞至 COM 物件，則可以使用此參數。 *PRowsetObj*的存留期是由*ppRowset*所系結。
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。 如需一般值的清單，請參閱 `ICommand::Execute`。
+標準的 HRESULT 值。 如需一般值的清單，請參閱 `ICommand::Execute` 。
 
 ### <a name="remarks"></a>備註
 
-若要建立一個以上的資料列集，或提供您自己的條件來建立不同的資料列集，請從 `Execute`內，將不同的呼叫放在 `CreateRowset`。
+若要建立一個以上的資料列集，或提供您自己的條件來建立不同的資料列集，請從內將不同的呼叫放 `CreateRowset` 在中 `Execute` 。
 
 請參閱 OLE DB 程式設計*人員參考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
@@ -201,7 +201,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 所要求的輸出介面將是從這個函式所建立的資料列集物件取得的介面。
 
-`Execute` 會呼叫[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 覆寫預設的實作為建立多個資料列集，或提供您自己的條件來建立不同的資料列集。
+`Execute`呼叫[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 覆寫預設的實作為建立多個資料列集，或提供您自己的條件來建立不同的資料列集。
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl：： GetDBSession
 
@@ -244,7 +244,7 @@ unsigned m_bCancel:1;
 
 ### <a name="remarks"></a>備註
 
-您可以在命令類別的 `Execute` 方法中取出此變數，並視需要取消。
+您可以在命令類別的方法中捕獲此變數 `Execute` ，並視需要取消。
 
 ## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl：： m_bCancelWhenExecuting
 
@@ -258,7 +258,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### <a name="remarks"></a>備註
 
-預設值為**true** （可以取消）。
+預設為 **`true`** （可取消）。
 
 ## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl：： m_bIsExecuting
 
@@ -272,7 +272,7 @@ unsigned m_bIsExecuting:1;
 
 ### <a name="remarks"></a>備註
 
-命令類別的 `Execute` 方法可以將此變數設定為**true**。
+`Execute`命令類別的方法可以將此變數設定為 **`true`** 。
 
 ## <a name="see-also"></a>另請參閱
 

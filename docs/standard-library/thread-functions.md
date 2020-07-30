@@ -14,19 +14,19 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375843"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232855"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函式
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[交換](#swap)|[yield](#yield)|
+|[調換](#swap)|[yield](#yield)|
 
 ## <a name="get_id"></a><a name="get_id"></a>get_id
 
@@ -57,7 +57,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="remarks"></a>備註
 
-該函數至少阻止呼叫線程,至少*Rel_time指定的時間*。 這個函式不會擲回任何例外狀況。
+函式至少會封鎖呼叫的執行緒， *Rel_time*所指定的時間。 這個函式不會擲回任何例外狀況。
 
 ## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
@@ -79,9 +79,9 @@ void sleep_until(const xtime *Abs_time);
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="swap"></a><a name="swap"></a>交換
+## <a name="swap"></a><a name="swap"></a>調換
 
-交換兩個**線程**物件狀態。
+交換兩個 `thread` 物件的狀態。
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*離開*\
-左**線程**物件。
+*左面*\
+左 `thread` 物件。
 
-*對*\
-正確的**線程**物件。
+*再*\
+右 `thread` 物件。
 
 ### <a name="remarks"></a>備註
 
 此函式會呼叫 `Left.swap(Right)`。
 
-## <a name="yield"></a><a name="yield"></a>產量
+## <a name="yield"></a><a name="yield"></a>看出
 
 向作業系統表示執行其他執行緒，即使目前的執行緒通常會繼續執行。
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<執行緒>](../standard-library/thread.md)
+[\<thread>](../standard-library/thread.md)

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae6fcbbcbb1a526dbba857fc9bfa2da5eb897c73
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404302"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231854"
 ---
 # <a name="cbutton-class"></a>CButton 類別
 
@@ -95,13 +95,13 @@ class CButton : public CWnd
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CButton：： CButton](#cbutton)|建構 `CButton` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CButton：： Create](#create)|建立 Windows 按鈕控制項，並將其附加至 `CButton` 物件。|
 |[CButton：:D rawItem](#drawitem)|覆寫以繪製主控描繪的 `CButton` 物件。|
@@ -170,7 +170,7 @@ class CButton : public CWnd
 
 如果您 `CButton` 從對話資源建立物件， `CButton` 當使用者關閉對話方塊時，就會自動終結該物件。
 
-如果您在 `CButton` 視窗中建立物件，可能需要將它摧毀。 如果您 `CButton` 使用**新**的函式在堆積上建立物件，您必須在物件上呼叫**delete** ，以在使用者關閉 Windows 按鈕控制項時終結它。 如果您在 `CButton` 堆疊上建立物件，或內嵌在父對話物件中，它會自動終結。
+如果您在 `CButton` 視窗中建立物件，可能需要將它摧毀。 如果您使用函式在 `CButton` 堆積上建立物件 **`new`** ，您必須 **`delete`** 在物件上呼叫，以便在使用者關閉 Windows 按鈕控制項時終結它。 如果您在 `CButton` 堆疊上建立物件，或內嵌在父對話物件中，它會自動終結。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -421,7 +421,7 @@ BOOL GetNote(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*lpszNote*|脫銷緩衝區的指標，呼叫端負責配置和解除配置。 如果傳回值為 TRUE，則緩衝區會包含與目前命令連結控制項相關聯的附注文字。否則，緩衝區會保持不變。|
 |*cchNote*|[in、out]不帶正負號整數變數的指標。<br /><br /> 呼叫這個方法時，變數會包含*lpszNote*參數所指定的緩衝區大小。<br /><br /> 當這個方法傳回時，如果傳回值為 TRUE，則變數會包含與目前命令連結控制項相關聯的便箋大小。 如果傳回值為 FALSE，則變數會包含包含便箋所需的緩衝區大小。|
@@ -506,7 +506,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pInfo*|脫銷[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)結構的指標，接收目前分割按鈕控制項的相關資訊。 呼叫端負責配置結構。|
 
@@ -530,7 +530,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pSize*|脫銷接收矩形描述之[大小](/windows/win32/api/windef/ns-windef-size)結構的指標。|
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 位欄位，其中包含值的組合，表示按鈕控制項的目前狀態。 下表列出可能的值。
 
-|按鈕狀態|值|描述|
+|按鈕狀態|值|說明|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|初始狀態。|
 |BST_CHECKED|0x0001|按鈕控制項已核取。|
@@ -762,7 +762,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*fDropDown*|在TRUE 表示設定 BST_DROPDOWNPUSHED 狀態;否則為 FALSE。|
 
@@ -798,7 +798,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*fElevationRequired*|在TRUE 表示設定 `elevation required` 狀態，否則為 FALSE。|
 
@@ -882,7 +882,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*lpszNote*|在Unicode 字串的指標，設定為命令連結控制項的附注文字。|
 
@@ -918,7 +918,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*chGlyph*|在指定用來做為分割按鈕下拉箭號之圖像的字元。|
 
@@ -944,7 +944,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pSplitImageList*|在要指派給目前分割按鈕控制項的[CImageList](../../mfc/reference/cimagelist-class.md)物件指標。|
 
@@ -968,7 +968,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pInfo*|在定義目前分割按鈕控制項之[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)結構的指標。|
 
@@ -1004,7 +1004,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pSize*|在描述周框之[大小](/windows/win32/api/windef/ns-windef-size)結構的指標。|
 
@@ -1042,7 +1042,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*uSplitStyle*|在分割按鈕樣式的位元組合。 如需詳細資訊，請參閱 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)結構的成員。|
 
@@ -1120,7 +1120,7 @@ BOOL SetTextMargin(RECT* pmargin);
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [CComboBox 類別](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit 類別](../../mfc/reference/cedit-class.md)<br/>
 [CListBox 類別](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar 類別](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic 類別](../../mfc/reference/cstatic-class.md)<br/>

@@ -5,12 +5,12 @@ ms.date: 07/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 571513c33a40bc13ba4d0bb0d682bfb8cc8d6071
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180860"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223872"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -18,13 +18,13 @@ ms.locfileid: "86180860"
 
 ## <a name="optimization"></a>Optimization
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
 | [`/O1`](o1-o2-minimize-size-maximize-speed.md) | 建立小型程式碼。 |
 | [`/O2`](o1-o2-minimize-size-maximize-speed.md) | 建立快速程式碼。 |
 | [`/Ob`](ob-inline-function-expansion.md) | 控制內嵌展開。 |
 | [`/Od`](od-disable-debug.md) | 停用最佳化。 |
-| [`/Og`](og-global-optimizations.md) | 已被取代。 使用全域最佳化。 |
+| [`/Og`](og-global-optimizations.md) | 已取代。 使用全域最佳化。 |
 | [`/Oi`](oi-generate-intrinsic-functions.md) | 產生內建函式。 |
 | [`/Os`](os-ot-favor-small-code-favor-fast-code.md) | 偏好小的程式碼。 |
 | [`/Ot`](os-ot-favor-small-code-favor-fast-code.md) | 偏好快的程式碼。 |
@@ -34,38 +34,38 @@ ms.locfileid: "86180860"
 
 ## <a name="code-generation"></a>程式碼產生
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
 | [`/arch`](arch-x86.md) | 在程式碼產生時使用 SSE 或 SSE2 指令。 (僅限 x86) |
 | [`/clr`](clr-common-language-runtime-compilation.md) | 產生輸出檔案，以便在 Common Language Runtime 上執行。 |
 | [`/EH`](eh-exception-handling-model.md) | 指定例外狀況處理模型。 |
 | [`/fp`](fp-specify-floating-point-behavior.md) | 指定浮點行為。 |
 | [`/GA`](ga-optimize-for-windows-application.md) | 對 Windows 應用程式進行最佳化。 |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | 使用 `__cdecl` 呼叫慣例。 (僅限 x86) |
-| [`/Ge`](ge-enable-stack-probes.md) | 已被取代。 啟動堆疊探查。 |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | 使用 **`__cdecl`** 呼叫慣例。 (僅限 x86) |
+| [`/Ge`](ge-enable-stack-probes.md) | 已取代。 啟動堆疊探查。 |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | 啟用字串共用。 |
 | [`/Gh`](gh-enable-penter-hook-function.md) | 呼叫攔截函式 `_penter`。 |
 | [`/GH`](gh-enable-pexit-hook-function.md) | 呼叫攔截函式 `_pexit`。 |
 | [`/GL`](gl-whole-program-optimization.md) | 啟用整個程式最佳化。 |
-| [`/Gm`](gm-enable-minimal-rebuild.md) | 已被取代。 啟用最少重建。 |
+| [`/Gm`](gm-enable-minimal-rebuild.md) | 已取代。 啟用最少重建。 |
 | [`/GR`](gr-enable-run-time-type-information.md) | 啟用執行階段類型資訊 (RTTI)。 |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | 使用 `__fastcall` 呼叫慣例。 (僅限 x86) |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | 使用 **`__fastcall`** 呼叫慣例。 (僅限 x86) |
 | [`/GS`](gs-buffer-security-check.md) | 檢查緩衝區安全性。 |
 | [`/Gs`](gs-control-stack-checking-calls.md) | 控制堆疊探查。 |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | 對使用靜態執行緒區域儲存區所配置的資料支援 Fiber 安全性。 |
 | [`/guard:cf`](guard-enable-control-flow-guard.md) | 加入控制流程防護安全性檢查。 |
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | 啟用 EH 接續中繼資料。 |
-| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | 使用 `__vectorcall` 呼叫慣例。 (僅限 x86 和 x64) |
+| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | 使用 **`__vectorcall`** 呼叫慣例。 (僅限 x86 和 x64) |
 | [`/Gw`](gw-optimize-global-data.md) | 啟用整個程式全域資料最佳化。 |
-| [`/GX`](gx-enable-exception-handling.md) | 已被取代。 啟用同步例外狀況處理。 請改用 [`/EH`](eh-exception-handling-model.md) 。 |
+| [`/GX`](gx-enable-exception-handling.md) | 已取代。 啟用同步例外狀況處理。 請改用 [`/EH`](eh-exception-handling-model.md) 。 |
 | [`/Gy`](gy-enable-function-level-linking.md) | 啟用函式階層連結。 |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 已被取代。 啟用快速檢查。  (與 [`/RTC1`](rtc-run-time-error-checks.md)) 相同 |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | 使用 `__stdcall` 呼叫慣例。 (僅限 x86) |
-| [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用于 x64 編譯器 (原生和跨編譯) 。 |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 已取代。 啟用快速檢查。 （與相同 [`/RTC1`](rtc-run-time-error-checks.md) ） |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | 使用 **`__stdcall`** 呼叫慣例。 (僅限 x86) |
+| [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用于 x64 編譯器（原生和跨平臺編譯）。 |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | 建立可線上修補的影像。 |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | 產生快速超越函式。 |
-| [`/QIfist`](qifist-suppress-ftol.md) | 已被取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86) |
-| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | 移除 `fwait` 區塊內的 `try` 命令。 |
+| [`/QIfist`](qifist-suppress-ftol.md) | 已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86) |
+| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | 移除 `fwait` 區塊內 **`try`** 的命令。 |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | 降低 Intel JCC 錯誤微碼更新的效能影響。 |
 | [`/Qpar`](qpar-auto-parallelizer.md) | 啟用迴圈自動平行處理。 |
 | [`/Qpar-report`](qpar-report-auto-parallelizer-reporting-level.md) | 啟用自動平行處理的報告層級。 |
@@ -79,7 +79,7 @@ ms.locfileid: "86180860"
 
 ## <a name="output-files"></a>輸出檔案
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
 | [`/doc`](doc-process-documentation-comments-c-cpp.md) | 將文件註解處理成 XML 檔案。 |
 | [`/FA`](fa-fa-listing-file.md) | 設定組件清單檔。 |
@@ -94,7 +94,7 @@ ms.locfileid: "86180860"
 
 ## <a name="preprocessor"></a>前置處理器
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
 | [`/AI`](ai-specify-metadata-directories.md) | 指定一個要搜尋的目錄，以解析傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞的檔案參考。 |
 | [`/C`](c-preserve-comments-during-preprocessing.md) | 在前置處理過程中保留註解。 |
@@ -110,11 +110,11 @@ ms.locfileid: "86180860"
 | [`/u`](u-u-undefine-symbols.md) | 移除所有預先定義巨集。 |
 | [`/X`](x-ignore-standard-include-paths.md) | 忽略標準 Include 目錄。 |
 
-## <a name="language"></a>語言
+## <a name="language"></a>Language
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
-| [`/constexpr`](constexpr-control-constexpr-evaluation.md) | 在編譯時期控制**constexpr**評估。 |
+| [`/constexpr`](constexpr-control-constexpr-evaluation.md) | **`constexpr`** 編譯階段的控制項評估。 |
 | [`/openmp`](openmp-enable-openmp-2-0-support.md) | [`#pragma omp`](../../preprocessor/omp.md)在原始程式碼中啟用。 |
 | [`/vd`](vd-disable-construction-displacements.md) | 抑制或啟用隱藏的 `vtordisp` 類別成員。 |
 | [`/vmb`](vmb-vmg-representation-method.md) | 對指向成員的指標使用最佳基底。 |
@@ -125,7 +125,7 @@ ms.locfileid: "86180860"
 | [`/Z7`](z7-zi-zi-debug-information-format.md) | 產生與 C 7.0 相容的調試資訊。 |
 | [`/Za`](za-ze-disable-language-extensions.md) | 停用 C89 語言延伸模組。 |
 | [`/Zc`](zc-conformance.md) | 指定下的標準行為 [`/Ze`](za-ze-disable-language-extensions.md) 。 |
-| [`/Ze`](za-ze-disable-language-extensions.md) | 已被取代。 啟用 C89 語言延伸模組。 |
+| [`/Ze`](za-ze-disable-language-extensions.md) | 已取代。 啟用 C89 語言延伸模組。 |
 | [`/Zf`](zf.md) | 改善平行組建中的 PDB 產生時間。 |
 | [`/ZH`](zh.md) | 針對 debug 資訊中的總和檢查碼指定 MD5、SHA-1 或 SHA-256。 |
 | [`/ZI`](z7-zi-zi-debug-information-format.md) | 將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。 (僅限 x86) |
@@ -137,7 +137,7 @@ ms.locfileid: "86180860"
 
 ## <a name="linking"></a>連結
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
 | [`/F`](f-set-stack-size.md) | 設定堆疊大小。 |
 | [`/LD`](md-mt-ld-use-run-time-library.md) | 建立動態連結程式庫。 |
@@ -151,7 +151,7 @@ ms.locfileid: "86180860"
 
 ## <a name="miscellaneous"></a>其他
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
 | [`/?`](help-compiler-command-line-help.md) | 列出編譯器選項。 |
 | [`@`](at-specify-a-compiler-response-file.md) | 指定回應檔。 |
@@ -159,12 +159,12 @@ ms.locfileid: "86180860"
 | [`/bigobj`](bigobj-increase-number-of-sections-in-dot-obj-file.md) | 增加 .obj 檔案中可定址區段的數目。 |
 | [`/c`](c-compile-without-linking.md) | 編譯而不連結。 |
 | [`/cgthreads`](cgthreads-code-generation-threads.md) | 指定要用於優化和程式碼產生的*cl.exe*執行緒數目。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已被取代。 錯誤報表是由[Windows 錯誤報告 (WER) ](/windows/win32/wer/windows-error-reporting)設定來控制。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
 | [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | 顯示傳遞至診斷文字中*cl.exe*之原始程式碼檔案的完整路徑。 |
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | 強制寫入 PDB 檔案，以透過*MSPDBSRV.EXE*進行序列化。 |
-| [`/H`](h-restrict-length-of-external-names.md) | 已被取代。 限制外部 (公用) 名稱的長度。 |
+| [`/H`](h-restrict-length-of-external-names.md) | 已取代。 限制外部 (公用) 名稱的長度。 |
 | [`/HELP`](help-compiler-command-line-help.md) | 列出編譯器選項。 |
-| [`/J`](j-default-char-type-is-unsigned.md) | 變更預設 `char` 類型。 |
+| [`/J`](j-default-char-type-is-unsigned.md) | 變更預設 **`char`** 類型。 |
 | [`/JMC`](jmc.md) | 支援原生 c + + Just My Code 的調試。 |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | 編譯器和連結器將會建立可以在 Windows 核心中執行的二進位檔。 |
 | [`/MP`](mp-build-with-multiple-processes.md) | 同時建置多重原始程式檔。 |
@@ -175,7 +175,7 @@ ms.locfileid: "86180860"
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | 指定所有的來源檔案都是 C。 |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | 指定 C++ 原始程式檔。 |
 | [`/TP`](tc-tp-tc-tp-specify-source-file-type.md) | 指定所有原始檔都是 c + +。 |
-| [`/V`](v-version-number.md) | 已被取代。 設定版本字串。 |
+| [`/V`](v-version-number.md) | 已取代。 設定版本字串。 |
 | [`/w`](compiler-option-warning-level.md) | 停用所有警告。 |
 | [`/W0`, `/W1`, `/W2`, `/W3`, `/W4`](compiler-option-warning-level.md) | 設定輸出警告層級。 |
 | [`/w1`, `/w2`, `/w3`, `/w4`](compiler-option-warning-level.md) | 為指定的警告設定警告層級。 |
@@ -187,12 +187,12 @@ ms.locfileid: "86180860"
 | [`/Wv`](compiler-option-warning-level.md) | 停用較新版編譯器所引入的警告。 |
 | [`/WX`](compiler-option-warning-level.md) | 將警告視為錯誤。 |
 | [`/Yc`](yc-create-precompiled-header-file.md) | 建立檔案 *`.PCH`* 。 |
-| [`/Yd`](yd-place-debug-information-in-object-file.md) | 已被取代。 將完整的偵錯資訊置於所有目的檔中。 請改用 [`/Zi`](z7-zi-zi-debug-information-format.md) 。 |
+| [`/Yd`](yd-place-debug-information-in-object-file.md) | 已取代。 將完整的偵錯資訊置於所有目的檔中。 請改用 [`/Zi`](z7-zi-zi-debug-information-format.md) 。 |
 | [`/Yl`](yl-inject-pch-reference-for-debug-library.md) | 在建立偵錯程式庫時插入 PCH 參考。 |
 | [`/Yu`](yu-use-precompiled-header-file.md) | 在建置時使用先行編譯標頭檔。 |
 | [`/Y-`](y-ignore-precompiled-header-options.md) | 忽略目前組建中所有其他先行編譯標頭編譯器選項。 |
 | [`/Zm`](zm-specify-precompiled-header-memory-allocation-limit.md) | 指定先行編譯標頭的記憶體配置上限。 |
-| [`/await`](await-enable-coroutine-support.md) | ) 擴充功能啟用協同程式 (可繼續函式。 |
+| [`/await`](await-enable-coroutine-support.md) | 啟用協同程式（可繼續函數）延伸模組。 |
 | [`/source-charset`](source-charset-set-source-character-set.md) | 設定來源字元集。 |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | 設定執行字元集。 |
 | [`/utf-8`](utf-8-set-source-and-executable-character-sets-to-utf-8.md) | 將來源和執行字元集設定為 UTF-8。 |
@@ -205,30 +205,30 @@ ms.locfileid: "86180860"
 
 實驗性選項可能只有特定版本的編譯器才支援。 它們在不同的編譯器版本中也可能會有不同的行為。 通常，實驗性選項的最佳或唯一檔位於[Microsoft c + + 小組的 Blog](https://devblogs.microsoft.com/cppblog/)。
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
 | [`/experimental:module`](experimental-module.md) | 啟用實驗性模組支援。 |
 | [`/experimental:preprocessor`](experimental-preprocessor.md) | 啟用符合實驗性的預處理器支援。 |
 
 ## <a name="deprecated-and-removed-compiler-options"></a>已取代和已移除的編譯器選項
 
-| 選項 | 用途 |
+| 選項 | 目的 |
 |--|--|
-| [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | 已被取代。 請改用[ `/LN` (建立 MSIL 模組) ](ln-create-msil-module.md) 。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已被取代。 錯誤報表是由[Windows 錯誤報告 (WER) ](/windows/win32/wer/windows-error-reporting)設定來控制。 |
-| [`/Fr`](fr-fr-create-dot-sbr-file.md) | 已被取代。 建立不包含本機變數的瀏覽資訊檔。 |
-| [`/Ge`](ge-enable-stack-probes.md) | 已被取代。 啟動堆疊探查。 預設為 [開啟]。 |
-| [`/Gm`](gm-enable-minimal-rebuild.md) | 已被取代。 啟用最少重建。 |
-| [`/GX`](gx-enable-exception-handling.md) | 已被取代。 啟用同步例外狀況處理。 請改用 [`/EH`](eh-exception-handling-model.md) 。 |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 已被取代。 啟用快速檢查。 請改用 [`/RTC1`](rtc-run-time-error-checks.md) 。 |
-| [`/H`](h-restrict-length-of-external-names.md) | 已被取代。 限制外部 (公用) 名稱的長度。 |
-| [`/Og`](og-global-optimizations.md) | 已被取代。 使用全域最佳化。 |
-| [`/QIfist`](qifist-suppress-ftol.md) | 已被取代。 曾用以指定如何從浮點型別轉換為整數型別。 |
-| [`/V`](v-version-number.md) | 已被取代。 設定檔案 *`.obj`* 版本字串。 |
+| [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | 已取代。 請改用[ `/LN` （建立 MSIL 模組）](ln-create-msil-module.md) 。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
+| [`/Fr`](fr-fr-create-dot-sbr-file.md) | 已取代。 建立不包含本機變數的瀏覽資訊檔。 |
+| [`/Ge`](ge-enable-stack-probes.md) | 已取代。 啟動堆疊探查。 預設為 [開啟]。 |
+| [`/Gm`](gm-enable-minimal-rebuild.md) | 已取代。 啟用最少重建。 |
+| [`/GX`](gx-enable-exception-handling.md) | 已取代。 啟用同步例外狀況處理。 請改用 [`/EH`](eh-exception-handling-model.md) 。 |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 已取代。 啟用快速檢查。 請改用 [`/RTC1`](rtc-run-time-error-checks.md) 。 |
+| [`/H`](h-restrict-length-of-external-names.md) | 已取代。 限制外部 (公用) 名稱的長度。 |
+| [`/Og`](og-global-optimizations.md) | 已取代。 使用全域最佳化。 |
+| [`/QIfist`](qifist-suppress-ftol.md) | 已取代。 曾用以指定如何從浮點型別轉換為整數型別。 |
+| [`/V`](v-version-number.md) | 已取代。 設定檔案 *`.obj`* 版本字串。 |
 | [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | 已過時。 偵測 64 位元可移植性問題。 |
-| [`/Yd`](yd-place-debug-information-in-object-file.md) | 已被取代。 將完整的偵錯資訊置於所有目的檔中。 請改用 [`/Zi`](z7-zi-zi-debug-information-format.md) 。 |
-| [`/Zc:forScope-`](zc-forscope-force-conformance-in-for-loop-scope.md) | 已被取代。 停用 For 迴圈範圍中的一致性。 |
-| [`/Ze`](za-ze-disable-language-extensions.md) | 已被取代。 啟用語言擴充功能。 |
+| [`/Yd`](yd-place-debug-information-in-object-file.md) | 已取代。 將完整的偵錯資訊置於所有目的檔中。 請改用 [`/Zi`](z7-zi-zi-debug-information-format.md) 。 |
+| [`/Zc:forScope-`](zc-forscope-force-conformance-in-for-loop-scope.md) | 已取代。 停用 For 迴圈範圍中的一致性。 |
+| [`/Ze`](za-ze-disable-language-extensions.md) | 已取代。 啟用語言擴充功能。 |
 | [`/Zg`](zg-generate-function-prototypes.md) | 已在 Visual Studio 2015 中移除。 產生函式原型。 |
 
 ## <a name="see-also"></a>另請參閱

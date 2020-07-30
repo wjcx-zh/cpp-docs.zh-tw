@@ -26,12 +26,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4604a6e2dfb00502e3c942c9735a077e1632843
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952779"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232491"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -52,28 +52,28 @@ void *_malloca(
 
 ## <a name="return-value"></a>傳回值
 
-**_Malloca**常式會傳回已配置空間的**void**指標，保證會適當地對齊任何物件類型的儲存。 如果*size*是0， **_malloca**會配置零長度專案，並傳回該專案的有效指標。
+**_Malloca**常式 **`void`** 會傳回已配置空間的指標，保證會適當地對齊任何物件類型的儲存。 如果*size*為0， **_malloca**會配置零長度專案，並傳回該專案的有效指標。
 
-如果*size*大於 **_ALLOCA_S_THRESHOLD**，則 **_malloca**會嘗試在堆積上配置，如果無法配置空間，則會傳回 null 指標。 如果*size*小於或等於 **_ALLOCA_S_THRESHOLD**，則 **_malloca**會嘗試在堆疊上配置，而如果無法配置空間，則會產生堆疊溢位例外狀況。 堆疊溢位例外狀況不C++是例外狀況;這是結構化例外狀況。 您必須使用C++ [結構化例外狀況處理](../../cpp/structured-exception-handling-c-cpp.md)（SEH）來攔截這個例外狀況，而不是使用例外狀況處理。
+如果*大小*大於 **_ALLOCA_S_THRESHOLD**，則 **_malloca**會嘗試在堆積上配置，如果無法配置空間，則會傳回 null 指標。 如果*size*小於或等於 **_ALLOCA_S_THRESHOLD**，則 **_malloca**會嘗試在堆疊上配置，而如果無法配置空間，則會產生堆疊溢位例外狀況。 堆疊溢位例外狀況不是 c + + 例外狀況;這是結構化例外狀況。 您必須使用[結構化例外狀況處理](../../cpp/structured-exception-handling-c-cpp.md)（SEH）來攔截這個例外狀況，而不是使用 c + + 例外狀況處理。
 
 ## <a name="remarks"></a>備註
 
-如果要求超過 **_ALLOCA_S_THRESHOLD**所指定的特定大小（以位元組為單位），則 **_malloca**會從程式堆疊或堆積配置*大小*位元組。 **_Malloca**和 **_alloca**的差異在於，不論大小為何， **_alloca**一律會在堆疊上配置。 不同于 **_alloca**，這不需要或不允許**呼叫來釋放記憶體以進行配置**， **_malloca**需要使用[_freea](freea.md)來釋放記憶體。 在 [調試] 模式中， **_malloca**一律會從堆積配置記憶體。
+如果要求超出 **_ALLOCA_S_THRESHOLD**所指定的特定大小（以位元組為單位）， **_malloca**會從程式堆疊或堆積配置*大小*位元組。 **_Malloca**和 **_alloca**之間的差異在於， **_alloca**一律會在堆疊上配置，而不論其大小為何。 不同于 **_alloca**，這不需要或不允許**呼叫來釋放記憶體以供**配置， **_malloca**需要使用[_freea](freea.md)來釋放記憶體。 在 [debug] 模式中， **_malloca**一律會從堆積配置記憶體。
 
-在例外狀況處理常式（EH）中明確呼叫 **_malloca**有一些限制。 在 x86 類別處理器上執行的 EH 常式會在自己的記憶體框架中運作：它們會在記憶體空間中執行其工作，而這些工作不是以封入函式堆疊指標的目前位置為基礎。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，在下列任一情況下明確呼叫 **_malloca** ，會導致在傳回呼叫 EH 常式期間發生程式失敗：
+在例外狀況處理常式（EH）中明確呼叫 **_malloca**有一些限制。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，在下列任一情況下明確呼叫 **_malloca** ，會導致在傳回呼叫 EH 常式期間發生程式失敗：
 
-- Windows NT SEH 例外狀況篩選準則運算式：`_malloca ()` __except （）
+- Windows NT SEH 例外狀況篩選條件運算式： **`__except`** （ `_malloca ()` ）
 
-- Windows NT SEH 最終例外狀況處理程式：`_malloca ()` __finally {}
+- Windows NT SEH 最終例外狀況處理常式： **`__finally`** { `_malloca ()` }
 
 - C++ EH catch 子句運算式
 
-不過，您可以直接從 EH 常式內或從應用程式提供的回呼呼叫 **_malloca** ，這是先前列出的其中一個 EH 案例所叫用的。
+不過，您可以從 EH 常式內或從應用程式提供的回呼（由先前列出的其中一個 EH 案例叫用），直接呼叫 **_malloca** 。
 
 > [!IMPORTANT]
 > 在 Windows XP 中，如果在 try/catch 區塊內呼叫 **_malloca** ，您必須在 catch 區塊中呼叫[_resetstkoflw](resetstkoflw.md) 。
 
-除了上述限制以外，使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項時， **_malloca**不能用在 **__except**區塊中。 如需詳細資訊，請參閱 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+除了上述限制以外，使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項時， **_malloca**不能用在 **`__except`** 區塊中。 如需詳細資訊，請參閱 [/clr 限制](../../build/reference/clr-restrictions.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -161,7 +161,7 @@ int main()
 }
 ```
 
-### <a name="input"></a>Input
+### <a name="input"></a>輸入
 
 ```Input
 1000

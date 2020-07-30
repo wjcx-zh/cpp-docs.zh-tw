@@ -1,17 +1,17 @@
 ---
-title: coclass （C++ COM 屬性）
+title: coclass （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.coclass
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 76540e90fef2e840b91bb07f570a7b8c0987eb10
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232790"
 ---
 # <a name="coclass"></a>coclass
 
@@ -25,11 +25,11 @@ ms.locfileid: "80168327"
 
 ## <a name="remarks"></a>備註
 
-**Coclass** C++屬性會將 coclass 結構放在產生的 .idl 檔案中。
+**Coclass** c + + 屬性會將 coclass 結構放在產生的 .idl 檔案中。
 
 定義 coclass 時，您也可以指定[uuid](uuid-cpp-attributes.md)、 [version](version-cpp.md)、[執行緒](threading-cpp.md)、 [vi_progid](vi-progid.md)和[progid](progid.md)屬性。 如果沒有指定任何一個，則會產生它。
 
-如果兩個標頭檔包含具有**coclass**屬性的類別，但未指定 GUID，則編譯器會針對這兩個類別使用相同的 guid，這會導致 MIDL 錯誤。  因此，當您使用**coclass**時，應該使用 `uuid` 屬性。
+如果兩個標頭檔包含具有**coclass**屬性的類別，但未指定 GUID，則編譯器會針對這兩個類別使用相同的 guid，這會導致 MIDL 錯誤。  因此， `uuid` 當您使用**coclass**時，應該使用屬性。
 
 **ATL 專案**
 
@@ -39,29 +39,29 @@ ms.locfileid: "80168327"
 
 - 插入程式碼或資料，以支持對象的 COM Class Factory。
 
-- 插入要執行 `IUnknown` 的程式碼或資料，並將物件設為可供 COM 建立的物件。
+- 插入要執行的程式碼或資料 `IUnknown` ，並將物件設為可由 COM 建立的物件。
 
 具體而言，下列基類會新增至目標物件：
 
 - [CComCoClass 類別](../../atl/reference/ccomcoclass-class.md)提供物件的預設 Class Factory 和匯總模型。
 
-- [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)具有以[執行緒](threading-cpp.md)屬性所指定的執行緒模型類別為基礎的範本。 如果未指定 `threading` 屬性，預設的執行緒模型為 [公寓]。
+- [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)具有以[執行緒](threading-cpp.md)屬性所指定的執行緒模型類別為基礎的範本。 如果 `threading` 未指定屬性，預設的執行緒模型為 [公寓]。
 
 - 如果未指定目標物件的[noncreatable](noncreatable.md)屬性，則會加入[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md) 。
 
 最後，未使用內嵌 IDL 定義的任何雙重介面都會取代為對應的[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)類別。 如果在內嵌 IDL 中定義雙重介面，則不會修改基底清單中的特定介面。
 
-**Coclass**屬性也會透過插入的程式碼提供下列函式，或在 `GetObjectCLSID`的情況下，做為基類中的靜態方法 `CComCoClass`：
+**Coclass**屬性也會透過插入的程式碼，或在的案例中提供下列函式， `GetObjectCLSID` 做為基類中的靜態方法 `CComCoClass` ：
 
-- `UpdateRegistry` 註冊目標類別的 class factory。
+- `UpdateRegistry`註冊目標類別的 class factory。
 
-- `GetObjectCLSID`（與註冊相關）也可以用來取得目標類別的 CLSID。
+- `GetObjectCLSID`與註冊相關的，也可以用來取得目標類別的 CLSID。
 
-- `GetObjectFriendlyName` 預設會傳回「\<*目標類別名稱*> `Object`」格式的字串。 如果此函式已存在，則不會新增。 將此函式新增至目標類別，以傳回比自動產生的易記名稱。
+- `GetObjectFriendlyName`根據預設，會傳回格式為 "" 的字串 \<*target class name*> `Object` 。 如果此函式已存在，則不會新增。 將此函式新增至目標類別，以傳回比自動產生的易記名稱。
 
-- `GetProgID`（與註冊相關）會傳回以[progid](progid.md)屬性指定的字串。
+- `GetProgID`與註冊相關的，會傳回使用[progid](progid.md)屬性指定的字串。
 
-- `GetVersionIndependentProgID` 具有與 `GetProgID`相同的功能，但它會傳回以[vi_progid](vi-progid.md)指定的字串。
+- `GetVersionIndependentProgID`具有和相同的功能 `GetProgID` ，但它會傳回使用[vi_progid](vi-progid.md)所指定的字串。
 
 下列與 COM 對應相關的變更會對目標類別進行：
 
@@ -69,7 +69,7 @@ ms.locfileid: "80168327"
 
 - [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)宏會插入 COM 對應中。
 
-在該類別的 .idl 檔案中產生的 coclass 名稱，會與類別具有相同的名稱。  例如，和參考下列範例，若要存取 coclass `CMyClass`的類別 ID，請在用戶端透過 MIDL 產生的標頭檔中，使用 `CLSID_CMyClass`。
+在該類別的 .idl 檔案中產生的 coclass 名稱，會與類別具有相同的名稱。  例如，和參考下列範例，若要 `CMyClass` 透過 MIDL 產生的標頭檔來存取用戶端中 coclass 的類別識別碼，請使用 `CLSID_CMyClass` 。
 
 ## <a name="example"></a>範例
 
@@ -131,10 +131,10 @@ public:
 
 |||
 |-|-|
-|**適用於**|**class**、 **struct**|
+|**適用於**|**`class`**, **`struct`**|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

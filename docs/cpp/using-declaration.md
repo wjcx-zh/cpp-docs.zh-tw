@@ -7,16 +7,16 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187839"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227019"
 ---
 # <a name="using-declaration"></a>using 宣告
 
-**Using**宣告會將名稱引入宣告式區域，其中會顯示 using 聲明。
+**`using`** 宣告會在宣告式區域中引進一個名稱，其中會顯示 using 聲明。
 
 ## <a name="syntax"></a>語法
 
@@ -27,15 +27,15 @@ using declarator-list ;
 
 ### <a name="parameters"></a>參數
 
-*嵌套名稱-規範*命名空間、類別或列舉名稱的序列，以及範圍解析運算子（：:)，由範圍解析運算子終止。 單一範圍解析運算子可用來引入全域命名空間中的名稱。 關鍵字**typename**是選擇性的，而且可以在從基類引入類別樣板時用來解析相依名稱。
+*嵌套名稱-規範*命名空間、類別或列舉名稱的序列，以及範圍解析運算子（：:)，由範圍解析運算子終止。 單一範圍解析運算子可用來引入全域命名空間中的名稱。 關鍵字 **`typename`** 是選擇性的，而且可以在從基類引入類別樣板時用來解析相依名稱。
 
 不*合格-識別碼*不合格的識別碼運算式，可能是識別碼、多載的運算子名稱、使用者定義的常值運算子或轉換函式名稱、類別的析構函數名稱，或範本名稱和引數清單。
 
-宣告子 *-list*以逗號分隔的 [**typename**]*嵌套名稱-規範* *-id*宣告子清單，後面接著選擇性的省略號。
+宣告子 *-list*以逗號分隔的 [ **`typename`** ]*嵌套名稱-規範* *-id*宣告子清單，後面接著選擇性的省略號。
 
 ## <a name="remarks"></a>備註
 
-Using 宣告導入了不合格的名稱，做為在其他地方宣告之實體的同義字。 它允許在其出現的宣告區域中，使用特定命名空間的單一名稱，而不需要明確限定。 這與[using](../cpp/namespaces-cpp.md#using_directives)指示詞相反，它允許命名空間中的*所有*名稱都可以使用，而不需要限定。 **Using**關鍵字也用於[類型別名](../cpp/aliases-and-typedefs-cpp.md)。
+Using 宣告導入了不合格的名稱，做為在其他地方宣告之實體的同義字。 它允許在其出現的宣告區域中，使用特定命名空間的單一名稱，而不需要明確限定。 這與[using](../cpp/namespaces-cpp.md#using_directives)指示詞相反，它允許命名空間中的*所有*名稱都可以使用，而不需要限定。 **`using`** 關鍵字也會用於[類型別名](../cpp/aliases-and-typedefs-cpp.md)。
 
 ## <a name="example"></a>範例
 
@@ -125,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>範例
 
-使用 using 宣告宣告的成員可以使用明確限定性來參考。 `::` 的前置詞是指全域命名空間。
+使用 using 宣告宣告的成員可以使用明確限定性來參考。 `::`前置詞是指全域命名空間。
 
 ```cpp
 // using_declaration3.cpp
@@ -167,7 +167,7 @@ In A::g
 
 進行 using 宣告時，宣告所建立的同義字只會參考在 using 宣告中有效的定義。 在 using 宣告之後加入命名空間的定義，不是有效的同義字。
 
-**Using**宣告所定義的名稱是其原始名稱的別名。 它不會影響原始宣告的類型、連結或其他屬性。
+宣告所定義的名稱 **`using`** 是其原始名稱的別名。 它不會影響原始宣告的類型、連結或其他屬性。
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -213,7 +213,7 @@ void g() {
 }
 ```
 
-在上述範例中，`using B::i` 語句會導致在 `g()` 函數中宣告第二個 `int i`。 `using B::f` 語句不會與 `f(char)` 函數衝突，因為 `B::f` 引進的函數名稱具有不同的參數類型。
+在上述範例中， `using B::i` 語句會導致在函式中宣告第二個 `int i` `g()` 。 `using B::f`語句不會與函數衝突， `f(char)` 因為所引進的函數名稱 `B::f` 具有不同的參數類型。
 
 ## <a name="example"></a>範例
 

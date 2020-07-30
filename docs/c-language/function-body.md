@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2ae73ab4ca91e06e3b6cd41166a8d05ae0857e4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857095"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229697"
 ---
 # <a name="function-body"></a>函式主體
 
@@ -25,13 +25,13 @@ ms.locfileid: "74857095"
 
 /\**屬性-seq*是 Microsoft 特有的\*/
 
-*複合陳述式*：/\*函數主體\*/<br/>
+*複合陳述式*：/ \* 函數主體\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{宣告** *-列出*<sub>opt</sub> *語句清單*<sub>opt</sub> **}**
 
-除非另外指定，否則在函式主體中宣告的變數 (稱為「區域變數」**) 均具有 **auto** 儲存類別。 呼叫函式時，會建立區域變數儲存區並執行區域初始化。 執行控制權會傳遞至 *compound-statement* 中的第一個陳述式，並且繼續到執行 **return** 陳述式或遇到函式主體的結尾為止。 然後，控制權會回到呼叫該函式的點。
+除非另有指定，否則在函式主體中宣告的變數（稱為*區域變數*）具有 **`auto`** 儲存類別。 呼叫函式時，會建立區域變數儲存區並執行區域初始化。 執行控制會傳遞給*複合陳述式*中的第一個語句，並繼續直到 **`return`** 執行語句或遇到函式主體的結尾為止。 然後，控制權會回到呼叫該函式的點。
 
-如果函式應傳回值，必須執行包含運算式的 **return** 陳述式。 如果未執行 **return** 陳述式或 **return** 陳述式不包含運算式，則函式的傳回值會是未定義的。
+**`return`** 如果函數要傳回值，則必須執行包含運算式的語句。 如果未 **`return`** 執行任何語句，或語句不包含運算式，則函式的傳回值會是未定義的 **`return`** 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 函式定義](../c-language/c-function-definitions.md)

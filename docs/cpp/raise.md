@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: db6ba1693e4d3144b95530646b061e9cd7a58a5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317226"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227123"
 ---
 # <a name="__raise"></a>__raise
 
@@ -26,9 +26,9 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>備註
 
-在 Managed 程式碼中，只能從已定義的類別內引發事件。 有關詳細資訊,請參閱[事件](../extensions/event-cpp-component-extensions.md)。
+在 Managed 程式碼中，只能從已定義的類別內引發事件。 如需詳細資訊，請參閱[事件](../extensions/event-cpp-component-extensions.md)。
 
-如果調用非事件,關鍵字 **__raise**會導致發出錯誤。
+**`__raise`** 如果您呼叫非事件，關鍵字會導致發出錯誤。
 
 > [!NOTE]
 > 樣板類別或結構不能包含事件。

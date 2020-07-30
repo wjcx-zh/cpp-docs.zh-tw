@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73be1142747dc608d683e6bd847639b9df718a13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192622"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>在內嵌組譯碼中呼叫 C 函式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-`__asm` 區塊可以呼叫 C 函式，包括 C 程式庫常式。 下列範例會呼叫 `printf` 程式庫常式：
+**`__asm`** 區塊可以呼叫 c 函式，包括 c 程式庫常式。 下列範例會呼叫 `printf` 程式庫常式：
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -58,8 +58,8 @@ printf( format, hello, world );
 
 這個範例會將指標依序推入 `world`、`hello` 和 `format`，然後呼叫 `printf`。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 
-[內嵌組合語言](../../assembler/inline/inline-assembler.md)<br/>
+[內嵌組譯工具](../../assembler/inline/inline-assembler.md)<br/>

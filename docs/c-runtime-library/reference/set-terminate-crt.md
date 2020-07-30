@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914527"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234012"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -60,7 +60,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 在多執行緒環境中，會分別維護每個執行緒的終止函式。 每個新執行緒都需要安裝它自己的終止函式。 因此，每個執行緒都會負責它自己的終止處理。
 
-**Terminate_function**類型是在 EH 中定義。H 做為使用者定義終止函式的指標，此*termFunction*會傳回**void**。 您的自訂函式*termFunction*不會接受任何引數，而且不應該傳回至其呼叫端。 如果存在，則會呼叫[abort](abort.md) 。 可能不會從*termFunction*中擲回例外狀況。
+**Terminate_function**類型是在 EH 中定義。H 做為使用者定義終止函式的指標，這是傳回的*termFunction* **`void`** 。 您的自訂函式*termFunction*不會接受任何引數，而且不應該傳回至其呼叫端。 如果存在，則會呼叫[abort](abort.md) 。 可能不會從*termFunction*中擲回例外狀況。
 
 ```cpp
 typedef void ( *terminate_function )( );

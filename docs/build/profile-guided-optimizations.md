@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232725"
 ---
 # <a name="profile-guided-optimizations"></a>特性指引最佳化
 
@@ -68,7 +68,7 @@ ms.locfileid: "84777314"
 
 - **函數**配置-根據呼叫圖形和分析的呼叫端/被呼叫端行為，通常會沿著相同執行路徑的函數會放在相同的區段中。
 
-- **條件式分支優化**-使用值探查，特性指引優化可以找出 switch 語句中指定的值是否使用的頻率高於其他值。  然後此值會撤出 switch 陳述式。  也可以使用 `if` ... `else` 指示，讓優化工具可以排序 ...， `if` `else` 以便 `if` `else` 先放置或區塊，視哪一個區塊較常為 true 而定。
+- **條件式分支優化**-使用值探查，特性指引優化可以找出 switch 語句中指定的值是否使用的頻率高於其他值。  然後此值會撤出 switch 陳述式。  也可以使用 **`if`** ... **`else`** 指示，讓優化工具可以排序 ...， **`if`** **`else`** 以便 **`if`** **`else`** 先放置或區塊，視哪一個區塊較常為 true 而定。
 
 - 無作用程式**代碼分離**-分析期間未呼叫的程式碼會移到附加至區段集合結尾的特殊區段。 它會有效地將此區段保留在經常使用的頁面中。
 

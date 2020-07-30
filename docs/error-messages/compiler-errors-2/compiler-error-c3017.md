@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3017
 ms.assetid: 12ab2c2a-d0d2-4900-9cbf-39be0af590dd
-ms.openlocfilehash: af3f24a1a814fa79fa63b7e5bee204083006c9a2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 34347abffd91246ada080d19fee88ee09c8fce99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749736"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232062"
 ---
 # <a name="compiler-error-c3017"></a>編譯器錯誤 C3017
 
 OpenMP 'for' 陳述式中的終止測試格式不當
 
-OpenMP 陳述式中的 `for` 迴圈必須完整且明確地指定。
+**`for`** OpenMP 語句中的迴圈必須完整且明確指定。
 
 下列範例會產生 C3017：
 

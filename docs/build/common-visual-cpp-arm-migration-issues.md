@@ -2,12 +2,12 @@
 title: Visual C++ ARM 移轉時常見的問題
 ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 2c29b4ffa5344b309622314970ce52c47a0ebd05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 889eed2b02362f33446cd9441ef84f406817b01a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328802"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224067"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 移轉時常見的問題
 
@@ -23,10 +23,10 @@ ms.locfileid: "81328802"
 
 *未指定的行為*是 c + + 標準有意不具決定性的行為。 雖然行為會被視為不具決定性，但特定的未指定行為調用是由編譯器執行所決定。 不過，編譯器廠商不需要預先確定結果，或保證可比較的調用之間的一致行為，而且不需要檔。 未指定行為的範例是評估子運算式（其中包含函式呼叫的引數）的順序。
 
-其他遷移問題的特性可能是 ARM 和 x86 或 x64 架構之間的硬體差異，與 c + + 標準互動的方式不同。 例如，x86 和 x64 架構的強式記憶體模型會提供`volatile`一些額外的屬性，這些屬性已經用來加速過去的特定執行緒間通訊類型。 但是 ARM 架構的弱式記憶體模型不支援這種用法，c + + 標準也不會要求它。
+其他遷移問題的特性可能是 ARM 和 x86 或 x64 架構之間的硬體差異，與 c + + 標準互動的方式不同。 例如，x86 和 x64 架構的強式記憶體模型 **`volatile`** 會提供一些額外的屬性，這些屬性已經用來加速過去的特定執行緒間通訊類型。 但是 ARM 架構的弱式記憶體模型不支援這種用法，c + + 標準也不會要求它。
 
 > [!IMPORTANT]
-> 雖然`volatile`取得一些可用來在 x86 和 x64 上執行有限形式之執行緒間通訊的屬性，但這些額外的屬性並不足以在一般情況下執行執行緒間通訊。 C + + 標準建議您改用適當的同步處理原始物件來執行這類通訊。
+> 雖然 **`volatile`** 取得一些可用來在 x86 和 x64 上執行有限形式之執行緒間通訊的屬性，但這些額外的屬性並不足以在一般情況下執行執行緒間通訊。 C + + 標準建議您改用適當的同步處理原始物件來執行這類通訊。
 
 由於不同的平臺可能會以不同的方式表達這類行為，因此如果在平臺之間移植軟體，可能會很棘手，而且如果相依于特定平臺的行為，則不容易發生錯誤。 雖然可能會觀察到這類行為，而且可能會變穩定，但依賴它們至少是不可移植的，而且在未定義或未指定的行為情況下，也是錯誤。 即使本檔中提及的行為不應依賴，而且未來的編譯器或 CPU 執行可能會改變。
 
@@ -46,7 +46,7 @@ ms.locfileid: "81328802"
 
 只有在您知道值是在要轉換成的整數類型範圍內時，才能依賴浮點轉換。
 
-### <a name="shift-operator---behavior"></a>移位運算子（\< \< >>）行為
+### <a name="shift-operator---behavior"></a>移位運算子（ \<\< >>）行為
 
 在 ARM 架構上，可以在模式開始重複之前，將值向左或向右移動到255位。 在 x86 和 x64 架構上，除非模式的來源是64位變數，否則會在32的每個倍數重複模式。在這種情況下，模式會在 x64 上的每個64，以及 x86 上每多個256（採用軟體實行的地方）重複執行。 例如，針對32位變數，其值為1，由32個位置左移，在 ARM 上的結果為0，在 x86 上的結果為1，而在 x64 上，結果也是1。 不過，如果值的來源是64位變數，則在所有三個平臺上的結果都是4294967296，而此值將不會「換行」，直到在 x64 上移動64位置或 ARM 和 x86 上的256位置為止。
 
@@ -54,7 +54,7 @@ ms.locfileid: "81328802"
 
 ### <a name="variable-arguments-varargs-behavior"></a>變數引數（varargs）行為
 
-在 ARM 架構上，從堆疊上傳遞的可變引數清單中的參數可能會對齊。 例如，64位參數在64位界限上對齊。 在 x86 和 x64 上，在堆疊上傳遞的引數不會受到對齊和緊密封裝的規範。 這項差異可能會導致 variadic `printf`函式，例如讀取在 ARM 上做為填補的記憶體位址。如果變數引數清單的預期配置不完全相符，即使它可能適用于 x86 或 x64 架構上部分值的子集。 請思考此範例：
+在 ARM 架構上，從堆疊上傳遞的可變引數清單中的參數可能會對齊。 例如，64位參數在64位界限上對齊。 在 x86 和 x64 上，在堆疊上傳遞的引數不會受到對齊和緊密封裝的規範。 這項差異可能會導致 variadic 函式，例如 `printf` 讀取在 ARM 上做為填補的記憶體位址。如果變數引數清單的預期配置不完全相符，即使它可能適用于 x86 或 x64 架構上部分值的子集。 請思考此範例：
 
 ```C
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.
@@ -82,22 +82,22 @@ handle memory_handle;
 memory_handle->acquire(*p);
 ```
 
-這會顯示妥善定義的，但`->`如果`*`和是多載運算子，則此程式碼會轉譯成類似下面的內容：
+這會顯示妥善定義的，但如果 `->` 和是多載 `*` 運算子，則此程式碼會轉譯成類似下面的內容：
 
 ```cpp
 Handle::acquire(operator->(memory_handle), operator*(p));
 ```
 
-而且，如果和`operator->(memory_handle)` `operator*(p)`之間有相依性，則程式碼可能會依賴特定的評估順序，即使原始程式碼看起來就像沒有可能的相依性。
+而且，如果和之間有相依 `operator->(memory_handle)` 性 `operator*(p)` ，則程式碼可能會依賴特定的評估順序，即使原始程式碼看起來就像沒有可能的相依性。
 
 ### <a name="volatile-keyword-default-behavior"></a>volatile 關鍵字的預設行為
 
-MSVC 編譯器支援兩種不同的`volatile`儲存限定詞解讀，您可以使用編譯器參數來指定。 [/Volatile： ms](reference/volatile-volatile-keyword-interpretation.md)參數會選取可確保強式排序的 Microsoft 擴充 volatile 語義，因為這是傳統的 x86 和 x64 案例，因為這些架構上的強式記憶體模型。 [/Volatile： iso](reference/volatile-volatile-keyword-interpretation.md)參數會選取嚴格的 c + + 標準 volatile 語義，而不保證強式排序。
+MSVC 編譯器支援兩種不同的 **`volatile`** 儲存限定詞解讀，您可以使用編譯器參數來指定。 [/Volatile： ms](reference/volatile-volatile-keyword-interpretation.md)參數會選取可確保強式排序的 Microsoft 擴充 volatile 語義，因為這是傳統的 x86 和 x64 案例，因為這些架構上的強式記憶體模型。 [/Volatile： iso](reference/volatile-volatile-keyword-interpretation.md)參數會選取嚴格的 c + + 標準 volatile 語義，而不保證強式排序。
 
-在 ARM 架構上，預設值為 **/volatile： iso** ，因為 arm 處理器具有弱式排序的記憶體模型，而且因為 arm 軟體沒有依賴 **/volatile： ms**的擴充語義的舊版，而且通常不需要與執行的軟體進行介面的互動。 不過，它有時候也很方便，甚至是編譯 ARM 程式以使用擴充的語義時也是必要的。 例如，將程式移植到使用 ISO c + + 的語義可能會太昂貴，或驅動程式軟體可能必須遵守傳統的語義，才能正常運作。 在這些情況下，您可以使用 **/volatile： ms**參數;不過，若要在 ARM 目標上重新建立傳統的 volatile 語義，編譯器必須在每次讀取或寫入`volatile`變數時插入記憶體屏障，以強制執行強式排序，這對效能可能會有負面影響。
+在 ARM 架構上，預設值為 **/volatile： iso** ，因為 arm 處理器具有弱式排序的記憶體模型，而且因為 arm 軟體沒有依賴 **/volatile： ms**的擴充語義的舊版，而且通常不需要與執行的軟體進行介面的互動。 不過，它有時候也很方便，甚至是編譯 ARM 程式以使用擴充的語義時也是必要的。 例如，將程式移植到使用 ISO c + + 的語義可能會太昂貴，或驅動程式軟體可能必須遵守傳統的語義，才能正常運作。 在這些情況下，您可以使用 **/volatile： ms**參數;不過，若要在 ARM 目標上重新建立傳統的 volatile 語義，編譯器必須在每次讀取或寫入變數時插入記憶體屏障， **`volatile`** 以強制執行強式排序，這對效能可能會有負面影響。
 
 在 x86 和 x64 架構上，預設值為 **/volatile： ms** ，因為已使用 MSVC 為這些架構建立的大部分軟體都依賴它們。 當您編譯 x86 和 x64 程式時，您可以指定 **/volatile： iso**參數來協助避免不必要的依賴傳統 volatile 語義，並提升可攜性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [針對 ARM 處理器設定 Visual C++](configuring-programs-for-arm-processors-visual-cpp.md)

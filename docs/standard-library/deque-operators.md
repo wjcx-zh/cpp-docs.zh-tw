@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d91fe64e7d06a80402a0a540be8f63d98ea96d37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419130"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222481"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; 運算子
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試運算子左邊的 deque 物件是否不等於右邊的 deque 物件。
 
@@ -35,15 +35,15 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `deque` 類型的物件。
 
-*right*\
+*再*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 deque 物件不相等，則為 **true**；如果 deque 物件相等，則為 **false**。
+**`true`** 如果 deque 物件不相等，則為，**`false`** 如果 deque 物件相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -76,7 +76,7 @@ int main( )
 The deques are not equal.
 ```
 
-## <a name="op_lt"></a> 運算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
 
 測試運算子左邊的 deque 物件是否小於右邊的 deque 物件。
 
@@ -86,15 +86,15 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `deque` 類型的物件。
 
-*right*\
+*再*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的 deque 小於且不等於右邊的 deque，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的 deque 小於且不等於運算子右邊的 deque，則為，否則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -131,7 +131,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="op_lt_eq"></a>運算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
 
 測試運算子左邊的 deque 物件是否小於或等於右邊的 deque 物件。
 
@@ -141,15 +141,15 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `deque` 類型的物件。
 
-*right*\
+*再*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的 deque 小於或等於右邊的 deque，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的 deque 小於或等於運算子右邊的 deque，則為，否則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -186,7 +186,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的 deque 物件是否等於右邊的 deque 物件。
 
@@ -196,15 +196,15 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `deque` 類型的物件。
 
-*right*\
+*再*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的 deque 等於右邊的 deque，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的 deque 等於運算子右邊的 deque，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -244,7 +244,7 @@ The deques are equal.
 The deques are not equal.
 ```
 
-## <a name="op_gt"></a> 運算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
 
 測試運算子左邊的 deque 物件是否大於右邊的 deque 物件。
 
@@ -254,15 +254,15 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `deque` 類型的物件。
 
-*right*\
+*再*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的 deque 大於右邊的 deque，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的 deque 大於運算子右邊的 deque，則為;否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -300,7 +300,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="op_gt_eq"></a>運算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
 
 測試運算子左邊的 deque 物件是否大於或等於右邊的 deque 物件。
 
@@ -310,15 +310,15 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `deque` 類型的物件。
 
-*right*\
+*再*\
 `deque` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的 deque 大於或等於右邊的 deque，即為 **true**；否則為 **false**。
+**`true`** 如果運算子左邊的 deque 大於或等於運算子右邊的 deque，則為，否則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 

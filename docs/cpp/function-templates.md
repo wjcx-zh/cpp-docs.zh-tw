@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179740"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232283"
 ---
 # <a name="function-templates"></a>函式樣板
 
@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-此程式碼會定義一系列交換引數值的函式。 您可以從此範本產生函式，以交換**int**和**long**類型，以及使用者定義的類型。 如果已正確定義類別的複製建構函式和指派運算子，則 `MySwap` 甚至會交換類別。
+此程式碼會定義一系列交換引數值的函式。 從這個範本，您可以產生將交換 **`int`** 和 **`long`** 類型以及使用者定義類型的函式。 如果已正確定義類別的複製建構函式和指派運算子，則 `MySwap` 甚至會交換類別。
 
 此外，函數樣板會防止您交換不同類型的物件，因為編譯器會在編譯時期知道*a*和*b*參數的類型。
 
@@ -55,11 +55,11 @@ int main(int j) {
 }
 ```
 
-明確指定樣板引數時，一般會完成隱含轉換，以便將函式引數轉換為對應函式樣板參數的類型。 在上述範例中，編譯器會將 `j` 轉換成**char**類型。
+明確指定樣板引數時，一般會完成隱含轉換，以便將函式引數轉換為對應函式樣板參數的類型。 在上述範例中，編譯器會將轉換 `j` 成類型 **`char`** 。
 
 ## <a name="see-also"></a>另請參閱
 
 [範本](../cpp/templates-cpp.md)<br/>
 [函式樣板具現化](../cpp/function-template-instantiation.md)<br/>
-[明確初始化](../cpp/explicit-instantiation.md)<br/>
+[明確具現化](../cpp/explicit-instantiation.md)<br/>
 [函式樣板的明確特製化](../cpp/explicit-specialization-of-function-templates.md)

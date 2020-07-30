@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 5a430154c9ad31a9776eeb2ba569fa0da33fac81
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189671"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT 地區設定名稱、語言和國家/地區字串
 
@@ -34,7 +34,7 @@ ms.locfileid: "86373546"
 
 如果您僅使用字碼頁來指定地區設定，就會使用 [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename) 回報的使用者預設語言和國家/地區。 例如，如果您指定 `".1254"` (ANSI 土耳其文) 作為配置英文 (美國) 使用者的地區設定，儲存的地區設定便是 `English_United States.1254`。 因為這可能會導致不一致的行為，所以不建議使用這個格式。
 
-`C` 的 *locale* 引數值會指定 C 轉譯的最小 ANSI 符合環境。 `C` 地區設定會假設每個 **char** 資料類型都是 1 位元組，而其值永遠小於 256。 如果 *locale* 指向空字串，地區設定即為由實作所定義的原生環境。
+`C` 的 *locale* 引數值會指定 C 轉譯的最小 ANSI 符合環境。 `C`地區設定會假設每個 **`char`** 資料類型都是1位元組，而其值一律小於256。 如果 *locale* 指向空字串，地區設定即為由實作所定義的原生環境。
 
 藉由使用 `setlocale` 分類，可以為 `_wsetlocale` 和 `LC_ALL` 函式同時指定所有地區設定分類。 藉由使用具有此格式的地區設定引數，您可以將分類全設定為相同的地區設定，或是為每個分類個別設定：
 

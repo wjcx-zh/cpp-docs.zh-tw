@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3dd089e13323e1811cf9d7c7717612313f2cef7d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178947"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225848"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Naked 函式的規則和限制
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 下列規則和限制適用於 naked 函式：
 
-- 不允許**return**語句。
+- **`return`** 不允許使用語句。
 
 - 不允許結構化例外狀況處理和 C++ 例外狀況處理建構，因為它們必須跨堆疊框架回溯。
 
@@ -31,9 +31,9 @@ ms.locfileid: "80178947"
 
 - 您不能在函式語彙範圍宣告 C++ 類別物件。 不過，您可以在巢狀區塊中宣告物件。
 
-- 使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)進行編譯時，會忽略**naked**關鍵字。
+- **`naked`** 使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)進行編譯時，會忽略關鍵字。
 
-- 針對[__fastcall](../cpp/fastcall.md) naked 函式，只要 C/C++ code 中的其中一個暫存器引數有參考，初構程式碼就應該將該暫存器的值儲存在該變數的堆疊位置中。 例如：
+- 針對[__fastcall](../cpp/fastcall.md) naked 函式，只要 C/c + + 程式碼中的其中一個暫存器引數有參考，初構程式碼就應該將該暫存器的值儲存在該變數的堆疊位置中。 例如：
 
 ```cpp
 // nkdfastcl.cpp
@@ -70,7 +70,7 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 }
 ```
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

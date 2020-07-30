@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 49e8569ceec005680f97faa9bc64783a097db36a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919870"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232569"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
@@ -81,7 +81,7 @@ int _wtoi_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 要轉換的字串。
 
 *locale*<br/>
@@ -89,7 +89,7 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式都會傳回將輸入字元解讀為數字所產生的**int**值。 如果輸入無法轉換成該類型的值， **atoi**和 **_wtoi**的傳回值會是0。
+每個函式都會傳回將 **`int`** 輸入字元解讀為數字所產生的值。 如果輸入無法轉換成該類型的值， **atoi**和 **_wtoi**的傳回值會是0。
 
 如果溢位具有大型負整數值，則會傳回**LONG_MIN** 。 **atoi**和 **_wtoi**會傳回**INT_MAX** ，並**INT_MIN**這些條件。 在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
@@ -173,7 +173,7 @@ Overflow condition occurred.
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

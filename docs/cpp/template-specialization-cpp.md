@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 96f755b20e1de21eae47c4de0a181aa5d0738bf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17f1f15a5356d760119123214e939a7dd2d1fbaf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330501"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223573"
 ---
 # <a name="template-specialization-c"></a>樣板特製化 (C++)
 
@@ -68,7 +68,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
 
 ## <a name="example"></a>範例
 
-如果您有可接受任何類型的範本集合類別`T`，您可以建立接受任何指標類型的部分特製化`T*`。 下列程式碼示範集合類別樣板 `Bag` 和指標類型的部分特製化，其中該集合會在將指標類型複製到陣列之前取值指標類型。 然後，該集合會儲存指向的值。 若使用原始樣板，只能將指標本身儲存在集合中，因此資料容易遭到刪除或修改。 在這種特殊指標版本的集合中，會在 `add` 方法中新增檢查 null 指標的程式碼。
+如果您的樣板集合類別接受任何類型 `T` ，您可以建立接受任何指標類型的部分特製化 `T*` 。 下列程式碼示範集合類別樣板 `Bag` 和指標類型的部分特製化，其中該集合會在將指標類型複製到陣列之前取值指標類型。 然後，該集合會儲存指向的值。 若使用原始樣板，只能將指標本身儲存在集合中，因此資料容易遭到刪除或修改。 在這種特殊指標版本的集合中，會在 `add` 方法中新增檢查 null 指標的程式碼。
 
 ```cpp
 // partial_specialization_of_class_templates2.cpp
@@ -180,7 +180,7 @@ Null pointer!
 
 ## <a name="example"></a>範例
 
-下列範例會定義範本類別接受任何兩種類型的組，然後定義該範本類別的部分特製化特製化，另一個型別的**int**。特製化會額外定義排序方法，這個方法會根據整數實作簡單的反昇排序。
+下列範例會定義一個樣板類別，它會接受兩個類型的配對，然後定義該樣板類別的部分特製化，讓其中一個類型為 **`int`** 。 特製化會額外定義排序方法，這個方法會根據整數實作簡單的反昇排序。
 
 ```cpp
 // partial_specialization_of_class_templates3.cpp

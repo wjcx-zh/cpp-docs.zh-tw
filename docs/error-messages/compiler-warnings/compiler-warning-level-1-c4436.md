@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 7772d835e398ade24b452f2b816afeae09659bf7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a15220cb02a48fb11936b69e5830412f1221108
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162383"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230671"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>編譯器警告 (層級 1) C4436
 
 建構函式或解構函式中從虛擬基底 'class1' 到 'class2' 的 dynamic_cast 在使用部分建構的物件時可能會失敗        使用 /vd2 編譯，或在 #pragma vtordisp(2) 有效的情況下定義 'class2'
 
-編譯器遇到具有下列特性的 `dynamic_cast` 作業。
+編譯器發現 **`dynamic_cast`** 具有下列特性的作業。
 
 - 轉換是從基底類別指標到衍生類別指標。
 
@@ -27,7 +27,7 @@ ms.locfileid: "80162383"
 
 - 在衍生類別 (或從衍生類別進一步繼承的特定類別) 的建構函式或解構函式中找到轉換。
 
-警告表示如果在部分建構的物件上作業，`dynamic_cast` 可能無法正確執行。  如果衍生的建構函式/解構函式在進一步衍生物件的子物件上作業，就會發生這種情況。  如果在警告中指名的衍生類別絕不是進一步衍生，警告可以忽略。
+警告指出 **`dynamic_cast`** 可能無法正確執行（如果它是在部分結構化的物件上操作）。  如果衍生的建構函式/解構函式在進一步衍生物件的子物件上作業，就會發生這種情況。  如果在警告中指名的衍生類別絕不是進一步衍生，警告可以忽略。
 
 ## <a name="example"></a>範例
 
@@ -77,4 +77,4 @@ int main()
 
 [dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[編譯器警告 (層級 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+[編譯器警告（層級4） C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

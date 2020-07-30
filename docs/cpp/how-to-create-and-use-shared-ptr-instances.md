@@ -1,15 +1,15 @@
 ---
-title: 如何：建立和使用 shared_ptr 實例
+title: 作法：建立和使用 shared_ptr 執行個體
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245835"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187955"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>如何：建立和使用 shared_ptr 實例
 
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>範例 1
 
-在任何可能的情況下，請在初次建立記憶體資源時使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函式來建立 `shared_ptr`。 `make_shared` 是例外狀況安全的。 它會使用相同的呼叫來配置控制區塊的記憶體及資源，減少建構的額外負荷。 若您不使用 `make_shared`，便必須使用明確的 `new` 運算式來建立物件，才能將物件傳遞至 `shared_ptr` 建構函式。 下列範例顯示各種宣告和初始化 `shared_ptr` 及新物件的方式。
+在任何可能的情況下，請在初次建立記憶體資源時使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函式來建立 `shared_ptr`。 `make_shared` 是無例外狀況之虞。 它會使用相同的呼叫來配置控制區塊的記憶體及資源，減少建構的額外負荷。 如果您不使用 `make_shared` ，則必須先使用明確 **`new`** 運算式來建立物件，然後再將它傳遞給此 `shared_ptr` 函數。 下列範例顯示各種宣告和初始化 `shared_ptr` 及新物件的方式。
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -90,7 +90,7 @@ int main()
 
 ## <a name="example-4"></a>範例 4
 
-您可以使用 `dynamic_pointer_cast`、`static_pointer_cast` 和 `const_pointer_cast` 轉換 `shared_ptr`。 這些函式類似 `dynamic_cast`、`static_cast` 和 `const_cast` 運算子。 下列範例顯示如何測試在基底類別的 `shared_ptr` 向量中每個項目的衍生類型，然後複製項目並顯示其相關資訊。
+您可以使用 `dynamic_pointer_cast`、`static_pointer_cast` 和 `const_pointer_cast` 轉換 `shared_ptr`。 這些函數與 **`dynamic_cast`** 、 **`static_cast`** 和運算子類似 **`const_cast`** 。 下列範例顯示如何測試在基底類別的 `shared_ptr` 向量中每個項目的衍生類型，然後複製項目並顯示其相關資訊。
 
 [!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
@@ -118,4 +118,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[智慧型指標 (現代 C++)](smart-pointers-modern-cpp.md)
+[智慧型指標（現代 c + +）](smart-pointers-modern-cpp.md)

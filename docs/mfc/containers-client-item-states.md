@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 927211ccec35d8ec26e2f76b971c59b80248ab96
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 660b544a0f061ae2e4435777cdd934367f2e7652
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625994"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228644"
 ---
 # <a name="containers-client-item-states"></a>容器：用戶端項目狀態
 
@@ -30,7 +30,7 @@ ms.locfileid: "84625994"
 
 - *COleClientItem：： activeUIState*
 
-在空白狀態中，用戶端專案尚未完全是專案。 記憶體已配置給它，但尚未使用 OLE 專案的資料進行初始化。 這是當用戶端專案是透過呼叫**new**所建立，但尚未經過一般雙步驟建立的第二個步驟時，所使用的狀態。
+在空白狀態中，用戶端專案尚未完全是專案。 記憶體已配置給它，但尚未使用 OLE 專案的資料進行初始化。 這是用戶端專案在透過呼叫建立時的狀態，但尚未經過 **`new`** 一般兩步驟建立的第二個步驟。
 
 在第二個步驟中，透過呼叫 `COleClientItem::CreateFromFile` 或另一個 `CreateFrom` *xxxx*函數來執行，此專案已完全建立。 OLE 資料（來自檔案或其他來源，例如剪貼簿）已與 `COleClientItem` 衍生物件相關聯。 現在專案處於已載入狀態。
 
@@ -42,6 +42,6 @@ ms.locfileid: "84625994"
 
 [容器](containers.md)<br/>
 [啟用](activation-cpp.md)<br/>
-[容器：用戶端項目通知](containers-client-item-notifications.md)<br/>
+[容器：用戶端專案通知](containers-client-item-notifications.md)<br/>
 [追蹤器](trackers.md)<br/>
 [CRectTracker 類別](reference/crecttracker-class.md)

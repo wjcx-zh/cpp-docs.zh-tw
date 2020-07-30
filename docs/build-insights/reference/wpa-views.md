@@ -1,138 +1,138 @@
 ---
-title: 參考:Windows 效能分析器檢視
-description: 有關 windows 性能分析器中提供的C++生成見解視圖的參考。
+title: 參考： Windows Performance Analyzer views
+description: Windows Performance Analyzer 中提供之 c + + Build Insights views 的參考。
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b54b1b76d83b77ec7b8d8d3309d81ed9eb2db2d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8bbcc43ef19adfd85a3679a2136d471333a74a10
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323241"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224093"
 ---
-# <a name="reference-windows-performance-analyzer-views"></a>參考:Windows 效能分析器檢視
+# <a name="reference-windows-performance-analyzer-views"></a>參考： Windows Performance Analyzer views
 
 ::: moniker range="<=vs-2017"
 
-C++構建見解工具可在 Visual Studio 2019 中使用。 要查看此版本的文檔,請將本文的可視化工作室**版本**選擇器控制項設定為 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights 工具可在 Visual Studio 2019 中取得。 若要查看此版本的檔，請將本文的 Visual Studio**版本**選取器控制項設定為 Visual Studio 2019。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-本文詳細介紹了 Windows 性能分析器 (WPA) 中提供的每個C++生成見解視圖。 使用此頁面尋找:
+本文提供 Windows Performance Analyzer （WPA）中所提供的每個 c + + 組建深入解析視圖的詳細資料。 使用此頁面來尋找：
 
-- 數據列描述;和
-- 每個檢視的可用預設,包括其預期用途和首選查看模式。
+- 資料行描述;和
+- 每個視圖的可用預設值，包括其預定用途和慣用的瀏覽模式。
 
-如果您是 WPA 的新功能,我們建議您首先熟悉[WPA 的基礎知識,以便C++構建見解](/cpp/build-insights/tutorials/wpa-basics)。
+如果您不熟悉 WPA，建議您先熟悉[wpa For c + + Build Insights 的基本概念](/cpp/build-insights/tutorials/wpa-basics)。
 
 ## <a name="build-explorer"></a>Build 總管
 
-產生資源管理員檢視用於:
+組建瀏覽器視圖用來：
 
-- 診斷並行性問題,
-- 確定您的產生時間是否由分析、程式碼產生或連結主導,以及
-- 識別瓶頸和異常長的構建活動。
+- 診斷平行處理原則問題，
+- 判斷您的組建時間是否藉由剖析、程式碼產生或連結，以及
+- 找出瓶頸和異常長的組建活動。
 
-### <a name="build-explorer-view-data-columns"></a>產生資源管理員檢視資料欄位
+### <a name="build-explorer-view-data-columns"></a>組建瀏覽器視圖資料行
 
-| 資料行名稱 | 描述 |
+| 資料行名稱 | 說明 |
 |-|-|
-| 產生時間軸描述 | 文字描述當前活動或屬性發生的時間線。 |
-| 組建時間軸Id          | 當前活動或屬性所在的時間線的基於零的標識碼。 |
-| 元件                | 發出當前事件時正在編譯或連結的元件。 當沒有元件與此事件關聯時,此列的值是*\<「調用 X\>資訊*」。 X 是發出事件時正在執行的呼叫的唯一數位識別碼。 此標識碼與此事件的「呼叫 Id」欄中的識別碼相同。 |
-| Count                    | 此數據行表示的活動或屬性數。 此值始終為 1,並且僅在對多個行進行分組時的聚合方案中有用。 |
-| 獨家CPU時間         | 此活動使用的 CPU 時間量(以毫秒為單位)。 用於子活動的時間不包括在此金額中。 |
-| 獨家持續時間        | 活動的毫秒持續時間。 此金額不包括子活動的持續時間。 |
-| 包容性CPU時間         | 此活動和所有子活動使用的 CPU 時間量(以毫秒為單位)。 |
-| 包容性持續時間        | 此活動的毫秒持續時間,包括所有子活動。 |
-| 呼叫描述    | 呼叫此事件的文本描述發生在。 描述包括它是*cl.exe*還是*link.exe*,以及唯一的數位調用標識符。 如果適用,它包括調用期間編譯或連結的元件的完整路徑。 對於不生成任何元件的調用,或者對於生成多個元件的調用,路徑為空。 呼叫識別碼與「呼叫 Id"欄中的識別碼相同。 |
-| 呼叫識別碼             | 呼叫此事件的唯一數字識別符發生在中。 |
-| 名稱                     | 此事件表示的活動或屬性的名稱。 |
-| Time                     | 標識事件發生時間的時間戳。 |
-| 工具                     | 發生此事件時正在執行的工具。 此列的值是 CL 或 Link。 |
-| 類型                     | 當前事件的類型。 此值為"活動"或"屬性"。 |
-| 值                    | 如果當前事件是屬性,則此列包含其值。 當當前事件是活動時,此列為空。 |
+| BuildTimelineDescription | 文字描述發生目前活動或屬性的時間軸。 |
+| BuildTimelineId          | 目前活動或屬性發生所在時間軸的以零為基底的識別碼。 |
+| 元件                | 發出目前事件時所編譯或連結的元件。 *\<Invocation X Info\>* 當沒有任何元件與這個事件相關聯時，這個資料行的值就是。 X 是在發出事件時所執行之調用的唯一數值識別碼。 此識別碼與此事件的 InvocationId 資料行中的識別碼相同。 |
+| 計數                    | 此資料列所表示的活動或屬性數目。 這個值一律是1，只有在群組多個資料列時，才適用于匯總案例。 |
+| ExclusiveCPUTime         | 此活動所使用的 CPU 時間量（以毫秒為單位）。 在子活動中所花費的時間不會包含在此數量內。 |
+| ExclusiveDuration        | 活動的毫秒持續時間。 子活動的持續時間不會包含在此數量內。 |
+| InclusiveCPUTime         | 這個活動和所有子活動所使用的 CPU 時間量（以毫秒為單位）。 |
+| InclusiveDuration        | 此活動的毫秒持續時間，包括所有子活動。 |
+| InvocationDescription    | 發生此事件之調用的文字描述。 描述包括是否*cl.exe*或*link.exe*，以及唯一的數值調用識別碼。 如果適用的話，它會包含在叫用期間編譯或連結之元件的完整路徑。 對於不會建立任何元件或建立多個元件的調用，此路徑是空白的。 調用識別碼與 InvocationId 資料行中的相同。 |
+| InvocationId             | 發生此事件之調用的唯一數值識別碼。 |
+| Name                     | 這個事件所表示之活動或屬性的名稱。 |
+| Time                     | 識別事件發生時機的時間戳記。 |
+| 工具                     | 此事件發生時執行的工具。 此資料行的值可以是 CL 或 Link。 |
+| 類型                     | 目前事件的類型。 這個值可以是 [活動] 或 [屬性]。 |
+| 值                    | 如果目前事件是屬性，則此資料行包含其值。 當目前的事件為活動時，這個資料行會保留空白。 |
 
-### <a name="build-explorer-view-presets"></a>產生資源管理員檢視預先設定
+### <a name="build-explorer-view-presets"></a>組建瀏覽器視圖預設值
 
-| 預先設定名稱           | 預設檢視模式 | 使用方式 |
+| 預設名稱           | 慣用的視圖模式 | 如何使用 |
 |-----------------------|---------------------|------------|
-| 活動統計   | 圖形/表       | 使用此預設可以查看所有生成資源管理器活動的聚合統計資訊。 在表模式下,一目了然地判斷您的生成是否由分析、代碼生成或連結器控制。 每個活動的聚合持續時間按降序排序。 通過展開頂部節點來深入瞭解,以輕鬆查找這些頂級活動佔用最多時間的調用。 如果您願意,可以調整 WPA 設置以顯示平均值或其他類型的聚合。 在圖形模式下,查看生成期間每個活動何時處於活動狀態。 |
-| 呼叫           | 圖形               | 向下滾動瀏覽按開始時間排序的圖形檢視中的調用清單。 您可以將它與 CPU(採樣)視圖一起使用,以查找與低 CPU 利用率區域一致的調用。 檢測並行性問題。 |
-| 呼叫屬性 | Table               | 快速查找有關給定編譯器或連結器調用的關鍵資訊。 確定其版本、工作目錄或用於調用它的完整命令行。 |
-| 時間表             | 圖形               | 查看生成如何並行的條形圖。 一目了然地確定並行問題和瓶頸。 配置 WPA 可根據您的需要為條形分配不同的含義。 選擇調用說明作為最後一個分組列,以查看所有調用的顏色編碼條形圖。 它可以説明您快速識別耗時的罪魁禍首。 然後,放大並選擇活動名稱作為最後一個分組列以查看最長的部分。 |
+| 活動統計資料   | 圖表/資料表       | 使用此預設值來查看所有組建瀏覽器活動的匯總統計資料。 在 [資料表模式] 中，如果您的組建是藉由剖析、程式碼產生或連結器來進行，請一目了然。 每個活動的匯總持續時間會以遞減順序排序。 藉由展開最上層節點來切入，輕鬆地找出這些最重要活動最耗費時間的調用。 如有需要，您可以調整 WPA 設定，以顯示平均值或其他類型的匯總。 在 [圖形模式] 中，查看組建期間每個活動何時作用中。 |
+| 機器           | 圖形               | 在圖表視圖中，按 [開始時間] 排序的調用清單。 您可以將它與 [CPU （取樣）] 視圖一起使用，以尋找與低 CPU 使用率區域相符的調用。 偵測平行處理原則的問題。 |
+| 調用屬性 | Table               | 快速找出有關特定編譯器或連結器調用的重要資訊。 判斷其版本、工作目錄，或用來叫用它的完整命令列。 |
+| 時間表             | 圖形               | 查看如何平行處理組建的橫條圖。 一眼就能找出平行處理的問題和瓶頸。 設定 WPA 根據您的需求，將不同的意義指派給橫條。 選擇 [叫用描述] 做為最後一個分組的資料行，以查看所有調用的色彩編碼橫條圖。 它可協助您快速識別耗時的原因。 然後，放大並選擇 [活動名稱] 做為最後一個分組的資料行，以查看最長的部分。 |
 
 ## <a name="files"></a>檔案
 
-「檔案」檢視用於:
+檔案視圖用來：
 
-- 確定哪些標頭最常包含,並且
-- 幫助您決定在預編譯標頭 (PCH) 中包括哪些內容。
+- 判斷最常包含的標頭，以及
+- 協助您決定要包含在預先編譯的標頭（PCH）中的內容。
 
-### <a name="files-view-data-columns"></a>檔案檢視資料欄
+### <a name="files-view-data-columns"></a>檔案視圖資料行
 
-| 資料行名稱              | 描述 |
+| 資料行名稱              | 說明 |
 |--------------------------|-------------|
-| ActivityName             | 發出此檔事件時正在進行的活動。 目前,此值始終是*解析*。 |
-| 產生時間軸描述 | * |
-| 組建時間軸Id          | * |
+| ActivityName             | 發出此檔案事件時，正在進行中的活動。 目前，此值一律會進行*剖析*。 |
+| BuildTimelineDescription | * |
+| BuildTimelineId          | * |
 | 元件                | * |
-| Count                    | * |
-| 深度                    | 在中找到此檔的包含樹中的零基位置。 計數從包含樹的根開始。 值 0 通常對應於 .c/.cpp 檔。 |
-| 獨家持續時間        | * |
-| 包括               | 包含目前檔案的檔案的完整路徑。 |
-| 引入路徑             | 當前檔的完整路徑。 |
-| 包容性持續時間        | * |
-| 呼叫識別碼             | * |
-| StartTime                | 表示當前檔事件發出時間的時間戳。 |
+| 計數                    | * |
+| 深度                    | 在其中找到此檔案之 include 樹狀結構中以零為起始的位置。 計算會從包含樹狀結構的根目錄開始。 值為0通常會對應至 .c/.cpp 檔案。 |
+| ExclusiveDuration        | * |
+| IncludedBy               | 包含目前檔案之檔案的完整路徑。 |
+| IncludedPath             | 目前檔案的完整路徑。 |
+| InclusiveDuration        | * |
+| InvocationId             | * |
+| StartTime                | 時間戳記，表示發出目前檔案事件的時間。 |
 | 工具                     | * |
 
-\*此列的值與[生成資源管理器](#build-explorer-view-data-columns)檢視中的值相同。
+\*此資料行的值與 [[組建瀏覽器](#build-explorer-view-data-columns)] 視圖中的值相同。
 
-### <a name="files-view-presets"></a>檔案檢視預先設定
+### <a name="files-view-presets"></a>檔案視圖預設值
 
-| 預先設定名稱 | 預設檢視模式 | 使用方式 |
+| 預設名稱 | 慣用的視圖模式 | 如何使用 |
 |-------------|---------------------|------------|
-| 統計資料  | Table               | 以按降序查看清單,查看哪些檔的聚合分析時間最高。 使用此資訊可説明您重組標頭或決定在 PCH 中包括哪些內容。 |
+| 統計資料  | Table               | 查看清單的遞減順序，以瞭解哪些檔案具有最高的匯總剖析時間。 使用這項資訊可協助您重建標頭，或決定要包含在 PCH 中的內容。 |
 
 ## <a name="functions"></a>函式
 
-函數檢視用於標識代碼生成時間過長的函數。
+函式 view 是用來識別程式碼產生時間過長的函數。
 
-### <a name="functions-view-data-columns"></a>函式檢視資料欄
+### <a name="functions-view-data-columns"></a>函數視圖資料行
 
-| 資料行名稱              | 描述 |
+| 資料行名稱              | 說明 |
 |--------------------------|-------------|
-| ActivityName             | 發出此函數事件時正在進行的活動。 目前,這個值始終是*程式碼產生*。 |
-| 產生時間軸描述 | * |
-| 組建時間軸Id          | * |
+| ActivityName             | 發出此函式事件時進行中的活動。 目前，此值一律為*nswag.codegeneration.csharp*。 |
+| BuildTimelineDescription | * |
+| BuildTimelineId          | * |
 | 元件                | * |
-| Count                    | * |
-| Duration                 | 此函數的代碼生成活動的持續時間。 |
-| FunctionName             | 正在進行代碼生成的功能的名稱。 |
-| 呼叫識別碼             | * |
-| StartTime                | 表示當前函數事件發出時間戳。 |
+| 計數                    | * |
+| Duration                 | 此函式之程式碼產生活動的持續時間。 |
+| FunctionName             | 要產生程式碼的函式名稱。 |
+| InvocationId             | * |
+| StartTime                | 表示目前函式事件發出時的時間戳記。 |
 | 工具                     | * |
 
-\*此列的值與[生成資源管理器](#build-explorer-view-data-columns)檢視中的值相同。
+\*此資料行的值與 [[組建瀏覽器](#build-explorer-view-data-columns)] 視圖中的值相同。
 
-### <a name="functions-view-presets"></a>功能檢視預置
+### <a name="functions-view-presets"></a>函數視圖預設值
 
-| 預先設定名稱 | 預設檢視模式 | 使用方式 |
+| 預設名稱 | 慣用的視圖模式 | 如何使用 |
 |-------------|---------------------|------------|
-| 統計資料  | Table               | 通過按降序查看清單,查看哪些函數的聚合代碼生成時間最高。 它們可能會提示代碼在何處過度使用 **__forceinline**關鍵字,或者某些函數可能太大。 |
-| 時間表   | 圖形               | 查看此條形圖,瞭解生成時間最多的函數的位置和持續時間。 查看它們是否符合生成資源管理器檢視中的瓶頸。 如果他們這樣做,則採取適當的措施來減少代碼生成時間,並簡化您的生成時間。 |
+| 統計資料  | Table               | 藉由以遞減順序查看清單，查看哪些函式具有最高的匯總程式碼產生時間。 他們可能會提示您的程式碼 overuses 關鍵字的位置 **`__forceinline`** ，或某些函數可能太大。 |
+| 時間表   | 圖形               | 查看此橫條圖，以瞭解花費最多時間產生之函式的位置和持續時間。 查看它們是否符合組建瀏覽器視圖中的瓶頸。 如果有，請採取適當的行動來減少其程式碼產生時間，並讓您的組建時間受益。 |
 
 ## <a name="see-also"></a>另請參閱
 
-[開始C++構建見解](/cpp/build-insights/get-started-with-cpp-build-insights)\
-[參考: vcperf 指令](vcperf-commands.md)\
-[教學:Windows 效能分析器基礎知識](/cpp/build-insights/tutorials/wpa-basics)\
+[開始使用 c + + Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[參考： vcperf 命令](vcperf-commands.md)\
+[教學課程： Windows Performance Analyzer 基本概念](/cpp/build-insights/tutorials/wpa-basics)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

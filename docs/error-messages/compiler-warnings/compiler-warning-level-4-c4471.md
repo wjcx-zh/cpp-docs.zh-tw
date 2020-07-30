@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076955"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228748"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>編譯器警告（層級4） C4471
 
 '*列舉*'：不限範圍列舉的向前宣告必須有基礎類型（假設為 int）
 
-找不到不限範圍列舉的向前宣告，但沒有基礎類型的規範。 根據預設，Visual C++會假設 `int` 是列舉的基礎類型。 如果在列舉定義中使用不同的類型（例如，如果指定了不同的明確類型），或如果初始化運算式隱含設定不同的類型，這可能會造成問題。 您也可能有可攜性問題;其他編譯器不會假設 `int` 是列舉的基礎類型。
+找不到不限範圍列舉的向前宣告，但沒有基礎類型的規範。 根據預設，Visual C++ 假設 **`int`** 是列舉的基礎類型。 如果在列舉定義中使用不同的類型（例如，如果指定了不同的明確類型），或如果初始化運算式隱含設定不同的類型，這可能會造成問題。 您也可能有可攜性問題;其他編譯器不會假設 **`int`** 是列舉的基礎類型。
 
 此警告預設為關閉;您可以使用/Wall 或/w*N*4471，在命令列上啟用它，或在原始程式檔中使用 #pragma[警告](../../preprocessor/warning.md)。
 

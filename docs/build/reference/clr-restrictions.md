@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 641e83cb85b6282e8c4c82dfed8c4b44fc4a7e8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837380"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223898"
 ---
 # <a name="clr-restrictions"></a>/clr 限制
 
@@ -55,14 +55,14 @@ ms.locfileid: "65837380"
 
 - 搭配使用 **/Zi**和 **/clr** 會對效能產生影響。 如需詳細資訊，請參閱 [/Zi](z7-zi-zi-debug-information-format.md)。
 
-- 將寬字元傳遞至 .NET Framework 輸出常式，但沒有同時指定 [/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md)，或是未將字元轉換為 `__wchar_t`，將會造成輸出顯示為 `unsigned short int`。 例如：
+- 將寬字元傳遞至 .NET Framework 輸出常式，而不需要同時指定[/zc： wchar_t](zc-wchar-t-wchar-t-is-native-type.md)或不將字元轉換為， **`__wchar_t`** 會導致輸出顯示為 `unsigned short int` 。 例如：
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- 使用 **/clr** 進行編譯時，[/GS](gs-buffer-security-check.md) 會遭到忽略，除非您的函式在[非受控的](../../preprocessor/managed-unmanaged.md) `#pragma` 之下，或函式必須編譯為原生狀態，在此情況下，編譯器會產生警告 C4793 (預設為關閉)。
+- 使用 **/clr** 進行編譯時，[/GS](gs-buffer-security-check.md) 會遭到忽略，除非您的函式在`#pragma` [非受控的](../../preprocessor/managed-unmanaged.md) 之下，或函式必須編譯為原生狀態，在此情況下，編譯器會產生警告 C4793 (預設為關閉)。
 
 - 請參閱 [/ENTRY](entry-entry-point-symbol.md)，以了解受控應用程式的函式簽章需求。
 
@@ -88,4 +88,4 @@ ms.locfileid: "65837380"
 
 ## <a name="see-also"></a>另請參閱
 
-- [/clr (通用語言執行平台編譯)](clr-common-language-runtime-compilation.md)
+- [/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md)

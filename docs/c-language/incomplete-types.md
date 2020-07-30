@@ -10,12 +10,12 @@ helpviewer_keywords:
 - void keyword [C]
 - structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
-ms.openlocfilehash: e7a5cd7624b55e7bce0fbd09451ab42426f5bc37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 192a6556fd8a5d3039598b883ed7c870fc01ad12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232888"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229645"
 ---
 # <a name="incomplete-types"></a>不完整的類型
 
@@ -27,7 +27,7 @@ ms.locfileid: "62232888"
 
 - 您尚未指定維度的陣列類型。
 
-**Void**類型是無法完成的不完整類型。 若要完成不完整類型，請指定遺漏的資訊。 下列範例顯示如何建立和完成不完整類型。
+**`void`** 類型是無法完成的不完整類型。 若要完成不完整類型，請指定遺漏的資訊。 下列範例顯示如何建立和完成不完整類型。
 
 - 若要建立不完整的結構類型，請宣告一個結構類型，但不指定其成員。 在此範例中，`ps` 指標會指向名為 `student` 的不完整結構類型。
 
@@ -56,6 +56,6 @@ ms.locfileid: "62232888"
     char a[25]; /* a now has complete type */
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

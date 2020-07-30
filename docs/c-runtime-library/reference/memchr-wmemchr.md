@@ -27,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951937"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232465"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -75,10 +75,10 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 緩衝區的指標。
 
-*C*<br/>
+*c*<br/>
 要尋找的字元。
 
 *計數*<br/>
@@ -90,9 +90,9 @@ const wchar_t *wmemchr(
 
 ## <a name="remarks"></a>備註
 
-`memchr`並`wmemchr`在*buffer*的第一個*計數*字元中尋找第一個出現的*c* 。 當它找到*c*或檢查第一個*計數*字元時，它就會停止。
+`memchr`並 `wmemchr` 在*buffer*的第一個*計數*字元中尋找第一個出現的*c* 。 當它找到*c*或檢查第一個*計數*字元時，它就會停止。
 
-在 C 中，這些函式接受第一個引數的**const**指標。 在 C++ 中，可使用兩個多載。 採用**const**指標的多載會傳回**const**的指標。接受非**const**指標的版本會傳回非**const**的指標。 如果這些\_函\_式\_的\_ **CONST**和非**const**版本都可以使用，則會定義宏 CRT CONST 正確的多載。 如果您需要C++中C++兩個多載的非**const**行為，請定義符號\_const\_RETURN。
+在 C 中，這些函數會接受 **`const`** 第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載 **`const`** 會傳回的指標， **`const`** 接受非指標的版本會傳回 **`const`** 非的指標 **`const`** 。 如果沒有 \_ \_ 這些函 \_ \_ **`const`** 式的和非版本可用，則會定義宏 CRT CONST 正確的多載 **`const`** 。 如果您 **`const`** 在 c + + 中需要這兩個 c + + 多載的非行為，請定義符號 \_ CONST \_ RETURN。
 
 ## <a name="requirements"></a>需求
 
@@ -101,7 +101,7 @@ const wchar_t *wmemchr(
 |`memchr`|\<memory.h> 或 \<string.h>|
 |`wmemchr`|\<wchar.h>|
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -138,7 +138,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 String to be searched:

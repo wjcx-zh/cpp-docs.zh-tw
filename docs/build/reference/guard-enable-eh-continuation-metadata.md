@@ -1,5 +1,5 @@
 ---
-title: /guard： ehcont （啟用 EH 接續中繼資料）
+title: /guard:ehcont (啟用 EH 接續中繼資料)
 description: Microsoft c + +/guard： ehcont 編譯器選項的參考指南。
 ms.date: 06/03/2020
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: e8775b331440e932efb16148ee15acf1c740cd6e
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84425535"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190516"
 ---
-# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard： ehcont （啟用 EH 接續中繼資料）
+# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (啟用 EH 接續中繼資料)
 
 可讓編譯器產生 EH 接續（EHCONT）中繼資料。
 
@@ -33,7 +33,7 @@ ms.locfileid: "84425535"
 
 當陰影堆疊可用來防止 ROP 攻擊時，攻擊者會繼續使用其他惡意探索技術。 其可能使用的一項技巧是在[內容](/windows/win32/api/winnt/ns-winnt-context)結構內損毀指令指標值。 這個結構會傳遞至重新導向執行緒執行的系統呼叫，例如 `NtContinue` 、 [`RtlRestoreContext`](/windows/win32/api/winnt/nf-winnt-rtlrestorecontext) 和 [`SetThreadContext`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadcontext) 。 `CONTEXT`結構會儲存在記憶體中。 損毀它所包含的指令指標，可能會導致系統呼叫將執行轉移到攻擊者控制的位址。 目前， `NTContinue` 可以使用任何接續點呼叫。 這就是為什麼在啟用陰影堆疊時驗證指令指標很重要的原因。
 
-`RtlRestoreContext`和 `NtContinue` 會在結構化例外狀況處理（SEH）例外狀況回溯期間用於回溯至包含區塊的目標框架 `__except` 。 區塊的指令指標 `__except` 不應該位於陰影堆疊上，因為它會失敗指令指標驗證。 **`/guard:ehcont`** 編譯器參數會產生「EH 接續資料表」。 其中包含二進位中所有有效例外狀況處理接續目標的 Rva 排序清單。 `NtContinue`會先檢查使用者提供的指令指標的陰影堆疊，如果在該處找不到指令指標，則會繼續從包含指令指標的二進位檔檢查 EH 接續資料表。 如果包含的二進位檔未與資料表一起編譯，則可以繼續進行與舊版二進位檔的相容性 `NtContinue` 。 請務必區分沒有 EHCONT 資料的舊版二進位檔，以及包含 EHCONT 資料但不含資料表專案的二進位檔。 前者會允許二進位檔內的所有位址成為有效的接續目標。 後者不允許二進位檔內的任何位址做為有效的接續目標。
+`RtlRestoreContext`和 `NtContinue` 會在結構化例外狀況處理（SEH）例外狀況回溯期間用於回溯至包含區塊的目標框架 **`__except`** 。 區塊的指令指標 **`__except`** 不應該位於陰影堆疊上，因為它會失敗指令指標驗證。 **`/guard:ehcont`** 編譯器參數會產生「EH 接續資料表」。 其中包含二進位中所有有效例外狀況處理接續目標的 Rva 排序清單。 `NtContinue`會先檢查使用者提供的指令指標的陰影堆疊，如果在該處找不到指令指標，則會繼續從包含指令指標的二進位檔檢查 EH 接續資料表。 如果包含的二進位檔未與資料表一起編譯，則可以繼續進行與舊版二進位檔的相容性 `NtContinue` 。 請務必區分沒有 EHCONT 資料的舊版二進位檔，以及包含 EHCONT 資料但不含資料表專案的二進位檔。 前者會允許二進位檔內的所有位址成為有效的接續目標。 後者不允許二進位檔內的任何位址做為有效的接續目標。
 
 **`/guard:ehcont`** 選項必須同時傳遞給編譯器和連結器，以產生二進位檔的 EH 接續目標 rva。 如果您的二進位檔是使用單一 `cl` 命令建置，則編譯器會將選項傳遞給連結器。 編譯器也會將 [**`/guard:cf`**](guard-enable-control-flow-guard.md) 選項傳遞給連結器。 如果您分別編譯和連結，則必須同時在編譯器和連結器命令上設定這些選項。
 

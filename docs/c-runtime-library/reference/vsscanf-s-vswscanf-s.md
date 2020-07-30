@@ -24,12 +24,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946024"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188995"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s、vswscanf_s
 
@@ -52,10 +52,10 @@ int vswscanf_s(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*<br/>
 已儲存資料
 
-*格式*<br/>
+*format*<br/>
 格式控制字串。 如需詳細資訊，請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
 
 *arglist*<br/>
@@ -71,18 +71,18 @@ int vswscanf_s(
 
 ## <a name="remarks"></a>備註
 
-**Vsscanf_s**函數會將*緩衝區*中的資料讀取至*arglist*引數清單中每個引數所提供的位置。 引數清單中的引數會指定變數的指標，而變數的類型會對應至*格式*的類型規範。 不同于較不安全的版本**vsscanf**，當您使用包含在 **[]** 中的類型欄位**字元 c**、 **c**、 **s**、 **s**或字串控制集時，需要緩衝區大小參數。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。
+**Vsscanf_s**函式會將*緩衝區*中的資料讀取至*arglist*引數清單中每個引數所指定的位置。 引數清單中的引數會指定變數的指標，而變數的類型會對應至*格式*的類型規範。 不同于較不安全的版本**vsscanf**，當您使用包含在 **[]** 中的類型欄位**字元 c**、 **c**、 **s**、 **s**或字串控制集時，需要緩衝區大小參數。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。
 
 緩衝區大小包含結束的 null。 寬度規格欄位可以用來確保讀入的 Token 可納入緩衝區。 如果沒有使用寬度規格欄位，則讀取的語彙基元太大而無法納入緩衝區中，並且不會寫入該緩衝區。
 
 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 類型欄位字元](../../c-runtime-library/scanf-type-field-characters.md)。
 
 > [!NOTE]
-> Size 參數的類型不是不**帶正負**號，而不是**size_t**。
+> Size 參數的類型為 **`unsigned`** ，而不是**size_t**。
 
 *Format*引數會控制輸入欄位的轉譯，而且其形式和功能與**scanf_s**函式的*格式*引數相同。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-**vswscanf_s**是寬字元版本的**vsscanf_s**;**vswscanf_s**的引數是寬字元字串。 **vsscanf_s**不會處理多位元組的十六進位字元。 **vswscanf_s**不會處理 Unicode 全形十六進位或「相容性區域」字元。 否則， **vswscanf_s**和**vsscanf_s**的行為會相同。
+**vswscanf_s**是寬字元版本的**vsscanf_s**;**vswscanf_s**的引數是寬字元字串。 **vsscanf_s**不會處理多位元組的十六進位字元。 **vswscanf_s**不會處理 Unicode 全形十六進位或「相容性區域」字元。 否則， **vswscanf_s**和**vsscanf_s**的行為完全相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -157,5 +157,5 @@ Real:     = 15.000000
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf、vswscanf](vsscanf-vswscanf.md)<br/>

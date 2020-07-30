@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: 454a727f0c002dc476e5fdab217efc3dea716e14
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d2356d7813167f3973ac2748423c6af7f0b5573b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180705"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227409"
 ---
 # <a name="inline-functions-c"></a>內嵌函式 (C++)
 
@@ -73,13 +73,13 @@ int main()
 
 只有在編譯器的成本效益分析顯示有意義時，才會發生*插入（稱為**內嵌展開*或內嵌）。 內嵌擴充會以較大的程式碼大小的可能成本，將函式呼叫的額外負荷降到最低。
 
-**`__forceinline`** 關鍵字會覆寫成本效益分析，並改為依賴程式設計人員的判斷。 使用時請小心 **`__forceinline`** 。 任意使用 **`__forceinline`** 可能會產生較大的程式碼，而且只會提升效能，而在某些情況下，甚至會因為較大的可執行檔（例如) ）增加分頁，而造成 (的效能損失。
+**`__forceinline`** 關鍵字會覆寫成本效益分析，並改為依賴程式設計人員的判斷。 使用時請小心 **`__forceinline`** 。 的任意使用 **`__forceinline`** 可能會產生較大的程式碼，而且只會提升效能，而在某些情況下，甚至會造成效能損失（例如，較大的可執行檔的分頁增加）。
 
 使用內嵌函式可以讓程式更快速，因為它們不需要與函式呼叫相關聯的負荷。 內嵌展開的函式必須遵從不適用於一般函式的程式碼最佳化。
 
 編譯器會將內嵌展開選項和關鍵字視為建議， 不保證函式將會內嵌。 您不能強制編譯器內嵌特定函式，即使使用關鍵字也一樣 **`__forceinline`** 。 使用進行編譯時 **`/clr`** ，如果函式已套用安全性屬性，則編譯器不會內嵌函式。
 
-**`inline`** 關鍵字僅適用于 c + +。 **`__inline`** 和 **`__forceinline`** 關鍵字都可以在 C 和 c + + 中使用。 為了與舊版相容， **`_inline`** 和 **`_forceinline`** 是的同義字 **`__inline`** ，而且 **`__forceinline`** 除非指定了編譯器選項 [停用[ `/Za` \( 語言擴充功能) ](../build/reference/za-ze-disable-language-extensions.md) ]。
+**`inline`** 關鍵字僅適用于 c + +。 **`__inline`** 和 **`__forceinline`** 關鍵字都可以在 C 和 c + + 中使用。 為了與舊版相容， **`_inline`** 和 **`_forceinline`** 是的同義字 **`__inline`** ， **`__forceinline`** 除非指定了編譯器選項 [ [ `/Za` \( 停用語言擴充](../build/reference/za-ze-disable-language-extensions.md)功能]）。
 
 **`inline`** 關鍵字會告訴編譯器偏好內嵌展開。 不過，編譯器可能會建立函式的個別執行個體 (具現化) 和建立標準呼叫連結，而不是將程式碼內嵌插入。 有兩種情況可能會發生這種行為：
 
@@ -131,7 +131,7 @@ private:
 
 即使使用 **`__forceinline`** ，編譯器還是無法在所有情況下內嵌程式碼。 編譯器無法在下列情況內嵌函式：
 
-- 函式或其呼叫端會使用 **`/Ob0`** () 的 debug 組建預設選項進行編譯。
+- 函式或其呼叫端是以編譯 **`/Ob0`** （debug 組建的預設選項）。
 
 - 函式和呼叫端使用不同的例外狀況處理 (一個使用 C++ 例外狀況處理，另一個使用結構化例外狀況處理)。
 
@@ -153,11 +153,11 @@ private:
 
 - 函式會在外部、內含的程式庫或其他轉譯單位中定義，或是虛擬呼叫目標或間接呼叫目標。 編譯器無法識別在目前轉譯單位中找不到的非內嵌程式碼。
 
-遞迴函式可以用內嵌程式碼取代為 pragma 所指定的深度 [`inline_depth`](../preprocessor/inline-depth.md) ，最多可達16個呼叫。 該深度之後，遞迴函式呼叫視為函式執行個體的呼叫。  內嵌啟發式檢查遞迴函數的深度不能超過16。 [`inline_recursion`](../preprocessor/inline-recursion.md)Pragma 會控制目前在展開下之函式的內嵌展開。 如需相關資訊，請參閱[內嵌函式擴充](../build/reference/ob-inline-function-expansion.md) (/ob) 編譯器選項。
+遞迴函式可以用內嵌程式碼取代為 pragma 所指定的深度 [`inline_depth`](../preprocessor/inline-depth.md) ，最多可達16個呼叫。 該深度之後，遞迴函式呼叫視為函式執行個體的呼叫。  內嵌啟發式檢查遞迴函數的深度不能超過16。 [`inline_recursion`](../preprocessor/inline-recursion.md)Pragma 會控制目前在展開下之函式的內嵌展開。 如需相關資訊，請參閱[內嵌函式展開](../build/reference/ob-inline-function-expansion.md)（/Ob）編譯器選項。
 
 **結束 Microsoft 專有**
 
-如需使用**內嵌**規範的詳細資訊，請參閱：
+如需使用規範的詳細資訊 **`inline`** ，請參閱：
 
 - [內嵌類別成員函式](../cpp/inline-functions-cpp.md)
 
@@ -196,7 +196,7 @@ int main()
 }
 ```
 
-假設座標管理在這種類別的用戶端中是相當常見的作業，請指定兩個存取子函式 (`x` 和 `y` 在上述範例中) ， **`inline`** 通常會將額外負荷儲存在：
+假設座標管理在這種類別的用戶端中是相當常見的作業，請指定兩個存取子函式（ `x` 和 `y` 上述範例中的）， **`inline`** 通常會將額外負荷儲存在：
 
 - 函式呼叫 (包括參數傳遞以及將物件的位址放置在堆疊上)
 
@@ -239,7 +239,7 @@ int main() {
 // Sample Output:  Z
 ```
 
-運算式的目的 `toupper(getc(stdin))` 是應該從主控台裝置)  (讀取字元， `stdin` 並在必要時，將它轉換成大寫。
+運算式的目的 `toupper(getc(stdin))` 是應該從主控台裝置（）讀取字元， `stdin` 並在必要時轉換成大寫。
 
 由於宏的執行， `getc` 會執行一次，判斷字元是否大於或等於 "a"，以及一次以判斷它是否小於或等於 "z"。 如果字元在該範圍內，`getc` 會再次執行，將字元轉換成大寫。 這表示程式會等候兩個或三個字元，在理想的情況下，它只應等候一個。
 

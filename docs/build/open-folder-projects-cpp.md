@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320966"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229801"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Visual Studio 中 C++ 組建系統的開啟資料夾支援
 
@@ -37,7 +37,7 @@ CMake 已整合到 Visual Studio IDE 中，做為 c + + 桌面工作負載的元
 |tasks.vs.json|指定自訂群組建命令。 存取方式為透過 [方案總管]**** 的操作功能表項目 [設定工作]****。|
 |launch.vs.json|指定偵錯工具的命令列引數。 存取方式為透過 [方案總管]**** 的操作功能表項目 [偵錯並啟動設定]****。|
 
-## <a name="configure-code-navigation-with-cpppropertiesjson"></a>使用 CppProperties 設定程式碼導覽
+## <a name="configure-code-navigation-with-cpppropertiesjson"></a>在 CppProperties.js上設定程式碼導覽
 
 若要讓 IntelliSense 和流覽行為（例如 [**移至定義**] 正常運作），Visual Studio 需要知道您所使用的編譯器、系統標頭的所在位置，以及任何其他 include 檔案（如果它們不是直接在您開啟的資料夾中（工作區資料夾））。 若要指定設定，您可以從主工具列的下拉式清單中選擇 [**管理**設定]：
 
@@ -47,7 +47,7 @@ Visual Studio 提供下列預設設定：
 
 ![預設組態](media/default-configurations.png)
 
-例如，如果您選擇 [ **x64-Debug**]，Visual Studio 會在根專案資料夾中建立名為*CppProperties*的檔案：
+例如，如果您選擇 [ **x64-Debug**]，Visual Studio 會在根專案資料夾中建立名為*CppProperties.js*的檔案：
 
 ```json
 {
@@ -73,10 +73,10 @@ Visual Studio 提供下列預設設定：
 }
 ```
 
-此設定會繼承 Visual Studio [x64 開發人員命令提示字元](building-on-the-command-line.md)的環境變數。 其中一個變數是`INCLUDE` ，您可以在這裡使用`${env.INCLUDE}`宏來參考它。 `includePath`屬性會告訴 Visual Studio 在何處尋找 IntelliSense 所需的所有來源。 在此情況下，它會指出「查詢 INCLUDE 環境變數所指定的所有目錄，以及目前工作資料夾樹狀結構中的所有目錄」。 `name`屬性是將出現在下拉式清單中的名稱，而且可以是任何您喜歡的專案。 `defines`屬性會在遇到條件式編譯區塊時，提供提示給 IntelliSense。 屬性`intelliSenseMode`會根據編譯器類型提供一些額外的提示。 有數個選項可供 MSVC、GCC 和 Clang 使用。
+此設定會繼承 Visual Studio [x64 開發人員命令提示字元](building-on-the-command-line.md)的環境變數。 其中一個變數是 `INCLUDE` ，您可以在這裡使用宏來參考它 `${env.INCLUDE}` 。 `includePath`屬性會告訴 Visual Studio 在何處尋找 IntelliSense 所需的所有來源。 在此情況下，它會指出「查詢 INCLUDE 環境變數所指定的所有目錄，以及目前工作資料夾樹狀結構中的所有目錄」。 `name`屬性是將出現在下拉式清單中的名稱，而且可以是任何您喜歡的專案。 `defines`屬性會在遇到條件式編譯區塊時，提供提示給 IntelliSense。 `intelliSenseMode`屬性會根據編譯器類型提供一些額外的提示。 有數個選項可供 MSVC、GCC 和 Clang 使用。
 
 > [!NOTE]
-> 如果 Visual Studio 似乎忽略*CppProperties*中的設定，請嘗試將例外狀況新增至 *.gitignore*檔案，如下所示： `!/CppProperties.json`。
+> 如果 Visual Studio 似乎忽略中*CppProperties.js*的設定，請嘗試將例外狀況新增至 *.gitignore*檔案，如下所示： `!/CppProperties.json` 。
 
 ## <a name="default-configuration-for-mingw-w64"></a>MinGW 的預設設定-w64
 
@@ -109,7 +109,7 @@ Visual Studio 提供下列預設設定：
 }
 ```
 
-請注意`environments`區塊。 它會定義行為類似環境變數的屬性，而且不僅可在*CppProperties*檔案中使用，還會在其他設定檔工作中 *。 vs.* json 和*啟動。與 json*。 `Mingw64`設定會繼承`mingw_w64`環境，並使用其`INCLUDE`屬性來指定的值`includePath`。 您可以視需要將其他路徑新增至此陣列屬性。
+請注意 `environments` 區塊。 它會定義行為類似環境變數的屬性，而且不僅適用于檔案中的*CppProperties.js* ，也可以在和*launch.vs.js上*的其他設定檔*task.vs.js*中使用。 `Mingw64`設定會繼承 `mingw_w64` 環境，並使用其 `INCLUDE` 屬性來指定的值 `includePath` 。 您可以視需要將其他路徑新增至此陣列屬性。
 
 `intelliSenseMode`屬性會設定為適用于 GCC 的值。 如需所有這些屬性的詳細資訊，請參閱[CppProperties 架構參考](cppproperties-schema-reference.md)。
 
@@ -119,11 +119,11 @@ Visual Studio 提供下列預設設定：
 
 ## <a name="enable-intellisense-diagnostics"></a>啟用 IntelliSense 診斷
 
-如果您看不到預期的 IntelliSense，可以移至 [**工具** > ] [**選項** > ] [**文字編輯器** > ] [**C/c + +** > ]**，並將**[**啟用記錄**] 設定為 [ **true**] 進行疑難排解。 若要開始，請嘗試將**記錄層級**設定為5，並將**篩選準則記錄**到8。
+如果您看不到預期的 IntelliSense，可以移至 [**工具**] [選項] [  >  **Options**  >  **文字編輯器**] [  >  **C/c + +**]  >  **Advanced** ，並設定 [**啟用記錄**至 **`true`** ] 來進行疑難排解。 若要開始，請嘗試將**記錄層級**設定為5，並將**篩選準則記錄**到8。
 
 ![診斷記錄](media/diagnostic-logging.png)
 
-輸出會以管道傳送至**輸出視窗**，並在您選擇 [*顯示輸出來源： Visual C++ 記錄*] 時顯示。 輸出中包含 IntelliSense 嘗試使用之實際 include 路徑的清單。 如果路徑不符合*CppProperties*中的路徑，請嘗試關閉資料夾，並刪除包含快取流覽資料的 *. vs*子資料夾。
+輸出會以管道傳送至**輸出視窗**，並在您選擇 [*顯示輸出來源： Visual C++ 記錄*] 時顯示。 輸出中包含 IntelliSense 嘗試使用之實際 include 路徑的清單。 如果路徑與*CppProperties.js*中的不相符，請嘗試關閉資料夾，並刪除包含快取流覽資料的 *. vs*子資料夾。
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>使用 tasks.vs.json 定義建置工作
 
@@ -131,7 +131,7 @@ Visual Studio 提供下列預設設定：
 
 ![開啟資料夾設定工作](media/configure-tasks.png)
 
-這會在. vs 資料夾中建立（或開啟）與 Visual Studio 在根專案資料夾中建立的*vs. 與 json*檔案。 您可以在此檔案中定義任意工作，然後從 [方案總管]**** 操作功能表叫用它。 為了繼續 GCC 範例，下列程式碼片段顯示一個完整的工作 *. vs. json*檔案，其具有做為單一工作，可叫用*g + + .exe*來建立專案。 假設專案包含名為*hello .cpp*的單一檔案。
+這會在. vs 資料夾中建立（或開啟）檔案*tasks.vs.js* ，Visual Studio 在根專案資料夾中建立該檔案。 您可以在此檔案中定義任意工作，然後從 [方案總管]**** 操作功能表叫用它。 為了繼續 GCC 範例，下列程式碼片段會顯示檔案的完整*tasks.vs.js* ，該檔案會叫用*g + + .exe*以建立專案。 假設專案包含名為*hello .cpp*的單一檔案。
 
 ```json
 {
@@ -154,9 +154,9 @@ Visual Studio 提供下列預設設定：
 
 ```
 
-JSON 檔案會放在 *. vs*子資料夾中。 若要查看該資料夾，請按一下**方案總管**頂端的 [**顯示所有**檔案] 按鈕。 您可以用滑鼠右鍵按一下**方案總管**中的根節點，然後選擇 [**建立 hello**]，來執行這項工作。 當工作完成時，您應該會在**方案總管**中看到新的檔案*hello .exe* 。
+JSON 檔案會放在 *. vs*子資料夾中。 若要查看該資料夾，請按一下**方案總管**頂端的 [**顯示所有**檔案] 按鈕。 您可以用滑鼠右鍵按一下**方案總管**中的根節點，然後選擇 [**建立 hello**]，來執行這項工作。 當工作完成時，您應該會看到新的檔案， *hello.exe*在**方案總管**中。
 
-您可以定義許多類型的工作。 下列範例顯示定義單一工作的工作 *. vs. json*檔案。 `taskLabel` 定義出現在操作功能表中的名稱。 `appliesTo` 定義可執行該命令的檔案。 `command`屬性會參考 COMSPEC 環境變數，其可識別主控台的路徑（Windows 上的*cmd.exe* ）。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管]**** 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
+您可以定義許多類型的工作。 下列範例會顯示定義單一工作之檔案的*tasks.vs.js* 。 `taskLabel` 定義出現在操作功能表中的名稱。 `appliesTo` 定義可執行該命令的檔案。 `command`屬性會參考 COMSPEC 環境變數，以識別主控台的路徑（在 Windows 上為*cmd.exe* ）。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管]**** 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
 
 ```json
 {
@@ -173,13 +173,13 @@ JSON 檔案會放在 *. vs*子資料夾中。 若要查看該資料夾，請按�
 }
 ```
 
-儲存工作之後，您可以在資料夾中的任何 *.cpp*檔案上按一下滑鼠右鍵，從內容功能表中選擇 [ **Echo filename** ]，然後查看 [輸出] 視窗中顯示的*檔案名。*
+儲存tasks.vs.js之後，您可以在資料夾中的任何 *.cpp*檔案*上*按一下滑鼠右鍵，從內容功能表中選擇 [ **Echo filename** ]，然後查看 [輸出] 視窗中顯示的檔案名。
 
 如需詳細資訊，請參閱 [Tasks.vs.json 結構描述參考](tasks-vs-json-schema-reference-cpp.md)。
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>使用 launch.vs.json 設定偵錯參數
 
-若要自訂程式的命令列引數和偵錯工具指令，請在**方案總管**中的可執行檔上按一下滑鼠右鍵，然後選取 [ **Debug and 啟動設定**]。 這會開啟現有的*啟動檔案與 json*檔案，如果不存在，則會建立具有一組最小啟動設定的新檔案。 首先，您可以選擇要設定哪種類型的 debug 會話。 針對 MinGw w64 專案的偵錯工具，我們選擇**C/c + + 啟動 For MinGw/Cygwin （gdb）**。 這會建立使用*gdb*的啟動設定，並對預設值有一些已接受的猜測。 其中一個預設值是`MINGW_PREFIX`。 您可以替代常值路徑（如下所示），也可以在`MINGW_PREFIX` *CppProperties*中定義屬性：
+若要自訂程式的命令列引數和偵錯工具指令，請在**方案總管**中的可執行檔上按一下滑鼠右鍵，然後選取 [ **Debug and 啟動設定**]。 這會開啟檔案上的現有*launch.vs.js* ，或如果沒有任何檔案存在，則會建立具有一組最小啟動設定的新檔案。 首先，您可以選擇要設定哪種類型的 debug 會話。 針對 MinGw w64 專案的偵錯工具，我們選擇**C/c + + 啟動 For MinGw/Cygwin （gdb）**。 這會建立一種啟動設定，用於使用*gdb.exe* ，並對預設值有一些已接受的猜測。 其中一個預設值是 `MINGW_PREFIX` 。 您可以替代常值路徑（如下所示），也可以 `MINGW_PREFIX` 在*CppProperties.js*中定義屬性：
 
 ```json
 {
@@ -207,11 +207,11 @@ JSON 檔案會放在 *. vs*子資料夾中。 若要查看該資料夾，請按�
 
 您應該會看到正在**初始化的偵錯工具**對話方塊，以及執行程式的外部主控台視窗。
 
-如需詳細資訊，請參閱[啟動. vs. json 架構參考](launch-vs-schema-reference-cpp.md)。
+如需詳細資訊，請參閱[架構參考launch.vs.js](launch-vs-schema-reference-cpp.md)。
 
 ## <a name="launching-other-executables"></a>啟動其他可執行檔
 
-您可以為電腦上的任何可執行檔定義啟動設定。 下列範例會啟動*7za*並指定其他引數，方法是將它們`args`新增至 JSON 陣列：
+您可以為電腦上的任何可執行檔定義啟動設定。 下列範例會啟動*7za*並指定其他引數，方法是將它們新增至 `args` JSON 陣列：
 
 ```json
 {

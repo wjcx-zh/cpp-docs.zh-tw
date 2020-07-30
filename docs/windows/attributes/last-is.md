@@ -1,17 +1,17 @@
 ---
-title: last_is （C++ COM 屬性）
+title: last_is （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7aa8acb52d19bc7f70513e44770817ae7fc403b5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214808"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224405"
 ---
 # <a name="last_is"></a>last_is
 
@@ -30,7 +30,7 @@ ms.locfileid: "80214808"
 
 ## <a name="remarks"></a>備註
 
-**Last_is** C++屬性具有與[last_is](/windows/win32/Midl/last-is) MIDL 屬性相同的功能。
+**Last_is** c + + 屬性具有與[last_is](/windows/win32/Midl/last-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -42,10 +42,10 @@ ms.locfileid: "80214808"
 
 |||
 |-|-|
-|**適用於**|**Struct**或**union**中的欄位，介面參數，介面方法|
+|**適用於**|或中的欄位 **`struct`** **`union`** ，介面參數，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0c95d234fee412c1dacb014dd135ca56fc73bf5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140839"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193961"
 ---
 # <a name="invalid_oversubscribe_operation-class"></a>invalid_oversubscribe_operation 類別
 
-這個類別描述當呼叫 `Context::Oversubscribe` 方法時，如果 `_BeginOversubscription` 參數設定為**false** ，而沒有先前呼叫 `Context::Oversubscribe` 方法，並將 `_BeginOversubscription` 參數設為**true**，則擲回例外狀況。
+這個類別描述當呼叫方法時所擲回的例外狀況， `Context::Oversubscribe` 其中 `_BeginOversubscription` 參數設定為， **`false`** 而不需要先前呼叫 `Context::Oversubscribe` 方法，並將 `_BeginOversubscription` 參數設定為 **`true`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -29,11 +29,11 @@ class invalid_oversubscribe_operation : public std::exception;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[invalid_oversubscribe_operation](#ctor)|已多載。 建構 `invalid_oversubscribe_operation` 物件。|
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `exception`
 
@@ -43,9 +43,9 @@ class invalid_oversubscribe_operation : public std::exception;
 
 **標頭：** concrt。h
 
-**命名空間：** concurrency
+**命名空間：** 並行
 
-## <a name="ctor"></a>invalid_oversubscribe_operation
+## <a name="invalid_oversubscribe_operation"></a><a name="ctor"></a>invalid_oversubscribe_operation
 
 建構 `invalid_oversubscribe_operation` 物件。
 

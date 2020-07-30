@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 8a771b8bfc067966c3c054700538ebf180a5eb23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857329"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233609"
 ---
 # <a name="references-c"></a>參考 (C++)
 
-參考 (例如指標) 會儲存位在記憶體中其他位置之物件的位址。 與指標不同，參考在初始化之後不能參照不同的物件，或設為 null。 有兩種類型的參考：左值參考，參考名為的變數，以及參考[暫存物件](../cpp/temporary-objects.md)的右值參考。 & 運算子表示左值參考，而 & & 運算子則表示右值參考，或是根據內容的通用參考（右值或左值）。
+參考 (例如指標) 會儲存位在記憶體中其他位置之物件的位址。 與指標不同，參考在初始化之後不能參照不同的物件，或設為 null。 有兩種類型的參考：左值參考，參考名為的變數，以及參考[暫存物件](../cpp/temporary-objects.md)的右值參考。 & 運算子表示左值參考，而 && 運算子表示右值參考，或是根據內容而定的通用參考（右值或左值）。
 
 參考可能是使用下列語法來宣告：
 
-> \[*儲存類別*規範] \[*cv 限定詞*]*型*別規範 \[*ms-修飾*詞] 宣告子 *\[* **=** *expression*] **;**
+> \[*儲存類別*規範]\[ *cv 限定詞*]*型*別規範 \[ *ms-修飾*詞*declarator* \[ **=** *運算式*]**;**
 
 可能會使用任何有效的宣告子來指定參考。 除非參考是函式或陣列類型的參考，否則便會套用下列簡化的語法：
 
-> \[*儲存類別*規範] \[*cv 限定詞*]*類型*規範 \[ **&** 或 **&&** ] \[*cv 限定詞*]*識別碼*\[ **=** *expression*] **;**
+> \[*儲存類別*規範]\[ *cv 限定詞*]*類型*規範 \[ **&** 或 [ **&&** \[ *cv 限定詞*]*識別碼* \[ **=** *運算式*]**;**
 
 參考是使用下列序列宣告：
 
@@ -34,7 +34,7 @@ ms.locfileid: "74857329"
 
    - 選擇性的儲存類別規範。
 
-   - 選擇性的**const**和（或） **volatile**限定詞。
+   - 選擇性 **`const`** 和（或） **`volatile`** 限定詞。
 
    - 類型指定名稱：類型的名稱。
 
@@ -44,7 +44,7 @@ ms.locfileid: "74857329"
 
    - **&** 運算子或 **&&** 運算子。
 
-   - 選擇性的**const**和（或） **volatile** qualifers。
+   - 選擇性 **`const`** 和/或 **`volatile`** qualifers。
 
    - 識別碼。
 
@@ -99,7 +99,7 @@ int main() {
 4
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [參考型別函式引數](../cpp/reference-type-function-arguments.md)<br/>
 [參考型別函式傳回](../cpp/reference-type-function-returns.md)<br/>

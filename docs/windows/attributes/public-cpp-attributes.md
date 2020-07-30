@@ -1,17 +1,17 @@
 ---
-title: public （C++屬性）（C++ COM 屬性）
+title: public （c + + 屬性）（c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 6912117ad05d6b608c45425ebec27cd49c0e5dc4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5307b96c58492aa06f115ca7a814aa221062e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214698"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224366"
 ---
 # <a name="public-c-attributes"></a>public (C++ 屬性)
 
@@ -25,11 +25,11 @@ ms.locfileid: "80214698"
 
 ## <a name="remarks"></a>備註
 
-**Public** C++屬性的功能與[public](/windows/win32/Midl/public) MIDL 屬性相同。
+**`public`** C + + 屬性具有與[public](/windows/win32/Midl/public) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示如何使用**公用**屬性：
+下列程式碼顯示如何使用 **`public`** 屬性：
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -51,10 +51,10 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**適用於**|**typedef**|
+|**適用於**|**`typedef`**|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

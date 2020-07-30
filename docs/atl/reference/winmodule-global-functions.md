@@ -1,23 +1,23 @@
 ---
-title: WinModule 全球功能
+title: WinModule 全域函式
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 3d7d001a2835514cc5385a7069c0bcda58cdd88e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a929fd0f583150e84ce5b1efa7e896bc16e4247
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329353"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229931"
 ---
-# <a name="winmodule-global-functions"></a>WinModule 全球功能
+# <a name="winmodule-global-functions"></a>WinModule 全域函式
 
-這些函數為`_AtlCreateWndData`結構操作提供支援。
+這些函式會提供 `_AtlCreateWndData` 結構作業的支援。
 
 > [!IMPORTANT]
-> 下表中列出的函數不能在 Windows 執行時中執行的應用程式中使用。
+> 下表所列的函數不能用於在 Windows 執行階段中執行的應用程式。
 
 |||
 |-|-|
@@ -26,9 +26,9 @@ ms.locfileid: "81329353"
 
 ## <a name="requirements"></a>需求
 
-**標題:** atlbase.h
+**標頭：** atlbase.h。h
 
-## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreatewndData
+## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData
 
 此函式是用來初始化及加入 `_AtlCreateWndData` 結構。
 
@@ -42,19 +42,19 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ### <a name="parameters"></a>參數
 
 *pWinModule*<br/>
-指向模組[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)結構的指標。
+模組的[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)結構的指標。
 
 *pData*<br/>
-指向要初始化並添加到當前模組[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)結構的指標。
+要初始化並加入至目前模組之[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)結構的指標。
 
 *pObject*<br/>
-指向物件的**此**指標。
+物件指標的指標 **`this`** 。
 
 ### <a name="remarks"></a>備註
 
-初始化`_AtlCreateWndData`結構,用於存儲用於引用類實例`_ATL_WIN_MODULE70`的**此**指標,並將其添加到模塊結構引用的清單。 由[CAtlWinModule 呼叫::新增建立WndData](catlwinmodule-class.md#addcreatewnddata)。
+初始化 `_AtlCreateWndData` 結構，用來儲存 **`this`** 用來參考類別實例的指標，並將它加入至模組結構所參考的清單 `_ATL_WIN_MODULE70` 。 由[CAtlWinModule：： AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)呼叫。
 
-## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModule提取建立WndD資料
+## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData
 
 呼叫此函式可擷取現有的 `_AtlCreateWndData` 結構。
 
@@ -65,15 +65,15 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 ### <a name="parameters"></a>參數
 
 *pWinModule*<br/>
-指向模組[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)結構的指標。
+模組的[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-返回指向[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)結構的指標。
+傳回[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)結構的指標。
 
 ### <a name="remarks"></a>備註
 
-此函數將從模組`_AtlCreateWndData``_ATL_WIN_MODULE70`結構引用的清單中提取現有結構。
+此函式會 `_AtlCreateWndData` 從模組結構所參考的清單中，將現有的結構解壓縮 `_ATL_WIN_MODULE70` 。
 
 ## <a name="see-also"></a>另請參閱
 

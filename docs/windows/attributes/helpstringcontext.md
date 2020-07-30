@@ -1,17 +1,17 @@
 ---
-title: helpstringcoNtext （C++ COM 屬性）
+title: helpstringcoNtext （c + + COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6d4a6b4ab2381fc9ebe0f237978c92fe0f656c5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168145"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224444"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -30,7 +30,7 @@ ms.locfileid: "80168145"
 
 ## <a name="remarks"></a>備註
 
-**HelpstringcoNtext** C++屬性的功能與[helpstringcoNtext](/windows/win32/Midl/helpstringcontext) ODL 屬性相同。
+**HelpstringcoNtext** c + + 屬性具有與[helpstringcoNtext](/windows/win32/Midl/helpstringcontext) ODL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -54,10 +54,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**適用於**|**類別**，**介面**，介面方法|
+|**適用於**|**`class`**，**介面**，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -67,4 +67,4 @@ __interface IMyI
 [介面屬性](interface-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
-[name](module-cpp.md)
+[module](module-cpp.md)

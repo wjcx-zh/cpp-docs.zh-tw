@@ -38,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912755"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232530"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
@@ -58,13 +58,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>傳回值
 
-fgetchar 會傳回讀取為**int**的字元，或`EOF`傳回表示錯誤或檔案結尾。 ** \_ ** fgetwchar 會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應于讀取或傳回字元的寬字元， `WEOF`以表示錯誤或檔案結尾。 ** \_ ** 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。
+** \_ fgetchar**會傳回讀取為的字元， **`int`** 或傳回 `EOF` 表示錯誤或檔案結尾。 ** \_ fgetwchar**會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應于讀取或傳回字元的寬字元， `WEOF` 以表示錯誤或檔案結尾。 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。
 
 ## <a name="remarks"></a>備註
 
 這些函式會從**stdin**讀取單一字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
 
-**_fgetchar**相當於`fgetc( stdin )`。 它也相當於**getchar**，但只實作為函式，而不是函式和宏。 **_fgetwchar**是 **_fgetchar**的寬字元版本。
+**_fgetchar**相當於 `fgetc( stdin )` 。 它也相當於**getchar**，但只實作為函式，而不是函式和宏。 **_fgetwchar**是 **_fgetchar**的寬字元版本。
 
 這些函式與 ANSI 標準不相容。
 

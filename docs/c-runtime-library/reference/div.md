@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234220"
 ---
 # <a name="div-ldiv-lldiv"></a>div、ldiv、lldiv
 
@@ -77,13 +77,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>傳回值
 
-使用**int**類型的引數呼叫的**div**會傳回**div_t**類型的結構，其中包含商和餘數。 具有**long**類型之引數的傳回值是**ldiv_t**，而具有**long** **long 類型**之引數的傳回值則是**lldiv_t**。 **div_t**、 **ldiv_t**和**lldiv_t**都是在 stdlib.h> \<中定義 >。
+使用類型的引數所呼叫的**div**會傳回 **`int`** **div_t**類型的結構，其中包含商和餘數。 具有類型之引數的傳回值 **`long`** 是**ldiv_t**，而且具有類型之引數的傳回值 **`long long`** 是**lldiv_t**。 **div_t**、 **ldiv_t**和**lldiv_t**定義于中 \<stdlib.h> 。
 
 ## <a name="remarks"></a>備註
 
-**Div**函式會將*推*除以*denom* ，因此會計算商和餘數。 [Div_t](../../c-runtime-library/standard-types.md)結構包含**商、...** 和餘數， **rem**。商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。
+**Div**函式會將*推*除以*denom* ，因此會計算商和餘數。 [Div_t](../../c-runtime-library/standard-types.md)結構包含**商、...** 和餘數， **rem**。商的正負號與數學商相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會結束並出現錯誤訊息。
 
-接受**long**或**long**類型之引數的**div**多載僅適用于C++程式碼。 傳回類型[ldiv_t](../../c-runtime-library/standard-types.md)和[lldiv_t](../../c-runtime-library/standard-types.md)包含與**div_t**的成員相同**的成員。**
+採用類型或引數的**div**多載 **`long`** **`long long`** 僅適用于 c + + 程式碼。 傳回類型[ldiv_t](../../c-runtime-library/standard-types.md)和[lldiv_t](../../c-runtime-library/standard-types.md)包含與**div_t**的成員**rem**具有相同意義**的成員。**
 
 ## <a name="requirements"></a>需求
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909549"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234077"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
@@ -68,7 +68,7 @@ int _isleadbyte_l( int c );
 
 如果**isleadbyte**宏的引數是多位元組字元的第一個位元組，則會傳回非零值。 **isleadbyte**會針對任何從-1 （**EOF**）到**UCHAR_MAX** （0xff）（含）的整數引數產生有意義的結果。
 
-**Isleadbyte**的預期引數類型為**int**。如果傳遞帶正負號的字元，編譯器可能會將它轉換成整數（藉由符號延伸），因而產生無法預期的結果。
+**Isleadbyte**的預期引數類型為 **`int`** ; 如果傳遞了帶正負號的字元，編譯器可能會將它轉換成以符號擴充的整數，因而產生無法預期的結果。
 
 具有 **_l**尾碼的這個函式版本是一樣的，不同之處在于它會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。
 
@@ -92,5 +92,5 @@ int _isleadbyte_l( int c );
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../../c-runtime-library/byte-classification.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
 [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>

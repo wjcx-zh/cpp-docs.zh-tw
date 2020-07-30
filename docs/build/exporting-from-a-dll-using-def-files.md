@@ -6,16 +6,16 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 6f7d58bcb42edd89527fff41b08a15321722a6cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8fdbb060502f339eb748306eef582d2f296b1f60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078527"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229827"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>使用 .DEF 檔從 DLL 匯出
 
-模組定義或 DEF 檔案（* .def）是一個文字檔，其中包含一或多個描述 DLL 各種屬性的模組語句。 如果您未使用 **__declspec （dllexport）** 關鍵字來匯出 DLL 的函式，則 DLL 需要 DEF 檔案。
+模組定義或 DEF 檔案（* .def）是一個文字檔，其中包含一或多個描述 DLL 各種屬性的模組語句。 如果您未使用 **`__declspec(dllexport)`** 關鍵字來匯出 DLL 的函式，則 DLL 需要 DEF 檔案。
 
 最小的 DEF 檔案必須包含下列模組定義語句：
 
@@ -34,7 +34,7 @@ EXPORTS
    Min   @4
 ```
 
-如果您使用[MFC Dll Wizard](../mfc/reference/mfc-dll-wizard.md)來建立 mfc dll，則 Wizard 會為您建立基本架構 DEF 檔案，並自動將其新增至您的專案。 新增要匯出至此檔案的函式名稱。 若是非 MFC Dll，請自行建立 DEF 檔案，並將它新增至您的專案。 然後移至 [**專案** > **屬性** > ] [**連結器** > ] [**輸入** > **模組定義**檔]，然後輸入 DEF 檔案的名稱。 針對每個設定和平臺重複此步驟，或選取 [設定] = [**所有**設定] 和 [**平臺 = 所有平臺**]，一次執行所有動作。
+如果您使用[MFC Dll Wizard](../mfc/reference/mfc-dll-wizard.md)來建立 mfc dll，則 Wizard 會為您建立基本架構 DEF 檔案，並自動將其新增至您的專案。 新增要匯出至此檔案的函式名稱。 若是非 MFC Dll，請自行建立 DEF 檔案，並將它新增至您的專案。 然後移至 [**專案**  >  **屬性**] [  >  **連結器**]  >  [**輸入**  >  **模組定義**檔]，然後輸入 DEF 檔案的名稱。 針對每個設定和平臺重複此步驟，或選取 [設定] = [**所有**設定] 和 [**平臺 = 所有平臺**]，一次執行所有動作。
 
 如果您要匯出 c + + 檔案中的函式，您必須將裝飾名稱放在 DEF 檔案中，或使用 extern "C" 以標準 C 連結定義匯出的函式。 如果您需要將裝飾名稱放在 DEF 檔案中，您可以使用[DUMPBIN](../build/reference/dumpbin-reference.md)工具或使用連結器[/MAP](../build/reference/map-generate-mapfile.md)選項來取得它們。 請注意，編譯器所產生的裝飾名稱是編譯器特有的。 如果您將 Microsoft c + + 編譯器（MSVC）所產生的裝飾名稱放入 DEF 檔案中，則連結至 DLL 的應用程式也必須使用相同的 MSVC 版本來建立，如此一來，呼叫應用程式中的裝飾名稱就會符合 DLL DEF 檔案中的匯出名稱。
 
@@ -51,11 +51,11 @@ EXPORTS
 #define AFX_DATA
 ```
 
-這些行會確保內部使用的 MFC 變數或新增至類別的 MFC 變數，會從您的 MFC 延伸模組 DLL 匯出（或匯入）。 例如，使用`DECLARE_DYNAMIC`衍生類別時，宏會展開以將`CRuntimeClass`成員變數加入至您的類別。 省略這四行，可能會導致您的 DLL 編譯或連結錯誤，或在用戶端應用程式連結至 DLL 時發生錯誤。
+這些行會確保內部使用的 MFC 變數或新增至類別的 MFC 變數，會從您的 MFC 延伸模組 DLL 匯出（或匯入）。 例如，使用衍生類別時 `DECLARE_DYNAMIC` ，宏會展開以將 `CRuntimeClass` 成員變數加入至您的類別。 省略這四行，可能會導致您的 DLL 編譯或連結錯誤，或在用戶端應用程式連結至 DLL 時發生錯誤。
 
 建立 DLL 時，連結器會使用 DEF 檔案來建立匯出（.exp）檔案和匯入程式庫（.lib）檔案。 連結器接著會使用匯出檔案來建立 DLL 檔案。 建立時，會隱含連結至 DLL 連結的可執行檔。
 
-請注意，MFC 本身會使用 DEF 檔案，從 MFCx0 匯出函式和類別。
+請注意，MFC 本身會使用 DEF 檔案，從 MFCx0.dll 匯出函式和類別。
 
 ## <a name="what-do-you-want-to-do"></a>您想要做什麼事？
 
@@ -67,7 +67,7 @@ EXPORTS
 
 - [匯出 C 函式以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
+- [決定要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
 - [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -77,14 +77,14 @@ EXPORTS
 
 - [.def 檔案](reference/module-definition-dot-def-files.md)
 
-- [模組定義語句的規則](reference/rules-for-module-definition-statements.md)
+- [模組定義陳述式的規則](reference/rules-for-module-definition-statements.md)
 
 - [裝飾名稱](reference/decorated-names.md)
 
 - [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [相互匯入](mutual-imports.md)
+- [交互匯入](mutual-imports.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [從 DLL 匯出](exporting-from-a-dll.md)

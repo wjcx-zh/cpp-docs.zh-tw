@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 672156e65e223be45c91558ed91065859566a8b9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367895"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227279"
 ---
 # <a name="nested-class-declarations"></a>巢狀類別宣告
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput`並在`BufferedIO::BufferedOutput``BufferedIO`中宣告 。 這些類別名稱在類別 `BufferedIO` 的範圍外不會顯示。 不過，類型為 `BufferedIO` 的物件不包含任何類型為 `BufferedInput` 或 `BufferedOutput` 的物件。
+`BufferedIO::BufferedInput`和 `BufferedIO::BufferedOutput` 會在中宣告 `BufferedIO` 。 這些類別名稱在類別 `BufferedIO` 的範圍外不會顯示。 不過，類型為 `BufferedIO` 的物件不包含任何類型為 `BufferedInput` 或 `BufferedOutput` 的物件。
 
 巢狀類別只能直接使用封入類別中的名稱、類型名稱、靜態成員的名稱及列舉程式。 若要使用其他類別成員的名稱，您必須使用指標、參考或物件名稱。
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-在前面的範例中,*限定類型名稱*語法用於聲明函數名稱。 該宣告：
+在上述範例中，會使用限定型別*名稱*語法來宣告函數名稱。 該宣告：
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-表示「`read` 函式是 `BufferedInput` 類別的成員，而該類別在 `BufferedIO` 類別的範圍中」。 由於此聲明使用*修飾類型名稱*語法,因此可以建構以下窗體:
+表示「`read` 函式是 `BufferedInput` 類別的成員，而該類別在 `BufferedIO` 類別的範圍中」。 因為此宣告使用了*限定型別名稱*語法，所以可能會有下列形式的結構：
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-前面的聲明等效於前一個聲明,但它使用**typedef**名稱代替類名稱。
+上述宣告相當於前一個宣告，但它會使用名稱來 **`typedef`** 取代類別名稱。
 
 ## <a name="friend-functions-in-nested-classes"></a>巢狀類別中的 friend 函式
 

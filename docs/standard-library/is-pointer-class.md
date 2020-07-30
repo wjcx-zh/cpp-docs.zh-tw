@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: d8b15f9eb5ef817f5576387b0d8119b86aa86af7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3429875f53d65de0161c4d6f87fde7a335bb369e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455737"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222338"
 ---
-# <a name="ispointer-class"></a>is_pointer 類別
+# <a name="is_pointer-class"></a>is_pointer 類別
 
 測試類型是否為指標。
 
@@ -32,7 +32,7 @@ struct is_pointer;
 
 ## <a name="remarks"></a>備註
 
-如果類型*Ty*是**void**的指標、物件的指標或函式的指標, 或`cv-qualified`其中一個的形式, 則類型述詞的實例為 true, 否則為 false。 請注意`is_pointer` , 如果*Ty*是成員的指標或成員函式的指標, 則會保留 false。
+如果類型*Ty*是的指標 **`void`** 、物件的指標或函式的指標，或其中之一的形式，則類型述詞的實例為 true `cv-qualified` ，否則為 false。 請注意， `is_pointer` 如果*Ty*是成員的指標或成員函式的指標，則會保留 false。
 
 ## <a name="example"></a>範例
 
@@ -74,7 +74,7 @@ is_pointer<int *> == true
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

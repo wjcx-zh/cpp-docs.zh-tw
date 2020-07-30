@@ -1,5 +1,5 @@
 ---
-title: TN059：使用 MFC MBCS-Unicode 轉換巨集
+title: TN059：使用 MFC MBCS-Unicode 轉換宏
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFCANS32.DLL
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d689e87b8f2804fe99804c6ca37a48bac01df263
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749438"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182729"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059：使用 MFC MBCS/Unicode 轉換巨集
 
@@ -76,7 +76,7 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
 
 其中會因轉換而需要進行額外的呼叫，不過，使用巨集是簡單且有效的。
 
-每一個巨集的實作會使用 _alloca() 函式從堆疊中 (而不是堆積) 配置記憶體。 從堆疊配置記憶體會比在堆積上配置記憶體更加快速，而且會在函式結束時自動釋放記憶體。 此外,宏避免調用`MultiByteToWideChar`(`WideCharToMultiByte`或 ) 多個次。 這是藉由配置比所需更多的記憶體來完成。 我們知道,MBC將最多轉換為一個**WCHAR,** 並且對於每個**WCHAR,** 我們最多將有兩個 MBC 字節。 藉由配置比所需多一點，但一定足夠用於處理轉換第二次呼叫的記憶體，可避免第二次呼叫轉換函式。 對説明器函數`AfxA2Whelper`的調用減少了為執行轉換而必須執行的參數推送數(這會導致代碼更小,而不是直接調用)。 `MultiByteToWideChar`
+每一個巨集的實作會使用 _alloca() 函式從堆疊中 (而不是堆積) 配置記憶體。 從堆疊配置記憶體會比在堆積上配置記憶體更加快速，而且會在函式結束時自動釋放記憶體。 此外，宏會避免呼叫 `MultiByteToWideChar` （或 `WideCharToMultiByte` ）一次以上。 這是藉由配置比所需更多的記憶體來完成。 我們知道 MBC 會轉換成最多一個**WCHAR** ，而且每個**WCHAR**最多可以有兩個 MBC 的位元組。 藉由配置比所需多一點，但一定足夠用於處理轉換第二次呼叫的記憶體，可避免第二次呼叫轉換函式。 對 helper 函式的呼叫 `AfxA2Whelper` 會減少必須完成才能執行轉換的引數推播數目（這會產生較小的程式碼，而不是 `MultiByteToWideChar` 直接呼叫）。
 
 為了要讓巨集具有儲存暫存長度的空間，您必須在每個使用轉換巨集的函式中宣告名為 _convert 的區域變數。 這可藉由叫用 USES_CONVERSION 巨集來完成，如上例範例中所述。
 
@@ -93,13 +93,13 @@ W2CA      (LPCWSTR) -> (LPCSTR)
 W2A      (LPCWSTR) -> (LPSTR)
 ```
 
-除了轉換文字以外，也有巨集和 Helper 函式可轉換 `TEXTMETRIC`、`DEVMODE`、`BSTR` 和 OLE 配置的字串。 這些宏超出了本討論的範圍 - 請參閱 AFXPRIV。H 瞭解有關這些宏的詳細資訊。
+除了轉換文字以外，也有巨集和 Helper 函式可轉換 `TEXTMETRIC`、`DEVMODE`、`BSTR` 和 OLE 配置的字串。 這些宏已超出此討論範圍，請參閱 AFXPRIV.H。H 如需這些宏的詳細資訊，請查看。
 
 ## <a name="ole-conversion-macros"></a>OLE 轉換巨集
 
-OLE 轉換宏專為處理預期**OLESTR**字元的功能而設計。 如果檢查 OLE 標頭,您將看到許多對**LPCOLESTR**和**OLECHAR**的引用。 這些類型用來以非專屬於平台的方法參考 OLE 介面中使用的字元類型。 **OLECHAR**映射到 Win16 和 Macintosh 平臺中的**字元**,在 Win32 中映射到**WCHAR。**
+OLE 轉換宏是專為處理預期**OLESTR**字元的函式所設計。 如果您檢查 OLE 標頭，您會看到許多對**LPCOLESTR**和**OLECHAR**的參考。 這些類型用來以非專屬於平台的方法參考 OLE 介面中使用的字元類型。 **OLECHAR**會對應至 **`char`** Win16 和 Macintosh 平臺，以及 Win32 中的**WCHAR** 。
 
-為了將 MFC 代碼中 **#ifdef**指令的數量降至最低,對於涉及 OLE 字串的每個轉換,我們都有類似的宏。 以下巨集最為常用：
+為了讓 MFC 程式碼中的 **#ifdef**指示詞數目降至最低，我們會針對涉及 OLE 字串的每個轉換，使用類似的宏。 以下巨集最為常用：
 
 ```
 T2COLE   (LPCTSTR) -> (LPCOLESTR)
@@ -108,7 +108,7 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)
 ```
 
-同樣,對於執行 TEXTMETRIC、DEVMODE、BSTR 和 OLE 分配的字串,也有類似的宏。 如需詳細資訊，請參閱 AFXPRIV.H。
+同樣地，也有類似的宏可執行 TEXTMETRIC、DEVMODE、BSTR 和 OLE 配置的字串。 如需詳細資訊，請參閱 AFXPRIV.H。
 
 ## <a name="other-considerations"></a>其他考量
 
@@ -194,5 +194,5 @@ return lpszT; // CString makes copy
 
 ## <a name="see-also"></a>另請參閱
 
-[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
-[依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+[依數位的技術提示](../mfc/technical-notes-by-number.md)<br/>
+[依類別區分的技術提示](../mfc/technical-notes-by-category.md)

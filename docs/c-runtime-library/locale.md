@@ -1,5 +1,5 @@
 ---
-title: 地區設定
+title: Locale
 ms.date: 04/11/2018
 f1_keywords:
 - c.international
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: 89ff4b694137c7002ecb5f6a844c75ab403e6e2f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744375"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189580"
 ---
-# <a name="locale"></a>地區設定
+# <a name="locale"></a>Locale
 
-「地區設定」指的是可用來自訂程式的國家/地區和語言設定。 有些地區設定相關分類包括日期和貨幣值的顯示格式。 如需詳細資訊，請參閱[地區設定分類](../c-runtime-library/locale-categories.md)。
+「地區設定」** 指的是可用來自訂程式的國家/地區和語言設定。 有些地區設定相關分類包括日期和貨幣值的顯示格式。 如需詳細資訊，請參閱[地區設定分類](../c-runtime-library/locale-categories.md)。
 
 使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 函式，可在使用沒有 **_l** 尾碼的函式時變更或查詢部分或所有目前程式或執行緒地區設定資訊。 具有 **_l** 尾碼的函式只會使用傳入的地區設定參數，作為其在執行該特定函式期間的地區設定資訊。 若要建立地區設定以與使用 **_l** 尾碼的函式搭配使用，請使用 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)。 若要釋出此地區設定，請使用 [_free_locale](../c-runtime-library/reference/free-locale.md)。 若要取得目前地區設定，請使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)。
 
 使用 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 來控制每個執行緒都有它自己的地區設定，還是程式中的所有執行緒都共用相同的地區設定。 如需詳細資訊，請參閱[地區設定和字碼頁](../text/locales-and-code-pages.md)。
 
-下表中有更安全版本的函式可供使用，以 **_s** ("secure") 尾碼表示。 如需詳細資訊，請參閱 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。
+下表中有更安全版本的函式可供使用，以 **_s** ("secure") 尾碼表示。 如需詳細資訊，請參閱 [CRT 的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="locale-dependent-routines"></a>地區設定相關常式
 
-|常式傳回的值|使用|**setlocale** 分類設定相依性|
+|常式傳回的值|用途|**setlocale** 分類設定相依性|
 |-------------|---------|---------------------------------------------|
 |[atof、_atof_l、_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將字元轉換為浮點值|**LC_NUMERIC**|
 |[atoi、_atoi_l、_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|將字元轉換為整數值|**LC_NUMERIC**|
@@ -56,8 +56,8 @@ ms.locfileid: "57744375"
 |[_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|比較兩個字串的前 **n** 個字元 (不區分大小寫)|**LC_COLLATE**|
 |[strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|根據提供的 **format** 引數，格式化日期和時間值|**LC_TIME**|
 |[_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)、[_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)|就地將指定字串中的每個大寫字母轉換為小寫|**LC_CTYPE**|
-|[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|將字元字串轉換為 **double** 值|**LC_NUMERIC** (判斷基底字元辨識)|
-|[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|將字元字串轉換為 **long** 值|**LC_NUMERIC** (判斷基底字元辨識)|
+|[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|將字元字串轉換成 **`double`** 值|**LC_NUMERIC** (判斷基底字元辨識)|
+|[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|將字元字串轉換成 **`long`** 值|**LC_NUMERIC** (判斷基底字元辨識)|
 |[strtoul、_strtoul_l、wcstoul、_wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|將字元字串轉換為不帶正負號的 long 值|**LC_NUMERIC** (判斷基底字元辨識)|
 |[_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)、[_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)|就地將字串中的每個小寫字母轉換為大寫|**LC_CTYPE**|
 |[strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|根據地區設定，將字串轉換為定序的形式|**LC_COLLATE**|
@@ -72,4 +72,4 @@ ms.locfileid: "57744375"
 ## <a name="see-also"></a>另請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
-[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[依分類排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

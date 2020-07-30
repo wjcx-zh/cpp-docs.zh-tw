@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 6ee4603f03ef8a95c218b0fe040e9606aab99ebb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620016"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228618"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：建立類型安全集合
 
@@ -63,7 +63,7 @@ MFC 程式庫提供以 C++ 範本為基礎的預先定義類型安全集合。 �
 
 ## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>使用非樣板集合類別
 
-MFC 也支援使用 MFC 1.0 版導入的集合類別。 這些類別不是以範本為基礎。 它們可以用來包含支援的類型、、和的資料 `CObject*` `UINT` `DWORD` `CString` 。 您可以使用這些預先定義的集合 (例如 `CObList`) 保有從 `CObject` 衍生的任何物件的集合。 MFC 也提供其他預先定義的集合來保存基本型別 `UINT` ，例如和 void 指標（ `void` *）。 不過，一般而言，定義自己的類型安全集合來保有更特定類別的物件及其系出物件，通常蠻實用的。 請注意，使用不以範本為基礎的集合類別，比使用範本型類別的工作更多。
+MFC 也支援使用 MFC 1.0 版導入的集合類別。 這些類別不是以範本為基礎。 它們可以用來包含支援的類型、、和的資料 `CObject*` `UINT` `DWORD` `CString` 。 您可以使用這些預先定義的集合 (例如 `CObList`) 保有從 `CObject` 衍生的任何物件的集合。 MFC 也提供其他預先定義的集合來保存基本型別 `UINT` ，例如和 void 指標（ **`void*`** ）。 不過，一般而言，定義自己的類型安全集合來保有更特定類別的物件及其系出物件，通常蠻實用的。 請注意，使用不以範本為基礎的集合類別，比使用範本型類別的工作更多。
 
 有兩種方式可使用非範本集合建立類型安全集合：
 

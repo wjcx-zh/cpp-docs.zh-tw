@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169951"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229905"
 ---
 # <a name="consuming-libraries-and-components"></a>使用程式庫和元件
 
@@ -26,7 +26,7 @@ C + + 專案通常需要呼叫函式或存取二進位檔案中的資料，例�
 
 如果您的靜態程式庫專案是建立在相同的方案中：
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>包含靜態程式庫的標頭檔，並使用引號括住。 在典型的解決方案中，路徑的開頭`../<library project name>`會是。 IntelliSense 可協助您找到它。
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>包含靜態程式庫的標頭檔，並使用引號括住。 在典型的解決方案中，路徑的開頭會是 `../<library project name>` 。 IntelliSense 可協助您找到它。
 2. 加入靜態程式庫專案的參考。 在**方案總管**中，以滑鼠右鍵按一下應用程式專案節點底下的 [**參考**]，然後選擇 [**加入參考**]。
 
 如果靜態程式庫不是解決方案的一部分：
@@ -98,11 +98,11 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
 - **複製本機附屬元件（c + +/CLI）**
 
-   指定是否要在建置期間，自動將參考組件的附屬組件複製到目標位置。 僅在 [複製到本機]**** 為 **true** 時才會使用。
+   指定是否要在建置期間，自動將參考組件的附屬組件複製到目標位置。 只有在 [**複製到本機**] 為時才會使用 **`true`** 。
 
 - **參考組件輸出**
 
-   指定這個組件用於建置流程。 如果為 **true**，則組件會在建置期間用於編譯器命令列上。
+   指定這個組件用於建置流程。 如果為 **`true`** ，則元件會在組建期間用於編譯器命令列。
 
 ### <a name="project-to-project-reference-properties"></a>專案對專案參考屬性
 
@@ -132,7 +132,7 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    顯示選取參考的文化特性。
 
-- **描述**
+- **說明**
 
    顯示選取參考的描述。
 
@@ -144,11 +144,11 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
    針對 .NET Framework 組件，則會顯示完整路徑。 針對 COM 元件，則會顯示 GUID。
 
-- **標誌**
+- **標籤**
 
    顯示參考的標籤。
 
-- **Name**
+- **名稱**
 
    顯示參考的名稱。
 
@@ -158,13 +158,13 @@ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參�
 
 - **強式名稱**
 
-   如果參考組件具有強式名稱，則為`true` 。 強式命名組件是唯一版本。
+   **`true`** 如果參考的元件具有強式名稱，則為。 強式命名組件是唯一版本。
 
 - **版本**
 
    顯示參考組件的版本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C + + 專案屬性頁參考](reference/property-pages-visual-cpp.md)<br>
 [在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)

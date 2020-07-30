@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3033
 ms.assetid: 8628b6bb-a650-4ed2-af13-57acd2f7ddbb
-ms.openlocfilehash: 5d17f10e665a2c0ac86a10d90903e890b3c53386
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: df3e3f8472d1c274049e686de93488d556ff6f1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746392"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232010"
 ---
 # <a name="compiler-error-c3033"></a>編譯器錯誤 C3033
 
 'var' : 'clause' 子句中的變數不能有 const 限定的類型
 
-傳遞給特定子句的值不可為 `const` 變數。
+傳遞給特定子句的值不可以是 **`const`** 變數。
 
 下列範例會產生 C3033：
 

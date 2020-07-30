@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760435"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225419"
 ---
 # <a name="compiler-error-c2707"></a>編譯器錯誤 C2707
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760435"
 
 結構化例外狀況處理內建函式在特定內容中無效：
 
-- 在例外狀況篩選準則外 `_exception_code()` 或 `__except` 區塊
+- `_exception_code()`在例外狀況篩選準則或 **`__except`** 區塊外
 
-- 在例外狀況篩選之外 `_exception_info()`
+- `_exception_info()`例外狀況篩選準則以外
 
-- 在 `__finally` 區塊外 `_abnormal_termination()`
+- `_abnormal_termination()`在 **`__finally`** 區塊外
 
 若要解決此錯誤，請務必將例外狀況處理內建函式放在適當的內容中。
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 633a766684ed7485ab579157ae4c94fe209f7e73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5511e7a7d17c47deaaaf61eedf3c00eec12db119
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915017"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234181"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -109,7 +109,7 @@ long double erfcl(
 
 互補高斯 error 函式定義為 erf （x）。 **Erf**函數會傳回範圍-1.0 到1.0 的值。 不會傳回錯誤。 **Erfc**函數會傳回0到2範圍內的值。 如果*x*對**erfc**而言太大， **Errno**變數會設定為**ERANGE**。
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型的**erf**和**erfc**多載。 在 C 程式中， **erf**和**erfc**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型的**erf**和**erfc**多載 **`float`** **`long double`** 。 在 C 程式中， **erf**和**erfc**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

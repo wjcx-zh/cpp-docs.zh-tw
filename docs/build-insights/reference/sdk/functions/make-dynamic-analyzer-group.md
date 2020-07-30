@@ -1,6 +1,6 @@
 ---
-title: 製作動態分析器群組
-description: C++生成見解 SDK 使動態分析器組函數引用。
+title: MakeDynamicAnalyzerGroup
+description: C + + Build Insights SDK MakeDynamicAnalyzerGroup 函數參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 148eeea41f29ac6dd75653feed7f3f3f8c301911
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c4c244066b41837a8dd95b44bab2b096134ed5d4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323965"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224197"
 ---
-# <a name="makedynamicanalyzergroup"></a>製作動態分析器群組
+# <a name="makedynamicanalyzergroup"></a>MakeDynamicAnalyzerGroup
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio**版本**選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-該`MakeDynamicAnalyzerGroup`函數用於創建動態分析器組。 分析器組的成員從左到右逐個接收事件,直到分析跟蹤中的所有事件。
+`MakeDynamicAnalyzerGroup`函數是用來建立動態分析器群組。 分析器群組的成員會從左至右逐一接收事件，直到分析追蹤中的所有事件為止。
 
 ## <a name="syntax"></a>語法
 
@@ -39,17 +39,17 @@ auto MakeDynamicAnalyzerGroup(std::vector<std::unique_ptr<IAnalyzer>> analyzers)
 
 ### <a name="parameters"></a>參數
 
-*分析儀*\
-動態[分析器組中包含的 IAnalyzer](../other-types/ianalyzer-class.md)指標的向量。 這些指標可以是生的,`std::unique_ptr`也可以`std::shared_ptr`是 。
+*分析器*\
+動態分析器群組中所包含之[IAnalyzer](../other-types/ianalyzer-class.md)指標的向量。 這些指標可以是原始、 `std::unique_ptr` 或 `std::shared_ptr` 。
 
 ### <a name="return-value"></a>傳回值
 
-動態分析器組。 使用**自動**關鍵字捕獲返回值。
+動態分析器群組。 使用 **`auto`** 關鍵字來捕捉傳回值。
 
 ## <a name="remarks"></a>備註
 
-與靜態分析器組不同,動態分析器組的成員不需要在編譯時已知。 您可以根據程式輸入或在執行時根據編譯時未知的其他值選擇分析器組成員。 與靜態分析器組不同,動態分析器組中的[IAnalyzer](../other-types/ianalyzer-class.md)指標具有多態行為,並且虛擬函數調用正確調度。 這種靈活性的代價可能是較慢的事件處理時間。 當所有分析器組成員在編譯時都已知,並且不需要多態行為時,請考慮使用靜態分析器組。 要使用靜態分析器組,請改為除[錯 MakeStaticAnalyzer 群組](make-static-analyzer-group.md)。
+不同于靜態分析器群組，動態分析器群組的成員在編譯時期不需要知道。 您可以根據程式輸入，或在編譯時期未知的其他值，在執行時間選擇分析器群組成員。 不同于靜態分析器群組， [`IAnalyzer`](../other-types/ianalyzer-class.md) 動態分析器群組內的指標具有多型行為，而且會正確分派虛擬函式呼叫。 這項彈性的代價是，事件處理時間可能較慢。 當所有分析器群組成員都在編譯階段為已知時，如果您不需要多型行為，請考慮使用靜態分析器群組。 若要使用靜態分析器群組，請 [`MakeStaticAnalyzerGroup`](make-static-analyzer-group.md) 改為呼叫。
 
-動態分析器組可以封裝在靜態分析器組中。 這是透過傳遞其位址[到靜態分析器群組](make-static-analyzer-group.md)。 使用此技術將動態分析器組傳遞給僅接受靜態分析器[群組等函數](analyze.md)。
+動態分析器群組可以封裝在靜態分析器群組內。 它是藉由將其位址傳遞至來完成 [`MakeStaticAnalyzerGroup`](make-static-analyzer-group.md) 。 使用這項技術，將動態分析器群組傳遞至函式（例如 [`Analyze`](analyze.md) ），這種功能只接受靜態分析器群組。
 
 ::: moniker-end

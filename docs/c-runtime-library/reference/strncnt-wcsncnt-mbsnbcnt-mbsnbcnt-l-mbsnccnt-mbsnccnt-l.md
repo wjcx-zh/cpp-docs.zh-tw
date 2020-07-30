@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914215"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231334"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
@@ -105,7 +105,7 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 要檢查的字串。
 
 *計數*<br/>
@@ -116,7 +116,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**會傳回*str*中多位元組字元的第一個*計數*中找到的位元組數目。 **_mbsnccnt**和 **_mbsnccnt_l**會傳回*str*的第一個位元組*計數*中找到的字元數。 如果在完成*str*檢查之前遇到 null 字元，則會傳回在 null 字元之前找到的位元組或字元數。 如果*str* *包含少於個字元或*個位元組，則會傳回字串中的字元或位元組數。 如果*count*小於零，則會傳回0。 在舊版中，這些函式具有**int**類型的傳回值，而不是**size_t**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**會傳回*str*中多位元組字元的第一個*計數*中找到的位元組數目。 **_mbsnccnt**和 **_mbsnccnt_l**會傳回*str*的第一個位元組*計數*中找到的字元數。 如果在完成*str*檢查之前遇到 null 字元，則會傳回在 null 字元之前找到的位元組或字元數。 如果*str* *包含少於個字元或*個位元組，則會傳回字串中的字元或位元組數。 如果*count*小於零，則會傳回0。 在舊版中，這些函式具有類型的傳回值， **`int`** 而不是**size_t**。
 
 **_strncnt**會傳回單一位元組字串*str*的第一個*計數*位元組中的字元數。 **_wcsncnt**會傳回寬字元字串*str*的第一個*計數*寬字元中的字元數。
 
@@ -185,6 +185,6 @@ The first 10 characters are single-byte.
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

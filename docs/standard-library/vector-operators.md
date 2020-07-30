@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422371"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224535"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 運算子
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a>operator！ =
 
 測試運算子左邊的物件是否不等於右邊的物件。
 
@@ -35,15 +35,15 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `vector` 類型的物件。
 
-*right*\
+*再*\
 `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果向量不相等為 **true**；如果向量相等則為 **false**。
+**`true`** 如果向量不相等，則為，**`false`** 如果向量相等則為。
 
 ### <a name="remarks"></a>備註
 
@@ -76,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt"></a> 運算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
 
 測試運算子左邊的物件是否小於右邊的物件。
 
@@ -86,15 +86,15 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `vector` 類型的物件。
 
-*right*\
+*再*\
 `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的向量小於運算子右邊的向量為 **true**；反之為 **false**。
+**`true`** 如果運算子左邊的向量小於運算子右邊的向量，則為，否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>運算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
 
 測試運算子左邊的物件是否小於或等於右邊的物件。
 
@@ -137,15 +137,15 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `vector` 類型的物件。
 
-*right*\
+*再*\
 `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的向量小於或等於右邊的向量為 **true**；反之為 **false**。
+**`true`** 如果運算子左邊的向量小於或等於運算子右邊的向量，則為，否則為。否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的物件是否等於右邊的物件。
 
@@ -188,15 +188,15 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `vector` 類型的物件。
 
-*right*\
+*再*\
 `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的向量等於右邊的向量為 **true**；反之為 **false**。
+**`true`** 如果運算子左邊的向量等於運算子右邊的向量，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -229,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt"></a> 運算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
 
 測試運算子左邊的物件是否大於右邊的物件。
 
@@ -239,15 +239,15 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `vector` 類型的物件。
 
-*right*\
+*再*\
 `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的向量大於運算子右邊的向量為 **true**；反之為 **false**。
+**`true`** 如果運算子左邊的向量大於運算子右邊的向量，則為，否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>運算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
 
 測試運算子左邊的物件是否大於或等於右邊的物件。
 
@@ -291,15 +291,15 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>參數
 
-*左方*\
+*左面*\
 `vector` 類型的物件。
 
-*right*\
+*再*\
 `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的向量大於或等於右邊的向量為 **true**；反之為 **false**。
+**`true`** 如果運算子左邊的向量大於或等於向量右側的向量，則為，否則為。否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 

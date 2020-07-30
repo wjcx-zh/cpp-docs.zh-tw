@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 34c2fcb0e1f7f4df4e207d1737afc9c42e011feb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 33da7427adeb0a0cade2a369664d7fbd34790681
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188281"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233596"
 ---
 # <a name="reinterpret_cast-operator"></a>reinterpret_cast 運算子
 
@@ -25,17 +25,17 @@ reinterpret_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>備註
 
-誤用**reinterpret_cast**操作員很容易就不安全。 除非所需的轉換本質屬於低階轉換，否則您應使用其他任一轉型運算子。
+誤用運算子很 **`reinterpret_cast`** 容易就不安全。 除非所需的轉換本質屬於低階轉換，否則您應使用其他任一轉型運算子。
 
-**Reinterpret_cast**運算子可用來進行轉換，例如 `char*` `int*`，或 `One_class*` 至 `Unrelated_class*`，這本身就是不安全的。
+**`reinterpret_cast`** 運算子可用於的轉換 **`char*`** ，例如 to **`int*`** 或 `One_class*` to `Unrelated_class*` ，它們原本就不安全。
 
-**Reinterpret_cast**的結果不能安全地用於轉換回其原始類型以外的任何專案。 其他用途的最佳情況是不可攜。
+的結果 **`reinterpret_cast`** 不能安全地用於轉換回其原始類型以外的任何專案。 其他用途的最佳情況是不可攜。
 
-**Reinterpret_cast**運算子無法轉換成**const**、 **volatile**或 **__unaligned**屬性。 如需移除這些屬性的詳細資訊，請參閱[Const_cast 運算子](../cpp/const-cast-operator.md)。
+**`reinterpret_cast`** 運算子無法轉換掉 **`const`** 、 **`volatile`** 或 **`__unaligned`** 屬性。 如需移除這些屬性的詳細資訊，請參閱[Const_cast 運算子](../cpp/const-cast-operator.md)。
 
-**Reinterpret_cast**運算子會將 null 指標值轉換為目的地類型的 null 指標值。
+**`reinterpret_cast`** 運算子會將 null 指標值轉換為目的地類型的 null 指標值。
 
-**Reinterpret_cast**的一個實際用法是在雜湊函式中，這種方法會將值對應至索引，讓兩個相異值不常以相同的索引結束。
+的其中一個實際用法 **`reinterpret_cast`** 是雜湊函式，它會將值對應至索引，這種方式不常有兩個相異的值會以相同的索引結束。
 
 ```cpp
 #include <iostream>
@@ -77,7 +77,7 @@ Output:
 64829
 ```
 
-**Reinterpret_cast**允許將指標視為整數類資料類型。 結果隨即位元移位並與其本身 XOR，以產生唯一的索引 (高可攜性獨有)。 之後，標準 C-Style 轉換會將該索引截斷為函式的傳回型別。
+**`reinterpret_cast`** 允許將指標視為整數類資料類型。 結果隨即位元移位並與其本身 XOR，以產生唯一的索引 (高可攜性獨有)。 之後，標準 C-Style 轉換會將該索引截斷為函式的傳回型別。
 
 ## <a name="see-also"></a>另請參閱
 

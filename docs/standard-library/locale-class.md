@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
-ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872383"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224821"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -164,7 +164,7 @@ cout.imbue(loc);
 |[傳統](#classic)|此靜態成員函式傳回表示傳統 C 地區設定的地區設定物件。|
 |[全域性](#global)|重設程式的預設地區設定。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|說明|
 |-|-|
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>備註
 
-類型是**int**類型的同義字，可以代表類別地區設定區域中位元遮罩類型的不同元素群組，或可用來表示任何對應的 C 地區設定分類。 這些元素如下：
+類型是類型的同義字 **`int`** ，可以代表類別地區設定區域之位元遮罩類型的相異元素群組，或可用來表示任何對應的 C 地區設定分類。 這些元素如下：
 
 - `collate`，對應至 C 類別目錄 LC_COLLATE
 
@@ -574,7 +574,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="return-value"></a>傳回值
 
-布林值，如果地區設定不是相同地區設定的複本，則為**true** 。 如果地區設定是相同地區設定的複本，則**為 false** 。
+布林值， **`true`** 如果地區設定不是相同地區設定的複本，則為。 這是因為 **`false`** 地區設定是相同地區設定的複本。
 
 ### <a name="remarks"></a>備註
 
@@ -641,7 +641,7 @@ bool operator()(
 
 ### <a name="return-value"></a>傳回值
 
-- `true`如果*left*的詞典編纂小於*right*，則為，否則為 `false` 。
+- **`true`** 如果*left*的詞典編纂小於*right*，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -701,7 +701,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="return-value"></a>傳回值
 
-布林值，如果地區設定是相同地區設定的複本，則為**true** 。 如果地區設定不是相同地區設定的複本，則**為 false** 。
+布林值， **`true`** 如果地區設定是相同地區設定的複本，則為。 這是因為 **`false`** 地區設定不是相同地區設定的複本。
 
 ### <a name="remarks"></a>備註
 

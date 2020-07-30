@@ -2,24 +2,24 @@
 title: Concurrency 命名空間運算子 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228475"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 命名空間運算子 (AMP)
 
 ||||
 |-|-|-|
-|[操作員!](#operator_neq)|[操作員百分比](#operator_mod)|[運算子*](#operator_star)|
-|[運算子*](#operator_add)|[操作員-](#operator-)|[操作員/](#operator_div)|
-|[運算子*](#operator_eq_eq)|
+|[operator！ =](#operator_neq)|[操作](#operator_mod)|[操作](#operator_star)|
+|[運算子 +](#operator_add)|[操作](#operator-)|[操作](#operator_div)|
+|[operator = =](#operator_eq_eq)|
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>運算子*
+## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
 
-確定指定的參數是否相等。
+判斷指定的引數是否相等。
 
 ```cpp
 template <
@@ -34,21 +34,21 @@ bool operator== (
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組參數的排名。
+元組引數的次序。
 
 *_Lhs*<br/>
-要比較的元數之一。
+其中一個要比較的元組。
 
 *_Rhs*<br/>
-要比較的元數之一。
+其中一個要比較的元組。
 
 ### <a name="return-value"></a>傳回值
 
-如果元數相等,**則為 true;** 否則,**假**。
+**`true`** 如果元組相等，則為，否則為 **`false`** 。
 
-## <a name="operator"></a><a name="operator_neq"></a>操作員!
+## <a name="operator"></a><a name="operator_neq"></a>operator！ =
 
-確定指定的參數是否不相等。
+判斷指定的引數是否不相等。
 
 ```cpp
 template <
@@ -63,21 +63,21 @@ bool operator!= (
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組參數的排名。
+元組引數的次序。
 
 *_Lhs*<br/>
-要比較的元數之一。
+其中一個要比較的元組。
 
 *_Rhs*<br/>
-要比較的元數之一。
+其中一個要比較的元組。
 
 ### <a name="return-value"></a>傳回值
 
-如果元結不相等,**則為 true;** 否則,**假**。
+**`true`** 如果元組不相等，則為，否則為 **`false`** 。
 
-## <a name="operator"></a><a name="operator_add"></a>運算子*
+## <a name="operator"></a><a name="operator_add"></a>運算子 +
 
-計算指定參數的元件級總和。
+計算指定引數的元件成對總和。
 
 ```cpp
 template <
@@ -108,21 +108,21 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組參數的排名。
+元組引數的次序。
 
 *_Lhs*<br/>
-要添加的參數之一。
+要加入的其中一個引數。
 
 *_Rhs*<br/>
-要添加的參數之一。
+要加入的其中一個引數。
 
 ### <a name="return-value"></a>傳回值
 
-指定參數的元件與
+指定引數的元件成對總和。
 
-## <a name="operator-"></a><a name="operator-"></a>操作員-
+## <a name="operator-"></a><a name="operator-"></a>操作
 
-計算指定參數之間的元件差異。
+計算指定引數之間的元件取向差異。
 
 ```cpp
 template <
@@ -153,21 +153,21 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組參數的排名。
+元組引數的次序。
 
 *_Lhs*<br/>
-要從中減去的參數。
+要減去的引數。
 
 *_Rhs*<br/>
-要減去的參數。
+要減去的引數。
 
 ### <a name="return-value"></a>傳回值
 
-指定參數之間的元件差異。
+指定引數之間的元件取向差異。
 
-## <a name="operator"></a><a name="operator_star"></a>運算子*
+## <a name="operator"></a><a name="operator_star"></a>操作
 
-計算指定參數的元件級積。
+計算指定引數的元件產品。
 
 ```cpp
 template <
@@ -190,21 +190,21 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組參數的排名。
+元組引數的次序。
 
 *_Lhs*<br/>
-要乘法的元數之一。
+要相乘的其中一個元組。
 
 *_Rhs*<br/>
-要乘法的元數之一。
+要相乘的其中一個元組。
 
 ### <a name="return-value"></a>傳回值
 
-指定參數的元件級積。
+指定引數的元件產品。
 
-## <a name="operator"></a><a name="operator_div"></a>操作員/
+## <a name="operator"></a><a name="operator_div"></a>操作
 
-計算指定參數的按元件商。
+計算指定引數的元件的商。
 
 ```cpp
 template <
@@ -227,7 +227,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組參數的排名。
+元組引數的次序。
 
 *_Lhs*<br/>
 要分割的元組。
@@ -237,11 +237,11 @@ _Tuple_type<_Rank>   operator/(
 
 ### <a name="return-value"></a>傳回值
 
-指定參數的元件商。
+指定引數的元件的商。
 
-## <a name="operator"></a><a name="operator_mod"></a>操作員百分比
+## <a name="operator"></a><a name="operator_mod"></a>操作
 
-計算第二個指定參數的第一個指定參數的模數。
+以第二個指定的引數來計算第一個指定引數的模數。
 
 ```cpp
 template <
@@ -264,18 +264,18 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-元組參數的排名。
+元組引數的次序。
 
 *_Lhs*<br/>
-計算莫杜洛的元組。
+用來計算模數的元組。
 
 *_Rhs*<br/>
-元組通過。
+要做為模數依據的元組。
 
 ### <a name="return-value"></a>傳回值
 
-第一個指定參數的結果調製第二個指定的參數。
+第一個指定引數的結果會模數第二個指定的引數。
 
 ## <a name="see-also"></a>另請參閱
 
-[併發命名空間](concurrency-namespace-cpp-amp.md)
+[Concurrency 命名空間](concurrency-namespace-cpp-amp.md)

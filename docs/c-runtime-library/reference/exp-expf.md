@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b6d4906212073ab8cb04a0ab77d1234d444a4c95
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909653"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234168"
 ---
 # <a name="exp-expf-expl"></a>exp、expf、expl
 
@@ -86,7 +86,7 @@ long double expl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此您可以呼叫採用**float**或**long double**引數的**exp**多載。 在 C 程式中， **exp**一律會採用並傳回**雙精度浮點數**。
+C + + 允許多載，因此您可以**exp**呼叫採用 **`float`** 或引數之 exp 的多載 **`long double`** 。 在 C 程式中， **exp**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

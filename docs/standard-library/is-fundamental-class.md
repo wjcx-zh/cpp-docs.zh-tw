@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 99d712d11fd47f694477029bc5c2b23fe732eb04
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456252"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233115"
 ---
-# <a name="isfundamental-class"></a>is_fundamental 類別
+# <a name="is_fundamental-class"></a>is_fundamental 類別
 
 測試類型是否為 void 或算術。
 
@@ -32,7 +32,7 @@ struct is_fundamental;
 
 ## <a name="remarks"></a>備註
 
-如果類型*Ty*是基本類型 (也就是**void**、整數類型、浮點類型或`cv-qualified`其中之一的形式), 則類型述詞的實例為 true, 否則為 false。
+如果類型*Ty*是基本類型（也就是）、整數類型、浮點類型或其中之一的形式，則類型述詞的實例會保留 true **`void`** `cv-qualified` ，否則會保留 false。
 
 ## <a name="example"></a>範例
 
@@ -71,7 +71,7 @@ is_fundamental<void> == true
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

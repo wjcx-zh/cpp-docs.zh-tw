@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 36c64a74310c72df38021aebd8abb3ee430da3f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a27d5fb49fe3576ee1f8d906219127d8b630c4e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375887"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228657"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>逐步解說：使用專案和方案 (C++)
 
@@ -28,7 +28,7 @@ ms.locfileid: "81375887"
 
 ## <a name="create-a-project"></a>建立專案
 
-若要建立專案，請先選擇專案類型範本。 Visual Studio 會針對每個專案類型，設定編譯器設定，並根據類型產生稍後可以修改的起始程式碼。 下列步驟會依您使用的 Visual Studio 版本而略有不同。 要查看您首選版本的 Visual Studio 的文件,請使用**版本**選擇器控制項。 它位於此頁面的目錄頂部。
+若要建立專案，請先選擇專案類型範本。 Visual Studio 會針對每個專案類型，設定編譯器設定，並根據類型產生稍後可以修改的起始程式碼。 下列步驟會依您使用的 Visual Studio 版本而略有不同。 若要查看您慣用版本 Visual Studio 的檔，請使用**版本**選取器控制項。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker range="vs-2019"
 
@@ -54,7 +54,7 @@ ms.locfileid: "81375887"
 
 ### <a name="to-create-a-project-in-visual-studio-2017"></a>在 Visual Studio 2017 中建立專案
 
-1. 在選單列上,選擇 **「檔**>**新專案**>**」。。**
+1. 在功能表列上 **，選擇 [** 檔案] [新增] [ > **New** > **專案**]。
 
 1. 在 [新增專案]**** 對話方塊的左窗格中，展開 [已安裝的]****，然後選取 [Visual C++]**** (如果尚未開啟)。
 
@@ -76,7 +76,7 @@ ms.locfileid: "81375887"
 
 ### <a name="to-create-a-project-in-visual-studio-2015"></a>在 Visual Studio 2015 中建立專案
 
-1. 在選單列上,選擇 **「檔**>**新專案**>**」。。**
+1. 在功能表列上 **，選擇 [** 檔案] [新增] [ > **New** > **專案**]。
 
 1. 在 [新增專案]**** 對話方塊的左窗格中，展開 [已安裝的]****，然後選取 [Visual C++]**** (如果尚未開啟)。
 
@@ -104,7 +104,7 @@ ms.locfileid: "81375887"
 
 1. 如果 Visual Studio 中未顯示 [方案總管]**** 視窗，請在功能表列上選擇 [檢視]**** > [方案總管]****。
 
-1. 在 [方案總管]**** 中選取 **Game** 專案。 在功能表欄上,選擇 **「專案** > **添加類**」。。
+1. 在 [方案總管]**** 中選取 **Game** 專案。 在功能表列上，選擇 [**專案**] [  >  **新增類別**]。
 
 1. 在 [新增類別]**** 對話方塊的 [類別名稱]**** 方塊中，輸入 *Cardgame*。 不要修改預設檔案名稱及設定。 選擇 [確定] **** 按鈕。
 
@@ -124,7 +124,7 @@ ms.locfileid: "81375887"
 
       `Cardgame();`
 
-      修改建構函式，使其接受一個類型為 `int`、名稱為 *players* 的參數。
+      修改此函式，以接受一個型別為的參數 **`int`** ，名為*player*。
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
       `Cardgame(int players);`
@@ -227,7 +227,7 @@ ms.locfileid: "81375887"
 
 ### <a name="to-build-and-run-the-project"></a>若要建置及執行專案
 
-1. 在功能表欄上,選擇 **「生成** > **解決方案**」。
+1. 在功能表列上，選擇 [**組建**] [組建  >  **方案**]。
 
    建置的輸出會顯示在 [輸出]**** 視窗中。 如果建置成功，輸出應該看起來像這樣：
 
@@ -245,7 +245,7 @@ ms.locfileid: "81375887"
 
    如果建置失敗，請將您的程式碼與在前面步驟中顯示的程式碼做比較。
 
-1. 要運行專案,在功能表欄上,選擇 **「不調試即可啟動調試** **Debug**  >  」。 此時應該會顯示主控台視窗，且輸出應該類似如下：
+1. 若要執行專案，請在功能表列上選擇 [不進行調試的**Debug**  >  **啟動**]。 此時應該會顯示主控台視窗，且輸出應該類似如下：
 
     ```Output
     4 players have started a new game.  There are now 4 players in total.
@@ -265,5 +265,5 @@ ms.locfileid: "81375887"
 
 ## <a name="see-also"></a>另請參閱
 
-[C++語言參考](../cpp/cpp-language-reference.md)<br/>
-[專案和建置系統](../build/projects-and-build-systems-cpp.md)<br/>
+[C + + 語言參考](../cpp/cpp-language-reference.md)<br/>
+[專案與建置系統](../build/projects-and-build-systems-cpp.md)<br/>

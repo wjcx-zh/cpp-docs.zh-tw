@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-ms.openlocfilehash: 8eb22f3716102c1b63b483e493eb44ac99228004
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a31617445ccb0640042be41ee4f710e528b9ceb7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955236"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229450"
 ---
 # <a name="_getdcwd_dbg-_wgetdcwd_dbg"></a>_getdcwd_dbg、_wgetdcwd_dbg
 
@@ -67,14 +67,14 @@ wchar_t *_wgetdcwd_dbg(
 
 ### <a name="parameters"></a>參數
 
-*drive*<br/>
+*硬碟磁碟機*<br/>
 磁碟機的名稱。
 
-*buffer*<br/>
+*緩衝區*<br/>
 路徑的儲存位置。
 
 *maxlen*<br/>
-路徑的最大長度（以字元為單位）： **char**代表 **_getdcwd_dbg** ，而**wchar_t**代表 **_wgetdcwd_dbg**。
+路徑的最大長度（以字元為單位）： **`char`** 適用于 **_getdcwd_dbg** ，而 **`wchar_t`** 適用于 **_wgetdcwd_dbg**。
 
 *blockType*<br/>
 要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
@@ -91,9 +91,9 @@ wchar_t *_wgetdcwd_dbg(
 
 ## <a name="remarks"></a>備註
 
-**_Getdcwd_dbg**和 **_wgetdcwd_dbg**函式與 **_getdcwd**和 **_wgetdcwd**相同，不同之處在于，當已定義 **_debug**時，這些函式會使用的 DEBUG 版本**malloc**和 **_malloc_dbg**如果傳遞**Null**做為*緩衝區*參數，則配置記憶體。 如需詳細資訊，請參閱 [_malloc_dbg](malloc-dbg.md)。
+**_Getdcwd_dbg**和 **_wgetdcwd_dbg**函式與 **_getdcwd**和 **_wgetdcwd**相同，不同之處在于，當定義了 **_DEBUG**時，這些函式會使用**malloc**的 DEBUG 版本，而如果**Null**當做*緩衝區*參數傳遞，則 **_malloc_dbg**會配置記憶體。 如需詳細資訊，請參閱 [_malloc_dbg](malloc-dbg.md)。
 
-在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 當定義 **_CRTDBG_MAP_ALLOC**時， **_getdcwd**和 **_wgetdcwd**的呼叫會分別重新對應至 **_getdcwd_dbg**和 **_wgetdcwd_dbg**，並將*blockType*設定為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將堆積區塊標記為 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 定義 **_CRTDBG_MAP_ALLOC**時， **_getdcwd**和 **_wgetdcwd**的呼叫會分別重新對應至 **_getdcwd_dbg**和 **_wgetdcwd_dbg**，並將*blockType*設定為 **_NORMAL_BLOCK**。 因此，您不需要明確呼叫這些函式，除非您想要將堆積區塊標示為 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[Debug 堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -108,7 +108,7 @@ wchar_t *_wgetdcwd_dbg(
 |**_getdcwd_dbg**|\<crtdbg.h>|
 |**_wgetdcwd_dbg**|\<crtdbg.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

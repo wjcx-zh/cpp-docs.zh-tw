@@ -19,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8292f04fb8771b8270b6f8e2be3ca2f044f6c9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940181"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189775"
 ---
 # <a name="is-isw-routines"></a>is、isw 常式
 
@@ -35,7 +35,7 @@ ms.locfileid: "70940181"
 |[isascii、__isascii、iswascii](../c-runtime-library/reference/isascii-isascii-iswascii.md)|[islower、iswlower、_islower_l、_iswlower_l](../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md)|
 |[isblank、iswblank、_isblank_l、_iswblank_l](../c-runtime-library/reference/isblank-iswblank-isblank-l-iswblank-l.md)|[isprint、iswprint、_isprint_l、_iswprint_l](../c-runtime-library/reference/isprint-iswprint-isprint-l-iswprint-l.md)|
 |[iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l](../c-runtime-library/reference/iscntrl-iswcntrl-iscntrl-l-iswcntrl-l.md)|[ispunct、iswpunct、_ispunct_l、_iswpunct_l](../c-runtime-library/reference/ispunct-iswpunct-ispunct-l-iswpunct-l.md)|
-|[iscsym、iscsymf、__iscsym、\__iswcsym、\__iscsymf、\__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace、iswspace、_isspace_l、_iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
+|[iscsym、iscsymf、__iscsym、 \_ _iswcsym、 \_ _iscsymf、 \_ _iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l](../c-runtime-library/reference/iscsym-functions.md)|[isspace、iswspace、_isspace_l、_iswspace_l](../c-runtime-library/reference/isspace-iswspace-isspace-l-iswspace-l.md)|
 |[_isctype、iswctype、_isctype_l、_iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper、_isupper_l、iswupper、_iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit、iswdigit、_isdigit_l、_iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
@@ -43,12 +43,12 @@ ms.locfileid: "70940181"
 
 這些常式會測試所指定條件的字元。
 
-針對任何從 -1 (`EOF`) 到 **UCHAR_MAX** (0xFF) (含) 的整數引數，**is** 函式會產生有意義的結果。 預期的引數類型是 `int`。
+針對任何從 -1 (`EOF`) 到 **UCHAR_MAX** (0xFF) (含) 的整數引數，**is** 函式會產生有意義的結果。 預期的引數類型為 **`int`** 。
 
 > [!CAUTION]
-> 針對 **is** 常式，傳遞類型 `char` 的引數可能會產生無法預期的結果。 值大於 0x7F 之 `char` 類型的 SBCS 或 MBCS 單一位元組字元是負數。 如果傳遞 `char`，編譯器可能會將值轉換為帶正負號 `int` 或帶正負號 **long**。 此值可能是由編譯器進行 sign-extended，並產生非預期的結果。
+> 針對**is**常式，傳遞類型的引數 **`char`** 可能會產生無法預期的結果。 類型為且值大於0x7F 的 SBCS 或 MBCS 單一位元組字元 **`char`** 是負數。 如果 **`char`** 傳遞了，編譯器可能會將值轉換為 **`signed int`** 或 **`signed long`** 。 此值可能是由編譯器進行 sign-extended，並產生非預期的結果。
 
-針對任何從 -1 (**WEOF**) 到 0xFFFF 的整數引數，**isw** 函式會產生有意義的結果。 在 WCHAR.H 中，將 **wint_t** 資料類型定義為 **unsigned short**；它可以保留任何寬字元或寬字元檔案結尾 (**WEOF**) 值。
+針對任何從 -1 (**WEOF**) 到 0xFFFF 的整數引數，**isw** 函式會產生有意義的結果。 **Wint_t**的資料類型定義于 WCHAR 中。H 做為 **`unsigned short`** ; 它可以包含任何寬字元或寬字元檔案結尾（**WEOF**）值。
 
 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。
 
@@ -129,19 +129,19 @@ ASCII 字元的寬字元表示 (0x0000 - 0x007F)。
 
 |*desc* 引數的值|iswctype( *c, desc*) 對應項|
 |------------------------------|----------------------------------------|
-|**_ALPHA**|**iswalpha(** `c` **)**|
+|**_ALPHA**|**iswAlpha （** `c` **）**|
 |**_ALPHA** &#124; **_DIGIT**|**iswalnum(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_BLANK**|**iswblank （** `c` **）**|
 |**_CONTROL**|**iswcntrl(** `c` **)**|
 |**_DIGIT**|**iswdigit(** `c` **)**|
-|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph(** `c` **)**|
+|**_ALPHA** &#124; **_DIGIT** &#124; **_PUNCT**|**iswgraph （** `c` **）**|
 |**_LOWER**|**iswlower(** `c` **)**|
-|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint(** `c` **)**|
-|**_PUNCT**|**iswpunct(** `c` **)**|
-|**_BLANK**|**iswblank(** `c` **)**|
+|**_ALPHA** &#124; **_BLANK** &#124; **_DIGIT** &#124; **_PUNCT**|**iswprint （** `c` **）**|
+|**_PUNCT**|**iswpunct （** `c` **）**|
+|**_BLANK**|**iswblank （** `c` **）**|
 |**_SPACE**|**iswspace(** `c` **)**|
 |**_UPPER**|**iswupper(** `c` **)**|
-|**_HEX**|**iswxdigit(** `c` **)**|
+|**_HEX**|**iswxdigit （** `c` **）**|
 
 `iswdigit`<br/>
 對應至十進位數字字元的寬字元。
@@ -205,7 +205,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 00            AS  C                              .
@@ -343,5 +343,5 @@ int main( void )
 [字元分類](../c-runtime-library/character-classification.md)<br/>
 [地區設定](../c-runtime-library/locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
-[多位元組字元序列的解譯](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[多位元組字元序列的轉譯](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to 函式](../c-runtime-library/to-functions.md)

@@ -16,35 +16,35 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: 756fb6f17aa02fda9a19d501395c39a0b1f602f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be71bd9eac44c51a2e6a7cdeb925a1ca0b8b5dfb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366309"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231204"
 ---
 # <a name="event-handling-in-com"></a>COM 中的事件處理
 
-在 COM 事件處理中,分別使用[event_source](../windows/attributes/event-source.md)與[event_receiver](../windows/attributes/event-receiver.md)屬性設定事件來源`type`=`com`與事件接收器,指定 。 這些屬性會從自訂、分派和雙重介面插入適當的程式碼，以允許它們所套用的類別透過 COM 連接點引發事件和處理事件。
+在 COM 事件處理中，您會分別使用[event_source](../windows/attributes/event-source.md)和[event_receiver](../windows/attributes/event-receiver.md)屬性來設定事件來源和事件接收器，以指定 `type` = `com` 。 這些屬性會從自訂、分派和雙重介面插入適當的程式碼，以允許它們所套用的類別透過 COM 連接點引發事件和處理事件。
 
 ## <a name="declaring-events"></a>宣告事件
 
-在事件源類中,使用介面聲明上的[__event](../cpp/event.md)關鍵字將該介面的方法聲明為事件。 當您以介面方法呼叫它們時，會引發該介面的事件。 事件介面上的方法可以具有零個或多個參數(應全部*位於參數中*)。 傳回型別可為 void 或任何整數類型。
+在事件來源類別中，請在介面宣告上使用[__event](../cpp/event.md)關鍵字，將該介面的方法宣告為事件。 當您以介面方法呼叫它們時，會引發該介面的事件。 事件介面上的方法可以有零或多個參數（應該全都*在參數中*）。 傳回型別可為 void 或任何整數類型。
 
 ## <a name="defining-event-handlers"></a>定義事件處理常式
 
-在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回類型、呼叫慣例和引數)，符合將處理之事件的方法。 對於 COM 事件,調用約定不必匹配;有關詳細資訊[,請參閱下面的佈局相關 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)。
+在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回類型、呼叫慣例和引數)，符合將處理之事件的方法。 針對 COM 事件，呼叫慣例不一定要相符;如需詳細資訊，請參閱以下的[版面配置相依 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)。
 
 ## <a name="hooking-event-handlers-to-events"></a>攔截事件的事件處理常式
 
-此外,在事件接收器類中,使用內部函數[__hook](../cpp/hook.md)將事件與事件處理程序相關聯[,__unhook](../cpp/unhook.md)將事件與事件處理程序分離。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。
+此外，在事件接收器類別中，您可以使用內建函式[__hook](../cpp/hook.md)來建立事件與事件處理常式之間的關聯，以及從事件處理常式[__unhook](../cpp/unhook.md)至中斷關聯事件。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。
 
 > [!NOTE]
-> 通常，有兩種方法可以讓 COM 事件接收器存取事件來源介面定義。 第一種是共用常見的標頭檔，如下所示。 第二種是使用[#import](../preprocessor/hash-import-directive-cpp.md)#import`embedded_idl`與導入限定符,以便事件源類型庫寫入 .tlh 檔,並保留屬性生成的代碼。
+> 通常，有兩種方法可以讓 COM 事件接收器存取事件來源介面定義。 第一種是共用常見的標頭檔，如下所示。 第二種方式是使用[#import](../preprocessor/hash-import-directive-cpp.md)搭配匯 `embedded_idl` 入限定詞，以便將事件來源類型程式庫寫入 tlh 檔案，並保留屬性產生的程式碼。
 
 ## <a name="firing-events"></a>引發事件
 
-要觸發事件,只需在事件源類中使用 **__event**關鍵字聲明的介面中調用方法即可。 如果在事件中攔截到處理常式，則會呼叫處理常式。
+若要引發事件，只要呼叫在 **`__event`** 事件來源類別中以關鍵字宣告的介面中的方法即可。 如果在事件中攔截到處理常式，則會呼叫處理常式。
 
 ### <a name="com-event-code"></a>COM 事件代碼
 
@@ -157,13 +157,13 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.
 ```
 
-## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>配置相關 COM 事件
+## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>版面配置相依的 COM 事件
 
 配置相依性是只有 COM 程式設計才有的問題。 在原生與 Managed 事件處理中，處理常式的簽章 (傳回類型、呼叫慣例和引數) 必須與其事件相符，不過，處理常式的名稱不必與其事件相符。
 
-但是,在 COM 事件處理中,當`event_receiver`您將*layout_dependent參數設置為* **true**時,將強制執行名稱和簽名匹配。 這表示事件接收器中處理常式的名稱和簽章必須與所要攔截之事件的名稱和簽章完全相符。
+不過，在 COM 事件處理中，當您將的*layout_dependent*參數設定 `event_receiver` 為時 **`true`** ，就會強制執行名稱和簽章比對。 這表示事件接收器中處理常式的名稱和簽章必須與所要攔截之事件的名稱和簽章完全相符。
 
-當*layout_dependent*設置為**false**時,調用約定和存儲類(虛擬、靜態等)可以在觸發事件方法和挂鉤方法(其委託)之間混合和匹配。 *layout_dependent*=**真,** 效率稍高一些。
+當*layout_dependent*設定為時 **`false`** ，可以在引發事件方法和攔截方法（其委派）之間混合和比對呼叫慣例和儲存類別（虛擬、靜態等等）。 *Layout_dependent*更有效率 = **`true`** 。
 
 例如，假設已定義的 `IEventSource` 中內含下列方法：
 

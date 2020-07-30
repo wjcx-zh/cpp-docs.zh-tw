@@ -33,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945999"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232387"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -68,17 +68,17 @@ float trunc( float x ); //C++ only
 
 否則，可能會傳回下列其中一項：
 
-|問題|Return|
+|問題|傳回|
 |-----------|------------|
-|*x* = ±INFINITY|x|
-|*x* =  ±0|x|
+|*x* = ±無限大|x|
+|*x* = ±0|x|
 |*x* = NaN|NaN|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**trunc**的多載。 在 C 程式中， **trunc**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**trunc**的多載 **`float`** **`long double`** 。 在 C 程式中， **trunc**一律會採用並傳回 **`double`** 。
 
 因為浮點數的最大值是確切的整數，這個函式本身不會溢位。 不過，您可能會因為將值傳回到整數類型而造成函式溢位。
 
@@ -86,7 +86,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="requirements"></a>需求
 
-|函數|C 標頭|C++ 標頭|
+|函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**trunc**、 **truncf**、 **truncl**|\<math.h>|\<cmath>|
 
@@ -94,7 +94,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [floor、floorf、floorl](floor-floorf-floorl.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
 [round、roundf、roundl](round-roundf-roundl.md)<br/>

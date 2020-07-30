@@ -5,12 +5,12 @@ f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 567442bc48487e4f7d1f905f871d15f913646e87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926113"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233284"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>編譯器警告 (層級 1) C4305
 
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-若要修正此問題，請使用正確類型的值進行初始化，或使用明確轉換成正確的類型。 例如，使用**浮點**常值（例如 2.71828 f），而不是**double** （浮點常值的預設類型）來初始化**float**變數，或傳遞至接受**float**引數的函式。
+若要修正此問題，請使用正確類型的值進行初始化，或使用明確轉換成正確的類型。 例如，使用 **`float`** 常值（例如 2.71828 f），而不是 **`double`** （浮點常值的預設類型）來初始化 **`float`** 變數，或傳遞至接受 **`float`** 引數的函式。

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3551
 ms.assetid: c8ee23da-6568-40db-93a6-3ddb7ac47712
-ms.openlocfilehash: e9a4ce2276a602d59e495a2f336bb9d59dc0cc99
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1555817de6e50ea27a021718c8b094efeaebacde
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200755"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230840"
 ---
 # <a name="compiler-error-c3551"></a>編譯器錯誤 C3551
 
 "必須是晚期指定的傳回類型"
 
-如果您使用 `auto` 關鍵字作為函式之傳回類型的預留位置，則必須提供晚期指定的傳回類型。 在下列範例中， `myFunction` 函式的晚期指定的傳回類型是一個指標，而這個指標指向類型 `int`之四個項目的陣列。
+如果您使用關鍵字做為函式 **`auto`** 之傳回型別的預留位置，則必須提供晚期指定的傳回型別。 在下列範例中，函式的晚期指定傳回類型 `myFunction` 是類型的四個元素之陣列的指標 **`int`** 。
 
 ```
 auto myFunction()->int(*)[4];
@@ -25,4 +25,4 @@ auto myFunction()->int(*)[4];
 
 ## <a name="see-also"></a>另請參閱
 
-[auto](../../cpp/auto-cpp.md)
+[自動](../../cpp/auto-cpp.md)

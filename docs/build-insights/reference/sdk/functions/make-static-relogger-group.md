@@ -1,6 +1,6 @@
 ---
-title: 將靜態重新記錄群組
-description: C++生成見解 SDK 使靜態重新記錄組函數引用。
+title: MakeStaticReloggerGroup
+description: C + + Build Insights SDK MakeStaticReloggerGroup 函數參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 75b638537cb8e0cdeeb5476a3f5277e8e90d9baf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b74ee778ffafbcb4c292b4b36b309d5ff4d66c27
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323905"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224158"
 ---
-# <a name="makestaticreloggergroup"></a>將靜態重新記錄群組
+# <a name="makestaticreloggergroup"></a>MakeStaticReloggerGroup
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 與 Visual Studio 2017 和更新版本相容。 若要查看這些版本的檔，請將本文的 Visual Studio**版本**選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到該檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-此`MakeStaticReloggerGroup`函數用於建立一個靜態重新記錄組,該組可以傳遞給函數,如[Relog](relog.md)。 重新記錄組的成員從左到右逐個接收事件,直到跟蹤中的所有事件都得到處理。
+函式 `MakeStaticReloggerGroup` 可用來建立可以傳遞至函式（如重新[引發）的](relog.md)靜態 relogger 群組。 Relogger 群組的成員會從左至右接收事件，直到追蹤中的所有事件都已處理為止。
 
 ## <a name="syntax"></a>語法
 
@@ -37,17 +37,17 @@ auto MakeStaticReloggerGroup(TReloggerPtrs... reloggers);
 ### <a name="parameters"></a>參數
 
 *TReloggerPtrs*\
-始終推導此參數。
+這個參數一律會推算。
 
-*重新記錄*\
-包含在靜態重新記錄器組中的[IRelogger](../other-types/irelogger-class.md)指標的參數包。 這些指標可以是生的,`std::unique_ptr`也可以`std::shared_ptr`是 。 [由於繼承關係,IAnalyzer](../other-types/ianalyzer-class.md)指標也被視為`IRelogger`指標。
+*reloggers*\
+[`IRelogger`](../other-types/irelogger-class.md)靜態 relogger 群組中所包含之指標的參數套件。 這些指標可以是原始、 `std::unique_ptr` 或 `std::shared_ptr` 。 [`IAnalyzer`](../other-types/ianalyzer-class.md)指標也會被視為 `IRelogger` 指標，因為繼承關聯性。
 
 ### <a name="return-value"></a>傳回值
 
-靜態重新記錄組。 使用**自動**關鍵字捕獲返回值。
+靜態 relogger 群組。 使用 **`auto`** 關鍵字來捕捉傳回值。
 
 ## <a name="remarks"></a>備註
 
-與動態重新記錄組不同,靜態重新記錄組的成員必須在編譯時知道。 此外,靜態重新記錄器組包含沒有多態行為的[IRelogger](../other-types/irelogger-class.md)指標。 當使用靜態重新記錄組分析 Windows (ETW) 追蹤的事件追蹤時,`IRelogger`對介面的調用始終解析為重新記錄組成員直接指向的物件。 這種靈活性的喪失具有更快的事件處理時間的可能性。 如果在編譯時無法知道重新記錄組的成員,或者在`IRelogger`指標上需要多態行為,請考慮使用動態重新記錄組。 您可以通過調用[MakeDynamic ReloggerGroup](make-dynamic-relogger-group.md)來使用動態重新記錄組。
+不同于動態 relogger 群組，靜態 relogger 群組的成員在編譯時期必須是已知的。 此外，靜態 relogger 群組包含沒有多型 [`IRelogger`](../other-types/irelogger-class.md) 行為的指標。 使用靜態 relogger 群組分析 Windows 事件追蹤（ETW）追蹤時，對介面的呼叫 `IRelogger` 一律會解析為 relogger 群組成員直接指向的物件。 這樣的彈性可能會導致事件處理時間更快。 如果 relogger 群組的成員在編譯時期無法得知，或如果您在指標上需要多型行為 `IRelogger` ，請考慮使用動態 relogger 群組。 您可以改為呼叫來使用動態 relogger 群組 [`MakeDynamicReloggerGroup`](make-dynamic-relogger-group.md) 。
 
 ::: moniker-end

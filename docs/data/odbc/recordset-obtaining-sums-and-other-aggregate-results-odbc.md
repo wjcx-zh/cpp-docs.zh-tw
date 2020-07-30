@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9e70716ad90a14bbed552d47f48d5a3317e5a62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368647"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225705"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>資料錄集：取得 SUM 和其他彙總結果 (ODBC)
 
@@ -36,7 +36,7 @@ ms.locfileid: "81368647"
 
 - **COUNT**：計算任何資料類型的資料行中的資料錄數目。
 
-您可以使用這些 SQL 函式，取得資料來源中資料錄的統計相關資訊，而不是從資料來源擷取資料錄。 建立的資料錄集通常由包含一個值的單一資料錄 (如果所有資料行都是彙總值) 所組成  (如果使用**GROUP BY**子句,則可能有多個記錄。此值是 SQL 函數執行的計算或提取的結果。
+您可以使用這些 SQL 函式，取得資料來源中資料錄的統計相關資訊，而不是從資料來源擷取資料錄。 建立的資料錄集通常由包含一個值的單一資料錄 (如果所有資料行都是彙總值) 所組成  （如果您使用**GROUP by**子句，可能會有一個以上的記錄）。這個值是由 SQL 函數執行的計算或提取結果。
 
 > [!TIP]
 > 若要將 SQL **GROUP BY** 子句 (而且可能是 **HAVING** 子句) 加入到您的 SQL 陳述式中，請將其附加至 `m_strFilter` 的結尾。 例如：
@@ -50,13 +50,13 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 > [!CAUTION]
 > 某些彙總運算子會從它們彙總的資料行，傳回不同的資料類型。
 
-- **SUM** 和 **AVG** 可能會傳回次大的資料類型 (例如，使用 `int` 呼叫會傳回 **LONG** 或 **double**)。
+- **SUM**和**AVG**可能會傳回下一個較大的資料類型（例如，呼叫 with 會傳回 **`int`** **LONG**或 **`double`** ）。
 
 - 不論目標資料行是什麼類型，**COUNT** 通常會傳回 **LONG**。
 
 - **MAX** 和 **MIN** 會傳回與所計算之資料行相同的資料類型。
 
-     例如，[加入類別]**** 精靈會建立 `long` `m_lSales` 來容納 Sales 資料行，但您需要將此取代為 `double m_dblSumSales` 資料成員，才能容納彙總結果。 請參閱下列範例。
+     例如，「**加入類別**」 wizard **`long`** `m_lSales` 會建立以容納「銷售」資料行，但您必須將此取代為 `double m_dblSumSales` 資料成員，以容納匯總結果。 請參閱下列範例。
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>若要取得資料錄集的彙總結果
 
@@ -94,4 +94,4 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[記錄集：記錄集選取記錄的方式（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

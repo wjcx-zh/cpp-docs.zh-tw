@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295665"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229788"
 ---
 # <a name="mutual-imports"></a>交互匯入
 
@@ -37,20 +37,20 @@ ms.locfileid: "62295665"
 
 1. 使用 LINK 或 LIB 建立所有匯入程式庫之後，請返回並執行連結，以建立在上一個步驟中未建立的任何可執行檔。 請注意，您必須在連結行上指定對應的 .exp 檔案。
 
-   如果您先前已執行過 LIB 公用程式來產生 DLL1 的匯入程式庫，則 LIB 也會產生檔案 DLL1。 建立 DLL1 時，您必須使用 DLL1 做為連結的輸入。
+   如果您先前已執行過 LIB 公用程式來產生 DLL1 的匯入程式庫，則 LIB 也會產生檔案 DLL1。 建立 DLL1.dlll 時，您必須使用 DLL1 做為輸入以進行連結。
 
 下圖顯示兩個相互匯入 Dll （DLL1 和 DLL2）的解決方案。 步驟1是在 DLL1 上執行 LIB，並設定/DEF 選項。 步驟1會產生 DLL1、匯入程式庫和 DLL1。在步驟2中，會使用匯入程式庫來建立 DLL2，進而產生 DLL2's 符號的匯入程式庫。 步驟3建立 DLL1，方法是使用 DLL1 和 DLL2 做為輸入。 請注意，DLL2 的 .exp 檔案不是必要的，因為 LIB 並未用來建立 DLL2's 匯入程式庫。
 
-![使用相互匯入連結兩個 dll](media/vc37yj1.gif "使用相互匯入連結兩個 dll")<br/>
+![使用交互匯入來連結兩個 DLL](media/vc37yj1.gif "使用交互匯入來連結兩個 DLL")<br/>
 使用相互匯入連結兩個 Dll
 
 ## <a name="limitations-of-_afxext"></a>_AFXEXT 的限制
 
-您可以使用 MFC `_AFXEXT`延伸模組 dll 的預處理器符號，前提是您沒有 mfc 延伸模組 dll 的多個層級。 如果您的 MFC 延伸 Dll 會呼叫或衍生自您自己的 MFC 擴充 Dll 中的類別，然後再衍生自 MFC 類別，則您必須使用自己的預處理器符號來避免不明確。
+您可以使用 `_AFXEXT` mfc 延伸模組 dll 的預處理器符號，前提是您沒有 mfc 延伸模組 dll 的多個層級。 如果您的 MFC 延伸 Dll 會呼叫或衍生自您自己的 MFC 擴充 Dll 中的類別，然後再衍生自 MFC 類別，則您必須使用自己的預處理器符號來避免不明確。
 
-問題在於，在 Win32 中，如果要從 DLL 匯出，您必須將任何資料明確宣告為 **__declspec （dllexport）** ，如果要從 dll 匯入，則 **__declspec （dllimport）** 。 當您定義`_AFXEXT`時，MFC 標頭會確保已正確定義**AFX_EXT_CLASS** 。
+問題在於，在 Win32 中，您必須明確宣告任何資料，就像 **`__declspec(dllexport)`** 是要從 dll 匯出一樣， **`__declspec(dllimport)`** 如果是從 dll 匯入則為。 當您定義時 `_AFXEXT` ，MFC 標頭會確保已正確定義**AFX_EXT_CLASS** 。
 
-當您有多個層級時，一個符號（例如**AFX_EXT_CLASS** ）並不夠，因為 MFC 延伸 dll 可能會匯出新的類別，以及從另一個 MFC 延伸 dll 匯入其他類別。 若要解決這個問題，請使用特殊的預處理器符號，表示您要建立 DLL 本身，而不是使用 DLL。 例如，假設有兩個 MFC 延伸 Dll： .dll 和 b. .dll。 它們會分別匯出. h 和 b. h 中的一些類別。 B. 使用 .dll 的類別。 標頭檔看起來會像這樣：
+當您有多個層級時，一個符號（例如**AFX_EXT_CLASS** ）並不夠，因為 MFC 延伸 dll 可能會匯出新的類別，以及從另一個 MFC 延伸 dll 匯入其他類別。 若要解決這個問題，請使用特殊的預處理器符號，表示您要建立 DLL 本身，而不是使用 DLL。 例如，假設有兩個 MFC 延伸 Dll，A.dll 和 B.dll。 它們會分別匯出. h 和 b. h 中的一些類別。 B.dll 使用 A.dll 的類別。 標頭檔看起來會像這樣：
 
 ```
 /* A.H */
@@ -75,13 +75,13 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...
 ```
 
-建立 .dll 後，它是以`/D A_IMPL`建立的，而建立了 B. dll 時，則是以`/D B_IMPL`建立。 針對每個 DLL 使用個別的符號`CExampleB` ，會匯出`CExampleA` ，並在建立 b. 時匯入。 `CExampleA`會在建立 .dll 時匯出，並在由 B .dll （或其他用戶端）使用時匯入。
+建立 A.dll 時，它是以建立， `/D A_IMPL` 而且在建立 B.dll 時，它會以建立 `/D B_IMPL` 。 針對每個 DLL 使用個別的符號， `CExampleB` 會匯出，並 `CExampleA` 在建立 B.dll 時匯入。 `CExampleA`在建立 A.dll 並在 B.dll （或其他用戶端）使用時匯入時，會匯出。
 
-使用內建的**AFX_EXT_CLASS**和`_AFXEXT`預處理器符號時，無法完成這種類型的分層。 上述技術可解決這個問題，方法與建立其作用中技術、資料庫和網路 MFC 延伸 Dll 時，MFC 本身所使用的機制不同。
+使用內建的**AFX_EXT_CLASS**和 `_AFXEXT` 預處理器符號時，無法完成這種類型的分層。 上述技術可解決這個問題，方法與建立其作用中技術、資料庫和網路 MFC 延伸 Dll 時，MFC 本身所使用的機制不同。
 
 ## <a name="not-exporting-the-entire-class"></a>不匯出整個類別
 
-當您未匯出整個類別時，您必須確定已正確匯出 MFC 宏所建立的必要資料項目。 這可以藉由重新定義`AFX_DATA`為特定類別的宏來完成。 當您不想要匯出整個類別時，應該執行此動作。
+當您未匯出整個類別時，您必須確定已正確匯出 MFC 宏所建立的必要資料項目。 這可以藉由重新定義 `AFX_DATA` 為特定類別的宏來完成。 當您不想要匯出整個類別時，應該執行此動作。
 
 例如：
 
@@ -119,7 +119,7 @@ class CExampleA : public CObject
 
 - [匯出 c + + 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
+- [決定要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
 - [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -127,6 +127,6 @@ class CExampleA : public CObject
 
 - [LIB 公用程式和/DEF 選項](reference/lib-reference.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [匯入和匯出](importing-and-exporting.md)

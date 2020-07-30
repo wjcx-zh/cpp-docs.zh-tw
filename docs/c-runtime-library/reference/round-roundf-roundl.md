@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916712"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226173"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -80,7 +80,7 @@ long double roundl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**浮點**和**長****雙精度**值之**round**的多載。 在 C 程式中， **round**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和值之**round**的多載 **`float`** **`long double`** 。 在 C 程式中， **round**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

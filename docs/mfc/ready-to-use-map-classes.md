@@ -8,37 +8,37 @@ helpviewer_keywords:
 - classes [MFC], map
 - map classes [MFC]
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
-ms.openlocfilehash: 6136557bd436fb9964498384f277d48e8525a027
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ed191525e11ca2a4d3f5b1c39e9b50b65066d7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253964"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228540"
 ---
 # <a name="ready-to-use-map-classes"></a>立即可用的對應類別
 
-下列類別是已準備好要使用的對應類別。
+下列類別是現成可用的對應類別。
 
 [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)<br/>
-會使用**void**做為索引鍵來尋找其他指標**void**指標。
+使用 **`void`** 指標做為尋找其他指標的索引鍵 **`void`** 。
 
 [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)<br/>
-會使用**void**做為索引鍵來尋找類型的資料指標**WORD**。
+使用 **`void`** 指標做為尋找**WORD**類型資料的索引鍵。
 
 [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)<br/>
-會使用`CString`物件做為索引鍵尋找`CObject`指標。
+使用 `CString` 物件做為尋找指標的索引鍵 `CObject` 。
 
 [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)<br/>
-會使用`CString`做為尋找的索引鍵的物件**void**指標。
+使用 `CString` 物件做為尋找指標的索引鍵 **`void`** 。
 
 [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)<br/>
-會使用`CString`物件做為索引鍵來尋找其他`CString`物件。
+使用 `CString` 物件做為尋找其他物件的索引鍵 `CString` 。
 
 [CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)<br/>
-使用資料型別的**WORD**若要尋找`CObject`指標。
+使用**WORD**類型的資料來尋找 `CObject` 指標。
 
 [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)<br/>
-使用資料型別的**WORD**若要尋找**void**指標。
+使用**WORD**類型的資料來尋找 **`void`** 指標。
 
 ## <a name="see-also"></a>另請參閱
 

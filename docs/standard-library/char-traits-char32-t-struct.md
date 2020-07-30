@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 9a5cf2eb7734a20d04ec5c47ae71e80180a7b29d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0daf61f641b0b68bf806bba081b3c312777c6fe7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459044"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230203"
 ---
-# <a name="chartraitsltchar32tgt-struct"></a>char_traits&lt;char32_t&gt; 結構
+# <a name="char_traitsltchar32_tgt-struct"></a>char_traits&lt;char32_t&gt; 結構
 
-結構，其為類型 `char32_t` 之元素的樣板結構 **char_traits\<CharType>** 的特製化。
+結構，這是樣板結構的特製化**char_traits \<CharType> **至類型的專案 **`char32_t`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -27,11 +27,11 @@ struct char_traits<char32_t>;
 
 ## <a name="remarks"></a>備註
 
-特製化可讓結構利用操作此 `char32_t` 類型物件的程式庫函式。
+特製化可讓結構利用操作此類型物件的程式庫函數 **`char32_t`** 。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<string>
+**標頭：**\<string>
 
 **命名空間：** std
 

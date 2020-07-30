@@ -3,12 +3,12 @@ title: Visual Studio 中 C++ 的新功能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226785"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
@@ -249,7 +249,7 @@ Visual Studio 2017 有多個 C++ 環境的更新與修正。 我們已修正編�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-編譯器支援 C++17 中約 75% 的新功能，包括結構化繫結、`constexpr` Lambda、`if constexpr`、內嵌變數、摺疊運算式，以及將 `noexcept` 新增至型別系統。 這些功能可以在選項下取得 **`/std:c++17`** 。 如需詳細資訊，請參閱[Visual Studio 2017 中的 c + + 一致性改進](cpp-conformance-improvements.md)
+編譯器支援 c + + 17 中新的75% 的功能，包括結構化系結、 **`constexpr`** lambda、 `if constexpr` 、內嵌變數、折迭運算式，以及將新增 **`noexcept`** 至型別系統。 這些功能可以在選項下取得 **`/std:c++17`** 。 如需詳細資訊，請參閱[Visual Studio 2017 中的 c + + 一致性改進](cpp-conformance-improvements.md)
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
@@ -296,7 +296,7 @@ Visual C++ 的執行時間效能會透過更好的產生程式碼品質繼續改
 
 Microsoft c + + 編譯器支援 Intel 的 AVX-512。 其具有向量長度指示，可將 AVX-512 中的新函式帶入128位和 256-bit 寬暫存器。
 
-在一般情況下使用 C++17 模式時，可使用 [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) 選項還原為 C++14 版的 `noexcept`。 此選項可讓您更新原始程式碼以符合 C++17，而不需要同時重寫所有 `throw()` 程式碼。 如需詳細資訊，請參閱[動態例外狀況規格移除和 noexcept](cpp-conformance-improvements.md#noexcept_removal)。
+在一般情況下使用 c + + 17 模式時，可以使用[/zc： noexceptTypes-](../build/reference/zc-noexcepttypes.md)選項來還原為 c + + 14 版的 **`noexcept`** 。 此選項可讓您更新原始程式碼以符合 C++17，而不需要同時重寫所有 `throw()` 程式碼。 如需詳細資訊，請參閱[動態例外狀況規格移除和 noexcept](cpp-conformance-improvements.md#noexcept_removal)。
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
@@ -314,7 +314,7 @@ Microsoft c + + 編譯器支援 Intel 的 AVX-512。 其具有向量長度指示
 - 修正了 `std::promise` 移動指派運算子原本可能造成程式碼永久封鎖的問題。
 - 修正了 `atomic<T*>` 隱含轉換為 `T*` 這項編譯器錯誤。
 - `pointer_traits<Ptr>` 現在會正確偵測 `Ptr::rebind<U>`。
-- 修正了 `move_iterator` 減法運算子缺少 `const` 限定詞這項問題。
+- 已修正 **`const`** 減法運算子中遺漏的限定詞 `move_iterator` 。
 - 修正了要求 `propagate_on_container_copy_assignment` 和 `propagate_on_container_move_assignment` 的具狀態使用者定義配置器會產生錯誤程式碼而不發出訊息的問題。
 - `atomic<T>` 現已容許多載 `operator&()`。
 - 稍微改善不正確 `bind()` 呼叫的編譯器診斷。
@@ -335,8 +335,8 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 - 也已修正「宣告中的例外狀況規格不符合 Clang **-Wmicrosoft-exception-spec**所回報的先前宣告」。
 - 同時已修正由 Clang 和 C1XX 所回報的 mem-initializer-list 排序錯誤。
 - 先前未排序的容器在容器本身已交換的情況下，並不會交換其 hasher 函式或述詞。 現在它們已會這麼做。
-- 許多容器交換作業現在標示了 `noexcept` (因為我們的標準程式庫永遠不會試圖在偵測到 non-`propagate_on_container_swap` non-equal-allocator 未定義行為條件時擲出例外狀況)。
-- 許多 `vector<bool>` 作業現在標示了 `noexcept`。
+- 許多容器交換作業現在都會標示 **`noexcept`** （因為我們的標準程式庫在偵測非不相等配置器未定義的行為條件時，永遠不會擲回例外 `propagate_on_container_swap` 狀況）。
+- `vector<bool>`現在已將許多作業標示為 **`noexcept`** 。
 - 標準程式庫現在會強制將配置器 `value_type` (在 C++17 模式中) 與退出安全出口配對。
 - 修正了對 `basic_string` 進行 self-range-insert 會擾亂字串內容的某些條件。 (注意：針對 vectors 進行 self-range-insert 仍受標準所禁止)。
 - `basic_string::shrink_to_fit()` 不再受配置器的 `propagate_on_container_swap` 影響。
@@ -360,7 +360,7 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 
 - 我們已新增 \<any\> 、 \<string_view\> 、 `apply()` 、 `make_from_tuple()` 。
 - 已加入 \<optional\> 、、 \<variant\> `shared_ptr::weak_type` 和 \<cstdalign\> 。
-- 讓 `min(initializer_list)`、`max(initializer_list)` 和 `minmax(initializer_list)`，及 `min_element()`、`max_element()` 和 `minmax_element()` 中可使用 C++ 14 `constexpr`。
+- **`constexpr`** 在、、和中啟用 c + + 14、 `min(initializer_list)` `max(initializer_list)` `minmax(initializer_list)` 和 `min_element()` 、和 `max_element()` `minmax_element()` 。
 
 如需詳細資訊，請參閱[Microsoft c + + 語言一致性表格](../visual-cpp-language-conformance.md)。
 
@@ -368,11 +368,11 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 
 - 已實作數個額外的 C++17 功能。 如需詳細資訊，請參閱[Microsoft c + + 語言一致性表格](cpp-conformance-improvements.md#improvements_153)。
 - 已實作 P0602R0「Variant 和 Optional 應隨意地散佈 Copy/Move」。
-- 標準程式庫現已正式容許透過 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 選項停用動態 RTTI。 `dynamic_pointer_cast()`和 `rethrow_if_nested()` 原本都需要 `dynamic_cast` ，因此標準程式庫現在會將它們標示為 `=delete` **`/GR-`** 。
+- 標準程式庫現已正式容許透過 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 選項停用動態 RTTI。 `dynamic_pointer_cast()`和 `rethrow_if_nested()` 原本都需要 **`dynamic_cast`** ，因此標準程式庫現在會將它們標示為 `=delete` **`/GR-`** 。
 - 即使已透過停用動態 RTTI **`/GR-`** ，的形式的「靜態 rtti」 `typeid(SomeType)` 仍然可供使用，並提供數個標準程式庫元件。 標準程式庫現在也支援透過來停用這項功能 **`/D_HAS_STATIC_RTTI=0`** 。 此旗標也會停用 `std::function` 的 `std::any`、`target()` 和 `target_type()` 成員函式，及 `std::shared_ptr` 和 `std::weak_ptr` 的 `get_deleter()` friend 成員函式。
-- 標準程式庫現在會無條件使用 C++14 `constexpr`，而不使用已定義條件的巨集。
+- 標準程式庫現在會無條件地使用 c + + 14 **`constexpr`** ，而不是有條件地定義宏。
 - 標準程式庫現在會於內部使用別名範本。
-- 標準程式庫現在會於內部使用 `nullptr`，而不使用 `nullptr_t{}`。 (已經完全清除 NULL 的內部使用情況。 正在逐步清除 0-as-null 的內部使用情況)。
+- 標準程式庫現在會 **`nullptr`** 在內部使用，而不是 `nullptr_t{}` 。 (已經完全清除 NULL 的內部使用情況。 正在逐步清除 0-as-null 的內部使用情況)。
 - 標準程式庫現在會於內部使用 `std::move()`，而非誤用 `std::forward()`。
 - `static_assert(false, "message")` 已變更為 `#error message`。 此變更會改善編譯器診斷，因為 `#error` 會使編譯立刻停止。
 - 標準程式庫已不再將函式標示為 `__declspec(dllimport)`。 新式的連結器技術已不再需要這麼做。
@@ -439,7 +439,7 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
-- 解決與的互動 `noexcept` ，這可防止將 `std::atomic` 執行內嵌至使用結構化例外狀況處理（SEH）的函式。
+- 解決與的互動 **`noexcept`** ，這可防止將 `std::atomic` 執行內嵌至使用結構化例外狀況處理（SEH）的函式。
 - 標準程式庫的內部 `_Deallocate()` 函式已變更為較小的程式碼，使其適合內嵌至更多位置。
 - `std::try_lock()` 已從使用遞迴改為使用套件展開。
 - 改善了 `std::lock()` 鎖死迴避演算法，從原本對所有鎖定重複執行 `try_lock()` ，改為使用 `lock()` 作業。
@@ -456,7 +456,7 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 - 變動 `basic_string` 作業現在會以慣用狀態來建立重新配置的緩衝區，而非就地調整大小。 例如，在字串開頭的插入，現在只會在插入一次後移動內容。 它會向下移動或移至新配置的緩衝區。 在重新配置的情況下，不會再將它移到新配置的緩衝區，然後再移動。
 - 在中呼叫 C 標準程式庫的作業現在會快 \<string\> `errno` 取位址，以移除與 TLS 的重複互動。
 - 簡化了 `is_pointer` 實作。
-- 以函式為基礎的運算式 SFINAE 已變更為以 `struct` 和 `void_t` 為基礎。
+- 已完成將以函式為基礎的運算式 SFINAE 變更為 **`struct`** ，並以為 `void_t` 基礎。
 - 標準程式庫演算法現在會避免會後續累加的迭代器。
 - 已修正在 64 位元系統上使用 32 位元配置器時會出現的截斷警告。
 - 透過在情況允許時重複使用緩衝區，`std::vector` 移動指派現在在非 POCMA non-equal-allocator 案例中變得更有效率。
@@ -657,7 +657,7 @@ C++ 以通用 Windows app 工作負載的選用元件形式提供。 目前，�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-- 新的 C++ Core Guidelines 檢查範圍涵蓋智慧型指標正確性、全域初始設定式是否正確使用，並標幟 `goto` 等建構的使用和不正確的轉換。
+- 新的 C++ Core Guidelines 檢查會涵蓋智慧型指標正確性、全域初始化運算式的正確用法，以及標記使用和不正確轉換等結構的用法 **`goto`** 。
 
 - 某些您可以在 15.3 中找到的警告編號，在 15.5 中已不再使用。 這些警告已取代為更明確的檢查。
 

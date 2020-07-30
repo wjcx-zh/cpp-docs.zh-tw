@@ -1,19 +1,19 @@
 ---
-title: Rvalue 參考聲明器:&amp;&amp;
+title: 右值參考宣告子：&amp;&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 53729cca7c259bc2d3b792ddc3509d5fc3bd255a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 65eec84447043b89ff94b77b7aed22b1b06f58e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749822"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227097"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Rvalue 參考聲明器:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子：&amp;&amp;
 
 保留右值運算式的參考。
 
@@ -25,17 +25,17 @@ type-id && cast-expression
 
 ## <a name="remarks"></a>備註
 
-右值參考可讓您區分左值與右值。 左值參考和右值參考的語法和語意很相似，但是兩者遵循的規則稍有不同。 有關 lvalue 和 rvalue 的詳細資訊,請參閱[Lvalue 和 Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)。 有關 lvalue 引用的詳細資訊,請參閱[Lvalue 參考聲明器:&](../cpp/lvalue-reference-declarator-amp.md)。
+右值參考可讓您區分左值與右值。 左值參考和右值參考的語法和語意很相似，但是兩者遵循的規則稍有不同。 如需左值和右值的詳細資訊，請參閱[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。 如需左值參考的詳細資訊，請參閱左值參考宣告子[： &](../cpp/lvalue-reference-declarator-amp.md)。
 
-以下各節介紹 rvalue 引用如何支援*移動語義*的實現和*完美的轉發*。
+下列各節描述右值參考如何支援*移動語義*和*完美轉送*的執行。
 
 ## <a name="move-semantics"></a>移動語意
 
-Rvalue 引用支援*移動語義*的實現,這可以顯著提高應用程式的性能。 移動語意可讓您撰寫將資源從一個物件轉移到另一個物件 (例如動態配置記憶體) 的程式碼。 移動語意可用於轉移暫存物件中無法供程式其他位置參考的資源，因此可以發揮功效。
+右值參考支援*移動語義*的執行，這可能會大幅增加應用程式的效能。 移動語意可讓您撰寫將資源從一個物件轉移到另一個物件 (例如動態配置記憶體) 的程式碼。 移動語意可用於轉移暫存物件中無法供程式其他位置參考的資源，因此可以發揮功效。
 
-要實現行動語義,通常向類提供*行動構造函數,* 並可以選擇行動賦值運算符 (**運算符 =**)。 然後，來源為右值的複製和指派作業會自動利用移動語意。 不同於預設複製建構函式，編譯器不提供預設移動建構函式。 有關如何編寫移動構造函數以及如何在應用程式中使用它的詳細資訊,請參閱[移動構造函數和移動賦值運算符 (C++)。](../cpp/move-constructors-and-move-assignment-operators-cpp.md)
+若要執行移動語義，您通常會在您的類別中提供移動的函式 *，* 以及選擇性的移動指派運算子（**operator =**）。 然後，來源為右值的複製和指派作業會自動利用移動語意。 不同於預設複製建構函式，編譯器不提供預設移動建構函式。 如需如何撰寫移動函式，以及如何在應用程式中使用它的詳細資訊，請參閱[移動函數和移動指派運算子（c + +）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
 
-您也可以多載一般函式和運算子，以使用移動語意。 Visual Studio 2010 將行動語義引入C++標準庫。 例如，`string` 類別會實作執行移動語意的作業。 請考慮下列串連數個字串並列印結果的範例：
+您也可以多載一般函式和運算子，以使用移動語意。 Visual Studio 2010 引進了將「移動」的語義加入 c + + 標準程式庫中。 例如，`string` 類別會實作執行移動語意的作業。 請考慮下列串連數個字串並列印結果的範例：
 
 ```cpp
 // string_concatenation.cpp
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-在 Visual Studio 2010 之前,對**操作員*** 的每個調用都會`string`分配並返回一個新的臨時物件(rvalue)。 **運算符*** 不能將一個字串追加到另一個字串,因為它不知道原始字串是 lvalue 還是 rvalue。 如果原始字串都是左值，程式中其他位置可能會參考它們，因此不得加以修改。 通過使用 rvalue 引用,可以修改**運算符*** 以取得 rvalue,在程式的其他位置無法引用 rvalue。 因此,**運算符+** 現在可以將一個字串追加到另一個字串。 這可以大幅減少 `string` 類別必須執行的動態記憶體配置數目。 有關該類別的詳細資訊,`string`請參考basic_string[類別](../standard-library/basic-string-class.md)。
+在 Visual Studio 2010 之前，每次呼叫**operator +** 會配置並傳回新的暫存 `string` 物件（右值）。 **運算子 +** 無法將一個字串附加至另一個，因為它不知道來源字串是左值或右值。 如果原始字串都是左值，程式中其他位置可能會參考它們，因此不得加以修改。 藉由使用右值參考，可以修改**operator +** 以接受右值，這在程式的其他位置無法參考。 因此， **operator +** 現在可以將一個字串附加至另一個。 這可以大幅減少 `string` 類別必須執行的動態記憶體配置數目。 如需類別的詳細資訊 `string` ，請參閱[basic_string 類別](../standard-library/basic-string-class.md)。
 
 當編譯器無法使用傳回值最佳化 (RVO) 或具名傳回值最佳化 (NRVO) 時，移動語意也能有所幫助。 在這些情況下，如果類型定義了移動建構函式，則編譯器會加以呼叫。
 
@@ -59,15 +59,15 @@ int main()
 
 若要利用 `vector` 範例中的移動語意，您可以寫入移動建構函式，將資料從某個物件移動至另一個。
 
-有關在 Visual Studio 2010 中引入行動語義C++標準庫的詳細資訊,請參閱[C++標準庫](../standard-library/cpp-standard-library-reference.md)。
+如需在 Visual Studio 2010 的 c + + 標準程式庫中引進 move 語義的詳細資訊，請參閱[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。
 
 ## <a name="perfect-forwarding"></a>完美轉送
 
-完美轉送可減少對多載函式的需求，有助於避免轉送問題。 當您撰寫一個泛型函數,此函數會參考作為其參數,並將這些參數傳遞給(或*轉寄*)到另一個函數時,可能會出現*轉寄問題*。 例如，如果泛型函式採用 `const T&` 類型的參數，則呼叫的函式無法修改該參數的值。 如果泛型函式接受 `T&` 類型的參數，則無法使用右值 (例如暫存物件或整數常值) 呼叫函式。
+完美轉送可減少對多載函式的需求，有助於避免轉送問題。 當您撰寫採用參考做為其參數的泛型函式，並將這些參數傳遞（或*轉送*）至另一個函式時，就會發生*轉送問題*。 例如，如果泛型函式採用 `const T&` 類型的參數，則呼叫的函式無法修改該參數的值。 如果泛型函式接受 `T&` 類型的參數，則無法使用右值 (例如暫存物件或整數常值) 呼叫函式。
 
 若要解決這個問題，您通常必須提供每個參數採用 `T&` 和 `const T&` 的泛型函式多載版本。 因此，多載函式數目會隨著參數數目以指數方式增加。 右值參考可讓您撰寫接受任意引數並轉送至另一個函式的函式版本，就如同直接呼叫另一個函式。
 
-請考慮宣告 `W`、`X`、`Y` 和 `Z` 這四種類型的下列範例。 每種類型的建構函數採用**const**和非**const** lvalue 引用的不同組合作為其參數。
+請考慮宣告 `W`、`X`、`Y` 和 `Z` 這四種類型的下列範例。 每種類型的函式會採用 **`const`** 與非左值參考的不同組合 **`const`** 做為其參數。
 
 ```cpp
 struct W
@@ -124,7 +124,7 @@ T* factory(A1&& a1, A2&& a2)
 }
 ```
 
-這個範例使用右值參考做為 `factory` 函式的參數。 [std:轉發](../standard-library/utility-functions.md#forward)函數的目的是將工廠函數的參數轉發給範本類的構造函數。
+這個範例使用右值參考做為 `factory` 函式的參數。 [Std：： forward](../standard-library/utility-functions.md#forward)函式的目的是將 factory 函式的參數轉送至樣板類別的「處理」（function）。
 
 下列範例示範 `main` 函式，這個函式會使用修改的 `factory` 函式來建立 `W`、`X`、`Y` 和 `Z` 類別的執行個體。 修改的 `factory` 函式會將其參數 (左值或右值) 轉送至適當的類別建構函式。
 
@@ -148,7 +148,7 @@ int main()
 
 **您可以多載函式以接受左值參考和右值參考。**
 
-通過重載函數以取得**const** lvalue 引用或 rvalue 引用,可以編寫區分不可修改物件 (lvalue) 和可修改臨時值 (rvalue) 的代碼。 您可以將物件傳遞給採用 rvalue 引用的函數,除非該物件標記為**const**。 下列範例說明多載之後可接受左值參考和右值參考的 `f` 函式。 `main` 函式會使用左值和右值呼叫 `f`。
+藉由多載函式來接受 **`const`** 左值參考或右值參考，您可以撰寫程式碼來區別不可修改的物件（左值）和可修改的暫存值（右值）。 除非物件標記為，否則您可以將物件傳遞至接受右值參考的函式 **`const`** 。 下列範例說明多載之後可接受左值參考和右值參考的 `f` 函式。 `main` 函式會使用左值和右值呼叫 `f`。
 
 ```cpp
 // reference-overload.cpp
@@ -238,9 +238,9 @@ In g(MemoryBlock&&).
 
 在這個範例中，`main` 函式將右值傳遞給 `f`。 `f` 主體會將其具名參數視為左值。 從 `f` 對 `g` 的呼叫會將參數繫結至左值參考 (`g` 的第一個多載版本)。
 
-- **您可以將 lvalue 轉換為 rvalue 引用。**
+- **您可以將左值轉換成右值參考。**
 
-C++標準庫[std::move](../standard-library/utility-functions.md#move)函數使您能夠將物件轉換為對該物件的 rvalue 引用。 或者,您可以使用**static_cast**關鍵字將 lvalue 轉換為 rvalue 引用,如以下範例所示:
+C + + 標準程式庫[std：： move](../standard-library/utility-functions.md#move)函式可讓您將物件轉換成該物件的右值參考。 或者，您可以使用 **`static_cast`** 關鍵字將左值轉換為右值參考，如下列範例所示：
 
 ```cpp
 // cast-reference.cpp
@@ -281,9 +281,9 @@ In g(MemoryBlock&&).
 
 **函式樣板會推算其樣板引數類型，然後使用參考摺疊規則。**
 
-通常編寫一個函數範本,將 (或*轉發*) 其參數傳遞給另一個函數。 請務必了解樣板類型推算對於接受右值參考之函式樣板的作用。
+通常會撰寫函式範本，將其參數傳遞（或*轉寄*）至另一個函式。 請務必了解樣板類型推算對於接受右值參考之函式樣板的作用。
 
-如果函式引數為右值，編譯器會推算引數為右值參考。 例如，如果您將 `X` 類型物件的右值參考傳遞至採用 `T&&` 類型做為其參數的樣板函式，則樣板引數推算會將 `T` 推算為 `X`。 因此，該參數會具有 `X&&` 類型。 如果函數參數是 lvalue 或**const** lvalue,編譯器會將其類型推匯出為該類型的 lvalue 引用或**const** lvalue 引用。
+如果函式引數為右值，編譯器會推算引數為右值參考。 例如，如果您將 `X` 類型物件的右值參考傳遞至採用 `T&&` 類型做為其參數的樣板函式，則樣板引數推算會將 `T` 推算為 `X`。 因此，該參數會具有 `X&&` 類型。 如果函式引數為左值或 **`const`** 左值，則編譯器會將其類型會推算為該類型的左值參考或 **`const`** 左值參考。
 
 下列範例宣告某個結構樣板，然後針對各種參考類型特製化此樣板。 `print_type_and_value` 函式接受右值參考做為其參數，並將其轉送給 `S::print` 方法的適當特製化版本。 `main` 函式示範各種呼叫 `S::print` 方法的方式。
 
@@ -401,7 +401,7 @@ print_type_and_value<string&>(string& t)
 
 樣板引數推算是實作完美轉送的要素。 本主題先前的＜完美轉送＞一節更詳細說明完美轉送。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
 
 右值參考會區分左值與右值。 它們可以消除不必要的記憶體配置和複製作業，因此能協助您改善應用程式效能。 此外，也可以讓您撰寫接受任意引數並轉送至另一個函式的函式版本，就如同直接呼叫另一個函式。
 
@@ -409,6 +409,6 @@ print_type_and_value<string&>(string& t)
 
 [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)<br/>
 [左值參考宣告子：&](../cpp/lvalue-reference-declarator-amp.md)<br/>
-[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
 [移動建構函式和移動指派運算子 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[C++標準庫](../standard-library/cpp-standard-library-reference.md)
+[C + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)

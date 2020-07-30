@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectRoot class
 ms.assetid: f8797c38-6e73-4f67-85c2-71654cffa8eb
-ms.openlocfilehash: 9a9ffa1813fb15297d209894050b6bcce6802df2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98868e67fd14899a75f86837034ba540d22039e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224236"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot 類別
 
-此 typedef [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)樣板化預設的執行緒模型的伺服器上。
+此[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)的 typedef 是在伺服器的預設執行緒模型上範本化。
 
 ## <a name="syntax"></a>語法
 
@@ -26,13 +26,13 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 
 ## <a name="remarks"></a>備註
 
-`CComObjectRoot` 已`typedef`的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)樣板化預設的執行緒模型的伺服器上。 因此[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)參考任何[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或是[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。
+`CComObjectRoot`是 **`typedef`** 伺服器預設執行緒模型上的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)範本化。 因此， [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)會參考[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。
 
-`CComObjectRootEx` 處理非彙總與彙總物件的物件參考計數管理。 如果您的物件不正在彙總，而且存放的外部未知的指標，如果您的物件正在彙總，它就會保留物件參考計數。 對於彙總的物件，`CComObjectRootEx`方法可以用來處理失敗，內部物件的建構，並刪除保護以防止刪除內部介面發行時則外部物件或內部的物件。
+`CComObjectRootEx`處理非匯總和匯總物件的物件參考計數管理。 如果您的物件未進行匯總，它會保存物件參考計數，如果您的物件正在進行匯總，則會保存外部未知的指標。 對於匯總的物件， `CComObjectRootEx` 方法可以用來處理內建物件所要建立的失敗，以及在釋放內部介面或刪除內建物件時，保護外部物件的刪除。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭：** atlcom.h。h
 
 ## <a name="see-also"></a>另請參閱
 

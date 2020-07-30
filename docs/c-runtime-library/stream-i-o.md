@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444615"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231243"
 ---
 # <a name="stream-io"></a>資料流 I/O
 
@@ -19,9 +19,9 @@ ms.locfileid: "79444615"
 
 ## <a name="stream-io-routines"></a>資料流 I/O 常式
 
-|常式|使用|
+|常式傳回的值|用途|
 |-------------|---------|
-|[clearerr](../c-runtime-library/reference/clearerr.md)( [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除資料流的錯誤指標|
+|[clearerr](../c-runtime-library/reference/clearerr.md)、[clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除資料流的錯誤指標|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|關閉資料流|
 |[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|關閉所有開啟的資料流，**stdin**、**stdout** 和 **stderr** 除外|
 |[_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|關聯資料流與已開啟檔案的檔案描述項|
@@ -51,12 +51,12 @@ ms.locfileid: "79444615"
 |[getchar、getwchar](../c-runtime-library/reference/getc-getwc.md)|從 **stdin** 讀取字元 (**fgetchar** 和 **fgetwchar** 的巨集版本)|
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|傳回允許在資料流 I/O 層級同時開啟的檔案數目。|
 |[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|從 **stdin** 讀取程式碼|
-|[_getw](../c-runtime-library/reference/getw.md)|從資料流讀取二進位 **int**|
+|[_getw](../c-runtime-library/reference/getw.md)|**`int`** 從資料流程讀取二進位|
 |[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)、[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|將格式化資料寫入 **stdout**|
 |[putc、putwc](../c-runtime-library/reference/putc-putwc.md)|將字元寫入資料流 (**fputc** 和 **fputwc** 的巨集版本)|
 |[putchar、putwchar](../c-runtime-library/reference/putc-putwc.md)|將字元寫入 **stdout** (**fputchar** 和 **fputwchar** 的巨集版本)|
 |[puts、_putws](../c-runtime-library/reference/puts-putws.md)|將行寫入資料流|
-|[_putw](../c-runtime-library/reference/putw.md)|將二進位 **int** 寫入資料流|
+|[_putw](../c-runtime-library/reference/putw.md)|將二進位檔寫入 **`int`** 資料流程|
 |[rewind](../c-runtime-library/reference/rewind.md)|將檔案位置移至資料流開頭|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|移除 **tmpfile** 所建立的暫存檔案|
 |[scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)、[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|從 **stdin** 讀取格式化資料|
@@ -96,4 +96,4 @@ ms.locfileid: "79444615"
 ## <a name="see-also"></a>另請參閱
 
 [輸入和輸出](../c-runtime-library/input-and-output.md)<br/>
-[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[依分類排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: ea09dd3d4a2eaf4cf7708d09509cfecfa4a6c6d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373069"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225614"
 ---
 # <a name="lock-class"></a>lock 類別
 
-此類自動獲取鎖以同步對來自多個線程的對象的訪問。  構造時,它獲取鎖,銷毀時釋放鎖。
+這個類別會自動取得鎖定，以便從數個執行緒同步處理物件的存取。  當建立時，它會取得鎖定，並在終結時釋放鎖定。
 
 ## <a name="syntax"></a>語法
 
@@ -33,45 +33,45 @@ ref class lock;
 
 ## <a name="remarks"></a>備註
 
-`lock`僅適用於 CLR 物件,只能在 CLR 代碼中使用。
+`lock`僅適用于 CLR 物件，而且只能在 CLR 程式碼中使用。
 
-在內部,鎖類用於<xref:System.Threading.Monitor>同步訪問。 有關詳細資訊,請參閱引用的文章。
+就內部而言，鎖定類別會使用 <xref:System.Threading.Monitor> 來同步存取。 如需詳細資訊，請參閱參考的文章。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |---------|-----------|
-|[lock::lock](#lock)|建構一個`lock`物件,可以選擇等待永久獲取鎖,在指定的時間內,或者根本不。|
-|[鎖::=鎖](#tilde-lock)|破壞`lock`物件。|
+|[lock::lock](#lock)|`lock`在指定的時間內（或完全不是），建立物件，並選擇性地等候取得鎖定。|
+|[lock：： ~ lock](#tilde-lock)|Destructs `lock` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |---------|-----------|
-|[lock::acquire](#acquire)|獲取物件的鎖,可以選擇等待永久獲取鎖,在指定的時間內,或者根本不。|
-|[lock::is_locked](#is-locked)|指示是否持有鎖。|
-|[lock::release](#release)|釋放鎖。|
-|[lock::try_acquire](#try-acquire)|獲取物件的鎖,等待指定的時間量,並返回`bool`報告獲取成功,而不是引發異常。|
+|[lock::acquire](#acquire)|取得物件的鎖定，並選擇性地等候在指定的時間內永遠取得鎖定，或完全不使用。|
+|[lock::is_locked](#is-locked)|指出是否持有鎖定。|
+|[lock::release](#release)|釋放鎖定。|
+|[lock::try_acquire](#try-acquire)|取得物件的鎖定，等待指定的時間量，並傳回 **`bool`** 來回報是否成功，而不是擲回例外狀況。|
 
-### <a name="public-operators"></a>公共運營商
+### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |---------|-----------|
-|[鎖::操作員&nbsp;布爾](#operator-bool)|用於`lock`條件表達式的運算符。|
-|[lock::operator==](#operator-equality)|相等運算符。|
-|[鎖::操作員!](#operator-inequality)|不等式運算符。|
+|[lock：： operator &nbsp; bool](#operator-bool)|`lock`在條件運算式中使用的運算子。|
+|[lock::operator==](#operator-equality)|等號比較運算子。|
+|[lock：： operator！ =](#operator-inequality)|不等比較運算子。|
 
 ## <a name="requirements"></a>需求
 
-**標題檔案**\<msclr_lock.h>
+**標頭檔** \<msclr\lock.h>
 
 **命名空間**msclr
 
-## <a name="locklock"></a><a name="lock"></a>鎖::鎖
+## <a name="locklock"></a><a name="lock"></a>lock：： lock
 
-建構一個`lock`物件,可以選擇等待永久獲取鎖,在指定的時間內,或者根本不。
+`lock`在指定的時間內（或完全不是），建立物件，並選擇性地等候取得鎖定。
 
 ```cpp
 template<class T> lock(
@@ -97,25 +97,25 @@ template<class T> lock(
 要鎖定的物件。
 
 *_timeout*<br/>
-超時值(以毫秒為單位或為<xref:System.TimeSpan>)。
+超時值，以毫秒為單位，或為 <xref:System.TimeSpan> 。
 
 ### <a name="exceptions"></a>例外狀況
 
-如果在<xref:System.ApplicationException>超時之前未進行鎖採集,則引發。
+<xref:System.ApplicationException>如果未在超時前發生鎖定取得，則會擲回。
 
 ### <a name="remarks"></a>備註
 
-建構函數的前三種形式嘗試`_object`在指定的超時期間(或者<xref:System.Threading.Timeout.Infinite>如果 未指定任何鎖定)內獲取鎖定。
+第三種形式的函式會嘗試在 `_object` 指定的超時時間內取得鎖定（ <xref:System.Threading.Timeout.Infinite> 如果未指定，則為）。
 
-構造函數的第四種形式未獲取`_object`上的 鎖。 `lock_later`是[lock_when枚舉的成員](../dotnet/lock-when-enum.md)。 在這種情況下,使用[鎖:獲取](../dotnet/lock-acquire.md)或[鎖定:try_acquire](../dotnet/lock-try-acquire.md)獲取鎖。
+第四種形式的函式不會取得的鎖定 `_object` 。 `lock_later`這是[lock_when 列舉](../dotnet/lock-when-enum.md)的成員。 在此情況下，請使用[lock：：取得](../dotnet/lock-acquire.md)或[lock：： try_acquire](../dotnet/lock-try-acquire.md)來取得鎖定。
 
-調用析構函數時,鎖將自動釋放。
+呼叫析構函式時，將會自動釋放鎖定。
 
-`_object`不能是<xref:System.Threading.ReaderWriterLock>。  如果是,則會導致編譯器錯誤。
+`_object`不可以是 <xref:System.Threading.ReaderWriterLock> 。  如果是，就會產生編譯器錯誤。
 
 ### <a name="example"></a>範例
 
-此示例在多個線程上使用類的單個實例。 類使用自身鎖來確保對其內部數據的訪問對於每個線程是一致的。 主應用程式線程使用類的同一實例上的鎖定期檢查是否存在任何輔助線程。 然後,主應用程式等待退出,直到所有工作線程完成其任務。
+這個範例會在多個執行緒中使用類別的單一實例。 類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_lock.cpp
@@ -203,9 +203,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>鎖::=鎖
+## <a name="locklock"></a><a name="tilde-lock"></a>lock：： ~ lock
 
-破壞`lock`物件。
+Destructs `lock` 物件。
 
 ```cpp
 ~lock();
@@ -213,11 +213,11 @@ All threads completed.
 
 ### <a name="remarks"></a>備註
 
-析構函數調用[鎖::釋放](../dotnet/lock-release.md)。
+此析構函式會呼叫[lock：： release](../dotnet/lock-release.md)。
 
 ### <a name="example"></a>範例
 
-此示例在多個線程上使用類的單個實例。  類使用自身鎖來確保對其內部數據的訪問對於每個線程是一致的。  主應用程式線程使用類的同一實例上的鎖定期檢查是否存在任何輔助線程。 然後,主應用程式等待退出,直到所有工作線程完成其任務。
+這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。  主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -305,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>鎖::取得
+## <a name="lockacquire"></a><a name="acquire"></a>lock：：取得
 
-獲取物件的鎖,可以選擇等待永久獲取鎖,在指定的時間內,或者根本不。
+取得物件的鎖定，並選擇性地等候在指定的時間內永遠取得鎖定，或完全不使用。
 
 ```cpp
 void acquire();
@@ -322,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>參數
 
 *_timeout*<br/>
-超時值(以毫秒為單位或為<xref:System.TimeSpan>)。
+Timeout 值，以毫秒為單位，或為 <xref:System.TimeSpan> 。
 
 ### <a name="exceptions"></a>例外狀況
 
-如果在<xref:System.ApplicationException>超時之前未進行鎖採集,則引發。
+<xref:System.ApplicationException>如果未在超時前發生鎖定取得，則會擲回。
 
 ### <a name="remarks"></a>備註
 
-如果未提供超時值,則預設超時為<xref:System.Threading.Timeout.Infinite>。
+如果未提供 timeout 值，預設的超時時間為 <xref:System.Threading.Timeout.Infinite> 。
 
-如果已獲取鎖,則此函數不執行任何操作。
+如果已取得鎖定，則此函式不會執行任何工作。
 
 ### <a name="example"></a>範例
 
-此示例在多個線程上使用類的單個實例。  類使用自身鎖來確保對其內部數據的訪問對於每個線程是一致的。 主應用程式線程使用類的同一實例上的鎖定期檢查是否存在任何輔助線程。 然後,主應用程式等待退出,直到所有工作線程完成其任務。
+這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -424,9 +424,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>鎖::is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>lock：： is_locked
 
-指示是否持有鎖。
+指出是否持有鎖定。
 
 ```cpp
 bool is_locked();
@@ -434,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>傳回值
 
-`true`如果鎖被持有,`false`否則。
+**`true`** 如果保留鎖定，則為， **`false`** 否則為。
 
 ### <a name="example"></a>範例
 
-此示例在多個線程上使用類的單個實例。  類使用自身鎖來確保對其內部數據的訪問對於每個線程是一致的。  主應用程式線程使用類同一實例上的鎖定期檢查是否存在任何工作線程,並等待退出,直到所有工作線程完成其任務。
+這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。  主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何背景工作執行緒仍然存在，並等候結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -527,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>鎖::操作員布爾
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>lock：： operator bool
 
-用於`lock`條件表達式的運算符。
+`lock`在條件運算式中使用的運算子。
 
 ```cpp
 operator bool();
@@ -537,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>傳回值
 
-`true`如果鎖被持有,`false`否則。
+**`true`** 如果保留鎖定，則為， **`false`** 否則為。
 
 ### <a name="remarks"></a>備註
 
-此運算元實際上轉換為`_detail_class::_safe_bool`比`bool`無法轉換為積分類型更安全。
+這個運算子會實際轉換為， `_detail_class::_safe_bool` **`bool`** 因為它無法轉換成整數類資料類型。
 
 ### <a name="example"></a>範例
 
-此示例在多個線程上使用類的單個實例。  類使用自身鎖來確保對其內部數據的訪問對於每個線程是一致的。 主應用程式線程使用類的同一實例上的鎖定期檢查是否存在任何輔助線程。 主應用程式等待退出,直到所有工作線程完成其任務。
+這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 主要應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -634,9 +634,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>鎖::釋放
+## <a name="lockrelease"></a><a name="release"></a>lock：： release
 
-釋放鎖。
+釋放鎖定。
 
 ```cpp
 void release();
@@ -644,13 +644,13 @@ void release();
 
 ### <a name="remarks"></a>備註
 
-如果沒有鎖定,`release`則不執行任何操作。
+如果未保留任何鎖定，則 `release` 不會執行任何操作。
 
-您不必顯式調用此函數。 當`lock`物件超出範圍時,其析構函數將呼`release`叫 。
+您不需要明確呼叫此函式。 當 `lock` 物件超出範圍時，其析構函式會呼叫 `release` 。
 
 ### <a name="example"></a>範例
 
-此示例在多個線程上使用類的單個實例。 類使用自身鎖來確保對其內部數據的訪問對於每個線程是一致的。 主應用程式線程使用類的同一實例上的鎖定期檢查是否存在任何輔助線程。 然後,主應用程式等待退出,直到所有工作線程完成其任務。
+這個範例會在多個執行緒中使用類別的單一實例。 類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_release.cpp
@@ -738,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>鎖::try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>lock：： try_acquire
 
-獲取物件的鎖,等待指定的時間量,並返回`bool`報告獲取成功,而不是引發異常。
+取得物件的鎖定，等待指定的時間量，並傳回 **`bool`** 來回報是否成功，而不是擲回例外狀況。
 
 ```cpp
 bool try_acquire(
@@ -754,19 +754,19 @@ bool try_acquire(
 ### <a name="parameters"></a>參數
 
 *_timeout*<br/>
-超時值(以毫秒為單位或為<xref:System.TimeSpan>)。
+Timeout 值，以毫秒為單位，或為 <xref:System.TimeSpan> 。
 
 ### <a name="return-value"></a>傳回值
 
-`true`如果獲得鎖,`false`否則。
+**`true`** 如果已取得鎖定，則 **`false`** 為，否則為。
 
 ### <a name="remarks"></a>備註
 
-如果已獲取鎖,則此函數不執行任何操作。
+如果已取得鎖定，則此函式不會執行任何工作。
 
 ### <a name="example"></a>範例
 
-此示例在多個線程上使用類的單個實例。 類使用自身鎖來確保對其內部數據的訪問對於每個線程是一致的。 主應用程式線程使用類的同一實例上的鎖定期檢查是否存在任何輔助線程。 然後,主應用程式等待退出,直到所有工作線程完成其任務。
+這個範例會在多個執行緒中使用類別的單一實例。 類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。 主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何工作者執行緒仍然存在。 然後，主應用程式會等待結束，直到所有工作者執行緒完成其工作為止。
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -854,9 +854,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>鎖::操作員*
+## <a name="lockoperator"></a><a name="operator-equality"></a>lock：： operator = =
 
-相等運算符。
+等號比較運算子。
 
 ```cpp
 template<class T> bool operator==(
@@ -866,12 +866,12 @@ template<class T> bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*t*<br/>
+*而已*<br/>
 要比較是否相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳`true`回`t`( 如果與鎖的`false`物件相同, 否則)。
+**`true`** 如果與 `t` 鎖定的物件相同，則傳回， **`false`** 否則傳回。
 
 ### <a name="example"></a>範例
 
@@ -897,9 +897,9 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>鎖::操作員!
+## <a name="lockoperator"></a><a name="operator-inequality"></a>lock：： operator！ =
 
-不等式運算符。
+不等比較運算子。
 
 ```cpp
 template<class T> bool operator!=(
@@ -909,12 +909,12 @@ template<class T> bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*t*<br/>
-要比較不等式的物件。
+*而已*<br/>
+要比較是否不相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果`true``t`返回與鎖的物件不同,則返回,`false`否則。
+**`true`** 如果 `t` 與鎖定的物件不同，則傳回， **`false`** 否則傳回。
 
 ### <a name="example"></a>範例
 

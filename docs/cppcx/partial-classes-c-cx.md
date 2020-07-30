@@ -2,12 +2,12 @@
 title: 部分類別 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740481"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185459"
 ---
 # <a name="partial-classes-ccx"></a>部分類別 (C++/CX)
 
@@ -17,23 +17,23 @@ ms.locfileid: "70740481"
 
 若要定義部分類別，請在原本是一般類別定義之項目的類別識別碼之前使用 `partial` 關鍵字。 `partial ref class` 之類的關鍵字是包含空白字元的內容關鍵字。 支援部分定義的建構如下。
 
-- `class` 或 `struct`
+- **`class`** 或**`struct`**
 
-- `ref class` 或 `ref struct`
+- **`ref class`** 或**`ref struct`**
 
-- `value class` 或 `value struct`
+- **`value class`** 或**`value struct`**
 
-- `enum` 或 `enum class`
+- **`enum`** 或**`enum class`**
 
-- `ref interface`、 `interface class`、 `interface struct`或 `__interface`
+- `ref interface`、 **`interface class`** 、 **`interface struct`** 或 **' __interface**
 
-- `union`
+- **`union`**
 
-下列範例說明部分 `ref class`：
+這個範例會示範部分 **`ref class`** ：
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
-## <a name="contents"></a>內容
+## <a name="contents"></a>目錄
 
 如果省略 `partial` 關鍵字，部分類別定義即可包含完整類別定義所能包含的任何項目。 除了一項例外狀況，這包括任何有效的建構，例如基底類別、資料成員、成員函式、列舉、friend 宣告和屬性。 此外也允許靜態資料成員的內嵌定義。
 
@@ -61,7 +61,7 @@ ms.locfileid: "70740481"
 
 類別的每個部分類別定義在語彙上皆必須位於該類別的一個完整定義之前，但不一定要位於該類別的向前宣告之前。 如果類別沒有完整定義，部分類別宣告就只能是向前宣告。
 
-所有的類別識別碼 (如 `class` 和 `struct` ) 都必須相符。 例如，下列程式碼是錯誤的： `partial class X {}; struct X {};`這個名稱而已。
+所有的類別索引鍵（例如 **`class`** 和） **`struct`** 都必須相符。 例如，下列程式碼是錯誤的： `partial class X {}; struct X {};`這個名稱而已。
 
 下列範例示範數目與順序。 最後一個部分宣告會失敗，因為類別已定義。
 
@@ -85,7 +85,7 @@ ms.locfileid: "70740481"
 
 部分類別不可延伸到其他轉譯單位。
 
-`partial` 關鍵字必須與 `ref class` 關鍵字或 `value class` 關鍵字一起使用才有效用。
+`partial`關鍵字僅支援與 **`ref class`** 關鍵字或關鍵字一起使用 **`value class`** 。
 
 ### <a name="examples"></a>範例
 
@@ -97,6 +97,6 @@ ms.locfileid: "70740481"
 
 ## <a name="see-also"></a>另請參閱
 
-[類型系統](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[型別系統](../cppcx/type-system-c-cx.md)<br/>
+[C + +/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

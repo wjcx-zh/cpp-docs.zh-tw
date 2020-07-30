@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62e8a2026babbfea3cd1583def05a03b4bc4a229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160680"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223508"
 ---
 # <a name="typename"></a>typename
 
@@ -27,7 +27,7 @@ typename identifier;
 
 如果範本定義中的名稱是相依于樣板引數的限定名稱，則必須使用此關鍵字;如果限定名稱不相依，這就是選擇性的。 如需詳細資訊，請參閱[範本和名稱解析](../cpp/templates-and-name-resolution.md)。
 
-範本宣告或定義中任何位置的任何類型都可以使用**typename** 。 除非是做為範本基底類別的樣板引數，否則不允許出現在基底類別清單中。
+**`typename`** 可供範本宣告或定義中任何位置的任何類型使用。 除非是做為範本基底類別的樣板引數，否則不允許出現在基底類別清單中。
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-**Typename**關鍵字也可以用來取代範本參數清單中的**類別**。 例如，下列語句在語義上是相等的：
+**`typename`** 關鍵字也可以用來取代 **`class`** 範本參數清單中的。 例如，下列語句在語義上是相等的：
 
 ```cpp
 template<class T1, class T2>...

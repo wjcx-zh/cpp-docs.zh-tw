@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2573f30b2dfee20d12afea2a1072bbdcef46228b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160888"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231074"
 ---
 # <a name="subscripting"></a>下標
 
-注標運算子（ **[]** ）就像函式呼叫運算子一樣，會被視為二元運算子。 註標運算子必須是使用單一引數的非靜態成員函式。 這個引數可以是任何類型，並且指定所需的陣列註標。
+注標運算子（**[]**）就像函式呼叫運算子一樣，會被視為二元運算子。 註標運算子必須是使用單一引數的非靜態成員函式。 這個引數可以是任何類型，並且指定所需的陣列註標。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建立**int**類型的向量來執行界限檢查：
+下列範例示範如何建立類型的向量來 **`int`** 執行界限檢查：
 
 ```cpp
 // subscripting.cpp
@@ -91,7 +91,7 @@ Element: [10] = 10
 
 ## <a name="comments"></a>註解
 
-當 `i` 在上述程式中達到10時， **operator []** 會偵測到使用超出界限的注標，併發出錯誤訊息。
+在 `i` 上一個程式中達到10時， **operator []** 會偵測到使用超出界限的注標，併發出錯誤訊息。
 
 請注意，函數**運算子 []** 會傳回參考型別。 這會使它變成左值，讓您能夠在指派運算子的任一端使用註標運算式。
 

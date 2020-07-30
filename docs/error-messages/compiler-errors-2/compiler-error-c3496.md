@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: b9542f1904c6797a77c88c88a37aff9348364268
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 993d391f28a59afc8926748f2e6f34ab441657dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738176"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228852"
 ---
 # <a name="compiler-error-c3496"></a>編譯器錯誤 C3496
 
 'this' 一定以傳值方式擷取: 已忽略 '&'
 
-您不能以傳址方式來擷取 `this` 指標。
+您無法以傳 **`this`** 址方式來捕捉指標。
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
-- 請以傳值方式來擷取 `this` 指標。
+- 以傳 **`this`** 值方式捕捉指標。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3496，因為 `this` 指標的參考出現在 Lambda 運算式的擷取清單中：
+下列範例會產生 C3496，因為指標的參考 **`this`** 會出現在 lambda 運算式的 capture 清單中：
 
 ```cpp
 // C3496.cpp
@@ -40,6 +40,6 @@ class C
 };
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

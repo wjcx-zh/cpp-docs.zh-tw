@@ -37,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506880"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229359"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -75,7 +75,7 @@ long double sqrtl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用**float**或**long** **double**類型的**sqrt**多載。 在 C 程式中， **sqrt**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用或類型之**sqrt**的多載 **`float`** **`long double`** 。 在 C 程式中， **sqrt**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
@@ -89,7 +89,7 @@ long double sqrtl(
 |- ∞|無|_DOMAIN|
 |x<0|無|_DOMAIN|
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|

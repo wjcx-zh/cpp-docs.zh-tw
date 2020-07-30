@@ -10,16 +10,16 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a9144229b75c09a892ddbf5bd592e67c7c2b6d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172031"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230554"
 ---
 # <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
-可需告只和 Common Language Runtime 搭配使用的「Pin 指標」。
+可需告只和 Common Language Runtime 搭配使用的「Pin 指標」**。
 
 ## <a name="all-runtimes"></a>所有執行階段
 
@@ -31,7 +31,7 @@ ms.locfileid: "80172031"
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-「Pin 指標」是一個內部指標，可防止指向的物件在記憶體回收堆積上移動。 也就是 Common Language Runtime 不會變更 Pin 指標的值。 利用這種方式將受控類別的位址傳遞至非受控函式是必要的，可讓位址不會在解析非受控函式呼叫時意外變更。
+「Pin 指標」** 是一個內部指標，可防止指向的物件在記憶體回收堆積上移動。 也就是 Common Language Runtime 不會變更 Pin 指標的值。 利用這種方式將受控類別的位址傳遞至非受控函式是必要的，可讓位址不會在解析非受控函式呼叫時意外變更。
 
 ### <a name="syntax"></a>語法
 
@@ -42,7 +42,7 @@ ms.locfileid: "80172031"
 ### <a name="parameters"></a>參數
 
 *cv_qualifier*<br/>
-**const** 或 **volatile** 限定詞。 根據預設，Pin 指標是 **volatile**。 宣告 Pin 指標 **volatile** 是多餘的，但不是錯誤。
+**`const`** 或 **`volatile`** 限定詞。 根據預設，釘選指標為 **`volatile`** 。 這是多餘的，但不是宣告釘選指標的錯誤 **`volatile`** 。
 
 *type*<br/>
 *initializer* 的型別。
@@ -50,7 +50,7 @@ ms.locfileid: "80172031"
 *var*<br/>
 **pin_ptr** 變數的名稱。
 
-*initializer*<br/>
+*初始設定式*<br/>
 參考類型的成員，Managed 陣列的元素，或是其他任何可以指派至原生指標的物件。
 
 ### <a name="remarks"></a>備註

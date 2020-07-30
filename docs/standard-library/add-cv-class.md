@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 412dc8426112e65d00b572a65f064667d2709a0d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0afeea71daf8358b2aeeefe8d368c135a54a6ad6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620787"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222624"
 ---
 # <a name="add_cv-class"></a>add_cv 類別
 
-從類型建立**const volatile**類型。
+**`const volatile`** 從類型建立類型。
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>備註
 
-已修改類型的實例 `add_cv<T>` 具有 `type` 相當於[add_volatile](add-volatile-class.md)和[add_const](add-const-class.md)的*t*修改的成員**typedef** ，除非*t*已經有 cv 限定詞、參考，或為函式。
+已修改類型的實例 `add_cv<T>` 具有 `type` **`typedef`** 相當於*t* [add_volatile](add-volatile-class.md)和[add_const](add-const-class.md)修改的成員，除非*t*已經有 cv 限定詞、參考，或為函式。
 
 `add_cv_t<T>` 協助程式類型是存取 `add_cv<T>` 成員 typedef `type` 的捷徑。
 
@@ -84,7 +84,7 @@ invoked volatile S.f()
 invoked const volatile S.f()
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<type_traits>
 

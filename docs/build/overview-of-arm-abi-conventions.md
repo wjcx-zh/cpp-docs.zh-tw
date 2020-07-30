@@ -2,12 +2,12 @@
 title: ARM ABI 慣例概觀
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320722"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229762"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 慣例的總覽
 
@@ -25,7 +25,7 @@ ARM 上的 Windows 會假設其始終在 ARMv7 架構上執行。 硬體中必�
 
 Windows on ARM 在由小到大的格式模式下執行。 MSVC 編譯器和 Windows 執行時間都預期會有極小的位元組資料。 雖然 ARM 指令集架構 (ISA) 中的 SETEND 指令甚至容許以使用者模式程式碼，來變更目前的位元組序，但不建議這樣做，因為這對應用程式而言太過危險。 如果在由大到小格式的模式下產生例外狀況，則行為不可預期，且可能會在使用者模式中導致應用程式錯誤，或在核心模式中導致檢查錯誤。
 
-## <a name="alignment"></a>Alignment
+## <a name="alignment"></a>對齊
 
 雖然 Windows 可讓 ARM 硬體無障礙地控制未對齊的整數存取，但在某些情況下，仍可能產生對齊錯誤。 請遵循下列規則，來進行對齊：
 
@@ -60,7 +60,7 @@ ARM 上 Windows 的指令集嚴格限制為 Thumb-2。 在此平台上執行的�
    |STR、STRB、STRH|儲存至記憶體||
    |ADD、ADC、RSB、SBC、SUB|加法或減法|但不是 ADD/SUB SP、SP、imm7 格式<br /><br /> Rm != PC、Rdn != PC、Rdm != PC|
    |CMP、CMN|比較|Rm != PC、Rn != PC|
-   |MUL|乘以||
+   |MUL|乘||
    |ASR、LSL、LSR、ROR|位元移位||
    |AND、BIC、EOR、ORR、TST|位元算術||
    |BX|分支到暫存器|Rm != PC|
@@ -75,7 +75,7 @@ ARM 上 Windows 的指令集嚴格限制為 Thumb-2。 在此平台上執行的�
 
 ARM 處理器支援 16 個整數暫存器：
 
-|註冊|動態？|[角色]|
+|註冊|動態？|角色|
 |--------------|---------------|----------|
 |r0|動態|參數、結果、臨時暫存器 1|
 |r1|動態|參數、結果、臨時暫存器 2|
@@ -102,7 +102,7 @@ Windows 使用 r11 進行堆疊框架的快速查核行程。 如需詳細資訊
 
 Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示浮點暫存器一律存在，並可用於參數傳遞，而完整的 32 個暫存器集則可以使用。 VFP 暫存器及其使用方式在下表中彙總：
 
-|單核心|雙核心|四核心|動態？|[角色]|
+|單核心|雙核心|四核心|動態？|角色|
 |-------------|-------------|-----------|---------------|----------|
 |s0-s3|d0-d1|q0|動態|參數、結果、臨時暫存器|
 |s4-s7|d2-d3|q1|動態|參數、臨時暫存器|
@@ -116,7 +116,7 @@ Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示�
 
 下一個表格說明浮點狀態和控制暫存器 (FPSCR) 位元欄位：
 
-|Bits|意義|動態？|[角色]|
+|Bits|意義|動態？|角色|
 |----------|-------------|---------------|----------|
 |31-28|NZCV|動態|狀態旗標|
 |27|QC|動態|累加飽和度|
@@ -201,7 +201,7 @@ Windows 中預設核心模式堆疊是三個頁面 (12 KB)。 請注意，在核
 
 列舉型別是 32 位元整數類型，除非列舉型別中至少有一個值需要 64 位元雙字組儲存區。 在該情況下，列舉型別會提升至 64 位元整數類型。
 
-`wchar_t` 定義為等同於 `unsigned short`，以保留與其他平台的相容性。
+**`wchar_t`** 定義為相當於 **`unsigned short`** ，以保留與其他平臺的相容性。
 
 ## <a name="stack-walking"></a>堆疊流覽
 
@@ -221,7 +221,7 @@ ARM EABI 會指定使用回溯程式碼的例外狀況回溯模型。 不過，�
 
 計數器是真正的週期計數器，不是時鐘；因此，計數頻率隨處理器頻率而變化。 如果您要測量經歷的時鐘時間，請使用 `QueryPerformanceCounter`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual C++ ARM 移轉時常見的問題](common-visual-cpp-arm-migration-issues.md)<br/>
 [ARM 例外狀況處理](arm-exception-handling.md)

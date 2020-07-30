@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 89b28ae396322859596b99ba56a28375e9c9d6d5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742115"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232023"
 ---
 # <a name="compiler-error-c3020"></a>編譯器錯誤 C3020
 
 ' var '： OpenMP ' for ' 迴圈的索引變數無法在迴圈主體中修改
 
-OpenMP `for` 迴圈可能無法修改 `for` 迴圈主體中的索引（迴圈計數器）。
+OpenMP **`for`** 迴圈可能無法修改迴圈主體中的索引（迴圈計數器） **`for`** 。
 
 下列範例會產生 C3020：
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 78f90ee1c44a0d42e529a027b1e7fc90a0da3cdb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f6f20d9af424fdd4254fc15e0580d62b9dfba144
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738319"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184471"
 ---
 # <a name="compiler-error-c3491"></a>編譯器錯誤 C3491
 
@@ -19,9 +19,9 @@ ms.locfileid: "74738319"
 
 不可變的 Lambda 運算式不能修改以傳值方式擷取的變數的值。
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
-- 請使用 `mutable` 關鍵字宣告 Lambda 運算式，或
+- 使用關鍵字宣告您的 lambda 運算式 **`mutable`** ，或
 
 - 以傳址方式將變數傳遞到 Lambda 運算式的擷取清單。
 
@@ -41,7 +41,7 @@ int main()
 
 ## <a name="example"></a>範例
 
-下列範例藉由使用 `mutable` 關鍵字宣告 Lambda 運算式，解決了 C3491：
+下列範例會藉由使用關鍵字宣告 lambda 運算式來解析 C3491 **`mutable`** ：
 
 ```cpp
 // C3491b.cpp
@@ -53,6 +53,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

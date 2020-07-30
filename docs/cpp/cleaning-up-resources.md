@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180859"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229047"
 ---
 # <a name="cleaning-up-resources"></a>清除資源
 
@@ -26,7 +26,7 @@ ms.locfileid: "80180859"
 
 1. 在 **__try**語句區塊中，配置資源。 資源一配置，控制代碼就會設定為正值。
 
-1. 在 **__finally**語句區塊中，釋放對應的控制碼或旗標變數為非零或非 Null 的每個資源。
+1. 在 **`__finally`** 語句區塊中，釋放對應的控制碼或旗標變數為非零或非 Null 的每個資源。
 
 ## <a name="example"></a>範例
 
@@ -73,4 +73,4 @@ int main() {
 ## <a name="see-also"></a>另請參閱
 
 [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
-[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

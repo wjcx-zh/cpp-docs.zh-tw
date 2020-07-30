@@ -37,12 +37,12 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-ms.openlocfilehash: 58fa41a2824f86411cab50b11eedd922739ed5b1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b02219ba0afa37fdff02b6848540064d12cd001d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909344"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229372"
 ---
 # <a name="_sopen-_wsopen"></a>_sopen、_wsopen
 
@@ -67,7 +67,7 @@ int _wsopen(
 
 ### <a name="parameters"></a>參數
 
-*名稱*<br/>
+*filename*<br/>
 檔案名稱
 
 *oflag*<br/>
@@ -107,7 +107,7 @@ int _wsopen(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen**|**_sopen**|**_sopen**|**_wsopen**|
 
-整數運算式*oflag*是藉由結合下列一個或多個在 fcntl.h> 中\<定義的資訊清單常數所組成。>。 當兩個或多個常數形成引數*oflag*時，它們會與位 or 運算子（ **&#124;** ）結合。
+整數運算式*oflag*是藉由結合下列定義在中的一或多個資訊清單常數來形成 \<fcntl.h> 。 當兩個或多個常數形成引數*oflag*時，它們會與位 or 運算子（ **&#124;** ）結合。
 
 |*oflag*常數|行為|
 |-|-|
@@ -131,11 +131,11 @@ int _wsopen(
 
 若要指定檔案存取模式，您必須指定 [ **_O_RDONLY**]、[ **_O_RDWR**] 或 [ **_O_WRONLY**]。 存取模式沒有預設值。
 
-當使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**以 Unicode 模式開啟檔案時，輸入函式會將從檔案讀取的資料轉譯為儲存為類型**wchar_t**的 utf-16 資料。 寫入以 Unicode 模式開啟之檔案的函式，會預期包含以類型**wchar_t**儲存之 utf-16 資料的緩衝區。 若檔案是編碼為 UTF-8，則會在寫入 UTF-16 資料時轉譯為 UTF-8，且會在讀取檔案的 UTF-8 編碼內容時轉譯成 UTF-16。 嘗試以 Unicode 模式讀取或寫入奇數位元組會導致參數驗證錯誤。 若要讀取或寫入作為 UTF-8 儲存在您程式裡的資料時，請使用文字或二進位檔案模式，不要使用 Unicode 模式。 您要負責所有必要的編碼轉譯。
+使用 **_O_WTEXT**、 **_O_U8TEXT**或 **_O_U16TEXT**以 Unicode 模式開啟檔案時，輸入函式會將從檔案讀取的資料，轉譯為儲存為類型的 utf-16 資料 **`wchar_t`** 。 寫入以 Unicode 模式開啟之檔案的函式，會預期包含儲存為類型之 UTF-16 資料的緩衝區 **`wchar_t`** 。 若檔案是編碼為 UTF-8，則會在寫入 UTF-16 資料時轉譯為 UTF-8，且會在讀取檔案的 UTF-8 編碼內容時轉譯成 UTF-16。 嘗試以 Unicode 模式讀取或寫入奇數位元組會導致參數驗證錯誤。 若要讀取或寫入作為 UTF-8 儲存在您程式裡的資料時，請使用文字或二進位檔案模式，不要使用 Unicode 模式。 您要負責所有必要的編碼轉譯。
 
-如果以 **_O_WRONLY** | **_O_APPEND** （附加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**呼叫 **_sopen** ，它會先嘗試開啟檔案以進行讀取和寫入、讀取 BOM，然後重新開啟以供寫入。 若開啟檔案以供讀取和寫入失敗，則會僅針對寫入開啟檔案，並使用 Unicode 模式設定的預設值。
+如果 **_sopen**以 **_O_WRONLY**  |  **_O_APPEND** （附加模式）和 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**呼叫 _sopen，它會先嘗試開啟檔案以進行讀取和寫入、讀取 BOM，然後重新開啟以供寫入。 若開啟檔案以供讀取和寫入失敗，則會僅針對寫入開啟檔案，並使用 Unicode 模式設定的預設值。
 
-引數*shflag*是由下列其中一個資訊清單常數所組成的常數運算式，它們定義于\<share. h> 中。
+引數*shflag*是常數運算式，由中定義的下列其中一個資訊清單常數所組成 \<share.h> 。
 
 |*shflag*常數|行為|
 |-|-|
@@ -144,7 +144,7 @@ int _wsopen(
 | **_SH_DENYRD** | 拒絕對檔案的讀取存取。 |
 | **_SH_DENYNO** | 允許讀取和寫入存取。 |
 
-只有在指定 **_O_CREAT**時，才需要*pmode*引數。 如果檔案不存在， *pmode*就會指定檔案的許可權設定，當第一次關閉新的檔案時，就會設定這個值。 否則，會忽略*pmode* 。 *pmode*是一個整數運算式，其中包含一或兩個資訊清單常數 **_S_IWRITE**和 **_S_IREAD**，其定義于\<sys\stat.h> 中。 指定兩個常數時，會使用位元 OR 運算子加以結合。 *Pmode*的意義如下所示。
+只有在指定 **_O_CREAT**時，才需要*pmode*引數。 如果檔案不存在， *pmode*就會指定檔案的許可權設定，當第一次關閉新的檔案時，就會設定這個值。 否則，會忽略*pmode* 。 *pmode*是一個整數運算式，其中包含 **_S_IWRITE**和 **_S_IREAD**的其中一個或兩個資訊清單常數，其定義于中 \<sys\stat.h> 。 指定兩個常數時，會使用位元 OR 運算子加以結合。 *Pmode*的意義如下所示。
 
 |*pmode*|意義|
 |-|-|
@@ -152,7 +152,7 @@ int _wsopen(
 | **_S_IWRITE** | 允許寫入。 (實際上允許讀取和寫入)。 |
 | **_S_IREAD** &#124; **_S_IWRITE** | 允許讀取和寫入。 |
 
-若沒有指定寫入權限，則檔案為唯讀。 在 Windows 作業系統中，所有檔案皆為可讀取，不可能授與僅限寫入的權限。 因此， **_S_IWRITE**和 **_S_IREAD** | **_S_IWRITE**的模式是相等的。
+若沒有指定寫入權限，則檔案為唯讀。 在 Windows 作業系統中，所有檔案皆為可讀取，不可能授與僅限寫入的權限。 因此， **_S_IWRITE**和 **_S_IREAD**  |  **_S_IWRITE**的模式是相等的。
 
 **_sopen**在設定許可權之前，將目前的檔案許可權遮罩套用至*pmode* 。 (請參閱 [_umask](umask.md))。
 
@@ -160,8 +160,8 @@ int _wsopen(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
-|**_sopen**|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|
-|**_wsopen**|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|
+|**_sopen**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
+|**_wsopen**|\<io.h> 或 \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
@@ -171,7 +171,7 @@ int _wsopen(
 
 ## <a name="see-also"></a>另請參閱
 
-[低層級 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[低層級 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>

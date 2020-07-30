@@ -6,18 +6,18 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 4640bcf5f21bbe018a8744a6c5206bdd09509c98
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 23567ff2c4ff431ba3dccdb600e5d7b3e848c852
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749653"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229008"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
-要自訂類別的初始化方式,或在建立類別物件時呼叫函數,請定義*建構函數*。 建構函式的名稱與類別的名稱相同，但沒有傳回值。 您可以根據需要定義盡可能多的重載構造函數,以便以各種方式自定義初始化。 通常,建構函數具有公共可存取性,以便類定義或繼承層次結構以外的代碼可以創建類的物件。 但是,您也可以聲明建構函數為**受保護**或**私有**。
+若要自訂類別成員的初始化方式，或在建立類別的物件時叫用函式，請*定義一個程式*。 建構函式的名稱與類別的名稱相同，但沒有傳回值。 您可以視需要定義任意數目的多載的函式，以各種方式自訂初始化。 一般而言，這些函式具有公用存取範圍，因此類別定義或繼承階層外的程式碼可以建立類別的物件。 但是，您也可以將函式宣告為 **`protected`** 或 **`private`** 。
 
-建構函數可以選擇採用成員在 itit 清單中。 與構造函數正文中分配值相比,這是初始化類成員的更有效方法。 下面的示例顯示了具有三個`Box`重載構造函數的類。 最後兩個使用成員 initit 清單:
+您可以選擇性地採用成員 init 清單。 這是初始化類別成員的更有效率方式，而不是在函式主體中指派值。 下列範例顯示具有三個多載的函式的類別 `Box` 。 最後兩個使用成員 init 清單：
 
 ```cpp
 class Box {
@@ -46,7 +46,7 @@ private:
 };
 ```
 
-宣告類別的實體時,編譯器根據重載解析規則選擇要呼叫的建構函數:
+當您宣告類別的實例時，編譯器會根據多載解析的規則，選擇要叫用的函式：
 
 ```cpp
 int main()
@@ -62,15 +62,15 @@ int main()
 }
 ```
 
-- 建構函式可以宣告為**內聯**、[顯式](#explicit_constructors)、**友或**[共](#constexpr_constructors)。
-- 建構函數可以初始化已聲明為**const、****易失性**或**共變性**的物件。 構造函數完成後,該物件將變為**同一**物件。
-- 要在實現檔案中定義建構函數,請指定名稱,就像使用任何其他成員函數一樣: `Box::Box(){...}`.
+- 可以宣告為 **`inline`** 、 [explicit](#explicit_constructors) **`friend`** 或[constexpr](#constexpr_constructors)。
+- 函式可以初始化已宣告為、或的物件 **`const`** **`volatile`** **`const volatile`** 。 物件會在 **`const`** 完成後變成。
+- 若要在執行檔中定義函式，請為它提供與任何其他成員函式相同的限定名稱： `Box::Box(){...}` 。
 
-## <a name="member-initializer-lists"></a><a name="member_init_list"></a>成員初始化程式清單
+## <a name="member-initializer-lists"></a><a name="member_init_list"></a>成員初始化運算式清單
 
-建構函數可以選擇具有成員初始化器列表,該列表在建構函數正文執行之前初始化類成員。 (請注意,成員初始化程式列表與類型[std::initializer_list\<T>](../standard-library/initializer-list-class.md)的*初始化程式清單*不是同一回事。
+函式可以選擇性地擁有成員初始化運算式清單，它會在執行此函式主體之前，先將類別成員初始化。 （請注意，成員初始化運算式清單與[std：： initializer_list \<T> ](../standard-library/initializer-list-class.md)類型的*初始化運算式清單*不同。）
 
-使用成員初始化程式清單比在建構函數正文中分配值更可取,因為它直接初始化了成員。 在下面的範例中顯示成員初始化器清單由冒號後的所有**識別符(參數)** 表示式組成:
+建議使用成員初始化運算式清單，而不是在此函式的主體中指派值，因為它會直接初始化成員。 在下列範例中，成員初始化運算式清單是由冒號後面的所有**識別碼（引數）** 運算式所組成：
 
 ```cpp
     Box(int width, int length, int height)
@@ -78,15 +78,15 @@ int main()
     {}
 ```
 
-標識符必須引用類成員;但是,標識符必須引用一個類成員。它用參數的值初始化。 參數可以是建構函數參數之一、函數呼叫或[\<std::initializer_list T>](../standard-library/initializer-list-class.md)。
+識別碼必須參考類別成員;它會以引數的值進行初始化。 引數可以是其中一個函式參數、函式呼叫或[std：： initializer_list \<T> ](../standard-library/initializer-list-class.md)。
 
-必須在成員初始化器清單中初始化引用類型的**const**成員和成員。
+**`const`** 成員和參考型別的成員必須在成員初始化運算式清單中初始化。
 
-應在初始化器清單中調用參數化的基類構造函數,以確保在執行派生構造函數之前完全初始化基類。
+應該在初始化運算式清單中建立參數化基類的函式，以確保在執行衍生的函式之前，會完全初始化基類。
 
-## <a name="default-constructors"></a><a name="default_constructors"></a>預設建構函式
+## <a name="default-constructors"></a><a name="default_constructors"></a>預設的構造函式
 
-*預設建構函數*通常沒有參數,但它們可以具有具有預設值的參數。
+*預設*的處理函式通常不會有參數，但可以有具有預設值的參數。
 
 ```cpp
 class Box {
@@ -99,7 +99,7 @@ public:
 }
 ```
 
-默認構造函數是[特殊成員函數](special-member-functions.md)之一。 如果在類中沒有聲明構造函數,編譯器提供隱式**內聯**預設構造函數。
+預設的函式是其中一個[特殊成員](special-member-functions.md)函式。 如果在類別中未宣告任何函式，編譯器會提供隱含的 **`inline`** 預設程式。
 
 ```cpp
 #include <iostream>
@@ -120,18 +120,18 @@ int main() {
 }
 ```
 
-如果依賴於隱式預設構造函數,請確保初始化類定義中的成員,如上例所示。 如果沒有這些初始化程序,成員將取消初始化,並且Volume() 呼叫將生成垃圾值。 通常,即使不依賴於隱式預設構造函數,也可以以這種方式初始化成員是一種好的做法。
+如果您依賴隱含的預設函式，請務必初始化類別定義中的成員，如先前範例所示。 如果沒有這些初始化運算式，成員就會未初始化，而 Volume （）呼叫會產生一個垃圾值。 一般來說，以這種方式初始化成員是很好的做法，即使不依賴隱含的預設函式也是如此。
 
-以將編譯器定義為[已刪除](#explicitly_defaulted_and_deleted_constructors)的 ,可以防止編譯器產生隱式預設建構函數:
+您可以藉由將隱含預設的函式定義為[deleted](#explicitly_defaulted_and_deleted_constructors)，以防止編譯器產生該函式：
 
 ```cpp
     // Default constructor
     Box() = delete;
 ```
 
-如果任何類成員不是預設可建構的,編譯器生成的預設構造函數將定義為已刪除。 例如,類類型的所有成員及其類類型成員必須具有可訪問的預設構造函數和析構函數。 引用類型的所有資料成員以及**const**成員必須具有預設成員初始化程式。
+如果任何類別成員不是預設的可建構，則編譯器產生的預設函式將會定義為已刪除。 例如，類別類型的所有成員及其類別類型成員，都必須具有可存取的預設的函式和析構函數。 參考型別和成員的所有資料成員都 **`const`** 必須有預設成員初始化運算式。
 
-當您呼叫編譯器產生的預設建構函數並嘗試使用括弧時,將發出警告:
+當您呼叫編譯器產生的預設函式並嘗試使用括弧時，會發出警告：
 
 ```cpp
 class myclass{};
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-這是「最令人惱怒的語法解析」(Most Vexing Parse) 問題範例。 由於範例運算式可解譯為函式的宣告或做為預設建構函式的引動過程，而且由於 C++ 剖析器偏好宣告更勝於其他項目，因此運算式被視為函式宣告。 有關詳細資訊,請參閱[大多數維興分析](https://en.wikipedia.org/wiki/Most_vexing_parse)。
+這是「最令人惱怒的語法解析」(Most Vexing Parse) 問題範例。 由於範例運算式可解譯為函式的宣告或做為預設建構函式的引動過程，而且由於 C++ 剖析器偏好宣告更勝於其他項目，因此運算式被視為函式宣告。 如需詳細資訊，請參閱[大部分的令人傷腦筋剖析](https://en.wikipedia.org/wiki/Most_vexing_parse)。
 
 如果已宣告任何非預設建構函式，編譯器不會提供預設建構函式：
 
@@ -170,19 +170,19 @@ int main(){
 Box boxes[3]; // C2512: no appropriate default constructor available
 ```
 
-但是,您可以使用一組初始化器列表來初始化 Box 物件陣列:
+不過，您可以使用一組初始化運算式清單來初始化 Box 物件的陣列：
 
 ```cpp
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 ```
 
-有關詳細資訊,請參閱[初始化器](initializers.md)。
+如需詳細資訊，請參閱[初始化運算式](initializers.md)。
 
-## <a name="copy-constructors"></a><a name="copy_and_move_constructors"></a>複製建構函式
+## <a name="copy-constructors"></a><a name="copy_and_move_constructors"></a>複製構造函式
 
-*複製建構函數*通過從相同類型的物件複製成員值來初始化物件。 如果類成員都是簡單的類型(如標量值),編譯器生成的複製構造函數就足夠了,並且不需要定義自己的。 如果類需要更複雜的初始化,則需要實現自定義複製構造函數。 例如,如果類成員是指針,則需要定義一個複製構造函數來分配新記憶體並從另一個指向物件複製值。 編譯器生成的複製構造函數只需複製指標,以便新指標仍指向另一個指標的記憶體位置。
+*複製*的函式會從相同類型的物件複製成員值，以初始化物件。 如果您的類別成員都是簡單類型（例如純量值），則編譯器產生的複製函式就已足夠，您不需要自行定義。 如果您的類別需要更複雜的初始化，則您需要執行自訂複製的函式。 例如，如果類別成員是指標，則您需要定義複製的函式來配置新的記憶體，並從另一個指向的物件複製值。 編譯器產生的複製函式只會複製指標，使新指標仍然指向另一個記憶體位置。
 
-複製建構函數可能具有以下簽名之一:
+複製的函式可能會有下列其中一種簽章：
 
 ```cpp
     Box(Box& other); // Avoid if possible--allows modification of other.
@@ -194,25 +194,25 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-定義複製構造函數時,還應定義複製賦值運算符 (*)。 有關詳細資訊,請參閱[分配](assignment.md)和[複製建構函數和複製賦值運算符號](copy-constructors-and-copy-assignment-operators-cpp.md)。
+當您定義複製的構造函式時，您也應該定義複製指派運算子（=）。 如需詳細資訊，請參閱[指派](assignment.md)和[複製函數和複製指派運算子](copy-constructors-and-copy-assignment-operators-cpp.md)。
 
-以複製建構函數定義為已刪除,可以防止物件被複製:
+您可以藉由將複製的函式定義為已刪除，來防止複製物件：
 
 ```cpp
     Box (const Box& other) = delete;
 ```
 
-試著複製物件會產生錯誤*C2280:嘗試參考已刪除的函數*。
+嘗試複製物件會產生錯誤*C2280：嘗試參考已刪除的*函式。
 
-## <a name="move-constructors"></a><a name="move_constructors"></a>移動建構函式
+## <a name="move-constructors"></a><a name="move_constructors"></a>移動構造函式
 
-*移動建構函數*是一種特殊的成員函數,用於在不複製原始資料的情況下將現有物件數據的擁有權移動到新變數。 它採用 rvalue 引用作為其第一個參數,並且任何其他參數都必須具有預設值。 移動構造函數可以顯著提高程式在大型物件周圍傳遞時的效率。
+*移動*函式是特殊的成員函式，可將現有物件資料的擁有權移至新的變數，而不需要複製原始資料。 它會採用右值參考做為其第一個參數，而且任何其他參數都必須有預設值。 移動的函式在傳遞大型物件時，可以大幅提高程式的效率。
 
 ```cpp
 Box(Box&& other);
 ```
 
-在某些情況下,編譯器會選擇移動構造函數,該物件正被即將銷毀且不再需要其資源的同一類型的另一個物件初始化。 下面的示例顯示一個案例,當移動構造函數選擇重載解析度時。 在調用`get_Box()`的構造函數中,返回的值是*x 值*(eXpiring 值)。 它不分配給任何變數,因此即將超出範圍。 為了提供此示例的動機,讓我們為 Box 提供表示其內容的大型字串向量。 移動構造函數不是複製向量及其字串,而是從過期值"box"中"竊取"它,以便向量現在屬於新物件。 調用`std::move`是所有所需的全部,因為兩個類`vector``string`和 類都實現自己的移動構造函數。
+在某些情況下，編譯器會選擇移動函式，而該物件會由另一個要終結且不再需要其資源的相同類型物件進行初始化。 下列範例示範當多載解析選取移動函式時的一種情況。 在呼叫的函 `get_Box()` 式中，傳回的值是*xvalue* （到期值）。 它不會指派給任何變數，因此即將超出範圍。 為提供此範例的動機，讓我們為 Box 指定一個代表其內容的大型字串向量。 移動函式不會複製向量和其字串，而是將它從過期的值 "box" 中「竊取」，使向量現在屬於新的物件。 對的呼叫 `std::move` 全都是必要的，因為 `vector` 和 `string` 類別都會執行自己的移動函式。
 
 ```cpp
 #include <iostream>
@@ -279,15 +279,15 @@ int main()
 }
 ```
 
-如果類未定義移動構造函數,則如果沒有使用者聲明的複製構造函數、複製賦值運算符、移動賦值運算符或析構函數,編譯器將生成隱式構造函數。 如果未定義顯式或隱式移動構造函數,則以其他方式使用行動構造函數的操作將改為使用複製構造函數。 如果類聲明移動構造函數或移動賦值運算符,則隱式聲明的複製構造函數定義為已刪除。
+如果類別未定義移動函式，則編譯器會在沒有使用者宣告的複製程式、複製指派運算子、移動指派運算子或析構函數時產生隱含的。 如果未定義明確或隱含的移動函式，則會改為使用移動程式的作業，而改用複製的建構函式。 如果類別宣告移動函數或移動指派運算子，則會將隱含宣告的複製函式定義為 deleted。
 
-如果類類型的任何成員缺少析構函數,或者編譯器無法確定要用於移動操作的構造函數,則隱式聲明的移動構造函數定義為已刪除。
+如果任何屬於類別類型的成員缺少「析構函式」，或編譯器無法判斷要用於移動作業的哪個「檢查程式」，則會將隱含宣告的移動函式定義為「已刪除」。
 
-有關如何編寫非普通移動構造函數的詳細資訊,請參閱[移動構造函數和移動賦值運算符 (C++)。](../cpp/move-constructors-and-move-assignment-operators-cpp.md)
+如需如何撰寫非一般移動函式的詳細資訊，請參閱[移動函數和移動指派運算子（c + +）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
 
-## <a name="explicitly-defaulted-and-deleted-constructors"></a><a name="explicitly_defaulted_and_deleted_constructors"></a>明確預設與移除建構函式
+## <a name="explicitly-defaulted-and-deleted-constructors"></a><a name="explicitly_defaulted_and_deleted_constructors"></a>明確預設和已刪除的函式
 
-您可以顯式*預設*複製建構函數、預設構造函數、移動構造函數、複製賦值運算符、移動賦值運算符和析構函數。 您可以顯示式*刪除*所有特殊成員函數。
+您可以明確地*預設*複製的函式、預設的函式、移動的函數、複製指派運算子、移動指派運算子和析構函數。 您可以明確地*刪除*所有特殊成員函式。
 
 ```cpp
 class Box
@@ -302,23 +302,23 @@ public:
 };
 ```
 
-有關詳細資訊,請參閱[顯式預設和刪除函數](../cpp/explicitly-defaulted-and-deleted-functions.md)。
+如需詳細資訊，請參閱[明確預設和已刪除的函](../cpp/explicitly-defaulted-and-deleted-functions.md)式。
 
-## <a name="constexpr-constructors"></a><a name="constexpr_constructors"></a>康特克斯普魯構造函數
+## <a name="constexpr-constructors"></a><a name="constexpr_constructors"></a>constexpr 函式
 
-如果[constexpr](constexpr-cpp.md)
+如果是，則可以將此函式宣告為[constexpr](constexpr-cpp.md) 。
 
-- 它被聲明為預設,或者滿足[一般缺點函數](constexpr-cpp.md#constexpr_functions)的所有條件;
-- 類沒有虛擬基類;
-- 每個參數都是[一個文字類型](trivial-standard-layout-and-pod-types.md#literal_types);
-- 身體不是功能嘗試塊;
-- 所有非靜態數據成員和基類子物件都初始化;
-- 如果類是 (a) 具有變體成員的工會,或者 (b) 具有匿名聯合,則只有一個工會成員被初始化;
-- 類別類型的每個非靜態資料成員,並且所有基類子物件都有一個 constexpr 構造函數
+- 它會宣告為預設值，否則它會滿足一般[constexpr](constexpr-cpp.md#constexpr_functions)函式的所有條件;
+- 類別沒有虛擬基類;
+- 每個參數都是[常數值型別](trivial-standard-layout-and-pod-types.md#literal_types);
+- 主體不是函式 try 區塊;
+- 所有的非靜態資料成員和基類子物件都會初始化;
+- 如果類別為（a）具有 variant 成員的聯集，或（b）具有匿名等位，則只會初始化其中一個聯集成員;
+- 類別類型的每個非靜態資料成員和所有基類子物件都有 constexpr 函式
 
-## <a name="initializer-list-constructors"></a><a name="init_list_constructors"></a>初始化器清單建構函式
+## <a name="initializer-list-constructors"></a><a name="init_list_constructors"></a>初始化運算式清單的構造函式
 
-如果構造函數以[\<std::initializer_list\>T](../standard-library/initializer-list-class.md)作為其參數,並且任何其他參數具有預設參數,則當通過直接初始化實例化類時,將以重載解析度選擇該構造函數。 您可以使用initializer_list初始化任何可以接受它的成員。 例如,假設 Box 類別(前面顯示`std::vector<string>`)`m_contents`有成員 。 您可以提供以下的構構函數:
+如果某個處理常式採用[std：： initializer_list \<T\> ](../standard-library/initializer-list-class.md)做為其參數，而且任何其他參數都有預設引數，則會在透過直接初始化來具現化類別時，在多載解析中選取該函式。 您可以使用 initializer_list，初始化任何可以接受它的成員。 例如，假設 Box 類別（先前所示）具有 `std::vector<string>` 成員 `m_contents` 。 您可以提供如下所示的函式：
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -326,14 +326,14 @@ public:
 {}
 ```
 
-然後建立以下的 Box 物件:
+然後建立 Box 物件，如下所示：
 
 ```cpp
     Box b{ "apples", "oranges", "pears" }; // or ...
     Box b2(initializer_list<string> { "bread", "cheese", "wine" }, 2, 4, 6);
 ```
 
-## <a name="explicit-constructors"></a><a name="explicit_constructors"></a>明確建構函數
+## <a name="explicit-constructors"></a><a name="explicit_constructors"></a>明確的函式
 
 如果類別的建構函式具有單一參數，或者，所有參數 (但其中一個除外) 都有預設值，則參數類型可以隱含地轉換為類別類型。 例如，如果 `Box` 類別具有建構函式，如下：
 
@@ -363,15 +363,15 @@ private:
     ShippingOrder so(42, 10.8);
 ```
 
-在某些情況下，這類轉換十分有用，但它們可能更常導致您程式碼中的細微但嚴重的錯誤。 通常,應在建構函數(和使用者定義的運算子)上使用**顯式**關鍵字來防止此類隱式類型轉換:
+在某些情況下，這類轉換十分有用，但它們可能更常導致您程式碼中的細微但嚴重的錯誤。 一般的規則是，您應該在函 **`explicit`** 式（和使用者定義的運算子）上使用關鍵字，以避免這類隱含類型轉換：
 
 ```cpp
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-建構函式是明確建構函式時，此行會造成編譯器錯誤：`ShippingOrder so(42, 10.8);`。  有關詳細資訊,請參閱[使用者定義的類型轉換](../cpp/user-defined-type-conversions-cpp.md)。
+建構函式是明確建構函式時，此行會造成編譯器錯誤：`ShippingOrder so(42, 10.8);`。  如需詳細資訊，請參閱[使用者定義型別轉換](../cpp/user-defined-type-conversions-cpp.md)。
 
-## <a name="order-of-construction"></a><a name="order_of_construction"></a>施工順序
+## <a name="order-of-construction"></a><a name="order_of_construction"></a>結構的順序
 
 建構函式會依此順序執行其工作：
 
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-衍生類別建構函式一定會呼叫基底類別建構函式，因此，它可以依賴完全建構的基底類別，才進行任何額外的工作。 根據派生的順序調用`ClassA`基類構造函數, 例如,如果派生自`ClassB`派生`ClassC`於 ,則先調用`ClassC`構造 函`ClassB`數,`ClassA`然後是構造 函數,然後是構造函數。
+衍生類別建構函式一定會呼叫基底類別建構函式，因此，它可以依賴完全建構的基底類別，才進行任何額外的工作。 基類的函式會以衍生的順序呼叫，例如，如果衍生自衍生自的 `ClassA` `ClassB` ， `ClassC` 則會先呼叫此函式， `ClassC` 然後再呼叫此 `ClassB` 函 `ClassA` 式，然後是函式，然後是該函式。
 
 如果基底類別沒有預設建構函式，您必須在衍生類別建構函式中提供基底類別建構函式參數：
 
@@ -478,9 +478,9 @@ int main(){
 
 1. 如果建構函式為非委派，所有完全建構的基底類別物件和成員都會終結。 不過，因為物件本身未完全建構，所以不會執行解構函式。
 
-## <a name="derived-constructors-and-extended-aggregate-initialization"></a><a name="extended_aggregate"></a>衍生函數和擴充聚合初始化
+## <a name="derived-constructors-and-extended-aggregate-initialization"></a><a name="extended_aggregate"></a>衍生的函數和擴充的匯總初始化
 
-如果基類的構造函數是非公共的,但派生類可以訪問,那麼在 Visual Studio 2017 和更高版本中的 **/std:c++17**模式下,不能使用空大括弧初始化派生類型的物件。
+如果基類的函式不是公用的，但衍生類別可存取，則在 Visual Studio 2017 和更新版本中的 **/std： c + + 17**模式下，您將無法使用空的大括弧來初始化衍生類型的物件。
 
 下列範例顯示 C++14 一致性行為：
 
@@ -502,7 +502,7 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
 
 在 C++17 中，`Derived` 已視作彙總類型。 因此，透過私用預設建構函式將 `Base` 初始化會直接包含在擴充彙總初始化規則的過程。 `Base` 私用建構函式在先前會透過 `Derived` 建構函式呼叫，而成功的因素是 friend 宣告所致。
 
-以下範例顯示了 visual Studio 2017 中C++17的行為,以及**隨後在 /std:c++17**模式下的行為:
+下列範例顯示在 **/std： c + + 17**模式中 Visual Studio 2017 和更新版本中的 c + + 17 行為：
 
 ```cpp
 struct Derived;
@@ -524,7 +524,7 @@ Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
 
-### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>具有多個繼承的類別建構函數
+### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>具有多重繼承之類別的構造函式
 
 如果類別從多個基底類別衍生，基底類別建構函式是依照其列在衍生類別宣告中的順序進行叫用：
 
@@ -566,9 +566,9 @@ BaseClass3 ctor
 DerivedClass ctor
 ```
 
-## <a name="delegating-constructors"></a><a name="delegating_constructors"></a>委派建構函數
+## <a name="delegating-constructors"></a><a name="delegating_constructors"></a>委派的函式
 
-*委派構造函數*調用同一類中的不同構造函數來執行一些初始化工作。 當您有多個構造函數必須執行類似的工作時,這非常有用。 您可以在一個構造函數中編寫主邏輯,並從其他構造函數中調用它。 在下面的瑣碎示例中,Box(int) 將其工作委託給 Box(int、int、int):
+*委派*的函式會在相同的類別中呼叫不同的函式，以執行一些初始化工作。 當您有多個必須執行類似工作的函式時，這會很有用。 您可以在一個函式中撰寫主要邏輯，並從其他函式加以叫用。 在下列簡單的範例中，Box （int）會將其工作委派給 Box （int，int，int）：
 
 ```cpp
 class Box {
@@ -588,11 +588,11 @@ public:
 };
 ```
 
-在任何建構函式完成時，建構函式建立的物件會立即完全初始化。 有關詳細資訊,請參閱[委派構造函數](../cpp/delegating-constructors.md)。
+在任何建構函式完成時，建構函式建立的物件會立即完全初始化。 如需詳細資訊，請參閱[委派](../cpp/delegating-constructors.md)函式。
 
-## <a name="inheriting-constructors-c11"></a><a name="inheriting_constructors"></a>繼承建構函數 (C++11)
+## <a name="inheriting-constructors-c11"></a><a name="inheriting_constructors"></a>繼承函式（c + + 11）
 
-派生類可以使用**using**聲明從直接基類繼承構造函數,如以下範例所示:
+衍生類別可以使用宣告，從直接基類繼承函式， **`using`** 如下列範例所示：
 
 ```cpp
 #include <iostream>
@@ -643,7 +643,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 及更高版本**:**在 /std:c++17**模式下**使用**語句將基類中的所有構造函數(與派生類中的建構函數具有相同簽名的構造函數除外)引入範圍。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[Visual Studio 2017 版本 15.7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)中的改進。
+**Visual Studio 2017 和更新版本**： **`using`** **/std： c + + 17**模式中的語句會將基類中的所有函式都納入範圍，除了在衍生類別中具有相同簽章的簽章。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[Visual Studio 2017 15.7 版中的增強功能](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
 
 ::: moniker-end
 
@@ -659,9 +659,9 @@ class Derived : T {
 
 如果多個基底類別的建構函式具有相同簽章，則衍生類別無法繼承自這些基底類別。
 
-## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a>建構函數和複合類
+## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a>構造函式和複合類別
 
-包含類別型態成員的類別稱為*複合類*。 在建立複合類別的類別類型成員時，會先呼叫建構函式，然後呼叫類別自己的建構函式。 當包含的類別缺少預設建構函式時，您必須在複合類別的建構函式中使用初始設定清單。 在先前的 `StorageBox` 範例中，如果將 `m_label` 成員變數的類型變更為新的 `Label` 類別，您必須呼叫基底類別建構函式和初始化 `m_label` 建構函式中的 `StorageBox` 變數：
+包含類別類型成員的類別稱為「*複合類別*」。 在建立複合類別的類別類型成員時，會先呼叫建構函式，然後呼叫類別自己的建構函式。 當包含的類別缺少預設建構函式時，您必須在複合類別的建構函式中使用初始設定清單。 在先前的 `StorageBox` 範例中，如果將 `m_label` 成員變數的類型變更為新的 `Label` 類別，您必須呼叫基底類別建構函式和初始化 `m_label` 建構函式中的 `StorageBox` 變數：
 
 ```cpp
 class Label {
@@ -694,8 +694,8 @@ int main(){
 
 ## <a name="in-this-section"></a>本節內容
 
-- [複製建構函式和複製分配運算子](copy-constructors-and-copy-assignment-operators-cpp.md)
-- [移動建構函數和行動賦值運算子](move-constructors-and-move-assignment-operators-cpp.md)
+- [複製建構函式和複製指派運算子](copy-constructors-and-copy-assignment-operators-cpp.md)
+- [移動建構函式和移動指派運算子](move-constructors-and-move-assignment-operators-cpp.md)
 - [委派建構函式](delegating-constructors.md)
 
 ## <a name="see-also"></a>另請參閱

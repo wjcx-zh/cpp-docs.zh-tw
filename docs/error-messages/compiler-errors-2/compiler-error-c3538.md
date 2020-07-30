@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 290faa1a227920cd46f32a4adf0dd6a6f3687c6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761539"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233362"
 ---
 # <a name="compiler-error-c3538"></a>編譯器錯誤 C3538
 
@@ -19,13 +19,13 @@ ms.locfileid: "74761539"
 
 宣告清單中所有已宣告的變數未解析為相同類型。
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
-1. 確定清單中的所有 `auto` 宣告推算為相同類型。
+1. 請確定清單中的所有宣告都會推算 **`auto`** 成相同的類型。
 
 ## <a name="example"></a>範例
 
-下列陳述式會產生 C3538。 每個陳述式宣告了多個變數，但所使用的每個 `auto` 關鍵字未推算為相同類型。
+下列陳述式會產生 C3538。 每個語句都會宣告多個變數，但每次使用 **`auto`** 關鍵字並不會推算成相同的類型。
 
 ```cpp
 // C3538.cpp
@@ -45,6 +45,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [auto 關鍵字](../../cpp/auto-keyword.md)

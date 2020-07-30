@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78544424b727797158109fa3000ee2ebf8066cf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957936"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229320"
 ---
 # <a name="_static_assert-macro"></a>_STATIC_ASSERT 巨集
 
@@ -47,11 +47,11 @@ _STATIC_ASSERT(
 
 ## <a name="remarks"></a>備註
 
-這個宏與[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)相似，不同之處在于*booleanExpression*會在編譯時期（而不是在執行時間）進行評估。 如果*booleanExpression*評估為**FALSE** （0），則會產生[編譯器錯誤 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 。
+這個宏與[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)相似，不同之處在于*booleanExpression*是在編譯時期（而不是在執行時間）進行評估。 如果*booleanExpression*評估為**FALSE** （0），則會產生[編譯器錯誤 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 。
 
 ## <a name="example"></a>範例
 
-在此範例中，我們會檢查[sizeof](../../c-language/sizeof-operator-c.md) **int**是否大於或等於2個位元組，以及[sizeof](../../c-language/sizeof-operator-c.md)是否**長**為1個位元組。 程式將不會編譯，且會產生[編譯器錯誤 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ，因為**long**大於1個位元組。
+在此範例中，我們會檢查[sizeof](../../c-language/sizeof-operator-c.md) **`int`** a 是否大於或等於2個位元組，以及[sizeof](../../c-language/sizeof-operator-c.md) a 是否 **`long`** 為1個位元組。 程式將不會編譯，且會產生[編譯器錯誤 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ，因為大於 **`long`** 1 個位元組。
 
 ```C
 // crt__static_assert.c
@@ -79,5 +79,5 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
-[_ASSERT、_ASSERTE、_ASSERT_EXPR 巨集](assert-asserte-assert-expr-macros.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
+[_ASSERT、_ASSERTE _ASSERT_EXPR 宏](assert-asserte-assert-expr-macros.md)<br/>

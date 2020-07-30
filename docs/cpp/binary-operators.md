@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f44217b68f6700603218c6f4f3e846075b7e7d55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229125"
 ---
 # <a name="binary-operators"></a>二元運算子
 
@@ -21,22 +21,22 @@ ms.locfileid: "80181300"
 
 |運算子|名稱|
 |--------------|----------|
-|**、**|Comma (逗號)|
+|**,**|Comma (逗號)|
 |**!=**|不等|
-|**%**|Modulus|
+|**%**|模組|
 |**%=**|模數/指派|
 |**&**|位元 AND|
 |**&&**|邏輯 AND|
 |**&=**|位元 AND/指派|
 |**&#42;**|乘|
 |**&#42;=**|乘法/指派|
-|**+**|加|
+|**+**|加法|
 |**+=**|加法/指派|
 |**-**|減|
 |**-=**|減法/指派|
 |**->**|成員選取|
 |**->&#42;**|成員指標選取|
-|**/**|除|
+|**/**|部門|
 |**/=**|除法/指派|
 |**<**|小於|
 |**<<**|左移|
@@ -56,13 +56,13 @@ ms.locfileid: "80181300"
 
 若要將二元運算子函式宣告為非靜態成員，您必須以此格式進行宣告：
 
-> *ret-類型***運算子** *op* **（** *arg* **）**
+> *ret-類型* **`operator`***op* **（** *arg* **）**
 
 其中， *ret 類型*是傳回類型， *op*是上表中所列的其中一個運算子，而*arg*是任何類型的引數。
 
 若要將二元運算子函式宣告為全域函式，您必須以此格式進行宣告：
 
-> *ret-類型***運算子** *op* **（** _arg1_ **，** _arg2_ **）**
+> *ret-類型* **`operator`***op* **（** _arg1_**，** _arg2_ **）**
 
 其中， *ret-類型*和*op*是成員運算子函式的描述，而*arg1*和*arg2*則是引數。 至少要有一個引數是類別類型。
 

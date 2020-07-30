@@ -73,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb23e63fa5eba7ab79fc45b8c8cb6ea350685a7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231321"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
@@ -127,7 +127,7 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*字串*<br/>
 待變更字串。
 
 *c*<br/>
@@ -145,7 +145,7 @@ unsigned char *_mbsnset_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strnset**函數最多可將*str*的第一個*計數*字元設定為*c* （轉換成**char**）。 如果*count*大於*str*的長度，則會使用*str*的長度，而不是*count*。
+**_Strnset**函數最多可將*str*的第一個*計數*字元設定為*c* （轉換成 **`char`** ）。 如果*count*大於*str*的長度，則會使用*str*的長度，而不是*count*。
 
 **_wcsnset**和 **_mbsnset**是 **_strnset**的寬字元和多位元組字元版本。 **_Wcsnset**的字串引數和傳回值是寬字元字串;**_mbsnset**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
@@ -201,8 +201,8 @@ After:  **** is a test
 ## <a name="see-also"></a>另請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[語言](../../c-runtime-library/locale.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的轉譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

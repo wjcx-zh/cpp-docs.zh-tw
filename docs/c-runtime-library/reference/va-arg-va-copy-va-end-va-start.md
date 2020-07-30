@@ -40,12 +40,12 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: 47bd9e3913c6664a52c970dd8a190636683d214e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d35cf3aea99b7e832afb7d2a8e0aaa9d008226fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957357"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231282"
 ---
 # <a name="va_arg-va_copy-va_end-va_start"></a>va_arg、va_copy、va_end、va_start
 
@@ -97,19 +97,19 @@ void va_start(
 
 ## <a name="remarks"></a>備註
 
-**Va_arg**、 **va_copy**、 **va_end**和**va_start**宏可在函式接受可變數目的引數時，提供可移植的方式來存取函式的引數。 有兩個版本的宏：STDARG.H> 中定義的宏。H 符合 ISO C99 標準;以 VARARGS 定義的宏。H 已被取代，但為了與 ANSI C89 標準之前所撰寫的程式碼具有回溯相容性而保留。
+當函式接受可變數目的引數時， **va_arg**、 **va_copy**、 **va_end**和**va_start**宏提供可移植的方式來存取函式的引數。 巨集有兩個版本︰定義於 STDARG.H 的巨集符合 ISO C99 標準；定義於 VARARGS.H 的巨集已遭取代但仍保留與 ANSI C89 標準之前所撰寫程式碼的回溯相容性。
 
 這些巨集假設函式接受固定數目的必要引數，後面接著變動數目的選擇性引數。 必要引數會宣告為函式的一般參數，而且可以透過參數名稱進行存取。 選擇性引數是透過 STDARG.H (或 VARARGS.H，適用於在 ANSI C89 標準之前撰寫的程式碼) 中的巨集進行存取，而這個檔案設定引數清單中第一個選擇性引數的指標、從清單中擷取引數，以及在完成引數處理時重設指標。
 
 定義於 STDARG.H 之 C 標準巨集的使用如下︰
 
-- **va_start**會將*arg_ptr*設定為傳遞至函數之引數清單中的第一個選擇性引數。 引數*arg_ptr*必須具有**va_list**類型。 引數*prev_param*是緊接在引數清單中第一個選擇性引數之前的必要參數名稱。 如果*prev_param*是以 register 儲存類別宣告，則宏的行為會是未定義的。 第一次使用**va_arg**之前，必須先使用**va_start** 。
+- **va_start**會將*arg_ptr*設定為傳遞至函式之引數清單中的第一個選擇性引數。 *Arg_ptr*的引數必須具有**va_list**類型。 引數*prev_param*是緊接在引數清單中第一個選擇性引數之前的必要參數名稱。 如果*prev_param*是以 register 儲存類別宣告，則宏的行為會是未定義的。 第一次使用**va_arg**之前，必須先使用**va_start** 。
 
-- **va_arg**會從*arg_ptr*所提供的位置抓取*類型*的值，並使用*類型*的大小來決定下一個引數的開始，以遞增*arg_ptr*以指向清單中的下一個引數。 **va_arg**可以在函式中使用任意次數的次數，以從清單中取出引數。
+- **va_arg**會從*arg_ptr*所提供的位置抓取*類型*的值，並使用*類型*的大小來決定下一個引數開始的位置，以指向清單中下一個引數的遞增*arg_ptr* 。 **va_arg**可以在函式中使用任意次數的次數，以從清單中取出引數。
 
-- **va_copy**會以目前的狀態複製引數清單。 *Src*參數必須已經使用**va_start**初始化;它可能已透過**va_arg**呼叫更新，但不能使用**va_end**重設。 **Va_arg**從*dest*取出的下一個引數，與從*src*抓取的下一個引數相同。
+- **va_copy**會在其目前狀態中建立引數清單的複本。 *Src*參數必須已經使用**va_start**初始化;它可能已使用**va_arg**呼叫進行更新，但不能使用**va_end**重設。 從*dest* **va_arg**取出的下一個引數，與從*src*抓取的下一個引數相同。
 
-- 取得所有引數之後， **va_end**會將指標重設為**Null**。 在函式傳回之前，必須在使用**va_start**或**va_copy**初始化的每個引數清單上呼叫**va_end** 。
+- 在抓取所有引數之後， **va_end**會將指標重設為**Null**。 **va_end**必須在函式傳回之前，以**va_start**或**va_copy**初始化的每個引數清單上呼叫。
 
 > [!NOTE]
 > VARARGS.H 中的巨集已遭取代，並且僅保留與 ANSI C89 標準之前所撰寫程式碼的回溯相容性。 在所有其他情況下，會使用 STDARGS.H 中的巨集。
@@ -146,7 +146,7 @@ int main()
 }
 ```
 
-請注意， **testit**預期其第二個參數必須是**int**或**char** <strong>\*</strong>。 所傳遞的引數是0xffffffff （不**帶正負**號的**整數**，而不是**int**）和**Null** （實際上是**int**，而不是**char** <strong>\*</strong>）。 針對機器碼編譯程式時，會產生此輸出︰
+請注意， **testit**預期其第二個參數必須是 **`int`** 或 **`char*`** 。 所傳遞的引數是0xffffffff （a **`unsigned int`** 、not **`int`** ）和**Null** （實際上是 **`int`** ，而非 **`char*`** ）。 針對機器碼編譯程式時，會產生此輸出︰
 
 ```Output
 -1
@@ -156,9 +156,9 @@ int main()
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<stdio.h> 和 \<stdarg.h>
+**標頭：** \<stdio.h>和\<stdarg.h>
 
-**已取代的標頭︰** \<varargs.h>
+已**淘汰的標頭：**\<varargs.h>
 
 ## <a name="libraries"></a>程式庫
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - operator!, bstr
 - operator !, bstr
 ms.assetid: 6e60b5a5-2d28-4eec-9e12-790da8f1fdd4
-ms.openlocfilehash: 91b15ba757c1a7058b3544127753a98269a8e974
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fc04c7fa7cb4bd6ecad894a1c1e4473572ac651
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181040"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232348"
 ---
 # <a name="_bstr_toperator-"></a>_bstr_t::operator !
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 檢查封裝的 `BSTR` 是否為 Null 字串。
 
@@ -29,9 +29,9 @@ bool operator!( ) const throw( );
 
 ## <a name="return-value"></a>傳回值
 
-如果是，它會傳回 TRUE，否則傳回 FALSE。
+如果是，則會傳回 **`true`** ，否則會傳回 **`false`** 。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

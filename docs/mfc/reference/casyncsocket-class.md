@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 9a3a04046d75a4cfdbb50347259820eb727eeb38
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 95d24c9fb9e432a54705a6b8f9fa7638affad2d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195092"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 類別
 
@@ -95,13 +95,13 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAsyncSocket：： CAsyncSocket](#casyncsocket)|建構 `CAsyncSocket` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAsyncSocket：： Accept](#accept)|接受通訊端上的連接。|
 |[CAsyncSocket：： AsyncSelect](#asyncselect)|要求通訊端的事件通知。|
@@ -133,7 +133,7 @@ class CAsyncSocket : public CObject
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAsyncSocket：： OnAccept](#onaccept)|通知接聽通訊端，它可以藉由呼叫來接受暫止的連接要求 `Accept` 。|
 |[CAsyncSocket：： OnClose](#onclose)|通知通訊端連接到它的通訊端已關閉。|
@@ -144,14 +144,14 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAsyncSocket：： operator =](#operator_eq)|將新值指派給 `CAsyncSocket` 物件。|
 |[CAsyncSocket：： operator 通訊端](#operator_socket)|使用這個運算子來抓取物件的通訊端控制碼 `CAsyncSocket` 。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAsyncSocket：： m_hSocket](#m_hsocket)|表示附加至此物件的通訊端控制碼 `CAsyncSocket` 。|
 
@@ -819,7 +819,7 @@ BOOL GetSockOpt(
 要取得其值的通訊端選項。
 
 *lpOptionValue*<br/>
-緩衝區的指標，其中會傳回所要求之選項的值。 與選取的選項相關聯的值會在緩衝區*lpOptionValue*中傳回。 *LpOptionLen*所指向的整數原本應該包含這個緩衝區的大小（以位元組為單位）;傳回時，會將它設定為傳回值的大小。 若為 SO_LINGER，這會是結構的大小， `LINGER` 而所有其他選項則會是 BOOL 或**int**的大小，視選項而定。 請在 [備註] 區段中查看選項及其大小的清單。
+緩衝區的指標，其中會傳回所要求之選項的值。 與選取的選項相關聯的值會在緩衝區*lpOptionValue*中傳回。 *LpOptionLen*所指向的整數原本應該包含這個緩衝區的大小（以位元組為單位）;傳回時，會將它設定為傳回值的大小。 對於 SO_LINGER，這會是結構的大小， `LINGER` 而所有其他選項則會是 BOOL 或的大小 **`int`** ，視選項而定。 請在 [備註] 區段中查看選項及其大小的清單。
 
 *lpOptionLen*<br/>
 *LpOptionValue*緩衝區大小的指標（以位元組為單位）。
@@ -856,26 +856,26 @@ BOOL GetSockOpt(
 |SO_DEBUG|BOOL|已啟用調試。|
 |SO_DONTLINGER|BOOL|若為 true，則會停用 SO_LINGER 選項。|
 |SO_DONTROUTE|BOOL|已停用路由。|
-|SO_ERROR|**int**|取出錯誤狀態並清除。|
+|SO_ERROR|**`int`**|取出錯誤狀態並清除。|
 |SO_KEEPALIVE|BOOL|已傳送 keep-alive。|
 |SO_LINGER|`struct LINGER`|傳回目前的逗留選項。|
 |SO_OOBINLINE|BOOL|在正常資料流程中收到頻外資料。|
 |SO_RCVBUF|int|接收的緩衝區大小。|
 |SO_REUSEADDR|BOOL|通訊端可以系結至已在使用中的位址。|
-|SO_SNDBUF|**int**|傳送的緩衝區大小。|
-|SO_TYPE|**int**|通訊端的類型（例如 SOCK_STREAM）。|
+|SO_SNDBUF|**`int`**|傳送的緩衝區大小。|
+|SO_TYPE|**`int`**|通訊端的類型（例如 SOCK_STREAM）。|
 |TCP_NODELAY|BOOL|停用用於傳送聯合的 Nagle 演算法。|
 
 不支援的 Berkeley 軟體發佈（BSD）選項如下 `GetSockOpt` ：
 
 |值|類型|意義|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**int**|接收下限標準。|
-|SO_RCVTIMEO|**int**|接收超時。|
-|SO_SNDLOWAT|**int**|傳送下限標準。|
-|SO_SNDTIMEO|**int**|傳送超時。|
+|SO_RCVLOWAT|**`int`**|接收下限標準。|
+|SO_RCVTIMEO|**`int`**|接收超時。|
+|SO_SNDLOWAT|**`int`**|傳送下限標準。|
+|SO_SNDTIMEO|**`int`**|傳送超時。|
 |IP_OPTIONS||取得 IP 標頭中的選項。|
-|TCP_MAXSEG|**int**|取得 TCP 區段大小上限。|
+|TCP_MAXSEG|**`int`**|取得 TCP 區段大小上限。|
 
 `GetSockOpt`使用不支援的選項呼叫，會導致從傳回 WSAENOPROTOOPT 的錯誤碼 `GetLastError` 。
 
@@ -1765,9 +1765,9 @@ TCP_NODELAY 選項會停用 Nagle 演算法。 Nagle 演算法是用來減少主
 |SO_KEEPALIVE|BOOL|傳送 keep-alive。|
 |SO_LINGER|`struct LINGER`|如果沒有 `Close` 未傳送的資料，則會逗留。|
 |SO_OOBINLINE|BOOL|在一般資料流程中接收頻外資料。|
-|SO_RCVBUF|**int**|指定接收的緩衝區大小。|
+|SO_RCVBUF|**`int`**|指定接收的緩衝區大小。|
 |SO_REUSEADDR|BOOL|允許通訊端系結至已在使用中的位址。 （請參閱[Bind](#bind)）。|
-|SO_SNDBUF|**int**|指定傳送的緩衝區大小。|
+|SO_SNDBUF|**`int`**|指定傳送的緩衝區大小。|
 |TCP_NODELAY|BOOL|停用用於傳送聯合的 Nagle 演算法。|
 
 不支援的 Berkeley 軟體發佈（BSD）選項如下 `SetSockOpt` ：
@@ -1775,12 +1775,12 @@ TCP_NODELAY 選項會停用 Nagle 演算法。 Nagle 演算法是用來減少主
 |值|類型|意義|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|通訊端正在接聽|
-|SO_ERROR|**int**|取得錯誤狀態並清除。|
-|SO_RCVLOWAT|**int**|接收下限標準。|
-|SO_RCVTIMEO|**int**|接收逾時|
-|SO_SNDLOWAT|**int**|傳送下限標準。|
-|SO_SNDTIMEO|**int**|傳送超時。|
-|SO_TYPE|**int**|通訊端的類型。|
+|SO_ERROR|**`int`**|取得錯誤狀態並清除。|
+|SO_RCVLOWAT|**`int`**|接收下限標準。|
+|SO_RCVTIMEO|**`int`**|接收逾時|
+|SO_SNDLOWAT|**`int`**|傳送下限標準。|
+|SO_SNDTIMEO|**`int`**|傳送超時。|
+|SO_TYPE|**`int`**|通訊端的類型。|
 |IP_OPTIONS||[IP 標頭] 中的 [設定選項] 欄位。|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket：： ShutDown

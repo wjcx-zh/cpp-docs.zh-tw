@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: 221ffc30a9b8a40c44f8009dfa511b72aa160e01
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 84df5ad0ff27e6b09134b0f92f14f8e9b6fdc817
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337556"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233570"
 ---
 # <a name="__unhook"></a>__unhook
 
@@ -39,64 +39,64 @@ long  __unhook(
 
 #### <a name="parameters"></a>參數
 
-**&***SourceClass* `::` *eventMethod*指向從中取消掛鉤的事件處理程式方法的指標:
+**&***SourceClass* `::`*EventMethod*要從中解除連結事件處理常式方法之事件方法的指標：
 
-- 本機C++事件:*來源*是事件來源類,*事件方法*是事件。
+- 原生 c + + 事件： *SourceClass*是事件來源類別，而*EventMethod*是事件。
 
-- COM 事件 *:SourceClass*是事件源介面,*事件方法*是其方法之一。
+- COM 事件： *SourceClass*是事件來源介面，而*EventMethod*是它的其中一個方法。
 
-- 託管事件:*來源*是事件來源類,*事件方法*是事件。
+- Managed 事件： *SourceClass*是事件來源類別，而*EventMethod*是事件。
 
 *interface*<br/>
-介面名稱從接收器取消掛接 *,* 僅適用於[EVENT_RECEIVER屬性](../windows/attributes/event-receiver.md)*的layout_dependent*參數為**true**的 COM 事件接收器。
+要從*接收者*解除掛鉤的介面名稱，僅適用于[event_receiver](../windows/attributes/event-receiver.md)屬性之*layout_dependent*參數為的 COM 事件接收器 **`true`** 。
 
-*源*<br/>
-事件來源執行個體的指標。 依中`event_receiver`指定的`type`代碼 *,原始碼*可以是以下代碼之一:
+*source*<br/>
+事件來源執行個體的指標。 根據 `type` 中指定的程式碼 `event_receiver` 而定， *source*可以是下列其中一項：
 
 - 原生事件來源物件指標。
 
-- 基於`IUnknown`指標 (COM 源)。
+- 以為 `IUnknown` 基礎的指標（COM 來源）。
 
 - Managed 物件指標 (用於 Managed 事件)。
 
-**&***接收器類*`::``HandlerMethod`A 指向事件處理程式方法的指標,以便從事件中取消掛接。 處理程式被指定為類的方法或對同一類的引用;如果不指定類名稱 **,__unhook**假定該類是調用該類的類。
+**&***ReceiverClass* `::`要 `HandlerMethod` 從事件中解除掛鉤之事件處理常式方法的指標。 處理常式會指定為類別的方法或相同的參考;如果您未指定類別名稱， **`__unhook`** 會假設類別是在其中呼叫它的。
 
-- 本機C++事件:*接收方類*是事件接收`HandlerMethod`者類 ,是處理程式。
+- 原生 c + + 事件： *ReceiverClass*是事件接收器類別，而 `HandlerMethod` 是處理常式。
 
-- COM 事件:*接收器類*是事件接收`HandlerMethod`器介面, 是其處理程式之一。
+- COM 事件： *ReceiverClass*是事件接收器介面，而且 `HandlerMethod` 是它的其中一個處理常式。
 
-- 託管事件:*接收方類*是事件接收方`HandlerMethod`類 ,是處理程式。
+- Managed 事件： *ReceiverClass*是事件接收器類別，而 `HandlerMethod` 是處理常式。
 
-*接收器*(可選)指向事件接收器類實例的指標。 如果不指定接收器,則預設值為調用 **__unhook**的接收器類或結構。
+*接收者*（選擇性）事件接收器類別實例的指標。 如果您未指定接收者，預設值就是呼叫的接收器類別或結構 **`__unhook`** 。
 
-## <a name="usage"></a>使用量
+## <a name="usage"></a>使用方式
 
 可以在事件接收器類別之外的任何函式範圍中使用，包括 main。
 
 ## <a name="remarks"></a>備註
 
-使用事件接收器中的內在函數 **__unhook**將處理程式方法與事件方法分離或"取消挂鉤」。
+**`__unhook`** 在事件接收器中使用內建函式，從事件方法中斷關聯或「解除掛鉤」處理常式方法。
 
-有三種 **__unhook**形式。 大部分情況下可以使用第一種 (四個引數) 形式。 只能對 COM 事件接收器使用第二種(兩參數 **)__unhook**形式;這將取消掛接整個事件介面。 您可以使用第三種 (單一引數) 形式從指定的來源解除所有委派的連結。
+有三種形式 **`__unhook`** 。 大部分情況下可以使用第一種 (四個引數) 形式。 您只能針對 COM 事件接收器使用第二個（兩個引數）的形式，這會解除 **`__unhook`** 整個事件介面的對應。 您可以使用第三種 (單一引數) 形式從指定的來源解除所有委派的連結。
 
 非零的傳回值表示發生錯誤 (Managed 事件將會擲回例外狀況)。
 
-如果在尚未掛接的事件和事件處理程式上調用 **__unhook,** 它將不起作用。
+如果您 **`__unhook`** 在尚未連結的事件和事件處理常式上呼叫，則不會有任何作用。
 
 在編譯時期，編譯器會驗證事件是否存在，並且對指定的處理常式進行參數類型檢查使。
 
-除 COM 事件外 **,__hook**和 **__unhook**可以在事件接收器外部呼叫。
+除了 COM 事件 **`__hook`** 之外，也可以在 **`__unhook`** 事件接收器外部呼叫。
 
-使用 **__unhook**的替代方法是使用 -# 運算子。
+使用的替代方法 **`__unhook`** 是使用-= 運算子。
 
-有關在新語法中編碼託管事件的資訊,請參閱[事件](../extensions/event-cpp-component-extensions.md)。
+如需在新語法中編碼 managed 事件的詳細資訊，請參閱[事件](../extensions/event-cpp-component-extensions.md)。
 
 > [!NOTE]
 > 樣板類別或結構不能包含事件。
 
 ## <a name="example"></a>範例
 
-有關範例[,請參閱本機C++中的事件處理](../cpp/event-handling-in-native-cpp.md)與[COM 中的事件處理](../cpp/event-handling-in-com.md)。
+如需範例，請參閱[原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件處理](../cpp/event-handling-in-com.md)。
 
 ## <a name="see-also"></a>另請參閱
 

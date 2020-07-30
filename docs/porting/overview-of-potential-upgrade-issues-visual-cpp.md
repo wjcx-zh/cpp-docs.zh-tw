@@ -2,12 +2,12 @@
 title: 潛在升級問題概觀 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404817"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231633"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t 是原生類型)
 
-（在 Microsoft Visual C++ 6.0 和更早版本中， **wchar_t**並未實作為內建型別，但在 wchar 中宣告為不帶正負號簡短的 typedef）。C + + 標準要求**wchar_t**必須是內建類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從舊版 Visual Studio 升級，並且因程式碼嘗試以隱含方式將 **wchar_t** 轉換成 **unsigned short**而遇到編譯器錯誤 C2664，建議您變更程式碼來修正錯誤，而不是設定 `/Zc:wchar_t-`。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+（在 Microsoft Visual C++ 6.0 和更早版本中， **`wchar_t`** 並未實作為內建型別，但在 wchar 中宣告為不帶正負號簡短的 typedef）。C + + 標準要求必須 **`wchar_t`** 是內建類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從舊版 Visual Studio 升級，且因為程式碼嘗試以隱含方式將轉換成，而遇到編譯器錯誤 C2664 **`wchar_t`** **`unsigned short`** ，建議您變更程式碼以修正錯誤，而不是設定 `/Zc:wchar_t-` 。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用連結器選項 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升級
 

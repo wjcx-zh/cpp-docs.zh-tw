@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: 791f18793b49f7d3a986c3271fddef3acef33062
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c277c93640201de69a4cb29060bc5191aa91629c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367930"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227357"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法類運算子和模數運算子
 
@@ -36,21 +36,21 @@ expression % expression
 
 乘法類運算子包括：
 
-- 乘法<strong>\*</strong>( )
+- 乘法（ <strong>\*</strong> ）
 
-- 司**/**( )
+- 除法（ **/** ）
 
-- 模數(從分部中分)**%**( )
+- 模數（從除法餘數）（ **%** ）
 
 這些二進位運算子具有由左至右的順序關聯性。
 
-乘法類運算子接受算術類型的運算元。 模數運算符(**%**) 有更嚴格的要求,其操作數必須是積分類型。 (要取得浮點除法的其餘部分,請使用執行時函數[fmod](../c-runtime-library/reference/fmod-fmodf.md).)[標準轉換](standard-conversions.md)中介紹的轉換應用於操作數,結果是轉換類型。
+乘法類運算子接受算術類型的運算元。 模數運算子（ **%** ）具有較嚴格的要求，其運算元必須是整數類資料類型。 （若要取得浮點除法的餘數，請使用執行時間函式[fmod](../c-runtime-library/reference/fmod-fmodf.md)）。[標準轉換](standard-conversions.md)中涵蓋的轉換適用于運算元，而結果則是轉換後的類型。
 
 乘法運算子會產生第一個運算元與第二個運算元相乘的結果。
 
 除法運算子會產生第一個運算元除以第二個運算元的結果。
 
-模數運算符產生以下表達式給出的剩餘部分,其中*e1*是第一個操作數 *,e2*是第二個操作數 *:e1* -*(e1* / *e2)* \* *e2,* 其中兩個操作數都是積分類型。
+模數運算子會產生下列運算式所指定的餘數，其中*e1*是第一個運算元，而*e2*是第二個： *e1* -（*e1*  /  *e2*） \* *e2*，其中兩個運算元都是整數類資料類型。
 
 在除法或模數運算式中除以 0 並未定義，而且會產生執行階段錯誤。 因此，下列運算式會產生未定義的錯誤結果：
 
@@ -68,15 +68,15 @@ f / 0.0
 
 在 Microsoft C++ 中，模數運算式的結果一律與第一個運算元的正負號相同。
 
-**結束微軟的**
+**結束 Microsoft 專有**
 
-如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 (範圍內，忽略正負號)。 例如,計算值 -11 / 3 是 -3.6666666666。 積分劃分的結果為 -3。
+如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 (範圍內，忽略正負號)。 例如，-11/3 的計算值是-3.666666666。 整數除法的結果為-3。
 
-多乘運算符之間的關係由標識 *(e1* / *e2)* \* *e2* + *e2* % *e2* == *e1*給出。
+乘法類運算子之間的關聯性是由身分識別（*e1*  /  *e2*） \* *e2*  +  *e1*  %  *e2*  ==  *e1*所提供。
 
 ## <a name="example"></a>範例
 
-下列程式將示範乘法類運算子。 請注意,必須顯式強制轉換`10 / 3`到「**浮動**」類型,以避免截斷,以便兩個操作數在除法之前都是類型的**浮點**。
+下列程式將示範乘法類運算子。 請注意，的任一個運算元 `10 / 3` 必須明確轉換成類型 **`float`** ，以避免截斷，讓這兩個運算元在除法之前都屬於類型 **`float`** 。
 
 ```cpp
 // expre_Multiplicative_Operators.cpp

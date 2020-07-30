@@ -37,12 +37,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 3a80efab34b45348ca00f09b2fd6e2ea5077fd86
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909629"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234155"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2、exp2f、exp2l
 
@@ -94,7 +94,7 @@ long double exp2l(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回**float**和**long double**類型之**exp2**的多載。 在 C 程式中， **exp2**一律會採用並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**exp2**的多載 **`float`** **`long double`** 。 在 C 程式中， **exp2**一律會採用並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
@@ -108,6 +108,6 @@ long double exp2l(
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [exp、expf、expl](exp-expf.md)<br/>
 [log2、log2f、log2l](log2-log2f-log2l.md)<br/>

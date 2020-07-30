@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 0e3d5ceffa5adc9e9f6ba96cccb46a3fbcfca69a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234064"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -64,7 +64,7 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>參數
 
 *位置*\
-要轉換之 UTF-8 多位元組字元的**char16_t**或**char32_t**的指標。 如果是 null，函數不會儲存值。
+要 **`char16_t`** **`char32_t`** 轉換之 UTF 8 多位元組字元的或對等的指標。 如果是 null，函數不會儲存值。
 
 *來源*\
 要轉換之 UTF-8 多位元組字元字串的指標。
@@ -91,7 +91,7 @@ size_t mbrtoc32(
 
 **Mbrtoc16**函數會從*來源*讀取最多*max_bytes*個位元組，以尋找第一個完整且有效的 utf-8 多位元組字元，然後將對等的 utf-16 字元儲存在*目的地*中。 如果字元需要多個 UTF-16 輸出字元，例如代理配對，則在下一次呼叫**mbrtoc16**時，會將*state*值設定為將下一個 utf-16 字元儲存在*目的地*。 **Mbrtoc32**函式完全相同，但輸出會儲存為 UTF-32 字元。
 
-如果*source*是 null，這些函式會傳回對*來源*使用**null**的引數`""` *（以空*的、以 null 結束的字串）做為呼叫所建立的對等，而針對*max_bytes*則傳回1。 *目的地*和*max_bytes*傳遞的值會被忽略。
+如果*source*是 null，這些函式會傳回對來源使用**null** *的自*變數（以空的 `""` 、以 null 結束的字串）做為呼叫*source*所建立的對等，而針對*max_bytes*則傳回1。 *目的地*和*max_bytes*傳遞的值會被忽略。
 
 如果*source*不是 null，函式會從字串的開頭開始，並檢查*max_bytes*個位元組，以判斷完成下一個 utf-8 多位元組字元所需的位元組數目，包括任何移位序列。 如果檢查的位元組包含有效且完整的 UTF-8 多位元組字元，則函式會將字元轉換為相等的16位或32位寬字元或字元。 如果*目的地*不是 null，則函式會將第一個（且可能只有）的結果字元儲存在目的地中。 如果需要其他輸出字元，會在 [*狀態*] 中設定值，讓後續呼叫函式輸出其他字元，並傳回值-3。 如果不需要更多輸出字元，則 [*狀態*] 會設定為初始移位狀態。
 

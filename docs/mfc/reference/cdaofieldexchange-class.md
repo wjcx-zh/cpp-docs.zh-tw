@@ -14,18 +14,18 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-ms.openlocfilehash: 86f12f78338d1c60e3dd13614ccedc2868f28d81
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 62e9d1917e2d1eea19b9e8db4b6c56b6ad25d9e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754715"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231828"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 類別
 
 支援 DAO 資料庫類別使用的 DAO 資料錄欄位交換 (DFX) 常式。
 
-通過 Office 2013 支援 DAO。 DAO 3.6 是最終版本,它被視為過時版本。
+DAO 受到 Office 2013 的支援。 DAO 3.6 是最後的版本，被視為已淘汰。
 
 ## <a name="syntax"></a>語法
 
@@ -37,37 +37,37 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[CDao現場交易:有效操作](#isvalidoperation)|如果當前操作適合更新的欄位類型,則返回非零。|
-|[CDao現場交換::集場類型](#setfieldtype)|指定記錄集資料成員的類型 ( 列或參數 - 由對 DFX 函數`SetFieldType`的所有後續調用,直到 下一次調用 DFX 函數為止。|
+|[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|如果目前的作業適用于要更新之欄位的類型，則傳回非零。|
+|[CDaoFieldExchange::SetFieldType](#setfieldtype)|指定記錄集資料成員（資料行或參數）的類型，這是由所有後續呼叫 DFX 函數所表示，直到下一次呼叫為止 `SetFieldType` 。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|Name|說明|
 |----------|-----------------|
-|[CDao現場交易:m_nOperation](#m_noperation)|當前對記錄集成員函數的調用正在執行的`DoFieldExchange`DFX 操作。|
-|[CDao現場交易:m_prs](#m_prs)|指向正在對其中執行 DFX 操作的記錄集的指標。|
+|[CDaoFieldExchange：： m_nOperation](#m_noperation)|目前對記錄集成員函式的呼叫所執行的 DFX 作業 `DoFieldExchange` 。|
+|[CDaoFieldExchange：： m_prs](#m_prs)|執行 DFX 作業之記錄集的指標。|
 
 ## <a name="remarks"></a>備註
 
 `CDaoFieldExchange`沒有基類。
 
-如果要為自定義數據類型編寫數據交換例程,請使用此類;否則,您不會直接使用此類。 DFX 在[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件的欄位數據成員和數據來源上的當前記錄的相應欄位之間交換數據。 DFX 從數據源到數據源,雙向管理交換。 有關編寫自定義 DFX 例程的資訊[,請參閱技術說明 53。](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)
+如果您要撰寫自訂資料類型的資料交換常式，請使用這個類別;否則，您將不會直接使用這個類別。 DFX 會在[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件的欄位資料成員和資料來源上目前記錄的對應欄位之間交換資料。 DFX 會從資料來源和資料來源管理雙向的交換。 如需撰寫自訂 DFX 常式的相關資訊，請參閱[技術提示 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) 。
 
 > [!NOTE]
-> DAO 資料庫類不同於基於開放資料庫連接 (ODBC) 的 MFC 資料庫類。 所有 DAO 資料庫類名稱都有「CDao」首碼。 您仍可以使用 DAO 類存取 ODBC 資料來源。 通常,基於 DAO 的 MFC 類比基於 ODBC 的 MFC 類更有能力。 基於 DAO 的類可以通過自己的資料庫引擎訪問數據,包括透過 ODBC 驅動程式。 它們還支援數據定義語言 (DDL) 操作,例如透過類添加表,而不必自己調用 DAO。
+> DAO 資料庫類別與以開放式資料庫連接（ODBC）為基礎的 MFC 資料庫類別不同。 所有的 DAO 資料庫類別名稱都具有 "CDao" 前置詞。 您仍然可以使用 DAO 類別來存取 ODBC 資料來源。 一般而言，以 DAO 為基礎的 MFC 類別比以 ODBC 為基礎的 MFC 類別更有能力。 以 DAO 為基礎的類別可以透過自己的資料庫引擎來存取資料，包括透過 ODBC 驅動程式。 它們也支援資料定義語言（DDL）作業，例如透過類別加入資料表，而不需要自行呼叫 DAO。
 
 > [!NOTE]
-> DAO 記錄欄位交換 (DFX) 與基於 ODBC 的`CDatabase`MFC 資料庫`CRecordset`類 () 中的記錄欄位 交換 (RFX) 非常相似。 如果您瞭解 RFX,您會發現使用 DFX 很容易。
+> DAO 記錄欄位交換（DFX）與以 ODBC 為基礎的 MFC 資料庫類別（、）中的記錄欄位交換（RFX）非常類似 `CDatabase` `CRecordset` 。 如果您瞭解 RFX，就會發現使用 DFX 很容易。
 
-`CDaoFieldExchange`物件提供進行DAO記錄欄位交換所需的上下文資訊。 `CDaoFieldExchange`物件支援許多操作,包括綁定參數和欄位數據成員,以及在當前記錄的欄位上設置各種標誌。 DFX 操作在 中定義的**類型**類型的記錄集類數據**成員上**`CDaoFieldExchange`執行。 可能的**欄位型態**值包括:
+`CDaoFieldExchange`物件會提供要進行 DAO 記錄欄位結算所需的內容資訊。 `CDaoFieldExchange`物件支援多項作業，包括系結參數和欄位資料成員，以及在目前記錄的欄位上設定各種旗標。 DFX 作業會針對 **`enum`** 中**FieldType**所定義之類型的記錄集類別資料成員來執行 `CDaoFieldExchange` 。 可能的**FieldType**值為：
 
-- `CDaoFieldExchange::outputColumn`用於欄位數據成員。
+- `CDaoFieldExchange::outputColumn`適用于欄位資料成員。
 
-- `CDaoFieldExchange::param`用於參數數據成員。
+- `CDaoFieldExchange::param`用於參數資料成員。
 
-[IsValid操作](#isvalidoperation)成員函數用於編寫您自己的自定義 DFX 例程。 您將在[CDaoRecordset::D oFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)功能中經常使用[SetFieldType。](#setfieldtype) 有關 DFX 全域函數的詳細資訊,請參閱[記錄欄位交換函數](../../mfc/reference/record-field-exchange-functions.md)。 有關為您自己的數據類型編寫自定義 DFX 例程的資訊,請參閱[技術說明 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)。
+[IsValidOperation](#isvalidoperation)成員函式是提供來撰寫您自己的自訂 DFX 常式。 您會在 CDaoRecordset 中經常使用[SetFieldType](#setfieldtype) [：:D ofieldexchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)函式。 如需 DFX 全域函式的詳細資訊，請參閱[記錄欄位交換函數](../../mfc/reference/record-field-exchange-functions.md)。 如需針對您自己的資料類型撰寫自訂 DFX 常式的詳細資訊，請參閱[技術提示 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -75,11 +75,11 @@ class CDaoFieldExchange
 
 ## <a name="requirements"></a>需求
 
-**標題:** afxdao.h
+**標頭：** afxdao。h
 
-## <a name="cdaofieldexchangeisvalidoperation"></a><a name="isvalidoperation"></a>CDao現場交易:有效操作
+## <a name="cdaofieldexchangeisvalidoperation"></a><a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation
 
-如果編寫自己的 DFX 函數,`IsValidOperation`請在函數的開頭調用以確定是否可以對特定欄位數據成員類型`CDaoFieldExchange::outputColumn`(a 或 a `CDaoFieldExchange::param`) 執行當前操作。
+如果您撰寫自己的 DFX 函式，請在函式 `IsValidOperation` 的開頭呼叫，以判斷是否可以在特定欄位資料成員類型（或）上執行目前的作業 `CDaoFieldExchange::outputColumn` `CDaoFieldExchange::param` 。
 
 ```
 BOOL IsValidOperation();
@@ -87,54 +87,54 @@ BOOL IsValidOperation();
 
 ### <a name="return-value"></a>傳回值
 
-如果當前操作適合更新的欄位類型,則非零。
+如果目前的作業適用于要更新之欄位的類型，則為非零。
 
 ### <a name="remarks"></a>備註
 
-DFX 機制執行的某些操作僅適用於可能欄位類型之一。 遵循現有 DFX 函數的模型。
+DFX 機制執行的某些作業僅適用于其中一個可能的欄位類型。 遵循現有的 DFX 函數模型。
 
-有關編寫自定義 DFX 例程的其他資訊,請參閱[技術說明 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)。
+如需撰寫自訂 DFX 常式的詳細資訊，請參閱[技術提示 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)。
 
-## <a name="cdaofieldexchangem_noperation"></a><a name="m_noperation"></a>CDao現場交易:m_nOperation
+## <a name="cdaofieldexchangem_noperation"></a><a name="m_noperation"></a>CDaoFieldExchange：： m_nOperation
 
-標識要在與字段交換物件關聯的[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件上執行的操作。
+識別要在與欄位交換物件相關聯的[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件上執行的作業。
 
 ### <a name="remarks"></a>備註
 
-該`CDaoFieldExchange`物件為記錄集中的許多不同的 DFX 操作提供上下文。
+`CDaoFieldExchange`物件會針對記錄集提供一些不同的 DFX 作業內容。
 
 > [!NOTE]
-> 下面的 MarkForAddNew 和 SetFieldNull 操作下描述的 PSEUDONULL 值是用於標記欄位 Null 的值。 DAO 記錄欄位交換機制 (DFX) 使用此值來確定已顯式標記為 Null 的欄位。 [COleDateTime 和](../../atl-mfc-shared/reference/coledatetime-class.md) [COle 貨幣](../../mfc/reference/colecurrency-class.md)欄位不需要 PSEUDONULL。
+> 下列 MarkForAddNew 和 SetFieldNull 作業底下所述的 PSEUDONull 值是用來將欄位標記為 Null 的值。 DAO 記錄欄位交換器制（DFX）會使用此值來判斷哪些欄位已明確標示為 Null。 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)和[COleCurrency](../../mfc/reference/colecurrency-class.md)欄位不需要 PSEUDONull。
 
-的可能`m_nOperation`值為:
+的可能值 `m_nOperation` 為：
 
 |作業|描述|
 |---------------|-----------------|
-|`AddToParameterList`|生成 SQL 語句的**PARAMETERS**子句。|
-|`AddToSelectList`|生成 SQL 語句的**SELECT**子句。|
-|`BindField`|將資料庫中的欄位綁定到應用程式中的記憶體位置。|
-|`BindParam`|為記錄集的查詢設置參數值。|
+|`AddToParameterList`|建立 SQL 語句的**PARAMETERS**子句。|
+|`AddToSelectList`|建立 SQL 語句的**SELECT**子句。|
+|`BindField`|將資料庫中的欄位系結至應用程式中的記憶體位置。|
+|`BindParam`|設定記錄集查詢的參數值。|
 |`Fixup`|設定欄位的 Null 狀態。|
-|`AllocCache`|分配用於檢查記錄集中的「臟」欄位的緩存。|
-|`StoreField`|將當前記錄保存到緩存中。|
-|`LoadField`|還原記錄集中的緩存數據成員變數。|
-|`FreeCache`|釋放用於檢查記錄集中的「臟」欄位的緩存。|
-|`SetFieldNull`|將欄位的狀態設置為"空",並將值設置為 PSEUDONULL。|
-|`MarkForAddNew`|標記為欄位"髒",如果不是 PSEUDONULL。|
-|`MarkForEdit`|如果欄位與緩存不匹配,則標記它們「髒」。。|
-|`SetDirtyField`|設置標記為「臟」的欄位值。|
-|`DumpField`|轉儲欄位的內容(僅限調試)。|
+|`AllocCache`|配置用來檢查記錄集中是否有「已變更」欄位的快取。|
+|`StoreField`|將目前的記錄儲存至快取。|
+|`LoadField`|還原記錄集中快取的資料成員變數。|
+|`FreeCache`|釋放用來檢查記錄集中是否有「已變更」欄位的快取。|
+|`SetFieldNull`|將欄位的狀態設定為 Null，並將值設為 PSEUDONull。|
+|`MarkForAddNew`|將欄位標示為「已變更」（如果未 PSEUDONull）。|
+|`MarkForEdit`|當欄位不符合快取時，將其標示為「已變更」。|
+|`SetDirtyField`|設定標示為「已變更」的域值。|
+|`DumpField`|傾印欄位的內容（僅限 debug）。|
 |`MaxDFXOperation`|用於輸入檢查。|
 
-## <a name="cdaofieldexchangem_prs"></a><a name="m_prs"></a>CDao現場交易:m_prs
+## <a name="cdaofieldexchangem_prs"></a><a name="m_prs"></a>CDaoFieldExchange：： m_prs
 
-包含指向與`CDaoFieldExchange`該物件關聯的[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件的指標。
+包含與物件相關聯之[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件的指標 `CDaoFieldExchange` 。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cdaofieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CDao現場交換::集場類型
+## <a name="cdaofieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType
 
-在`SetFieldType``CDaoRecordset`類的`DoFieldExchange`重寫中調用。
+`SetFieldType`在 `CDaoRecordset` 類別的覆寫中呼叫 `DoFieldExchange` 。
 
 ```cpp
 void SetFieldType(UINT nFieldType);
@@ -143,7 +143,7 @@ void SetFieldType(UINT nFieldType);
 ### <a name="parameters"></a>參數
 
 *nFieldType*<br/>
-**枚舉欄位類型**的值 ,`CDaoFieldExchange`在 中 聲明,可以是以下任一值:
+**列舉 FieldType**的值（宣告于中 `CDaoFieldExchange` ），可以是下列其中一項：
 
 - `CDaoFieldExchange::outputColumn`
 
@@ -151,11 +151,11 @@ void SetFieldType(UINT nFieldType);
 
 ### <a name="remarks"></a>備註
 
-通常,ClassWizard 會為您編寫此話務。 如果您編寫自己的函數並使用嚮導編寫函數`DoFieldExchange`,請在欄位映射之外向自己的函數添加調用。 如果不使用嚮導,則沒有欄位映射。 呼叫之前對 DFX 函數的呼叫(針對類別的每個欄位資料成員一個),並將欄位類型`CDaoFieldExchange::outputColumn`標識為 。
+一般來說，ClassWizard 會為您撰寫此呼叫。 如果您撰寫自己的函式，並使用 wizard 來撰寫您 `DoFieldExchange` 的函式，請在欄位對應外新增對您自己函式的呼叫。 如果您不使用此嚮導，將不會有欄位對應。 呼叫會在呼叫 DFX 函式之前，分別針對類別的每個欄位資料成員，並將欄位類型識別為 `CDaoFieldExchange::outputColumn` 。
 
-如果對記錄集類進行參數化,則應為所有參數數據成員(欄位映射外部)添加 DFX 調用,並在調用 的這些調`SetFieldType`用之前添加 DFX 調用。 傳遞值`CDaoFieldExchange::param`。 (您可以改用[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)並設置其參數值。
+如果您將記錄集類別參數化，您應該為所有參數資料成員（在欄位對應外）加入 DFX 呼叫，並在呼叫之前加上這些呼叫 `SetFieldType` 。 傳遞值 `CDaoFieldExchange::param` 。 （您可以改為使用[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)並設定其參數值）。
 
-通常,與字段數據成員或參數數據成員關聯的每組 DFX 函數調用之前都`SetFieldType`必須對調用。 每個`SetFieldType`調用的`SetFieldType`*nFieldType*參數標識調用後 DFX 函數調用表示的數據成員的類型。
+一般而言，與欄位資料成員或參數資料成員相關聯的每個 DFX 函式呼叫群組，前面都必須呼叫 `SetFieldType` 。 每個呼叫的*nFieldType*參數都會 `SetFieldType` 識別接在呼叫之後的 DFX 函式呼叫所代表的資料成員類型 `SetFieldType` 。
 
 ## <a name="see-also"></a>另請參閱
 

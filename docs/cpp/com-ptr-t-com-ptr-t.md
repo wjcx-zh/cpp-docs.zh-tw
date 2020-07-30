@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 96589d8be56b81e78ea7c474aea24803cc56ab21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180481"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233791"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 結構 **_com_ptr_t**物件。
 
@@ -139,30 +139,30 @@ explicit _com_ptr_t(
 原始的介面指標。
 
 *fAddRef*<br/>
-若為 TRUE，則會呼叫 `AddRef` 以遞增封裝之介面指標的參考計數。
+如果為 **`true`** ， `AddRef` 則會呼叫以遞增封裝之介面指標的參考計數。
 
 *cp*<br/>
 **_Com_ptr_t**物件。
 
-*p*<br/>
+*p&id*<br/>
 原始介面指標，其類型與這個 **_com_ptr_t**物件的智慧型指標類型不同。
 
 *varSrc*<br/>
 `_variant_t` 物件。
 
 *clsid*<br/>
-Coclass 的 `CLSID`。
+`CLSID`Coclass 的。
 
 *dwClsCoNtext*<br/>
 執行中的可執行程式碼內容。
 
 *lpcStr*<br/>
-保存 `CLSID` （以 " **{** " 為開頭）或 `ProgID`的多位元組字元串。
+保存 `CLSID` （開頭為 "**{**"）或的多位元組字元串 `ProgID` 。
 
 *pOuter*<br/>
 [匯總](/windows/win32/com/aggregation)的外部未知。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

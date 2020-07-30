@@ -1,15 +1,15 @@
 ---
-title: 'C/c + + 專案屬性 (Visual Studio) '
+title: C/c + + 專案屬性（Visual Studio）
 description: Visual Studio Microsoft C/c + + 專案屬性頁屬性的參考指南。
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 3366f6677bf976b6211dd27a8abb114765fb2abc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180886"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229736"
 ---
 # <a name="cc-property-pages"></a>C/c + + 屬性頁
 
@@ -19,21 +19,21 @@ ms.locfileid: "86180886"
 
 ### <a name="additional-include-directories"></a>其他 Include 目錄
 
-指定一或多個要加入 Include 路徑中的目錄；如有多個目錄，請使用分號加以分隔。 將[ `/I` (其他 include 目錄設定) ](i-additional-include-directories.md)。
+指定一或多個要加入 Include 路徑中的目錄；如有多個目錄，請使用分號加以分隔。 設定[ `/I` （其他 include 目錄）](i-additional-include-directories.md)。
 
 ### <a name="additional-using-directories"></a>其他 #using 目錄
 
-指定一或多個目錄 (以分號) 分隔目錄名稱，以解析傳遞至 #using 指示詞的名稱。 設定 [`/AI`](ai-specify-metadata-directories.md) 。
+指定要搜尋的一或多個目錄（以分號分隔目錄名稱），以解析傳遞給 #using 指示詞的名稱。 設定 [`/AI`](ai-specify-metadata-directories.md) 。
 
 ### <a name="debug-information-format"></a>偵錯資訊格式
 
-指定編譯器所產生的偵錯資訊類型。  此屬性需要相容的連結器設定。 設定[ `/Z7` `/Zi`) 的 `/ZI` (Debug 資訊格式](z7-zi-zi-debug-information-format.md)。
+指定編譯器所產生的偵錯資訊類型。  此屬性需要相容的連結器設定。 設定[ `/Z7` 、 `/Zi` 、 `/ZI` （Debug 資訊格式）](z7-zi-zi-debug-information-format.md)。
 
 #### <a name="choices"></a>Choices
 
 - **無** - 因為不產生任何偵錯資訊，所以編譯速度會較快。
-- **C7 相容性**-選取針對您的程式所建立的偵錯工具資訊類型，以及此資訊是否保留在物件 ( .obj) 檔案或程式資料庫 (PDB) 中。
-- **程式資料庫**-產生 (PDB) 的程式資料庫，其中包含要與偵錯工具搭配使用的類型資訊和符號調試資訊。 符號偵錯工具資訊包含變數和函數的名稱和類型，以及行號。
+- **C7 相容性**-選取為程式所建立的偵錯工具資訊類型，以及此資訊是保留在物件檔（.obj）還是程式資料庫（PDB）中。
+- **程式資料庫**-產生程式資料庫（PDB），其中包含要與偵錯工具搭配使用的類型資訊和符號調試資訊。 符號偵錯工具資訊包含變數和函數的名稱和類型，以及行號。
 - [編輯後繼續] 的**程式資料庫**-以支援 [[編輯後繼續](/visualstudio/debugger/edit-and-continue)] 功能的格式，產生程式資料庫（如上所述）。
 
 ### <a name="support-just-my-code-debugging"></a>支援 Just My Code 的調試
@@ -49,7 +49,7 @@ ms.locfileid: "86180886"
 - **無 Common Language Runtime 支援**-沒有 Common Language runtime 支援
 - **Common Language RunTime 支援**-為您的應用程式建立可供其他 CLR 應用程式使用的中繼資料。 也可讓您的應用程式使用其他 CLR 元件之中繼資料中的類型和資料。
 - **純 Msil Common Language RunTime 支援**-產生沒有任何原生可執行程式碼的僅限[MSIL](/dotnet/standard/managed-code)輸出檔案，雖然它可以包含編譯成 MSIL 的原生類型。
-- **安全 Msil Common Language RunTime 支援**-只會產生僅限 msil 的 (沒有原生可執行程式碼) 和可驗證的輸出檔。
+- **SAFE Msil Common Language RunTime 支援**-產生僅限 MSIL （沒有原生可執行程式碼）和可驗證的輸出檔。
 
 ### <a name="consume-windows-runtime-extension"></a>使用 Windows 執行階段擴充功能
 
@@ -92,7 +92,7 @@ ms.locfileid: "86180886"
 
 ### <a name="sdl-checks"></a>SDL 檢查
 
-其他安全性開發生命週期 (SDL) 建議的檢查;包括啟用額外的安全程式碼產生功能，以及啟用其他與安全性相關的警告，做為錯誤。 設定[ `/sdl` 、 `/sdl-` ](sdl-enable-additional-security-checks.md)。
+其他安全性開發週期（SDL）建議的檢查;包括啟用額外的安全程式碼產生功能，以及啟用其他與安全性相關的警告，做為錯誤。 設定[ `/sdl` 、 `/sdl-` ](sdl-enable-additional-security-checks.md)。
 
 ### <a name="multi-processor-compilation"></a>多處理器編譯
 
@@ -108,9 +108,9 @@ ms.locfileid: "86180886"
 
 - **自訂** - 自訂最佳化。
 - **停用** - 停用最佳化。
-- **最大優化 (偏好大小) ** -等同于**`/Os /Oy /Ob2 /Gs /GF /Gy`**
-- **最大優化 (偏好速度) ** -相當於**`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
-- **優化 (偏好速度) ** -相當於**`/Oi /Ot /Oy /Ob2`**
+- **優化上限（偏好大小）** -相當於**`/Os /Oy /Ob2 /Gs /GF /Gy`**
+- **優化上限（偏好速度）** -相當於**`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
+- **優化（偏好速度）** -相當於**`/Oi /Ot /Oy /Ob2`**
 
 ### <a name="inline-function-expansion"></a>內嵌函式展開
 
@@ -120,8 +120,8 @@ ms.locfileid: "86180886"
 
 - **預設值**
 - **Disabled** -停用內嵌展開，此功能預設為開啟。
-- **僅 __inline** -展開標記為、或的函式 **`inline`** `__forceinline` `__inline` 。 或者，在類別宣告內定義的 c + + 成員函式中。
-- **任何適合**展開的函式，標示為 **`inline`** 或 `__inline` ，以及編譯器所選擇的任何其他函數。  (擴充是以編譯器的判斷進行，通常稱為*自動內嵌*。 ) 
+- **僅 __inline** -展開標記為、或的函式 **`inline`** **`__forceinline`** **`__inline`** 。 或者，在類別宣告內定義的 c + + 成員函式中。
+- **任何適合**展開的函式，標示為 **`inline`** 或 **`__inline`** ，以及編譯器所選擇的任何其他函數。 （擴充是以編譯器的判斷進行，通常稱為「*自動內嵌*」）。
 
 ### <a name="enable-intrinsic-functions"></a>啟用內建函式
 
@@ -134,7 +134,7 @@ ms.locfileid: "86180886"
 #### <a name="choices"></a>Choices
 
 - 偏好**小型程式碼**偏好小型程式碼。 藉由指示編譯器根據速度來偏好大小，將 Exe 和 Dll 的大小降到最低。
-- 偏好快速的程式**代碼**偏好快速程式碼。 指示編譯器的速度優於大小，以最大化 Exe 和 Dll 的速度。  (此值預設為。 ) 
+- 偏好快速的程式**代碼**偏好快速程式碼。 指示編譯器的速度優於大小，以最大化 Exe 和 Dll 的速度。 （此為預設值）。
 - **不是-沒有**大小和速度優化。
 
 ### <a name="omit-frame-pointers"></a>省略框架指標
@@ -195,7 +195,7 @@ ms.locfileid: "86180886"
 
 #### <a name="choices"></a>Choices
 
-- **是，使用 SEH 例外**狀況-此例外狀況處理模型會攔截非同步 (結構化) 和同步 (c + +) 例外狀況。 設定 [`/EHa`](eh-exception-handling-model.md) 。
+- **是，使用 SEH 例外**狀況-捕捉非同步（結構化）和同步（c + +）例外狀況的例外狀況處理模型。 設定 [`/EHa`](eh-exception-handling-model.md) 。
 - **是**-僅攔截 c + + 例外狀況的例外狀況處理模型，並告知編譯器假設 extern c 函式永遠不會擲回 c + + 例外狀況。 設定 [`/EHsc`](eh-exception-handling-model.md) 。
 - **是，使用 Extern c**函式-僅攔截 c + + 例外狀況的例外狀況處理模型，並告知編譯器假設 Extern c 函式確實會擲回例外狀況。 設定 [`/EHs`](eh-exception-handling-model.md) 。
 - **否**-不處理例外狀況。
@@ -212,7 +212,7 @@ ms.locfileid: "86180886"
 
 - **堆疊框架**-啟用堆疊框架執行階段錯誤檢查。
 - **未初始化的變數**-使用未初始化的變數時進行報告。
-- ** (/rtc1 相同、HTTP-equiv、/RTCsu) 對**等的/RTCsu。
+- **Both （/rtc1 相同，HTTP-equiv. to/RTCsu）** -等同于/RTCsu。
 - **預設**值-預設執行時間檢查。
 
 ### <a name="runtime-library"></a>執行階段程式庫
@@ -235,7 +235,7 @@ ms.locfileid: "86180886"
 - **1 個**位元組套件的結構在1個位元組的界限上。 與相同 **`/Zp`** 。
 - **2 位元組**-套件結構在2個位元組的界限上。
 - **4 個位元組**-在4位元組界限上封裝結構。
-- **8 個位元組**-在8位元組界限上封裝結構 (預設) 。
+- **8 個位元組**-封裝8位元組界限（預設值）上的結構。
 - **16**位元組-在16位元組的界限上封裝結構。
 - **預設**值-預設對齊設定。
 
@@ -317,11 +317,11 @@ ms.locfileid: "86180886"
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>將 wchar_t 視為內建類型
 
-當指定時，類型 **`wchar_t`** 會變成對應至的原生類型， `__wchar_t` 其方式與 **`short`** 對應至相同 `__int16` 。 [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)預設為開啟。
+當指定時，類型 **`wchar_t`** 會變成對應至的原生類型， **`__wchar_t`** 其方式與 **`short`** 對應至相同 **`__int16`** 。 [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)預設為開啟。
 
 ### <a name="force-conformance-in-for-loop-scope"></a>強制 For 迴圈範圍中的一致性
 
-用來搭配 Microsoft 擴充功能來執行 for 語句迴圈的 standard c + + 行為。 設定[ `/Za` ， `/Ze` (停用語言擴充](za-ze-disable-language-extensions.md)功能。 [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md)預設為開啟。
+用來搭配 Microsoft 擴充功能來執行 for 語句迴圈的 standard c + + 行為。 設定[ `/Za` 、 `/Ze` （停用語言擴充](za-ze-disable-language-extensions.md)功能。 [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md)預設為開啟。
 
 ### <a name="remove-unreferenced-code-and-data"></a>移除未參考的程式碼和資料
 
@@ -350,7 +350,7 @@ ms.locfileid: "86180886"
 - **ISO c + + 17 標準**
 - **預覽-最新 c + + 工作草稿的功能**
 
-### <a name="enable-c-modules-experimental"></a>啟用 c + + 模組 (實驗性) 
+### <a name="enable-c-modules-experimental"></a>啟用 c + + 模組（實驗性）
 
 C + + 模組 TS 和標準程式庫模組的實驗性支援。
 
@@ -362,8 +362,8 @@ C + + 模組 TS 和標準程式庫模組的實驗性支援。
 
 #### <a name="choices"></a>Choices
 
-- **Create** -指示編譯器建立先行編譯標頭檔 ( .pch) 檔案，該檔案代表在某個時間點編譯的狀態。
-- **使用**-指示編譯器在目前的編譯中使用現有的先行編譯標頭檔 ( .pch) 檔案。
+- **Create** -指示編譯器建立先行編譯標頭檔（.pch），以表示在特定時間點編譯的狀態。
+- **使用**-指示編譯器在目前的編譯中使用現有的先行編譯標頭檔（.pch）。
 - **不使用先行編譯的標頭**-不使用先行編譯標頭檔。
 
 ### <a name="precompiled-header-file"></a>先行編譯標頭檔
@@ -410,7 +410,7 @@ C + + 模組 TS 和標準程式庫模組的實驗性支援。
 
 ### <a name="generate-xml-documentation-files"></a>產生 XML 檔檔案
 
-指定編譯器應產生 XML 檔批註檔案 (。.XDC) 。 設定 [`/doc`](doc-process-documentation-comments-c-cpp.md) 。
+指定編譯器應產生 XML 檔批註檔案（。.XDC）。 設定 [`/doc`](doc-process-documentation-comments-c-cpp.md) 。
 
 ### <a name="xml-documentation-file-name"></a>XML 檔檔名稱
 
@@ -430,14 +430,14 @@ C + + 模組 TS 和標準程式庫模組的實驗性支援。
 
 ### <a name="calling-convention"></a>呼叫慣例
 
-選取應用程式的預設呼叫慣例 (可以由函式) 覆寫。 設定[ `/Gd` 、 `/Gr` 、 `/Gz` 、 `/Gv` ](gd-gr-gv-gz-calling-convention.md)。
+為您的應用程式選取預設的呼叫慣例（可由函式覆寫）。 設定[ `/Gd` 、 `/Gr` 、 `/Gz` 、 `/Gv` ](gd-gr-gv-gz-calling-convention.md)。
 
 #### <a name="choices"></a>Choices
 
-- **__cdecl** -指定所有函式的 `__cdecl` 呼叫慣例，但 c + + 成員函式和標記為或的函數除外 `__stdcall` `__fastcall` 。
-- **__fastcall** -指定所有函式的 `__fastcall` 呼叫慣例，但 c + + 成員函式和標記為或的函數除外 `__cdecl` `__stdcall` 。 所有 `__fastcall` 函式都必須有原型。
-- **__stdcall** -指定所有函式的 `__stdcall` 呼叫慣例，但 c + + 成員函式和標記為或的函數除外 `__cdecl` `__fastcall` 。 所有 `__stdcall` 函式都必須有原型。
-- **__vectorcall** -指定所有函式的 `__vectorcall` 呼叫慣例，但 c + + 成員函式和函式除外，標記為 `__cdecl` 、 `__fastcall` 或 `__stdcall` 。 所有 `__vectorcall` 函式都必須有原型。
+- **`__cdecl`**-指定所有函式的 **`__cdecl`** 呼叫慣例，但 c + + 成員函式和標記為或的函數除外 **`__stdcall`** **`__fastcall`** 。
+- **`__fastcall`**-指定所有函式的 **`__fastcall`** 呼叫慣例，但 c + + 成員函式和標記為或的函數除外 **`__cdecl`** **`__stdcall`** 。 所有 **`__fastcall`** 函數都必須具有原型。
+- **`__stdcall`**-指定所有函式的 **`__stdcall`** 呼叫慣例，但 c + + 成員函式和標記為或的函數除外 **`__cdecl`** **`__fastcall`** 。 所有 **`__stdcall`** 函數都必須具有原型。
+- **`__vectorcall`**-指定所有函式的 **`__vectorcall`** 呼叫慣例，但 c + + 成員函式和函式（標記為 **`__cdecl`** 、或）除外 **`__fastcall`** **`__stdcall`** 。 所有 **`__vectorcall`** 函數都必須具有原型。
 
 ### <a name="compile-as"></a>編譯為
 
@@ -476,7 +476,7 @@ C + + 模組 TS 和標準程式庫模組的實驗性支援。
 ### <a name="internal-compiler-error-reporting"></a>報告內部編譯器錯誤
 
 > [!NOTE]
-> 這個選項已被取代。 從 Windows Vista 開始，錯誤報表是由[Windows 錯誤報告 (WER) ](/windows/win32/wer/windows-error-reporting)設定來控制。
+> 這個選項已被取代。 從 Windows Vista 開始，錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。
 
 ### <a name="treat-specific-warnings-as-errors"></a>將特定警告視為錯誤
 

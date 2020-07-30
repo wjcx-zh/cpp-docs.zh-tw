@@ -2,16 +2,16 @@
 title: 轉型 (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: 6711320fd9ca52360f702e029fdc8e129c90c6cd
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: a51e02b59b2f7229193987f993edbccfb56b779d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740545"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233518"
 ---
 # <a name="casting-ccx"></a>轉型 (C++/CX)
 
-有四個不同的轉換運算子適用于 Windows 執行階段類型： [Static_cast 運算子](../cpp/static-cast-operator.md)、 [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)、 **safe_cast 運算子**和[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。 當無法執行轉換時， **safe_cast**和**static_cast**會擲回例外狀況;[Static_cast 運算子](../cpp/static-cast-operator.md)也會執行編譯時期類型檢查。 如果**dynamic_cast**無法轉換類型，則會傳回**nullptr** 。 雖然**reinterpret_cast**會傳回非 null 值，但它可能無效。 基於這個理由，我們建議您不要使用**reinterpret_cast** ，除非您知道轉換將會成功。 此外，我們建議您不要在/Cx 程式C++代碼中使用 C 樣式的轉換，因為它們與**reinterpret_cast**相同。
+有四個不同的轉型運算子適用于 Windows 執行階段類型： [Static_cast 運算子](../cpp/static-cast-operator.md)、 [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)、 **safe_cast 運算子**和[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。 **safe_cast** ，並 **`static_cast`** 在無法執行轉換時擲回例外狀況;[Static_cast 運算子](../cpp/static-cast-operator.md)也會執行編譯時期類型檢查。 **`dynamic_cast`****`nullptr`** 如果無法轉換類型，則傳回。 雖然會傳回 **`reinterpret_cast`** 非 null 值，但它可能無效。 基於這個理由，我們建議您不要使用， **`reinterpret_cast`** 除非您知道轉換將會成功。 此外，我們建議您不要在 c + +/CX 程式碼中使用 C 樣式的轉換，因為它們與相同 **`reinterpret_cast`** 。
 
 編譯器和執行階段也會執行隱含轉型，例如，當實值類型或內建類型當做引數傳遞給參數類型為 `Object^`的方法時，所進行的 boxing 作業。 理論上，隱含轉型不應該在執行階段造成例外狀況。如果編譯器無法執行隱含轉換，則會在編譯時期引發錯誤。
 
@@ -19,11 +19,11 @@ Windows 執行階段是 COM 的抽象概念，它會使用 HRESULT 錯誤碼而�
 
 ## <a name="static_cast"></a>static_cast
 
-在編譯時期會檢查**static_cast** ，以判斷兩個類型之間是否有繼承關聯性。 如果這兩個類型不相關，則轉型會造成編譯器錯誤。
+**`static_cast`** 會在編譯時期檢查，以判斷兩個類型之間是否有繼承關聯性。 如果這兩個類型不相關，則轉型會造成編譯器錯誤。
 
-Ref 類別上的**static_cast**也會導致執行執行時間檢查。 Ref 類別上的**static_cast**可以通過編譯時間驗證，但仍會在執行時間失敗;在此情況下`Platform::InvalidCastException` ，會擲回。 一般而言，您不必處理這些例外狀況，因為這些例外狀況幾乎都表示可在開發和測試階段排除的程式設計錯誤。
+**`static_cast`** Ref 類別上的也會導致執行執行時間檢查。 **`static_cast`** Ref 類別上的可以通過編譯時間驗證，但是在執行時間仍然失敗; 在此情況下 `Platform::InvalidCastException` ，會擲回。 一般而言，您不必處理這些例外狀況，因為這些例外狀況幾乎都表示可在開發和測試階段排除的程式設計錯誤。
 
-如果程式碼明確宣告這兩個類型之間的關聯性，而且您確定轉換應該有效，請使用**static_cast** 。
+**`static_cast`** 如果程式碼明確宣告這兩個類型之間的關聯性，而且您確定轉換應該有效，請使用。
 
 ```cpp
     interface class A{};
@@ -55,7 +55,7 @@ Ref 類別上的**static_cast**也會導致執行執行時間檢查。 Ref 類�
 
 ## <a name="dynamic_cast"></a>dynamic_cast
 
-當**您將物件**（更具體來說，是 hat **^** ）轉換成更衍生的型別時，請您預期目標物件有時會是**nullptr**或轉換可能失敗，而您想要將該條件當做一般程式碼路徑，而不是例外狀況。 例如，在 [**空白應用程式（通用 Windows）** ] 專案範本中`OnLaunched` ，xamp 中的方法會使用**dynamic_cast**來測試應用程式視窗是否有內容。 如果它沒有內容也並非錯誤，因為這是預期的情況。 `Windows::Current::Content` 是 `Windows::UI::XAML::UIElement` 並且會轉換為 `Windows::UI.XAML::Controls::Frame`，這在繼承階層架構中是屬於衍生程度較高的類型。
+**`dynamic_cast`** 當您將物件（更具體而言，hat）轉換 **^** 成更衍生的型別時，您會預期目標物件有時可能是 **`nullptr`** 或轉換可能會失敗，而您想要將該條件當做一般程式碼路徑來處理，而不是例外狀況。 例如，在 [**空白應用程式（通用 Windows）** ] 專案範本中， `OnLaunched` xamp 中的方法會使用 **`dynamic_cast`** 測試應用程式視窗是否有內容。 如果它沒有內容也並非錯誤，因為這是預期的情況。 `Windows::Current::Content` 是 `Windows::UI::XAML::UIElement` 並且會轉換為 `Windows::UI.XAML::Controls::Frame`，這在繼承階層架構中是屬於衍生程度較高的類型。
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
@@ -74,15 +74,15 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-**Dynamic_cast**的另一個用法是探查， `Object^`以判斷它是否包含已裝箱的實值型別。 在這種情況下，您會嘗試 `dynamic_cast<Platform::Box>` 或 `dynamic_cast<Platform::IBox>`。
+的另一種用法 **`dynamic_cast`** 是探查 `Object^` ，以判斷它是否包含已裝箱的實值型別。 在這種情況下，您會嘗試 `dynamic_cast<Platform::Box>` 或 `dynamic_cast<Platform::IBox>`。
 
 ## <a name="dynamic_cast-and-tracking-references-"></a>dynamic_cast 和追蹤參考 (%)
 
-您也可以將**dynamic_cast**套用至追蹤參考，但在此情況下，轉換的行為就像**safe_cast**。 因為追蹤參考不能有**nullptr**的值，所以它會在失敗時擲回。`Platform::InvalidCastException`
+您也可以將套用 **`dynamic_cast`** 至追蹤參考，但在此情況下，轉換的行為就像**safe_cast**。 `Platform::InvalidCastException`因為追蹤參考不能有的值，所以它會在失敗時擲回 **`nullptr`** 。
 
 ## <a name="reinterpret_cast"></a>reinterpret_cast
 
-我們建議您不要使用 [reinterpret_cast](../cpp/reinterpret-cast-operator.md) ，因為編譯時期檢查和執行階段檢查都不會執行。 在最糟的情況下， **reinterpret_cast**可以讓程式設計錯誤在開發時間無法偵測到，並在您的程式列為中造成微妙或嚴重的錯誤。 因此，建議您只在罕見的情況下使用**reinterpret_cast** ，因為您必須在不相關的類型之間進行轉換，而且您知道轉換將會成功。 很少使用的範例是將 Windows 執行階段類型轉換成其基礎 ABI 類型，這表示您要控制物件的參考計數。 若要這麼做，我們建議您使用 [ComPtr Class](../cpp/com-ptr-t-class.md) 智慧型指標。 否則，您必須在介面上特別呼叫 Release。 下列範例示範如何將 ref 類別轉型為 `IInspectable*`。
+我們建議您不要使用 [reinterpret_cast](../cpp/reinterpret-cast-operator.md) ，因為編譯時期檢查和執行階段檢查都不會執行。 在最糟的情況下， **`reinterpret_cast`** 可讓程式設計錯誤在開發時間無法偵測到，並在您的程式列為中造成微妙或嚴重錯誤。 因此，我們建議您 **`reinterpret_cast`** 只在少數情況下，當您必須在不相關的類型之間進行轉換，而且您知道轉換會成功時，才使用。 很少使用的範例是將 Windows 執行階段類型轉換成其基礎 ABI 類型，這表示您要控制物件的參考計數。 若要這麼做，我們建議您使用 [ComPtr Class](../cpp/com-ptr-t-class.md) 智慧型指標。 否則，您必須在介面上特別呼叫 Release。 下列範例示範如何將 ref 類別轉型為 `IInspectable*`。
 
 ```cpp
 #include <wrl.h>
@@ -92,7 +92,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 // ...
 ```
 
-如果您使用**reinterpret_cast**從 oneWindows 執行時間介面轉換成另一個，則會導致物件釋放兩次。 因此，只有當您轉換成非元件擴充功能C++介面時，才使用這種轉換。
+如果您使用 **`reinterpret_cast`** 從 OneWindows 執行時間介面轉換成另一個，則會導致物件釋放兩次。 因此，只有當您轉換為非 C + + 元件延伸模組介面時，才使用這個轉換。
 
 ## <a name="abi-types"></a>ABI 類型
 
@@ -100,13 +100,13 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 
 - ABI 類型存在於特殊命名空間 ABI 中，例如 `ABI::Windows::Storage::Streams::IBuffer*`。
 
-- Windows 執行階段介面類別型與其`IBuffer^`對`ABI::IBuffer*`等 ABI 類型之間的轉換一律是安全的，也就是。
+- Windows 執行階段介面類別型與其對等 ABI 類型之間的轉換一律是安全的，也就 `IBuffer^` 是 `ABI::IBuffer*` 。
 
-- Windows 執行階段執行時間類別應該一律轉換成`IInspectable*`或其預設介面（如果已知的話）。
+- Windows 執行階段執行時間類別應該一律轉換成 `IInspectable*` 或其預設介面（如果已知的話）。
 
 - 在轉換成 ABI 類型之後，您會擁有此類型的存留期，而且必須遵循 COM 規則。 我們建議您使用 `WRL::ComPtr` 來簡化 ABI 指標的存留期管理。
 
-下表摘要說明可安全使用**reinterpret_cast**的情況。 在每個案例中，雙向轉型是安全的。
+下表摘要說明可安全使用的案例 **`reinterpret_cast`** 。 在每個案例中，雙向轉型是安全的。
 
 |||
 |-|-|
@@ -121,6 +121,6 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 
 ## <a name="see-also"></a>另請參閱
 
-- [類型系統](../cppcx/type-system-c-cx.md)
-- [C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)
+- [型別系統](../cppcx/type-system-c-cx.md)
+- [C + +/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)
 - [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

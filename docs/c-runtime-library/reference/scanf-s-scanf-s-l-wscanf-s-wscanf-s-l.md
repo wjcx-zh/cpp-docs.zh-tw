@@ -45,12 +45,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: e869f9e0d4fa87c87878ffea987e4b6d85a75616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8811bd0b6e4009cd6aba570e65d0687fab465614
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948880"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231360"
 ---
 # <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
 
@@ -81,7 +81,7 @@ int _wscanf_s_l(
 
 ### <a name="parameters"></a>參數
 
-*格式*<br/>
+*format*<br/>
 格式控制字串。
 
 *引數*<br/>
@@ -92,15 +92,15 @@ int _wscanf_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回成功轉換和指派的欄位數。 傳回值不包含已讀取但未指派的欄位。 傳回值為0表示未指派任何欄位。 傳回值為**EOF**表示發生錯誤，或如果在第一次嘗試讀取字元時找到檔案結尾字元或字串結尾字元，則為。 如果*format*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **scanf_s**和**Wscanf_s**會傳回**EOF** ，並將**errno**設定為**EINVAL**。
+傳回成功轉換和指派的欄位數。 傳回值不包含已讀取但未指派的欄位。 傳回值為0表示未指派任何欄位。 傳回值為**EOF**表示發生錯誤，或如果在第一次嘗試讀取字元時找到檔案結尾字元或字串結尾字元，則為。 如果*format*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **scanf_s**和**Wscanf_s**會傳回**EOF** ，並將**errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Scanf_s**函數會從標準輸入資料流程（ **stdin**）讀取資料，並將其寫入*引數*。 每個*自*變數都必須是對應至類型規範（*格式*為）之變數類型的指標。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**Scanf_s**函式會從標準輸入資料流程（ **stdin**）讀取資料，並將其寫入*引數*中。 每個*自*變數都必須是對應至類型規範（*格式*為）之變數類型的指標。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-**wscanf_s**是寬字元版本的**scanf_s**;**wscanf_s**的*格式*引數是寬字元字串。 如果資料流程是以 ANSI 模式開啟，則**wscanf_s**和**scanf_s**的行為相同。 **scanf_s**目前不支援來自 UNICODE 資料流程的輸入。
+**wscanf_s**是寬字元版本的**scanf_s**;**wscanf_s**的*格式*引數是寬字元字串。 如果資料流程是以 ANSI 模式開啟， **wscanf_s**和**scanf_s**的行為會相同。 **scanf_s**目前不支援來自 UNICODE 資料流程的輸入。
 
 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們使用*地區*設定參數，而不是目前的執行緒地區設定。
 
@@ -114,7 +114,7 @@ scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specificat
 緩衝區大小包含終端機 null。 您可以使用 [寬度規格] 欄位，確保讀入的權杖會納入緩衝區中。 當令牌太大而無法容納時，除非有寬度規格，否則不會寫入任何內容。
 
 > [!NOTE]
-> Size 參數的類型不是不**帶正負**號，而不是**size_t**。 使用靜態轉換，將64位組建設定的**size_t**值轉換為不**帶正負**號。
+> Size 參數的類型為 **`unsigned`** ，而不是**size_t**。 使用靜態轉換，將64位組建設定的**size_t**值轉換為 **`unsigned`** 。
 
 [緩衝區大小] 參數描述最大字元數，而不是位元組。 在此範例中，緩衝區類型的寬度不符合格式規範的寬度。
 
@@ -154,8 +154,8 @@ scanf_s("%4c", c, (unsigned)_countof(c)); // not null terminated
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**scanf_s**、 **_scanf_s_l**|\<stdio.h>|
-|**wscanf_s**、 **_wscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**scanf_s**， **_scanf_s_l**|\<stdio.h>|
+|**wscanf_s**， **_wscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
 通用 Windows 平臺（UWP）應用程式中不支援此主控台。 標準串流處理**stdin**、 **stdout**和**Stderr**必須重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -213,5 +213,5 @@ The contents are: 36 92.300003 y n Wide characters
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

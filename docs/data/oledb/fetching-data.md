@@ -7,22 +7,22 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 441f036d1677806e81bc419ec6a45e810e63a34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409055"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184640"
 ---
 # <a name="fetching-data"></a>擷取資料
 
-開啟資料來源、 工作階段和資料列集物件之後，您可以擷取資料。 根據您使用的存取子的類型，您可能需要繫結資料行。
+在您開啟資料來源、會話和資料列集物件之後，就可以提取資料。 根據您所使用的存取子類型而定，您可能需要系結資料行。
 
-## <a name="to-fetch-data"></a>若要擷取資料
+## <a name="to-fetch-data"></a>若要提取資料
 
-1. 開啟使用適當的資料列集**開啟**命令。
+1. 使用適當的**開啟**命令來開啟資料列集。
 
-1. 如果您使用`CManualAccessor`，繫結之輸出資料行，如果您還尚未這麼做。 下列範例取自[DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)範例。 若要繫結資料行，呼叫`GetColumnInfo`，然後再建立存取子繫結，如下列範例所示：
+1. 如果您使用 `CManualAccessor` ，請系結輸出資料行（如果尚未這麼做）。 下列範例取自[DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)範例。 若要系結資料行，請呼叫 `GetColumnInfo` ，然後使用系結建立存取子，如下列範例所示：
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -39,7 +39,7 @@ ms.locfileid: "62409055"
     rs.Bind();
     ```
 
-1. 撰寫**雖然**迴圈來擷取資料。 在迴圈中，呼叫`MoveNext`演進資料指標，測試對 s_ok 時，傳回的值，如下列範例所示：
+1. 撰寫 **`while`** 迴圈來取得資料。 在迴圈中，呼叫 `MoveNext` 以推進游標，並針對 S_OK 測試傳回值，如下列範例所示：
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -49,9 +49,9 @@ ms.locfileid: "62409055"
     }
     ```
 
-1. 內**雖然**迴圈中，您可以根據您的存取子類型擷取資料。
+1. 在 **`while`** 迴圈內，您可以根據存取子類型來提取資料。
 
-   - 如果您使用[CAccessor](../../data/oledb/caccessor-class.md)類別，您應該有包含資料成員的使用者記錄。 下列範例所示，您可以存取您的資料，使用那些資料成員：
+   - 如果您使用[CAccessor](../../data/oledb/caccessor-class.md)類別，您應該會有包含資料成員的使用者記錄。 您可以使用這些資料成員來存取資料，如下列範例所示：
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -63,7 +63,7 @@ ms.locfileid: "62409055"
         }
         ```
 
-   - 如果您使用`CDynamicAccessor`或是`CDynamicParameterAccessor`類別，您可以使用存取函式擷取資料`GetValue`和`GetColumn`，如下列範例所示。 如果您想要判斷資料類型使用，請使用`GetType`。
+   - 如果您使用 `CDynamicAccessor` 或 `CDynamicParameterAccessor` 類別，您可以使用存取函數和來提取資料 `GetValue` `GetColumn` ，如下列範例所示。 如果您想要判斷您所使用的資料類型，請使用 `GetType` 。
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -78,7 +78,7 @@ ms.locfileid: "62409055"
         }
         ```
 
-   - 如果您使用`CManualAccessor`，您必須指定您自己的資料成員、 繫結，並直接存取它們，如下列範例所示：
+   - 如果您使用 `CManualAccessor` ，則必須指定您自己的資料成員、自行系結，並直接存取它們，如下列範例所示：
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -92,4 +92,4 @@ ms.locfileid: "62409055"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[使用 OLE DB 取用者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

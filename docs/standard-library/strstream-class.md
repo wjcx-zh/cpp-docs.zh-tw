@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 047b7e9d7fdece75137980b013d43abf1d5e3ec3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 796bf1b3ac41a4b5a6ab5bc16239d50616f554df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376623"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224613"
 ---
 # <a name="strstream-class"></a>strstream 類別
 
@@ -38,26 +38,26 @@ class strstream : public iostream
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
-|[斯特流](#strstream)|建構類型 `strstream` 的物件。|
+|[strstream](#strstream)|建構類型 `strstream` 的物件。|
 
 ### <a name="member-functions"></a>成員函數
 
 |成員函數|描述|
 |-|-|
-|[凍結](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|
+|[暫時](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|
 |[pcount](#pcount)|傳回寫入至受控制序列的元素計數。|
 |[rdbuf](#rdbuf)|將指標傳回至資料流的相關 `strstreambuf` 物件。|
-|[Str](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回受控制序列的開頭。|
+|[字串](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回受控制序列的開頭。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<strstream>
+**標頭：**\<strstream>
 
 **命名空間：** std
 
-## <a name="strstreamfreeze"></a><a name="freeze"></a>流::凍結
+## <a name="strstreamfreeze"></a><a name="freeze"></a>strstream：：凍結
 
 導致資料流緩衝區無法在資料流緩衝區作業中使用。
 
@@ -68,17 +68,17 @@ void freeze(bool _Freezeit = true);
 ### <a name="parameters"></a>參數
 
 *_Freezeit*\
-指示是否要凍結流的**布林**。
+**`bool`**，指出您是否要凍結資料流程。
 
 ### <a name="remarks"></a>備註
 
-成員函數調用[rdbuf](#rdbuf) -> [凍結](../standard-library/strstreambuf-class.md#freeze)(=*凍結*)。
+此成員函式會呼叫[rdbuf](#rdbuf)  ->  [凍結](../standard-library/strstreambuf-class.md#freeze)（_ *Freezeit*）。
 
 ### <a name="example"></a>範例
 
-有關使用`freeze`的範例,請參閱[strstreambuf::凍結](../standard-library/strstreambuf-class.md#freeze)。
+如需使用的範例，請參閱[strstreambuf：：凍結](../standard-library/strstreambuf-class.md#freeze) `freeze` 。
 
-## <a name="strstreampcount"></a><a name="pcount"></a>斯特流::p計數
+## <a name="strstreampcount"></a><a name="pcount"></a>strstream：:p 計數
 
 傳回寫入至受控制序列的元素計數。
 
@@ -92,13 +92,13 @@ streamsize pcount() const;
 
 ### <a name="remarks"></a>備註
 
-成員函數傳回[rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount)。
+此成員函式會傳回[rdbuf](#rdbuf)  ->  [pcount](../standard-library/strstreambuf-class.md#pcount)。
 
 ### <a name="example"></a>範例
 
 如需使用 pcount 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。
 
-## <a name="strstreamrdbuf"></a><a name="rdbuf"></a>斯特蘭::rdbuf
+## <a name="strstreamrdbuf"></a><a name="rdbuf"></a>strstream：： rdbuf
 
 傳回指向資料流相關 strstreambuf 物件的指標。
 
@@ -112,13 +112,13 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>備註
 
-成員函數將類型的`pointer`儲存流緩衝區的位址傳回為[strstreambuf](../standard-library/strstreambuf-class.md)。
+此成員函式會將類型之儲存資料流程緩衝區的位址傳回 `pointer` 至[strstreambuf](../standard-library/strstreambuf-class.md)。
 
 ### <a name="example"></a>範例
 
 如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。
 
-## <a name="strstreamstr"></a><a name="str"></a>斯特蘭:斯特
+## <a name="strstreamstr"></a><a name="str"></a>strstream：： str
 
 呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回受控制序列的開頭。
 
@@ -132,13 +132,13 @@ char *str();
 
 ### <a name="remarks"></a>備註
 
-成員函數傳回[rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)。
+此成員函式會傳回[rdbuf](#rdbuf)  ->  [str](../standard-library/strstreambuf-class.md#str)。
 
 ### <a name="example"></a>範例
 
-有關`str`使用的示例,請參閱[strstreambuf:str。](../standard-library/strstreambuf-class.md#str)
+如需使用的範例，請參閱[strstreambuf：： str](../standard-library/strstreambuf-class.md#str) `str` 。
 
-## <a name="strstreamstrstream"></a><a name="strstream"></a>串流::斯特流
+## <a name="strstreamstrstream"></a><a name="strstream"></a>strstream：： strstream
 
 建構類型 `strstream` 的物件。
 
@@ -158,20 +158,20 @@ strstream(char* ptr,
 *_Mode*\
 緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
-*Ptr*\
+*指標*\
 緩衝區。
 
 ### <a name="remarks"></a>備註
 
-兩個構造函數都通過調用[streambuf](../standard-library/streambuf-typedefs.md#streambuf) **(sb**) 初始`sb`化基類,其中是類[strstreambuf](../standard-library/strstreambuf-class.md)的存儲物件。 第一個構造函數也`sb`通過調用[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)進行初始化。 第二個建構函式使用下列其中一種方法初始化基底類別：
+這兩個函式都會呼叫[streambuf](../standard-library/streambuf-typedefs.md#streambuf)（ **sb**）來初始化基類，其中 `sb` 是[strstreambuf](../standard-library/strstreambuf-class.md)類別的預存物件。 第一個函式也會藉 `sb` 由呼叫[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)來初始化。 第二個建構函式使用下列其中一種方法初始化基底類別：
 
-- 如果`_Mode` & **ios_base::app**= 0,則*ptr*必須`count`指定元素陣列的第一個元素,`strstreambuf`建構函數`ptr``count``ptr`呼叫 (,,)
+- 如果 `_Mode`  &  **ios_base：： app**= = 0，則*ptr*必須指定元素陣列的第一個元素 `count` ，而此函式會呼叫 `strstreambuf` （ `ptr` ， `count` ， `ptr` ）。
 
-- 否則 *,ptr*必須指定計數元素陣列的第一個元素,該元素包含第一個元素由*ptr*指定的 C 字串`strstreambuf`,建`ptr``count`構`ptr` + `strlen`函數 呼叫 ( `ptr`, ( ) 。
+- 否則， *ptr*必須指定 count 元素陣列的第一個元素，其中包含的 C 字串中的第一個元素是由*ptr*所指定，而此函式會呼叫 `strstreambuf` （ `ptr` 、 `count` 、 `ptr`  +  `strlen` （ `ptr` ））。
 
 ## <a name="see-also"></a>另請參閱
 
 [iostream](../standard-library/istream-typedefs.md#iostream)\
-[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[電流程式設計](../standard-library/iostream-programming.md)\
-[iostream 慣例](../standard-library/iostreams-conventions.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostreams 慣例](../standard-library/iostreams-conventions.md)

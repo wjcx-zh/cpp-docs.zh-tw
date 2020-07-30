@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226225"
 ---
 # <a name="math-and-floating-point-support"></a>數學與浮點支援
 
@@ -21,11 +21,11 @@ ms.locfileid: "76821508"
 
 許多浮點數學程式庫函式對不同的 CPU 架構會有不同的實作。 例如，32 位元 x86 CRT 的實作可能和 64 位元 x64 CRT 的實作不同。 此外，某些函式對指定的 CPU 架構可能有多種實作。 在執行階段，會根據 CPU 支援的指令集動態選取最有效率的實作。 例如，在 32 位元 x86 CRT，有些函式同時有 x87 實作和 SSE2 實作。 在支援 SSE2 的 CPU 上執行時，會使用較快的 SSE2 實作。 在不支援 SSE2 的 CPU 上執行時，會使用較慢的 x87 實作。 因為數學程式庫函式的不同實作可能會使用不同的 CPU 指令和不同的演算法來產生結果，所以函式在不同的 CPU 中可能會產生不同的結果。 在大部分情況下，結果是在正確四捨五入結果的 +/-1 ulp 內，但實際的結果可能因 CPU 而異。
 
-舊的 16 位元版 Microsoft C/C++ 和 Microsoft Visual C++ 支援 **long double** 類型作為 80 位元精確度浮點資料類型。 在更新版本的 Visual C++ 中，**long double** 資料類型是與 **double**類型相同的 64 位元精確度浮點資料類型。 編譯器會將 **long double** 與 **double** 視作不同類型，但 **long double**函式與其對應的 **double**相等。 CRT 提供 **long double** 版本的數學函式以相容於 ISO C99 原始程式碼，但請注意，二進位表示法可能與其他編譯器不同。
+先前的16位版本的 Microsoft C/c + + 和 Microsoft Visual C++ 支援 **`long double`** 類型為80位精確度浮點資料類型。 在 Visual C++ 的較新版本中， **`long double`** 資料類型是64位有效位數浮點資料類型，與 **`double`** 類型相同。 編譯器會將 **`long double`** 和視為 **`double`** 相異類型，但函式 **`long double`** 與其對應專案相同 **`double`** 。 CRT 提供數學函式的 **`long double`** 版本以進行 ISO C99 原始程式碼相容性，但請注意，二進位標記法可能與其他編譯器不同。
 
 ## <a name="supported-math-and-floating-point-routines"></a>支援的數學與浮點常式
 
-|常式傳回的值|使用|
+|常式傳回的值|用途|
 |-|-|
 [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|計算任何類型整數的絕對值
 [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|計算反餘弦值
@@ -34,9 +34,9 @@ ms.locfileid: "76821508"
 [asinh、asinhf、asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|計算雙曲反正弦值
 [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|計算反正切值
 [atanh、atanhf、atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|計算雙曲反正切值
-[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|將地區設定特定字串轉換成 **double**
-[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將字串轉換成 **double**
-[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|將地區設定特定字串轉換成 **float** 或 **long double**
+[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|將地區設定特定字串轉換成**`double`**
+[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將字串轉換成**`double`**
+[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|將地區設定特定字串轉換為 **`float`** 或**`long double`**
 [cbrt、cbrtf、cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|計算立方根
 [ceil、ceilf、ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|計算 ceiling
 [_chgsign、_chgsignf、_chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|計算加法反元素
@@ -47,7 +47,7 @@ ms.locfileid: "76821508"
 [cos、cosf、cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|計算正弦值
 [cosh、coshf、coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|計算雙曲正弦值
 [div、ldiv、lldiv](../c-runtime-library/reference/div.md)|計算兩個整數值的商數和餘數
-[_ecvt](../c-runtime-library/reference/ecvt.md)、[ecvt](../c-runtime-library/reference/posix-ecvt.md)|將 **double** 轉換成字串
+[_ecvt](../c-runtime-library/reference/ecvt.md)、[ecvt](../c-runtime-library/reference/posix-ecvt.md)|將轉換 **`double`** 成字串
 [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|更安全的 **_ecvt** 版本
 [erf、erff、erfl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|計算誤差函式
 [erfc、erfcf、erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|計算誤差餘函式
@@ -94,15 +94,15 @@ ms.locfileid: "76821508"
 [_j0、_j1、_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式
 [ldexp、ldexpf、ldexpl](../c-runtime-library/reference/ldexp.md)|計算 x*2<sup>n</sup>
 [lgamma、lgammaf、lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|計算 gamma 函式絕對值的自然對數
-[llrint、llrintf、llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|將浮點值四捨五入為最接近的 **long long** 值
-[llround、llroundf、llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|將浮點值四捨五入為最接近的 **long long** 值
+[llrint、llrintf、llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|將浮點值四捨五入為最接近的 **`long long`** 值
+[llround、llroundf、llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|將浮點值四捨五入為最接近的 **`long long`** 值
 [log、logf、logl、log10、log10f、log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|計算自然對數或底數為 10 的對數
 [log1p、log1pf、log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)|計算 1+x 的自然對數
 [log2、log2f、log2l](../c-runtime-library/reference/log2-log2f-log2l.md)|計算以 2 為底數的對數
 [logb、logbf、logbl、_logb、_logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|傳回浮點值的指數
-[lrint、lrintf、lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|將浮點值四捨五入為最接近的 **long** 值
+[lrint、lrintf、lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|將浮點值四捨五入為最接近的 **`long`** 值
 [_lrotl、_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|將整數值向左或向右旋轉
-[lround、lroundf、lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|將浮點值四捨五入為最接近的 **long** 值
+[lround、lroundf、lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|將浮點值四捨五入為最接近的 **`long`** 值
 [_matherr](../c-runtime-library/reference/matherr.md)|預設數學錯誤處理常式
 [__max](../c-runtime-library/reference/max.md)|傳回兩個值中較大值的巨集
 [__min](../c-runtime-library/reference/min.md)|傳回兩個值中較小值的巨集
@@ -126,16 +126,16 @@ ms.locfileid: "76821508"
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|計算雙曲正弦值
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|計算平方根
 [_status87、_statusfp、_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|取得浮點狀態字組
-[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|將字串轉換成 **float**
-[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|將字串轉換為**長** **雙精度浮點數**
+[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|將字串轉換成**`float`**
+[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|將字串轉換成**`long double`**
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|計算正切值
 [tanh、tanhf、tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|計算雙曲正切值
 [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|計算 gamma 函式
 [trunc、truncf、truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|截斷小數部分
-[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將寬字串轉換為 **double**
+[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將寬字元串轉換為**`double`**
 [_y0、_y1、_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[浮點數基本](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[依分類排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[浮點數基本類型](../c-runtime-library/reference/floating-point-primitives.md)<br/>

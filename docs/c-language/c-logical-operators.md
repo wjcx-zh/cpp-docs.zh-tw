@@ -11,22 +11,22 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326582"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227994"
 ---
 # <a name="c-logical-operators"></a>C 邏輯運算子
 
-邏輯運算子會執行邏輯 AND （**&&**）與邏輯 OR （**||**）運算。
+邏輯運算子會執行邏輯 AND （ **&&** ）與邏輯 OR （ **||** ）運算。
 
 ## <a name="syntax"></a>語法
 
 *邏輯 AND 運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*內含 OR 運算式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 AND 運算式*  **&&**  *包含 OR 運算式*
+&nbsp;&nbsp;&nbsp;&nbsp;*邏輯 AND 運算式* **&&***內含 OR 運算式*    
 
 *邏輯 OR 運算式*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*邏輯 AND 運算式*<br/>
@@ -34,11 +34,11 @@ ms.locfileid: "62326582"
 
 ## <a name="remarks"></a>備註
 
-邏輯運算子不會執行一般算術轉換。 它們會以等價於 0 的方式評估每個運算元。 邏輯運算的結果是 0 或 1。 結果的類型是 **int**。
+邏輯運算子不會執行一般算術轉換。 它們會以等價於 0 的方式評估每個運算元。 邏輯運算的結果是 0 或 1。 結果的類型為 **`int`** 。
 
 C 邏輯運算子描述如下：
 
-|運算子|描述|
+|運算子|說明|
 |--------------|-----------------|
 |**&&**|若兩個運算元都有非零值，則邏輯 AND 運算子會產生值 1。 若任一運算元等於 0，則結果是 0。 若邏輯 AND 運算的第一個運算元等於 0，則不會評估第二個運算元。|
 |**&#124;&#124;**|邏輯 OR 運算子會在其運算元上執行包含 OR 運算。 若兩個運算元都有 0 值，則結果是 0。 若任一運算元有非零值，則結果是 1。 若邏輯 OR 運算的第一個運算元有非零值，則不會評估第二個運算元。|
@@ -64,7 +64,7 @@ printf( "%d" , (x == w || x == y || x == z) );
 
 在此範例中，如果 `x` 等於 `w`、`y` 或 `z`，則 **printf** 函式的第二個引數判斷值為 true，並且列印值 1。 否則，它的判斷值為 false，並且印出值 0。 只要其中一項條件的判斷值為 true，求值就會停止。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [邏輯 AND 運算子：&&](../cpp/logical-and-operator-amp-amp.md)
 - [邏輯 OR 運算子：&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

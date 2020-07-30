@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506776"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232608"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
@@ -97,11 +97,11 @@ long double atan2( long double y, long double x );  // C++ only
 
 **atan**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-因為 c + + 允許多載，所以您可以呼叫採用**float**或**long** **double**引數之**atan**和**atan2**的多載。 在 C 程式中， **atan**和**atan2**一律接受**雙重**引數並傳回**雙精度浮點數**。
+因為 c + + 允許多載，所以您**atan**可以呼叫**atan2**採用 **`float`** 或引數之 atan 和 atan2 的多載 **`long double`** 。 在 C 程式中， **atan**和**atan2**一律接受 **`double`** 引數，並傳回 **`double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|

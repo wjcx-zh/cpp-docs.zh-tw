@@ -25,47 +25,47 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cb5224b3edaf84dbcb7c0429044a647fb5ac19a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294783"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229749"
 ---
 # <a name="building-an-import-library-and-export-file"></a>建置匯入程式庫和匯出檔案
 
-若要建置匯入程式庫和匯出檔案，使用下列語法：
+若要建立匯入程式庫和匯出檔案，請使用下列語法：
 
-> **LIB /DEF**[**:**<em>deffile</em>] [*options*] [*objfiles*] [*libraries*]
+> **LIB/DEF**[**：**<em>deffile</em>] [*選項*] [*objfiles*] [連結*庫*]
 
-/DEF 指定時，程式庫會從 LIB 命令中傳遞的匯出規格建立的輸出檔。 有三種方法來指定匯出，建議使用的順序中所列：
+當指定/DEF 時，LIB 會從在 LIB 命令中傳遞的匯出規格建立輸出檔案。 有三種方法可以指定匯出，並以建議的使用順序列出：
 
-1. A **__declspec （dllexport)** 其中一種定義*objfiles*或*程式庫*
+1. **`__declspec(dllexport)`** 其中一個*objfiles*或連結*庫*中的定義
 
-1. /EXPORT 規格：*名稱*LIB 命令列上
+1. LIB 命令列上的/EXPORT：*name*規格
 
-1. 中的定義**匯出**中的陳述式*deffile*
+1. *Deffile*中**匯出**語句的定義
 
-這些是您用來連結匯出的程式時，指定匯出的相同方法。 程式可以使用一個以上的方法。 您可以指定組件的 LIB 命令 (例如多個*objfiles*或 /EXPORT 規格) 在 LIB 命令中的命令檔，就如同您可以在 [連結] 命令。
+這些是您在連結匯出程式時用來指定匯出的相同方法。 程式可以使用一種以上的方法。 您可以在 LIB 命令的命令檔中指定 LIB 命令的各個部分（例如多個*objfiles*或/export 規格），就如同您在 LINK 命令中所做的一樣。
 
-下列選項會套用至建置匯入程式庫和匯出檔案：
+下列選項適用于建立匯入程式庫和匯出檔案：
 
-> **/ OUT:** *匯入*
+> **/Out：** 匯*入*
 
-覆寫預設的輸出檔案名稱，如*匯入*所建立的程式庫。 /OUT 未指定，預設的名稱時，第一個物件檔案或程式庫中的 LIB 命令和擴充功能的基底名稱。 lib。 匯出檔案會提供相同的基底名稱做為匯入程式庫和擴充功能。 exp。
+覆寫所建立之匯*入*程式庫的預設輸出檔案名。 未指定/OUT 時，預設名稱會是 LIB 命令中第一個物件檔案或程式庫的基底名稱，以及副檔名 .lib。 匯出檔案的基底名稱與匯入程式庫和副檔名 .exp 相同。
 
-> **/Export:** *entryname* \[ **=** *internalname*]\[，**\@**<em>序數</em>\[， **NONAME**]]\[，**資料**]
+> **/Export：** *entryname* \[ **=** *internalname*] \[ ， **\@** <em>序數</em> \[ ， **NONAME**]] \[ ， **DATA**]
 
-匯出函式，從您的程式，以允許其他程式以呼叫函式。 您也可以匯出資料 (使用**資料**關鍵字)。 匯出通常是在 DLL 中定義。
+從您的程式匯出函式，以允許其他程式呼叫函式。 您也可以匯出資料（使用**data**關鍵字）。 匯出通常是在 DLL 中定義。
 
-*Entryname*是函式或資料的項目名稱，因為它是可供呼叫端程式。 您可以選擇性地指定*internalname*當做函式定義的程式中，根據預設，已知*internalname*等同於*entryname*。 *序數*範圍 1 到 65535 之間的匯出資料表指定的索引，如果您未指定*序數*，LIB 指派其中一個。 **NONAME**關鍵字匯出函式只能做為序數，而不*entryname*。 **資料**關鍵字用來匯出只有資料的物件。
+*Entryname*是呼叫程式所要使用的函式或資料項目的名稱。 （選擇性）您可以將*internalname*指定為定義程式中已知的函式;根據預設， *internalname*與*entryname*相同。 *序數*會指定匯出資料表的索引，範圍介於1到 65535;如果您未指定*序數*，LIB 會指派一個。 **NONAME**關鍵字只會將函數匯出為序數，而不會有*entryname*。 **Data**關鍵字是用來匯出僅限資料的物件。
 
-> **/INCLUDE:** *符號*
+> **/INCLUDE：** *符號*
 
-將指定*符號*至符號表。 此選項可用於強制使用程式庫物件，否則不會包含項目。
+將指定的*符號*加入至符號表。 此選項適用于強制使用原本不會包含的程式庫物件。
 
-請注意，是否您建立您匯入程式庫中第一步，建立.dll 之前，您必須傳遞同一組物件檔案建置.dll 時為您成功建置匯入程式庫時。
+請注意，如果您在初步步驟中建立匯入程式庫，在建立 .dll 之前，您必須在建立 .dll 時傳遞一組相同的物件檔，如同您在建立匯入程式庫時所傳遞的一樣。
 
 ## <a name="see-also"></a>另請參閱
 
-[與匯入程式庫和匯出檔案一起使用](working-with-import-libraries-and-export-files.md)
+[使用匯入程式庫和匯出檔案](working-with-import-libraries-and-export-files.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998784"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226460"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>從不帶正負號整數型別的轉換
 
@@ -35,7 +35,7 @@ printf_s( "%hd\n", j );   // Prints -3
 
 **Microsoft 特定的**
 
-在 Microsoft 編譯器中，不**帶**正負號的（或不帶正負號的**整數**）和不**帶正負**號的 long 是相異的 **unsigned int** 值的轉換與 **unsigned long** 轉換的方式相同。
+在 Microsoft 編譯器中， **`unsigned`** （或 **`unsigned int`** ）和 **`unsigned long`** 是不同但對等的類型。 轉換 **`unsigned int`** 值的方式與的轉換相同 **`unsigned long`** 。
 
 **結束 Microsoft 專有**
 
@@ -43,49 +43,49 @@ printf_s( "%hd\n", j );   // Prints -3
 
 ## <a name="table-of-conversions-from-unsigned-integral-types"></a>不帶正負號整數類資料類型的轉換資料表
 
-|從|至|方法|
+|寄件者|收件者|方法|
 |----------|--------|------------|
-|**unsigned char**|**char**|保留位元模式，高序位位元會變成正負號位元|
-|**unsigned char**|**short**|零擴充|
-|**unsigned char**|**前提**|零擴充|
-|**unsigned char**|**long long**|零擴充|
-|**unsigned char**|**unsigned short**|零擴充|
-|**unsigned char**|**unsigned long**|零擴充|
-|**unsigned char**|**unsigned long long**|零擴充|
-|**unsigned char**|**float**|轉換為 **long**，將 **long** 轉換為 **float**|
-|**unsigned char**|**double**|轉換為 **long**，將 **long** 轉換為 **double**|
-|**unsigned char**|**long double**|轉換為 **long**，將 **long** 轉換為 **double**|
-|**unsigned short**|**char**|保留低序位位元組|
-|**unsigned short**|**short**|保留位元模式，高序位位元會變成正負號位元|
-|**unsigned short**|**前提**|零擴充|
-|**unsigned short**|**long long**|零擴充|
-|**unsigned short**|**unsigned char**|保留低序位位元組|
-|**unsigned short**|**unsigned long**|零擴充|
-|**unsigned short**|**unsigned long long**|零擴充|
-|**unsigned short**|**float**|轉換為 **long**，將 **long** 轉換為 **float**|
-|**unsigned short**|**double**|轉換為 **long**，將 **long** 轉換為 **double**|
-|**unsigned short**|**long double**|轉換為 **long**，將 **long** 轉換為 **double**|
-|**unsigned long**|**char**|保留低序位位元組|
-|**unsigned long**|**short**|保留低序位字組|
-|**unsigned long**|**前提**|保留位元模式，高序位位元會變成正負號位元|
-|**unsigned long**|**long long**|零擴充|
-|**unsigned long**|**unsigned char**|保留低序位位元組|
-|**unsigned long**|**unsigned short**|保留低序位字組|
-|**unsigned long**|**unsigned long long**|零擴充|
-|**unsigned long**|**float**|轉換為 **long**，將 **long** 轉換為 **float**|
-|**unsigned long**|**double**|直接轉換為 **double**|
-|**unsigned long**|**long double**|轉換為 **long**，將 **long** 轉換為 **double**|
-|**unsigned long long**|**char**|保留低序位位元組|
-|**unsigned long long**|**short**|保留低序位字組|
-|**unsigned long long**|**前提**|保留低序位 dword|
-|**unsigned long long**|**long long**|保留位元模式，高序位位元會變成正負號位元|
-|**unsigned long long**|**unsigned char**|保留低序位位元組|
-|**unsigned long long**|**unsigned short**|保留低序位字組|
-|**unsigned long long**|**unsigned long**|保留低序位 dword|
-|**unsigned long long**|**float**|轉換為 **long**，將 **long** 轉換為 **float**|
-|**unsigned long long**|**double**|直接轉換為 **double**|
-|**unsigned long long**|**long double**|轉換為 **long**，將 **long** 轉換為 **double**|
+|**`unsigned char`**|**`char`**|保留位元模式，高序位位元會變成正負號位元|
+|**`unsigned char`**|**`short`**|零擴充|
+|**`unsigned char`**|**`long`**|零擴充|
+|**`unsigned char`**|**`long long`**|零擴充|
+|**`unsigned char`**|**`unsigned short`**|零擴充|
+|**`unsigned char`**|**`unsigned long`**|零擴充|
+|**`unsigned char`**|**`unsigned long long`**|零擴充|
+|**`unsigned char`**|**`float`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`float`**|
+|**`unsigned char`**|**`double`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`double`**|
+|**`unsigned char`**|**`long double`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`double`**|
+|**`unsigned short`**|**`char`**|保留低序位位元組|
+|**`unsigned short`**|**`short`**|保留位元模式，高序位位元會變成正負號位元|
+|**`unsigned short`**|**`long`**|零擴充|
+|**`unsigned short`**|**`long long`**|零擴充|
+|**`unsigned short`**|**`unsigned char`**|保留低序位位元組|
+|**`unsigned short`**|**`unsigned long`**|零擴充|
+|**`unsigned short`**|**`unsigned long long`**|零擴充|
+|**`unsigned short`**|**`float`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`float`**|
+|**`unsigned short`**|**`double`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`double`**|
+|**`unsigned short`**|**`long double`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`double`**|
+|**`unsigned long`**|**`char`**|保留低序位位元組|
+|**`unsigned long`**|**`short`**|保留低序位字組|
+|**`unsigned long`**|**`long`**|保留位元模式，高序位位元會變成正負號位元|
+|**`unsigned long`**|**`long long`**|零擴充|
+|**`unsigned long`**|**`unsigned char`**|保留低序位位元組|
+|**`unsigned long`**|**`unsigned short`**|保留低序位字組|
+|**`unsigned long`**|**`unsigned long long`**|零擴充|
+|**`unsigned long`**|**`float`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`float`**|
+|**`unsigned long`**|**`double`**|直接轉換成**`double`**|
+|**`unsigned long`**|**`long double`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`double`**|
+|**`unsigned long long`**|**`char`**|保留低序位位元組|
+|**`unsigned long long`**|**`short`**|保留低序位字組|
+|**`unsigned long long`**|**`long`**|保留低序位 dword|
+|**`unsigned long long`**|**`long long`**|保留位元模式，高序位位元會變成正負號位元|
+|**`unsigned long long`**|**`unsigned char`**|保留低序位位元組|
+|**`unsigned long long`**|**`unsigned short`**|保留低序位字組|
+|**`unsigned long long`**|**`unsigned long`**|保留低序位 dword|
+|**`unsigned long long`**|**`float`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`float`**|
+|**`unsigned long long`**|**`double`**|直接轉換成**`double`**|
+|**`unsigned long long`**|**`long double`**|轉換成 **`long`** ; 將轉換 **`long`** 成**`double`**|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指派轉換](../c-language/assignment-conversions.md)

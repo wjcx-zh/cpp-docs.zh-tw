@@ -39,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916801"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232439"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
@@ -90,9 +90,9 @@ Base：
 
 **pow**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-因為 c + + 允許多載，所以您可以呼叫**pow**的任何不同多載。 在 C 程式中， **pow**一律會採用兩個**雙精度浮點數**，並傳回**雙精度**值。
+因為 c + + 允許多載，所以您可以呼叫**pow**的任何不同多載。 在 C 程式中， **pow**一律會接受兩個 **`double`** 值並傳回 **`double`** 值。
 
-`pow(int, int)` 已無法使用。 如果您使用這個多載，編譯器可能會發出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免這個問題，請將第一個參數轉換為**double**、 **float**或**long** **double**。
+`pow(int, int)` 已無法使用。 如果您使用這個多載，編譯器可能會發出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免這個問題，請將第一個參數轉換為 **`double`** 、 **`float`** 或 **`long double`** 。
 
 根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
 

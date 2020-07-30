@@ -9,12 +9,12 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-ms.openlocfilehash: 729e173c695db3b4970490e84bedfd441e6ff6d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e28c8a234ff840a16228416720ac48763fccc76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344833"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231412"
 ---
 # <a name="usual-arithmetic-conversions"></a>一般算術轉換
 
@@ -22,23 +22,23 @@ ms.locfileid: "62344833"
 
 以下摘要說明的算術轉換稱為「一般算術轉換」。 這些步驟僅適用於需要算術類型的二元運算子。 目的是產生一般類型 (也是結果的類型)。 為判斷實際發生的轉換，編譯器會對運算式中的二進位運算套用下列演算法。 下列步驟並非優先順序。
 
-1. 如果任一運算元的類型是 `long double`，就會將另一個運算元轉換成 `long double` 類型。
+1. 如果任一個運算元的類型為 **`long double`** ，則會將另一個運算元轉換成類型 **`long double`** 。
 
-1. 如果不符合上述條件，而且任一運算元的類型是 **double**，會將另一個運算元轉換為 **double** 類型。
+1. 如果不符合上述條件，而且任一運算元的類型為 **`double`** ，則會將另一個運算元轉換成類型 **`double`** 。
 
-1. 如果不符合上述條件，而且任一運算元的類型是 **float**，會將另一個運算元轉換為 **float** 類型。
+1. 如果不符合上述兩個條件，而且任一運算元的類型為 **`float`** ，則會將另一個運算元轉換成類型 **`float`** 。
 
 1. 如果不符合上述三個條件 (運算元都不是浮動類型)，則會對運算元執行整數轉換，如下所示：
 
-   - 如果任一運算元的類型是 `unsigned long`，就會將另一個運算元轉換成 `unsigned long` 類型。
+   - 如果任一個運算元的類型為 **`unsigned long`** ，則會將另一個運算元轉換成類型 **`unsigned long`** 。
 
-   - 如果不符合上述條件，而且任一運算元的類型是 **long**，而另一個運算元的類型是 `unsigned int`，則會將兩個運算元都轉換為 `unsigned long` 類型。
+   - 如果不符合上述條件，而且任一運算元的類型為，而另一個運算元的類型為 **`long`** **`unsigned int`** ，則兩個運算元都會轉換成類型 **`unsigned long`** 。
 
-   - 如果不符合上述兩個條件，而且任一運算元的類型是 **long**，會將另一個運算元轉換為 **long** 類型。
+   - 如果不符合上述兩個條件，而且任一運算元的類型為 **`long`** ，則會將另一個運算元轉換成類型 **`long`** 。
 
-   - 如果不符合上述三個條件，而且任一運算元的類型是 `unsigned int`，則會將另一個運算元轉換成 `unsigned int` 類型。
+   - 如果不符合上述三個條件，而且任一運算元的類型為 **`unsigned int`** ，則會將另一個運算元轉換成類型 **`unsigned int`** 。
 
-   - 如果不符合上述任何條件，會將兩個運算元都轉換成 `int` 類型。
+   - 如果不符合上述任何條件，則會將兩個運算元轉換成類型 **`int`** 。
 
 下列程式碼說明這些轉換規則：
 
@@ -58,6 +58,6 @@ dVal = ulVal + fVal; /* ulVal converted to float
                       */
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 運算子](../c-language/c-operators.md)

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 16f4315837873c8d78065ea97a11188bdddedbed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916243"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234103"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime、_gmtime32、_gmtime64
 
@@ -63,9 +63,9 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>傳回值
 
-[tm](../../c-runtime-library/standard-types.md) 類型之結構的指標。 傳回結構的欄位會以 UTC 而非當地時間來保存*sourceTime*引數的評估值。 每個結構欄位的類型為**int**，如下所示：
+[tm](../../c-runtime-library/standard-types.md) 類型之結構的指標。 傳回結構的欄位會以 UTC 而非當地時間來保存*sourceTime*引數的評估值。 每個結構欄位的類型為 **`int`** ，如下所示：
 
-|欄位|描述|
+|欄位|說明|
 |-|-|
 |**tm_sec**|分鐘後的秒數（0-59）。|
 |**tm_min**|小時之後的分鐘（0-59）。|
@@ -98,7 +98,7 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime> 或\<time. h>|
+|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime> 或 \<time.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -142,7 +142,7 @@ Coordinated universal time is Tue Feb 12 23:11:31 2002
 [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
 [_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
+[localtime，_localtime32，_localtime64](localtime-localtime32-localtime64.md)<br/>
 [_mkgmtime、_mkgmtime32、_mkgmtime64](mkgmtime-mkgmtime32-mkgmtime64.md)<br/>
 [mktime、_mktime32、_mktime64](mktime-mktime32-mktime64.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>

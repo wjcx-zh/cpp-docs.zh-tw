@@ -1,6 +1,6 @@
 ---
 title: vector 類別
-description: 類別向量的C++ Microsoft 標準程式庫實作為參考。
+description: 類別向量的 Microsoft c + + 標準程式庫實作為參考。
 ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
@@ -87,16 +87,16 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 71b55b4af44a641846ca7b8706bee420887950c5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422392"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224561"
 ---
 # <a name="vector-class"></a>vector 類別
 
-C++標準程式庫向量類別是序列容器的類別樣板。 向量會以線性相片順序儲存給定類型的元素，並允許快速隨機存取任何專案。 當隨機存取效能是高階時，向量是序列的慣用容器。
+C + + 標準程式庫向量類別是序列容器的類別樣板。 向量會以線性相片順序儲存給定類型的元素，並允許快速隨機存取任何專案。 當隨機存取效能是高階時，向量是序列的慣用容器。
 
 ## <a name="syntax"></a>語法
 
@@ -107,10 +107,10 @@ class vector
 
 ### <a name="parameters"></a>參數
 
-*類型*\
+*型*\
 要儲存在向量中的項目資料類型
 
-配置*器\*
+*配置器*\
 代表預存配置器物件的類型，封裝有關向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `allocator<Type>`。
 
 ## <a name="remarks"></a>備註
@@ -119,9 +119,9 @@ class vector
 
 當成員函式必須將向量物件中包含的序列增加到超過其目前的儲存容量時，就會發生向量重新配置。 其他的插入和清除可能會改變序列中的各種儲存空間位址。 在這些情況下，指向改變之序列位置的迭代器或參考會變成無效。 如果沒有發生重新配置，只有插入/刪除點之前的迭代器和參考仍有效。
 
-[Vector\<bool > 類別](../standard-library/vector-bool-class.md)是 `bool`類型元素的類別樣板向量的完整特製化。 它具有特殊化所使用之基礎類型的配置器。
+[Vector \<bool> 類別](../standard-library/vector-bool-class.md)是類型元素的類別樣板向量的完整特製化 **`bool`** 。 它具有特殊化所使用之基礎類型的配置器。
 
-[Vector\<bool > 參考類別](../standard-library/vector-bool-class.md#reference_class)是一個嵌套類別，其物件可以提供向量中的專案（單一位）參考，\<bool > 物件。
+[Vector \<bool> 參考類別](../standard-library/vector-bool-class.md#reference_class)是一個嵌套類別，其物件可以提供向量物件內的專案（單一位）參考 \<bool> 。
 
 ## <a name="members"></a>成員
 
@@ -129,20 +129,20 @@ class vector
 
 |||
 |-|-|
-|[vector](#vector)|建構特定大小、具有特定值項目或具有特定 `allocator` 的向量，或將向量建構為其他一些向量的複本。|
+|[向量](#vector)|建構特定大小、具有特定值項目或具有特定 `allocator` 的向量，或將向量建構為其他一些向量的複本。|
 
 ### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
 |[allocator_type](#allocator_type)|代表向量物件之 `allocator` 類別的類型。|
-|[const_iterator](#const_iterator)|一種類型，提供可讀取向量中 **const** 項目之隨機存取迭代器。|
-|[const_pointer](#const_pointer)|一種類型，提供向量中 **const** 元素的指標。|
-|[const_reference](#const_reference)|一種類型，提供向量中所儲存之**const**元素的參考。 它是用來讀取和執行**const**運算。|
-|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取向量中任何 **const** 項目之隨機存取迭代器。|
+|[const_iterator](#const_iterator)|一種類型，提供可讀取向量中元素的隨機存取反覆運算器 **`const`** 。|
+|[const_pointer](#const_pointer)|一種類型，提供 **`const`** 向量中元素的指標。|
+|[const_reference](#const_reference)|一種類型，提供 **`const`** 儲存在向量中之專案的參考。 它是用來讀取和執行 **`const`** 作業。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取向量中任何元素的隨機存取反覆運算器 **`const`** 。|
 |[difference_type](#difference_type)|提供向量中兩個項目位址之間差異的類型。|
-|[iterator](#iterator)|提供可讀取或修改向量中任何項目之隨機存取迭代器的類型。|
-|[pointer](#pointer)|提供向量中某個項目指標的類型。|
+|[定位](#iterator)|提供可讀取或修改向量中任何項目之隨機存取迭代器的類型。|
+|[滑鼠](#pointer)|提供向量中某個項目指標的類型。|
 |[reference](#reference)|提供儲存在向量中之項目參考的類型。|
 |[reverse_iterator](#reverse_iterator)|提供可讀取或修改反向向量中任何項目之隨機存取迭代器的類型。|
 |[size_type](#size_type)|計算向量中項目數的類型。|
@@ -154,21 +154,21 @@ class vector
 |-|-|
 |[assign](#assign)|清除向量，並將指定的項目複製到空向量。|
 |[at](#at)|傳回向量中指定位置的項目參考。|
-|[back](#back)|傳回向量的最後一個項目參考。|
-|[begin](#begin)|傳回向量中第一個項目的隨機存取迭代器。|
-|[容量](#capacity)|傳回向量可包含而不需要配置更多儲存空間的項目數。|
+|[返回](#back)|傳回向量的最後一個項目參考。|
+|[起點](#begin)|傳回向量中第一個項目的隨機存取迭代器。|
+|[存儲](#capacity)|傳回向量可包含而不需要配置更多儲存空間的項目數。|
 |[cbegin](#cbegin)|傳回向量中第一個項目的隨機存取常數迭代器。|
 |[cend](#cend)|傳回隨機存取常數迭代器，指向向量結尾的後一個項目。|
 |[crbegin](#crbegin)|將常數迭代器傳回至反向向量中的第一個項目。|
 |[crend](#crend)|將常數迭代器傳回至反向向量的結尾。|
-|[清除](#clear)|清除向量的項目。|
+|[明確](#clear)|清除向量的項目。|
 |[data](#data)|傳回向量中第一個項目的指標。|
 |[emplace](#emplace)|將就地建構的項目插入向量的指定位置。|
 |[emplace_back](#emplace_back)|將就地建構的項目加入向量的結尾。|
 |[empty](#empty)|測試向量容器是否空白。|
-|[end](#end)|傳回隨機存取迭代器，指向向量的結尾。|
+|[成品](#end)|傳回隨機存取迭代器，指向向量的結尾。|
 |[erase](#erase)|從向量的指定位置移除一個項目或一定範圍的項目。|
-|[front](#front)|傳回向量中第一個項目的參考。|
+|[前端](#front)|傳回向量中第一個項目的參考。|
 |[get_allocator](#get_allocator)|將物件傳回至向量所使用的 `allocator` 類別。|
 |[insert](#insert)|將就地建構的一個或多個項目插入向量的指定位置。|
 |[max_size](#max_size)|傳回向量的最大長度。|
@@ -176,20 +176,20 @@ class vector
 |[push_back](#push_back)|將項目加入向量的結尾。|
 |[rbegin](#rbegin)|傳回反向向量中第一個項目的迭代器。|
 |[rend](#rend)|將迭代器傳回至反向向量的結尾。|
-|[reserve](#reserve)|為向量物件保留最小儲存空間長度。|
-|[resize](#resize)|指定向量的新大小。|
+|[留成](#reserve)|為向量物件保留最小儲存空間長度。|
+|[調整](#resize)|指定向量的新大小。|
 |[shrink_to_fit](#shrink_to_fit)|捨棄多餘的容量。|
 |[size](#size)|傳回向量中的項目數。|
-|[swap](#swap)|交換兩個向量的項目。|
+|[調換](#swap)|交換兩個向量的項目。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
 |[operator&#91;&#93;](#op_at)|傳回在指定位置上 vector 項目的參考。|
-|[operator=](#op_eq)|以另一個向量的複本取代向量的項目。|
+|[operator =](#op_eq)|以另一個向量的複本取代向量的項目。|
 
-## <a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
 
 代表向量物件之配置器類別的類型。
 
@@ -203,9 +203,9 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>範例
 
-如需使用 [ 的範例，請參閱 ](#get_allocator)get_allocator`allocator_type` 的範例。
+如需使用 `allocator_type` 的範例，請參閱 [get_allocator](#get_allocator) 的範例。
 
-## <a name="assign"></a>值賦
+## <a name="assign"></a><a name="assign"></a>值賦
 
 清除向量，並將指定的項目複製到空向量。
 
@@ -219,10 +219,10 @@ void assign(InputIterator first, InputIterator last);
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 項目範圍中要複製的第一個項目位置。
 
-*上次*\
+*次*\
 項目範圍之外要複製的第一個項目位置。
 
 *計數*\
@@ -236,7 +236,7 @@ void assign(InputIterator first, InputIterator last);
 
 ### <a name="remarks"></a>備註
 
-首先，`assign` 會清除向量中的任何現有元素。 然後，`assign` 將原始向量中的指定範圍專案插入向量中，或將新指定值專案的複本插入向量中。
+首先， `assign` 清除向量中的任何現有元素。 然後， `assign` 從原始向量將指定範圍的專案插入向量中，或將新指定值專案的複本插入向量中。
 
 ### <a name="example"></a>範例
 
@@ -285,7 +285,7 @@ int main()
 }
 ```
 
-## <a name="at"></a>在
+## <a name="at"></a><a name="at"></a>在
 
 傳回向量中指定位置的項目參考。
 
@@ -297,16 +297,16 @@ const_reference at(size_type position) const;
 
 ### <a name="parameters"></a>參數
 
-*position*\
+*移動*\
 向量中要參考之項目的註標或位置編號。
 
 ### <a name="return-value"></a>傳回值
 
-引數中加上註標的項目參考。 如果*position*大於向量的大小，`at` 會擲回例外狀況。
+引數中加上註標的項目參考。 如果*position*大於向量的大小，則會擲回 `at` 例外狀況。
 
 ### <a name="remarks"></a>備註
 
-如果 `at` 的傳回值指派給 `const_reference`，則無法修改 vector 物件。 如果 `at` 的傳回值指派給 `reference`，則可以修改向量物件。
+如果將的傳回值 `at` 指派給 `const_reference` ，則無法修改 vector 物件。 如果 `at` 的傳回值指派給 `reference`，則可以修改向量物件。
 
 ### <a name="example"></a>範例
 
@@ -336,7 +336,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a>返回
+## <a name="back"></a><a name="back"></a>返回
 
 傳回向量的最後一個項目參考。
 
@@ -352,7 +352,7 @@ const_reference back() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `back` 的傳回值指派給 `const_reference`，則無法修改 vector 物件。 如果 `back` 的傳回值指派給 `reference`，則可以修改向量物件。
+如果將的傳回值 `back` 指派給 `const_reference` ，則無法修改 vector 物件。 如果 `back` 的傳回值指派給 `reference`，則可以修改向量物件。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空向量中的元素，則會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的反覆運算](../standard-library/checked-iterators.md)器。
 
@@ -380,7 +380,7 @@ int main() {
 }
 ```
 
-## <a name="begin"></a>起點
+## <a name="begin"></a><a name="begin"></a>起點
 
 傳回向量中第一個項目的隨機存取迭代器。
 
@@ -396,7 +396,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-如果 `begin` 的傳回值指派給[vector：： const_iterator](#const_iterator)，則無法修改 `vector` 物件。 如果 `begin` 的傳回值指派給 [vector::iterator](#iterator)，則可以修改 `vector` 物件。
+如果將的傳回值 `begin` 指派給[vector：： const_iterator](#const_iterator)，就 `vector` 無法修改物件。 如果 `begin` 的傳回值指派給 [vector::iterator](#iterator)，則可以修改 `vector` 物件。
 
 ### <a name="example"></a>範例
 
@@ -443,7 +443,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="capacity"></a>存儲
+## <a name="capacity"></a><a name="capacity"></a>存儲
 
 傳回向量可包含而不需要配置更多儲存空間的項目數。
 
@@ -487,9 +487,9 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
-傳回**常數**反覆運算器，定址範圍中的第一個元素。
+傳回 **`const`** 反覆運算器，其定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -497,13 +497,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-**常數**隨機存取反覆運算器，指向範圍的第一個專案，或指向空白範圍結尾之外的位置（針對空白範圍，`cbegin() == cend()`）。
+**`const`** 隨機存取反覆運算器，指向範圍的第一個元素，或指向空白範圍結尾（空白範圍）之外的位置 `cbegin() == cend()` 。
 
 ### <a name="remarks"></a>備註
 
-如果傳回值為 `cbegin`，就無法修改範圍中的元素。
+當的傳回值為時 `cbegin` ，無法修改範圍中的元素。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()`之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請 `Container` 將視為支援和的任何種類的可修改（非 **`const`** ） `begin()` 容器 `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -513,9 +513,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
-傳回**常數**反覆運算器，定址範圍中最後一個元素之後的位置。
+傳回 **`const`** 反覆運算器，其定址範圍中最後一個元素之後的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -523,13 +523,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-**常數**隨機存取反覆運算器，指向超出範圍的結尾。
+**`const`** 隨機存取反覆運算器，指向超出範圍的結尾。
 
 ### <a name="remarks"></a>備註
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()`之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請 `Container` 將視為支援和的任何種類的可修改（非 **`const`** ） `end()` 容器 `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -539,9 +539,9 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-`cend` 所傳回的值不應該被取值。 僅用於比較。
+傳回的值 `cend` 不應該取值。 僅用於比較。
 
-## <a name="clear"></a>明確
+## <a name="clear"></a><a name="clear"></a>明確
 
 清除向量的項目。
 
@@ -577,9 +577,9 @@ The size of v1 is 3
 The size of v1 after clearing is 0
 ```
 
-## <a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
 
-一種類型，提供可讀取向量中 **const** 項目之隨機存取迭代器。
+一種類型，提供可讀取向量中元素的隨機存取反覆運算器 **`const`** 。
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -591,11 +591,11 @@ typedef implementation-defined const_iterator;
 
 ### <a name="example"></a>範例
 
-如需使用 [ 的範例，請參閱 ](#back)back`const_iterator` 的範例。
+如需使用 `const_iterator` 的範例，請參閱 [back](#back) 的範例。
 
-## <a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
-一種類型，提供向量中 **const** 元素的指標。
+一種類型，提供 **`const`** 向量中元素的指標。
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -607,9 +607,9 @@ typedef typename Allocator::const_pointer const_pointer;
 
 [迭代器](#iterator)通常可用來存取向量項目。
 
-## <a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
-一種類型，提供向量中所儲存之**const**元素的參考。 它是用來讀取和執行**const**運算。
+一種類型，提供 **`const`** 儲存在向量中之專案的參考。 它是用來讀取和執行 **`const`** 作業。
 
 ```cpp
 typedef typename Allocator::const_reference const_reference;
@@ -651,9 +651,9 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
 
-一種類型，提供可讀取向量中任何 **const** 項目之隨機存取迭代器。
+一種類型，提供可讀取向量中任何元素的隨機存取反覆運算器 **`const`** 。
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -661,13 +661,13 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>備註
 
-類型 `const_reverse_iterator` 無法修改元素的值，而且會用來反向逐一查看向量。
+型別 `const_reverse_iterator` 無法修改元素的值，並且用來反向逐一查看向量。
 
 ### <a name="example"></a>範例
 
 如需如何宣告及使用迭代器的範例，請參閱 [rbegin](#rbegin)。
 
-## <a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a>crbegin
 
 將常數迭代器傳回至反向向量中的第一個項目。
 
@@ -681,7 +681,7 @@ const 反向隨機存取迭代器，其定址反向[向量](../standard-library/
 
 ### <a name="remarks"></a>備註
 
-如果傳回值為 `crbegin`，就無法修改 `vector` 物件。
+有的傳回值時 `crbegin` ， `vector` 無法修改物件。
 
 ### <a name="example"></a>範例
 
@@ -716,7 +716,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a>crend
 
 傳回常數迭代器，為反向向量中最後一個項目的下一個位置定址。
 
@@ -732,11 +732,11 @@ const 反向隨機存取迭代器，其定址反向[向量](../standard-library/
 
 `crend` 搭配反向 `vector` 使用，就如同 [vector::cend](#cend) 搭配 `vector` 使用。
 
-如果傳回值為 `crend` （適當遞減），則無法修改 `vector` 物件。
+傳回值為 `crend` （適當遞減）， `vector` 無法修改物件。
 
 `crend` 可以用來測試反轉迭代器是否已到達其 `vector` 的結尾。
 
-`crend` 所傳回的值不應該被取值。 僅用於比較。
+傳回的值 `crend` 不應該取值。 僅用於比較。
 
 ### <a name="example"></a>範例
 
@@ -765,7 +765,7 @@ int main( )
 1
 ```
 
-## <a name="data"></a>data
+## <a name="data"></a><a name="data"></a> 資料
 
 傳回向量中第一個項目的指標。
 
@@ -821,7 +821,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 提供參考相同向量中項目之兩個迭代器間差異的類型。
 
@@ -878,7 +878,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 將就地建構的項目插入向量的指定位置。
 
@@ -891,10 +891,10 @@ iterator emplace(
 
 ### <a name="parameters"></a>參數
 
-*position*\
+*移動*\
 第一個項目插入[向量](../standard-library/vector-class.md)中的位置。
 
-*args*\
+*引數*\
 建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。
 
 ### <a name="return-value"></a>傳回值
@@ -903,7 +903,7 @@ iterator emplace(
 
 ### <a name="remarks"></a>備註
 
-任何插入作業都可能很耗費資源，請參閱[vector 類別](../standard-library/vector-class.md)，以取得 `vector` 效能的討論。
+任何插入作業都可能很耗費資源，請參閱[vector 類別](../standard-library/vector-class.md)以取得效能的討論 `vector` 。
 
 ### <a name="example"></a>範例
 
@@ -947,7 +947,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
 
 將就地建構的項目加入向量的結尾。
 
@@ -958,7 +958,7 @@ void emplace_back(Types&&... args);
 
 ### <a name="parameters"></a>參數
 
-*args*\
+*引數*\
 建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。
 
 ### <a name="example"></a>範例
@@ -977,7 +977,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a>空
+## <a name="empty"></a><a name="empty"></a>空
 
 測試是否為空的向量。
 
@@ -987,7 +987,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果向量是空的，則為**true** ;如果向量不是空的，則**為 false** 。
+**`true`** 如果向量是空的，則為，**`false`** 如果向量不是空的，則為。
 
 ### <a name="example"></a>範例
 
@@ -1015,7 +1015,7 @@ int main( )
 The vector is not empty.
 ```
 
-## <a name="end"></a>成品
+## <a name="end"></a><a name="end"></a>成品
 
 傳回超出結尾 (past-the-end) 迭代器。
 
@@ -1027,11 +1027,11 @@ const_iterator end() const;
 
 ### <a name="return-value"></a>傳回值
 
-向量的超出結尾迭代器。 如果向量是空的，則 `vector::end() == vector::begin()`。
+向量的超出結尾迭代器。 如果向量是空的，則為 `vector::end() == vector::begin()` 。
 
 ### <a name="remarks"></a>備註
 
-如果 `end` 的傳回值指派給 `const_iterator`類型的變數，則無法修改 vector 物件。 如果 `end` 的傳回值指派給 `iterator`類型的變數，則可以修改 vector 物件。
+如果將的傳回值 `end` 指派給類型的變數 `const_iterator` ，則無法修改 vector 物件。 如果將的傳回值 `end` 指派給類型的變數 `iterator` ，則可以修改 vector 物件。
 
 ### <a name="example"></a>範例
 
@@ -1059,7 +1059,7 @@ int main( )
 2
 ```
 
-## <a name="erase"></a>抹
+## <a name="erase"></a><a name="erase"></a>抹
 
 從向量的指定位置移除一個項目或一定範圍的項目。
 
@@ -1074,13 +1074,13 @@ iterator erase(
 
 ### <a name="parameters"></a>參數
 
-*position*\
+*移動*\
 要從向量中移除之項目的位置。
 
-*第一個*\
+*頭*\
 從向量中移除之第一個項目的位置。
 
-*上次*\
+*次*\
 從向量中移除的最後一個項目之後的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1132,7 +1132,7 @@ v1 = 20 30 40 50
 v1 = 20 50
 ```
 
-## <a name="front"></a>前端
+## <a name="front"></a><a name="front"></a>前端
 
 傳回向量中第一個項目的參考。
 
@@ -1148,7 +1148,7 @@ const_reference front() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `front` 的傳回值指派給 `const_reference`，則無法修改 vector 物件。 如果 `front` 的傳回值指派給 **reference**，則可以修改向量物件。
+如果將的傳回值 `front` 指派給 `const_reference` ，則無法修改 vector 物件。 如果 `front` 的傳回值指派給 **reference**，則可以修改向量物件。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空向量中的元素，則會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的反覆運算](../standard-library/checked-iterators.md)器。
 
@@ -1178,7 +1178,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 傳回一份用來建構向量的配置器物件複本。
 
@@ -1192,7 +1192,7 @@ Allocator get_allocator() const;
 
 ### <a name="remarks"></a>備註
 
-供 vector 類別用於指定類別如何管理儲存的配置器。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是C++一項先進的功能。
+供 vector 類別用於指定類別如何管理儲存的配置器。 C++ 標準程式庫容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是一個先進的 c + + 功能。
 
 ### <a name="example"></a>範例
 
@@ -1217,7 +1217,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>插入
+## <a name="insert"></a><a name="insert"></a>插入
 
 將專案、數個元素或某個範圍的專案插入向量的指定位置。
 
@@ -1244,7 +1244,7 @@ void insert(
 
 ### <a name="parameters"></a>參數
 
-*position*\
+*移動*\
 第一個項目插入向量中的位置。
 
 *value*\
@@ -1253,10 +1253,10 @@ void insert(
 *計數*\
 插入向量的項目數。
 
-*第一個*\
+*頭*\
 要複製的元素範圍中第一個元素的位置。
 
-*上次*\
+*次*\
 超出要複製之元素範圍的第一個元素的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1265,7 +1265,7 @@ void insert(
 
 ### <a name="remarks"></a>備註
 
-作為前置條件， *first*和*last*不得為向量中的反覆運算器，或行為未定義。 任何插入作業都可能很耗費資源，請參閱[vector 類別](../standard-library/vector-class.md)，以取得 `vector` 效能的討論。
+作為前置條件， *first*和*last*不得為向量中的反覆運算器，或行為未定義。 任何插入作業都可能很耗費資源，請參閱[vector 類別](../standard-library/vector-class.md)以取得效能的討論 `vector` 。
 
 ### <a name="example"></a>範例
 
@@ -1331,7 +1331,7 @@ v1 = 10 50 50 40 50 50 50 50 20 30
 vv1[0] = 10 50 50 40 50 50 50 50 20 30
 ```
 
-## <a name="iterator"></a>定位
+## <a name="iterator"></a><a name="iterator"></a>定位
 
 提供可讀取或修改向量中任何項目之隨機存取迭代器的類型。
 
@@ -1347,7 +1347,7 @@ typedef implementation-defined iterator;
 
 請參閱 [begin](#begin) 的範例。
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 傳回向量的最大長度。
 
@@ -1378,7 +1378,7 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a>operator []
+## <a name="operator"></a><a name="op_at"></a>operator []
 
 傳回在指定位置上 vector 項目的參考。
 
@@ -1390,7 +1390,7 @@ const_reference operator[](size_type position) const;
 
 ### <a name="parameters"></a>參數
 
-*position*\
+*移動*\
 vector 項目的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1399,7 +1399,7 @@ vector 項目的位置。
 
 ### <a name="remarks"></a>備註
 
-如果 `operator[]` 的傳回值指派給 `const_reference`，則無法修改 vector 物件。 如果 `operator[]` 的傳回值已指派給參考，則可以修改向量物件。
+如果將的傳回值 `operator[]` 指派給 `const_reference` ，則無法修改 vector 物件。 如果 `operator[]` 的傳回值已指派給參考，則可以修改向量物件。
 
 當使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 編譯之後，如果您嘗試存取的項目超出向量界限，則會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的反覆運算](../standard-library/checked-iterators.md)器。
 
@@ -1424,7 +1424,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 以另一個向量的複本取代向量的項目。
 
@@ -1436,12 +1436,12 @@ vector& operator=(vector&& right);
 
 ### <a name="parameters"></a>參數
 
-*right*\
-複製到 [ 的](../standard-library/vector-class.md)向量`vector`。
+*再*\
+複製到 `vector` 的[向量](../standard-library/vector-class.md)。
 
 ### <a name="remarks"></a>備註
 
-清除 `vector`中的任何現有專案之後，`operator=` 會將*右側*的內容複寫或移至 `vector`。
+清除中的任何現有專案之後 `vector` ，會 `operator=` 將的內容複寫或移*right*到中 `vector` 。
 
 ### <a name="example"></a>範例
 
@@ -1484,7 +1484,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>滑鼠
+## <a name="pointer"></a><a name="pointer"></a> 指標
 
 提供向量中某個項目指標的類型。
 
@@ -1494,7 +1494,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-類型 **pointer** 可用來修改項目的值。
+類型 **pointer** 可用來修改元素的值。
 
 ### <a name="example"></a>範例
 
@@ -1526,7 +1526,7 @@ int main( )
 44
 ```
 
-## <a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a>pop_back
 
 刪除向量結尾的元素。
 
@@ -1538,7 +1538,7 @@ void pop_back();
 
 如需程式碼範例，請參閱 [vector::push_back()](#push_back)。
 
-## <a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a>push_back
 
 將元素加入至向量結尾。
 
@@ -1593,7 +1593,7 @@ int main()
 }
 ```
 
-## <a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a>rbegin
 
 傳回反向向量中第一個項目的迭代器。
 
@@ -1608,7 +1608,7 @@ const_reverse_iterator rbegin() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `rbegin` 的傳回值指派給 `const_reverse_iterator`，則無法修改 vector 物件。 如果 `rbegin` 的傳回值指派給 `reverse_iterator`，則可以修改向量物件。
+如果將的傳回值 `rbegin` 指派給 `const_reverse_iterator` ，則無法修改 vector 物件。 如果 `rbegin` 的傳回值指派給 `reverse_iterator`，則可以修改向量物件。
 
 ### <a name="example"></a>範例
 
@@ -1643,7 +1643,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="reference"></a>證明
+## <a name="reference"></a><a name="reference"></a>證明
 
 提供儲存在向量中之項目參考的類型。
 
@@ -1653,9 +1653,9 @@ typedef typename Allocator::reference reference;
 
 ### <a name="example"></a>範例
 
-如需如何在向量類別中使用 [reference](#at) 的範例，請參閱 **at**。
+如需如何在向量類別中使用 **reference** 的範例，請參閱 [at](#at)。
 
-## <a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a>rend
 
 傳回迭代器，為反向向量中最後一個項目的下一個位置定址。
 
@@ -1672,11 +1672,11 @@ reverse_iterator rend();
 
 `rend` 搭配反向向量使用，就如同 [end](#end) 搭配向量使用。
 
-如果 `rend` 的傳回值指派給 `const_reverse_iterator`，則無法修改 vector 物件。 如果 `rend` 的傳回值指派給 `reverse_iterator`，則可以修改向量物件。
+如果將的傳回值 `rend` 指派給，則 `const_reverse_iterator` 無法修改 vector 物件。 如果 `rend` 的傳回值指派給 `reverse_iterator`，則可以修改向量物件。
 
 `rend` 可以用來測試反轉迭代器是否已到達其陣列的結尾。
 
-`rend` 所傳回的值不應該被取值。 僅用於比較。
+傳回的值 `rend` 不應該取值。 僅用於比較。
 
 ### <a name="example"></a>範例
 
@@ -1705,7 +1705,7 @@ int main( )
 1
 ```
 
-## <a name="reserve"></a>留成
+## <a name="reserve"></a><a name="reserve"></a>留成
 
 為向量物件保留最小儲存空間長度，並在必要時配置空間。
 
@@ -1746,7 +1746,7 @@ Current capacity of v1 = 1
 Current capacity of v1 = 20
 ```
 
-## <a name="resize"></a>調整
+## <a name="resize"></a><a name="resize"></a>調整
 
 指定向量的新大小。
 
@@ -1765,7 +1765,7 @@ void resize(size_type new_size, Type value);
 
 ### <a name="remarks"></a>備註
 
-如果容器的大小小於所要求的大小， *new_size*，`resize` 會將元素加入至向量，直到達到所要求的大小為止。 當容器的大小大於所要求的大小時，`resize` 會刪除最接近容器結尾的元素，直到達到*new_size*的大小為止。 如果容器的目前大小與所要求的大小相同，就不會採取任何動作。
+如果容器的大小小於所要求的大小， *new_size* `resize` 會將元素加入至向量，直到達到所要求的大小為止。 當容器的大小大於所要求的大小時， `resize` 會刪除最接近容器結尾的元素，直到達到*new_size*的大小為止。 如果容器的目前大小與所要求的大小相同，就不會採取任何動作。
 
 [size](#size) 會反映向量的目前大小。
 
@@ -1875,7 +1875,7 @@ int main()
 }
 ```
 
-## <a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
 
 提供可讀取或修改反向向量中任何項目之隨機存取迭代器的類型。
 
@@ -1891,7 +1891,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 請參閱 [rbegin](#rbegin) 的範例。
 
-## <a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a>shrink_to_fit
 
 捨棄多餘的容量。
 
@@ -1931,7 +1931,7 @@ Current capacity of v1 = 20
 Current capacity of v1 = 1
 ```
 
-## <a name="size"></a>容量
+## <a name="size"></a><a name="size"></a>容量
 
 傳回向量中的項目數。
 
@@ -1972,7 +1972,7 @@ Vector length is 1.
 Vector length is now 2.
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 計算向量中項目數的類型。
 
@@ -1984,7 +1984,7 @@ typedef typename Allocator::size_type size_type;
 
 請參閱 [capacity](#capacity) 的範例。
 
-## <a name="swap"></a>調換
+## <a name="swap"></a><a name="swap"></a>調換
 
 交換兩個向量的項目。
 
@@ -1999,10 +1999,10 @@ friend void swap(
 
 ### <a name="parameters"></a>參數
 
-*right*\
+*再*\
 提供要交換之元素的向量。 或者，其專案要與向量*左邊*的元素交換的向量。
 
-*左方*\
+*左面*\
 向量，其專案要與向量*右側*的元素交換。
 
 ### <a name="example"></a>範例
@@ -2044,7 +2044,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 代表儲存在向量中之資料類型的類型。
 
@@ -2077,7 +2077,7 @@ int main( )
 44
 ```
 
-## <a name="vector"></a>向量
+## <a name="vector"></a><a name="vector"></a>向量
 
 結構向量。 多載會將特定大小的向量或特定值的元素加以結構處理。 或者，當做部分其他向量的全部或部分複本。 有些多載也可讓您指定要使用的配置器。
 
@@ -2100,7 +2100,7 @@ vector(InputIterator first, InputIterator last, const Allocator& allocator);
 
 ### <a name="parameters"></a>參數
 
-配置*器\*
+*配置器*\
 搭配這個物件使用的配置器類別。 [get_allocator](#get_allocator) 會傳回物件的配置器類別。
 
 *計數*\
@@ -2112,14 +2112,14 @@ vector(InputIterator first, InputIterator last, const Allocator& allocator);
 *來源*\
 已建構向量為其複本的向量。
 
-*第一個*\
+*頭*\
 項目範圍中要複製的第一個項目位置。
 
-*上次*\
+*次*\
 項目範圍之外要複製的第一個項目位置。
 
 *init_list*\
-包含要複製之元素的 `initializer_list`。
+`initializer_list`包含要複製之元素的。
 
 ### <a name="remarks"></a>備註
 
@@ -2127,7 +2127,7 @@ vector(InputIterator first, InputIterator last, const Allocator& allocator);
 
 前兩個建構函式會指定空的初始向量。 第二個函式會明確地指定要使用的配置器*類型（配置*器）。
 
-第三個函式會指定類別 `Type`之預設值專案的指定數目（*計數*）重複。
+第三個函式會針對類別的預設值，指定元素的指定數目（*計數*）重複 `Type` 。
 
 第四個和第五個函式會*指定值的*（*計數*）元素重複。
 
@@ -2236,5 +2236,5 @@ v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

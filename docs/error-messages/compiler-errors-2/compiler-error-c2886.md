@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
-ms.openlocfilehash: a64457c84a48c73ad6714da01e48d41f3cc92efb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3e445b52c2a0abbfca198c4cb0f4108dd5ba5ffb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748719"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233427"
 ---
 # <a name="compiler-error-c2886"></a>編譯器錯誤 C2886
 
 ' class：： identifier '：符號不能用在使用-宣告的成員中
 
-`using` 宣告會使用符號，例如命名空間名稱。 `using` 宣告是用來宣告基類成員。
+宣告會 **`using`** 使用符號，例如命名空間名稱。 宣告 **`using`** 是用來宣告基類成員。
 
 下列範例會產生 C2886：
 

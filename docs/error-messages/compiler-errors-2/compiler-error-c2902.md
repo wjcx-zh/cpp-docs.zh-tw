@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2902
 ms.assetid: 89d78d0e-78e5-4c2c-a0f9-a60110e9395e
-ms.openlocfilehash: 43ba7f6ddb18d86410de852ffc3e2834083f031c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 287ca42be0f1c09a6438af067feb299e7a01df6b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735873"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230879"
 ---
 # <a name="compiler-error-c2902"></a>編譯器錯誤 C2902
 
 'token': 'template' 之後有未預期的語彙基元，必須是識別項
 
-關鍵字 `template` 後面的語彙基元不是識別項。
+關鍵字後面的 token **`template`** 不是識別碼。
 
 下列範例會產生 C2902：
 

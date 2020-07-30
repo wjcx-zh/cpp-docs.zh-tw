@@ -1,8 +1,10 @@
 ---
-title: 一&#39;補數運算子： ~
-ms.date: 11/04/2016
+title: 一補數運算子：~
+description: C + + 標準語言一補數運算子語法，並使用。
+ms.date: 07/23/2020
 f1_keywords:
 - "~"
+- compl_cpp
 helpviewer_keywords:
 - tilde (~) one's complement operator
 - one's complement operator
@@ -10,28 +12,28 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-ms.openlocfilehash: 777f253925caf38647863bdaa93fde8d5a03e3f9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 89c67855cd67df2af315cea941b487e7462889b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177712"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227240"
 ---
-# <a name="one39s-complement-operator-"></a>一&#39;補數運算子： ~
+# <a name="ones-complement-operator-"></a>一補數運算子：~
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 ~ cast-expression
 ```
 
 ## <a name="remarks"></a>備註
 
-一補數運算子 (`~`)，有時稱為「位元補數」運算子，它會產生其運算元的位元 1 補數。 也就是說，運算元中是 1 的每個位元，在結果中都是 0。 反之，運算元中是 0 的每個位元，在結果中都是 1。 一補數運算子的運算元必須是整數類資料類型。
+一補數運算子（ **`~`** ），有時稱為*位補數*運算子，會產生其運算元的位一補數。 也就是說，運算元中是 1 的每個位元，在結果中都是 0。 反之，運算元中是 0 的每個位元，在結果中都是 1。 一補數運算子的運算元必須是整數類資料類型。
 
-## <a name="operator-keyword-for-"></a>~ 的運算子關鍵字
+## <a name="operator-keyword-for-"></a>~ 的 Operator 關鍵字
 
-**Compl**運算子是 `~`的文字對等用法。 有兩種方式可存取您程式中的**compl**運算子：包含標頭檔 `iso646.h`，或使用[/za](../build/reference/za-ze-disable-language-extensions.md)進行編譯。
+C + + 會 **`compl`** 將指定為的替代拼寫 **`~`** 。 在 C 中，替代的拼寫是以宏的形式在 \<iso646.h> 標頭中提供。 在 c + + 中，替代的拼寫是關鍵字;使用 \<iso646.h> 或 c + + 對等用法 \<ciso646> 已被取代。 在 Microsoft c + + 中， [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 需要或編譯器選項才能啟用替代的拼寫。
 
 ## <a name="example"></a>範例
 
@@ -52,10 +54,10 @@ int main () {
 
 在這個範例中，指派至 `y` 的新值是不帶正負號的值 0xFFFF 或 0x0000 的 1 補數。
 
-整數運算元上會執行整數提升，且結果類型是運算元提升後的類型。 如需如何完成升級的詳細資訊，請參閱[標準轉換](standard-conversions.md)。
+整數提升會在整數運算元上執行。 運算元升級為的類型是結果類型。 如需整數提升的詳細資訊，請參閱[標準轉換](standard-conversions.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)<br/>
-[C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[具有一元運算子的運算式](expressions-with-unary-operators.md)<br/>
+[C + + 內建運算子、優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [一元算術運算子](../c-language/unary-arithmetic-operators.md)

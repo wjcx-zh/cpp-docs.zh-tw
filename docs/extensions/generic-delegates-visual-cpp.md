@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182028"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228709"
 ---
 # <a name="generic-delegates-ccli"></a>泛型委派 (C++/CLI)
 
@@ -39,12 +39,12 @@ generic < [class | typename] type-parameter-identifiers>
 採用[泛型型別參數的條件約束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的格式
 
 *accessibility-modifiers*<br/>
-(選擇性) 存取範圍修飾詞 (例如 **public** 和 **private**)。
+選擇性協助工具修飾詞（ **`public`** 例如 **`private`** ）。
 
-*result-type*<br/>
+*結果類型*<br/>
 委派的傳回類型。
 
-*identifier*<br/>
+*標識*<br/>
 委派的名稱。
 
 *formal-parameters*<br/>

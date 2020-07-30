@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6a8555561fcf935b3968bd6cb6d19ec42a78563
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196738"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224015"
 ---
 # <a name="exporting-from-a-dll"></a>從 DLL 匯出
 
@@ -25,7 +25,7 @@ DLL 檔案的配置與 .exe 檔案非常類似，但有一項重要的差異，�
 
 - 建立模組定義（.def）檔案，並在建立 DLL 時使用 .def 檔案。 如果您想要[依序數而不是依名稱從 DLL 匯出](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)函式，請使用此方法。
 
-- 在函數的定義中使用關鍵字 **__declspec （dllexport）** 。
+- **`__declspec(dllexport)`** 在函數的定義中使用關鍵字。
 
 使用任一種方法匯出函數時，請務必使用[__stdcall](../cpp/stdcall.md)呼叫慣例。
 
@@ -43,7 +43,7 @@ DLL 檔案的配置與 .exe 檔案非常類似，但有一項重要的差異，�
 
 - [依序數而不是名稱從 DLL 匯出函式](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
 
-- [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
+- [決定要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
 - [將可執行檔連結至 DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
@@ -55,8 +55,8 @@ DLL 檔案的配置與 .exe 檔案非常類似，但有一項重要的差異，�
 
 - [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 
-- [相互匯入](mutual-imports.md)
+- [交互匯入](mutual-imports.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [匯入和匯出](importing-and-exporting.md)

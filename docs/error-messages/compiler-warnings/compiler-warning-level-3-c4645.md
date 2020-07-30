@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4645
 ms.assetid: fd7c1ddf-f0d0-4e10-bab9-ccb4c3476298
-ms.openlocfilehash: d9aff4b554f4b162f87de9e1d373d59dea019637
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 607122b5592c9db4fc2ad4cabf369b4605b2673b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991737"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228761"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>編譯器警告 (層級 3) C4645
 
 使用 __declspec(noreturn) 宣告的函式有傳回的陳述式
 
-在以[noreturn](../../cpp/noreturn.md) `__declspec` 修飾詞標記的函式中找到[return](../../cpp/return-statement-in-program-termination-cpp.md)語句。 已忽略 `return` 陳述式。
+在以 noreturn 修飾詞標記的函式中發現[return](../../cpp/return-statement-in-program-termination-cpp.md)語句[noreturn](../../cpp/noreturn.md) **`__declspec`** 。 **`return`** 已忽略語句。
 
 下列範例會產生 C4645：
 

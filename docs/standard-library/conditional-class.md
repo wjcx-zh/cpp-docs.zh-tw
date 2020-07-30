@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 03ec6248ba3361622ad061ac3854a60995148f4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457317"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228371"
 ---
 # <a name="conditional-class"></a>conditional 類別
 
@@ -36,16 +36,16 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 *T1*\
 B 為 true 時的類型結果。
 
-\
+*T2*\
 B 為 false 時的類型結果。
 
 ## <a name="remarks"></a>備註
 
-當*b*評估為`conditional<B, T1, T2>::type` **true**時, 範本成員 typedef 會評估為*T1* , 而當*b*評估為**false**時, 則評估為*T2* 。
+當 b `conditional<B, T1, T2>::type` 評估為時，範本成員*B* typedef 會評估為*T1* **`true`** ，而當*b*評估為時，會評估為*T2* **`false`** 。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：**\<type_traits>
 
 **命名空間：** std
 

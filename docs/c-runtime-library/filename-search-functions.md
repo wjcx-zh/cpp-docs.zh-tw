@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226238"
 ---
 # <a name="filename-search-functions"></a>檔案名稱搜尋函式
 
@@ -67,7 +67,7 @@ ms.locfileid: "75300300"
 您可以指定目標屬性 (例如 `_A_RDONLY`) 以限制搜尋作業。 這些屬性會在 `attrib` 結構的 `_finddata_t` 欄位內傳回，而且可以有下列值 (定義於 IO.h)。 使用者不應依賴這些僅適用於 `attrib` 欄位的值。
 
 `_A_ARCH`<br/>
-保存： 每當 **BACKUP** 命令變更或清除檔案時即設定。 值：0x20。
+封存。 每當 **BACKUP** 命令變更或清除檔案時即設定。 值：0x20。
 
 `_A_HIDDEN`<br/>
 隱藏的檔案。 除非您使用 **/AH** 選項，否則使用 DIR 命令時並不常見。 傳回有關一般檔案或具有此屬性之檔案的資訊。 值：0x02。
@@ -88,7 +88,7 @@ ms.locfileid: "75300300"
 
 您可以將 `_find` 函式巢狀化。 例如，如果 `_findfirst` 或 `_findnext` 的呼叫發現是子目錄的檔案，就可以另外使用 `_findfirst` 或 `_findnext`呼叫來啟始新的搜尋。
 
-`_wfindfirst` 和 `_wfindnext` 是寬字元版本的 `_findfirst` 和 `_findnext`。 寬字元版本的結構引數具有 `_wfinddata_t` 定義於 IO.h 和 Wchar.h 的資料類型。 此資料類型的欄位與 `_finddata_t` 資料類型的欄位相同，除了在 `_wfinddata_t` 中，名稱欄位屬於類型 `wchar_t` 而非類型 `char`。 否則 `_wfindfirst` 和 `_wfindnext` 的行為與 `_findfirst` 和 `_findnext`相同。
+`_wfindfirst` 和 `_wfindnext` 是寬字元版本的 `_findfirst` 和 `_findnext`。 寬字元版本的結構引數具有 `_wfinddata_t` 定義於 IO.h 和 Wchar.h 的資料類型。 此資料類型的欄位與 `_finddata_t` 資料類型相同，不同之處在于 [名稱] 欄位中的類型不是類型 `_wfinddata_t` **`wchar_t`** **`char`** 。 否則 `_wfindfirst` 和 `_wfindnext` 的行為與 `_findfirst` 和 `_findnext`相同。
 
 `_findfirst` 和 `_findnext` 皆使用 64 位元時間類型。 如果您必須使用舊的 32 位元時間類型，則可以定義 `_USE_32BIT_TIME_T`。 名稱中包含 `32` 後置詞的這些函式版本皆使用 32 位元時間類型，而具有 `64` 的後置詞則使用 64 位元時間類型。
 
@@ -98,13 +98,13 @@ ms.locfileid: "75300300"
 
 |結構|時間類型|檔案大小類型|
 |---------------|---------------|--------------------|
-|`_finddata_t`、 `_wfinddata_t`|`__time64_t`|`_fsize_t`|
-|`_finddata32_t`、 `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`、 `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`、 `_wfinddata32i64_t`|`__time32_t`|`__int64`|
-|`_finddata64i32_t`、 `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
+|`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
+|`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
+|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|**`__int64`**|
+|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
+|`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t` 是 `unsigned long` (32 位元) 的 `typedef`。
+`_fsize_t`是 **`typedef`** **`unsigned long`** （32位）的。
 
 ## <a name="example"></a>範例
 
@@ -156,6 +156,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [系統呼叫](../c-runtime-library/system-calls.md)

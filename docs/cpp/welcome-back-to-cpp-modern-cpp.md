@@ -1,17 +1,17 @@
 ---
-title: 歡迎回到 c + +-新式 c + +
+title: 歡迎回到 C++ (現代 C++)
 description: 描述新式 c + + 中的新程式設計慣用語及其基本原理。
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 76ac17e71368cdeee669b98505778838ef0dfee7
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550793"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232192"
 ---
-# <a name="welcome-back-to-c---modern-c"></a>歡迎回到 c + +-新式 c + +
+# <a name="welcome-back-to-c---modern-c"></a>歡迎回到 C++ (現代 C++)
 
 在建立之後，c + + 已成為世界上最廣泛使用的程式設計語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 此語言比其他語言更有彈性：它可以在最高層級的抽象層中工作，並在晶片的層級向下。 C + + 提供高度優化的標準程式庫。 它可讓您存取低層級的硬體功能，以最大化速度並將記憶體需求降至最低。 使用 c + +，您可以建立各種不同的應用程式。 遊戲、設備磁碟機和高效能科學軟體。 內嵌程式。 Windows 用戶端應用程式。 即使是其他程式設計語言的程式庫和編譯器也是以 c + + 撰寫。
 
@@ -115,7 +115,7 @@ auto i = m.begin(); // modern C++
 
 ## <a name="range-based-for-loops"></a>以範圍為基礎的 `for` 迴圈
 
-在陣列和容器上進行 C 樣式的反復專案很容易就能編制錯誤的索引，而且也很繁瑣。 若要消除這些錯誤，並讓您的程式碼更容易閱讀，請使用以範圍為基礎的 `for` 迴圈搭配標準程式庫容器和原始陣列。 如需詳細資訊，請參閱以[範圍為基礎的 `for` 語句](../cpp/range-based-for-statement-cpp.md)。
+在陣列和容器上進行 C 樣式的反復專案很容易就能編制錯誤的索引，而且也很繁瑣。 若要消除這些錯誤，並讓您的程式碼更容易閱讀，請使用以範圍為基礎的 **`for`** 迴圈搭配標準程式庫容器和原始陣列。 如需詳細資訊，請參閱以[範圍為基礎的 `for` 語句](../cpp/range-based-for-statement-cpp.md)。
 
 ```cpp
 #include <iostream>
@@ -200,7 +200,7 @@ int main()
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-Lambda 運算式 `[=](int i) { return i > x && i < y; }` 可以讀取為「接受類型的單一引數的函式 `int` ，並傳回布林值，指出引數是否大於 `x` 且小於 `y` 。」 請注意， `x` `y` 來自周圍內容的變數和可以在 lambda 中使用。 `[=]`會指定這些變數是以傳值方式來*捕捉*，換句話說，lambda 運算式有自己的這些值複本。
+Lambda 運算式 `[=](int i) { return i > x && i < y; }` 可以讀取為「接受類型的單一引數的函式 **`int`** ，並傳回布林值，指出引數是否大於 `x` 且小於 `y` 。」 請注意， `x` `y` 來自周圍內容的變數和可以在 lambda 中使用。 `[=]`會指定這些變數是以傳值方式來*捕捉*，換句話說，lambda 運算式有自己的這些值複本。
 
 ## <a name="exceptions"></a>例外狀況
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3e01f97c67803408c9ce5bf056e3e9ed4746d259
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245922"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229164"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid 例外狀況
 
-當**typeid**的運算元為 Null 指標時， [typeid 運算子](../cpp/typeid-operator.md)會擲回**bad_typeid**例外狀況。
+當的運算元為 Null 指標時， [typeid 運算子](../cpp/typeid-operator.md)會擲回**bad_typeid**例外狀況 **`typeid`** 。
 
 ## <a name="syntax"></a>語法
 
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-下列範例顯示擲回**bad_typeid**例外狀況的**typeid**運算子。
+下列範例顯示擲回 **`typeid`** **bad_typeid**例外狀況的運算子。
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -80,5 +80,5 @@ Object is NULL
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段類型資訊](../cpp/run-time-type-information.md)\
+[執行時間類型資訊](../cpp/run-time-type-information.md)\
 [關鍵字](../cpp/keywords-cpp.md)

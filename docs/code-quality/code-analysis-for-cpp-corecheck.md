@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: 7519706c0a8e23c56f8951647fb16c24d3f1e189
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216683"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389944"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C++ Core Guidelines 檢查程式參考
 
-本節列出 C++ Core Guidelines 檢查程式警告。 如需程式碼分析的詳細資訊，請參閱[/analyze （程式碼分析）](/cpp/build/reference/analyze-code-analysis)和[快速入門： C/c + + 的程式碼分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
+本節列出 C++ Core Guidelines 檢查程式警告。 如需程式碼分析的詳細資訊，請參閱[ `/analyze` （程式碼分析）](/cpp/build/reference/analyze-code-analysis)和[快速入門： C/c + + 的程式碼分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
 
 > [!NOTE]
 > 有些警告屬於一個以上的群組，而並非所有警告都有完整的參考主題。

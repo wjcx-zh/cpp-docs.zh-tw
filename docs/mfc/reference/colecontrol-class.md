@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: c0e31b44daad56da2cd0fd20bb7d591797079391
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214122"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470915"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)結構，指定要求資訊的格式。
 
 *lpStgMedium*<br/>
-指向要傳回資料的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)結構。
+指向要傳回資料的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3301,7 +3301,7 @@ virtual BOOL OnSetData(
 指定資料格式之[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)結構的指標。
 
 *lpStgMedium*<br/>
-資料所在之[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)結構的指標。
+資料所在之[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)結構的指標。
 
 *bRelease*<br/>
 如果控制項應該釋放儲存媒體，則為 TRUE;如果控制項不應釋放儲存媒體，則為 FALSE。
@@ -4207,7 +4207,7 @@ virtual LRESULT WindowProc(
 
 呼叫此函式可透過控制項的訊息對應來分派特定訊息。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [MFC 範例 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 範例 TESTHELP](../../overview/visual-cpp-samples.md)<br/>

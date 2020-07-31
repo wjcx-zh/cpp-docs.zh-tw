@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 7fc81cd5210167ee9df77605677349d6907f3e5d
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 06e9508ae09f9c7581648b45098f497fda785013
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373901"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470793"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC++ 目錄屬性頁 (Windows)
 
@@ -74,7 +74,7 @@ VC++ 目錄屬性會套用至專案，而不是最上層方案節點。 如果�
 
 - 在 .props 檔案中定義使用者巨集。 如需詳細資訊，請參閱[屬性頁巨集](../working-with-project-properties.md)。
 
-如需詳細資訊，請參閱下列部落格文章：[VC++ Directories](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories) (VC++ 目錄)、[Inherited Properties and Property Sheets](https://docs.microsoft.com/archive/blogs/vsproject/inherited-properties-and-property-sheets) (繼承的屬性和屬性工作表) 和 [Visual Studio 2010 C++ Project Upgrade Guide](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) (Visual Studio 2010 C++ 專案升級指南)。
+如需詳細資訊，請參閱下列部落格文章：[VC++ Directories](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories) (VC++ 目錄)、[Inherited Properties and Property Sheets](https://docs.microsoft.com/cpp/build/project-property-inheritance) (繼承的屬性和屬性工作表) 和 [Visual Studio 2010 C++ Project Upgrade Guide](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) (Visual Studio 2010 C++ 專案升級指南)。
 
 ## <a name="directory-types"></a>目錄類型
 

@@ -1,5 +1,5 @@
 ---
-title: IDataObjectimpl 類別
+title: IDataObjectImpl 類別
 ms.date: 11/04/2016
 f1_keywords:
 - IDataObjectImpl
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 618f8248a03297120ae2504bcb30ba8f080b184d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 379dd3304d96afcd2b0e98ec4a98f1bac64d4ad9
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329845"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470767"
 ---
-# <a name="idataobjectimpl-class"></a>IDataObjectimpl 類別
+# <a name="idataobjectimpl-class"></a>IDataObjectImpl 類別
 
-此類提供支援統一數據傳輸和管理連接的方法。
+這個類別提供支援制式資料傳輸和管理連接的方法。
 
 > [!IMPORTANT]
-> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
+> 這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -44,34 +44,34 @@ class IDataObjectImpl
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類,派生自`IDataObjectImpl`。
+衍生自的類別 `IDataObjectImpl` 。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[IDataObjectimpl::D建議](#dadvise)|在數據物件和通知接收器之間建立連接。 這使建議接收器能夠接收物件中更改的通知。|
-|[IDataObjectimpl::D無建議](#dunadvise)|終止以前通過`DAdvise`建立的連接。|
-|[IDataObjectimpl::枚舉建議](#enumdadvise)|創建枚舉器以通過當前諮詢連接反覆運算。|
-|[IDataObjectimple::枚舉格式](#enumformatetc)|創建枚舉器以迴圈瀏覽數據物件`FORMATETC`支援的結構。 ATL 實現返回E_NOTIMPL。|
-|[IDataObjectimpl::火數據更改](#firedatachange)|將更改通知發送回每個通知接收器。|
-|[IDataObjectimpl::取得規範格式](#getcanonicalformatetc)|檢索與更複雜的結構在邏輯`FORMATETC`上等效的結構。 ATL 實現返回E_NOTIMPL。|
-|[IDataObjectimpl::取得資料](#getdata)|將數據從數據物件傳輸到用戶端。 數據在`FORMATETC`結構中描述,並通過`STGMEDIUM`結構傳輸。|
-|[IDataObjectimpl::取得資料在這裡](#getdatahere)|與`GetData`類似 ,但客戶端`STGMEDIUM`必須分配結構。 ATL 實現返回E_NOTIMPL。|
-|[IDataObjectimpl::查詢取得資料](#querygetdata)|確定數據物件是否支援用於傳輸數據`FORMATETC`的特定結構。 ATL 實現返回E_NOTIMPL。|
-|[IDataObjectimpl::集資料](#setdata)|將數據從用戶端傳輸到數據物件。 ATL 實現返回E_NOTIMPL。|
+|[IDataObjectImpl：:D 通知](#dadvise)|建立資料物件和通知接收之間的連接。 這可讓通知接收器接收物件中變更的通知。|
+|[IDataObjectImpl：:D Unadvise](#dunadvise)|終止先前透過建立的連接 `DAdvise` 。|
+|[IDataObjectImpl：： EnumDAdvise](#enumdadvise)|建立列舉值以逐一查看目前的諮詢連接。|
+|[IDataObjectImpl：： EnumFormatEtc](#enumformatetc)|建立列舉值，以逐一查看 `FORMATETC` 資料物件所支援的結構。 ATL 執行會傳回 E_NOTIMPL。|
+|[IDataObjectImpl::FireDataChange](#firedatachange)|將變更通知傳回給每個「通知」接收。|
+|[IDataObjectImpl：： GetCanonicalFormatEtc](#getcanonicalformatetc)|抓取邏輯上 `FORMATETC` 對等結構，使其更複雜。 ATL 執行會傳回 E_NOTIMPL。|
+|[IDataObjectImpl：：操作](#getdata)|將資料從資料物件傳送到用戶端。 資料會在結構中描述 `FORMATETC` ，並透過 `STGMEDIUM` 結構傳送。|
+|[IDataObjectImpl：： GetDataHere](#getdatahere)|類似于 `GetData` ，但用戶端必須配置 `STGMEDIUM` 結構。 ATL 執行會傳回 E_NOTIMPL。|
+|[IDataObjectImpl::QueryGetData](#querygetdata)|判斷資料物件是否支援 `FORMATETC` 傳送資料的特定結構。 ATL 執行會傳回 E_NOTIMPL。|
+|[IDataObjectImpl：： SetData](#setdata)|將資料從用戶端傳送至資料物件。 ATL 執行會傳回 E_NOTIMPL。|
 
 ## <a name="remarks"></a>備註
 
-[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)介面提供了支援統一數據傳輸的方法。 `IDataObject`使用標準格式結構[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)和[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)來檢索和存儲數據。
+[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)介面提供支援制式資料傳輸的方法。 `IDataObject`會使用標準格式結構[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)和[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)來取出和儲存資料。
 
-`IDataObject`還管理連接,建議接收器處理數據更改通知。 為了使用戶端從數據物件接收數據更改通知,客戶端必須在稱為建議接收器的對象上實現[IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)介面。 當用戶端然後調用`IDataObject::DAdvise`時 ,數據物件和通知接收器之間建立連接。
+`IDataObject`也會管理連接，以通知接收處理資料變更通知。 為了讓用戶端從資料物件接收資料變更通知，用戶端必須在稱為「建議接收」的物件上，執行[IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)介面。 當用戶端呼叫時 `IDataObject::DAdvise` ，會在資料物件和通知接收之間建立連接。
 
-類`IDataObjectImpl`通過在調試生成中`IDataObject`向 轉`IUnknown`儲設備 發送資訊來提供 和實現的默認實現。
+類別會 `IDataObjectImpl` 提供的預設執行 `IDataObject` ，並 `IUnknown` 在偵錯工具中將資訊傳送至傾印裝置，藉此實現。
 
-**相關文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md), 建立[ATL 專案](../../atl/reference/creating-an-atl-project.md)
+**相關文章** [atl 教學](../../atl/active-template-library-atl-tutorial.md)課程，[建立 atl 專案](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -81,11 +81,11 @@ class IDataObjectImpl
 
 ## <a name="requirements"></a>需求
 
-**標題:** atlctl.h
+**標頭：** atlctl。h
 
-## <a name="idataobjectimpldadvise"></a><a name="dadvise"></a>IDataObjectimpl::D建議
+## <a name="idataobjectimpldadvise"></a><a name="dadvise"></a>IDataObjectImpl：:D 通知
 
-在數據物件和通知接收器之間建立連接。
+建立資料物件和通知接收之間的連接。
 
 ```
 HRESULT DAdvise(
@@ -97,15 +97,15 @@ HRESULT DAdvise(
 
 ### <a name="remarks"></a>備註
 
-這使建議接收器能夠接收物件中更改的通知。
+這可讓通知接收器接收物件中變更的通知。
 
-要終止連線,請致電[DUnadvise](#dunadvise)。
+若要終止連接，請呼叫[DUnadvise](#dunadvise)。
 
-請參閱[IDataObject::D Windows](/windows/win32/api/objidl/nf-objidl-idataobject-dadvise) SDK 中的建議。
+請參閱 Windows SDK 中的[IDataObject：:D 通知](/windows/win32/api/objidl/nf-objidl-idataobject-dadvise)。
 
-## <a name="idataobjectimpldunadvise"></a><a name="dunadvise"></a>IDataObjectimpl::D無建議
+## <a name="idataobjectimpldunadvise"></a><a name="dunadvise"></a>IDataObjectImpl：:D Unadvise
 
-終止以前通過[DAdvise](#dadvise)建立的連接。
+終止先前透過[DAdvise](#dadvise)所建立的連接。
 
 ```
 HRESULT DUnadvise(DWORD dwConnection);
@@ -113,11 +113,11 @@ HRESULT DUnadvise(DWORD dwConnection);
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDataObject::D在](/windows/win32/api/objidl/nf-objidl-idataobject-dunadvise)Windows SDK 中提供"不建議」。
+請參閱 Windows SDK 中的[IDataObject：:D unadvise](/windows/win32/api/objidl/nf-objidl-idataobject-dunadvise) 。
 
-## <a name="idataobjectimplenumdadvise"></a><a name="enumdadvise"></a>IDataObjectimpl::枚舉建議
+## <a name="idataobjectimplenumdadvise"></a><a name="enumdadvise"></a>IDataObjectImpl：： EnumDAdvise
 
-創建枚舉器以通過當前諮詢連接反覆運算。
+建立列舉值以逐一查看目前的諮詢連接。
 
 ```
 HRESULT DAdvise(
@@ -129,11 +129,11 @@ HRESULT DAdvise(
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDataObject::在](/windows/win32/api/objidl/nf-objidl-idataobject-enumdadvise)Windows SDK 中提供枚舉建議。
+請參閱 Windows SDK 中的[IDataObject：： EnumDAdvise](/windows/win32/api/objidl/nf-objidl-idataobject-enumdadvise) 。
 
-## <a name="idataobjectimplenumformatetc"></a><a name="enumformatetc"></a>IDataObjectimple::枚舉格式
+## <a name="idataobjectimplenumformatetc"></a><a name="enumformatetc"></a>IDataObjectImpl：： EnumFormatEtc
 
-創建枚舉器以迴圈瀏覽數據物件`FORMATETC`支援的結構。
+建立列舉值，以逐一查看 `FORMATETC` 資料物件所支援的結構。
 
 ```
 HRESULT EnumFormatEtc(
@@ -143,15 +143,15 @@ HRESULT EnumFormatEtc(
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDataObject::Windows SDK 中的枚舉格式。](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc)
+請參閱 Windows SDK 中的[IDataObject：： EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) 。
 
 ### <a name="return-value"></a>傳回值
 
-返回E_NOTIMPL。
+傳回 E_NOTIMPL。
 
-## <a name="idataobjectimplfiredatachange"></a><a name="firedatachange"></a>IDataObjectimpl::火數據更改
+## <a name="idataobjectimplfiredatachange"></a><a name="firedatachange"></a>IDataObjectImpl::FireDataChange
 
-將更改通知發送回當前正在管理的每個通知接收器。
+將變更通知傳送回目前受管理的每個通知接收。
 
 ```
 HRESULT FireDataChange();
@@ -159,11 +159,11 @@ HRESULT FireDataChange();
 
 ### <a name="return-value"></a>傳回值
 
-標準 HRESULT 值。
+標準的 HRESULT 值。
 
-## <a name="idataobjectimplgetcanonicalformatetc"></a><a name="getcanonicalformatetc"></a>IDataObjectimpl::取得規範格式
+## <a name="idataobjectimplgetcanonicalformatetc"></a><a name="getcanonicalformatetc"></a>IDataObjectImpl：： GetCanonicalFormatEtc
 
-檢索與更複雜的結構在邏輯`FORMATETC`上等效的結構。
+抓取邏輯上 `FORMATETC` 對等結構，使其更複雜。
 
 ```
 HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut);
@@ -171,15 +171,15 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 
 ### <a name="return-value"></a>傳回值
 
-返回E_NOTIMPL。
+傳回 E_NOTIMPL。
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDataObject:在](/windows/win32/api/objidl/nf-objidl-idataobject-getcanonicalformatetc)Windows SDK 中獲取規範格式。
+請參閱 Windows SDK 中的[IDataObject：： GetCanonicalFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) 。
 
-## <a name="idataobjectimplgetdata"></a><a name="getdata"></a>IDataObjectimpl::取得資料
+## <a name="idataobjectimplgetdata"></a><a name="getdata"></a>IDataObjectImpl：：操作
 
-將數據從數據物件傳輸到用戶端。
+將資料從資料物件傳送到用戶端。
 
 ```
 HRESULT GetData(
@@ -189,13 +189,13 @@ HRESULT GetData(
 
 ### <a name="remarks"></a>備註
 
-*pformatetcIn*參數必須指定存儲介質類型的TYMED_MFPICT。
+*PformatetcIn*參數必須指定 TYMED_MFPICT 的儲存媒體類型。
 
-請參閱[IDataObject:獲取](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)Windows SDK 中的數據。
+請參閱 Windows SDK 中的[IDataObject：：操作](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)。
 
-## <a name="idataobjectimplgetdatahere"></a><a name="getdatahere"></a>IDataObjectimpl::取得資料在這裡
+## <a name="idataobjectimplgetdatahere"></a><a name="getdatahere"></a>IDataObjectImpl：： GetDataHere
 
-與`GetData`類似 ,但客戶端`STGMEDIUM`必須分配結構。
+類似于 `GetData` ，但用戶端必須配置 `STGMEDIUM` 結構。
 
 ```
 HRESULT GetDataHere(
@@ -205,15 +205,15 @@ HRESULT GetDataHere(
 
 ### <a name="return-value"></a>傳回值
 
-返回E_NOTIMPL。
+傳回 E_NOTIMPL。
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDataObject:在](/windows/win32/api/objidl/nf-objidl-idataobject-getdatahere)Windows SDK 中獲取數據。
+請參閱 Windows SDK 中的[IDataObject：： GetDataHere](/windows/win32/api/objidl/nf-objidl-idataobject-getdatahere) 。
 
-## <a name="idataobjectimplquerygetdata"></a><a name="querygetdata"></a>IDataObjectimpl::查詢取得資料
+## <a name="idataobjectimplquerygetdata"></a><a name="querygetdata"></a>IDataObjectImpl::QueryGetData
 
-確定數據物件是否支援用於傳輸數據`FORMATETC`的特定結構。
+判斷資料物件是否支援 `FORMATETC` 傳送資料的特定結構。
 
 ```
 HRESULT QueryGetData(FORMATETC* pformatetc);
@@ -221,15 +221,15 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 
 ### <a name="return-value"></a>傳回值
 
-返回E_NOTIMPL。
+傳回 E_NOTIMPL。
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDataObject::查詢 Windows](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) SDK 中的數據獲取數據。
+請參閱 Windows SDK 中的[IDataObject：： QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) 。
 
-## <a name="idataobjectimplsetdata"></a><a name="setdata"></a>IDataObjectimpl::集資料
+## <a name="idataobjectimplsetdata"></a><a name="setdata"></a>IDataObjectImpl：： SetData
 
-將數據從用戶端傳輸到數據物件。
+將資料從用戶端傳送至資料物件。
 
 ```
 HRESULT SetData(
@@ -240,12 +240,12 @@ HRESULT SetData(
 
 ### <a name="return-value"></a>傳回值
 
-返回E_NOTIMPL。
+傳回 E_NOTIMPL。
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDataObject:在](/windows/win32/api/objidl/nf-objidl-idataobject-setdata)Windows SDK 中設置數據。
+請參閱 Windows SDK 中的[IDataObject：： SetData](/windows/win32/api/objidl/nf-objidl-idataobject-setdata) 。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別概觀](../../atl/atl-class-overview.md)

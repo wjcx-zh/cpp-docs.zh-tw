@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: a38a22abe4381afd45948e56d46c54f39028517d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b93664377838cd5ff97346282cb9120ae9b5e37
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217372"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520586"
 ---
 # <a name="unary_function-struct"></a>unary_function 結構
 
@@ -29,7 +29,7 @@ struct unary_function
 
 ## <a name="remarks"></a>備註
 
-樣板結構做為類別的基底，其定義格式為**result_type** `operator()` （ **constargument_type&**）的成員函式 **`const`** 。
+樣板結構作為定義表單成員函式之類別的基底 `result_type operator()( constargument_type& ) const` 。
 
 所有此類衍生的一元函式可以將其唯一引數類型參考為 **argument_type**，並將其傳回類型參考為 **result_type**。
 

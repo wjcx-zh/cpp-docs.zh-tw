@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36861705acf0328af5c1207c3bf33a098fc3b348
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217203"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520547"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (標準一致性)
 
@@ -240,13 +240,13 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 這種變更可能造成的常見錯誤包括：
 
-- **`error C2593`**`: 'operator ?' is ambiguous`
+- `error C2593: 'operator ?' is ambiguous`
 
-- **`error C2679`**`: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
+- `error C2679: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
 
-- **`error C2678`**`: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
+- `error C2678: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
 
-- **`error C2446`**`: ':': no conversion from 'B' to 'A'`
+- `error C2446: ':': no conversion from 'B' to 'A'`
 
 當某些類別 C 同時提供來自另一個類型 T 的非明確函式，以及非明確的轉換運算子來輸入 T 時，可能會造成此問題的一般程式碼模式。在此情況下，第二個引數轉換成第三個引數的類型，而第三個引數轉換成第二個引數的類型是有效的轉換。 因為這兩者都是有效的，所以根據標準並不明確。
 

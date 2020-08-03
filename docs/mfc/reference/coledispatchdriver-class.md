@@ -26,18 +26,18 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 265fca7288ca2aa760fb1faffa94f9d74896a975
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27520f09506698833b1449552ce669223cc0c4c6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214096"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520638"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 類別
 
 實作 OLE Automation 的用戶端。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```
 class COleDispatchDriver
@@ -47,13 +47,13 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|Name|說明|
 |----------|-----------------|
 |[COleDispatchDriver：： COleDispatchDriver](#coledispatchdriver)|建構 `COleDispatchDriver` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|Name|說明|
 |----------|-----------------|
 |[COleDispatchDriver：： AttachDispatch](#attachdispatch)|將 `IDispatch` 連接附加至 `COleDispatchDriver` 物件。|
 |[COleDispatchDriver：： Createdispatch 範例](#createdispatch)|建立 `IDispatch` 連接，並將其附加至 `COleDispatchDriver` 物件。|
@@ -65,14 +65,14 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|說明|
+|Name|說明|
 |----------|-----------------|
 |[COleDispatchDriver：： operator =](#operator_eq)|將來源值複製到 `COleDispatchDriver` 物件中。|
 |[COleDispatchDriver：： operator LPDISPATCH](#operator_lpdispatch)|存取基礎 `IDispatch` 指標。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|Name|說明|
 |----------|-----------------|
 |[COleDispatchDriver：： m_bAutoRelease](#m_bautorelease)|指定是否要在執行 `IDispatch` 期間 `ReleaseDispatch` 或物件損毀時釋放。|
 |[COleDispatchDriver：： m_lpDispatch](#m_lpdispatch)|表示 `IDispatch` 附加至這個之介面的指標 `COleDispatchDriver` 。|
@@ -148,11 +148,11 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 
 ### <a name="remarks"></a>備註
 
-表單 `COleDispatchDriver` （ `LPDISPATCH lpDispatch` ， **BOOL** `bAutoRelease`  =  **TRUE**）會連接[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)介面。
+表單會 `COleDispatchDriver( LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE )` 連接[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)介面。
 
-Form `COleDispatchDriver` （ **`const`** `COleDispatchDriver` &  `dispatchSrc` ）會複製現有的 `COleDispatchDriver` 物件，並遞增參考計數。
+表單會 `COleDispatchDriver( const COleDispatchDriver& dispatchSrc )` 複製現有的 `COleDispatchDriver` 物件，並遞增參考計數。
 
-Form `COleDispatchDriver` （） `COleDispatchDriver` 會建立物件，但不會連接 `IDispatch` 介面。 `COleDispatchDriver`在沒有引數的情況下使用（）之前，您應該 `IDispatch` 使用[COleDispatchDriver：： createdispatch 範例](#createdispatch)或[COleDispatchDriver：： AttachDispatch](#attachdispatch)將連接到它。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+表單 `COleDispatchDriver( )` 會建立 `COleDispatchDriver` 物件，但不會連接 `IDispatch` 介面。 使用 `COleDispatchDriver( )` 不含引數的之前，您應該 `IDispatch` 使用[COleDispatchDriver：： createdispatch 範例](#createdispatch)或[COleDispatchDriver：： AttachDispatch](#attachdispatch)將連接到它。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ### <a name="example"></a>範例
 

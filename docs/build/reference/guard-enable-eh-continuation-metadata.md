@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c5a49d578e626d052aa9d132afbaee5686cb7a7
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190516"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520521"
 ---
 # <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (啟用 EH 接續中繼資料)
 
 可讓編譯器產生 EH 接續（EHCONT）中繼資料。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 > **`/guard:ehcont`**[**`-`**]
 
@@ -51,9 +51,9 @@ ms.locfileid: "87190516"
 
 如果連結器無法產生中繼資料，它會發出下列其中一個錯誤：
 
-- **`LNK2046`**`: module contains _local_unwind but was not compiled with /guard:ehcont`
+- `LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont`
 
-- **`LNK2047`**`: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
+- `LNK2047: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
 
 若要檢查二進位檔是否包含 EHCONT 資料，請在傾印二進位載入設定時，尋找下列元素：
 

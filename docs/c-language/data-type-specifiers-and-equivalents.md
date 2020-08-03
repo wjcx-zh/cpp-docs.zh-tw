@@ -12,12 +12,12 @@ helpviewer_keywords:
 - simple types, names
 - type names [C++], simple
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: bfbca4ae87d84286b94120eaf24de928ae75f3c9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cc8ba746bea7f6ea885beb625de414d83367b53f
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87200318"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520677"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>資料類型規範和對應項
 
@@ -25,22 +25,22 @@ ms.locfileid: "87200318"
 
 ## <a name="type-specifiers-and-equivalents"></a>類型規範及對等項目
 
-|類型規範|對等項目|
-|--------------------|---------------------|
-|**`signed char`** sha-1|**`char`**|
-|**`signed int`**|**`signed`**, **`int`**|
-|**`signed short int`**|**`short`**, **`signed short`**|
-|**`signed long int`**|**`long`**, **`signed long`**|
-|**`unsigned char`**|—|
-|**`unsigned int`**|**`unsigned`**|
-|**`unsigned short int`**|**`unsigned short`**|
-|**`unsigned long int`**|**`unsigned long`**|
-|**`float`**|—|
-|**`long double`** 2|—|
+| 類型規範 | 對等項目 |
+|--|--|
+| **`signed char`**<sup>sha-1</sup> | **`char`** |
+| **`signed int`** | **`signed`**, **`int`** |
+| **`signed short int`** | **`short`**, **`signed short`** |
+| **`signed long int`** | **`long`**, **`signed long`** |
+| **`unsigned char`** | — |
+| **`unsigned int`** | **`unsigned`** |
+| **`unsigned short int`** | **`unsigned short`** |
+| **`unsigned long int`** | **`unsigned long`** |
+| **`float`** | — |
+| **`long double`**<sup>2</sup> | — |
 
-1當您 **`char`** 依預設讓類型不帶正負號（藉由指定 **`/J`** 編譯器選項）時，您不能將縮寫 **`signed char`** 為 **`char`** 。
+<sup>1</sup>當您 **`char`** 依預設讓類型不帶正負號（藉由指定 **`/J`** 編譯器選項）時，您不能將縮寫 **`signed char`** 為 **`char`** 。
 
-2在32位和64位作業系統中，Microsoft C 編譯器會對應 **`long double`** 至類型 **`double`** 。
+<sup>2</sup>在32位和64位作業系統中，Microsoft C 編譯器會對應 **`long double`** 至類型 **`double`** 。
 
 **Microsoft 特定的**
 

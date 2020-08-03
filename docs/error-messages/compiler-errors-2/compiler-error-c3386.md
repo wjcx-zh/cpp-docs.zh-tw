@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3386
 ms.assetid: 93fa8c33-0f10-402b-8eec-b0a217a1f8dc
-ms.openlocfilehash: 0cb6235f1b6bc868655cc6a6ba301be1308402cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: efe882db447b9ebc69d02e3b10d9e484a3cfd8a8
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221077"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520444"
 ---
 # <a name="compiler-error-c3386"></a>編譯器錯誤 C3386
 
-' type '： __declspec （dllexport）/ \_ _declspec （dllimport）無法套用至 managed 或 WinRTtype
+> '*type-name*'： `__declspec(dllexport)` / `__declspec(dllimport)` 不能套用至 managed 或 WinRT 類型
 
-`dllimport`和[dllexport](../../cpp/dllexport-dllimport.md) **`__declspec`** c ' * * 修飾詞在 managed 或 Windows 執行階段類型上無效。
+和修飾詞 [`dllimport`](../../cpp/dllexport-dllimport.md) [`dllexport`](../../cpp/dllexport-dllimport.md) **`__declspec`** 在 managed 或 Windows 執行階段類型上無效。
 
 下列範例會產生 C3386，並示範如何修正此問題：
 

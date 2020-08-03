@@ -334,18 +334,18 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 7d75ec6fa111c8c26b4390ac0ac62160d71c185b
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: c49e71a3e43f74e0e68228c313d3198d0abd4f91
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470915"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520690"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 
 開發 OLE 控制項的強大基底類別。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```
 class COleControl : public CWnd
@@ -355,13 +355,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|Name|說明|
 |----------|-----------------|
 |[COleControl：： COleControl](#colecontrol)|建立 `COleControl` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|Name|說明|
 |----------|-----------------|
 |[COleControl：： AmbientAppearance](#ambientappearance)|抓取控制項目前的外觀。|
 |[COleControl：： AmbientBackColor](#ambientbackcolor)|傳回環境背景色彩屬性的值。|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|說明|
+|Name|說明|
 |----------|-----------------|
 |[COleControl：:D rawContent](#drawcontent)|當控制項的外觀需要更新時，由架構呼叫。|
 |[COleControl：:D rawMetafile](#drawmetafile)|當使用中繼檔裝置內容時，由架構呼叫。|
@@ -1204,7 +1204,7 @@ void AFX_CDECL FireEvent(
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
-> 已定義所有 variant 類型的其他變異常數，但 VTS_FONT 和 VTS_PICTURE 除外，可提供 variant 資料常數的指標。 這些常數會使用**VTS_P** `constantname` 慣例來命名。 例如，VTS_PCOLOR 是 VTS_COLOR 常數的指標。
+> 已定義所有 variant 類型的其他變異常數，但 VTS_FONT 和 VTS_PICTURE 除外，可提供 variant 資料常數的指標。 這些常數會使用 VTS_P 慣例來命名 \<CONSTANT-NAME> 。 例如，VTS_PCOLOR 是 VTS_COLOR 常數的指標。
 
 ## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl：： FireKeyDown
 
@@ -4207,7 +4207,7 @@ virtual LRESULT WindowProc(
 
 呼叫此函式可透過控制項的訊息對應來分派特定訊息。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [MFC 範例 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 範例 TESTHELP](../../overview/visual-cpp-samples.md)<br/>

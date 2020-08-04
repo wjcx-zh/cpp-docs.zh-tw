@@ -669,6 +669,8 @@
                   href: ../build/reference/showincludes-list-include-files.md
                 - name: /source-charset (設定來源字元集)
                   href: ../build/reference/source-charset-set-source-character-set.md
+                - name: /sourceDependencies (報告來源層級相依性)
+                  href: ../build/reference/sourcedependencies.md
                 - name: /std (指定語言標準版本)
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: /Tc、/Tp、/TC、/TP (指定原始程式檔類型)

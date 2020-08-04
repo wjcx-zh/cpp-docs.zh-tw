@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 8876995f947823d046e0a3ea9a316a4249055d7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 481836b22544c7bcf35df7fe27e75aae0492af42
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212328"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521261"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap 類別
 
@@ -210,7 +210,7 @@ hash_multimap 類別提供的迭代器是雙向迭代器，但類別成員函式
 |[upper_bound](#upper_bound)|傳回迭代器，其會指向 `hash_multimap` 中索引鍵值大於特定索引鍵值的第一個項目。|
 |[value_comp](#value_comp)|擷取 `hash_multimap` 中用於排序項目值之比較物件的複本。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|說明|
 |-|-|
@@ -1611,9 +1611,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 所 `iterator` 定義的 hash_multimap 指向[value_type](#value_type)的物件，其型別為 `pair` \< **const Key, Type**> ，其第一個成員是專案的索引鍵，而第二個成員是元素所持有的對應基準。
 
-若要對**iterator** `Iter` 指向 hash_multimap 中某個元素的反覆運算器取值，請使用 `->` 運算子。
+若要對名為的反覆運算器取值，使其 `Iter` 指向 hash_multimap 中的元素，請使用 `->` 運算子。
 
-若要存取該元素的索引鍵值，請使用 `Iter` -> **first**，這等同於 (\* `Iter`). **首先**。 若要存取該元素的已對應資料值，請使用 `Iter` -> **second**，這等同於 (\* `Iter`). **首先**。
+若要存取元素的索引鍵值，請使用 `Iter->first` ，這相當於 `(*Iter).first` 。 若要存取專案的對應基準值，請使用 `Iter->second` ，這相當於 `(*Iter).first` 。
 
 類型 `iterator` 可用於修改元素的值。
 
@@ -1640,7 +1640,7 @@ key_compare key_comp() const;
 
 預存物件會定義成員函式
 
-**bool operator(const Key&** `left` **, const Key&** `right` **);**
+`bool operator( const Key& left, const Key& right );`
 
 **`true`** 如果 `left` 在之前，且 `right` 在排序次序中不等於，則會傳回。
 

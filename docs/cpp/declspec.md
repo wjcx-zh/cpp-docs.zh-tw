@@ -7,12 +7,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 945202beca6c5deb525bd19886b947331f6f3ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228943"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521118"
 ---
 # `__declspec`
 
@@ -22,15 +22,15 @@ ms.locfileid: "87228943"
 
 ## <a name="grammar"></a>文法
 
-*extended-decl-modifier-seq-規範*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *擴充-extended-decl-modifier-seq-修飾詞-seq*  **`)`**
+*`decl-specifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
-*extended-decl-modifier-seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*擴充-extended-decl-modifier-seq-修飾*詞*擴充-extended-decl-modifier-seq-修飾詞-seq*
+*`extended-decl-modifier-seq`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`*<sub>選擇性</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
-*extended-decl-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`** *#* **`)`**<br/>
+*`extended-decl-modifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***數位***`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***segname***`")`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
@@ -46,7 +46,7 @@ ms.locfileid: "87228943"
 &nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get_func_name_ &#124; **`,put=`** _put_func_name_ }**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get-func-name_ &#124; **`,put=`** _put-name_ }**`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
@@ -58,7 +58,7 @@ ms.locfileid: "87228943"
 
 擴充屬性文法支援下列 Microsoft 特有的儲存類別屬性：、、、、、、、、、、、、、、、、、、、 [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) [`noinline`](../cpp/noinline.md) [`noreturn`](../cpp/noreturn.md) [`nothrow`](../cpp/nothrow-cpp.md) [`novtable`](../cpp/novtable.md) [`process`](../cpp/process.md) [`restrict`](../cpp/restrict.md) [`safebuffers`](../cpp/safebuffers.md) [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) 和 [`thread`](../cpp/thread.md) 。 它也支援下列 COM 物件屬性： [`property`](../cpp/property-cpp.md) 和 [`uuid`](../cpp/uuid-cpp.md) 。
 
-、、、、、、、、、 **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** 和 **`uuid`** 儲存類別屬性僅為套用它們之物件或函式的宣告屬性。 **`thread`** 屬性只會影響資料和物件。 **`naked`** 和 **`spectre`** 屬性只會影響函式。 **`dllimport`** 和 **`dllexport`** 屬性會影響函數、資料和物件。 **`property`**、 **`selectany`** 和**uu'id**屬性會影響 COM 物件。
+、、、、、、、、、 **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** 和 **`uuid`** 儲存類別屬性僅為套用它們之物件或函式的宣告屬性。 **`thread`** 屬性只會影響資料和物件。 **`naked`** 和 **`spectre`** 屬性只會影響函式。 **`dllimport`** 和 **`dllexport`** 屬性會影響函數、資料和物件。 **`property`**、 **`selectany`** 和 **`uuid`** 屬性會影響 COM 物件。
 
 為了與舊版相容， **`_declspec`** **`__declspec`** 除非指定了編譯器選項[/za \( 停用語言擴充](../build/reference/za-ze-disable-language-extensions.md)功能，否則會是同義字。
 

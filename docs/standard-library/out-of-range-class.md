@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3bbbc48aa2020782594606c6a53a34f7b937fc58
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453078"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521274"
 ---
-# <a name="outofrange-class"></a>out_of_range 類別
+# <a name="out_of_range-class"></a>out_of_range 類別
 
 此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告引數超出其有效範圍。
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>備註
 
-[what](../standard-library/exception-class.md) 所傳回的值為 **message**`.`[data](../standard-library/basic-string-class.md#data) 的複本。
+所傳回的值 `what()` 是的複本 `message.data()` 。 如需詳細資訊，請參閱 [`what`](../standard-library/exception-class.md) 和 [`data`](../standard-library/basic-string-class.md#data) 。
 
 ## <a name="example"></a>範例
 
@@ -57,7 +57,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```cpp
 Caught: invalid string position
@@ -65,11 +65,11 @@ Caught: invalid string position
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<stdexcept>
+**標頭：**\<stdexcept>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
 [logic_error 類別](../standard-library/logic-error-class.md)\
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

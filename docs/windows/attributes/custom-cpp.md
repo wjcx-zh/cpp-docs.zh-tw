@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a1d9bd64a28fa7c08477c6011dc0e8236b7bcf6
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215318"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521248"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -44,12 +44,10 @@ ms.locfileid: "87215318"
 
 ### <a name="attribute-context"></a>屬性內容
 
-|||
-|-|-|
-|**適用於**|非 COM**介面**、 **`class`** 、 **`enum`** s、 `idl_module` 方法、介面成員、介面參數、s **`typedef`** **`union`** **`struct`** 、s、s|
-|**可重複**|是|
-|**必要的屬性**|**coclass** （在類別上使用時）|
-|**無效屬性**|無|
+- **適用**于：非 COM `interface` 、 `idl_module` 方法、介面成員、介面參數、、、、 **`typedef`** **`class`** **`enum`** **`union`** 和 **`struct`** 類型。
+- 可**重複**：是。
+- **必要的屬性**： **coclass** （在類別上使用時）。
+- **不正確屬性**： None。
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

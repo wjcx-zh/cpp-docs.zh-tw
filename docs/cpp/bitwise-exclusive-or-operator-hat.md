@@ -13,22 +13,22 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229099"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521157"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>位元互斥 OR 運算子：^
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 > *運算式* **`^`***運算式*
 
 ## <a name="remarks"></a>備註
 
-位互斥 OR 運算子（ **`^`** ）會比較其第一個運算元的每個位與第二個運算元的對應位。 如果第一個運算元的位是0，而另一個位是1，則對應的結果位會設為1。 否則，對應的結果位元會設為 0。
+位互斥 OR 運算子（ **`^`** ）會比較其第一個運算元的每個位與第二個運算元的對應位。 如果其中一個運算元的位是0，而另一個運算元中的位是1，則對應的結果位會設為1。 否則，對應的結果位元會設為 0。
 
 運算子的兩個運算元都必須有整數類資料類型。 [標準轉換](standard-conversions.md)中所涵蓋的一般算術轉換適用于運算元。
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42d640ba456e8327df7a070cb12914b765c07bf5
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204985"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520910"
 ---
 # <a name="allocator-class"></a>allocator 類別
 
@@ -111,7 +111,7 @@ class allocator
 |[max_size](#max_size)|傳回在可用記憶體用完之前，無法由類別 `allocator`的物件配置之類型 `Type` 的項目數量。|
 |[rebind](#rebind)|一種結構，可讓某個類型的物件配置器，為另一種類型的物件配置儲存體。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |||
 |-|-|
@@ -558,7 +558,7 @@ void destroy(pointer ptr);
 
 #### <a name="remarks"></a>備註
 
-成員函式會藉由呼叫「 *ptr*析構函數 `ptr->` **類型**：：**~ 類型**」，終結由 ptr 指定的物件。
+此成員函式會藉由呼叫「析構函數」，終結*ptr*所指定的物件 `ptr->Type::~Type` 。
 
 #### <a name="example"></a>範例
 

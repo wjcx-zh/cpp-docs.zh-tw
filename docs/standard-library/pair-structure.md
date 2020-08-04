@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233011"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520923"
 ---
 # <a name="pair-structure"></a>pair 結構
 
@@ -80,7 +80,7 @@ template<class T1, class T2>
 
 ## <a name="remarks"></a>備註
 
-樣板結構會分別儲存一對類型的物件 `T1` 和 `T2` 。 此類型與樣板 `first_type` 參數相同 `T1` ，而且類型與樣板 `second_type` 參數相同 `T2` 。 `T1`而且 `T2` 每個都只需要提供一個預設的函式、單一引數的函數和一個析構函數。 類型的所有成員 `pair` 都是公用的，因為該類型宣告為， **`struct`** 而不是 **`class`** 。 配對最常見的兩種用途是當作函式的傳回類型，這些函式會傳回兩個值，以及當作關聯容器類別 [map 類別](../standard-library/map-class.md)和 [multimap 類別](../standard-library/multimap-class.md)的項目，這些類別都具有與每個項目相關聯的索引鍵和實值類型。 後者滿足成對關聯容器的需求，而且具有格式為> 的實數值型別 `pair` <  **`const`** `key_type` `mapped_type` 。
+樣板結構會分別儲存一對類型的物件 `T1` 和 `T2` 。 此類型與樣板 `first_type` 參數相同 `T1` ，而且類型與樣板 `second_type` 參數相同 `T2` 。 `T1`而且 `T2` 每個都只需要提供一個預設的函式、單一引數的函數和一個析構函數。 類型的所有成員 `pair` 都是公用的，因為該類型宣告為， **`struct`** 而不是 **`class`** 。 配對最常見的兩種用途是當作函式的傳回類型，這些函式會傳回兩個值，以及當作關聯容器類別 [map 類別](../standard-library/map-class.md)和 [multimap 類別](../standard-library/multimap-class.md)的項目，這些類別都具有與每個項目相關聯的索引鍵和實值類型。 後者滿足成對關聯容器的需求，而且具有形式的實數值型別 `pair< const key_type, mapped_type >` 。
 
 ## <a name="example"></a>範例
 

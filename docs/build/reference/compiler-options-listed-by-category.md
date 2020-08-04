@@ -1,16 +1,16 @@
 ---
 title: 依分類排列的編譯器選項
 description: 依 Microsoft C/c + + 編譯器命令列選項分類的參考清單。
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223872"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520949"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -110,7 +110,7 @@ ms.locfileid: "87223872"
 | [`/u`](u-u-undefine-symbols.md) | 移除所有預先定義巨集。 |
 | [`/X`](x-ignore-standard-include-paths.md) | 忽略標準 Include 目錄。 |
 
-## <a name="language"></a>Language
+## <a name="language"></a>語言
 
 | 選項 | 目的 |
 |--|--|
@@ -171,6 +171,7 @@ ms.locfileid: "87223872"
 | [`/nologo`](nologo-suppress-startup-banner-c-cpp.md) | 隱藏登入程式的啟始資訊。 |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 啟用其他安全性功能及警告。 |
 | [`/showIncludes`](showincludes-list-include-files.md) | 在編譯時顯示所有 Include 檔的清單。 |
+| [`/sourceDependencies`](sourcedependencies.md) | 列出標頭、模組和其他來源相依性。 |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | 指定 C 原始程式檔。 |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | 指定所有的來源檔案都是 C。 |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | 指定 C++ 原始程式檔。 |

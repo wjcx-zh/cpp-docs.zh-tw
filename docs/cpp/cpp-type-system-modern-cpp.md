@@ -3,18 +3,18 @@ title: C++ 類型系統
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: cbe0b4421d2e7727b919dfaf20218b8da03ea871
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228982"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521209"
 ---
 # <a name="c-type-system"></a>C++ 類型系統
 
 *類型*的概念在 c + + 中非常重要。 每個變數、函式引數和函式傳回值都必須有類型才能編譯。 此外，在評估之前，編譯器會以隱含的方式指定每一個運算式 (包括常值) 的類型。 某些類型的範例包括 **`int`** 儲存整數值、儲存 **`double`** 浮點值（也稱為純量資料類型） *scalar*或標準程式庫類別[std：： basic_string](../standard-library/basic-string-class.md)以儲存文字。 您可以藉由定義或來建立自己的類型 **`class`** **`struct`** 。 此類型會指定配置給變數 (或運算式結果) 的記憶體數量、可在該變數中存放的值種類、這些值 (位元模式) 的解譯方式，以及可對其執行的作業。 本文包含 C++ 類型系統主要功能的簡略概觀。
 
-## <a name="terminology"></a>詞彙
+## <a name="terminology"></a>術語
 
 **變數**：資料數量的符號名稱，讓名稱可在其定義所在的程式碼範圍內，用來存取它所參考的資料。 在 c + + 中，*變數*通常用來參考純量資料類型的實例，而其他類型的實例通常稱為*物件*。
 
@@ -51,30 +51,32 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>基本 (內建) 類型
 
-有別於某些程式語言，C++ 並沒有可衍生出所有其他類型的通用基底類型。 此語言包含許多*基本類型*，也稱為*內建類型*。 這包括數數值型別，例如 **`int`** 、 **`double`** 、 **`long`** 、 **`bool`** ，以及 **`char`** **`wchar_t`** 分別為 ASCII 和 UNICODE 字元的和類型。 大部分基本類型（除了 **`bool`** 、 **`double`** 、 **wc `har_t** and related types) all have unsigned versions, which modify the range of values that the variable can store. For example, an **` int 不 `**, which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An **` 帶正負號 int '**，也會儲存為32位）可以儲存0到4294967295的值。 每個案例中的可能值總數都相同；只有範圍不同。
+有別於某些程式語言，C++ 並沒有可衍生出所有其他類型的通用基底類型。 此語言包含許多*基本類型*，也稱為*內建類型*。 這包括數數值型別，例如 **`int`** 、 **`double`** 、 **`long`** 、 **`bool`** ，以及 **`char`** **`wchar_t`** 分別為 ASCII 和 UNICODE 字元的和類型。 最重要的基本類型（ **`bool`** 、 **`double`** 、 **`wchar_t`** 和相關類型除外）都有 **`unsigned`** 版本，可修改變數可以儲存的值範圍。 例如， **`int`** 儲存32位帶正負號的整數，可以代表從-2147483648 到2147483647的值。 **`unsigned int`** 也儲存為32位的，可以儲存0到4294967295之間的值。 每個案例中的可能值總數都相同；只有範圍不同。
 
 基本類型是由編譯器辨識，其內建規則會控制可對這些類型執行哪些作業，以及如何轉換成其他基本類型。 如需內建類型及其大小和數值限制的完整清單，請參閱[內建類型](../cpp/fundamental-types-cpp.md)。
 
-下圖顯示內建類型的相對大小：
+下圖顯示 Microsoft c + + 執行中內建類型的相對大小：
 
 ![類型中內建&#45;的大小（以位元組為單位）](../cpp/media/built-intypesizes.png "類型中內建&#45;的大小（以位元組為單位）")
 
-下表列出最常用的基本類型：
+下表列出最常使用的基本類型，以及它們在 Microsoft c + + 中的大小：
 
-|類型|大小|註解|
-|----------|----------|-------------|
-|int|4 個位元組|整數值的預設選項。|
-|double|8 個位元組|浮點值的預設選項。|
-|bool|1 個位元組|表示可以是 true 或 false 的值。|
-|char|1 個位元組|使用較舊 C-Style 字串或 std::string 物件中永遠不需要轉換成 UNICODE 之的 ASCII 字元。|
-|wchar_t|2 個位元組|表示可能以 UNICODE 格式 (在 Windows 上為 UTF-16，而其他作業系統可能不同) 編碼的「寬」字元值。 這是用於 `std::wstring` 類型字串的字元類型。|
-|不帶正負號的 &nbsp; 字元|1 個位元組|C + + 沒有內建的 byte 類型。  用 **`unsigned char`** 來代表位元組值。|
-|不帶正負號的整數|4 個位元組|位元旗標的預設選項。|
-|long long|8 個位元組|表示極大的整數值。|
+| 類型 | 大小 | 註解 |
+|--|--|--|
+| **`int`** | 4 個位元組 | 整數值的預設選項。 |
+| **`double`** | 8 個位元組 | 浮點值的預設選項。 |
+| **`bool`** | 1 個位元組 | 表示可以是 true 或 false 的值。 |
+| **`char`** | 1 個位元組 | 使用較舊 C-Style 字串或 std::string 物件中永遠不需要轉換成 UNICODE 之的 ASCII 字元。 |
+| **`wchar_t`** | 2 個位元組 | 表示可能以 UNICODE 格式 (在 Windows 上為 UTF-16，而其他作業系統可能不同) 編碼的「寬」字元值。 這是用於 `std::wstring` 類型字串的字元類型。 |
+| **`unsigned char`** | 1 個位元組 | C + + 沒有內建的 byte 類型。  用 **`unsigned char`** 來代表位元組值。 |
+| **`unsigned int`** | 4 個位元組 | 位元旗標的預設選項。 |
+| **`long long`** | 8 個位元組 | 表示極大的整數值。 |
+
+其他 c + + 的執行可能會針對特定數數值型別使用不同的大小。 如需 c + + 標準所需之大小和大小關聯性的詳細資訊，請參閱[內建類型](fundamental-types-cpp.md)。
 
 ## <a name="the-void-type"></a>void 類型
 
-**`void`** 類型是一種特殊類型; 您無法宣告類型的變數 **`void`** ，但是可以宣告類型為__void \* __的變數（的指標 **`void`** ），這在配置原始（不具類型）的記憶體時有時是必要的。 不過，的指標 **`void`** 並不是型別安全的，而且通常不建議在現代 c + + 中使用。 在函式宣告中，傳回 **`void`** 值表示函數不會傳回值，這是常見且可接受的用法 **`void`** 。 雖然 C 語言所需的函式在參數清單中會宣告零個參數（例如），但 **`void`** `fou(void)` 在現代 c + + 中並不建議使用這個做法，而且應該進行宣告 `fou()` 。 如需詳細資訊，請參閱[類型轉換和型別安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
+**`void`** 類型是一種特殊類型; 您無法宣告類型的變數 **`void`** ，但可以宣告類型的變數 `void *` （的指標 **`void`** ），這在配置原始（不具類型）的記憶體時有時是必要的。 不過，的指標 **`void`** 並不是型別安全的，而且通常不建議在現代 c + + 中使用。 在函式宣告中，傳回 **`void`** 值表示函數不會傳回值，這是常見且可接受的用法 **`void`** 。 雖然 C 語言所需的函式在參數清單中會宣告零個參數（例如），但 **`void`** `fou(void)` 在現代 c + + 中並不建議使用這個做法，而且應該進行宣告 `fou()` 。 如需詳細資訊，請參閱[類型轉換和型別安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。
 
 ## <a name="const-type-qualifier"></a>常數類型限定詞
 
@@ -155,7 +157,7 @@ void someFunction() {
 
 在 C 和 c + + 的傳統 Win32 程式設計中，大部分函式會使用 Windows 特定的 typedef 和 `#define` 宏（定義于 `windef.h` ）來指定參數類型和傳回值。 這些 Windows 資料類型大部分都只是指定給 C/c + + 內建類型的特殊名稱（別名）。 如需這些 typedef 和預處理器定義的完整清單，請參閱[Windows 資料類型](/windows/win32/WinProg/windows-data-types)。 其中一些 typedef （例如 `HRESULT` 和 `LCID` ）是有用且描述性的。 其他專案（例如 `INT` ）沒有特殊意義，而且只是基本 c + + 類型的別名。 其他 Windows 資料類型有從 C 程式設計和 16 位元處理器時代保留下來的名稱，在現代硬體或作業系統上並無用處或意義。 Windows 執行階段程式庫也有相關聯的特殊資料類型，列為[Windows 執行階段基底資料類型](/windows/win32/WinRT/base-data-types)。 在現代 C++ 中，一般的方針就是，除非 Windows 類型傳達有關如何解譯值的額外涵義，否則優先使用 C++ 基本類型。
 
-## <a name="more-information"></a>更多資訊
+## <a name="more-information"></a>詳細資訊
 
 如需 C++ 類型系統的詳細資訊，請參閱下列主題：
 

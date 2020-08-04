@@ -1,15 +1,15 @@
 ---
 title: 依字母順序排列的編譯器選項
 description: 以 Microsoft C/c + + 編譯器命令列選項的字母順序排列的參考清單。
-ms.date: 07/08/2020
+ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223885"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520858"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -124,6 +124,7 @@ ms.locfileid: "87223885"
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 啟用其他安全性功能及警告。 |
 | [`/showIncludes`](showincludes-list-include-files.md) | 在編譯時顯示包含檔清單。 |
 | [`/source-charset`](source-charset-set-source-character-set.md) | 設定來源字元集。 |
+| [`/sourceDependencies`](sourcedependencies.md) | 列出標頭、模組和其他來源相依性。 |
 | [`/std`](std-specify-language-standard-version.md) | C + + 標準版本相容性選取器。 |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | 指定 C 原始程式檔。 |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | 指定所有的來源檔案都是 C。 |

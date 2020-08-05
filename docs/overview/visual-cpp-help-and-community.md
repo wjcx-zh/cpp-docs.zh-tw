@@ -1,18 +1,18 @@
 ---
 title: Visual C++ 說明和社群
-ms.date: 11/30/2017
+ms.date: 08/03/2020
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: 66ff4844e34d1d3c781791b5e250387d6ac2a0d1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e3dd475112f217e9d7891a18f7dc91972b221dd9
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405074"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565920"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 說明和社群
 
-以下說明如何取得如何撰寫 C++ 程式碼和使用 Visual Studio 開發工具的相關資訊。
+這裡提供有關如何撰寫 c + + 程式碼及使用 Visual Studio 開發工具的說明和資訊。
 
 ## <a name="samples"></a>範例
 
@@ -42,4 +42,4 @@ ms.locfileid: "86405074"
 |[C + + 小組 Blog](https://devblogs.microsoft.com/cppblog/)|包含 Microsoft c + + 產品小組的專家提供的各種主題文章。|
 |[Channel 9](https://channel9.msdn.com/)|包含訪談和演講影片。 請使用 Channel 9 首頁上的 [搜尋] 方塊尋找 C++ 內容。|
 |[Visual Studio](https://visualstudio.microsoft.com/)|包含有關 Visual Studio 和相關開發工具的文章及新聞。|
-|[MSDN 論壇](https://social.msdn.microsoft.com/Forums/)和 Visual Studio[開發人員社區](https://developercommunity.visualstudio.com)|官方 Microsoft 論壇，您可以在這裡提出 C++ 相關問題，並 從 Microsoft 與社群專家處獲得解答。|
+|[Microsoft Docs Q&A](https://docs.microsoft.com/answers/topics/c%2B%2B.html)和 Visual Studio c + +[開發人員社區](https://developercommunity.visualstudio.com/spaces/62/index.html)|官方 Microsoft 論壇，您可以在這裡提出 C++ 相關問題，並 從 Microsoft 與社群專家處獲得解答。|

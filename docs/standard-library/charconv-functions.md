@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 276ac2bce70ce5c4ebf8e22bb1da1ac9914db55e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87246100"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565945"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 函式
 
@@ -25,7 +25,7 @@ ms.locfileid: "87246100"
 
 這些轉換函式會針對效能進行微調，同時也支援最短的往返行為。 最短的來回行為表示當數位轉換成字元時，只會寫出足夠的精確度，以在將這些字元轉換回浮點時，能夠復原原始數位。
 
-- 將字元轉換成數位時，數值不需要是以 null 結束。 同樣地，將數位轉換成字元時，結果不會以 null 結束。
+- 將字元轉換成數位時，數值不需要以 null 結束。 同樣地，將數位轉換成字元時，結果不會以 null 結束。
 - 轉換函式不會配置記憶體。 您在所有情況下都擁有該緩衝區。
 - 轉換函式不會擲回。 傳回的結果可供您判斷轉換是否成功。
 - 轉換函式不會區分執行時間舍入模式。
@@ -35,8 +35,8 @@ ms.locfileid: "87246100"
 
 將整數或浮點值轉換為的序列 **`char`** 。
 
-藉 `value` 由填滿範圍，將轉換成字元字串， \[ `first` `last` 其中 \[ `first` ， `last` ）必須是有效的範圍。
-傳回[to_chars_result 結構](to-chars-result-structure.md)。 如果轉換成功（如所示 `to_char_result.ec` ），成員 `ptr` 就是所寫入字元的一個後端指標。 否則， `to_char_result.ec` 具有值， `errc::value_too_large` `to_char_result.ptr` 且值為 `last` ，且範圍的內容未 \[ `first` `last` 指定。
+藉 `value` 由填滿範圍 \[ `first` ， `last`) ，其中 \[ `first` ， `last`) 必須是有效的範圍，以將轉換成字元字串。
+傳回[to_chars_result 結構](to-chars-result-structure.md)。 如果轉換成功（如所示 `to_char_result.ec` ），成員 `ptr` 就是所寫入字元的一個後端指標。 否則， `to_char_result.ec` 具有值、 `errc::value_too_large` `to_char_result.ptr` 具有值 `last` ，且範圍的內容 \[ `first` `last` 未指定) 。
 
 只有 `to_chars` 當您提供能力不佳的大型緩衝區來保存結果時，才會發生失敗的唯一方法。
 
@@ -81,7 +81,7 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 要進行轉換的值。 如果 `value` 是負數，表示的開頭為 `-` 。
 
 *群體*\
-針對整數轉換，這是轉換成字元時要使用的基底 `value` 。 必須介於2到36（含）之間。 不會有前置零。 範圍 10.. 35 （含）之間的數位會以小寫字元 a 表示。z
+針對整數轉換，這是轉換成字元時要使用的基底 `value` 。 必須介於2到36（含）之間。 不會有前置零。 範圍 10. 35 (內含) 的數位會以小寫字元 a 表示。z
 
 *bcp.fmt*\
 對於浮點轉換，這是一個位元遮罩，用來指定要使用的轉換格式，例如科學、固定或十六進位。 如需詳細資訊，請參閱[chars_format](chars-format-class.md) 。
@@ -95,9 +95,9 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 ### <a name="remarks"></a>備註
 
-採用[chars_format](chars-format-class.md)參數的函式會決定轉換規範，如同它們使用的方式如下：如果是，則為，如果是，則為，如果是，則為，如果是，則為，如果為，則為 `printf()` `f` `fmt` `chars_format::fixed` `e` `fmt` `chars_format::scientific` `a` `fmt` `chars_format::hex` `g` `fmt` `chars_format::general` 。 指定最短的固定標記法仍然可能導致冗長的輸出，因為此值可能是非常大或非常小的最短可能表示。
+採用[chars_format](chars-format-class.md)參數的函式會決定轉換規範，如同它們使用的方式如下：如果是，則轉換規範為，如果為，則 (如果為，則會 `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` 在結果) `fmt` `chars_format::hex` `'g'` `fmt` `chars_format::general` ，如果為，則為。 指定最短的固定標記法仍然可能導致冗長的輸出，因為此值可能是非常大或非常小的最短可能表示。
 
-下表描述不同的和參數組合所提供的轉換行為 `fmt` `precision` 。 「最短來回行程」一詞指的是寫入所需的最少位數，因此使用對應的函式來剖析該標記法 `from_chars` 將會完全復原此值。
+下表描述不同的和參數組合所提供的轉換行為 `fmt` `precision` 。 「最短來回行為」一詞指的是寫入所需的最少位數，因此使用對應的函式來剖析該標記法 `from_chars` 將會完全復原此值。
 
 | `fmt`和 `precision` 組合 | 輸出 |
 |--|--|
@@ -188,7 +188,7 @@ from_chars_result from_chars(const char* first, const char* last, long double& v
 
 ### <a name="remarks"></a>備註
 
-函式會 `from_chars()` 分析字串 \[ `first` ， `last` ）以取得數位模式，其中 \[ `first` ， `last` ）必須是有效的範圍。
+函式會 `from_chars()` 分析字串 \[ `first` ， `last`) 數位模式，其中 \[ `first` ，) 必須是 `last` 有效的範圍。
 
 剖析字元時，不會忽略空白字元。 與不同的 `strtod()` 是，緩衝區的開頭必須是有效的數值表示。
 
@@ -237,7 +237,16 @@ int main()
 }
 ```
 
+## <a name="requirements"></a>需求
+
+**標頭：**\<charconv>
+
+**命名空間：** std
+
+/std：需要 c + + 17 或更新版本。
+
 ## <a name="see-also"></a>另請參閱
 
 [\<charconv>](charconv.md)  
-[來回行程的最短十進位字串](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/)
+[來回行程](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+ 的最短十進位字串[printf ( # A1 格式](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)規範

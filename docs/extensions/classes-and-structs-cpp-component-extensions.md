@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228722"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807767"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref 類別和 ref 結構 (C++/CLI 和 C++/CX)
 
@@ -29,19 +29,16 @@ ms.locfileid: "87228722"
 ### <a name="syntax"></a>語法
 
 ```cpp
-      class_access
-      ref class
-      name
-      modifier :  inherit_accessbase_type {};
-class_accessref structnamemodifier :  inherit_accessbase_type {};
-class_accessvalue classnamemodifier :  inherit_accessbase_type {};
-class_accessvalue structnamemodifier :  inherit_accessbase_type {};
+class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref struct name modifier : inherit_access base_type {};
+class_access value class name modifier : inherit_access base_type {};
+class_access value struct name modifier : inherit_access base_type {};
 ```
 
 ### <a name="parameters"></a>參數
 
 *class_access*<br/>
-(選擇性) 組件外部的類別或結構的存取範圍。 可能的值為 **`public`** 和 **`private`** （ **`private`** 是預設值）。 巢狀類別或結構不可以有*class_access* 指定名稱。
+(選擇性) 組件外部的類別或結構的存取範圍。 可能的值為 **`public`** ，而 **`private`** (**`private`** 為預設) 。 巢狀類別或結構不可以有*class_access* 指定名稱。
 
 *name*<br/>
 類別或結構的名稱。
@@ -50,7 +47,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 (選擇性) [abstract](abstract-cpp-component-extensions.md) 和 [sealed](sealed-cpp-component-extensions.md) 為有效的修飾詞。
 
 *inherit_access*<br/>
-(選擇性) *base_interface* 的存取範圍。 唯一允許的存取範圍是 **`public`** （ **`public`** 預設值）。
+(選擇性) *base_interface* 的存取範圍。 唯一允許的協助工具 **`public`** 是 **`public`** 預設)  (。
 
 *base_type*<br/>
 (選擇性) 基底類型。 不過，值類型無法做為基底類型。
@@ -73,11 +70,11 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 - [類別、結構和等位](../cpp/classes-and-structs-cpp.md)
 
-- [如何：定義和使用類別和結構中的析構函數和完成項（c + +/CLI）](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [如何：定義和使用類別和結構中的析構函數和完成項 (c + +/CLI) ](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [使用者定義的運算子 (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
-- [使用者定義的轉換（c + +/CLI）](../dotnet/user-defined-conversions-cpp-cli.md)
+- [ (c + +/CLI) 的使用者定義轉換](../dotnet/user-defined-conversions-cpp-cli.md)
 
 - [如何：包裝原生類別以供 C 使用#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 

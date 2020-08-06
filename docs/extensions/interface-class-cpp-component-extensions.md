@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8a637332110fa18a7a5803d7512c643e29d66eab
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228696"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807741"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface 類別 (C++/CLI 和 C++/CX)
 
@@ -24,9 +24,8 @@ ms.locfileid: "87228696"
 ### <a name="syntax"></a>語法
 
 ```cpp
-interface_access
-interface class
-name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+interface_access interface class name : inherit_access base_interface {};
+interface_access interface struct name : inherit_access base_interface {};
 ```
 
 ### <a name="parameters"></a>參數
@@ -38,7 +37,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 介面的名稱。
 
 *inherit_access*<br/>
-*base_interface* 的可及性。  基底介面唯一允許的存取範圍是 **`public`** （預設值）。
+*base_interface* 的可及性。  基底介面唯一允許的協助工具是 **`public`** (預設) 。
 
 *base_interface*<br/>
 (選擇性) 介面 *name* 的基底介面。
@@ -63,7 +62,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 您可以在編譯時期偵測某個型別是否為具有 `__is_interface_class(type)` 的介面。 如需詳細資訊，請參閱[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
-在開發環境中，您可以藉由反白顯示關鍵字（例如 **`interface class`** ）並按 f1，取得這些關鍵字的 F1 說明。
+在開發環境中，您可以藉由反白顯示關鍵字、 (**`interface class`** ，例如) 並按 F1，取得這些關鍵字的 F1 說明。
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 

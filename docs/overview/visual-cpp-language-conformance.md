@@ -1,21 +1,21 @@
 ---
 title: Microsoft C++ 語言一致性表
 description: 依 Visual Studio 版本的 Microsoft c + + 一致性更新表。
-ms.date: 05/18/2020
+ms.date: 08/05/2020
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4467e9fa47ecdeb0b4c5c44ab4d366222369d994
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213940"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807806"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
-Visual Studio （MSVC）中 Microsoft c + + 編譯器的標準一致性是進行中的工作。 以下是依 Visual Studio 版本的 ISO Standard c + + 語言和程式庫一致性的摘要。 每個編譯器和標準程式庫功能名稱都會連結到描述功能的 ISO Standard c + + 提案檔（如果發行時有提供的話）。 [**支援**的資料行] 會列出首次出現功能支援的 Visual Studio 版本。
+Visual Studio (MSVC) 中 Microsoft c + + 編譯器的標準一致性是進行中的工作。 以下是依 Visual Studio 版本的 ISO Standard c + + 語言和程式庫一致性的摘要。 每個編譯器和標準程式庫功能名稱都會連結到描述功能的 ISO Standard c + + 提案檔（如果發行時有提供的話）。 [**支援**的資料行] 會列出首次出現功能支援的 Visual Studio 版本。
 
 如需 Visual Studio 2017 或 Visual Studio 2019 MSVC 一致性改進的詳細資訊，請參閱[Visual Studio 中的 c + + 一致性改善](cpp-conformance-improvements.md)。 如需其他變更的清單，請參閱[Visual Studio 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 如需舊版的一致性變更，請參閱 [Visual C++ 變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)和[從 2003 到 2015 的 Visual C++ 新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)。 如需 C++ 小組發出的最新消息，請瀏覽 [小組部落格](https://devblogs.microsoft.com/cppblog/) \(英文\)。
 
@@ -24,7 +24,7 @@ Visual Studio （MSVC）中 Microsoft c + + 編譯器的標準一致性是進行
 
 ## <a name="compiler-features"></a>編譯器功能
 
-|  |  |
+| 功能 | 支援 |
 |--|--|
 | __C + + 03/11 核心語言功能__ | __支援__ |
 | &nbsp;&nbsp;其他所有項目 | VS 2015 <sup>[A](#note_A)</sup> |
@@ -84,7 +84,7 @@ Visual Studio （MSVC）中 Microsoft c + + 編譯器的標準一致性是進行
 | &nbsp;&nbsp;[`P0145R3 Refining expression evaluation order`](https://wg21.link/p0145r3)<br/>&nbsp;&nbsp;[`P0400R0 Order of evaluation of function arguments`](https://wg21.link/p0400r0) | VS 2017 15.7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0195R2 Pack expansions in using-declarations`](https://wg21.link/p0195r2) | VS 2017 15.7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0283R2 Ignoring unrecognized attributes`](https://wg21.link/p0283r2) | VS 2015 <sup>[14](#note_14)</sup> |
-| __C + + 17 核心語言功能（缺失報表）__ | __支援__ |
+| __C + + 17 核心語言功能 (缺失報表) __ | __支援__ |
 | &nbsp;&nbsp;[`P0702R1 Fixing class template argument deduction for initializer-list ctors`](https://wg21.link/p0702r1) | VS 2017 15.7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0961R1 Relaxing the structured bindings customization point finding rules`](https://wg21.link/p0961r1) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0969R0 Allowing structured bindings to accessible members`](https://wg21.link/p0969r0) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
@@ -136,9 +136,9 @@ Visual Studio （MSVC）中 Microsoft c + + 編譯器的標準一致性是進行
 | &nbsp;&nbsp;[`P1907R1 Inconsistencies with non-type template parameters`](https://wg21.link/P1907R1) | VS 2019 16.6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US053: Mandate the return type for return_void and return_value to be void`](https://wg21.link/P1971R0) | VS 2019 16.6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US065: Apply Coroutines issue 24 from P0664R8`](https://wg21.link/P1971R0) | VS 2019 16.6 <sup> [20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Partial |
-| &nbsp;&nbsp;[`P0912R5 Coroutines`](https://wg21.link/P0912R5) | Partial |
-| &nbsp;&nbsp;[`P1103R3 Modules`](https://wg21.link/P1103R3) | Partial |
+| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | 部分 |
+| &nbsp;&nbsp;[`P0912R5 Coroutines`](https://wg21.link/P0912R5) | 部分 |
+| &nbsp;&nbsp;[`P1103R3 Modules`](https://wg21.link/P1103R3) | 部分 |
 | &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | 部分 |
 | &nbsp;&nbsp;[`P0315R4 Allowing lambdas in unevaluated contexts`](https://wg21.link/P0315R4) | 否 |
 | &nbsp;&nbsp;[`P0388R4 Permit conversions to arrays of unknown bound`](https://wg21.link/P0388R4) | 否 |
@@ -181,7 +181,9 @@ Visual Studio （MSVC）中 Microsoft c + + 編譯器的標準一致性是進行
 
 ## <a name="standard-library-features"></a>標準程式庫功能
 
-|  |  |
+如需更詳細的標準程式庫功能清單和依產品版本的錯誤修正，請見[GitHub MICROSOFT STL Wiki 變更記錄](https://github.com/microsoft/STL/wiki/Changelog)頁面。
+
+| 功能 | 支援 |
 |--|--|
 | __C + + 20 標準程式庫功能__ | __支援__ |
 | &nbsp;&nbsp;[`P0809R0 Comparing Unordered Containers`](https://wg21.link/p0809r0) | VS 2010 <sup>[14](#note_14)</sup> |
@@ -238,20 +240,29 @@ Visual Studio （MSVC）中 Microsoft c + + 編譯器的標準一致性是進行
 | &nbsp;&nbsp;[`P1165R1 Consistently Propagating Stateful Allocators In basic_string's operator+()`](https://wg21.link/P1165R1) | VS 2019 16.6 <sup> [14](#note_14)</sup> |
 | &nbsp;&nbsp;[`P1423R3 char8_t backward compatibility remediation`](https://wg21.link/P1423R3) | VS 2019 16.6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1645R1 constexpr for <numeric> algorithms`](https://wg21.link/P1645R1) | VS 2019 16.6 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0415R1 constexpr For <complex> (Again)`](https://wg21.link/p0415r1) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0476R2 <bit> bit_cast`](https://wg21.link/P0476R2) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0674R1 make_shared() For Arrays`](https://wg21.link/p0674r1) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0718R2 atomic<shared_ptr<T>>, atomic<weak_ptr<T>>`](https://wg21.link/p0718r2) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1023R0 constexpr For std::array Comparisons`](https://wg21.link/P1023R0) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1115R3 erase()/erase_if() Return size_type`](https://wg21.link/P1115R3) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1831R1 Deprecating volatile in the standard library`](https://wg21.link/P1831R1) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1956R1 <bit> has_single_bit(), bit_ceil(), bit_floor(), bit_width()`](https://wg21.link/P1956R1) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1964R2 Replacing boolean With boolean-testable`](https://wg21.link/P1964R2) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1976R2 Fixed-size span construction from dynamic range`](https://wg21.link/P1976R2) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2091R0 Issues with range access CPOs`](https://wg21.link/P2091R0) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2102R0 Make "implicit expression variations" more explicit`](https://wg21.link/P2102R0) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2116R0 Remove tuple-like protocol support from fixed-extent span`](https://wg21.link/P2116R0) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0019R8 atomic_ref`](https://wg21.link/P0019R8) | 否 |
 | &nbsp;&nbsp;[`P0053R7 <syncstream>`](https://wg21.link/p0053r7)<br/>&nbsp;&nbsp;[`P0753R2 osyncstream Manipulators`](https://wg21.link/p0753r2) | 否 |
 | &nbsp;&nbsp;[`P0339R6 polymorphic_allocator<>`](https://wg21.link/P0339R6) | 否 |
 | &nbsp;&nbsp;[`P0355R7 <chrono> Calendars And Time Zones`](https://wg21.link/p0355r7) | 否 |
-| &nbsp;&nbsp;[`P0415R1 constexpr For <complex> (Again)`](https://wg21.link/p0415r1) | 否 |
 | &nbsp;&nbsp;[`P0475R1 Guaranteed Copy Elision For Piecewise Construction`](https://wg21.link/P0475R1) | 否 |
-| &nbsp;&nbsp;[`P0476R2 <bit> bit_cast`](https://wg21.link/P0476R2) | 否 |
 | &nbsp;&nbsp;[`P0528R3 Atomic Compare-And-Exchange With Padding Bits`](https://wg21.link/P0528R3) | 否 |
 | &nbsp;&nbsp;[`P0591R4 Utility Functions For Uses-Allocator Construction`](https://wg21.link/P0591R4) | 否 |
 | &nbsp;&nbsp;[`P0608R3 Improving variant's Converting Constructor/Assignment`](https://wg21.link/P0608R3) | 否 |
 | &nbsp;&nbsp;[`P0653R2 to_address()`](https://wg21.link/p0653r2) | 否 |
 | &nbsp;&nbsp;[`P0655R1 visit<R>()`](https://wg21.link/P0655R1) | 否 |
-| &nbsp;&nbsp;[`P0674R1 make_shared() For Arrays`](https://wg21.link/p0674r1) | 否 |
-| &nbsp;&nbsp;[`P0718R2 atomic<shared_ptr<T>>, atomic<weak_ptr<T>>`](https://wg21.link/p0718r2) | 否 |
 | &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | 否 |
 | &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | 否 |
 | &nbsp;&nbsp;[`P0896R4 <ranges\>`](https://wg21.link/P0896R4) | 否 |
@@ -260,7 +271,6 @@ Visual Studio （MSVC）中 Microsoft c + + 編譯器的標準一致性是進行
 | &nbsp;&nbsp;[`P1001R2 execution::unseq`](https://wg21.link/P1001R2) | 否 |
 | &nbsp;&nbsp;[`P1007R3 assume_aligned()`](https://wg21.link/P1007R3) | 否 |
 | &nbsp;&nbsp;[`P1020R1 Smart Pointer Creation With Default Initialization`](https://wg21.link/P1020R1) | 否 |
-| &nbsp;&nbsp;[`P1023R0 constexpr For std::array Comparisons`](https://wg21.link/P1023R0) | 否 |
 | &nbsp;&nbsp;[`P1032R1 Miscellaneous constexpr`](https://wg21.link/P1032R1) | 否 |
 | &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | 否 |
 | __C + + 17 標準程式庫功能__ | __支援__ |
@@ -381,19 +391,20 @@ Visual Studio （MSVC）中 Microsoft c + + 編譯器的標準一致性是進行
 「部分」____ 表示實作不完整。 如需詳細資訊，請參閱附注一節。
 __VS 2010__表示 Visual Studio 2010 中支援的功能。
 __VS 2013__表示 Visual Studio 2013 支援的功能。
-__VS 2015__表示 Visual Studio 2015 （RTW）中支援的功能。
+__VS 2015__表示 Visual Studio 2015 (RTW) 支援的功能。
 __Vs 2015.2__和__vs 2015.3__分別指出 Visual Studio 2015 update 2 和 Visual Studio 2015 update 3 中支援的功能。
-__VS 2017 15.0__表示 Visual Studio 2017 15.0 版（RTW）中支援的功能。
+__VS 2017 15.0__指出 Visual Studio 2017 版本 15.0 (RTW) 支援的功能。
 __VS 2017 15.3__表示 Visual Studio 2017 版本15.3 中支援的功能。
 __VS 2017 15.5__表示 Visual Studio 2017 版本15.5 中支援的功能。
 __VS 2017 15.7__表示 Visual Studio 2017 版本15.7 中支援的功能。
-__VS 2019 16.0__表示 Visual Studio 2019 16.0 版（RTW）中支援的功能。
+__VS 2019 16.0__指出 Visual Studio 2019 版本 16.0 (RTW) 支援的功能。
 __VS 2019 16.1__表示 Visual Studio 2019 版本16.1 中支援的功能。
 __VS 2019 16.2__表示 Visual Studio 2019 版本16.2 中支援的功能。
 __VS 2019 16.3__表示 Visual Studio 2019 版本16.3 中支援的功能。
 __VS 2019 16.4__表示 Visual Studio 2019 版本16.4 中支援的功能。
 __VS 2019 16.5__表示 Visual Studio 2019 版本16.5 中支援的功能。
 __VS 2019 16.6__表示 Visual Studio 2019 版本16.6 中支援的功能。
+__VS 2019 16.7__表示 Visual Studio 2019 版本16.7 中支援的功能。
 
 ### <a name="notes"></a>注意
 
@@ -411,17 +422,17 @@ __VS 2019 16.6__表示 Visual Studio 2019 版本16.6 中支援的功能。
 
 <a name="note_G"></a> __G__ 由編譯器內建支援。
 
-<a name="note_14"></a>__14__即使 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 指定（預設值），這些 c + + 17/20 的功能一律會啟用。 原因可能是因為功能是在引進 **/std**選項之前執行，或是因為條件式實過於複雜。
+<a name="note_14"></a>__14__這些 c + + 17/20 功能一律會啟用，即使 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) (指定預設) 也一樣。 原因可能是因為功能是在引進 **/std**選項之前執行，或是因為條件式實過於複雜。
 
-<a name="note_17"></a>__17__這些功能是由 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) （或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) ）編譯器選項啟用。
+<a name="note_17"></a>__17__這些功能是由 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) 編譯器選項啟用。
 
-<a name="note_20"></a>__20__這些功能是由 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) 編譯器選項啟用。 當 C++20 實作完成時，將會新增 **/std:c++20** 編譯器選項，這些功能將在該選項下可供使用。
+<a name="note_20"></a>__20__這些功能是由 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) 編譯器選項啟用。 當 c + + 20 執行完成時，將會加入新的 **`/std:c++20`** 編譯器選項，而且這些功能也會提供給您。
 
-<a name="note_byte"></a>__byte__ `std::byte`是由 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) （或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) ）啟用，但因為它可能會在某些情況下與 Windows SDK 標頭髮生衝突，所以它有更細緻的退出宣告宏。 可以透過將 `_HAS_STD_BYTE` 定義為 `0`來停用它。
+<a name="note_byte"></a>__byte__ `std::byte`是由 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) 啟用，但因為它可能會在某些情況下與 Windows SDK 標頭髮生衝突，所以它有更細緻的退出宣告宏。 可以透過將 `_HAS_STD_BYTE` 定義為 `0`來停用它。
 
 <a name="note_C11"></a> __C11__ 通用 CRT 已實作 C++17 所需的 C11 標準程式庫組件，除了 C99 `strftime()` E/O 替代轉換規範、C11 `fopen()` 獨佔模式，以及 C11 `aligned_alloc()`之外。 後者不太可能實行，因為 C11 的指定 `aligned_alloc()` 方式與 Microsoft 的實作為不相容 `free()` ：也就是說， `free()` 必須能夠處理高度對齊的配置。
 
-<a name="note_rem"></a>__rem__當 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 指定（或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) ）編譯器選項時，所移除的功能。 您可以使用下列巨集重新啟用這些功能以清除轉換到新語言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 與 `_HAS_UNEXPECTED`。
+<a name="note_rem"></a>__rem__[`/std:c++17`](../build/reference/std-specify-language-standard-version.md)指定 (或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) 編譯器選項時，所移除的功能。 您可以使用下列巨集重新啟用這些功能以清除轉換到新語言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 與 `_HAS_UNEXPECTED`。
 
 <a name="note_charconv"></a> __charconv__ `from_chars()` 與 `to_chars()` 可用於整數。 浮點數 `from_chars()` 與浮點數 `to_chars()` 的時間表如下所示：
 

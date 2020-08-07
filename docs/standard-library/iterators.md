@@ -5,18 +5,18 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: eaa4d50fc50528febf923f1c13a5283b9a1bd389
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c3bb2825ec6ad98f523fa4c3a616d0807eac50a8
+ms.sourcegitcommit: 5ef9697b4cb1947bec9669be57bc920d2c4d82a6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334955"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87870148"
 ---
 # <a name="iterators"></a>迭代器
 
 迭代器是一種物件，可逐一查看「C++ 標準程式庫」容器中的元素，並提供個別元素的存取途徑。 「C++ 標準程式庫」容器都有提供迭代器，因此演算法能以標準方式存取其元素，而不需要考慮元素儲存所在容器的類型。
 
-您可以使用成員和全域函式（如和） `begin()` `end()` 和運算子（例如 `++` 和） `--` 來向前或向後移動，以明確地使用反覆運算器。 您也可以使用反覆運算器隱含地搭配範圍 for 迴圈或（針對某些反覆運算器類型）注標運算子 `[]` 。
+您可以使用成員和全域函式（如和） `begin()` `end()` 和運算子（例如 `++` 和） `--` 來向前或向後移動，以明確地使用反覆運算器。 您也可以使用反覆運算器，以隱含的範圍 for 迴圈，或 () 注標運算子的某些 iterator 類型 `[]` 。
 
 在「C++ 標準程式庫」中，序列或範圍的開頭是第一個元素。 序列或範圍的結尾一律定義為最後一個元素之後的元素。 全域函式 `begin` ，並將反覆運算器傳回 `end` 至指定的容器。 一般明確迭代器會以迴圈方式處理容器中的所有元素，如下所示：
 
@@ -34,7 +34,7 @@ for (auto it = begin(vec); it != end(vec); it++)
 ```cpp
 for (auto num : vec)
 {
-    // no deference operator
+    // no dereference operator
     cout << num << " ";
 }
 ```

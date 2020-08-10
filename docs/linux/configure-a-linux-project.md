@@ -1,15 +1,16 @@
 ---
-title: 在 Visual Studio 中設定 C++ Linux 專案
-ms.date: 06/22/2020
+title: 在 Visual Studio 中設定 Linux MSBuild c + + 專案
+ms.date: 08/06/2020
+description: 在 Visual Studio 中設定以 MSBuild 為基礎的 Linux 專案，讓您可以建立它。
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269737"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043859"
 ---
-# <a name="configure-a-linux-project"></a>設定 Linux 專案
+# <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中設定 Linux MSBuild c + + 專案
 
 ::: moniker range="vs-2015"
 
@@ -17,7 +18,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker-end
 
-本主題描述如何設定 C++ Linux 專案，如[在 Visual Studio 中建立新的 C++ Linux 專案](create-a-new-linux-project.md)所述。 如需 CMake Linux 專案，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
+本主題描述如何設定以 MSBuild 為基礎的 Linux 專案，如[在 Visual Studio 中建立 Linux MSBuild c + + 專案](create-a-new-linux-project.md)中所述。 針對 Linux CMake 專案，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
 
 您可以設定 Linux 專案，以實體 Linux 機器、虛擬機器，或[適用於 Linux 的 Windows 子系統](/windows/wsl/about) (WSL) 為目標。
 
@@ -78,7 +79,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 在遠端系統上建置時，會將開發電腦上的來源檔案複製到 Linux 電腦，並在該處進行編譯。 根據預設，Visual Studio 專案中的所有來源都會複製到上方設定中所設定的位置。 不過，也可以在清單中新增其他來源，或者完全關閉複製來源，後者是 Makefile 專案的預設值。
 
-- [要複製的來源]**** 決定將哪些來源複製到遠端電腦。 根據預設， ** \@ （SourcesToCopyRemotely）** 會預設為專案中的所有原始程式碼檔案，但不包含任何資產/資源檔，例如影像。
+- [要複製的來源]**** 決定將哪些來源複製到遠端電腦。 根據預設， ** \@ (SourcesToCopyRemotely) **會預設為專案中的所有原始程式碼檔案，但不包括任何資產/資源檔，例如影像。
 
 - [複製來源]**** 可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 95557c824aafb1092cc7711f19708cd7782683a9
+ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189671"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88087003"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT 地區設定名稱、語言和國家/地區字串
 
@@ -26,7 +26,7 @@ ms.locfileid: "87189671"
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
-*locale-name* 格式是簡短的 IETF 標準化字串；例如， `en-US` 代表英文 (美國) 或 `bs-Cyrl-BA` 代表波士尼亞文 (斯拉夫，波士尼亞赫塞哥維納)。 這些是慣用格式。 如需 Windows 作業系統版本所支援的地區設定名稱清單，請參閱[附錄 a：產品行為](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)（MS-lcid）： Windows 語言代碼識別碼（LCID）參考中資料表的**語言標記**資料行 \[ 。 這項資源列出所支援的語言、指令碼和地區部分的地區設定名稱。 如需有關具有非預設排序次序之受支援地區設定名稱的詳細資訊，請參閱 **Sort Order Identifiers (排序次序識別項)** 中 [Locale name](地區設定名稱) [](/windows/win32/Intl/sort-order-identifiers)一欄。 Windows 10 或更新版本會允許對應至有效 [BCP-47](https://tools.ietf.org/html/bcp47) 語言標記的地區設定名稱。 例如，`jp-US` 為有效的 BCP-47 標記，但就地區設定功能性而言，它基本上等同於 `US`。
+*locale-name* 格式是簡短的 IETF 標準化字串；例如， `en-US` 代表英文 (美國) 或 `bs-Cyrl-BA` 代表波士尼亞文 (斯拉夫，波士尼亞赫塞哥維納)。 這些是慣用格式。 如需 Windows 作業系統版本所支援的地區設定名稱清單，請參閱[附錄 a：產品行為](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)（MS-LCID）中的資料表**語言標記**資料行 \[ ： WINDOWS 語言代碼識別碼 (LCID) 參考。 這項資源列出所支援的語言、指令碼和地區部分的地區設定名稱。 如需有關具有非預設排序次序之受支援地區設定名稱的詳細資訊，請參閱 **Sort Order Identifiers (排序次序識別項)** 中 [Locale name](地區設定名稱) [](/windows/win32/Intl/sort-order-identifiers)一欄。 Windows 10 或更新版本會允許對應至有效 [BCP-47](https://tools.ietf.org/html/bcp47) 語言標記的地區設定名稱。 例如，`jp-US` 為有效的 BCP-47 標記，但就地區設定功能性而言，它基本上等同於 `US`。
 
 *語言* \[ **\_** _國家/地區_ \[ __。__*字碼頁*]]當使用語言字串或語言字串和國家或地區字串建立地區設定時，表單會儲存在分類的地區設定中。 [Language Strings](../c-runtime-library/language-strings.md)中描述的一組受支援語言字串，以及 [Country/Region Strings](../c-runtime-library/country-region-strings.md)所列的受支援國家與地區字串清單。 如果指定的語言和指定的國家或地區沒有關聯，則指定的國家或地區的預設語言會儲存在地區設定中。 我們不建議內嵌於程式碼或對儲存體序列化的地區設定字串使用此格式，因為這些字串比地區設定名稱格式更容易被作業系統更新變更。
 
@@ -47,6 +47,12 @@ ms.locfileid: "87189671"
 _wsetlocale(LC_ALL, L"de-DE");
 _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 ```
+
+
+## <a name="utf-8-support"></a>UTF-8 支援
+
+您可以在地區設定字串中使用 UTF-8 字碼頁來啟用 UTF-8 支援。 如需詳細資訊，請參閱的[Utf-8 支援一節 `setlocale` ](../c-runtime-library/reference/setlocale-wsetlocale.md#utf-8-support) 。
+
 
 ## <a name="see-also"></a>另請參閱
 

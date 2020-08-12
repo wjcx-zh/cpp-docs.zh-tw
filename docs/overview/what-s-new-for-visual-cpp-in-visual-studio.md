@@ -3,12 +3,12 @@ title: Visual Studio 中 C++ 的新功能
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389996"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144174"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
@@ -20,7 +20,7 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 - 增強支援 C++17 功能與正確性修正，加上 C++20 功能 (例如模組和協同程式) 的實驗性支援。 如需詳細資訊，請參閱 [Visual Studio 2019 中的 C++ 一致性改善](cpp-conformance-improvements.md)。
 
-- `/std:c++latest`選項現在包含不一定完整的 c + + 20 功能，包括對三向比較之 c + + 20 運算子 \<=> （"太空船"）的初始支援。
+- `/std:c++latest`選項現在包含不一定完整的 c + + 20 功能，包括對 c + + 20 運算子的初始支援， \<=> ( "太空船" ) 進行三向比較。
 
 - C++ 編譯器參數 `/Gm` 現已被取代。 若已明確定義 `/Gm` 參數，請考慮將它從您的組建指令碼中停用。 或者，您也可以安全地忽略 `/Gm` 的過時警告，因為當使用 [將警告視為錯誤] (`/WX`) 時不會將它視為錯誤。
 
@@ -46,9 +46,9 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 - 新增了 OpenMP SIMD 向量化的基本支援。 您可以使用新的編譯器參數來加以啟用 **`/openmp:experimental`** 。 此選項讓標註了 `#pragma omp simd` 的迴圈有機會向量化。 向量化並不保證會發生，而已標註但未向量化的迴圈會收到回報的警告。 不支援任何 SIMD 子句；系統會忽略這些子句並回報警告。
 
-- 新增了內嵌命令列參數 **`/Ob3`** ，這是更積極的版本 **`/Ob2`** 。 **`/O2`**（將二進位檔優化以加快速度）仍 **`/Ob2`** 預設表示。 如果您發現編譯器不夠嚴格地內嵌，請考慮傳遞 **`/O2 -Ob3`** 。
+- 新增了內嵌命令列參數 **`/Ob3`** ，這是更積極的版本 **`/Ob2`** 。 **`/O2`** (優化二進位檔的速度) 仍會暗示 **`/Ob2`** 預設值。 如果您發現編譯器不夠嚴格地內嵌，請考慮傳遞 **`/O2 -Ob3`** 。
 
-- 我們已新增對簡短向量數學程式庫（SVML）內建函式的支援。 這些函式可計算 128 位元、256 位元或 512 位元的向量對等項目。 我們新增了這些專案，以支援以數學程式庫函式的呼叫來向量化迴圈，以及一些其他作業，例如整數除法。 若要了解支援函式的定義，請參閱 [Intel Intrinsic Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#!=undefined&techs=SVML)。
+- 我們已新增 (SVML) 內建函式的簡短向量數學程式庫支援。 這些函式可計算 128 位元、256 位元或 512 位元的向量對等項目。 我們新增了這些專案，以支援以數學程式庫函式的呼叫來向量化迴圈，以及一些其他作業，例如整數除法。 若要了解支援函式的定義，請參閱 [Intel Intrinsic Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#!=undefined&techs=SVML)。
 
 - 新增及改進的最佳化：
 
@@ -132,7 +132,7 @@ Visual Studio 2019 包含的下列功能可協助您更輕鬆且更直覺地撰�
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 16.1 版
 
-快速諮詢工具提示現在會遵守您編輯器的語意色彩標示。 它也有新的**線上搜尋**連結，此連結可用來搜尋線上文件以深入了解動態顯示程式碼建構。 Squiggled 程式碼的 [快速諮詢] 所提供的連結將會在線上搜尋錯誤。 如此一來，您就不需要在瀏覽器中重新輸入訊息。 如需詳細資訊，請參閱[Visual Studio 2019：顏色標示和線上搜尋中的快速資訊改進](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/)。
+快速諮詢工具提示現在會遵守您編輯器的語意色彩標示。 它也有新的**線上搜尋**連結，此連結可用來搜尋線上文件以深入了解動態顯示程式碼建構。 Squiggled 程式碼的 [快速諮詢] 所提供的連結將會在線上搜尋錯誤。 如此一來，您就不需要在瀏覽器中重新輸入訊息。 如需詳細資訊，請參閱 [Visual Studio 2019：顏色標示和線上搜尋中的快速資訊改進](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/)。
 
 ### <a name="intellicode-available-in-c-workload"></a>IntelliCode 可在 C++ 工作負載中找到
 
@@ -180,7 +180,7 @@ IntelliCode 現在是以「使用 C++ 的桌面開發」**** 工作負載中的�
 
 ## <a name="incredibuild-integration"></a>IncrediBuild 整合
 
-IncrediBuild 現在是以「使用 C++ 的桌面開發」**** 工作負載中的選擇性元件形式提供。 IncrediBuild 建置監視器已完全整合在 Visual Studio IDE 中。 如需詳細資訊，請參閱[使用 IncrediBuild 的組建監視器來視覺化組建和 Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/)。
+IncrediBuild 現在是以「使用 C++ 的桌面開發」**** 工作負載中的選擇性元件形式提供。 IncrediBuild 建置監視器已完全整合在 Visual Studio IDE 中。 如需詳細資訊，請參閱 [使用 IncrediBuild 的組建監視器來視覺化組建和 Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/)。
 
 ## <a name="debugging"></a>偵錯
 
@@ -203,7 +203,7 @@ IncrediBuild 現在是以「使用 C++ 的桌面開發」**** 工作負載中的
 
   這些技術的範例程式碼封存於 Microsoft Docs 和 VCSamples GitHub 存放庫。
 
-- Visual Studio 安裝程式中已不再提供 Windows 8.1 軟體發展工具組（SDK）。 建議您將 C++ 專案升級到最新 Windows 10 SDK。 若您有 8.1 的強式相依性，可從 Windows SDK 封存加以下載。
+- Visual Studio 安裝程式中已不再提供 Windows 8.1 軟體發展工具組 (SDK) 。 建議您將 C++ 專案升級到最新 Windows 10 SDK。 若您有 8.1 的強式相依性，可從 Windows SDK 封存加以下載。
 
 - 最新的 C++ 工具組無法再將 Windows XP 設為目標。 仍支援 VS 2017 級 MSVC 編譯器與程式庫的 XP 目標設定，並可透過「個別元件」安裝。
 
@@ -239,7 +239,7 @@ C++ Android 體驗現在預設為 Android SDK 25 與 Android NDK 16b。
 
 ::: moniker range="=vs-2017"
 
-Visual Studio 2017 有多個 C++ 環境的更新與修正。 我們已修正編譯器和工具中超過250個 bug 和回報的問題。 許多都是由客戶透過回報[問題，並](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017)在 [**傳送意見**反應] 下提供建議選項來提交。 感謝您回報 Bug！ 如需有關所有 Visual Studio 新功能的詳細資訊，請參閱 [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)。 如需有關 Visual Studio 2019 中 C++ 新功能的資訊，請參閱 [Visual Studio 中 C++ 的新功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)。 如需有關 Visual Studio 2015 和更舊版本中 C++ 新功能的資訊，請參閱[從 2003 到 2015 的 Visual C++ 新功能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+Visual Studio 2017 有多個 C++ 環境的更新與修正。 我們已修正編譯器和工具中超過250個 bug 和回報的問題。 許多都是由客戶透過回報 [問題，並](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017) 在 [ **傳送意見**反應] 下提供建議選項來提交。 感謝您回報 Bug！ 如需有關所有 Visual Studio 新功能的詳細資訊，請參閱 [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)。 如需有關 Visual Studio 2019 中 C++ 新功能的資訊，請參閱 [Visual Studio 中 C++ 的新功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)。 如需有關 Visual Studio 2015 和更舊版本中 C++ 新功能的資訊，請參閱[從 2003 到 2015 的 Visual C++ 新功能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
 
 ## <a name="visual-studio-2017-c-compiler"></a>Visual Studio 2017 c + + 編譯器
 
@@ -249,23 +249,23 @@ Visual Studio 2017 有多個 C++ 環境的更新與修正。 我們已修正編�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-編譯器支援 c + + 17 中新的75% 的功能，包括結構化系結、 **`constexpr`** lambda、 `if constexpr` 、內嵌變數、折迭運算式，以及將新增 **`noexcept`** 至型別系統。 這些功能可以在選項下取得 **`/std:c++17`** 。 如需詳細資訊，請參閱[Visual Studio 2017 中的 c + + 一致性改進](cpp-conformance-improvements.md)
+編譯器支援 c + + 17 中新的75% 的功能，包括結構化系結、 **`constexpr`** lambda、 `if constexpr` 、內嵌變數、折迭運算式，以及將新增 **`noexcept`** 至型別系統。 這些功能可以在選項下取得 **`/std:c++17`** 。 如需詳細資訊，請參閱 [Visual Studio 2017 中的 c + + 一致性改進](cpp-conformance-improvements.md)
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
-Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 如需詳細資訊，請參閱[宣佈： MSVC 符合 c + + 標準](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/)和[Microsoft c + + 語言一致性](../visual-cpp-language-conformance.md)。
+Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 如需詳細資訊，請參閱 [宣佈： MSVC 符合 c + + 標準](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) 和 [Microsoft c + + 語言一致性](../visual-cpp-language-conformance.md)。
 
 ##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 15.8 版
 
-[`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md)編譯器參數會啟用新的實驗性 MSVC 預處理器，最後會符合所有適用的 C 和 c + + 標準。 如需詳細資訊，請參閱[MSVC 實驗性預處理器總覽](../preprocessor/preprocessor-experimental-overview.md)。
+[`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md)編譯器參數會啟用新的實驗性 MSVC 預處理器，最後會符合所有適用的 C 和 c + + 標準。 如需詳細資訊，請參閱 [MSVC 實驗性預處理器總覽](../preprocessor/preprocessor-experimental-overview.md)。
 
 ### <a name="new-compiler-options"></a>新的編譯器選項
 
-- [`/permissive-`](../build/reference/permissive-standards-conformance.md)：啟用所有嚴格的標準一致性編譯器選項，並停用大部分的 Microsoft 特定編譯器擴充功能（例如，而不是 `__declspec(dllimport)` ）。 在 Visual Studio 2017 15.5 版中，此選項預設為開啟。  **`/permissive-`** 一致性模式包含對兩階段名稱查閱的支援。 如需詳細資訊，請參閱[Visual Studio 中的 c + + 一致性改進](cpp-conformance-improvements.md)。
+- [`/permissive-`](../build/reference/permissive-standards-conformance.md)：啟用所有嚴格的標準一致性編譯器選項，並停用大部分的 Microsoft 特定編譯器擴充功能 (`__declspec(dllimport)` ，例如) 。 在 Visual Studio 2017 15.5 版中，此選項預設為開啟。  **`/permissive-`** 一致性模式包含對兩階段名稱查閱的支援。 如需詳細資訊，請參閱 [Visual Studio 中的 c + + 一致性改進](cpp-conformance-improvements.md)。
 
 - [`/diagnostics`](../build/reference/diagnostics-compiler-diagnostic-options.md)：可讓您以三種不同的方式顯示診斷錯誤或警告位置：只有行號、行號和資料行，或行號和欄，並在違規的程式程式碼底下加上插入點。
 
-- [`/debug:fastlink`](../build/reference/debug-generate-debug-info.md)：藉由不將所有的偵錯工具資訊複製到 PDB 檔案，讓累加連結時間更快（與 Visual Studio 2015）達到最高30%。 PDB 檔案改為指向用來建立可執行檔之物件和程式庫檔案的偵錯資訊。 請參閱[VS "15" 中更快的 c `/Debug:fastlink` + + 組建週期](https://devblogs.microsoft.com/cppblog/faster-c-build-cycle-in-vs-15-with-debugfastlink/)，並提供[建議，以 Visual Studio 中加速 c + + 組建](https://devblogs.microsoft.com/cppblog/recommendations-to-speed-c-builds-in-visual-studio/)。
+- [`/debug:fastlink`](../build/reference/debug-generate-debug-info.md)：藉由不將所有的偵錯工具資訊複製到 PDB 檔案中，最多可讓增量連結時間加快 30% (與 Visual Studio 2015) 。 PDB 檔案改為指向用來建立可執行檔之物件和程式庫檔案的偵錯資訊。 請參閱[VS "15" 中更快的 c `/Debug:fastlink` + + 組建週期](https://devblogs.microsoft.com/cppblog/faster-c-build-cycle-in-vs-15-with-debugfastlink/)，並提供[建議，以 Visual Studio 中加速 c + + 組建](https://devblogs.microsoft.com/cppblog/recommendations-to-speed-c-builds-in-visual-studio/)。
 
 - Visual Studio 2017 允許搭配 [`/sdl`](../build/reference/sdl-enable-additional-security-checks.md) 使用 [`/await`](../build/reference/await-enable-coroutine-support.md) 。 我們已移除 [`/RTC`](../build/reference/rtc-run-time-error-checks.md) 協同程式的限制。
 
@@ -273,7 +273,7 @@ Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 �
 
 - [ `/std:c++14` 和 `/std:c++latest` ](../build/reference/std-specify-language-standard-version.md)：這些編譯器選項可讓您在專案中加入特定版本的 ISO c + + 程式設計語言。 最新的草稿標準功能會受到選項的保護 **`/std:c++latest`** 。
 
-- [`/std:c++17`](../build/reference/std-specify-language-standard-version.md)啟用編譯器所執行的 c + + 17 功能集。 這個選項會停用 c + + 17 之後的編譯器和標準程式庫支援：在較新的工作草稿版本中變更或新增的功能，以及 c + + 標準的瑕疵更新。 若要啟用這些功能，請使用 **`/std:c++latest`** 。
+- [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 啟用編譯器所執行的 c + + 17 功能集。 這個選項會停用 c + + 17 之後的編譯器和標準程式庫支援：在較新的工作草稿版本中變更或新增的功能，以及 c + + 標準的瑕疵更新。 若要啟用這些功能，請使用 **`/std:c++latest`** 。
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen、安全性、診斷和版本控制
 
@@ -283,8 +283,8 @@ Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 �
 - 改良的程式碼安全性：改善緩衝區溢位編譯器診斷的發出，並 [`/guard:cf`](../build/reference/guard-enable-control-flow-guard.md) 現在保護產生跳躍表的 switch 語句。
 - 版本設定：內建預處理器宏** \_ MSC \_ VER**的值現在會在每個 Visual C++ 工具組更新時進行單純更新。 如需詳細資訊，請參閱 [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) (Visual C++ 編譯器版本)。
 - 新的工具組版面配置︰編譯器和相關建置工具在開發電腦上具有新的位置和目錄結構。 新的版面配置可並存安裝多個版本的編譯器。 如需詳細資訊，請參閱 [Visual Studio 2017 中的編譯器工具版面配置](https://devblogs.microsoft.com/cppblog/compiler-tools-layout-in-visual-studio-15/) \(英文\)。
-- 改善的診斷：輸出視窗現在會顯示發生錯誤的資料行。 如需詳細資訊，請參閱[VS "15" Preview 5 中的 c + + 編譯器診斷改善](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/)。
-- 使用協同程式時，已移除實驗關鍵字**yield** （可在 **`/await`** 選項下取得）。 您應該更新程式碼以改用 `co_yield`。 如需詳細資訊，請參閱[ `yield` 要 `co_yield` 在 VS 2017 中變成的關鍵字](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/)。
+- 改善的診斷：輸出視窗現在會顯示發生錯誤的資料行。 如需詳細資訊，請參閱 [VS "15" Preview 5 中的 c + + 編譯器診斷改善](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/)。
+- 使用協同程式時，已移除 [) ] 選項下的實驗關鍵字 **yield** (可用 **`/await`** 。 您應該更新程式碼以改用 `co_yield`。 如需詳細資訊，請參閱[ `yield` 要 `co_yield` 在 VS 2017 中變成的關鍵字](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/)。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
@@ -296,11 +296,11 @@ Visual C++ 的執行時間效能會透過更好的產生程式碼品質繼續改
 
 Microsoft c + + 編譯器支援 Intel 的 AVX-512。 其具有向量長度指示，可將 AVX-512 中的新函式帶入128位和 256-bit 寬暫存器。
 
-在一般情況下使用 c + + 17 模式時，可以使用[/zc： noexceptTypes-](../build/reference/zc-noexcepttypes.md)選項來還原為 c + + 14 版的 **`noexcept`** 。 此選項可讓您更新原始程式碼以符合 C++17，而不需要同時重寫所有 `throw()` 程式碼。 如需詳細資訊，請參閱[動態例外狀況規格移除和 noexcept](cpp-conformance-improvements.md#noexcept_removal)。
+在一般情況下使用 c + + 17 模式時，可以使用 [/zc： noexceptTypes-](../build/reference/zc-noexcepttypes.md) 選項來還原為 c + + 14 版的 **`noexcept`** 。 此選項可讓您更新原始程式碼以符合 C++17，而不需要同時重寫所有 `throw()` 程式碼。 如需詳細資訊，請參閱[動態例外狀況規格移除和 noexcept](cpp-conformance-improvements.md#noexcept_removal)。
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
-- 新的編譯器參數[/Qspectre](../build/reference/qspectre.md)有助於緩和理論式執行端通道攻擊。 如需詳細資訊，請參閱[MSVC 中的 Spectre 緩和措施](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc/)。
+- 新的編譯器參數 [/Qspectre](../build/reference/qspectre.md) 有助於緩和理論式執行端通道攻擊。 如需詳細資訊，請參閱 [MSVC 中的 Spectre 緩和措施](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc/)。
 - 適用於 Spectre 風險降低的新診斷警告。 如需詳細資訊，請參閱 [Visual Studio 2017 15.7 版 Preview 4 中的 Spectre 診斷](https://devblogs.microsoft.com/cppblog/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/) \(英文\)。
 - /Zc 的新值會 **`/Zc:__cplusplus`** 啟用 c + + 標準支援的正確報告功能。 例如，設定參數且編譯器處於模式時， **`/std:c++17`** 值會展開為 **`201703L`** 。 如需詳細資訊，請參閱 [MSVC 現在會正確報告 __cplusplus](https://devblogs.microsoft.com/cppblog/msvc-now-correctly-reports-__cplusplus/) \(英文\)。
 
@@ -319,7 +319,7 @@ Microsoft c + + 編譯器支援 Intel 的 AVX-512。 其具有向量長度指示
 - `atomic<T>` 現已容許多載 `operator&()`。
 - 稍微改善不正確 `bind()` 呼叫的編譯器診斷。
 
-Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整清單，請參閱[VS 2017 RTM 中](https://devblogs.microsoft.com/cppblog/stl-fixes-in-vs-2017-rtm/)的 c + + Team Blog 專案標準程式庫修正。
+Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整清單，請參閱 [VS 2017 RTM 中](https://devblogs.microsoft.com/cppblog/stl-fixes-in-vs-2017-rtm/)的 c + + Team Blog 專案標準程式庫修正。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
@@ -328,33 +328,33 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 - `for_each_n()` `generate_n()` `search_n()` 如果 length 引數不是整數類資料類型，則先前無法編譯、和演算法。 它們現在會嘗試將非整數長度轉換成反覆運算器」 `difference_type` 。
 - `normal_distribution<float>` 不會再於標準程式庫內對從雙精確度縮減為浮點數的情況發出警告。
 - 修正了部分 `basic_string` 作業，這些作業先前在檢查大小溢位上限時會使用 `npos` 而非 `max_size()`。
-- `condition_variable::wait_for(lock, relative_time, predicate)`如果有偽喚醒，會等待整個相對時間。 現在它只會等候相對時間的單一間隔。
+- `condition_variable::wait_for(lock, relative_time, predicate)` 如果有偽喚醒，會等待整個相對時間。 現在它只會等候相對時間的單一間隔。
 - 依標準的規定，`future::get()` 現在會使 `future` 無效。
 - 因 `iterator_traits<void *>` 之前會嘗試形成 `void&`，而成為硬碟錯誤，現在則會完全成為空的結構，以允許在 "is iterator" SFINAE 條件中使用 `iterator_traits`。
-- 已修正 Clang **-wsystem-headers 標頭**所報告的一些警告。
+- 已修正 Clang **-wsystem-headers 標頭** 所報告的一些警告。
 - 也已修正「宣告中的例外狀況規格不符合 Clang **-Wmicrosoft-exception-spec**所回報的先前宣告」。
 - 同時已修正由 Clang 和 C1XX 所回報的 mem-initializer-list 排序錯誤。
 - 先前未排序的容器在容器本身已交換的情況下，並不會交換其 hasher 函式或述詞。 現在它們已會這麼做。
-- 許多容器交換作業現在都會標示 **`noexcept`** （因為我們的標準程式庫在偵測非不相等配置器未定義的行為條件時，永遠不會擲回例外 `propagate_on_container_swap` 狀況）。
+- 許多容器交換作業現在都會標示 **`noexcept`** 為 (，因為我們的標準程式庫在偵測非不等於配置器 `propagate_on_container_swap` 未定義的行為條件) 時，永遠不會擲回例外狀況。
 - `vector<bool>`現在已將許多作業標示為 **`noexcept`** 。
 - 標準程式庫現在會強制將配置器 `value_type` (在 C++17 模式中) 與退出安全出口配對。
 - 修正了對 `basic_string` 進行 self-range-insert 會擾亂字串內容的某些條件。 (注意：針對 vectors 進行 self-range-insert 仍受標準所禁止)。
 - `basic_string::shrink_to_fit()` 不再受配置器的 `propagate_on_container_swap` 影響。
-- `std::decay`現在會處理不受歡迎的函式類型，也就是 cv 限定的函數類型、ref 限定的，或兩者。
+- `std::decay` 現在會處理不受歡迎的函式類型，也就是 cv 限定的函數類型、ref 限定的，或兩者。
 - 已變更 include 指示詞以使用適當的區分大小寫和斜線，以改善可攜性​​。
-- 修正了警告 C4061「case 標籤未明確處理列舉 '*enumeration*' 參數中的列舉程式 '*enumerator*'」。 此警告為 off-by-default，並已修正為標準程式庫針對警告之一般原則的例外狀況  （標準程式庫是 **`/W4`** 乾淨的，但不會嘗試 **`/Wall`** 清除。 許多預設的關閉警告都是異常雜訊，不適合定期使用。）
+- 修正了警告 C4061「case 標籤未明確處理列舉 '*enumeration*' 參數中的列舉程式 '*enumerator*'」。 此警告為 off-by-default，並已修正為標準程式庫針對警告之一般原則的例外狀況   (標準程式庫是 **`/W4`** 乾淨的，但不會嘗試 **`/Wall`** 清除。 許多預設的關閉警告都是異常雜訊，不適合定期使用。 ) 
 - 改善 `std::list` 偵錯檢查。 List 迭代器現在會檢查 `operator->()`，且 `list::unique()` 現在會將迭代器標示為無效。
 - 修正了 `tuple` 中的 uses-allocator 中繼程式設計。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-- `std::partition`現在會呼叫 `N` 述詞時間，而不是 `N + 1` 時間，如標準所需。
+- `std::partition` 現在會呼叫 `N` 述詞時間，而不是 `N + 1` 時間，如標準所需。
 - 在 15.5 版中，已修復 15.3 版中嘗試避免使用魔術靜態這項問題。
 - `std::atomic<T>` 不再要求 `T` 必須預設為可建構的。
 - 當反覆運算器進行偵錯工具啟用時，採用對數時間的堆積演算法會以不同的方式運作。 它們不會再執行線性時間判斷提示，因為輸入實際上是堆積。
 - `__declspec(allocator)` 現在只會為 C1XX 而防護，以防止 Clang 不了解此 declspec 而發出警告。
 - `basic_string::npos` 現在可作為編譯時間常數。
-- `std::allocator`在 c + + 17 模式中，現在可以適當地處理過度對齊類型的配置，也就是，其對齊大於的類型， `max_align_t` 除非已停用 **`/Zc:alignedNew-`** 。  例如，具有 16 位元組或 32 位元組對齊的物件向量現在會正確對齊 SSE 和 AVX 指令。
+- `std::allocator` 在 c + + 17 模式中，現在可以適當地處理過度對齊類型的配置，也就是，其對齊大於的類型， `max_align_t` 除非已停用 **`/Zc:alignedNew-`** 。  例如，具有 16 位元組或 32 位元組對齊的物件向量現在會正確對齊 SSE 和 AVX 指令。
 
 ### <a name="conformance-improvements"></a>一致性改善
 
@@ -362,11 +362,11 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 - 已加入 \<optional\> 、、 \<variant\> `shared_ptr::weak_type` 和 \<cstdalign\> 。
 - **`constexpr`** 在、、和中啟用 c + + 14、 `min(initializer_list)` `max(initializer_list)` `minmax(initializer_list)` 和 `min_element()` 、和 `max_element()` `minmax_element()` 。
 
-如需詳細資訊，請參閱[Microsoft c + + 語言一致性表格](../visual-cpp-language-conformance.md)。
+如需詳細資訊，請參閱 [Microsoft c + + 語言一致性表格](../visual-cpp-language-conformance.md)。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
-- 已實作數個額外的 C++17 功能。 如需詳細資訊，請參閱[Microsoft c + + 語言一致性表格](cpp-conformance-improvements.md#improvements_153)。
+- 已實作數個額外的 C++17 功能。 如需詳細資訊，請參閱 [Microsoft c + + 語言一致性表格](cpp-conformance-improvements.md#improvements_153)。
 - 已實作 P0602R0「Variant 和 Optional 應隨意地散佈 Copy/Move」。
 - 標準程式庫現已正式容許透過 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 選項停用動態 RTTI。 `dynamic_pointer_cast()`和 `rethrow_if_nested()` 原本都需要 **`dynamic_cast`** ，因此標準程式庫現在會將它們標示為 `=delete` **`/GR-`** 。
 - 即使已透過停用動態 RTTI **`/GR-`** ，的形式的「靜態 rtti」 `typeid(SomeType)` 仍然可供使用，並提供數個標準程式庫元件。 標準程式庫現在也支援透過來停用這項功能 **`/D_HAS_STATIC_RTTI=0`** 。 此旗標也會停用 `std::function` 的 `std::any`、`target()` 和 `target_type()` 成員函式，及 `std::shared_ptr` 和 `std::weak_ptr` 的 `get_deleter()` friend 成員函式。
@@ -381,7 +381,7 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-- 已根據 c + + 17 標準新增、取代或移除數個標準程式庫功能。 如需詳細資訊，請參閱[Visual Studio 中的 c + + 一致性改進](cpp-conformance-improvements.md#improvements_155)。
+- 已根據 c + + 17 標準新增、取代或移除數個標準程式庫功能。 如需詳細資訊，請參閱 [Visual Studio 中的 c + + 一致性改進](cpp-conformance-improvements.md#improvements_155)。
 - 提供對下列平行演算法的實驗性支援：
   - `all_of`
   - `any_of`
@@ -414,7 +414,7 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
 - 對平行演算法的支援不再為實驗性
-- 的新執行\<filesystem>
+- 的新執行 \<filesystem>
 - 基礎字串轉換 (部分)
 - `std::launder()`
 - `std::byte`
@@ -424,14 +424,14 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 - `constexpr char_traits`
 - 標準程式庫的推算指南
 
-如需詳細資訊，請參閱[Microsoft c + + 語言一致性表格](../visual-cpp-language-conformance.md)。
+如需詳細資訊，請參閱 [Microsoft c + + 語言一致性表格](../visual-cpp-language-conformance.md)。
 
 ### <a name="performance-and-throughput-fixes"></a>效能和輸送量修正
 
 - 使 `basic_string::find(char)` 多載只呼叫 `traits::find` 一次。 先前已為長度為 1 的字串將其作為一般字串搜尋實作。
 - `basic_string::operator==` 現在會先檢查字串的大小再比較字串的內容。
 - 移除了 `basic_string` 中的控制項結合程度，因為編譯器最佳化工具很難加以分析。 對所有短字串呼叫 `reserve` 都不會執行任何動作，但仍有成本。
-- `std::vector`已針對正確性和效能翻修了：在插入和 emplace 作業期間的別名現在會依照標準的要求正確處理，現在當標準透過和其他邏輯需要時，會提供強式例外狀況保證 `move_if_noexcept()` ，而 insert 和 emplace 則會執行較少的元素作業。
+- `std::vector` 已針對正確性和效能翻修了：在插入和 emplace 作業期間的別名現在會依照標準的要求正確處理，現在當標準透過和其他邏輯需要時，會提供強式例外狀況保證 `move_if_noexcept()` ，而 insert 和 emplace 則會執行較少的元素作業。
 - C++ 標準程式庫現在會避免為 null 假想指標取值。
 - 改善了 `weak_ptr::lock()` 效能。
 - 為了增加編譯器輸送量，C++ 標準程式庫標頭現在會避免包含非必要編譯器內建的宣告。
@@ -439,12 +439,12 @@ Visual Studio 2017 RTM 中有更多標準程式庫改良功能。 如需完整�
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
-- 解決與的互動 **`noexcept`** ，這可防止將 `std::atomic` 執行內嵌至使用結構化例外狀況處理（SEH）的函式。
+- 已解決與的互動 **`noexcept`** ，這可防止將 `std::atomic` 執行內嵌至使用結構化例外狀況處理的函式， (SEH) 。
 - 標準程式庫的內部 `_Deallocate()` 函式已變更為較小的程式碼，使其適合內嵌至更多位置。
 - `std::try_lock()` 已從使用遞迴改為使用套件展開。
 - 改善了 `std::lock()` 鎖死迴避演算法，從原本對所有鎖定重複執行 `try_lock()` ，改為使用 `lock()` 作業。
 - 讓 `system_category::message()` 中可進行具名傳回值最佳化。
-- `conjunction`和 `disjunction` 現在會具現化 `N + 1` 類型，而不是 `2N + 2` 類型。
+- `conjunction` 和 `disjunction` 現在會具現化 `N + 1` 類型，而不是 `2N + 2` 類型。
 - `std::function` 不會再對每個已清除類型的可呼叫項目將配置器支援機制具現化，如此可在會傳遞許多相異 Lambda 到 `std::function` 的程式中，改善輸送量並減少 .obj 大小。
 - `allocator_traits<std::allocator>` 包含手動內嵌的 `std::allocator` 作業，以減少只透過 `allocator_traits` 與 `std::allocator` 互動之程式碼 (也就是大部分程式碼) 中的程式碼大小。
 - C++11 最小配置器介面現已由標準程式庫直接呼叫 `allocator_traits` 來處理，而非將配置器包裝在內部類別 `_Wrap_alloc` 中。 此變更會減少為支援配置器所產生的程式碼大小、改善最佳化工具在某些情況下對標準程式庫容器進行判斷的能力，並提供更佳的偵錯體驗 (如同您現在會在偵錯工具中看見您的配置器類型，而非 `_Wrap_alloc<your_allocator_type>`)。
@@ -523,7 +523,7 @@ C++ 現在支援以 Ctrl+按一下 [移至定義]****，如此可輕鬆使用滑
 
 ## <a name="intellisense"></a>IntelliSense
 
-- 現在預設使用新的 SQLite 型資料庫引擎。 新引擎可加速 [**移至定義**] 和 [**尋找所有參考**] 等資料庫作業。 它可大幅改善初始解決方案剖析時間。 設定已移至 [**工具] > 選項 > 文字編輯器 > C/c + + > Advanced**]。 （以前是在 .。。C/c + + > 實驗性）。
+- 現在預設使用新的 SQLite 型資料庫引擎。 新引擎可加速 [ **移至定義** ] 和 [ **尋找所有參考**] 等資料庫作業。 它可大幅改善初始解決方案剖析時間。 設定已移至 [ **工具] > 選項 > 文字編輯器 > C/c + + > Advanced**]。  (它原先在 .。。C/c + + > 實驗性。 ) 
 
 - 我們已對未使用先行編譯標頭檔的專案及檔案提升 IntelliSense 效能，將會為目前檔案中的標頭建立自動先行編譯標頭檔。
 
@@ -538,9 +538,9 @@ C++ 現在支援以 Ctrl+按一下 [移至定義]****，如此可輕鬆使用滑
   ![成員清單篩選](media/mlfiltering.png "成員清單篩選")
 
 - 新增了實驗性的預測性 IntelliSense 功能，提供成員清單中出現項目的內容相關篩選。 如需詳細資訊，請參閱 [C++ IntelliSense 改善 - 預測性 IntelliSense 和篩選](https://devblogs.microsoft.com/cppblog/c-intellisense-improvements-predictive-intellisense-filtering/) \(英文\)。
-- [**尋找所有參考**] （Shift + F12）現在可協助您更輕鬆地進行，即使在複雜的 codebase 中也一樣。 它提供進階分組、篩選、排序、在結果內搜尋和顏色標示 (適用於某些語言)，因此您可以清楚了解您的參考。 針對 C++，新的 UI 包含要從變數讀取或寫入變數的相關資訊。
-- [點改為箭號] IntelliSense 功能已從實驗性改為進階，現在預設為啟用。 編輯器功能 [**展開範圍**] 和 [**展開優先順序**] 也已從實驗性移至 [advanced]。
-- 根據預設，實驗性重構功能**變更**簽章和**解壓縮**函式已可供使用。
+- **尋找所有參考** (Shift + F12) 現在可協助您更輕鬆地進行，即使在複雜的 codebase 中也一樣。 它提供進階分組、篩選、排序、在結果內搜尋和顏色標示 (適用於某些語言)，因此您可以清楚了解您的參考。 針對 C++，新的 UI 包含要從變數讀取或寫入變數的相關資訊。
+- [點改為箭號] IntelliSense 功能已從實驗性改為進階，現在預設為啟用。 編輯器功能 [ **展開範圍** ] 和 [ **展開優先順序** ] 也已從實驗性移至 [advanced]。
+- 根據預設，實驗性重構功能 **變更** 簽章和 **解壓縮** 函式已可供使用。
 - 已新增 C++ 專案實驗性的 [加快專案載入] 功能。 C++ 專案會在您下次開啟時更快載入，之後將以*更快*速度載入！
 - 其中有部分功能通用於其他語言，部分功能則是 C++ 的特定功能。 如需有關這些新功能的詳細資訊，請參閱[宣布 Visual Studio "15" Preview 5](https://devblogs.microsoft.com/visualstudio/announcing-visual-studio-15-preview-5/)。
 
@@ -550,7 +550,7 @@ C++ 現在支援以 Ctrl+按一下 [移至定義]****，如此可輕鬆使用滑
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>使用開啟資料夾的非 MSBuild 專案
 
-Visual Studio 2017 引進了「**開啟資料夾**」功能。 它可讓您在包含原始程式碼的資料夾中撰寫程式碼、建立和偵錯工具，而不需要建立任何方案或專案。 現在，即使您的專案不是 MSBuild 專案，這可讓開始使用 Visual Studio 更為簡單。 [**開啟資料夾**] 可讓您存取強大的程式碼理解、編輯、建立和偵錯工具功能。 它們與 Visual Studio 已經為 MSBuild 專案提供的是相同的。 如需詳細資訊，請參閱 [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
+Visual Studio 2017 引進了「 **開啟資料夾** 」功能。 它可讓您在包含原始程式碼的資料夾中撰寫程式碼、建立和偵錯工具，而不需要建立任何方案或專案。 現在，即使您的專案不是 MSBuild 專案，這可讓開始使用 Visual Studio 更為簡單。 [**開啟資料夾**] 可讓您存取強大的程式碼理解、編輯、建立和偵錯工具功能。 它們與 Visual Studio 已經為 MSBuild 專案提供的是相同的。 如需詳細資訊，請參閱 [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
 
 - [開啟資料夾] 體驗的改良。 您可以透過這些 .json 檔案自訂體驗：
   - CppProperties.json，用以自訂 IntelliSense 及瀏覽體驗。
@@ -565,7 +565,7 @@ Visual Studio 2017 引進了「**開啟資料夾**」功能。 它可讓您在�
 
 ## <a name="cmake-support-via-open-folder"></a>透過開啟資料夾的 CMake 支援
 
-Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [Visual Studio 中的 CMake 專案](../build/cmake-projects-in-visual-studio.md)。 使用 [**開啟資料夾**] 開啟 CMake 專案時，會自動設定 c + + 編輯、建立和偵錯工具的環境。
+Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [Visual Studio 中的 CMake 專案](../build/cmake-projects-in-visual-studio.md)。 使用 [ **開啟資料夾** ] 開啟 CMake 專案時，會自動設定 c + + 編輯、建立和偵錯工具的環境。
 
 - 無須在根資料夾中建立 CppProperties.json 檔案，C++ IntelliSense 即可運作。 此外，我們新增了下拉式清單，可讓使用者輕易地切換 CMake 和 CppProperties.json 檔案所提供的設定。
 
@@ -605,7 +605,7 @@ Visual Studio Build Tools (先前以獨立產品形式提供) 現在以工作負
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-- Linux 工作負載已新增對**rsync**的支援，做為**sftp**的替代方案，可將檔案同步處理至遠端 Linux 電腦。
+- Linux 工作負載已新增對 **rsync** 的支援，做為 **sftp** 的替代方案，可將檔案同步處理至遠端 Linux 電腦。
 - 新增以 ARM 為目標的交互編譯支援。 若要在安裝中啟用這項支援，請選擇 [使用 C++ 進行 Linux 開發]**** 工作負載，並選取 [內嵌和 IoT 開發]**** 的選項。 此選項會將 ARM GCC 交互編譯工具和 Make 新增至您的安裝。 如需詳細資訊，請參閱 [ARM GCC Cross Compilation in Visual Studio](https://devblogs.microsoft.com/cppblog/arm-gcc-cross-compilation-in-visual-studio/) (Visual Studio 中的 ARM GCC 交互編譯)。
 - 新增對 CMake 的支援。 您現在可以使用現有的 CMake 程式碼基底，而不必將它轉換成 Visual Studio 專案。 如需詳細資訊，請參閱[設定 Linux CMake 專案](../linux/cmake-linux-project.md)。
 - 新增對執行遠端工作的支援。 這項功能可讓您在 Visual Studio 的連線管理員中定義的遠端系統上執行任何命令。 遠端工作也會提供將檔案複製到遠端系統的功能。
@@ -636,7 +636,7 @@ C++ 以通用 Windows app 工作負載的選用元件形式提供。 目前，�
 
 新增了 [Windows 應用程式封裝專案]**** 專案範本，可大幅簡化使用傳統型橋接器封裝傳統型應用程式的工作。 該範本位於 [檔案] | [開新檔案] | [專案] | [已安裝] | [Visual C++] | [通用 Windows 平台]**** 底下。 如需詳細資訊，請參閱[使用 Visual Studio 封裝應用程式 (傳統型橋接器)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
-撰寫新的程式碼時，您現在可以使用 C++/WinRT，它是一種標準 C++ 語言推演，適用於僅在標頭檔中實作的 Windows 執行階段。 它可讓您使用任何符合標準的 c + + 編譯器來取用和撰寫 Windows 執行階段 Api。 C++/WinRT 設計成將現代 Windows API 的第一級存取提供給 C++ 開發人員。 如需詳細資訊，請參閱[c + +/WinRT：適用于 Windows 執行階段的新式 c + +](https://moderncpp.com/)。
+撰寫新的程式碼時，您現在可以使用 C++/WinRT，它是一種標準 C++ 語言推演，適用於僅在標頭檔中實作的 Windows 執行階段。 它可讓您使用任何符合標準的 c + + 編譯器來取用和撰寫 Windows 執行階段 Api。 C++/WinRT 設計成將現代 Windows API 的第一級存取提供給 C++ 開發人員。 如需詳細資訊，請參閱 [c + +/WinRT](/windows/uwp/cpp-and-winrt-apis/)。
 
 從 Windows SDK Insider Preview 的組建17025開始，c + +/WinRT 會包含在 Windows SDK 中。 如需詳細資訊，請參閱 [C++/WinRT is now included the Windows SDK](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/) (C++/WinRT 現在隨附於 Windows SDK)。
 
@@ -646,7 +646,7 @@ C++ 以通用 Windows app 工作負載的選用元件形式提供。 目前，�
 
 ## <a name="c-code-analysis"></a>C++ 程式碼分析
 
-用於強制 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) 的 C++ Core Checkers 現已隨 Visual Studio 散發。 在專案屬性頁的 [程式**代碼分析延伸**模組] 頁面中啟用檢查程式。 然後，當您執行程式碼分析時，就會包含這些延伸模組。 如需詳細資訊，請參閱[使用 C++ 核心指南檢查工具](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
+用於強制 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) 的 C++ Core Checkers 現已隨 Visual Studio 散發。 在專案屬性頁的 [程式 **代碼分析延伸** 模組] 頁面中啟用檢查程式。 然後，當您執行程式碼分析時，就會包含這些延伸模組。 如需詳細資訊，請參閱[使用 C++ 核心指南檢查工具](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 屬性頁面")
 
@@ -673,7 +673,7 @@ C++ 以通用 Windows app 工作負載的選用元件形式提供。 目前，�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-Google Test 介面卡和提升。測試介面卡現在可作為**使用 c + + 的桌面開發**工作負載的元件。 它們會與**測試瀏覽器**整合在一起。 已針對 CMake 專案（使用 [開啟資料夾]）新增 CTest 支援，雖然尚未提供與**Test Explorer**的完整整合。 如需詳細資訊，請參閱[撰寫 C/c + + 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp)。
+Google Test 介面卡和提升。測試介面卡現在可作為 **使用 c + + 的桌面開發** 工作負載的元件。 它們會與 **測試瀏覽器**整合在一起。 已針對使用 [開啟資料夾) ] (的 CMake 專案新增 CTest 支援，雖然尚未提供與 **Test Explorer** 的完整整合。 如需詳細資訊，請參閱 [撰寫 C/c + + 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp)。
 
 ##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 15.6 版
 
@@ -702,21 +702,21 @@ Visual Studio 圖形診斷工具：您可以使用它們來記錄和分析 Direc
 
   ![資源歷程記錄](media/resource-history.png)
 
-  它會顯示新的 [**資源歷程記錄**] 工具視窗，其中填入了資源的變更歷程記錄。
+  它會顯示新的 [ **資源歷程記錄** ] 工具視窗，其中填入了資源的變更歷程記錄。
 
   ![資源歷程記錄變更](media/resource-history-change.png)
 
   您可以捕獲已啟用完整呼叫堆疊捕捉的畫面格。 這可讓您快速推算出每個變更事件的內容，並在您的 Visual Studio 專案中進行檢查。 在 [**圖形診斷**] 下的 [Visual Studio**工具 > 選項**] 對話方塊中，設定 [完整堆疊捕捉] 選項。
 
-- **API 統計資料︰** 檢視畫面格中 API 使用方式的高階摘要。 這很適合用來探索您可能不知道的呼叫，或是太常進行的呼叫。 您可以透過 View > Visual Studio 圖形分析器中的**API 統計資料**取得此視窗。
+- **API 統計資料︰** 檢視畫面格中 API 使用方式的高階摘要。 這很適合用來探索您可能不知道的呼叫，或是太常進行的呼叫。 您可以透過 View > Visual Studio 圖形分析器中的 **API 統計資料** 取得此視窗。
 
   ![API 統計資料](media/api-stats.png)
 
-- **記憶體統計資料：** 針對您在畫面格中建立的資源，查看驅動程式所配置的記憶體數量。 您可以透過 View > **Visual Studio 圖形分析器**中的**記憶體統計資料**取得此視窗。 若要將資料複製到 CSV 檔案，以在試算表中進行查看，請以滑鼠右鍵按一下並選擇 [**全部複製**]。
+- **記憶體統計資料：** 針對您在畫面格中建立的資源，查看驅動程式所配置的記憶體數量。 您可以透過 View > **Visual Studio 圖形分析器**中的**記憶體統計資料**取得此視窗。 若要將資料複製到 CSV 檔案，以在試算表中進行查看，請以滑鼠右鍵按一下並選擇 [ **全部複製**]。
 
   ![記憶體統計資料](media/memory-stats.png)
 
-- **畫面格驗證：** 新的錯誤和警告清單提供簡單的方法，以根據 Direct3D 偵錯層所偵測到的潛在問題來巡覽事件清單。 按一下 [Visual Studio 圖形分析器中的 [ **View > 框架驗證**] 以開啟視窗。 然後按一下 [**執行驗證**] 開始分析。 根據畫面格的複雜性而定，這可能需要幾分鐘的時間才能完成。
+- **畫面格驗證：** 新的錯誤和警告清單提供簡單的方法，以根據 Direct3D 偵錯層所偵測到的潛在問題來巡覽事件清單。 按一下 [Visual Studio 圖形分析器中的 [ **View > 框架驗證** ] 以開啟視窗。 然後按一下 [ **執行驗證** ] 開始分析。 根據畫面格的複雜性而定，這可能需要幾分鐘的時間才能完成。
 
   ![畫面格驗證](media/frame-validation.png)
 
@@ -724,7 +724,7 @@ Visual Studio 圖形診斷工具：您可以使用它們來記錄和分析 Direc
 
   ![畫面格分析](media/frame-analysis.png)
 
-- **GPU 使用量改善：** 您可以透過使用 GPU View 或 Windows Performance Analyzer （WPA）工具的 Visual Studio GPU 使用量分析工具來取得開啟追蹤，以取得更詳細的分析。 如果您已安裝 Windows 效能工具組，則會有兩個超連結：一個用於 WPA，另一個用於 GPU 視圖（位於會話總覽的右下方）。
+- **GPU 使用量改善：** 您可以透過 Visual Studio GPU 使用量分析工具，使用 GPU View 或 Windows Performance Analyzer (WPA) 工具來取得開啟的追蹤，以進行更詳細的分析。 如果您已安裝 Windows 效能工具組，則會有兩個超連結：一個用於 WPA，另一個用於 GPU 視圖（位於會話總覽的右下方）。
 
   ![GPU 使用量](media/gpu-usage.png)
 
@@ -738,7 +738,7 @@ Visual Studio 圖形診斷工具：您可以使用它們來記錄和分析 Direc
 
 如需到 Visual Studio 2015 Update 3 為止的完整新功能清單，請參閱 [Visual C++ 2003 至 2015 的新功能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
 
-如需所有 Visual Studio 2015 中新功能的詳細資訊，請參閱版本資訊。 它們是從[Visual Studio 2015 版本資訊歷程記錄](/visualstudio/releasenotes/vs2015-version-history)連結而來。
+如需所有 Visual Studio 2015 中新功能的詳細資訊，請參閱版本資訊。 它們是從 [Visual Studio 2015 版本資訊歷程記錄](/visualstudio/releasenotes/vs2015-version-history)連結而來。
 
 如需有關 Visual Studio 2019 中 C++ 新功能的資訊，請參閱 [Visual Studio 中 C++ 的新功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)。
 

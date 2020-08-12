@@ -12,11 +12,11 @@
       href: ../linux/connectionmanager-reference.md
 - name: 在 Visual Studio 中使用 MSBuild 建置 Linux 專案
   items:
-    - name: 建立新的 Linux 專案
+    - name: 建立 Linux MSBuild 專案
       href: ../linux/create-a-new-linux-project.md
-    - name: 設定 Linux 專案
+    - name: 設定 Linux MSBuild 專案
       href: ../linux/configure-a-linux-project.md
-    - name: 部署、執行和偵錯 Linux 專案
+    - name: 部署、執行 Linux MSBuild 專案及對其進行偵錯
       href: ../linux/deploy-run-and-debug-your-linux-project.md
     - name: Linux 專案屬性頁參考
       items:
@@ -44,8 +44,10 @@
           href: ../linux/prop-pages/remote-ar-linux.md
 - name: 在 Visual Studio 中使用 CMake 建置 Linux 專案
   items:
-    - name: 建立及設定 Linux CMake 專案
+    - name: 建立 Linux CMake 專案
       href: ../linux/cmake-linux-project.md
+    - name: 設定 Linux CMake 專案
+      href: ../linux/cmake-linux-configure.md
     - name: 教學課程：在 Visual Studio 中建立 C++ 跨平台專案
       href: ../build/get-started-linux-cmake.md
 - name: 將 Linux 專案設定為使用 Address Sanitizer

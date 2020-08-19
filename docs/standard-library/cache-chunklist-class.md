@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ee422423356a18f1c81796790593a20dc03fbab
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366748"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560709"
 ---
 # <a name="cache_chunklist-class"></a>cache_chunklist 類別
 
@@ -30,15 +30,14 @@ class cache_chunklist
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*深圳*|所配置陣列中的元素數。|
+*深圳*\
+所配置陣列中的元素數。
 
 ## <a name="remarks"></a>備註
 
-類範本使用**新運算元**來分配原始記憶體塊,根據需要為記憶體區塊分配存儲的子分配塊;它將處理的記憶體儲存在每個塊的單獨可用清單中,並使用**運算符刪除**在其記憶體區塊未使用時解分配區塊。
+這個類別樣板使用 **new 運算子** 來配置未經處理記憶體的區塊，並在需要時為記憶體區塊配置儲存體 suballocating 區塊;它會將解除配置的記憶體區塊儲存在每個區塊的個別可用清單中，並在沒有任何記憶體區塊正在使用時，使用 **operator delete** 來解除配置區塊。
 
-每個記憶體區都保存可用記憶體的*Sz*位元組和指向其所屬塊的指標。 每個塊包含`Nelts`記憶體塊、三個指標、int 以及**操作員新**資料和**運算符刪除**所需的數據。
+每個記憶體區塊都會保存可使用記憶體的 *Sz* 位元組，以及其所屬區塊的指標。 每個區塊都 `Nelts` 有記憶體區塊、三個指標、int 以及 **運算子 new** 和 **operator delete** 所需的資料。
 
 ### <a name="constructors"></a>建構函式
 
@@ -50,16 +49,16 @@ class cache_chunklist
 
 |成員函數|描述|
 |-|-|
-|[配置](#allocate)|配置記憶體區塊。|
-|[去分配](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|
+|[allocate](#allocate)|配置記憶體區塊。|
+|[解除](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標頭︰** \<allocators>
+**標頭：**\<allocators>
 
 **命名空間：** stdext
 
-## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist:分配
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a> cache_chunklist：： allocate
 
 配置記憶體區塊。
 
@@ -69,9 +68,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*count*|所配置陣列中的元素數。|
+*計數*\
+所配置陣列中的元素數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -79,7 +77,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>備註
 
-## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist:cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a> cache_chunklist：： cache_chunklist
 
 建構類型 `cache_chunklist` 的物件。
 
@@ -89,7 +87,7 @@ cache_chunklist();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::d分配
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a> cache_chunklist：:d eallocate
 
 從指定位置起算的儲存體中，釋放指定數目的物件。
 
@@ -99,13 +97,14 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*Ptr*|要從儲存空間解除配置之第一個物件的指標。|
-|*count*|要從儲存空間解除配置的物件數目。|
+*Ptr*\
+要從儲存空間解除配置之第一個物件的指標。
+
+*計數*\
+要從儲存空間解除配置的物件數目。
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[\<配置器>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

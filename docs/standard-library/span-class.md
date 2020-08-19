@@ -1,5 +1,5 @@
 ---
-title: span 類別（c + + 標準程式庫） |Microsoft Docs
+title: span 類別 (c + + 標準程式庫) |Microsoft Docs
 ms.date: 05/28/2020
 f1_keywords:
 - span/std::span
@@ -51,20 +51,20 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217450"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560448"
 ---
-# <a name="span-class-c-standard-library"></a>span 類別（c + + 標準程式庫）
+# <a name="span-class-c-standard-library"></a>span 類別 (c + + 標準程式庫) 
 
-提供連續物件序列的輕量視圖。 Span 提供了一種安全的方式，可以反復執行並編制索引至記憶體中的物件，例如在內建陣列中儲存的物件、 `std::array` 或 `std::vector` 。
+提供連續物件序列的輕量視圖。 範圍可讓您安全地逐一查看並編制索引，這些物件會在記憶體中排列回來，例如在內建陣列、或中儲存的物件 `std::array` `std::vector` 。
 
-如果您通常會使用指標和索引來存取一連串的後端物件， `span` 則會是更安全、輕量的替代方法。
+如果您通常使用指標和索引來存取一系列的後端物件， `span` 則會是更安全的輕量替代方法。
 
-`span`可以在編譯時期設定的大小，方法是將它指定為樣板引數，或指定在執行時間 `dynamic_extent` 。
+`span`可以在編譯時期設定的大小，方法是將它指定為範本引數，或在執行時間指定 `dynamic_extent` 。
 
 ## <a name="syntax"></a>語法
 
@@ -75,64 +75,65 @@ class span;
 
 ### <a name="template-parameters"></a>範本參數
 
-|參數|說明|
-|-|-|
-|`T`| 範圍中元素的類型。 |
-|`Extent`| 如果在編譯時期指定，則為範圍中的元素數目。 否則 `std::dynamic_extent` ，如果要在執行時間指定元素的數目，則為。 |
+`T`\
+ 範圍中的元素類型。
 
-[推算指南](#deduction_guides)
+`Extent`\
+ 如果在編譯時期指定，則為範圍中的元素數目。 否則  `std::dynamic_extent` ，如果在執行時間指定專案數，則為，否則為。
+
+[推斷指南](#deduction_guides)
 
 ## <a name="members"></a>成員
 
 | **類型定義** | **說明** |
 |-|-|
 | [const_pointer](#pointer) | 元素之指標的類型 **`const`** 。 |
-| [const_reference](#reference) | 專案的參考型別 **`const`** 。 |
+| [const_reference](#reference) | 專案參考的型別 **`const`** 。 |
 | [difference_type](#difference_type) | 兩個項目之間帶正負號距離的類型。 |
 | [element_type](#element_type) | Span 元素的類型。 |
-| [定位](#iterator) | 範圍的反覆運算器類型。 |
-| [滑鼠](#pointer) | 項目的指標類型。 |
+| [迭 代](#iterator) | 範圍的反覆運算器類型。 |
+| [指標](#pointer) | 項目的指標類型。 |
 | [reference](#reference) | 項目的參考類型。 |
 | [reverse_iterator](#reverse_iterator) | 範圍的反向反覆運算器類型。 |
-| [size_type](#size_type) | 範圍中兩個元素之間不帶正負號距離的類型。 |
-| [value_type](#value_type) | 元素的類型，不含 **`const`** 或 **`volatile`** 限定。 |
+| [size_type](#size_type) | 範圍中兩個元素之間的不帶正負號距離的類型。 |
+| [value_type](#value_type) | 專案的類型，不含 **`const`** 或 **`volatile`** 限定。 |
 | **建構函式** | **說明** |
-|[跨](#span)| 建構 `span`。|
-| **反覆運算器支援** | **說明** |
-|[起點](#begin) | 取得指向範圍中第一個元素的反覆運算器。|
-|[成品](#end) | 取得指向範圍結尾的反覆運算器。 |
-|[rbegin](#rbegin) | 取得反向反覆運算器，指向範圍的最後一個元素;也就是反轉範圍的開頭。|
+|[跨度](#span)| 建構 `span`。|
+| **Iterator 支援** | **說明** |
+|[開始](#begin) | 取得指向範圍中第一個元素的反覆運算器。|
+|[結束](#end) | 取得指向範圍結尾的反覆運算器。 |
+|[rbegin](#rbegin) | 取得指向範圍最後一個元素的反向反覆運算器;也就是反轉範圍的開頭。|
 |[rend](#rend) | 取得指向範圍前端的反向反覆運算器;也就是反轉範圍的結尾。|
-| **Access 元素**| **說明** |
+| **存取元素**| **說明** |
 |[返回](#back) | 取得範圍中的最後一個元素。|
 |[data](#data) | 取得範圍中第一個元素的位址。|
-|[前端](#front) | 取得範圍中的第一個元素。|
-|[操作\[\]](#op_at) | 存取指定位置的元素。|
+|[前面](#front) | 取得範圍中的第一個元素。|
+|[運算元\[\]](#op_at) | 存取位於指定位置的元素。|
 | **觀察者** | **說明** |
-|[empty](#empty)| 測試 span 是否為空白。|
+|[empty](#empty)| 測試範圍是否為空白。|
 |[size](#size) | 取得範圍中的元素數目。|
 |[size_bytes](#size_bytes) | 取得範圍的大小（以位元組為單位）。|
 | **子檢視** | **說明**|
 | [first](#first_view) | 從範圍前端取得 subspan。|
 | [last](#last_view) | 從範圍的背面取得 subspan。|
-| [subspan](#sub_view) | 從範圍中的任何位置取得 subspan。|
+| [subspan](#sub_view) | 從範圍內的任何位置取得 subspan。|
 | **運算子** | **說明** |
 |[span：： operator =](#op_eq)| 取代範圍。|
-|[span：：運算子\[\]](#op_at)| 取得位於指定位置的元素。 |
+|[span：： operator\[\]](#op_at)| 取得位於指定位置的元素。 |
 
 ## <a name="remarks"></a>備註
 
-所有 `span` 成員函式都有常數時間複雜性。
+所有 `span` 成員函式都有固定的時間複雜性。
 
-不同 `array` `vector` 于或，span 不會「擁有」它內部的元素。 Span 不會為其中的專案釋放任何儲存體，因為它不會擁有這些物件的儲存空間。
+`array`和或不同的 `vector` 是，範圍不會「擁有」它內的元素。 範圍不會為其中的專案釋放任何儲存空間，因為它不會擁有這些物件的儲存體。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<span>
 
 **命名空間：** std
 
-**編譯器選項：** /std： c + + 最新版本
+**編譯器選項：** /std： c + + 最新
 
 ## <a name="spanback"></a><a name="back"></a> `span::back`
 
@@ -264,7 +265,7 @@ int main()
 
 ## <a name="spanelement_type"></a><a name="element_type"></a> `span::element_type`
 
-範圍中元素的類型。
+範圍中的元素類型。
 
 ```cpp
 using element_type = T;
@@ -298,7 +299,7 @@ int main()
 
 ## <a name="spanempty"></a><a name="empty"></a> `span::empty`
 
-Span 是否包含元素。
+範圍是否包含元素。
 
 ```cpp
 constexpr bool empty() const noexcept;
@@ -334,13 +335,13 @@ constexpr iterator end() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-指向超出範圍結尾的反覆運算器。
+指向範圍結尾之外的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
 `end` 用來測試迭代器是否已超過其範圍結尾。
 
-不要取值此反覆運算器所傳回的值。 使用它來識別反覆運算器是否已到達超出範圍中的最後一個元素。
+請勿取值此反覆運算器所傳回的值。 您可以使用它來識別反覆運算器是否已到達範圍中的最後一個元素之外。
 
 ### <a name="example"></a>範例
 
@@ -354,7 +355,7 @@ for (auto it = s1.begin(); it != s1.end(); ++it)
 
 ## <a name="spanfirst"></a><a name="first_view"></a> `span::first`
 
-從這個範圍的前方取得 subspan。
+取得取自此範圍前端的 subspan。
 
 ```cpp
 constexpr auto first(size_type count) const noexcept;
@@ -364,16 +365,16 @@ template <size_t count> constexpr auto first() const noexcept;
 ### <a name="parameters"></a>參數
 
 *計數*\
-要放入 subspan 的這個範圍前端的元素數目。  
-元素的數目會指定為範本的參數或函式，如下所示。
+要放置在 subspan 中的這個範圍前端的元素數目。  
+元素數目會指定為範本的參數或函數，如下所示。
 
 ### <a name="return-value"></a>傳回值
 
-包含 `count` 來自此範圍前端之元素的範圍。
+範圍，其中包含 `count` 此範圍前端的元素。
 
 ### <a name="remarks"></a>備註
 
-如果可能的話，請使用此函式的範本版本 `count` ，在編譯時期驗證，並保留範圍的相關資訊，因為它會傳回固定範圍的範圍。
+如果可以在編譯時期驗證，請使用此函式的範本版本 `count` ，並保留範圍的相關資訊，因為它會傳回固定範圍的範圍。
 
 ### <a name="example"></a>範例
 
@@ -445,7 +446,7 @@ int main()
 
 ## <a name="spaniterator"></a><a name="iterator"></a> `span::iterator`
 
-跨範圍元素的反覆運算器類型。
+跨越元素的反覆運算器類型。
 
 ```cpp
 using iterator = implementation-defined-iterator-type;
@@ -453,7 +454,7 @@ using iterator = implementation-defined-iterator-type;
 
 ### <a name="remarks"></a>備註
 
-這個型別可做為範圍中元素的反覆運算器。
+這個型別可做為範圍內元素的反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -479,7 +480,7 @@ int main()
 
 ## <a name="spanlast"></a><a name="last_view"></a> `span::last`
 
-取得 subspan，取自此範圍的結尾。
+取得從這個範圍結尾處取得的 subspan。
 
 ```cpp
 constexpr span<element_type, dynamic_extent> last(const size_type count) const noexcept;
@@ -489,8 +490,8 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 ### <a name="parameters"></a>參數
 
 *計數*\
-從這個範圍結尾到要放入 subspan 的元素數目。
-此數位可指定為範本的參數或函式，如下所示。
+此範圍結束時要置於 subspan 中的元素數目。
+您可以將此數位指定為範本的參數或函數，如下所示。
 
 ### <a name="return-value"></a>傳回值
 
@@ -498,7 +499,7 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 ### <a name="remarks"></a>備註
 
-如果可能的話，請使用此函式的範本版本 `count` ，在編譯時期驗證，並保留範圍的相關資訊，因為它會傳回固定範圍的範圍。
+如果可以在編譯時期驗證，請使用此函式的範本版本 `count` ，並保留範圍的相關資訊，因為它會傳回固定範圍的範圍。
 
 ### <a name="example"></a>範例
 
@@ -536,7 +537,7 @@ mySpan.last<2>: 12
 
 ## <a name="spanoperator"></a><a name="op_at"></a> `span::operator[]`
 
-取得位於指定位置之範圍中的元素。
+取得範圍中指定位置的元素。
 
 ```cpp
 constexpr reference operator[](size_type offset) const;
@@ -544,12 +545,12 @@ constexpr reference operator[](size_type offset) const;
 
 ### <a name="parameters"></a>參數
 
-*投影*\
-要存取的範圍中以零為基底的元素。
+*抵消*\
+要存取的範圍中，以零為基底的元素。
 
 ### <a name="return-value"></a>傳回值
 
-位置*位移*上的專案參考。 如果位置無效，則行為是未定義的。
+位置 *位移*的元素參考。 如果位置無效，則行為是未定義的。
 
 ### <a name="example"></a>範例
 
@@ -573,7 +574,7 @@ int main()
 
 ## <a name="spanoperator"></a><a name="op_eq"></a> `span::operator=`
 
-將另一個範圍指派給這個。
+將另一個範圍指派給這個範圍。
 
 ```cpp
 constexpr span& operator=(const span& other) noexcept = default;
@@ -581,8 +582,8 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 ### <a name="parameters"></a>參數
 
-*另一方面*\
-要指派給這個的範圍。
+*其他*\
+要指派給這個範圍的範圍。
 
 ### <a name="return-value"></a>傳回值
 
@@ -590,7 +591,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 ### <a name="remarks"></a>備註
 
-指派會執行資料指標和大小的淺層複製。 淺層複製是安全的，因為 `span` 不會為它所包含的元素配置記憶體。
+指派會執行資料指標和大小的淺層複製。 淺層複製是安全的，因為 `span` 不會為其包含的元素配置記憶體。
 
 ### <a name="example"></a>範例
 
@@ -619,7 +620,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-指標的類型，以及指向 **`const`** span 元素的指標。
+指向 span 元素之指標和指標的類型 **`const`** 。
 
 ```cpp
 using pointer = T*;
@@ -657,7 +658,7 @@ int main()
 
 ## <a name="spanrbegin"></a><a name="rbegin"></a> `span::rbegin`
 
-取得反向反覆運算器，指向這個範圍的最後一個元素。
+取得指向此範圍最後一個元素的反向反覆運算器。
 
 ```cpp
 constexpr reverse_iterator rbegin() const noexcept;
@@ -693,7 +694,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-參考的型別，以及 **`const`** 指向 span 元素的參考。
+範圍專案的參考和 **`const`** 參考類型。
 
 ```cpp
 using reference = T&;
@@ -730,7 +731,7 @@ int main()
 
 ## <a name="spanrend"></a><a name="rend"></a> `span::rend`
 
-取得隨機存取反覆運算器，指向反轉範圍結尾之外的位置。
+取得隨機存取反覆運算器，其指向反轉範圍結尾以外的位置。
 
 ```cpp
 constexpr reverse_iterator rend() const noexcept;
@@ -738,13 +739,13 @@ constexpr reverse_iterator rend() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-反向反覆運算器，指向反轉範圍中最後一個元素後面的預留位置;也就是未反轉範圍中第一個元素之前的預留位置。
+反向反覆運算器，指向反轉範圍中最後一個元素之後的預留位置;也就是未反轉範圍中第一個元素之前的預留位置。
 
 ### <a name="remarks"></a>備註
 
-`rend`會與反轉範圍搭配使用，就如同[span：： end](#end)是與 span 搭配使用一樣。 使用它來測試反向反覆運算器是否已到達其範圍的結尾。
+`rend` 與反向範圍一起使用，就像 [span：： end](#end) 是與 span 一起使用一樣。 您可以使用它來測試反向反覆運算器是否已到達其範圍的結尾。
 
-傳回的值 `rend` 不應該取值。
+傳回的值不應取值 `rend` 。
 
 ### <a name="example"></a>範例
 
@@ -836,7 +837,7 @@ constexpr size_type size_bytes() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-Span 中所有元素佔用的位元組數目;也就是 `sizeof(element_type)` 乘以範圍中的專案數。
+範圍中所有元素所佔用的位元組數目;也就是說， `sizeof(element_type)` 乘以範圍中的專案數。
 
 ### <a name="example"></a>範例
 
@@ -860,7 +861,7 @@ int main()
 
 ## <a name="spansize_type"></a><a name="size_type"></a> `span::size_type`
 
-不帶正負號的類型，適合用來儲存範圍中的專案數。
+不帶正負號的類型，適合用來儲存範圍中的元素數目。
 
 ```cpp
 using size_type = size_t;
@@ -890,7 +891,7 @@ int main()
 
 ## <a name="spanspan"></a><a name="span"></a> `span::span`
 
-`span`構造.
+`span` 構造 函數。
 
 ```cpp
 constexpr span() noexcept
@@ -934,39 +935,39 @@ span(const span<T, OtherExtent>& other) noexcept
 ### <a name="parameters"></a>參數
 
 *arr*\
-從陣列中建立範圍。
+從陣列結構的範圍。
 
 *計數*\
 要在範圍中的元素數目。
 
-*頭*\
-反覆運算器至範圍中的第一個元素。
+*第一*\
+反覆運算器，指向範圍中的第一個元素。
 
-*次*\
-反覆運算器至範圍中最後一個元素的正上方。
+*最後*\
+反覆運算器，剛好超過範圍中的最後一個元素。
 
-*位*\
+*N-1*\
 要在範圍中的元素數目。
 
-*另一方面*\
-建立此範圍的複本。
+*其他*\
+製作此範圍的複本。
 
-*r*\
-從這個範圍中建造一個範圍。
+*R*\
+從這個範圍來建立範圍。
 
 ### <a name="remarks"></a>備註
 
-Span 不會針對範圍內的專案釋放儲存區，因為它不會擁有其中物件的儲存空間。
+範圍不會釋出範圍內的專案儲存空間，因為它不會擁有其中物件的儲存空間。
 
 |建構函式  | 描述  |
 |---------|---------|
-|`span()` | 建立空的範圍。 只有在範本參數為或時，才會在多載解析期間考慮 `Extent` `0` `dynamic_extent` 。|
-|`span(It first, size_type count)` | 從 iterator 的第一個專案中，建立範圍 `count` `first` 。  只有在樣板參數不是時，才會在多載解析時考慮 `Extent` `dynamic_extent` 。 |
-|`span(It first, End last)` | 在反覆運算器中從專案建立範圍， `first` 直到到達結束為止 `last` 。 只有在樣板參數不是時，才會在多載解析時考慮 `Extent` `dynamic_extent` 。 `It`必須是 `contiguous_iterator` 。  |
-|`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  從指定陣列的元素中，建立範圍 `N` 。 只有在樣板參數 `Extent` 為或等於時，才會在多載解析時考慮 `dynamic_extent` `N` 。 |
-|`span(R&& r)` |  從範圍內建立範圍。 只有在樣板參數不是時才會參與多載解析 `Extent` `dynamic_extent` 。|
-|`span(const span& other)` |  編譯器產生的複製函數。 資料指標的淺層複本是安全的，因為 span 不會配置記憶體來保存元素。 |
-|`span(const span<OtherElementType, OtherExtent>& s) noexcept;` | 轉換函式：從另一個範圍中建造一個範圍。 只有在範本參數 `Extent` 為 `dynamic_extent` 、或 `N` 為或 equals 時， `dynamic_extent` `Extent` 才會參與多載解析。|
+|`span()` | 建立空的範圍。 當範本參數為或時，才會在多載解析期間考慮 `Extent` `0` `dynamic_extent` 。|
+|`span(It first, size_type count)` | 從 iterator 中的第一個元素來建立範圍 `count` `first` 。  當範本參數不是時，才會在多載解析期間考慮 `Extent` `dynamic_extent` 。 |
+|`span(It first, End last)` | 從反覆運算器中的專案建立範圍 `first` ，直到到達結束為止 `last` 。 當範本參數不是時，才會在多載解析期間考慮 `Extent` `dynamic_extent` 。 `It` 必須是 `contiguous_iterator` 。  |
+|`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  從 `N` 指定陣列的元素來建立範圍。 當範本參數 `Extent` 為或等於時，才會在多載解析期間考慮 `dynamic_extent` `N` 。 |
+|`span(R&& r)` |  從範圍中建立範圍。 如果範本參數不是，則只會參與多載解析 `Extent` `dynamic_extent` 。|
+|`span(const span& other)` |  編譯器產生的複製函數。 資料指標的淺層複本是安全的，因為範圍不會配置記憶體來保存元素。 |
+|`span(const span<OtherElementType, OtherExtent>& s) noexcept;` | 轉換函式：從另一個範圍建立一個範圍。 只有在樣板參數 `Extent` 為 `dynamic_extent` 、或 `N` 為或等於時， `dynamic_extent` `Extent` 才會參與多載解析。|
 
 ### <a name="example"></a>範例
 
@@ -1006,9 +1007,9 @@ constexpr auto subspan() const noexcept
 ### <a name="parameters"></a>參數
 
 *計數*\
-要放入 subspan 中的元素數目。 如果 `count` 為 `dynamic_extent` （預設值），則會將 subspan 從 `offset` 到這個範圍的結尾。
+要放入 subspan 中的專案數目。 如果 `count` `dynamic_extent` (預設值) ，則會將 subspan 取自 `offset` 此範圍的結尾。
 
-*投影*\
+*抵消*\
 此範圍中用來啟動 subspan 的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1017,7 +1018,7 @@ constexpr auto subspan() const noexcept
 
 ### <a name="remarks"></a>備註
 
-此函式的範本版本可在編譯時期檢查計數，藉由傳回固定範圍的範圍來保留範圍的相關資訊。
+這個函式的範本版本可在編譯時期檢查計數，藉由傳回固定範圍的範圍來保留範圍的相關資訊。
 
 ### <a name="example"></a>範例
 
@@ -1058,7 +1059,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-範圍中元素的類型，不含 **`const`** 或 **`volatile`** 限定。
+範圍中不含或限定的元素類型 **`const`** **`volatile`** 。
 
 ```cpp
 using value_type = std::remove_cv_t<T>;
@@ -1086,7 +1087,7 @@ int main()
 2
 ```
 
-## <a name="deduction-guides"></a><a name="deduction_guides"></a>推算指南
+## <a name="deduction-guides"></a><a name="deduction_guides"></a> 推斷指南
 
 以下是針對 span 提供的推斷指南。
 

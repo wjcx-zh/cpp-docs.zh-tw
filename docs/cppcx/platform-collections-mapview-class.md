@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 6c50825cb3003c2b1b63a25419ca67742c92b52f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214993"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610890"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 類別
 
@@ -38,27 +38,27 @@ ref class MapView sealed;
 *K*<br/>
 機碼值組中，機碼的類型。
 
-*&*<br/>
+*V*<br/>
 機碼值組中，值的型別。
 
 *C*<br/>
-一個類型，提供函式物件，可以根據排序鍵比較兩個項目值，以判斷它們在 MapView 中的相對順序。 預設[為 std：： less \<K> ](../standard-library/less-struct.md)。
+一個類型，提供函式物件，可以根據排序鍵比較兩個項目值，以判斷它們在 MapView 中的相對順序。 依預設， [std：： less \<K> ](../standard-library/less-struct.md)。
 
 ### <a name="remarks"></a>備註
 
-MapView 是在應用程式二進位介面（ABI）之間傳遞之[Windows：： Foundation： \<K,V> ： collection：： IMapView](/uwp/api/windows.foundation.collections.imapview-2)介面的具象 c + + 執行。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+MapView 是在應用程式二進位介面之間傳遞的[Windows：： Foundation：： collection： \<K,V> ： IMapView](/uwp/api/windows.foundation.collections.imapview-2)介面之具象 c + + 實 (ABI) 。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[MapView：： MapView](#ctor)|初始化 MapView 類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[MapView：： First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|
 |[MapView：： HasKey](#haskey)|判斷目前 MapView 是否包含指定的機碼。|
@@ -76,7 +76,7 @@ MapView 是在應用程式二進位介面（ABI）之間傳遞之[Windows：： 
 
 **命名空間：** Platform::Collections
 
-## <a name="mapviewfirst-method"></a><a name="first"></a>MapView：： First 方法
+## <a name="mapviewfirst-method"></a><a name="first"></a> MapView：： First 方法
 
 傳回指定對應檢視中之第一個項目的迭代器。
 
@@ -93,9 +93,9 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>備註
 
-若要保留 First （）所傳回的反覆運算器，有一個方便的方式，就是將傳回值指派給使用類型推算關鍵字所宣告的變數 **`auto`** 。 例如： `auto x = myMapView->First();` 。
+若要保存第一個 ( # A1 所傳回的反覆運算器，有一個便利的方式，就是將傳回值指派給以類型推算關鍵字宣告的變數 **`auto`** 。 例如： `auto x = myMapView->First();` 。
 
-## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView：： HasKey 方法
+## <a name="mapviewhaskey-method"></a><a name="haskey"></a> MapView：： HasKey 方法
 
 判斷目前 MapView 是否包含指定的機碼。
 
@@ -109,13 +109,13 @@ bool HasKey(K key);
 ### <a name="parameters"></a>參數
 
 *key*<br/>
-用來尋找 MapView 項目的機碼。 *金鑰*的類型為 typename *K*。
+用來尋找 MapView 項目的機碼。 索引 *鍵* 的類型為 typename *K*。
 
 ### <a name="return-value"></a>傳回值
 
 **`true`** 如果找到索引鍵，則為，否則為 **`false`** 。
 
-## <a name="mapviewlookup-method"></a><a name="lookup"></a>MapView：： Lookup 方法
+## <a name="mapviewlookup-method"></a><a name="lookup"></a> MapView：： Lookup 方法
 
 取得與類型為 K 之指定機碼相關聯且類型為 V 的值。
 
@@ -134,7 +134,7 @@ V Lookup(K key);
 
 與 `key` 配對的值。 傳回值的類型為 typename *V*。
 
-## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>MapView：： MapView 函式
+## <a name="mapviewmapview-constructor"></a><a name="ctor"></a> MapView：： MapView 函數
 
 初始化 MapView 類別的新執行個體。
 
@@ -159,14 +159,14 @@ MapView(
 
 ### <a name="parameters"></a>參數
 
-*初始*<br/>
+*Init*<br/>
 目前 MapView 的 typename。
 
 *comp*<br/>
 函式物件。這個函式物件可以根據排序機碼比較兩個元素值，判斷它們在 MapView 中的相對順序。
 
-*分鐘*<br/>
-用來初始化目前 MapView 之的參考或[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md) `map Class` 。
+*m*<br/>
+用來初始化目前 MapView 之的參考或 [左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md) `map Class` 。
 
 *first*<br/>
 用來初始化目前 MapView 的項目範圍中，第一個項目的輸入迭代器。
@@ -174,10 +174,10 @@ MapView(
 *last*<br/>
 用來初始化目前 MapView 的項目範圍以外第一個項目的輸入迭代器。
 
-*il*<br/>
-[Std：： initializer_list<std：:p 的空氣 \<K,V> > ](../standard-library/initializer-list-class.md) ，其元素會插入 MapView 中。
+*I l*<br/>
+[Std：： initializer_list \<std::pair\<K,V> > ](../standard-library/initializer-list-class.md) ，其元素會插入 MapView 中。
 
-## <a name="mapviewsize-method"></a><a name="size"></a>MapView：： Size 方法
+## <a name="mapviewsize-method"></a><a name="size"></a> MapView：： Size 方法
 
 傳回目前 MapView 物件中的項目數。
 
@@ -191,7 +191,7 @@ virtual property unsigned int Size;
 
 目前 MapView 中的項目數。
 
-## <a name="mapviewsplit-method"></a><a name="split"></a>MapView：： Split 方法
+## <a name="mapviewsplit-method"></a><a name="split"></a> MapView：： Split 方法
 
 將目前 MapView 物件分割為兩個 MapView 物件。 這個方法無法操作。
 

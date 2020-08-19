@@ -64,7 +64,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |成員函數|描述|
 |-|-|
 |[rdbuf](#rdbuf)|傳回 `pointer` 要[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` 、 `Tr` 、 `Alloc`> 之預存資料流程緩衝區的位址。|
-|[字串](#str)|設定或取得字串緩衝區中的文字，而不需要變更寫入位置。|
+|[Str](#str)|設定或取得字串緩衝區中的文字，而不需要變更寫入位置。|
 |[交換](#swap)|用所提供物件的值交換這個 `basic_istringstream` 物件中的值。|
 
 ### <a name="operators"></a>操作員

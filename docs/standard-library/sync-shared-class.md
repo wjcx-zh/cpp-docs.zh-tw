@@ -39,7 +39,7 @@ class sync_shared
 
 |成員函數|描述|
 |-|-|
-|[allocate](#allocate)|配置記憶體區塊。|
+|[分配](#allocate)|配置記憶體區塊。|
 |[解除](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|
 |[equals](#equals)|比較兩個快取是否相等。|
 

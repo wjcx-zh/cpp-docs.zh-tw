@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: 901a44c8f5fdecd1b277ebdecc995722a3afe9a3
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d668a7bd2b5226de906ca146c7b7e882b97f4640
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752488"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560981"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 類別
 
-表示使用者用於選擇文檔或應用程式中顏色的彈出式功能表。
+表示使用者用來選取檔或應用程式色彩的快顯功能表。
 
 ## <a name="syntax"></a>語法
 
@@ -38,7 +38,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |||
 |-|-|
 |名稱|描述|
-|[CMFC顏色彈出選單::CMFC顏色彈出選單](#cmfccolorpopupmenu)|建構 `CMFCColorPopupMenu` 物件。|
+|[CMFCColorPopupMenu：： CMFCColorPopupMenu](#cmfccolorpopupmenu)|建構 `CMFCColorPopupMenu` 物件。|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
@@ -46,24 +46,24 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |||
 |-|-|
 |名稱|描述|
-|[CMFC顏色彈出選單::創建眼淚關閉欄](#createtearoffbar)|創建可停靠的撕掉顏色條。 (覆蓋[CMFC 彈出選單::建立"建立"關閉列](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar)")|
-|[CMFC顏色彈出選單::獲取選單欄](#getmenubar)|返回嵌入在彈出式功能表中的[CMFCPopupMenuBar。](../../mfc/reference/cmfcpopupmenubar-class.md) (覆寫[CMFC 彈出選單::取得選單列](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar)。|
-|`CMFCColorPopupMenu::GetThisClass`|框架用於獲取指向與此類類型關聯的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件的指標。|
-|[CMFC 顏色彈出選單::設定Proplist](#setproplist)|設置嵌入`CMFCColorBar`物件的屬性網格控制物件。|
+|[CMFCColorPopupMenu：： CreateTearOffBar](#createtearoffbar)|建立可停駐的卸載色軸。  (覆寫 [CMFCPopupMenu：： CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar)。 ) |
+|[CMFCColorPopupMenu：： GetMenuBar](#getmenubar)|傳回內嵌在快顯功能表中的 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) 。  (覆寫 [CMFCPopupMenu：： GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar)。 ) |
+|`CMFCColorPopupMenu::GetThisClass`|由架構用來取得與這個類別類型相關聯之 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 物件的指標。|
+|[CMFCColorPopupMenu：： SetPropList](#setproplist)|設定内嵌物件的屬性方格控制項物件 `CMFCColorBar` 。|
 
 ### <a name="data-members"></a>資料成員
 
 |||
 |-|-|
 |名稱|描述|
-|`m_bEnabledInCustomizeMode`|確定是否顯示顏色條的布林值。|
-|`m_wndColorBar`|提供`CMFCColorBar`顏色選擇的物件。|
+|`m_bEnabledInCustomizeMode`|決定是否要顯示色軸的布林值。|
+|`m_wndColorBar`|`CMFCColorBar`提供色彩選取的物件。|
 
 ### <a name="remarks"></a>備註
 
-此類繼承`CMFCPopupMenu`類的彈出功能表功能,並管理提供顏色`CMFCColorBar`選擇的物件。 當工具列框架處於自定義模式且`m_bEnabledInCustomizeMode`成員設置為 FALSE 時,不會顯示顏色欄物件。 有關自定義模式的詳細資訊,請參閱[CMFCToolBar::是自定義模式](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
+此類別會繼承類別的快顯功能表功能 `CMFCPopupMenu` ，並管理 `CMFCColorBar` 提供色彩選取的物件。 當工具列架構處於自訂模式，且 `m_bEnabledInCustomizeMode` 成員設為 FALSE 時，不會顯示色軸物件。 如需自訂模式的詳細資訊，請參閱 [CMFCToolBar：： IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
 
-有關 的詳細`CMFCColorBar`資訊 ,請參閱[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)。
+如需的詳細資訊 `CMFCColorBar` ，請參閱 [CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -79,13 +79,13 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
 
-[CMFC 彈出選單](../../mfc/reference/cmfccolorpopupmenu-class.md)
+[CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題:** afxcolorpopmenu.h
+**標頭：** afxcolorpopupmenu。h
 
-## <a name="cmfccolorpopupmenucmfccolorpopupmenu"></a><a name="cmfccolorpopupmenu"></a>CMFC顏色彈出選單::CMFC顏色彈出選單
+## <a name="cmfccolorpopupmenucmfccolorpopupmenu"></a><a name="cmfccolorpopupmenu"></a> CMFCColorPopupMenu：： CMFCColorPopupMenu
 
 建構 `CMFCColorPopupMenu` 物件。
 
@@ -128,64 +128,64 @@ CMFCColorPopupMenu(
 ### <a name="parameters"></a>參數
 
 *顏色*<br/>
-[在]框架顯示在彈出式功能表上的顏色陣組。
+在架構顯示在快顯功能表上的色彩陣列。
 
-*顏色*<br/>
-[在]預設選擇的顏色。
+*color*<br/>
+在預設選取的色彩。
 
-*lpsz自動顏色*<br/>
-[在]*自動*(預設)顏色按鈕或 NULL 的文字標籤。
+*lpszAutoColor*<br/>
+在 *自動* (預設) 色彩按鈕的文字標籤，或 Null。
 
-自動按鈕的標準標籤是 **「自動**」。。
+[自動] 按鈕的標準標籤是 [ **自動**]。
 
-*lpszOther顏色*<br/>
-[在]*另*一個按鈕的文字標籤,顯示更多顏色選項,或 NULL。
+*lpszOtherColor*<br/>
+在 *另* 一個按鈕的文字標籤，其會顯示更多色彩選擇或 Null。
 
-另一個按鈕的標準標籤是 **"更多顏色..."**
+另一個按鈕的標準標籤是 [其他 **色彩**] .。。
 
 *lpszDocColors*<br/>
-[在]文件顏色按鈕的文字標籤。 文件顏色調色板列出文件目前使用的所有顏色。
+在檔色彩按鈕的文字標籤。 檔色彩調色板會列出檔目前使用的所有色彩。
 
 *lstDocColors*<br/>
-[在]文件目前使用的顏色清單。
+在檔目前使用的色彩清單。
 
 *nColumns*<br/>
-[在]顏色陣列的欄數。
+在色彩陣列的資料行數目。
 
-*n霍茲多克羅茨*<br/>
-[在]顏色欄水準停靠時的行數。
+*nHorzDockRows*<br/>
+在當色軸水準停駐時，此資料列的數目。
 
-*nVertDock 柱子*<br/>
-[在]顏色列垂直停靠時的列數。
+*nVertDockColumns*<br/>
+在當色軸垂直停駐時，所擁有的資料行數目。
 
-*顏色 自動*<br/>
-[在]按下自動按鈕時框架適用的預設顏色。
+*colorAutomatic*<br/>
+在當您按一下 [自動] 按鈕時，架構所套用的預設色彩。
 
 *uiCommandID*<br/>
-[在]顏色條控制命令 ID。
+在色 bar 控制項命令識別碼。
 
 *bStdColorDlg*<br/>
-[在]指示是顯示標準系統顏色對話框還是[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)對話方塊的布林。
+在指出是否要顯示標準系統色彩對話方塊或 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) 對話方塊的布林值。
 
-*p 家長Btn*<br/>
-[在]指向父按鈕的指標。
+*pParentBtn*<br/>
+在父按鈕的指標。
 
 *nID*<br/>
-[在]命令識別碼。
+在命令識別碼。
 
 ### <a name="remarks"></a>備註
 
-每個重載構造函數將`m_bEnabledInCustomizeMode`成員設置為 FALSE。
+每個多載的函式都會將 `m_bEnabledInCustomizeMode` 成員設為 FALSE。
 
 ### <a name="example"></a>範例
 
-下面的示例演示如何構造`CMFCColorPopupMenu`物件。
+下列範例示範如何建立 `CMFCColorPopupMenu` 物件。
 
 [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]
 
-## <a name="cmfccolorpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFC顏色彈出選單::創建眼淚關閉欄
+## <a name="cmfccolorpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a> CMFCColorPopupMenu：： CreateTearOffBar
 
-創建可停靠的撕掉顏色條。
+建立可停駐的卸載色軸。
 
 ```
 virtual CPane* CreateTearOffBar(
@@ -196,24 +196,26 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>參數
 
-|||
-|-|-|
-|參數|描述|
-|*普恩德·梅因*|[在]指向撕開條的父視窗。|
-|*uiID*|[在]撕開欄的命令 ID。|
-|*lpsz名稱*|[在]撕開欄的視窗文字。|
+*pWndMain*\
+在卸載列之父視窗的指標。
+
+*uiID*\
+在清除列的命令識別碼。
+
+*lpszName*\
+在清除橫條的視窗文字。
 
 ### <a name="return-value"></a>傳回值
 
-指向新撕掉控制欄物件的指標。
+新退出控制列物件的指標。
 
 ### <a name="remarks"></a>備註
 
-此方法創建一個[CMFCColorBar 類](../../mfc/reference/cmfccolorbar-class.md)物件,並將其轉換為[CPane 類](../../mfc/reference/cpane-class.md)指標。 您可以使用[MFC 類物件的類型轉換](../../mfc/reference/type-casting-of-mfc-class-objects.md)中描述的強制轉換宏之一將此值轉換回[CMFCColorBar 類](../../mfc/reference/cmfccolorbar-class.md)指標。
+這個方法會建立 [CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md) 物件，並將它轉換成 [CPane 類別](../../mfc/reference/cpane-class.md) 指標。 您可以使用[MFC 類別物件的類型轉換](../../mfc/reference/type-casting-of-mfc-class-objects.md)中所述的其中一個轉換宏，將此值轉換回[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)指標。
 
-## <a name="cmfccolorpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFC顏色彈出選單::獲取選單欄
+## <a name="cmfccolorpopupmenugetmenubar"></a><a name="getmenubar"></a> CMFCColorPopupMenu：： GetMenuBar
 
-返回嵌入在彈出式功能表中的[CMFCPopupMenuBar。](../../mfc/reference/cmfcpopupmenubar-class.md)
+傳回內嵌在快顯功能表中的 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) 。
 
 ```
 virtual CMFCPopupMenuBar* GetMenuBar();
@@ -221,15 +223,15 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 ### <a name="return-value"></a>傳回值
 
-指向嵌入`CMFCPopupMenuBar`的指標。
+內嵌的指標 `CMFCPopupMenuBar` 。
 
 ### <a name="remarks"></a>備註
 
-顏色彈出式功能表具有嵌入[的 CMFCPopupMenuBar 類](../../mfc/reference/cmfcpopupmenubar-class.md)物件。 如果應用程式使用不同的嵌入類型,則在派生類中重寫此方法。
+色彩快顯功能表具有內嵌的 [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md) 物件。 如果您的應用程式使用不同的內嵌類型，請在衍生類別中覆寫這個方法。
 
-## <a name="cmfccolorpopupmenusetproplist"></a><a name="setproplist"></a>CMFC 顏色彈出選單::設定Proplist
+## <a name="cmfccolorpopupmenusetproplist"></a><a name="setproplist"></a> CMFCColorPopupMenu：： SetPropList
 
-設置嵌入`CMFCColorBar`物件的屬性網格控制物件。
+設定内嵌物件的屬性方格控制項物件 `CMFCColorBar` 。
 
 ```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
@@ -237,8 +239,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 ### <a name="parameters"></a>參數
 
-*pwndlist*<br/>
-[在]指向屬性網格控件對象的指標。
+*pWndList*<br/>
+在屬性方格控制項物件的指標。
 
 ## <a name="see-also"></a>另請參閱
 

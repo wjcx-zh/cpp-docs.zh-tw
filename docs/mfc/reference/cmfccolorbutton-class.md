@@ -44,16 +44,16 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 7abe37969799d7fcd78d525a5ec1c6faa9d876ee
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752556"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560994"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 類別
 
-和`CMFCColorButton` [CMFCColorBar 類](../../mfc/reference/cmfccolorbar-class.md)一起使用以實現顏色選取器控制項。
+`CMFCColorButton`和[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)類別會一起用來執行色彩選擇器控制項。
 
 ## <a name="syntax"></a>語法
 
@@ -67,75 +67,75 @@ class CMFCColorButton : public CMFCButton
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFC顏色按鈕:CMFC顏色按鈕](#cmfccolorbutton)|建構新的 `CMFCColorButton` 物件。|
+|[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|建構新的 `CMFCColorButton` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFC 顏色按鈕::開啟自動按鈕](#enableautomaticbutton)|啟用並關閉位於常規顏色按鈕上方的自動按鈕。 ( 標準系統自動按鈕標記為**自動**.)|
-|[CMFC 顏色按鈕:啟用其他按鈕](#enableotherbutton)|啟用並禁用位於常規顏色按鈕下方的"其他"按鈕。 ( 標準系統' 其他按鈕標記為**更多顏色**。|
-|[CMFC 顏色按鈕:取得自動顏色](#getautomaticcolor)|檢索目前自動顏色。|
-|[CMFC 顏色按鈕:取得顏色](#getcolor)|檢索按鈕的顏色。|
-|[CMFC顏色按鈕::設定顏色](#setcolor)|設置按鈕的顏色。|
-|[CMFC 顏色按鈕::設定顏色名稱](#setcolorname)|設置顏色名稱。|
-|[CMFC顏色按鈕::設定欄數](#setcolumnsnumber)|設定顏色選取器對話方塊上的欄數。|
-|[CMFC 顏色按鈕::設定文件顏色](#setdocumentcolors)|指定顏色選取器對話框中顯示的特定於文件的顏色的清單。|
-|[CMFC顏色按鈕::設定調色板](#setpalette)|指定標準顯示顏色的調色板。|
-|[CMFC 顏色按鈕::大小到內容](#sizetocontent)|更改按鈕控制項大小,具體取決於其文字和圖像大小。|
+|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|啟用並停用位於一般色彩按鈕上方的 [自動] 按鈕。  (標準系統自動按鈕會標示為 [ **自動**]。 ) |
+|[CMFCColorButton::EnableOtherButton](#enableotherbutton)|啟用並停用位於一般色彩按鈕下方的 [其他] 按鈕。  (標準系統的 [其他] 按鈕標示為 [ **更多色彩**]。 ) |
+|[CMFCColorButton::GetAutomaticColor](#getautomaticcolor)|抓取目前的自動色彩。|
+|[CMFCColorButton::GetColor](#getcolor)|抓取按鈕的色彩。|
+|[CMFCColorButton：： SetColor](#setcolor)|設定按鈕的色彩。|
+|[CMFCColorButton::SetColorName](#setcolorname)|設定色彩名稱。|
+|[CMFCColorButton::SetColumnsNumber](#setcolumnsnumber)|設定 [色彩選擇器] 對話方塊上的資料行數目。|
+|[CMFCColorButton::SetDocumentColors](#setdocumentcolors)|指定要顯示在 [色彩選擇器] 對話方塊上的檔特定色彩清單。|
+|[CMFCColorButton::SetPalette](#setpalette)|指定標準顯示色彩的調色板。|
+|[CMFCColorButton：： System.windows.window.sizetocontent](#sizetocontent)|變更按鈕控制項的大小，視其文字和影像大小而定。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFC顏色按鈕::是DrawXP主題](#isdrawxptheme)|指示當前顏色按鈕是否以 Windows XP 的可視樣式顯示。|
-|[CMFC顏色按鈕:在畫上](#ondraw)|由框架調用以顯示按鈕的圖像。|
-|[CMFC顏色按鈕::在繪製邊框](#ondrawborder)|框架調用以顯示按鈕的邊框。|
-|[CMFC顏色按鈕::在DrawFocusrect上](#ondrawfocusrect)|當按鈕具有焦點時,框架調用以顯示焦點矩形。|
-|[CMFC顏色按鈕::在顯示顏色彈出](#onshowcolorpopup)|當顏色選取器對話框即將顯示時,由框架調用。|
-|[CMFC顏色按鈕::重建調色板](#rebuildpalette)|將`m_pPalette`受保護的數據成員初始化到指定的調色板或預設系統調色板。|
-|[CMFCColorButton::UpdateColor](#updatecolor)|當使用者從顏色選取器對話框的調色板中選擇顏色時,由框架調用。|
+|[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|指出目前的色彩按鈕是否以 Windows XP 的視覺化樣式顯示。|
+|[CMFCColorButton：： OnDraw](#ondraw)|由架構呼叫以顯示按鈕的影像。|
+|[CMFCColorButton::OnDrawBorder](#ondrawborder)|由架構呼叫以顯示按鈕的框線。|
+|[CMFCColorButton::OnDrawFocusRect](#ondrawfocusrect)|由架構呼叫，以在按鈕具有焦點時顯示焦點矩形。|
+|[CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)|在 [色彩選擇器] 對話方塊即將顯示時由架構呼叫。|
+|[CMFCColorButton::RebuildPalette](#rebuildpalette)|將 `m_pPalette` 受保護的資料成員初始化為指定的調色板或預設的系統調色板。|
+|[CMFCColorButton::UpdateColor](#updatecolor)|當使用者從 [色彩選擇器] 對話方塊的 [調色板] 選取色彩時，由架構呼叫。|
 
 ### <a name="data-members"></a>資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|`m_bAltColorDlg`|布林值。 如果為 TRUE,則當按下*另一個*按鈕或「FALSE」系統顏色對話框時,框架將顯示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)顏色對話框。 預設值為 TRUE。 有關詳細資訊,請參閱[CMFCColorButton::啟用其他按鈕](#enableotherbutton)。|
-|`m_bAutoSetFocus`|布林值。 如果為 TRUE,則框架在顯示菜單時將焦點設置在顏色功能表上,或者如果 FALSE 不會更改焦點。 預設值為 TRUE。|
-|[CMFC顏色按鈕::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|指示顏色按鈕是否已啟用自定義模式。|
-|`m_Color`|[顏色值](/windows/win32/gdi/colorref)。 包含當前選擇的顏色。|
-|`m_ColorAutomatic`|[顏色值](/windows/win32/gdi/colorref)。 包含目前選擇預設顏色。|
-|`m_Colors`|[COLORREF](/windows/win32/gdi/colorref)值的[CArray。](../../mfc/reference/carray-class.md) 包含當前可用的顏色。|
-|`m_lstDocColors`|[COLORREF](/windows/win32/gdi/colorref)值的[CList。](../../mfc/reference/clist-class.md) 包含當前文件顏色。|
-|`m_nColumns`|整數。 包含在顏色選擇選單中的顏色格線中顯示的欄數。|
-|`m_pPalette`|指向[CPalette](../../mfc/reference/cpalette-class.md)的指標。 包含目前顏色選擇選單中可用的顏色。|
-|`m_pPopup`|指向[CMFCColorPopupMenu 類](../../mfc/reference/cmfccolorpopupmenu-class.md)物件的指標。 按下顏色按鈕時顯示的顏色選擇功能表。|
-|`m_strAutoColorText`|字串。 顏色選擇選單中"自動"按鈕的標籤。|
-|`m_strDocColorsText`|字串。 顯示文件顏色的顏色選擇功能表中按鈕的標籤。|
-|`m_strOtherText`|字串。 顏色選擇功能表中「其他」按鈕的標籤。|
+|`m_bAltColorDlg`|布林值。 若為 TRUE，則當按一下 [*其他*] 按鈕時，架構會顯示 [ [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)色彩] 對話方塊，若為 FALSE，則會顯示 [系統色彩] 對話方塊。 預設值為 TRUE。 如需詳細資訊，請參閱 [CMFCColorButton：： EnableOtherButton](#enableotherbutton)。|
+|`m_bAutoSetFocus`|布林值。 若為 TRUE，當顯示功能表時，架構會將焦點設定在 [色彩] 功能表上，如果為 FALSE，則不會變更焦點。 預設值為 TRUE。|
+|[CMFCColorButton：： m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|指出是否啟用 [色彩] 按鈕的自訂模式。|
+|`m_Color`|[COLORREF](/windows/win32/gdi/colorref)值。 包含目前選取的色彩。|
+|`m_ColorAutomatic`|[COLORREF](/windows/win32/gdi/colorref)值。 包含目前選取的預設色彩。|
+|`m_Colors`|[COLORREF](/windows/win32/gdi/colorref)值的[CArray](../../mfc/reference/carray-class.md) 。 包含目前可用的色彩。|
+|`m_lstDocColors`|[COLORREF](/windows/win32/gdi/colorref)值的[CList](../../mfc/reference/clist-class.md) 。 包含目前的檔色彩。|
+|`m_nColumns`|整數。 包含要在色彩選取功能表中的色彩格線中顯示的資料行數目。|
+|`m_pPalette`|指向 [CPalette](../../mfc/reference/cpalette-class.md)的指標。 包含目前色彩選取功能表中可用的色彩。|
+|`m_pPopup`|[CMFCColorPopupMenu 類別](../../mfc/reference/cmfccolorpopupmenu-class.md)物件的指標。 當您按一下 [色彩] 按鈕時所顯示的色彩選取功能表。|
+|`m_strAutoColorText`|字串。 色彩選取功能表中的 [自動] 按鈕標籤。|
+|`m_strDocColorsText`|字串。 色彩選取功能表中顯示檔色彩的按鈕標籤。|
+|`m_strOtherText`|字串。 色彩選取功能表中的 [其他] 按鈕標籤。|
 
 ## <a name="remarks"></a>備註
 
-預設情況下,`CMFCColorButton`類充當按鈕,打開顏色選取器對話方塊。 顏色選擇器對話框包含一系列小顏色按鈕和顯示自訂顏色選取器的「其他」 按鈕。 ( 標準系統' 其他按鈕標記為**更多顏色**。當使用者選擇新顏色時,`CMFCColorButton`物件將反映更改並顯示所選顏色。
+根據預設， `CMFCColorButton` 類別會以開啟 [色彩選擇器] 對話方塊的 [推送] 按鈕的方式運作。 [色彩選擇器] 對話方塊包含一個小顏色按鈕的陣列，以及一個顯示自訂色彩選擇器的 [其他] 按鈕。  (標準系統的 [其他] 按鈕標示為 [ **更多色彩**]。 ) 當使用者選取新的色彩時， `CMFCColorButton` 物件會反映變更並顯示選取的色彩。
 
-直接在代碼中創建顏色按鈕控制項,或者使用**ClassWizard**工具和對話方塊樣本。 如果直接創建顏色按鈕控件,請向應用程式添加`CMFCColorButton`變數,然後調用`Create``CMFCColorButton`物件的構造函數和方法。 如果使用**ClassWizard,** 請加入`CButton`應用程式新增變數,然後會變數的類型從`CButton`變更為`CMFCColorButton`。
+您可以直接在程式碼中建立色彩按鈕控制項，也可以使用 **ClassWizard** 工具和對話方塊範本來建立。 如果您直接建立色彩按鈕控制項，請將 `CMFCColorButton` 變數新增至您的應用程式，然後呼叫物件的函式和 `Create` 方法 `CMFCColorButton` 。 如果您使用 **ClassWizard**，請將 `CButton` 變數新增至您的應用程式，然後將變數的類型從變更 `CButton` 為 `CMFCColorButton` 。
 
-顏色選取器對話框( [CMFCColorBar 類](../../mfc/reference/cmfccolorbar-class.md)) 由[CMFCColorButton::在](#onshowcolorpopup)框架呼叫`OnLButtonDown`事件處理程式時顯示ColorPopup 方法顯示。 [CMFCColorButton:可以重寫顯示顏色彈出](#onshowcolorpopup)方法以支援自定義顏色選擇。
+當架構呼叫事件處理常式時， [CMFCColorButton：： OnShowColorPopup](#onshowcolorpopup)方法會顯示 [色彩選擇器] 對話方塊 ( [CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)) `OnLButtonDown` 。 您可以覆寫 [CMFCColorButton：： OnShowColorPopup](#onshowcolorpopup) 方法，以支援自訂色彩選取。
 
-對`CMFCColorButton`象 通過向其發送WM_COMMAND來通知其父物件顏色正在更改 |BN_CLICKED通知。 父級使用[CMFCColorButton:getColor](#getcolor)方法檢索當前顏色。
+`CMFCColorButton`物件會藉由將 WM_COMMAND 傳送給其父系，來通知其父控制項的色彩變更 |BN_CLICKED 通知。 父系會使用 [CMFCColorButton：： GetColor](#getcolor) 方法來取得目前的色彩。
 
 ## <a name="example"></a>範例
 
-下面的範例展示如何使用`CMFCColorButton`類中的各種方法配置顏色按鈕。 這些方法設置顏色按鈕的顏色及其列數,並啟用自動按鈕和其他按鈕。 此示例是[狀態列演示範例](../../overview/visual-cpp-samples.md)的一部分。
+下列範例示範如何使用類別中的各種方法來設定色彩按鈕 `CMFCColorButton` 。 這些方法會設定色彩按鈕的色彩和其資料行的數目，並啟用 [自動] 和 [其他] 按鈕。 此範例是 [狀態列示範範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題:** afxcolor 按鈕.h
+**標頭：** afxcolorbutton。h
 
-## <a name="cmfccolorbuttoncmfccolorbutton"></a><a name="cmfccolorbutton"></a>CMFC顏色按鈕:CMFC顏色按鈕
+## <a name="cmfccolorbuttoncmfccolorbutton"></a><a name="cmfccolorbutton"></a> CMFCColorButton::CMFCColorButton
 
 建構新的 `CMFCColorButton` 物件。
 
@@ -143,9 +143,9 @@ class CMFCColorButton : public CMFCButton
 CMFCColorButton();
 ```
 
-## <a name="cmfccolorbuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFC 顏色按鈕::開啟自動按鈕
+## <a name="cmfccolorbuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a> CMFCColorButton::EnableAutomaticButton
 
-啟用或禁用顏色選取器控制項的"自動"按鈕,並設置自動(預設)顏色。
+啟用或停用色彩選擇器控制項的 [自動] 按鈕，並將 [自動 (預設) 色彩]。
 
 ```cpp
 void EnableAutomaticButton(
@@ -157,19 +157,19 @@ void EnableAutomaticButton(
 ### <a name="parameters"></a>參數
 
 *lpszLabel*<br/>
-[在]指定自動按鈕的文字。
+在指定自動按鈕的文字。
 
-*顏色 自動*<br/>
-[在]指定自動按鈕預設顏色的 RGB 值。
+*colorAutomatic*<br/>
+在指定自動按鈕預設色彩的 RGB 值。
 
-*b 啟用*<br/>
-[在]指定自動按鈕是啟用還是禁用。
+*bEnable*<br/>
+在指定是否啟用或停用 [自動] 按鈕。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfccolorbuttonenableotherbutton"></a><a name="enableotherbutton"></a>CMFC 顏色按鈕:啟用其他按鈕
+## <a name="cmfccolorbuttonenableotherbutton"></a><a name="enableotherbutton"></a> CMFCColorButton::EnableOtherButton
 
-啟用或禁用"其他"按鈕,該按鈕顯示在常規顏色按鈕下方。
+啟用或停用 [其他] 按鈕，此按鈕會出現在 [一般色彩] 按鈕下方。
 
 ```cpp
 void EnableOtherButton(
@@ -181,21 +181,21 @@ void EnableOtherButton(
 ### <a name="parameters"></a>參數
 
 *lpszLabel*<br/>
-[在]指定按鈕的文字。
+在指定按鈕的文字。
 
-*巴爾特·博拉爾德格*<br/>
-[在]指定在使用者按下這個按鈕時是否打開[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)對話框或系統顏色對話框。
+*bAltColorDlg*<br/>
+在指定當使用者按一下按鈕時，是否要開啟 [ [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) ] 對話方塊或 [系統色彩] 對話方塊。
 
-*b 啟用*<br/>
-[在]指定「其他」按鈕是啟用還是禁用。
+*bEnable*<br/>
+在指定是否啟用或停用 [其他] 按鈕。
 
 ### <a name="remarks"></a>備註
 
-按下「其他」按鈕可顯示顏色對話框。 如果*bAltColorDlg*參數為 TRUE,則顯示 CMFCColorDialog 類;如果 bAltColorDlg 參數為 TRUE,則顯示[CMFCColorDialog 類](../../mfc/reference/cmfccolordialog-class.md);否則,將顯示系統顏色對話方塊。
+按一下 [其他] 按鈕以顯示 [色彩] 對話方塊。 如果 *bAltColorDlg* 參數為 TRUE，則會顯示 [CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md) ;否則，就會顯示 [系統色彩] 對話方塊。
 
-## <a name="cmfccolorbuttongetautomaticcolor"></a><a name="getautomaticcolor"></a>CMFC 顏色按鈕:取得自動顏色
+## <a name="cmfccolorbuttongetautomaticcolor"></a><a name="getautomaticcolor"></a> CMFCColorButton::GetAutomaticColor
 
-檢索目前自動(預設)顏色。
+抓取目前的自動 (預設) 色彩。
 
 ```
 COLORREF GetAutomaticColor() const;
@@ -203,15 +203,15 @@ COLORREF GetAutomaticColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-表示目前自動顏色的 RGB 值。
+表示目前自動色彩的 RGB 值。
 
 ### <a name="remarks"></a>備註
 
-目前自動顏色由[CMFCColorButton 設定:啟用自動按鈕](#enableautomaticbutton)方法。
+目前的自動色彩是由 [CMFCColorButton：： EnableAutomaticButton](#enableautomaticbutton) 方法所設定。
 
-## <a name="cmfccolorbuttongetcolor"></a><a name="getcolor"></a>CMFC 顏色按鈕:取得顏色
+## <a name="cmfccolorbuttongetcolor"></a><a name="getcolor"></a> CMFCColorButton::GetColor
 
-檢索當前選擇的顏色。
+抓取目前選取的色彩。
 
 ```
 COLORREF GetColor() const;
@@ -223,9 +223,9 @@ RGB 值。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfccolorbuttonisdrawxptheme"></a><a name="isdrawxptheme"></a>CMFC顏色按鈕::是DrawXP主題
+## <a name="cmfccolorbuttonisdrawxptheme"></a><a name="isdrawxptheme"></a> CMFCColorButton::IsDrawXPTheme
 
-指示當前顏色按鈕是否以 Windows XP 的可視樣式顯示。
+指出目前的色彩按鈕是否以 Windows XP 的視覺化樣式顯示。
 
 ```
 BOOL IsDrawXPTheme() const;
@@ -233,11 +233,11 @@ BOOL IsDrawXPTheme() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果支援視覺樣式,並且當前顏色按鈕以 Windows XP 的視覺樣式顯示,則為 TRUE;否則,FALSE。
+如果支援視覺化樣式，且目前的色彩按鈕以 Windows XP 的視覺化樣式顯示，則為 TRUE;否則為 FALSE。
 
-## <a name="cmfccolorbuttonm_benabledincustomizemode"></a><a name="m_benabledincustomizemode"></a>CMFC顏色按鈕::m_bEnabledInCustomizeMode
+## <a name="cmfccolorbuttonm_benabledincustomizemode"></a><a name="m_benabledincustomizemode"></a> CMFCColorButton：： m_bEnabledInCustomizeMode
 
-將顏色按鈕設置為自定義模式。
+將 [色彩] 按鈕設定為自訂模式。
 
 ```
 BOOL m_bEnabledInCustomizeMode;
@@ -245,11 +245,11 @@ BOOL m_bEnabledInCustomizeMode;
 
 ### <a name="remarks"></a>備註
 
-如果需要向自定義對話框的頁面添加顏色按鈕(或允許使用者在自定義期間進行其他顏色選擇),請通過將`m_bEnabledInCustomizeMode`成員設置為 TRUE 來啟用該按鈕。 默認情況下,此成員設置為 FALSE。
+如果您需要將 [色彩] 按鈕新增至自訂對話方塊的頁面 (或允許使用者在自訂) 期間選取另一個色彩，請將成員設為 TRUE，以啟用此按鈕 `m_bEnabledInCustomizeMode` 。 依預設，這個成員會設定為 FALSE。
 
-## <a name="cmfccolorbuttonondraw"></a><a name="ondraw"></a>CMFC顏色按鈕:在畫上
+## <a name="cmfccolorbuttonondraw"></a><a name="ondraw"></a> CMFCColorButton：： OnDraw
 
-由框架調用以呈現按鈕的圖像。
+由架構呼叫以呈現按鈕的影像。
 
 ```
 virtual void OnDraw(
@@ -260,22 +260,22 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向用於渲染按鈕圖像的設備上下文。
+*Pdc*<br/>
+在指向用來呈現按鈕影像的裝置內容。
 
 *矩形*<br/>
-[在]綁定按鈕的矩形。
+在用來包圍按鈕的矩形。
 
 *uiState*<br/>
-[在]指定按鈕的可視狀態。
+在指定按鈕的視覺狀態。
 
 ### <a name="remarks"></a>備註
 
-重寫此方法以自定義呈現過程。
+覆寫這個方法以自訂轉譯流程。
 
-## <a name="cmfccolorbuttonondrawborder"></a><a name="ondrawborder"></a>CMFC顏色按鈕::在繪製邊框
+## <a name="cmfccolorbuttonondrawborder"></a><a name="ondrawborder"></a> CMFCColorButton::OnDrawBorder
 
-框架調用以顯示按鈕的邊框。
+由架構呼叫以顯示按鈕的框線。
 
 ```
 virtual void OnDrawBorder(
@@ -286,22 +286,22 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向用於繪製邊框的設備上下文。
+*Pdc*<br/>
+在指向用來繪製框線的裝置內容。
 
 *rectClient*<br/>
-[在]由*pDC*參數指定的裝置上下文中的矩形,用於定義要繪製的按鈕的邊界。
+在由 *pDC* 參數指定的裝置內容中的矩形，定義要繪製之按鈕的界限。
 
 *uiState*<br/>
-[在]指定按鈕的可視狀態。
+在指定按鈕的視覺狀態。
 
 ### <a name="remarks"></a>備註
 
-重寫此函數以自定義顏色按鈕的邊框外觀。
+覆寫此函式以自訂色彩按鈕的框線外觀。
 
-## <a name="cmfccolorbuttonondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFC顏色按鈕::在DrawFocusrect上
+## <a name="cmfccolorbuttonondrawfocusrect"></a><a name="ondrawfocusrect"></a> CMFCColorButton::OnDrawFocusRect
 
-當按鈕具有焦點時,框架調用以顯示焦點矩形。
+由架構呼叫，以在按鈕具有焦點時顯示焦點矩形。
 
 ```
 virtual void OnDrawFocusRect(
@@ -311,19 +311,19 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向用於繪製焦點矩形的設備上下文。
+*Pdc*<br/>
+在指向用來繪製焦點矩形的裝置內容。
 
 *rectClient*<br/>
-[在]由*pDC*參數指定的裝置上下文中的矩形,用於定義按鈕的邊界。
+在由 *pDC* 參數指定的裝置內容中，定義按鈕界限的矩形。
 
 ### <a name="remarks"></a>備註
 
-重寫此方法以自定義焦點矩形的外觀。
+覆寫這個方法以自訂焦點矩形的外觀。
 
-## <a name="cmfccolorbuttononshowcolorpopup"></a><a name="onshowcolorpopup"></a>CMFC顏色按鈕::在顯示顏色彈出
+## <a name="cmfccolorbuttononshowcolorpopup"></a><a name="onshowcolorpopup"></a> CMFCColorButton::OnShowColorPopup
 
-在顯示彈出顏色列之前調用。
+在顯示快捷方式色軸之前呼叫。
 
 ```
 virtual void OnShowColorPopup();
@@ -331,9 +331,9 @@ virtual void OnShowColorPopup();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfccolorbuttonrebuildpalette"></a><a name="rebuildpalette"></a>CMFC顏色按鈕::重建調色板
+## <a name="cmfccolorbuttonrebuildpalette"></a><a name="rebuildpalette"></a> CMFCColorButton::RebuildPalette
 
-將`m_pPalette`受保護的數據成員初始化到指定的調色板或預設系統調色板。
+將 `m_pPalette` 受保護的資料成員初始化為指定的調色板或預設的系統調色板。
 
 ```cpp
 void RebuildPalette(CPalette* pPal);
@@ -341,13 +341,12 @@ void RebuildPalette(CPalette* pPal);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*pPal*|[在]指向邏輯調色板或 NULL 的指標。 如果為 NULL,則使用預設系統調色板。|
+*pPal*\
+在邏輯調色板的指標或 Null。 如果是 Null，則會使用預設的系統調色板。
 
-## <a name="cmfccolorbuttonsetcolor"></a><a name="setcolor"></a>CMFC顏色按鈕::設定顏色
+## <a name="cmfccolorbuttonsetcolor"></a><a name="setcolor"></a> CMFCColorButton：： SetColor
 
-指定按鈕的顏色。
+指定按鈕的色彩。
 
 ```cpp
 void SetColor(COLORREF color);
@@ -355,14 +354,14 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*顏色*<br/>
-[在]RGB 值。
+*color*<br/>
+在RGB 值。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfccolorbuttonsetcolorname"></a><a name="setcolorname"></a>CMFC 顏色按鈕::設定顏色名稱
+## <a name="cmfccolorbuttonsetcolorname"></a><a name="setcolorname"></a> CMFCColorButton::SetColorName
 
-指定顏色的名稱。
+指定色彩的名稱。
 
 ```
 static void SetColorName(
@@ -372,19 +371,19 @@ static void SetColorName(
 
 ### <a name="parameters"></a>參數
 
-*顏色*<br/>
-[在]顏色的 RGB 值。
+*color*<br/>
+在色彩的 RGB 值。
 
 *strName*<br/>
-[在]顏色的名稱。
+在色彩的名稱。
 
 ### <a name="remarks"></a>備註
 
-顏色名稱清單是每個應用程式的全域名稱。 因此,此方法將其參數傳輸到[CMFCColorBar::setColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname)。
+色彩名稱清單是每個應用程式的全域名稱。 因此，這個方法會將其參數傳輸至 [CMFCColorBar：： SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname)。
 
-## <a name="cmfccolorbuttonsetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFC顏色按鈕::設定欄數
+## <a name="cmfccolorbuttonsetcolumnsnumber"></a><a name="setcolumnsnumber"></a> CMFCColorButton::SetColumnsNumber
 
-定義在使用者顏色選擇過程中向使用者顯示的顏色表中顯示的列數。
+定義在使用者的色彩選取程式期間，向使用者顯示的色彩表中顯示的資料行數目。
 
 ```cpp
 void SetColumnsNumber(int nColumns);
@@ -393,15 +392,15 @@ void SetColumnsNumber(int nColumns);
 ### <a name="parameters"></a>參數
 
 *nColumns*<br/>
-[在]指定列數。
+在指定資料行的數目。
 
 ### <a name="remarks"></a>備註
 
-用戶可以從顯示預定義顏色表的彈出顏色列中選擇顏色。 使用此方法定義表中的列數。
+使用者可以從顯示預先定義色彩表的快顯視窗中選取色彩。 您可以使用這個方法來定義資料表中的資料行數目。
 
-## <a name="cmfccolorbuttonsetdocumentcolors"></a><a name="setdocumentcolors"></a>CMFC 顏色按鈕::設定文件顏色
+## <a name="cmfccolorbuttonsetdocumentcolors"></a><a name="setdocumentcolors"></a> CMFCColorButton::SetDocumentColors
 
-指定一組顏色和集的名稱。 使用[CMFCColorBar 類](../../mfc/reference/cmfccolorbar-class.md)物件顯示顏色集。
+指定一組色彩和集合的名稱。 這組色彩會使用 [CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md) 物件來顯示。
 
 ```cpp
 void SetDocumentColors(
@@ -412,18 +411,18 @@ void SetDocumentColors(
 ### <a name="parameters"></a>參數
 
 *lpszLabel*<br/>
-[在]指定要使用文件顏色集顯示的標籤。
+在指定要與一組檔色彩一起顯示的標籤。
 
 *lstColors*<br/>
-[在]對 RGB 值清單的引用。
+在RGB 值清單的參考。
 
 ### <a name="remarks"></a>備註
 
-物件`CMFCColorButton`維護傳輸到[CMFCColorBar 類](../../mfc/reference/cmfccolorbar-class.md)物件的 RGB 值的清單。 顯示顏色列時,這些顏色將顯示在由*lpszLabel*參數指定的標籤的特殊部分中。
+`CMFCColorButton`物件會維護傳送至[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)物件的 RGB 值清單。 當色軸顯示時，這些色彩會顯示在 *lpszLabel* 參數指定其標籤的特殊區段中。
 
-## <a name="cmfccolorbuttonsetpalette"></a><a name="setpalette"></a>CMFC顏色按鈕::設定調色板
+## <a name="cmfccolorbuttonsetpalette"></a><a name="setpalette"></a> CMFCColorButton::SetPalette
 
-指定要在彈出顏色列上顯示的標準顏色。
+指定要顯示在快顯色軸上的標準色彩。
 
 ```cpp
 void SetPalette(CPalette* pPalette);
@@ -432,13 +431,13 @@ void SetPalette(CPalette* pPalette);
 ### <a name="parameters"></a>參數
 
 *pPalette*<br/>
-[在]指向調色板的指標。
+在色板的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfccolorbuttonsizetocontent"></a><a name="sizetocontent"></a>CMFC 顏色按鈕::大小到內容
+## <a name="cmfccolorbuttonsizetocontent"></a><a name="sizetocontent"></a> CMFCColorButton：： System.windows.window.sizetocontent
 
-調整按鈕控制項大小以適合其文本和圖像。
+調整按鈕控制項的大小，使其符合其文字和影像。
 
 ```
 virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
@@ -447,17 +446,17 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ### <a name="parameters"></a>參數
 
 *bCalcOnly*<br/>
-[在]如果為非零,則計算按鈕控制件的新大小,但不會更改實際大小。
+在如果是非零值，則會計算按鈕控制項的新大小，但不會變更實際的大小。
 
 ### <a name="return-value"></a>傳回值
 
-指定`CSize`新按鈕控制大小的物件。
+`CSize`指定新按鈕控制項大小的物件。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfccolorbuttonupdatecolor"></a><a name="updatecolor"></a>CMFC顏色按鈕::更新顏色
+## <a name="cmfccolorbuttonupdatecolor"></a><a name="updatecolor"></a> CMFCColorButton::UpdateColor
 
-當使用者從使用者按下顏色按鈕時顯示的顏色列中選擇顏色時,由框架調用。
+當使用者在按下 [色彩] 按鈕時所顯示的色軸中選取色彩時，由架構呼叫。
 
 ```
 virtual void UpdateColor(COLORREF color);
@@ -465,12 +464,12 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>參數
 
-*顏色*<br/>
-[在]使用者選擇的顏色。
+*color*<br/>
+在使用者選取的色彩。
 
 ### <a name="remarks"></a>備註
 
-該`UpdateColor`函數更改當前選定的按鈕的顏色,並通過發送帶有BN_CLICKED標準通知的WM_COMMAND消息通知其父按鈕。 使用[CMFCColorButton:getColor](#getcolor)方法檢索所選顏色。
+此函式會 `UpdateColor` 變更目前選取的按鈕色彩，並傳送具有 BN_CLICKED 標準通知的 WM_COMMAND 訊息來通知其父系。 使用 [CMFCColorButton：： GetColor](#getcolor) 方法來取出選取的色彩。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -478,7 +477,7 @@ virtual void UpdateColor(COLORREF color);
 [類別](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)<br/>
 [CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)<br/>
-[CMFC顏色按鈕::在顯示顏色彈出](#onshowcolorpopup)<br/>
+[CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>
 [COLORREF](/windows/win32/gdi/colorref)<br/>
 [CPalette 類別](../../mfc/reference/cpalette-class.md)<br/>
 [CArray 類別](../../mfc/reference/carray-class.md)<br/>

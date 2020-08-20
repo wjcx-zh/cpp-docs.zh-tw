@@ -1,6 +1,8 @@
 ---
 title: 格式規格欄位：scanf 和 wscanf 函式
 ms.date: 11/04/2016
+ms.topic: reference
+ms.custom: contperfq1
 helpviewer_keywords:
 - width, specifications in scanf function
 - scanf format specifications
@@ -10,16 +12,16 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 025d4c164d3afe1ca6b05c1c8e76441109cbc4ae
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4be7aa5e0790f0124890ee981ffd58e3027ea59b
+ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438372"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88659327"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>格式規格欄位：scanf 和 wscanf 函式
 
-這裡的資訊適用於整個 `scanf` 系列函式，包括安全的版本，並會說明所用符號，通知 `scanf` 函式如何將輸入資料流 (例如 `stdin` 的輸入資料流 `scanf`) 剖析為插入至程式變數中的值。
+這裡的資訊適用於整個 `scanf` 系列函式，包括安全的版本，並會說明所用符號，通知 `scanf` 函式如何將輸入資料流 (例如 `scanf` 的輸入資料流 `stdin`) 剖析為插入至程式變數中的值。
 
 格式規格的格式如下︰
 
@@ -45,9 +47,9 @@ ms.locfileid: "79438372"
 
 星號 (`*`) 跟在百分比符號後面會抑制指派下一個輸入欄位，解譯為指定類型的欄位。 掃描但不儲存欄位。
 
-`_s` 系列函式的安全版本 (具有 `scanf` 尾碼的版本)，需要在每個 `c`、`C`、`s`、`S` 或 `[` 類型參數之後，立即傳遞緩衝區大小參數。 如需 `scanf` 函式系列安全版本的詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
+`scanf` 系列函式的安全版本 (具有 `_s` 尾碼的版本)，需要在每個 `c`、`C`、`s`、`S` 或 `[` 類型參數之後，立即傳遞緩衝區大小參數。 如需 `scanf` 函式系列安全版本的詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [scanf 寬度規格](../c-runtime-library/scanf-width-specification.md)<br/>
 [scanf 類型欄位字元](../c-runtime-library/scanf-type-field-characters.md)<br/>

@@ -1,44 +1,45 @@
 ---
 title: '&lt;charconv &gt; 函式'
-ms.date: 07/22/2020
+description: 描述 <charconv> 將整數或浮點值轉換成字元或從字元轉換的程式庫函數
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565945"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722150"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 函式
 
 \<charconv>標頭包含下列非成員函式：
 
-| **非成員函式** | **說明** |
+| **非成員函式** | **描述** |
 |-|-|
 |[to_chars](#to_chars) | 將整數或浮點值轉換為的序列 **`char`** 。 |
-|[from_chars](#from_chars) | 將序列轉換成 **`char`** 整數或浮點值。 |
+|[from_chars](#from_chars) | 將序列轉換 **`char`** 為整數或浮點值。 |
 
-這些轉換函式會針對效能進行微調，同時也支援最短的往返行為。 最短的來回行為表示當數位轉換成字元時，只會寫出足夠的精確度，以在將這些字元轉換回浮點時，能夠復原原始數位。
+這些轉換函式已針對效能進行調整，也支援最短的往返行為。 最短來回行為表示當數位轉換成字元時，只會寫出足夠的精確度，以在將這些字元轉換回浮點數時復原原始數位。
 
-- 將字元轉換成數位時，數值不需要以 null 結束。 同樣地，將數位轉換成字元時，結果不會以 null 結束。
-- 轉換函式不會配置記憶體。 您在所有情況下都擁有該緩衝區。
-- 轉換函式不會擲回。 傳回的結果可供您判斷轉換是否成功。
-- 轉換函式不會區分執行時間舍入模式。
-- 轉換函式不會感知地區設定。 它們一律 `'.'` 會針對使用逗號的地區設定，將小數點列印和剖析為，而不是 '，'。
+- 將字元轉換為數字時，數值不需要以 null 終止。 同樣地，將數位轉換成字元時，結果不會以 null 結束。
+- 轉換函式不會配置記憶體。 您在所有情況下都擁有緩衝區。
+- 轉換函式不會擲回。 系統會傳回結果，您可以從中判斷轉換是否成功。
+- 轉換函式不會區分執行時間的舍入模式。
+- 轉換函式不會感知地區設定。 它們一律會將小數點列印和剖析為 `'.'` 使用逗號的地區設定，而不是 '，'。
 
 ## `to_chars`
 
 將整數或浮點值轉換為的序列 **`char`** 。
 
-藉 `value` 由填滿範圍 \[ `first` ， `last`) ，其中 \[ `first` ， `last`) 必須是有效的範圍，以將轉換成字元字串。
-傳回[to_chars_result 結構](to-chars-result-structure.md)。 如果轉換成功（如所示 `to_char_result.ec` ），成員 `ptr` 就是所寫入字元的一個後端指標。 否則， `to_char_result.ec` 具有值、 `errc::value_too_large` `to_char_result.ptr` 具有值 `last` ，且範圍的內容 \[ `first` `last` 未指定) 。
+藉 `value` 由填滿範圍 \[ `first` `last`) ，其中 \[ `first` `last`) 必須是有效的範圍，以轉換成字元字串。
+傳回 [to_chars_result 結構](to-chars-result-structure.md)。 如果轉換成功（如所述）， `to_char_result.ec` 則成員 `ptr` 是所寫入字元的最後一端指標。 否則， `to_char_result.ec` 具有值、 `errc::value_too_large` `to_char_result.ptr` 具有值 `last` ，而且不指定範圍的內容 \[ `first` `last`) 。
 
-只有 `to_chars` 當您提供能力不佳的大型緩衝區來保存結果時，才會發生失敗的唯一方法。
+`to_chars`如果您提供能力不佳的大型緩衝區來保存結果，則可能會失敗的唯一方法。
 
 ```cpp
 // integer to chars
@@ -71,43 +72,39 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一*\
 指向要填滿的緩衝區開頭。
 
-*次*\
-指向超過緩衝區結尾的一個字元，以填滿。
+*最後*\
+將超過緩衝區結尾的一個字元指向填滿。
 
-*value*\
-要進行轉換的值。 如果 `value` 是負數，表示的開頭為 `-` 。
+*價值*\
+要進行轉換的值。 如果 `value` 是負數，表示開頭為 `-` 。
 
-*群體*\
-針對整數轉換，這是轉換成字元時要使用的基底 `value` 。 必須介於2到36（含）之間。 不會有前置零。 範圍 10. 35 (內含) 的數位會以小寫字元 a 表示。z
+*基地*\
+若為整數轉換，則為轉換成字元時要使用的基底 `value` 。 必須介於2到36（含）之間。 不會有前置零。 範圍 10.. 35 (內含) 的數位會以小寫字元 a 表示。Z
 
-*bcp.fmt*\
-對於浮點轉換，這是一個位元遮罩，用來指定要使用的轉換格式，例如科學、固定或十六進位。 如需詳細資訊，請參閱[chars_format](chars-format-class.md) 。
+*Fmt*\
+若為浮點數轉換，則為指定要使用之轉換格式的位元遮罩，例如科學、固定或十六進位。 如需詳細資訊，請參閱 [chars_format](chars-format-class.md) 。
 
-*精密*\
-若為浮點轉換，則為已轉換值的精確度位數。
+*精度*\
+若為浮點數轉換，則為已轉換值的有效位數位數。
 
 ### <a name="return-value"></a>傳回值
 
-包含轉換結果的[to_chars_result](to-chars-result-structure.md) 。
+包含轉換結果的 [to_chars_result](to-chars-result-structure.md) 。
 
 ### <a name="remarks"></a>備註
 
-採用[chars_format](chars-format-class.md)參數的函式會決定轉換規範，如同它們使用的方式如下：如果是，則轉換規範為，如果為，則 (如果為，則會 `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` 在結果) `fmt` `chars_format::hex` `'g'` `fmt` `chars_format::general` ，如果為，則為。 指定最短的固定標記法仍然可能導致冗長的輸出，因為此值可能是非常大或非常小的最短可能表示。
+採用 [chars_format](chars-format-class.md) 參數的函式會判斷轉換規範，就像它們使用的方式一樣：如果是，則為，如果為 `printf()` ，則 `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` (不含 `0x` 結果中的前置) 如果 `fmt` 為，則為 `chars_format::hex` ，如果為， `'g'` `fmt` `chars_format::general` 則為。 指定最短的固定標記法可能仍會產生冗長的輸出，因為當值非常大或非常小時可能是最短的標記法。
 
-下表描述不同的和參數組合所提供的轉換行為 `fmt` `precision` 。 「最短來回行為」一詞指的是寫入所需的最少位數，因此使用對應的函式來剖析該標記法 `from_chars` 將會完全復原此值。
+下表描述不同的和參數組合所提供的轉換行為 `fmt` `precision` 。 「最短來回行為」一詞是指寫入所需的最少數位數目，如此一來，使用對應函式剖析該標記法 `from_chars` 將會完全復原此值。
 
-| `fmt`和 `precision` 組合 | 輸出 |
+| `fmt` 和 `precision` 組合 | 輸出 |
 |--|--|
-|  兩者皆非 | 不論固定或科學記號標記法是較短的，偏好以 tiebreaker 的形式來修正。</br>任何接受參數的多載都無法模擬此行為 `fmt` 。 |
+|  兩者皆非 | 無論固定或科學記號標記法較短，請以 tiebreaker 的形式進行修正。</br>任何採用參數的多載都無法模擬此行為 `fmt` 。 |
 | `fmt` | 指定格式的最短來回行為，例如最短的科學格式。 |
-| `fmt` 和 `precision` | 會使用指定的有效位數（遵循 `printf()` 樣式），而不需要最短的來回行程行為。 |
-
-### <a name="return-value"></a>傳回值
-
-保存轉換結果的[to_chars_result](to-chars-result-structure.md) 。
+| `fmt` 和 `precision` | 使用指定的有效位數（依照 `printf()` 樣式），不需要最短的往返行為。 |
 
 ### <a name="example"></a>範例
 
@@ -145,7 +142,7 @@ int main()
 
 ## `from_chars`
 
-將序列轉換成 **`char`** 整數或浮點值。
+將序列轉換 **`char`** 為整數或浮點值。
 
 ```cpp
 // char to an integer value
@@ -171,36 +168,36 @@ from_chars_result from_chars(const char* first, const char* last, long double& v
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一*\
 指向要轉換之字元緩衝區的開頭。
 
-*次*\
-指向要轉換之字元緩衝區結尾元素的其中一個。
+*最後*\
+指向要轉換之字元緩衝區的結尾元素之後的一個。
 
-*value*\
+*價值*\
 如果轉換成功，則包含轉換的結果。
 
-*群體*\
-針對整數轉換，這是轉換期間要使用的基底。 必須介於2到36（含）之間。
+*基地*\
+若為整數轉換，則為要在轉換期間使用的基底。 必須介於2到36（含）之間。
 
-*bcp.fmt*\
-對於浮點轉換，這是要轉換之字元序列的格式。 如需詳細資訊，請參閱[chars_format](chars-format-class.md) 。
+*Fmt*\
+若為浮點數轉換，則為要轉換的字元序列格式。 如需詳細資訊，請參閱 [chars_format](chars-format-class.md) 。
 
 ### <a name="remarks"></a>備註
 
-函式會 `from_chars()` 分析字串 \[ `first` ， `last`) 數位模式，其中 \[ `first` ，) 必須是 `last` 有效的範圍。
+`from_chars()`函數會分析字串 \[ `first` ， `last`) 數位模式，其中) 必須 \[ `first` `last` 是有效的範圍。
 
-剖析字元時，不會忽略空白字元。 與不同的 `strtod()` 是，緩衝區的開頭必須是有效的數值表示。
+剖析字元時，不會忽略空白字元。 `strtod()`例如，緩衝區的開頭必須是有效的數值表示。
 
-傳回[from_chars_result 結構](from-chars-result-structure.md)。
+傳回 [from_chars_result 結構](from-chars-result-structure.md)。
 
-如果沒有任何字元符合數位模式， `value` 則會進行未修改、 `from_chars_result.ptr` 指向 `first` ，而 `from_chars_result.ec` 是 `errc::invalid_argument` 。
+如果沒有任何字元符合數位模式、 `value` 未修改、 `from_chars_result.ptr` 指向 `first` ，且 `from_chars_result.ec` 為 `errc::invalid_argument` 。
 
-如果只有部分字元符合數位模式， `from_chars_result.ptr` 會指向不符合模式的第一個字元， `last` 如果所有字元都相符，則會包含參數的值。
+如果只有某些字元符合數位模式， `from_chars_result.ptr` 會指向不符合模式的第一個字元，或 `last` 如果所有字元相符，則會包含參數的值。
 
-如果剖析的值不在類型所表示的範圍內 `value` ， `value` 則不會修改，而且 `from_chars_result.ec` 會是 `errc::result_out_of_range` 。
+如果剖析的值不在類型所表示的範圍中 `value` ， `value` 則不會修改，且 `from_chars_result.ec` 為 `errc::result_out_of_range` 。
 
-否則， `value` 會在四捨五入後設定為剖析的值，且 `from_chars_result.ec` 等於 `errc{}` 。
+否則， `value` 會在四捨五入之後設定為剖析的值，而且 `from_chars_result.ec` 等於 `errc{}` 。
 
 ### <a name="example"></a>範例
 
@@ -245,8 +242,8 @@ int main()
 
 /std：需要 c + + 17 或更新版本。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<charconv>](charconv.md)  
-[來回行程](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
- 的最短十進位字串[printf ( # A1 格式](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)規範
+來回往返的[最短十進位字串](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+[printf ( # A1 格式](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)規範

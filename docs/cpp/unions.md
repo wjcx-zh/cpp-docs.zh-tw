@@ -1,47 +1,50 @@
 ---
-title: 等位
-ms.date: 05/06/2019
+title: union
+description: 標準 c + + union class 類型和關鍵字的描述、其使用和限制。
+ms.date: 08/18/2020
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
-- class types [C++], unions as
+- class type [C++], union as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+no-loc:
+- union
+- struct
+- enum
+- class
+- static
+ms.openlocfilehash: a4dc07df5e7858dffe62478509ee1d8dc759ce96
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213134"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722176"
 ---
-# <a name="unions"></a>等位
+# `union`
 
 > [!NOTE]
-> 在 c + + 17 和更新版本中， **std：： variant**類別是等位的型別安全替代項。
+> 在 c + + 17 和更新版本中， `std::variant` class 是的型別安全替代方法 union 。
 
-**`union`** 是使用者定義的型別，其中的所有成員都共用相同的記憶體位置。 這表示等位的成員清單在任何指定時間都只能包含一個物件。 這也表示不論等位有多少成員，都一律會使用剛好的記憶體來儲存最大成員。
+**`union`** 是使用者定義型別，其中所有成員都共用相同的記憶體位置。 這項定義表示，在任何指定的時間，都 union 只能在其成員清單中包含一個以上的物件。 這也表示無論有多少成員 union ，一律會使用足夠的記憶體來儲存最大的成員。
 
-如果具有許多物件且 (或) 記憶體有限，則等位可能適用於節省記憶體。 不過，正確使用它們時需要特別小心，因為您有責任確保一律存取寫入的最後一個成員。 如果任何成員類型具有非一般建構函式，則您必須撰寫額外的程式碼來明確建構和終結該成員。 使用等位之前，請考慮使用基底類別和衍生類別是否可以更恰當地表示您正嘗試解決的問題。
+union當您有許多物件和有限的記憶體時，可能會很適合用來節省記憶體。 不過， union 需要額外小心才能正確使用。 您必須負責確保一律存取您所指派的相同成員。 如果任何成員類型具有非一般的 con struct 或，則您必須撰寫額外的程式碼，以明確地 con struct 並終結該成員。 在使用之前 union ，請考慮您嘗試解決的問題，是否可以使用基底和衍生型別來更妥善地表示 class class 。
 
 ## <a name="syntax"></a>語法
 
-```cpp
-union [name]  { member-list };
-```
+> **`union`***`tag`* <sub>opt</sub> **`{`** opt *`member-list`***`};`**
 
 ### <a name="parameters"></a>參數
 
-*name*<br/>
-提供給等位的類型名稱。
+*`tag`*<br/>
+提供給的型別名稱 union 。
 
-*成員清單*<br/>
-等位可以包含的成員。 請參閱＜備註＞。
+*`member-list`*<br/>
+union可以包含的成員。
 
-## <a name="remarks"></a>備註
+## <a name="declare-a-no-locunion"></a>宣告 union
 
-## <a name="declaring-a-union"></a>宣告等位
-
-使用關鍵字開始宣告聯集 **`union`** ，並以大括弧括住成員清單：
+union使用關鍵字來開始的宣告 **`union`** ，並將成員清單括在大括弧中：
 
 ```cpp
 // declaring_a_union.cpp
@@ -54,6 +57,7 @@ union RecordType    // Declare a simple union type
     double d;
     int *int_ptr;
 };
+
 int main()
 {
     RecordType t;
@@ -62,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="using-unions"></a>使用等位
+## <a name="use-a-no-locunion"></a>使用 union
 
-在先前的範例中，任何存取等位的程式碼都需要知道哪個成員保有資料。 這個問題的最常見解決方法是將等位含括在結構中，以及具有其他列舉成員指出目前正儲存在等位中的資料類型。 這稱為「*區分聯集*」，而下列範例顯示基本模式。
+在上述範例中，任何存取的程式碼都 union 需要知道哪些成員會保存資料。 此問題最*常見的解決方案 union *稱為「差異」。 它會將 union 放在中 struct ，並包含 enum 成員來指出目前儲存在中的成員類型 union 。 下列範例示範基本模式：
 
 ```cpp
 #include <queue>
@@ -107,16 +111,27 @@ struct Input
 void Process_Temp(TempData t) {}
 void Process_Wind(WindData w) {}
 
-// Container for all the data records
-queue<Input> inputs;
-void Initialize();
+void Initialize(std::queue<Input>& inputs)
+{
+    Input first;
+    first.type = WeatherDataType::Temperature;
+    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
+    inputs.push(first);
+
+    Input second;
+    second.type = WeatherDataType::Wind;
+    second.wind = { 204, 1418859354, 14, 27 };
+    inputs.push(second);
+}
 
 int main(int argc, char* argv[])
 {
-    Initialize();
+    // Container for all the data records
+    queue<Input> inputs;
+    Initialize(inputs);
     while (!inputs.empty())
     {
-        Input i = inputs.front();
+        Input const i = inputs.front();
         switch (i.type)
         {
         case WeatherDataType::Temperature:
@@ -133,29 +148,17 @@ int main(int argc, char* argv[])
     }
     return 0;
 }
-
-void Initialize()
-{
-    Input first, second;
-    first.type = WeatherDataType::Temperature;
-    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
-    inputs.push(first);
-
-    second.type = WeatherDataType::Wind;
-    second.wind = { 204,1418859354, 14, 27 };
-    inputs.push(second);
-}
 ```
 
-在先前的範例中，請注意在 Input 結構中的等位沒有名稱。 這是匿名等位，而且可以存取其成員，就像它們是結構的直接成員一樣。 如需匿名等位的詳細資訊，請參閱下節。
+在上述範例中， union 中的沒有 `Input` struct 名稱，因此稱為 *匿名* union 。 您可以直接存取其成員，就像是的成員一樣 struct 。 如需如何使用匿名的詳細資訊 union ，請參閱[匿名 union ](#anonymous_unions)區段。
 
-當然，先前的範例中所顯示問題也可以使用下列方式解決：使用衍生自一般基底類別的類別，以及根據容器中每個物件的執行階段類型，對程式碼進行分支處理。 這可能較容易維護和了解程式碼，但它的速度也可能比使用等位還要慢。 此外，使用等位，您還可以儲存完全無關的類型，並動態變更儲存且不需要變更等位變數本身類型的值類型。 因此，您可以建立異質 MyUnionType 陣列，而其項目儲存不同類型的不同值。
+先前的範例顯示您也可以使用 class 衍生自通用基底的型別來解決的問題 class 。 您可以根據容器中每個物件的執行時間類型，將程式碼分支。 您的程式碼可能更容易維護及瞭解，但也可能比使用更慢 union 。 此外，您也 union 可以使用來儲存不相關的類型。 union可讓您以動態方式變更預存值的型別，而不需要變更變數本身的型別 union 。 例如，您可以建立的異類陣列 `MyUnionType` ，其元素會儲存不同類型的不同值。
 
-請注意，很容易就會誤用前一個範例中的 `Input` 結構。 這完全是由使用者正確使用鑑別子來存取保有資料的成員。 將等位設為私密並提供特殊存取函式，即可防範誤用 (如下一個範例所示)。
+您可以輕鬆地誤用 `Input` struct 範例中的。 使用者可以正確地使用鑒別子來存取保存資料的成員。 您可以藉由建立和提供特殊的存取函式來防止誤用 union **`private`** ，如下一個範例所示。
 
-## <a name="unrestricted-unions-c11"></a>無限制的等位 (C++11)
+## <a name="unrestricted-no-locunion-c11"></a>不受限制的 union (c + + 11) 
 
-在 C++03 和之前版本中，只要類型沒有使用者提供的建構函式、解構函式或指派運算子，等位就可以包含具有類別類型的非靜態資料成員。 在 C++11 中，已移除這些限制。 如果您在等位中包括這類成員，則編譯器會自動將任何不是由使用者提供的特殊成員函式標示為已刪除。 如果等位是類別或結構內的匿名等位，則會將不是由使用者提供之類別或結構的任何特殊成員函式標示為已刪除。 下列範例顯示等位的其中一個成員具有需要這項特殊處理的成員時，要如何處理：
+在 c + + 03 及更早版本中， union static 只要型別沒有 class 使用者提供 con struct or、de struct or 或指派運算子，就可以包含具有類型的非資料成員。 在 C++11 中，已移除這些限制。 如果您在中包含這類成員 union ，編譯器會自動將非使用者提供的任何特殊成員函式標示為 **`deleted`** 。 如果在 union 或中是匿名的 union class struct ，則任何不是由使用者提供的特殊成員函式 class struct 都會標示為 **`deleted`** 。 下列範例顯示如何處理此案例。 的其中一個成員 union 具有需要這項特殊處理的成員：
 
 ```cpp
 // for MyVariant
@@ -513,99 +516,13 @@ int main()
     char c;
     cin >> c;
 }
-#include <queue>
-#include <iostream>
-using namespace std;
-
-enum class WeatherDataType
-{
-    Temperature, Wind
-};
-
-struct TempData
-{
-    TempData() : StationId(""), time(0), current(0), maxTemp(0), minTemp(0) {}
-    TempData(string id, time_t t, double cur, double max, double min)
-        : StationId(id), time(t), current(cur), maxTemp(max), minTemp(0) {}
-    string StationId;
-    time_t time = 0;
-    double current;
-    double maxTemp;
-    double minTemp;
-};
-
-struct WindData
-{
-    int StationId;
-    time_t time;
-    int speed;
-    short direction;
-};
-
-struct Input
-{
-    Input() {}
-    Input(const Input&) {}
-
-    ~Input()
-    {
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-    }
-
-    WeatherDataType type;
-    void SetTemp(const TempData& td)
-    {
-        type = WeatherDataType::Temperature;
-
-        // must use placement new because of string member!
-        new(&temp) TempData(td);
-    }
-
-    TempData GetTemp()
-    {
-        if (type == WeatherDataType::Temperature)
-            return temp;
-        else
-            throw logic_error("Can't return TempData when Input holds a WindData");
-    }
-    void SetWind(WindData wd)
-    {
-        // Explicitly delete struct member that has a
-        // non-trivial constructor
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-        wind = wd; //placement new not required.
-    }
-    WindData GetWind()
-    {
-        if (type == WeatherDataType::Wind)
-        {
-            return wind;
-        }
-        else
-            throw logic_error("Can't return WindData when Input holds a TempData");
-    }
-
-private:
-
-    union
-    {
-        TempData temp;
-        WindData wind;
-    };
-};
 ```
 
-等位無法儲存參考。 等位不支援繼承，因此等位本身不能當成基底類別使用，或不能繼承自另一個類別或具有虛擬函式。
+union無法儲存參考。 union也不支援繼承。 這表示您不能使用 union 做為基底 class ，或繼承自另一個 class ，或有虛擬函式。
 
-## <a name="initializing-unions"></a>初始化等位
+## <a name="initialize-a-no-locunion"></a>初始化 union
 
-您可以指派以括號括住的運算式，藉此在相同的陳述式中宣告及初始化等位。 會求出運算式的值並指派至等位的第一個欄位。
+您可以藉 union 由指派以大括弧括住的運算式，在相同的語句中宣告和初始化。 運算式會進行評估並指派給的第一個欄位 union 。
 
 ```cpp
 #include <iostream>
@@ -623,7 +540,7 @@ int main()
     union NumericType Values = { 10 };   // iValue = 10
     cout << Values.iValue << endl;
     Values.dValue = 3.1416;
-    cout << Values.dValue) << endl;
+    cout << Values.dValue << endl;
 }
 /* Output:
 10
@@ -631,32 +548,30 @@ int main()
 */
 ```
 
-`NumericType` 等位會依照下圖中所示的方式在記憶體內部排列 (概念上)。
+`NumericType` union (在概念上排列) ，如下圖所示。
 
-![數值類型等位中的資料儲存區](../cpp/media/vc38ul1.png "NumericType 聯集內的資料儲存") <br/>
-在 NumericType 等位中儲存資料
+![將資料儲存在數數值型別：：：非 loc (聯集) ：：：](../cpp/media/vc38ul1.png "將資料儲存在 NumericType：：：非 loc (聯集) ：：：") <br/>
+資料儲存在 `NumericType`union
 
-## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>匿名等位
+## <a name="anonymous-no-locunion"></a><a name="anonymous_unions"></a> 匿名 union
 
-匿名等位是在沒有*類別名稱*或宣告子*清單*的情況下宣告的聯集。
+匿名 union 是指沒有或的宣告 *`class-name`* *`declarator-list`* 。
 
-```cpp
-union  {  member-list  }
-```
+> **`union  {`**  *`member-list`*  **`}`**
 
-匿名等位中宣告的名稱會直接使用，就像非成員變數一般。 因此，在周圍範圍中，匿名等位中所宣告的名稱必須是唯一的。
+匿名中宣告的名稱 union 會直接使用，例如非成員變數。 這表示在匿名中宣告的名稱在 union 周圍的範圍中必須是唯一的。
 
-除了已命名聯集的限制之外，匿名等位也受限於這些額外的限制：
+匿名 union 可能會有下列額外的限制：
 
-- 它們也必須宣告為 **`static`** 在檔案或命名空間範圍中宣告。
+- 如果在檔案或命名空間範圍中宣告，則也必須將它宣告為 **`static`** 。
 
-- 它們只能擁有 **`public`** 成員 **`private`** ，而匿名等位 **`protected`** 中的成員則會產生錯誤。
+- 它只能有 **`public`** 成員; **`private`** **`protected`** 在匿名中具有和成員會 union 產生錯誤。
 
-- 它們不能有成員函式。
+- 它不能有成員函式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別和結構](../cpp/classes-and-structs-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
-[class](../cpp/class-cpp.md)<br/>
-[結構](../cpp/struct-cpp.md)
+[`class`](../cpp/class-cpp.md)<br/>
+[`struct`](../cpp/struct-cpp.md)

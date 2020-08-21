@@ -48,6 +48,8 @@
       href: ../linux/cmake-linux-project.md
     - name: 設定 Linux CMake 專案
       href: ../linux/cmake-linux-configure.md
+    - name: 設定 CMake 偵錯工作階段
+      href: ../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json
     - name: 教學課程：在 Visual Studio 中建立 C++ 跨平台專案
       href: ../build/get-started-linux-cmake.md
 - name: 將 Linux 專案設定為使用 Address Sanitizer

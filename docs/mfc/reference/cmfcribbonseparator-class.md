@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560864"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831797"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 類別
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|建構 `CMFCRibbonSeparator` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|在 [**自訂**] 對話方塊的 [**命令**] 清單中加入分隔符號。  (覆寫 [CMFCRibbonBaseElement：： AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)。 ) |
 |`CMFCRibbonSeparator::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
 |`CMFCRibbonSeparator::GetThisClass`|由架構用來取得與這個類別類型相關聯之 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 物件的指標。|
 
 ### <a name="protected-methods"></a>保護方法
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCRibbonSeparator：： CopyFrom](#copyfrom)|從另一個物件設定分隔符號之成員變數的複製方法。|
 |[CMFCRibbonSeparator：： GetRegularSize](#getregularsize)|傳回分隔符號的大小。|
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|指出這是否為分隔符號。|

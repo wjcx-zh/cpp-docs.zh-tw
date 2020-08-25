@@ -19,16 +19,16 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 140836f45ed2f4088bc0baed67676f93cb268d01
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746833"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832109"
 ---
 # <a name="cstringdata-class"></a>CStringData 類別
 
-此類表示字串對象的數據。
+此類別代表字串物件的資料。
 
 ## <a name="syntax"></a>語法
 
@@ -40,56 +40,56 @@ struct CStringData
 
 ### <a name="methods"></a>方法
 
-|||
+|名稱|描述|
 |-|-|
-|[AddRef](#addref)|增加字串資料物件的引用計數。|
-|[資料](#data)|檢索字串物件的字元數據。|
-|[IsLocked](#islocked)|確定關聯的字串對象的緩衝區是否鎖定。|
-|[IsShared](#isshared)|確定關聯的字串對象的緩衝區當前是否共用。|
-|[鎖](#lock)|鎖定關聯的字串對象的緩衝區。|
+|[AddRef](#addref)|遞增字串資料物件的參考計數。|
+|[data](#data)|捕獲字串物件的字元資料。|
+|[IsLocked](#islocked)|判斷相關聯之字串物件的緩衝區是否已鎖定。|
+|[IsShared](#isshared)|判斷相關聯之字串物件的緩衝區目前是否為共用。|
+|[鎖定](#lock)|鎖定相關聯之字串物件的緩衝區。|
 |[版本](#release)|釋放指定的字串物件。|
-|[解除鎖定](#unlock)|解鎖關聯的字串對象的緩衝區。|
+|[解 鎖](#unlock)|解除鎖定相關聯之字串物件的緩衝區。|
 
 ### <a name="data-members"></a>資料成員
 
-|||
+|名稱|描述|
 |-|-|
-|[nAlloc 長度](#nalloclength)|S`XCHAR`中配置的資料(不包括終止 null)|
-|[n 資料長度](#ndatalength)|s`XCHAR`中目前使用的資料長度(不包括終止 null)|
-|[nRefs](#nrefs)|物件的當前引用計數。|
-|[普斯特林姆格](#pstringmgr)|指向此字串物件的字串管理器的指標。|
+|[nAllocLength](#nalloclength)|中配置資料的長度 `XCHAR` (不包括終止的 null) |
+|[nDataLength](#ndatalength)|中目前使用的資料長度 `XCHAR` (不包括終止的 null) |
+|[nRefs](#nrefs)|物件的目前參考計數。|
+|[pStringMgr](#pstringmgr)|此字串物件的字串管理員指標。|
 
 ## <a name="remarks"></a>備註
 
-此類只能由實現自定義字串管理器的開發人員使用。 有關自訂字串管理員的詳細資訊,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)
+此類別只應由執行自訂字串管理員的開發人員使用。 如需自訂字串管理員的詳細資訊，請參閱 [記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)
 
-此類封裝了與較高字串物件(如[CStringT、CSimpleStringT](../../atl-mfc-shared/reference/cstringt-class.md)或[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)物件)關聯的各種類型的[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)資訊和數據。 每個較高的字串物件都包含指向其關聯`CStringData`物件的指標,允許多個字串物件指向同一字串數據物件。 此關係由`nRefs``CStringData`物件的引用計數 ( ) 表示。
+這個類別會封裝不同類型的資訊，以及與較高字串物件相關聯的資料，例如 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)、 [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)或 [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md) 物件。 每個較高的字串物件都包含其相關聯物件的指標 `CStringData` ，讓多個字串物件指向相同的字串資料物件。 此關聯性是以物件的參考計數 () 來表示 `nRefs` `CStringData` 。
 
 > [!NOTE]
-> 在某些情況下,字串類型(如`CFixedString`) 不會與多個較高字串物件共用字串數據物件。 有關此的詳細資訊,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 在某些情況下，字串類型 (例如 `CFixedString`) 不會與一個以上的字串物件共用字串資料物件。 如需有關這個的詳細資訊，請參閱 [記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-此資料由:
+這項資料是由下列各項所組成：
 
-- 字串的記憶體管理員[(IAtlStringMgr](../../atl-mfc-shared/reference/iatlstringmgr-class.md)類型)。
+- 記憶體管理員 (字串的類型 [IAtlStringMgr](../../atl-mfc-shared/reference/iatlstringmgr-class.md)) 。
 
-- 字串的目前長度 ( [nData 長度](#ndatalength)) 。
+- 目前的長度 ( [nDataLength](#ndatalength) 字串) 。
 
-- 字串的分配長度 ( [nAlloc 長度](#nalloclength)) 。 出於性能原因,這可能與當前字串長度不同
+- 配置的長度 ( [nAllocLength](#nalloclength) 字串) 。 基於效能考慮，這可能不同于目前的字串長度
 
-- `CStringData`物件的目前參考計數 ( [nRefs](#nrefs)) . 此值用於確定共用同一`CStringData`物件的字串物件數。
+- 目前的參考計數 ( [nRefs](#nrefs) 物件的) `CStringData` 。 這個值是用來判斷有多少個字串物件共用相同的 `CStringData` 物件。
 
-- 字串的實際字元緩衝區 ([資料](#data)) .
+- 實際的字元緩衝區 ( 字串的 [資料](#data)) 。
 
    > [!NOTE]
-   > 字串對象的實際字元緩衝區由字串管理器分配並追加到該物件。 `CStringData`
+   > 字串物件的實際字元緩衝區是由字串管理員所配置，並附加至 `CStringData` 物件。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題:** atlsimpstr.h
+**標頭：** atlsimpstr。h
 
-## <a name="cstringdataaddref"></a><a name="addref"></a>弦資料::新增參考
+## <a name="cstringdataaddref"></a><a name="addref"></a> CStringData：： AddRef
 
-增加字串物件的引用計數。
+遞增字串物件的參考計數。
 
 ```cpp
 void AddRef() throw();
@@ -97,14 +97,14 @@ void AddRef() throw();
 
 ### <a name="remarks"></a>備註
 
-增加字串物件的引用計數。
+遞增字串物件的參考計數。
 
 > [!NOTE]
-> 不要在具有負引用計數的字串上調用此方法,因為負計數表示字串緩衝區已鎖定。
+> 請勿在具有負參考計數的字串上呼叫這個方法，因為負計數表示已鎖定字串緩衝區。
 
-## <a name="cstringdatadata"></a><a name="data"></a>弦樂資料::d
+## <a name="cstringdatadata"></a><a name="data"></a> CStringData：:d ata
 
-返回指向字串物件字元緩衝區的指標。
+傳回字串物件之字元緩衝區的指標。
 
 ```cpp
 void* data() throw();
@@ -112,18 +112,18 @@ void* data() throw();
 
 ### <a name="return-value"></a>傳回值
 
-指向字串物件的字元緩衝區的指標。
+字串物件之字元緩衝區的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函數以返回關聯字串物件的當前字元緩衝區。
+呼叫此函式可傳回相關聯之字串物件的目前字元緩衝區。
 
 > [!NOTE]
-> 此緩衝區不是由物件分配,`CStringData`而是由字串管理器在需要時分配。 分配時,緩衝區將追加到字串數據物件。
+> 這個緩衝區不是由物件配置， `CStringData` 而是由字串管理員在需要時配置。 當配置時，緩衝區會附加至字串資料物件。
 
-## <a name="cstringdataislocked"></a><a name="islocked"></a>CStringData::鎖定
+## <a name="cstringdataislocked"></a><a name="islocked"></a> CStringData：： IsLocked
 
-確定字元緩衝區是否鎖定。
+判斷是否鎖定字元緩衝區。
 
 ```
 bool IsLocked() const throw();
@@ -131,15 +131,15 @@ bool IsLocked() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果緩衝區已鎖定,則返回 TRUE;否則 FALSE。
+如果緩衝區已鎖定，則傳回 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函數以確定字串物件的字元緩衝區當前是否鎖定。
+呼叫此函式，以判斷字串物件的字元緩衝區目前是否已鎖定。
 
-## <a name="cstringdataisshared"></a><a name="isshared"></a>CStringData::共用
+## <a name="cstringdataisshared"></a><a name="isshared"></a> CStringData：： IsShared
 
-確定字元緩衝區是否共用。
+判斷是否共用字元緩衝區。
 
 ```
 bool IsShared() const throw();
@@ -147,15 +147,15 @@ bool IsShared() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果緩衝區是共用的,則返回 TRUE;否則 FALSE。
+如果緩衝區是共用的，則傳回 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函數以確定字串數據物件的字元緩衝區當前是否在多個字串對象之間共用。
+呼叫此函式，以判斷字串資料物件的字元緩衝區目前是否在多個字串物件之間共用。
 
-## <a name="cstringdatalock"></a><a name="lock"></a>弦資料:鎖定
+## <a name="cstringdatalock"></a><a name="lock"></a> CStringData：： Lock
 
-鎖定關聯字串物件的字元緩衝區。
+鎖定相關聯之字串物件的字元緩衝區。
 
 ```cpp
 void Lock() throw();
@@ -163,14 +163,14 @@ void Lock() throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫此函數以鎖定字串資料物件的字元緩衝區。 當開發人員需要直接存取字元緩衝區時,將使用鎖定和解鎖。 鎖定的一個好範例透過`CSimpleStringT`的[LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[解鎖緩衝區](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法演示。
+呼叫此函式可鎖定字串資料物件的字元緩衝區。 當開發人員需要直接存取字元緩衝區時，就會使用鎖定和解除鎖定。 的 [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) 和 [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) 方法示範了一個很好的鎖定範例 `CSimpleStringT` 。
 
 > [!NOTE]
-> 僅當緩衝區未在較高的字串對象之間共用時,才能鎖定字元緩衝區。
+> 只有在較高的字串物件之間不共用緩衝區時，才能鎖定字元緩衝區。
 
-## <a name="cstringdatanalloclength"></a><a name="nalloclength"></a>CStringData::nAlloc長度
+## <a name="cstringdatanalloclength"></a><a name="nalloclength"></a> CStringData：： nAllocLength
 
-已分配的字元緩衝區的長度。
+配置之字元緩衝區的長度。
 
 ```
 int nAllocLength;
@@ -178,11 +178,11 @@ int nAllocLength;
 
 ### <a name="remarks"></a>備註
 
-將分配的數據緩衝區的長度存儲在`XCHAR`s 中(不包括終止 null)。
+將配置的資料緩衝區長度儲存在 s 中， `XCHAR` (不包括終止的 null) 。
 
-## <a name="cstringdatandatalength"></a><a name="ndatalength"></a>CStringData:n數據長度
+## <a name="cstringdatandatalength"></a><a name="ndatalength"></a> CStringData：： nDataLength
 
-字串物件的當前長度。
+字串物件的目前長度。
 
 ```
 int nDataLength;
@@ -190,11 +190,11 @@ int nDataLength;
 
 ### <a name="remarks"></a>備註
 
-將目前使用的數據的長度儲存在`XCHAR`s 中(不包括終止 null)。
+將目前使用中資料的長度儲存在 `XCHAR` s (不包括終止的 null) 。
 
-## <a name="cstringdatanrefs"></a><a name="nrefs"></a>CStringData::nRefs
+## <a name="cstringdatanrefs"></a><a name="nrefs"></a> CStringData：： nRefs
 
-字串資料物件的引用計數。
+字串資料物件的參考計數。
 
 ```
 long nRefs;
@@ -202,11 +202,11 @@ long nRefs;
 
 ### <a name="remarks"></a>備註
 
-儲存字串資料物件的引用計數。 此計數指示與字串數據物件關聯的較高字串對象的數量。 負值表示字串數據物件當前已鎖定。
+儲存字串資料物件的參考計數。 此計數表示與字串資料物件相關聯的字串物件數目上限。 負數值表示字串資料物件目前已鎖定。
 
-## <a name="cstringdatapstringmgr"></a><a name="pstringmgr"></a>弦樂數據::pStringMgr
+## <a name="cstringdatapstringmgr"></a><a name="pstringmgr"></a> CStringData：:p StringMgr
 
-關聯的字串物件的記憶體管理員。
+相關聯之字串物件的記憶體管理員。
 
 ```
 IAtlStringMgr* pStringMgr;
@@ -214,11 +214,11 @@ IAtlStringMgr* pStringMgr;
 
 ### <a name="remarks"></a>備註
 
-儲存關聯字串物件的記憶體管理員。 有關記憶體管理員和字串的詳細資訊,請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+儲存相關聯之字串物件的記憶體管理員。 如需記憶體管理員和字串的詳細資訊，請參閱 [記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-## <a name="cstringdatarelease"></a><a name="release"></a>CStringData::發佈
+## <a name="cstringdatarelease"></a><a name="release"></a> CStringData：： Release
 
-取消字串資料物件的引用計數。
+遞減字串資料物件的參考計數。
 
 ```cpp
 void Release() throw();
@@ -226,15 +226,15 @@ void Release() throw();
 
 ### <a name="remarks"></a>備註
 
-調用此函數以遞減引用計數,在引用計數達到零`CStringData`時釋放結構。 這通常在刪除字串物件時完成,因此不再需要引用字串資料物件。
+呼叫此函式可遞減參考計數，並在 `CStringData` 參考計數到達零時釋放結構。 這通常是在刪除字串物件時完成，因此不再需要參考字串資料物件。
 
-例如,以下代碼將調用`CStringData::Release`與關聯`str1`的字串數據物件。
+例如，下列程式碼會呼叫 `CStringData::Release` 與相關聯的字串資料物件 `str1` ：
 
 [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]
 
-## <a name="cstringdataunlock"></a><a name="unlock"></a>CStringData::解鎖
+## <a name="cstringdataunlock"></a><a name="unlock"></a> CStringData：： Unlock
 
-解鎖關聯的字串物件的字元緩衝區。
+解除鎖定相關聯之字串物件的字元緩衝區。
 
 ```cpp
 void Unlock() throw();
@@ -242,12 +242,12 @@ void Unlock() throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫此函數以解鎖字串資料物件的字元緩衝區。 一旦緩衝區解鎖,它是可共用的,可以進行引用計數。
+呼叫此函式可解除鎖定字串資料物件的字元緩衝區。 一旦緩衝區解除鎖定，就可以共用，而且可以參考計數。
 
 > [!NOTE]
-> 每個`Lock`調用都必須與相應的調用`Unlock`匹配。
+> 的每個呼叫都 `Lock` 必須透過對應的呼叫來進行比對 `Unlock` 。
 
-當開發人員必須確保字串數據不共用時,將使用鎖定和解鎖。 鎖定的一個好範例透過`CSimpleStringT`的[LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[解鎖緩衝區](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法演示。
+當開發人員必須確保不共用字串資料時，就會使用鎖定和解除鎖定。 的 [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) 和 [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) 方法示範了一個很好的鎖定範例 `CSimpleStringT` 。
 
 ## <a name="see-also"></a>另請參閱
 

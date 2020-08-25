@@ -1,5 +1,5 @@
 ---
-title: 異常處理宏
+title: 例外狀況處理宏
 ms.date: 11/04/2016
 f1_keywords:
 - atldef/ATL::_ATLCATCH
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - exception handling, macros
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-ms.openlocfilehash: 2beffbbed0efee799005190bd7fd071a2087e4d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7fcd8221ba5f121749cf366a93cc8a6d8d00ed7c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330092"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833435"
 ---
-# <a name="exception-handling-macros"></a>異常處理宏
+# <a name="exception-handling-macros"></a>例外狀況處理宏
 
-這些宏支援異常處理。
+這些宏提供例外狀況處理的支援。
 
-|||
+|名稱|描述|
 |-|-|
-|[_ATLCATCH](#_atlcatch)|語句處理關聯的`_ATLTRY`中發生的錯誤。|
-|[_ATLCATCHALL](#_atlcatchall)|語句處理關聯的`_ATLTRY`中發生的錯誤。|
-|[_ATLTRY](#_atltry)|標記可能發生錯誤的受保護代碼部分。|
+|[_ATLCATCH](#_atlcatch)|語句 (s) 來處理相關聯的中發生的錯誤 `_ATLTRY` 。|
+|[_ATLCATCHALL](#_atlcatchall)|語句 (s) 來處理相關聯的中發生的錯誤 `_ATLTRY` 。|
+|[_ATLTRY](#_atltry)|標記可能發生錯誤的受防護程式碼區段。|
 
 ## <a name="requirements"></a>需求：
 
-**標題:** atldef.h
+**標頭：** atldef。h
 
-## <a name="_atlcatch"></a><a name="_atlcatch"></a>_ATLCATCH
+## <a name="_atlcatch"></a><a name="_atlcatch"></a> _ATLCATCH
 
-語句處理關聯的`_ATLTRY`中發生的錯誤。
+語句 (s) 來處理相關聯的中發生的錯誤 `_ATLTRY` 。
 
 ```
 _ATLCATCH(e)
@@ -40,16 +40,16 @@ _ATLCATCH(e)
 
 ### <a name="parameters"></a>參數
 
-*e*<br/>
-要捕獲的異常。
+*pci-e*<br/>
+要攔截的例外狀況。
 
 ### <a name="remarks"></a>備註
 
-與一起使用`_ATLTRY`。 解析為處理給定類型的C++異常C++ [catch(CAtlexception e)。](../../cpp/try-throw-and-catch-statements-cpp.md)
+與一起使用 `_ATLTRY` 。 解析為 c + + [catch (CAtlException e) ](../../cpp/try-throw-and-catch-statements-cpp.md) 來處理指定的 c + + 例外狀況類型。
 
-## <a name="_atlcatchall"></a><a name="_atlcatchall"></a>_ATLCATCHALL
+## <a name="_atlcatchall"></a><a name="_atlcatchall"></a> _ATLCATCHALL
 
-語句處理關聯的`_ATLTRY`中發生的錯誤。
+語句 (s) 來處理相關聯的中發生的錯誤 `_ATLTRY` 。
 
 ```
 _ATLCATCHALL
@@ -57,11 +57,11 @@ _ATLCATCHALL
 
 ### <a name="remarks"></a>備註
 
-與一起使用`_ATLTRY`。 解析為處理所有類型的C++異常C++ [catch(...)。](../../cpp/try-throw-and-catch-statements-cpp.md)
+與一起使用 `_ATLTRY` 。 解析為 c + + [catch ( ... ) ](../../cpp/try-throw-and-catch-statements-cpp.md) 來處理所有類型的 c + + 例外狀況。
 
-## <a name="_atltry"></a><a name="_atltry"></a>_ATLTRY
+## <a name="_atltry"></a><a name="_atltry"></a> _ATLTRY
 
-標記可能發生錯誤的受保護代碼部分。
+標記可能發生錯誤的受防護程式碼區段。
 
 ```
 _ATLTRY
@@ -69,7 +69,7 @@ _ATLTRY
 
 ### <a name="remarks"></a>備註
 
-與[_ATLCATCH](#_atlcatch)或[_ATLCATCHALL](#_atlcatchall)一起使用。 解析為C++符號[嘗試](../../cpp/try-throw-and-catch-statements-cpp.md)。
+用於搭配 [_ATLCATCH](#_atlcatch) 或 [_ATLCATCHALL](#_atlcatchall)。 解析為 c + + 符號 [try](../../cpp/try-throw-and-catch-statements-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,21 +1,21 @@
 ---
-title: lcid （C++ COM 屬性）
+title: 'lcid (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: bb9e44d34c675e4f5d955c5f422a6dd35259ec8d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7533cd9b269a879c5c2f061dcdfc632b1b27c871
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214795"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834176"
 ---
 # <a name="lcid"></a>lcid
 
-可讓您將地區設定識別碼傳遞給函式。
+可讓您將地區設定識別碼傳遞至函式。
 
 ## <a name="syntax"></a>語法
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214795"
 
 ## <a name="remarks"></a>備註
 
-**Lcid** C++屬性會執行[lcid](/windows/win32/Midl/lcid) MIDL 屬性的功能。 如果您想要執行程式庫區塊的地區設定，請使用 [ **lcid =** `lcid`] 參數來設定[模組](module-cpp.md)屬性。
+**Lcid** c + + 屬性會實作為[lcid](/windows/win32/Midl/lcid) MIDL 屬性的功能。 如果您想要執行程式庫區塊的地區設定，請對 module 屬性使用**lcid =** `lcid` 參數。 [module](module-cpp.md)
 
 ## <a name="example"></a>範例
 
@@ -42,16 +42,14 @@ __interface IStatic {
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面參數|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

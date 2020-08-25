@@ -1,5 +1,5 @@
 ---
-title: 安全識別子通用函數
+title: 安全識別碼全域函式
 ms.date: 11/04/2016
 f1_keywords:
 - atlsecurity/ATL::Sids::AccountOps
@@ -37,21 +37,21 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: 83326c13de7585806ab841f728f587f1131b5e8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e040cbb76e851bd323360f4f5ae602f9c73651d1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325985"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834475"
 ---
-# <a name="security-identifier-global-functions"></a>安全識別子通用函數
+# <a name="security-identifier-global-functions"></a>安全識別碼全域函式
 
-這些函數返回常見的已知 SID 物件。
+這些函數會傳回常見的已知 SID 物件。
 
 > [!IMPORTANT]
-> 下表中列出的函數不能在 Windows 執行時中執行的應用程式中使用。
+> 下表所列的函數不能用於在 Windows 執行階段中執行的應用程式。
 
-|||
+|名稱|描述|
 |-|-|
 |[Sids::AccountOps](#accountops)|傳回 DOMAIN_ALIAS_RID_ACCOUNT_OPS SID。|
 |[Sids::Admins](#admins)|傳回 DOMAIN_ALIAS_RID_ADMINS SID。|
@@ -84,13 +84,13 @@ ms.locfileid: "81325985"
 |[Sids::SystemOps](#systemops)|傳回 DOMAIN_ALIAS_RID_SYSTEM_OPS SID。|
 |[Sids::TerminalServer](#terminalserver)|傳回 SECURITY_TERMINAL_SERVER_RID SID。|
 |[Sids::Users](#users)|傳回 DOMAIN_ALIAS_RID_USERS SID。|
-|[希德::世界](#world)|傳回 SECURITY_WORLD_RID SID。|
+|[Sid：： World](#world)|傳回 SECURITY_WORLD_RID SID。|
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** atlsecurity.h
+**標頭：** atlsecurity.h。h
 
-## <a name="sidsaccountops"></a><a name="accountops"></a>Sids::帳戶
+## <a name="sidsaccountops"></a><a name="accountops"></a> Sid：： AccountOps
 
 傳回 DOMAIN_ALIAS_RID_ACCOUNT_OPS SID。
 
@@ -98,7 +98,7 @@ ms.locfileid: "81325985"
 CSid AccountOps() throw(...);
 ```
 
-## <a name="sidsadmins"></a><a name="admins"></a>Sids::管理員
+## <a name="sidsadmins"></a><a name="admins"></a> Sid：： Admins
 
 傳回 DOMAIN_ALIAS_RID_ADMINS SID。
 
@@ -106,7 +106,7 @@ CSid AccountOps() throw(...);
 CSid Admins() throw(...);
 ```
 
-## <a name="sidsanonymouslogon"></a><a name="anonymouslogon"></a>Sids::匿名登錄
+## <a name="sidsanonymouslogon"></a><a name="anonymouslogon"></a> Sid：： AnonymousLogon
 
 傳回 SECURITY_ANONYMOUS_LOGON_RID SID。
 
@@ -114,7 +114,7 @@ CSid Admins() throw(...);
 CSid AnonymousLogon() throw(...);
 ```
 
-## <a name="sidsauthenticateduser"></a><a name="authenticateduser"></a>Sids::經過身份驗證的使用者
+## <a name="sidsauthenticateduser"></a><a name="authenticateduser"></a> Sid：： AuthenticatedUser
 
 傳回 SECURITY_AUTHENTICATED_USER_RID SID。
 
@@ -122,7 +122,7 @@ CSid AnonymousLogon() throw(...);
 CSid AuthenticatedUser() throw(...);
 ```
 
-## <a name="sidsbackupops"></a><a name="backupops"></a>Sids::備份操作
+## <a name="sidsbackupops"></a><a name="backupops"></a> Sid：： BackupOps
 
 傳回 DOMAIN_ALIAS_RID_BACKUP_OPS SID。
 
@@ -130,7 +130,7 @@ CSid AuthenticatedUser() throw(...);
 CSid BackupOps() throw(...);
 ```
 
-## <a name="sidsbatch"></a><a name="batch"></a>Sids::批次
+## <a name="sidsbatch"></a><a name="batch"></a> Sid：： Batch
 
 傳回 SECURITY_BATCH_RID SID。
 
@@ -138,7 +138,7 @@ CSid BackupOps() throw(...);
 CSid Batch() throw(...);
 ```
 
-## <a name="sidscreatorgroup"></a><a name="creatorgroup"></a>Sids::創造者組
+## <a name="sidscreatorgroup"></a><a name="creatorgroup"></a> Sid：： CreatorGroup
 
 傳回 SECURITY_CREATOR_GROUP_RID SID。
 
@@ -146,7 +146,7 @@ CSid Batch() throw(...);
 CSid CreatorGroup() throw(...);
 ```
 
-## <a name="sidscreatorgroupserver"></a><a name="creatorgroupserver"></a>Sids::創造者群伺服器
+## <a name="sidscreatorgroupserver"></a><a name="creatorgroupserver"></a> Sid：： CreatorGroupServer
 
 傳回 SECURITY_CREATOR_GROUP_SERVER_RID SID。
 
@@ -154,7 +154,7 @@ CSid CreatorGroup() throw(...);
 CSid CreatorGroupServer() throw(...);
 ```
 
-## <a name="sidscreatorowner"></a><a name="creatorowner"></a>Sids::創造者擁有者
+## <a name="sidscreatorowner"></a><a name="creatorowner"></a> Sid：： CreatorOwner
 
 傳回 SECURITY_CREATOR_OWNER_RID SID。
 
@@ -162,7 +162,7 @@ CSid CreatorGroupServer() throw(...);
 CSid CreatorOwner() throw(...);
 ```
 
-## <a name="sidscreatorownerserver"></a><a name="creatorownerserver"></a>Sids::創造者擁有者伺服器
+## <a name="sidscreatorownerserver"></a><a name="creatorownerserver"></a> Sid：： CreatorOwnerServer
 
 傳回 SECURITY_CREATOR_OWNER_SERVER_RID SID。
 
@@ -170,7 +170,7 @@ CSid CreatorOwner() throw(...);
 CSid CreatorOwnerServer() throw(...);
 ```
 
-## <a name="sidsdialup"></a><a name="dialup"></a>希德::D亞里普
+## <a name="sidsdialup"></a><a name="dialup"></a> Sid：:D ialup
 
 傳回 SECURITY_DIALUP_RID SID。
 
@@ -178,7 +178,7 @@ CSid CreatorOwnerServer() throw(...);
 CSid Dialup() throw(...);
 ```
 
-## <a name="sidsguests"></a><a name="guests"></a>希德::客人
+## <a name="sidsguests"></a><a name="guests"></a> Sid：：來賓
 
 傳回 DOMAIN_ALIAS_RID_GUESTS SID。
 
@@ -186,7 +186,7 @@ CSid Dialup() throw(...);
 CSid Guests() throw(...);
 ```
 
-## <a name="sidsinteractive"></a><a name="interactive"></a>Sids::互動
+## <a name="sidsinteractive"></a><a name="interactive"></a> Sid：： Interactive
 
 傳回 SECURITY_INTERACTIVE_RID SID。
 
@@ -194,7 +194,7 @@ CSid Guests() throw(...);
 CSid Interactive() throw(...);
 ```
 
-## <a name="sidslocal"></a><a name="local"></a>Sids::本地端
+## <a name="sidslocal"></a><a name="local"></a> Sid：： Local
 
 傳回 SECURITY_LOCAL_RID SID。
 
@@ -202,7 +202,7 @@ CSid Interactive() throw(...);
 CSid Local() throw(...);
 ```
 
-## <a name="sidsnetwork"></a><a name="network"></a>Sids::網路
+## <a name="sidsnetwork"></a><a name="network"></a> Sid：： Network
 
 傳回 SECURITY_NETWORK_RID SID。
 
@@ -210,7 +210,7 @@ CSid Local() throw(...);
 CSid Network() throw(...);
 ```
 
-## <a name="sidsnetworkservice"></a><a name="networkservice"></a>Sids::網路服務
+## <a name="sidsnetworkservice"></a><a name="networkservice"></a> Sid：： NetworkService
 
 傳回 SECURITY_NETWORK_SERVICE_RID SID。
 
@@ -220,11 +220,11 @@ CSid NetworkService() throw(...);
 
 ### <a name="remarks"></a>備註
 
-使用網路服務使 NT AUTHORITY_網路服務使用者能夠讀取 CPerfMon 安全物件。 網路服務向 ATLServer 代碼添加了一個安全屬性,該代碼將允許 DLL 在 Windows XP 家庭版、Windows XP 專業版、Windows Server 2003 和更大的作業系統上的網路服務帳戶下登錄。
+使用 NetworkService 讓 NT AUTHORITY\NetworkService 使用者能夠讀取 CPerfMon 安全性物件。 NetworkService 將 SecurityAttribute 新增至 ATLServer 程式碼，這可讓 DLL 在 Windows XP Home Edition、Windows XP Professional、Windows Server 2003 及更高版本的作業系統上，于 NetworkService 帳戶下登入。
 
-在 Perfmon MMC 中使用 ATLServer CPerfMon 類創建自訂日誌計數器時,在查看日誌檔時可能不會顯示這些計數器,儘管它們將在即時檢視中正確顯示。 CPerfMon 自定義性能計數器在 Windows XP 主版、Windows XP 專業版、Windows Server 2003(或更高版)操作系統上的"性能日誌和警報"服務 (smlogsvc.exe) 下沒有運行所需的許可權。 此服務在「NT AUTHORITY_網路服務」帳戶下運行。
+當您在 Perfmon MMC 中使用 ATLServer CPerfMon 類別建立自訂記錄檔計數器時，在查看記錄檔時可能不會顯示計數器，不過它們會在即時視圖中正確顯示。 CPerfMon 自訂效能計數器沒有在 Windows XP Home Edition、Windows XP Professional、Windows Server 2003 (或更高) 作業系統上的 "效能記錄檔及警示" 服務 ( # A0) 下執行的必要許可權。 此服務會在 "NT AUTHORITY\NetworkService" 帳戶下執行。
 
-## <a name="sidsnull"></a><a name="null"></a>Sids::空
+## <a name="sidsnull"></a><a name="null"></a> Sid：： Null
 
 傳回 SECURITY_NULL_RID SID。
 
@@ -232,7 +232,7 @@ CSid NetworkService() throw(...);
 CSid Null() throw(...);
 ```
 
-## <a name="sidsprew2kaccess"></a><a name="prew2kaccess"></a>Sids::PreW2KAccess
+## <a name="sidsprew2kaccess"></a><a name="prew2kaccess"></a> Sid：:P reW2KAccess
 
 傳回 DOMAIN_ALIAS_RID_PREW2KCOMPACCESS SID。
 
@@ -240,7 +240,7 @@ CSid Null() throw(...);
 CSid PreW2KAccess() throw(...);
 ```
 
-## <a name="sidspowerusers"></a><a name="powerusers"></a>Sids::P使用者
+## <a name="sidspowerusers"></a><a name="powerusers"></a> Sid：:P owerUsers
 
 傳回 DOMAIN_ALIAS_RID_POWER_USERS SID。
 
@@ -248,7 +248,7 @@ CSid PreW2KAccess() throw(...);
 CSid PowerUsers() throw(...);
 ```
 
-## <a name="sidsprintops"></a><a name="printops"></a>希德::P林圖普斯
+## <a name="sidsprintops"></a><a name="printops"></a> Sid：:P rintOps
 
 傳回 DOMAIN_ALIAS_RID_PRINT_OPS SID。
 
@@ -256,7 +256,7 @@ CSid PowerUsers() throw(...);
 CSid PrintOps() throw(...);
 ```
 
-## <a name="sidsproxy"></a><a name="proxy"></a>希德::P羅西
+## <a name="sidsproxy"></a><a name="proxy"></a> Sid：:P roxy
 
 傳回 SECURITY_PROXY_RID SID。
 
@@ -264,7 +264,7 @@ CSid PrintOps() throw(...);
 CSid Proxy() throw(...);
 ```
 
-## <a name="sidsrasservers"></a><a name="rasservers"></a>Sids::拉塞塞
+## <a name="sidsrasservers"></a><a name="rasservers"></a> Sid：： RasServers
 
 傳回 DOMAIN_ALIAS_RID_RAS_SERVERS SID。
 
@@ -272,7 +272,7 @@ CSid Proxy() throw(...);
 CSid RasServers() throw(...);
 ```
 
-## <a name="sidsreplicator"></a><a name="replicator"></a>Sids::複製器
+## <a name="sidsreplicator"></a><a name="replicator"></a> Sid：：複寫器
 
 傳回 DOMAIN_ALIAS_RID_REPLICATOR SID。
 
@@ -280,7 +280,7 @@ CSid RasServers() throw(...);
 CSid Replicator() throw(...);
 ```
 
-## <a name="sidsrestrictedcode"></a><a name="restrictedcode"></a>Sids::受限代碼
+## <a name="sidsrestrictedcode"></a><a name="restrictedcode"></a> Sid：： RestrictedCode
 
 傳回 SECURITY_RESTRICTED_CODE_RID SID。
 
@@ -288,7 +288,7 @@ CSid Replicator() throw(...);
 CSid RestrictedCode() throw(...);
 ```
 
-## <a name="sidsself"></a><a name="self"></a>希德::自我
+## <a name="sidsself"></a><a name="self"></a> Sid：： Self
 
 傳回 SECURITY_PRINCIPAL_SELF_RID SID。
 
@@ -296,7 +296,7 @@ CSid RestrictedCode() throw(...);
 CSid Self() throw(...);
 ```
 
-## <a name="sidsserverlogon"></a><a name="serverlogon"></a>Sids::伺服器日誌
+## <a name="sidsserverlogon"></a><a name="serverlogon"></a> Sid：： ServerLogon
 
 傳回 SECURITY_SERVER_LOGON_RID SID。
 
@@ -304,7 +304,7 @@ CSid Self() throw(...);
 CSid ServerLogon() throw(...);
 ```
 
-## <a name="sidsservice"></a><a name="service"></a>希德::服務
+## <a name="sidsservice"></a><a name="service"></a> Sid：： Service
 
 傳回 SECURITY_SERVICE_RID SID。
 
@@ -312,7 +312,7 @@ CSid ServerLogon() throw(...);
 CSid Service() throw(...);
 ```
 
-## <a name="sidssystem"></a><a name="system"></a>Sids::系統
+## <a name="sidssystem"></a><a name="system"></a> Sid：： System
 
 傳回 SECURITY_LOCAL_SYSTEM_RID SID。
 
@@ -320,7 +320,7 @@ CSid Service() throw(...);
 CSid System() throw(...);
 ```
 
-## <a name="sidssystemops"></a><a name="systemops"></a>Sids::系統操作
+## <a name="sidssystemops"></a><a name="systemops"></a> Sid：： SystemOps
 
 傳回 DOMAIN_ALIAS_RID_SYSTEM_OPS SID。
 
@@ -328,7 +328,7 @@ CSid System() throw(...);
 CSid SystemOps() throw(...);
 ```
 
-## <a name="sidsterminalserver"></a><a name="terminalserver"></a>Sids::終端伺服器
+## <a name="sidsterminalserver"></a><a name="terminalserver"></a> Sid：： TerminalServer
 
 傳回 SECURITY_TERMINAL_SERVER_RID SID。
 
@@ -336,7 +336,7 @@ CSid SystemOps() throw(...);
 CSid TerminalServer() throw(...);
 ```
 
-## <a name="sidsusers"></a><a name="users"></a>Sids:使用者
+## <a name="sidsusers"></a><a name="users"></a> Sid：： Users
 
 傳回 DOMAIN_ALIAS_RID_USERS SID。
 
@@ -344,7 +344,7 @@ CSid TerminalServer() throw(...);
 CSid Users() throw(...);
 ```
 
-## <a name="sidsworld"></a><a name="world"></a>希德::世界
+## <a name="sidsworld"></a><a name="world"></a> Sid：： World
 
 傳回 SECURITY_WORLD_RID SID。
 
@@ -352,6 +352,6 @@ CSid Users() throw(...);
 CSid World() throw(...);
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [函式](../../atl/reference/atl-functions.md)

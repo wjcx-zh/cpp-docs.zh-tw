@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 2e5d63268413912931c61037f6665d2ceea8f372
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d9bb3cf9c4e34916dad3e435c7f4040dcc5f373
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212044"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831407"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution 類別
 
@@ -72,16 +72,14 @@ public:
 ### <a name="parameters"></a>參數
 
 *IntType*\
-整數結果類型，預設值為 **`int`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+整數結果類型，預設為 **`int`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述內含包含的散發，此分佈會產生具有散發的使用者指定整數類型值，讓每個值都能有同樣的可能性。 下表提供各個成員的文章連結。
+類別樣板描述內含式分佈，其會產生具有散發的使用者指定整數類資料類型的值，因此每個值都同樣可能。 下表提供各個成員的文章連結。
 
-||||
-|-|-|-|
-|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
+[uniform_int_distribution](#uniform_int_distribution)\
+[param_type](#param_type)
 
 屬性成員 `a()` 會傳回目前儲存的分佈下限，而 `b()` 會傳回目前儲存的上限。 對於此分佈類別，這些下限和上限值和一般屬性函式 `min()` 及 `max()` 所傳回的一樣。
 
@@ -173,13 +171,13 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution：： uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a> uniform_int_distribution：： uniform_int_distribution
 
 建構分佈。
 
@@ -191,24 +189,24 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*為*\
+*的*\
 隨機值的下限 (內含)。
 
-*位元組*\
+*B*\
 隨機值的上限 (內含)。
 
-*parm*\
+*>parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
 **前置條件：**`a ≤ b`
 
-第一個函式會建立一個物件，其儲存*的*值保留值*a* ，而其預存*b*值保留值*b*。
+第一個函式會建立一個物件，其儲存 *的* 值會保留值 *a* ，而其儲存的 *b* 值會保留值 *b*。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution：:p aram_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a> uniform_int_distribution：:p aram_type
 
 儲存分佈的參數。
 
@@ -227,13 +225,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*為*\
+*的*\
 隨機值的下限 (內含)。
 
-*位元組*\
+*B*\
 隨機值的上限 (內含)。
 
-*再*\
+*對*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註

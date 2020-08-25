@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212120"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833176"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,16 +32,16 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 
 - 以 Null 結束的字元陣列，通常稱為 C 字串。
 
-- 類型的類別樣板物件， `basic_string` 可處理所有 **`char`** 類似的範本引數。
+- 型別為的類別樣板物件， `basic_string` 可處理所有類似的樣板 **`char`** 引數。
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|一種類型，描述類別樣板的特製化，其專案 `basic_string` 的類型 **`char`** 為 `string` 。|
-|[wstring](../standard-library/string-typedefs.md#wstring)|一種類型，描述類別樣板的特製化，其專案 `basic_string` 的類型 **`wchar_t`** 為 `wstring` 。|
-|[u16string](../standard-library/string-typedefs.md#u16string)|一種類型，描述以類型的元素為基礎的類別樣板特製化 `basic_string` **`char16_t`** 。|
-|[u32string](../standard-library/string-typedefs.md#u32string)|一種類型，描述以類型的元素為基礎的類別樣板特製化 `basic_string` **`char32_t`** 。|
+|[string](../standard-library/string-typedefs.md#string)|一種類型，描述類別樣板的特製化 `basic_string` ，並以類型的專案 **`char`** 做為 `string` 。|
+|[wstring](../standard-library/string-typedefs.md#wstring)|一種類型，描述類別樣板的特製化 `basic_string` ，並以類型的專案 **`wchar_t`** 做為 `wstring` 。|
+|[u16string](../standard-library/string-typedefs.md#u16string)|一種類型，描述以型別專案為基礎的類別樣板特製化 `basic_string` **`char16_t`** 。|
+|[u32string](../standard-library/string-typedefs.md#u32string)|一種類型，描述以型別專案為基礎的類別樣板特製化 `basic_string` **`char32_t`** 。|
 
 ### <a name="operators"></a>運算子
 
@@ -59,43 +59,43 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 
 ### <a name="specialized-template-functions"></a>特製化樣板函式
 
-|||
+|名稱|描述|
 |-|-|
-|雜湊|產生字串的雜湊。|
-|[調換](../standard-library/string-functions.md#swap)|交換兩個字串的字元陣列。|
-|[stod](../standard-library/string-functions.md#stod)|將字元序列轉換為 **`double`** 。|
-|[stof](../standard-library/string-functions.md#stof)|將字元序列轉換為 **`float`** 。|
+|`hash`|產生字串的雜湊。|
+|[交換](../standard-library/string-functions.md#swap)|交換兩個字串的字元陣列。|
+|[stod](../standard-library/string-functions.md#stod)|將字元序列轉換成 **`double`** 。|
+|[stof](../standard-library/string-functions.md#stof)|將字元序列轉換成 **`float`** 。|
 |[stoi](../standard-library/string-functions.md#stoi)|將字元序列轉換為整數。|
-|[stold](../standard-library/string-functions.md#stold)|將字元序列轉換為 **`long double`** 。|
-|[stoll](../standard-library/string-functions.md#stoll)|將字元序列轉換為 **`long long`** 。|
-|[stoul](../standard-library/string-functions.md#stoul)|將字元序列轉換為 **`unsigned long`** 。|
-|[stoull](../standard-library/string-functions.md#stoull)|將字元序列轉換為 **`unsigned long long`** 。|
+|[stold](../standard-library/string-functions.md#stold)|將字元序列轉換成 **`long double`** 。|
+|[stoll](../standard-library/string-functions.md#stoll)|將字元序列轉換成 **`long long`** 。|
+|[stoul](../standard-library/string-functions.md#stoul)|將字元序列轉換成 **`unsigned long`** 。|
+|[stoull](../standard-library/string-functions.md#stoull)|將字元序列轉換成 **`unsigned long long`** 。|
 |[to_string](../standard-library/string-functions.md#to_string)|將值轉換成 `string`。|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|將值轉換成寬 `string`。|
 
 ### <a name="functions"></a>函式
 
-|函式|說明|
+|函式|描述|
 |-|-|
 |[getline 範本](../standard-library/string-functions.md#getline)|從輸入資料流一行一行地擷取字串。|
 
 ### <a name="classes"></a>類別
 
-|類別|說明|
+|類別|描述|
 |-|-|
 |[basic_string 類別](../standard-library/basic-string-class.md)|類別樣板，描述可以儲存任意類似字元之物件序列的物件。|
-|[char_traits 結構](../standard-library/char-traits-struct.md)|類別範本，描述與 CharType 類型的字元相關聯的屬性。|
+|[char_traits 結構](../standard-library/char-traits-struct.md)|類別範本，描述與 >chartype 類型字元相關聯的屬性。|
 
 ### <a name="specializations"></a>特製化
 
-|||
+|名稱|描述|
 |-|-|
-|[char_traits \<char> 結構](../standard-library/char-traits-char-struct.md)|結構，其為 `char_traits` \<CharType> 類型之元素的樣板結構特製化 **`char`** 。|
-|[char_traits<wchar_t> 結構](../standard-library/char-traits-wchar-t-struct.md)|結構，其為 `char_traits` \<CharType> 類型之元素的樣板結構特製化 **`wchar_t`** 。|
-|[char_traits<char16_t> 結構](../standard-library/char-traits-char16-t-struct.md)|結構，其為 `char_traits` \<CharType> 類型之元素的樣板結構特製化 **`char16_t`** 。|
-|[char_traits<char32_t> 結構](../standard-library/char-traits-char32-t-struct.md)|結構，其為 `char_traits` \<CharType> 類型之元素的樣板結構特製化 **`char32_t`** 。|
+|[char_traits \<char> 結構](../standard-library/char-traits-char-struct.md)|結構，此結構為類型專案之樣板結構的特製化 `char_traits` \<CharType> **`char`** 。|
+|[char_traits<wchar_t> 結構](../standard-library/char-traits-wchar-t-struct.md)|結構，此結構為類型專案之樣板結構的特製化 `char_traits` \<CharType> **`wchar_t`** 。|
+|[char_traits<char16_t> 結構](../standard-library/char-traits-char16-t-struct.md)|結構，此結構為類型專案之樣板結構的特製化 `char_traits` \<CharType> **`char16_t`** 。|
+|[char_traits<char32_t> 結構](../standard-library/char-traits-char32-t-struct.md)|結構，此結構為類型專案之樣板結構的特製化 `char_traits` \<CharType> **`char32_t`** 。|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 - **標頭：**\<string>
 

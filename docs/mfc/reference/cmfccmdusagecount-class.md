@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 15026746f2af55b9cc153cce19cf00475e5c5d77
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561098"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834273"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 類別
 
@@ -41,17 +41,15 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|預設建構函式。|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCCmdUsageCount：： AddCmd](#addcmd)|遞增與指定命令相關聯的計數器。|
 |[CMFCCmdUsageCount：： GetCount](#getcount)|抓取與指定的命令識別碼相關聯的使用計數。|
 |[CMFCCmdUsageCount：： HasEnoughInformation](#hasenoughinformation)|判斷此物件是否已收集最少量的追蹤資料。|
@@ -62,9 +60,8 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="data-members"></a>資料成員
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |`m_CmdUsage`|將 `CMap` 命令對應至其使用計數的物件。|
 |`m_nMinUsagePercentage`|經常使用之命令的最小使用量百分比。|
 |`m_nStartCount`|啟動計數器，用來判斷此物件是否已收集最少的追蹤資料量。|

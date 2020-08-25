@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: eaf070d5a98a05dbe3102afac8317ffd59298ad2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c743b91e40c05a35bd5c4d3c0d2e70ecc645714
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321670"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833929"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 屬性頁精靈
 
@@ -30,7 +30,7 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 從 Visual Studio 2008 開始，此精靈所產生的註冊指令碼將會在 **HKEY_CURRENT_USER** 而非 **HKEY_LOCAL_MACHINE** 下方註冊它的 COM 元件。 若要修改此行為，請設定 ATL 精靈的 [為所有使用者註冊元件]**** 選項。
 
-## <a name="names"></a>Names
+## <a name="names"></a>名稱
 
 指定要新增至專案的物件、介面和類別名稱。 除了**簡短名稱**，所有其他方塊均可單獨編輯。 如果您變更**簡短名稱**的文字，該變更即會反映於此頁面的所有其他方塊名稱中。 如果您在 [COM] 區段中變更 **Coclass** 名稱，則變更會反映於 [型別]**** 和 [ProgID]**** 方塊中。 此命名行為旨在讓您開發屬性頁時，能夠輕鬆地識別所有名稱。
 
@@ -41,9 +41,8 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 提供建立來實作物件的 C++ 類別相關資訊。
 
-|||
-|-|-|
 |詞彙|定義|
+|-|-|
 |**簡短名稱**|設定物件的縮寫名稱。 您提供的名稱可決定類別和 **Coclass** 名稱、檔案 (**.cpp** 和 **.h**) 名稱、**型別**名稱，以及 **ProgID** (但前提是您並未個別變更這些欄位)。|
 |**.h 檔案**|設定新物件類別的標頭檔名稱。 根據預設，此名稱會以您在 [簡短名稱]**** 中提供的名稱為基礎。 按一下省略符號按鈕，將檔案名稱儲存至您選擇的位置，或將類別宣告附加至現有的檔案。 如果您選取現有的檔案，在您按一下精靈中的 [完成]**** 之前，精靈不會將它儲存至選取的位置。<br /><br /> 精靈不會覆寫檔案。 如果您選取現有檔案的名稱，當您按一下 [完成]**** 時，精靈會提示您指出是否應該將類別宣告附加至檔案的內容。 按一下 [是]**** 可附加檔案，按一下 [否]**** 可返回精靈並指定另一個檔案名稱。|
 |**類別**|設定實作物件的類別名稱。 此名稱會以您在 [簡短名稱]**** 中提供的名稱為基礎，前面加上 'C'，此為類別名稱的一般前置詞。|
@@ -54,14 +53,14 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 提供物件 COM 功能的相關資訊。
 
-- **Coclass**
+- **元件類**
 
    設定元件類別的名稱，其中包含物件所支援的介面清單。
 
    > [!NOTE]
    > 如果您使用屬性 (Attribute) 建立專案，或者，如果您在此精靈頁面中指出屬性 (Property) 頁會使用屬性 (Attribute)，您就無法變更此選項，因為 ATL 未包含 `coclass` 屬性 (Attribute)。
 
-- **型別**
+- **類型**
 
    設定將出現在登錄中的物件描述
 
@@ -75,4 +74,4 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 [選項，ATL 屬性頁精靈](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [字串，ATL 屬性頁精靈](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[範例︰實作屬性頁](../../atl/example-implementing-a-property-page.md)
+[範例：執行屬性頁](../../atl/example-implementing-a-property-page.md)

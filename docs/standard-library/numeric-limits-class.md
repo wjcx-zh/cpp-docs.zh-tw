@@ -70,16 +70,16 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: f0b33404f16df59e2cb73023f3539e87080734a1
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: eb2ee9bc6bc887ff6739c3da1bf2566dbdcbc016
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520599"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830679"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits 類別
 
-類別範本會描述內建數數值型別的算術屬性。
+類別範本描述內建數數值型別的算術屬性。
 
 ## <a name="syntax"></a>語法
 
@@ -90,27 +90,27 @@ template <class Type>
 
 ### <a name="parameters"></a>參數
 
-*型*\
-正在測試、查詢或設定其屬性的基本項目資料類型。 *類型*也可以宣告為 **`const`** 、 **`volatile`** 或 **`const volatile`** 。
+*類型*\
+正在測試、查詢或設定其屬性的基本項目資料類型。 *型* 別也可以宣告為 **`const`** 、 **`volatile`** 或 **`const volatile`** 。
 
 ## <a name="remarks"></a>備註
 
-標頭定義了、、、、、、、、、、、、、、、、和類型的明確特製化 **`wchar_t`** **`bool`** **`char`** **`signed char`** **`unsigned char`** **`short`** **`unsigned short`** **`int`** **`unsigned int`** **`long`** **`unsigned long`** **`float`** **`double`** **`long double`** **`long long`** **`unsigned long long`** **`char16_t`** **`char32_t`** 。 針對這些明確特製化，成員[numeric_limits：： is_specialized](#is_specialized)為 **`true`** ，而且所有相關成員都有有意義的值。 這個程式可提供額外的明確特製化。 類別的大部分成員函式會描述或測試的可能實作為 **`float`** 。
+標頭會定義類型、、、、、、、、、、、、、、、、和的明確特製化 **`wchar_t`** **`bool`** **`char`** **`signed char`** **`unsigned char`** **`short`** **`unsigned short`** **`int`** **`unsigned int`** **`long`** **`unsigned long`** **`float`** **`double`** **`long double`** **`long long`** **`unsigned long long`** **`char16_t`** **`char32_t`** 。 針對這些明確特製化，成員 [numeric_limits：： is_specialized](#is_specialized) 為 **`true`** ，而且所有相關成員都具有有意義的值。 這個程式可提供額外的明確特製化。 類別的大部分成員函式會描述或測試的可能實作為 **`float`** 。
 
-針對任意特製化，沒有任何成員包含有意義的值。 沒有有意義的值的成員物件會儲存零（或 **`false`** ），而不會傳回有意義值的成員函式會傳回 `Type(0)` 。
+針對任意特製化，沒有任何成員包含有意義的值。 沒有有意義值的成員物件會儲存零 (或 **`false`**) ，而不會傳回有意義值的成員函式會傳回 `Type(0)` 。
 
 ## <a name="static-functions-and-constants"></a>靜態函式和常數
 
-|||
+|名稱|描述|
 |-|-|
 |[denorm_min](#denorm_min)|傳回未標準化的最小非零值。|
 |[數字](#digits)|傳回基數數字的數目，其中該類型可以在不減少有效位數的情況下表示。|
 |[digits10](#digits10)|傳回十進位數字的數目，其中該類型可以在不減少有效位數的情況下表示。|
-|[epsilon](#epsilon)|傳回資料類型可以表示之介於 1 到大於 1 的最小值之間的差異。|
+|[小量](#epsilon)|傳回資料類型可以表示之介於 1 到大於 1 的最小值之間的差異。|
 |[has_denorm](#has_denorm)|測試類型是否允許未標準化的值。|
 |[has_denorm_loss](#has_denorm_loss)|測試偵測到的精確度遺失是否為未標準化遺失，而非不精確的結果。|
 |[has_infinity](#has_infinity)|測試類型是否有正無限大的表示。|
-|[has_quiet_NaN](#has_quiet_nan)|測試類型是否有無信號（NAN）的標記法，也就是不是信號。|
+|[has_quiet_NaN](#has_quiet_nan)|測試類型是否有無訊息 (NAN) 的標記法，而非信號。|
 |[has_signaling_NaN](#has_signaling_nan)|測試類型是否有不是數字 (NAN) 的訊號表示。|
 |[無限](#infinity)|類型的正無限大表示 (如果有的話)。|
 |[is_bounded](#is_bounded)|測試類型可能代表的一組值是否為有限值。|
@@ -119,8 +119,8 @@ template <class Type>
 |[is_integer](#is_integer)|測試類型是否有整數表示。|
 |[is_modulo](#is_modulo)|測試類型是否有模數表示。|
 |[is_signed](#is_signed)|測試類型是否有正負號表示。|
-|[is_specialized](#is_specialized)|測試類型是否在類別樣板中定義了明確的特製化 `numeric_limits` 。|
-|[層](#lowest)|傳回最大負數的有限值。|
+|[is_specialized](#is_specialized)|測試類型是否有在類別範本中定義的明確特製化 `numeric_limits` 。|
+|[最低](#lowest)|傳回最大負數的有限值。|
 |[max](#max)|傳回類型的最大有限值。|
 |[max_digits10](#max_digits10)|傳回十進位數字的數目，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。|
 |[max_exponent](#max_exponent)|傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。|
@@ -129,14 +129,14 @@ template <class Type>
 |[min_exponent](#min_exponent)|傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。|
 |[min_exponent10](#min_exponent10)|傳回當 10 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。|
 |[quiet_NaN](#quiet_nan)|傳回類型非數字 (NAN) 的無訊息表示。|
-|[基](#radix)|傳回用來表示類型的整數基底 (稱為基數)。|
+|[基數](#radix)|傳回用來表示類型的整數基底 (稱為基數)。|
 |[round_error](#round_error)|傳回類型的最大進位誤差。|
 |[round_style](#round_style)|傳回一個值，該值描述實作可選擇用來將浮點值捨入為整數值的各種方法。|
 |[signaling_NaN](#signaling_nan)|傳回類型非數字 (NAN) 的訊號表示。|
 |[tinyness_before](#tinyness_before)|測試類型是否可以判斷某個值太小，而無法在捨入前以標準化數值表示。|
-|[陷井](#traps)|測試要報告算術例外狀況的設限是否會針對類型實作。|
+|[陷阱](#traps)|測試要報告算術例外狀況的設限是否會針對類型實作。|
 
-### <a name="denorm_min"></a><a name="denorm_min"></a>denorm_min
+### <a name="denorm_min"></a><a name="denorm_min"></a> denorm_min
 
 傳回未標準化的最小非零值。
 
@@ -152,7 +152,7 @@ static constexpr Type denorm_min() throw();
 
 **`long double`** 與 **`double`** c + + 編譯器的相同。
 
-函式會傳回類型的最小值，如果[has_denorm](#has_denorm)不等於，則會與[min](#min)相同 `denorm_present` 。
+函數會傳回類型的最小值，如果[has_denorm](#has_denorm)不等於則為[min](#min) `denorm_present` 。
 
 #### <a name="example"></a>範例
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a><a name="digits"></a>進制
+### <a name="digits"></a><a name="digits"></a> 數位
 
 傳回基數數字的數目，其中該類型可以在不減少有效位數的情況下表示。
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a><a name="digits10"></a>digits10
+### <a name="digits10"></a><a name="digits10"></a> digits10
 
 傳回十進位數字的數目，其中該類型可以在不減少有效位數的情況下表示。
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a><a name="epsilon"></a>epsilon
+### <a name="epsilon"></a><a name="epsilon"></a> 小量
 
 函式會傳回可針對資料類型代表的 1 到大於 1 的最小值之間的差異。
 
@@ -297,7 +297,7 @@ static constexpr Type epsilon() throw();
 
 #### <a name="remarks"></a>備註
 
-類型的值為 FLT_EPSILON **`float`** 。 `epsilon`類型是最小的正浮點數*n* ，因此可顯示*n*  +  `epsilon`  +  *n* 。
+此值為類型的 FLT_EPSILON **`float`** 。 `epsilon`針對類型，這是最小的正整數浮點數*N* ，因此可以表示*n*  +  `epsilon`  +  *n* 。
 
 #### <a name="example"></a>範例
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a><a name="has_denorm"></a>has_denorm
+### <a name="has_denorm"></a><a name="has_denorm"></a> has_denorm
 
 測試類型是否允許未標準化的值。
 
@@ -345,11 +345,11 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 #### <a name="return-value"></a>傳回值
 
-類型的列舉值 `const float_denorm_style` ，指出類型是否允許反正規化的值。
+型別的列舉值 `const float_denorm_style` ，指出型別是否允許反正規化的值。
 
 #### <a name="remarks"></a>備註
 
-具有反正規化 `denorm_present` 值之浮點類型的成員存放區，實際上是可變數目的指數位。
+具有反正規化 `denorm_present` 值之浮點數類型的成員存放區，實際上是可變數的指數位數目。
 
 #### <a name="example"></a>範例
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a>has_denorm_loss
+### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a> has_denorm_loss
 
 測試偵測到的精確度遺失是否為未標準化遺失，而非不精確的結果。
 
@@ -391,7 +391,7 @@ static constexpr bool has_denorm_loss = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果偵測到精確度遺失，則視為反正規化的遺失;**`false`** 如果不是，則為。
+**`true`** 如果偵測到精確度遺失，則為非正規化遺失; **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a><a name="has_infinity"></a>has_infinity
+### <a name="has_infinity"></a><a name="has_infinity"></a> has_infinity
 
 測試類型是否有正無限大的表示。
 
@@ -437,11 +437,11 @@ static constexpr bool has_infinity = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型具有正無限大的標記法，則為，**`false`** 如果不是，則為。
+**`true`** 如果類型有正無限大的標記法，則為， **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
-**`true`** 如果[is_iec559](#is_iec559)為，成員會傳回 **`true`** 。
+**`true`** 如果[is_iec559](#is_iec559)為，就會傳回成員 **`true`** 。
 
 #### <a name="example"></a>範例
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a>has_quiet_NaN
+### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a> has_quiet_NaN
 
 測試類型是否有不是數字 (NAN) 的無訊息 (非訊號) 表示。
 
@@ -483,11 +483,11 @@ static constexpr bool has_quiet_NaN = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果**類型**具有 quiet NAN 的標記法，則為，**`false`** 如果不是，則為。
+**`true`** 如果 **類型** 具有無訊息 NAN 的表示，則為， **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
-無訊息 NAN 是代表「不是數字」(not a number) 的編碼，不會在運算式中發出其存在訊號。 **`true`** 如果[is_iec559](#is_iec559)為 true，則傳回值為。
+無訊息 NAN 是代表「不是數字」(not a number) 的編碼，不會在運算式中發出其存在訊號。 **`true`** 如果[is_iec559](#is_iec559)為 true，則傳回值。
 
 #### <a name="example"></a>範例
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a>has_signaling_NaN
+### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a> has_signaling_NaN
 
 測試類型是否有不是數字 (NAN) 的訊號表示。
 
@@ -529,11 +529,11 @@ static constexpr bool has_signaling_NaN = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型具有信號 NAN 的標記法，則為，**`false`** 如果不是，則為。
+**`true`** 如果類型具有信號 NAN 的標記法，則為， **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
-帶訊號 NAN 是代表「不是數字」的編碼，會在運算式中發出其存在訊號。 **`true`** 如果[is_iec559](#is_iec559)為 true，則傳回值為。
+帶訊號 NAN 是代表「不是數字」的編碼，會在運算式中發出其存在訊號。 **`true`** 如果[is_iec559](#is_iec559)為 true，則傳回值。
 
 #### <a name="example"></a>範例
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a><a name="infinity"></a>無限
+### <a name="infinity"></a><a name="infinity"></a> 無限
 
 類型的正無限大表示 (如果有的話)。
 
@@ -579,7 +579,7 @@ static constexpr Type infinity() throw();
 
 #### <a name="remarks"></a>備註
 
-只有當[has_infinity](#has_infinity)為時，傳回值才有意義 **`true`** 。
+只有當 [has_infinity](#has_infinity) 為時，傳回值才有意義 **`true`** 。
 
 #### <a name="example"></a>範例
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a><a name="is_bounded"></a>is_bounded
+### <a name="is_bounded"></a><a name="is_bounded"></a> is_bounded
 
 測試類型可能代表的一組值是否為有限值。
 
@@ -629,11 +629,11 @@ static constexpr bool is_bounded = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型具有可顯示值的限定集合，則為，**`false`** 如果不是，則為。
+**`true`** 如果類型有一組限定的表示值，則為， **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
-所有預先定義的類型都具有一組限定的可以顯示值，並傳回 **`true`** 。
+所有預先定義的類型都有一組限定的可表示值並傳回 **`true`** 。
 
 #### <a name="example"></a>範例
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a><a name="is_exact"></a>is_exact
+### <a name="is_exact"></a><a name="is_exact"></a> is_exact
 
 測試執行計算的類型是否沒有進位誤差。
 
@@ -683,11 +683,11 @@ static constexpr bool is_exact = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果計算沒有進位誤差，則為，**`false`** 如果不是，則為。
+**`true`** 如果計算沒有舍入錯誤，則為， **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
-所有預先定義的整數類型都有其值的精確表示，並傳回 **`false`** 。 固定點或有理數表示也視為精確，但浮點數表示則不視為精確。
+所有預先定義的整數類型都有其值的確切標記法，並傳回 **`false`** 。 固定點或有理數表示也視為精確，但浮點數表示則不視為精確。
 
 #### <a name="example"></a>範例
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a><a name="is_iec559"></a>is_iec559
+### <a name="is_iec559"></a><a name="is_iec559"></a> is_iec559
 
 測試類型是否符合 IEC 559 標準。
 
@@ -737,7 +737,7 @@ static constexpr bool is_iec559 = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型符合 IEC 559 標準，則為，**`false`** 如果不是，則為。
+**`true`** 如果類型符合 IEC 559 標準; **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a><a name="is_integer"></a>is_integer
+### <a name="is_integer"></a><a name="is_integer"></a> is_integer
 
 測試類型是否有整數表示。
 
@@ -787,7 +787,7 @@ static constexpr bool is_integer = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型具有整數標記法，則為，**`false`** 如果不是，則為。
+**`true`** 如果類型具有整數表示，則為， **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
@@ -827,9 +827,9 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a><a name="is_modulo"></a>is_modulo
+### <a name="is_modulo"></a><a name="is_modulo"></a> is_modulo
 
-測試**類型**是否有模數表示。
+測試 **類型** 是否有模數表示。
 
 ```cpp
 static constexpr bool is_modulo = false;
@@ -837,7 +837,7 @@ static constexpr bool is_modulo = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型具有模數標記法，則為，**`false`** 如果不是，則為。
+**`true`** 如果類型有模數標記法，則為， **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a><a name="is_signed"></a>is_signed
+### <a name="is_signed"></a><a name="is_signed"></a> is_signed
 
 測試類型是否有正負號表示。
 
@@ -887,7 +887,7 @@ static constexpr bool is_signed = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型具有帶正負號的標記法，則為，**`false`** 如果不是，則為。
+**`true`** 如果類型具有帶正負號的標記法; **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
@@ -927,9 +927,9 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a><a name="is_specialized"></a>is_specialized
+### <a name="is_specialized"></a><a name="is_specialized"></a> is_specialized
 
-測試類型是否在類別樣板中定義了明確的特製化 `numeric_limits` 。
+測試類型是否有在類別範本中定義的明確特製化 `numeric_limits` 。
 
 ```cpp
 static constexpr bool is_specialized = false;
@@ -937,11 +937,11 @@ static constexpr bool is_specialized = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型在類別樣板中定義了明確的特製化，則為，**`false`** 如果不是，則為。
+**`true`** 如果類型具有在類別範本中定義的明確特製化，則為， **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
-指標以外的所有純量類型都具有針對類別樣板定義的明確特製化 `numeric_limits` 。
+指標以外的所有純量類型都有針對類別範本定義的明確特製化 `numeric_limits` 。
 
 #### <a name="example"></a>範例
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a><a name="lowest"></a>層
+### <a name="lowest"></a><a name="lowest"></a> 最低
 
 傳回最大負數的有限值。
 
@@ -995,9 +995,9 @@ static constexpr Type lowest() throw();
 
 #### <a name="remarks"></a>備註
 
-傳回類型的最大負數有限值 (如果是整數類型，通常是 `min()`，如果是浮點數類型則是 `-max()`)。 如果為，則傳回值會有意義 `is_bounded` **`true`** 。
+傳回類型的最大負數有限值 (如果是整數類型，通常是 `min()`，如果是浮點數類型則是 `-max()`)。 如果為，則傳回值是有意義的 `is_bounded` **`true`** 。
 
-### <a name="max"></a><a name="max"></a>讀數
+### <a name="max"></a><a name="max"></a> 麥克斯
 
 傳回類型的最大有限值。
 
@@ -1011,7 +1011,7 @@ static constexpr Type max() throw();
 
 #### <a name="remarks"></a>備註
 
-類型的最大有限值是 INT_MAX 類型 **`int`** 和 FLT_MAX **`float`** 。 如果[is_bounded](#is_bounded)為，則傳回值會有意義 **`true`** 。
+類型的最大有限值是 INT_MAX 類型 **`int`** 和 FLT_MAX **`float`** 。 如果 [is_bounded](#is_bounded) 為，則傳回值是有意義的 **`true`** 。
 
 #### <a name="example"></a>範例
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a><a name="max_digits10"></a>max_digits10
+### <a name="max_digits10"></a><a name="max_digits10"></a> max_digits10
 
 傳回十進位數字的數值，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。
 
@@ -1055,7 +1055,7 @@ static constexpr int max_digits10 = 0;
 
 此成員儲存十進位數字的數值，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。
 
-### <a name="max_exponent"></a><a name="max_exponent"></a>max_exponent
+### <a name="max_exponent"></a><a name="max_exponent"></a> max_exponent
 
 傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。
 
@@ -1069,7 +1069,7 @@ static constexpr int max_exponent = 0;
 
 #### <a name="remarks"></a>備註
 
-此成員函式傳回值僅對浮點數類型有意義。 `max_exponent`是類型的 FLT_MAX_EXP 值 **`float`** 。
+此成員函式傳回值僅對浮點數類型有意義。 `max_exponent`是類型 FLT_MAX_EXP 的值 **`float`** 。
 
 #### <a name="example"></a>範例
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a><a name="max_exponent10"></a>max_exponent10
+### <a name="max_exponent10"></a><a name="max_exponent10"></a> max_exponent10
 
 傳回當 10 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。
 
@@ -1115,7 +1115,7 @@ static constexpr int max_exponent10 = 0;
 
 #### <a name="remarks"></a>備註
 
-此成員函式傳回值僅對浮點數類型有意義。 `max_exponent`是類型的 FLT_MAX_10 值 **`float`** 。
+此成員函式傳回值僅對浮點數類型有意義。 `max_exponent`是類型 FLT_MAX_10 的值 **`float`** 。
 
 #### <a name="example"></a>範例
 
@@ -1161,7 +1161,7 @@ static constexpr Type min() throw();
 
 #### <a name="remarks"></a>備註
 
-類型的最小正規化值是 INT_MIN 類型 **`int`** ，而 FLT_MIN **`float`** 。 如果[is_bounded](#is_bounded)是 **`true`** 或[is_signed](#is_signed)為，則傳回值會有意義 **`false`** 。
+類型的最小正規化值是 INT_MIN 類型 **`int`** 和 FLT_MIN **`float`** 。 如果 [is_bounded](#is_bounded) 是 **`true`** 或 [is_signed](#is_signed) 為，則傳回值會有意義 **`false`** 。
 
 #### <a name="example"></a>範例
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a><a name="min_exponent"></a>min_exponent
+### <a name="min_exponent"></a><a name="min_exponent"></a> min_exponent
 
 傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。
 
@@ -1211,7 +1211,7 @@ static constexpr int min_exponent = 0;
 
 #### <a name="remarks"></a>備註
 
-此成員函式僅對浮點數類型有意義。 `min_exponent`是類型的 FLT_MIN_EXP 值 **`float`** 。
+此成員函式僅對浮點數類型有意義。 `min_exponent`是類型 FLT_MIN_EXP 的值 **`float`** 。
 
 #### <a name="example"></a>範例
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a><a name="min_exponent10"></a>min_exponent10
+### <a name="min_exponent10"></a><a name="min_exponent10"></a> min_exponent10
 
 傳回當 10 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。
 
@@ -1257,7 +1257,7 @@ static constexpr int min_exponent10 = 0;
 
 #### <a name="remarks"></a>備註
 
-此成員函式僅對浮點數類型有意義。 `min_exponent10`是類型的 FLT_MIN_10_EXP 值 **`float`** 。
+此成員函式僅對浮點數類型有意義。 `min_exponent10`是類型 FLT_MIN_10_EXP 的值 **`float`** 。
 
 #### <a name="example"></a>範例
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a><a name="quiet_nan"></a>quiet_NaN
+### <a name="quiet_nan"></a><a name="quiet_nan"></a> quiet_NaN
 
 傳回類型非數字 (NAN) 的無訊息表示。
 
@@ -1303,7 +1303,7 @@ static constexpr Type quiet_NaN() throw();
 
 #### <a name="remarks"></a>備註
 
-只有當[has_quiet_NaN](#has_quiet_nan)為時，傳回值才有意義 **`true`** 。
+只有當 [has_quiet_NaN](#has_quiet_nan) 為時，傳回值才有意義 **`true`** 。
 
 #### <a name="example"></a>範例
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a><a name="radix"></a>基
+### <a name="radix"></a><a name="radix"></a> 基數
 
 傳回用來表示類型的整數基底 (稱為基數)。
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a><a name="round_error"></a>round_error
+### <a name="round_error"></a><a name="round_error"></a> round_error
 
 傳回類型的最大進位誤差。
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a><a name="round_style"></a>round_style
+### <a name="round_style"></a><a name="round_style"></a> round_style
 
 傳回一個值，該值描述實作可選擇用來將浮點值捨入為整數值的各種方法。
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a><a name="signaling_nan"></a>signaling_NaN
+### <a name="signaling_nan"></a><a name="signaling_nan"></a> signaling_NaN
 
 傳回類型非數字 (NAN) 的訊號表示。
 
@@ -1484,7 +1484,7 @@ static constexpr Type signaling_NaN() throw();
 
 #### <a name="remarks"></a>備註
 
-只有當[has_signaling_NaN](#has_signaling_nan)為時，傳回值才有意義 **`true`** 。
+只有當 [has_signaling_NaN](#has_signaling_nan) 為時，傳回值才有意義 **`true`** 。
 
 #### <a name="example"></a>範例
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a><a name="tinyness_before"></a>tinyness_before
+### <a name="tinyness_before"></a><a name="tinyness_before"></a> tinyness_before
 
 測試類型是否可以判斷某個值太小，而無法在捨入前以標準化數值表示。
 
@@ -1520,7 +1520,7 @@ static constexpr bool tinyness_before = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果類型可以在進位之前偵測出微小的值，則為;**`false`** 如果不是，則為。
+**`true`** 如果類型可以在四捨五入之前偵測出小值; **`false`** 如果不是，則為。
 
 #### <a name="remarks"></a>備註
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a><a name="traps"></a>陷井
+### <a name="traps"></a><a name="traps"></a> 陷阱
 
 測試要報告算術例外狀況的設限是否會針對類型實作。
 
@@ -1570,7 +1570,7 @@ static constexpr bool traps = false;
 
 #### <a name="return-value"></a>傳回值
 
-**`true`** 如果已針對型別執行陷阱，則為，**`false`** 如果不是，則為。
+**`true`** 如果已針對類型執行補漏設，則為， **`false`** 如果不是，則為。
 
 #### <a name="example"></a>範例
 

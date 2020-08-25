@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d1a521f8ac0a33dbc59d789e506ac1dd9c906e3e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562047"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834228"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 類別
 
@@ -37,16 +37,14 @@ class CMFCTabDropTarget : public COleDropTarget
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|預設建構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCTabDropTarget：： System.windows.uielement.ondragenter](#ondragenter)|當使用者將物件拖曳到索引標籤視窗時由架構呼叫。  (覆寫 [COleDropTarget：： system.windows.uielement.ondragenter](../../mfc/reference/coledroptarget-class.md#ondragenter)。 ) |
 |[CMFCTabDropTarget：： System.windows.uielement.ondragleave](#ondragleave)|當使用者在具有焦點的索引標籤視窗之外拖曳物件時，由架構呼叫。  (覆寫 [COleDropTarget：： system.windows.uielement.ondragleave](../../mfc/reference/coledroptarget-class.md#ondragleave)。 ) |
 |[CMFCTabDropTarget：： System.windows.uielement.ondragover](#ondragover)|當使用者將物件拖曳到具有焦點的索引標籤視窗上時，由架構呼叫。  (覆寫 [COleDropTarget：： system.windows.uielement.ondragover](../../mfc/reference/coledroptarget-class.md#ondragover)。 ) |

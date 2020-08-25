@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 372a1df6500f4d7219c89d8f82425246c2236514
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410170"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831134"
 ---
-# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 列舉
+# <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 列舉
 
-指定您用來修改影像編輯器 對話方塊中的影像繪圖模式。
+指定您在 [影像編輯器] 對話方塊中用來修改影像的繪圖模式。
 
 ## <a name="syntax"></a>語法
 
@@ -33,25 +33,24 @@ enum IMAGE_EDIT_MODE
 
 ## <a name="members"></a>成員
 
-|||
-|-|-|
 |名稱|描述|
-|IMAGE_EDIT_MODE_PEN|用來繪製個別像素為單位。|
-|IMAGE_EDIT_MODE_FILL|用來填滿所有相鄰區域包含在目前游標位置的色彩。|
-|IMAGE_EDIT_MODE_LINE|用來繪製一條線。|
+|-|-|
+|IMAGE_EDIT_MODE_PEN|用來繪製個別圖元。|
+|IMAGE_EDIT_MODE_FILL|用來填滿在目前游標位置包含色彩的所有相鄰區域。|
+|IMAGE_EDIT_MODE_LINE|用來繪製線條。|
 |IMAGE_EDIT_MODE_RECT|用來繪製矩形。|
 |IMAGE_EDIT_MODE_ELLIPSE|用來繪製橢圓形。|
-|IMAGE_EDIT_MODE_COLOR|用來設定目前色彩的色彩，在目前游標位置。|
+|IMAGE_EDIT_MODE_COLOR|用來將目前的色彩設定為目前游標位置的色彩。|
 
 ### <a name="remarks"></a>備註
 
-`CMFCImagePaintArea`和`CMFCImageEditorDialog`類別會使用這個列舉型別來設定目前的繪製模式。 繪製模式和目前色彩會用來修改影像編輯器 對話方塊中的 圖片 區域中。 如需詳細資訊`CMFCImagePaintArea`並`CMFCImageEditorDialog`，請參閱[CMFCImagePaintArea 類別](../../mfc/reference/cmfcimagepaintarea-class.md)並[CMFCImageEditorDialog 類別](../../mfc/reference/cmfcimageeditordialog-class.md)。
+`CMFCImagePaintArea`和 `CMFCImageEditorDialog` 類別會使用這個列舉來設定目前的繪圖模式。 在 [影像編輯器] 對話方塊中，會使用繪圖模式和目前的色彩來修改圖片區域。 如需和的詳細資訊 `CMFCImagePaintArea` `CMFCImageEditorDialog` ，請參閱 [CMFCImagePaintArea 類別](../../mfc/reference/cmfcimagepaintarea-class.md) 和 [CMFCImageEditorDialog 類別](../../mfc/reference/cmfcimageeditordialog-class.md)。
 
-當您選取色彩，您可以從映像使用 IMAGE_EDIT_MODE_COLOR 繪圖模式時，架構會將目前的繪製模式設定為 IMAGE_EDIT_MODE_PEN。
+當您使用 IMAGE_EDIT_MODE_COLOR 繪圖模式從影像中選取色彩時，架構會將目前的繪圖模式設定為 IMAGE_EDIT_MODE_PEN。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標頭：** afximagepaintarea.h
+**標頭：** afximagepaintarea。h
 
 ## <a name="see-also"></a>另請參閱
 

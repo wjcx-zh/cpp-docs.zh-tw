@@ -1,17 +1,17 @@
 ---
-title: iid_is （C++ COM 屬性）
+title: 'iid_is (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a8fe8c7481cd251baff65293607733573f46ea6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167988"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832213"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -30,11 +30,11 @@ C 語言運算式，指定介面指標所指向之 COM 介面的 IID。
 
 ## <a name="remarks"></a>備註
 
-**Iid_is** C++屬性具有與[iid_is](/windows/win32/Midl/iid-is) MIDL 屬性相同的功能。
+**Iid_is** c + + 屬性具有與[iid_is](/windows/win32/Midl/iid-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**iid_is**：
+下列程式碼示範如何使用 **iid_is**：
 
 ```cpp
 // cpp_attr_ref_iid_is.cpp
@@ -51,16 +51,14 @@ __interface IFireTabCtrl : IDispatch
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面參數，資料成員|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

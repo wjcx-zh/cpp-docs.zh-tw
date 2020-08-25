@@ -1,17 +1,17 @@
 ---
-title: db_command （c + + COM 屬性）
+title: 'db_command (c + + COM 屬性) '
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232777"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831368"
 ---
 # <a name="db_command"></a>db_command
 
@@ -38,13 +38,13 @@ ms.locfileid: "87232777"
 > 系結參數區塊 1 \
 > &nbsp;&nbsp;OLE DB 命令 \
 > 系結參數區塊 2 \
-> &nbsp;&nbsp;OLE DB 命令的接續 \
+> &nbsp;&nbsp;接續 OLE DB 命令 \
 > 系結參數區塊 3 \
 > ...
 
 *「繫結參數區塊」* (binding parameter block) 定義如下︰
 
-> **（ \[ ** *bindtype* **]** *szVar1* \[ ， *szVar2* \[ ， *nVar3* \[ ，...]]] **）**
+> ** (\[ ***bindtype* **]** *szVar1* \[ ， *szVar2* \[ ， *nVar3* \[ ，...]]] **) **
 
 其中：
 
@@ -52,26 +52,26 @@ ms.locfileid: "87232777"
 
 - **\[***bindtype* **]** 是下列其中一個不區分大小寫的字串：
 
-  - ** \[ db_column]** 會將每個成員變數系結至資料列集中的資料行。
+  - ** \[ db_column]** 會將每個成員變數系結至資料列集內的資料行。
 
-  - ** \[ bindto]** （與** \[ db_column]** 相同）。
+  - ** \[ bindto]** (與** \[ db_column]**) 相同。
 
   - ** \[ in]** 會將成員變數系結為輸入參數。
 
   - ** \[ out]** 會將成員變數系結為輸出參數。
 
-  - ** \[ in、out]** 會將成員變數系結為輸入/輸出參數。
+  - ** \[ in，out]** 會將成員變數系結為輸入/輸出參數。
 
-- *szvarx 會*， *nVarX*會解析為目前範圍內的成員變數。
+- *szVarX*， *nVarX* 會解析為目前範圍內的成員變數。
 
 - **)** 標示資料繫結區塊的結束。
 
-如果命令字串包含一或多個規範（例如 \[ in]、 \[ out] 或 \[ in/out）， **db_command**會建立參數對應。
+如果命令字串包含一或多個規範（例如 \[ in]、 \[ out）或 \[ in/out）， **db_command** 會建立參數對應。
 
-如果命令字串包含一或多個參數，例如 \[ db_column] 或 \[ bindto]， **db_command**會產生資料列集和存取子對應來服務這些系結的變數。 如需詳細資訊，請參閱 [db_accessor](db-accessor.md) 。
+如果命令字串包含一或多個參數（例如 \[ db_column] 或 \[ bindto]）， **db_command** 會產生資料列集和存取子對應來服務這些系結變數。 如需詳細資訊，請參閱 [db_accessor](db-accessor.md) 。
 
 > [!NOTE]
-> \[*bindtype*]在類別層級使用**db_command**時，語法和系*結參數無效*。
+> \[*bindtype*]使用類別層 *級的* **db_command** 時，語法和系結參數無效。
 
 以下是繫結參數區塊的一些範例。 下列範例會將 `m_au_fname` 和 `m_au_lname` 資料成員分別繫結至 pubs 資料庫中 authors 資料表的 `au_fname` 和 `au_lname` 資料行：
 
@@ -87,25 +87,25 @@ TCHAR m_state[3] = 'CA';
 ```
 
 *name*<br/>
-選擇性您用來處理資料列集的控制碼名稱。 如果您指定 *name*，則 **db_command** 會產生具有所指定 *name*的類別，以用來周遊資料列集或執行多個動作查詢。 如果您未指定 *name*，則不可能會將多個資料列的結果傳回給使用者。
+ (選擇性) 用來處理資料列集的控制碼名稱。 如果您指定 *name*，則 **db_command** 會產生具有所指定 *name*的類別，以用來周遊資料列集或執行多個動作查詢。 如果您未指定 *name*，則不可能會將多個資料列的結果傳回給使用者。
 
 *source_name*<br/>
-選擇性`CSession`已套用屬性之類別的變數或實例， `db_source` 此命令會在其上執行。 請參閱 [db_source](db-source.md)。
+ (選擇性的) `CSession` 變數或類別的實例，而該類別的屬性會套用 `db_source` 到命令執行所在的屬性。 請參閱 [db_source](db-source.md)。
 
 **db_command** 會確認用於 *source_name* 的變數有效，因此指定的變數應該在函式或全域範圍中。
 
 *hresult*<br/>
-選擇性識別將接收此資料庫命令之 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
+ (選擇性) 識別將接收此資料庫命令之 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
 
-*關係*<br/>
-選擇性可讓您將系結參數與 OLE DB 命令隔開。
+*綁定*<br/>
+ (選擇性的) 可讓您將系結參數與 OLE DB 命令分開。
 
-如果您指定系結的值， **db_command**將會剖析相關聯的*值，而且*不會剖析 \[ *bindtype*] 參數。 這種用法可讓您使用 OLE DB 提供者語法。 若要停用剖析，但不搭配系結參數，請指定 `Bindings=""` 。
+如果您指定系結的值， **db_command**將會剖析相關聯的*值，而且*不會剖析 \[ *bindtype*] 參數。 這種用法可讓您使用 OLE DB 提供者語法。 若要停用剖析，而不指定系結參數，請指定 `Bindings=""` 。
 
-如果您沒有指定系*結的值，* **db_command**將會剖析系結參數區塊，尋找 '**（**'，後面接著 **\[** _bindtype_**]** 方括弧，後面接著一或多個先前宣告的 c + + 成員變數，後面接著 '**）**'。 產生的命令中會移除括弧之間的所有文字，並且會使用這些參數來建構此命令的資料行和參數繫結。
+如果您未指定系*結的值，* **db_command**將會剖析系結參數區塊，並在括弧中尋找 '** (**'，後面接著 **\[** _bindtype_**]** ，後面接著一或多個先前宣告的 c + + 成員變數，後面接著 '**) **'。 產生的命令中會移除括弧之間的所有文字，並且會使用這些參數來建構此命令的資料行和參數繫結。
 
 *bulk_fetch*<br/>
-選擇性整數值，指定要提取的資料列數目。
+ (選擇性) 指定要提取之資料列數的整數值。
 
 預設值為 1，指定單一資料列擷取 (資料列集的類型會是 [CRowset](../../data/oledb/crowset-class.md))。
 
@@ -117,17 +117,17 @@ TCHAR m_state[3] = 'CA';
 
 **db_command** 會建立 OLE DB 消費者用來執行命令的 [CCommand](../../data/oledb/ccommand-class.md) 物件。
 
-您可以搭配使用 **db_command** 與類別或函式範圍；主要差異在於 `CCommand` 物件的範圍。 使用函式範圍時，繫結這類資料會終止於函式結尾。 類別和函式範圍使用方式都牽涉到 OLE DB 取用者樣板類別 `CCommand<>` ，但函式和類別案例的範本引數不同。 在函式案例中，會對 `Accessor` 包含區域變數的進行系結，而類別使用方式會將 `CAccessor` 衍生類別推斷為引數。 當成類別屬性使用時， **db_command** 是與 **db_column**搭配運作。
+您可以搭配使用 **db_command** 與類別或函式範圍；主要差異在於 `CCommand` 物件的範圍。 使用函式範圍時，繫結這類資料會終止於函式結尾。 類別和函式範圍使用方式都牽涉到 OLE DB 取用者樣板類別 `CCommand<>` ，但函數和類別案例的樣板引數不同。 在函式案例中，會對 `Accessor` 組成區域變數的進行系結，而類別使用方式則會將 `CAccessor` 衍生的類別推斷為引數。 當成類別屬性使用時， **db_command** 是與 **db_column**搭配運作。
 
 **db_command** 可以用來執行不傳回結果集的命令。
 
-當取用者屬性提供者將此屬性套用至類別時，編譯器會將類別重新命名為 \_ *YourClassName*存取子，其中*YourClassName*是您為類別提供的名稱，而編譯器也會建立名為*YourClassName*的類別，其衍生自 \_ *YourClassName*存取子。  在 [類別] 檢視中，您會看到這兩個類別。
+當取用者屬性提供者將此屬性套用至類別時，編譯器會將類別重新命名為 \_ *YourClassName*存取子，其中*YourClassName*是您賦予類別的名稱，而編譯器也會建立名為*YourClassName*的類別，該類別衍生自 \_ *YourClassName*存取子。  在 [類別] 檢視中，您會看到這兩個類別。
 
 ## <a name="example"></a>範例
 
 此範例所定義的命令會從狀態資料行符合 'CA' 的表格中選取第一個和最後一個名稱。 **db_command** 會建立和讀取可呼叫精靈所產生的函式 (例如 [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)) 以及 `CRowset` 成員函式 (例如 [MoveNext](../../data/oledb/crowset-movenext.md)) 的資料列集。
 
-請注意，此程式碼需要您提供連接至 pubs 資料庫的連接字串。 如需如何在開發環境中執行這項操作的詳細資訊，請參閱[如何：連接到資料庫和流覽現有的物件](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)和[加入新的連接](/visualstudio/data-tools/add-new-connections)。
+請注意，此程式碼需要您提供連接至 pubs 資料庫的連接字串。 如需如何在開發環境中執行此作業的詳細資訊，請參閱 [如何：連接到資料庫及流覽現有的物件](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) ，以及 [加入新的連接](/visualstudio/data-tools/add-new-connections)。
 
 ```cpp
 // db_command.h
@@ -236,14 +236,12 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**`class`**、 **`struct`** 、member、method、local|
-|**可重複**|否|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 

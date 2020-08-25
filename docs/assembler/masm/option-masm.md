@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: a614697a9d633628b02b59a7b810fa261887f859
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: 3d5bef52106b38487d1a2be248cff274f39e009c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446433"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830835"
 ---
 # <a name="option"></a>OPTION
 
-啟用和停用組合器的功能。
+啟用及停用組合器的功能。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>語法
 
 > **`OPTION`***選項清單*
 
@@ -27,22 +27,46 @@ ms.locfileid: "86446433"
 
 :::row:::
    :::column span="":::
-      **`CASEMAP`**<br/>**`DOTNAME`**<br/>**`NODOTNAME`**<br/>**`EMULATOR`**<br/>**`NOEMULATOR`**<br/>**`EPILOGUE`**<br/>**`EXPR16`**
+      **`CASEMAP`**\
+      **`DOTNAME`**\
+      **`NODOTNAME`**\
+      **`EMULATOR`**\
+      **`NOEMULATOR`**\
+      **`EPILOGUE`**\
+      **`EXPR16`**
    :::column-end:::
    :::column span="":::
-      **`EXPR32`**<br/>**`LANGUAGE`**<br/>**`LJMP`**<br/>**`NOLJMP`**<br/>**`M510`**<br/>**`NOM510`**<br/>**`NOKEYWORD`**
+      **`EXPR32`**\
+      **`LANGUAGE`**\
+      **`LJMP`**\
+      **`NOLJMP`**\
+      **`M510`**\
+      **`NOM510`**\
+      **`NOKEYWORD`**
    :::column-end:::
    :::column span="":::
-      **`NOSIGNEXTEND`**<br/>**`OFFSET`**<br/>**`OLDMACROS`**<br/>**`NOOLDMACROS`**<br/>**`OLDSTRUCTS`**<br/>**`NOOLDSTRUCTS`**<br/>**`PROC`**
+      **`NOSIGNEXTEND`**\
+      **`OFFSET`**\
+      **`OLDMACROS`**\
+      **`NOOLDMACROS`**\
+      **`OLDSTRUCTS`**\
+      **`NOOLDSTRUCTS`**\
+      **`PROC`**
    :::column-end:::
    :::column span="":::
-      **`PROLOGUE`**<br/>**`READONLY`**<br/>**`NOREADONLY`**<br/>**`SCOPED`**<br/>**`NOSCOPED`**<br/>**`SEGMENT`**<br/>**`SETIF2`**
+      **`PROLOGUE`**\
+      **`READONLY`**\
+      **`NOREADONLY`**\
+      **`SCOPED`**\
+      **`NOSCOPED`**\
+      **`SEGMENT`**\
+      **`SETIF2`**
    :::column-end:::
 :::row-end:::
 
-LANGUAGE 的語法為 **`OPTION LANGUAGE:`** _`x`_ ，其中 *`x`* 是 **`C`** 、 **`SYSCALL`** 、、 **`STDCALL`** **`PASCAL`** 、 **`FORTRAN`** 或 **`BASIC`** 的其中一個。 **`SYSCALL`****`PASCAL`** **`FORTRAN`** 不支援、、和 **`BASIC`** [`.MODEL`](dot-model.md) **`FLAT`** 。
+LANGUAGE 的語法是 **`OPTION LANGUAGE:`** _`x`_ ，其中是、、、、 *`x`* 或其中之一 **`C`** **`SYSCALL`** **`STDCALL`** **`PASCAL`** **`FORTRAN`** **`BASIC`** 。 **`SYSCALL`****`PASCAL`** **`FORTRAN`** 不支援、、和 **`BASIC`** [`.MODEL`](dot-model.md) **`FLAT`** 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](directives-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

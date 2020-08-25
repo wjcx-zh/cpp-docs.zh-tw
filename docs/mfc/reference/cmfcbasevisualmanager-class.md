@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561319"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834293"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 類別
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCBaseVisualManager：： CMFCBaseVisualManager](#cmfcbasevisualmanager)|建構並初始化 `CMFCBaseVisualManager` 物件。|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCBaseVisualManager：:D rawCheckBox](#drawcheckbox)|使用目前的 Windows 主題繪製核取方塊控制項。|
 |[CMFCBaseVisualManager：:D rawComboBorder](#drawcomboborder)|使用目前的 Windows 主題繪製下拉式方塊框線。|
 |[CMFCBaseVisualManager：:D rawComboDropButton](#drawcombodropbutton)|使用目前的 Windows 主題繪製下拉式方塊下拉式按鈕。|
@@ -75,9 +73,8 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>保護方法
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCBaseVisualManager：： CleanUpThemes](#cleanupthemes)|呼叫 `CloseThemeData` 中取得的所有控制碼 `UpdateSystemColors` 。|
 |[CMFCBaseVisualManager：： UpdateSystemColors](#updatesystemcolors)|呼叫 `OpenThemeData` 以取得繪製各種控制項的控點： windows、工具列、按鈕等等。|
 

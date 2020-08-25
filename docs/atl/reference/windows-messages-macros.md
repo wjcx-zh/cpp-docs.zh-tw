@@ -1,31 +1,31 @@
 ---
-title: 視窗訊息巨集
+title: Windows 訊息宏
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: a5a6d45c64d6123128ae362c1ef5643392439f41
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4cd3c2eea24449eb17050b147d9c59560d8358f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329416"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834436"
 ---
-# <a name="windows-messages-macros"></a>視窗訊息巨集
+# <a name="windows-messages-macros"></a>Windows 訊息宏
 
-此巨集轉發視窗消息。
+這個宏會轉送視窗訊息。
 
-|||
+|名稱|描述|
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|用於將視窗收到的消息轉發到另一個窗口進行處理。|
+|[WM_FORWARDMSG](#wm_forwardmsg)|用來將視窗接收的訊息轉送到另一個視窗進行處理。|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題:** atlbase.h
+**標頭：** atlbase.h。h
 
-## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a>WM_FORWARDMSG
+## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a> WM_FORWARDMSG
 
-此宏將視窗接收到的消息轉發到另一個窗口進行處理。
+此宏會將視窗接收的訊息轉送到另一個視窗進行處理。
 
 ```
 WM_FORWARDMSG
@@ -33,20 +33,20 @@ WM_FORWARDMSG
 
 ### <a name="return-value"></a>傳回值
 
-如果處理消息,則非零,如果不是,則為零。
+如果已處理訊息，則為非零，否則為零。
 
 ### <a name="remarks"></a>備註
 
-使用WM_FORWARDMSG將視窗收到的消息轉發到另一個窗口進行處理。 LPARAM 和 WPARAM 參數的使用如下:
+使用 WM_FORWARDMSG 將視窗接收的訊息轉送到另一個視窗進行處理。 LPARAM 和 WPARAM 參數的使用方式如下：
 
-|參數|使用量|
+|參數|使用方式|
 |---------------|-----------|
-|WPARAM|使用者定義的資料|
-|LPARAM|指向包含訊息資訊`MSG`的結構的指標|
+|WPARAM|由使用者定義的資料|
+|LPARAM|`MSG`結構的指標，其中包含訊息的相關資訊|
 
 ### <a name="example"></a>範例
 
-在下面的範例中,`m_hWndOther`表示接收此消息的其他視窗。
+在下列範例中， `m_hWndOther` 表示接收此訊息的另一個視窗。
 
 [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
 

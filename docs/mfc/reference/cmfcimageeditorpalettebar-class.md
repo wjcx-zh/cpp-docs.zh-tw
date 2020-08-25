@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-ms.openlocfilehash: 33d4bc0c72718d028031ac11bc67da6aec5e4907
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 007fa94269a6a42bf076d2d75a18860896503aa1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374418"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831160"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar 類別
 
-為圖像編輯器對話方塊提供調色板欄功能。
+提供 [影像編輯器] 對話方塊的 [調色板] 列功能。
 
 ## <a name="syntax"></a>語法
 
@@ -31,17 +31,16 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 ### <a name="public-methods"></a>公用方法
 
-|||
-|-|-|
 |名稱|描述|
-|[CMFC影像編輯器調色板列::取得羅高](#getrowheight)|返回工具列按鈕的高度。 (覆寫[CMFC 工具列:取得羅高](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
-|[CMFC 影像編輯器調色盤列:是按鈕超尺寸可用](#isbuttonextrasizeavailable)|確定工具列是否可以顯示具有擴展邊框的按鈕。 (覆寫[CMFC 工具列:是按鈕外大尺寸](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|
+|-|-|
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|傳回工具列按鈕的高度。  (覆寫 [CMFCToolBar：： GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight)。 ) |
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|決定工具列是否可以顯示具有延伸框線的按鈕。  (覆寫 [CMFCToolBar：： IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)。 ) |
 
 ### <a name="remarks"></a>備註
 
 這個類別並不適合直接從您的程式碼使用。
 
-框架使用此類在圖像編輯器對話框中顯示調色板欄。 有關影像編輯器對話框的詳細資訊,請參閱[CMFCImage 編輯器對話類](../../mfc/reference/cmfcimageeditordialog-class.md)。
+架構會使用這個類別，在 [影像編輯器] 對話方塊中顯示 [調色板] 列。 如需 [影像編輯器] 對話方塊的詳細資訊，請參閱 [CMFCImageEditorDialog 類別](../../mfc/reference/cmfcimageeditordialog-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -59,15 +58,15 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
-[CMFC 影像編輯器列](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
+[CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題:** afx 影像編輯器.h
+**標頭：** afximageeditordialog。h
 
-## <a name="cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFC影像編輯器調色板列::取得羅高
+## <a name="cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a> CMFCImageEditorPaletteBar::GetRowHeight
 
-返回工具列按鈕的高度。
+傳回工具列按鈕的高度。
 
 ```
 virtual int GetRowHeight() const;
@@ -77,9 +76,9 @@ virtual int GetRowHeight() const;
 
 工具列上每個按鈕的高度。
 
-## <a name="cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFC 影像編輯器調色盤列:是按鈕超尺寸可用
+## <a name="cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a> CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
 
-確定工具列是否可以顯示具有擴展邊框的按鈕。
+決定工具列是否可以顯示具有延伸框線的按鈕。
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -87,7 +86,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 ### <a name="return-value"></a>傳回值
 
-此方法返回 FALSE。
+這個方法會傳回 FALSE。
 
 ## <a name="see-also"></a>另請參閱
 

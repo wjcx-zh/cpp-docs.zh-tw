@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: e52033c68bc5bee21abed0af0e86cbb76000435d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ffbfba7a7cc4a7dfebbc2dcc074842de3c1ac
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217645"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831434"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 定義亂數產生工具，允許建立統一分佈的亂數。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標頭**：\<random>
+**標頭**： \<random>
 
 **命名空間：** std
 
 > [!NOTE]
 > 連結 \<random> 庫使用 ' #include <initializer_list> ' 語句。
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
-「亂數產生器」** 是一個物件，可產生一連串的虛擬隨機值。 產生統一分佈於指定範圍之值的產生器是「統一亂數產生器」**(Uniform Random Number Generator，URNG)。 設計成當做 URNG 運作的類別樣板稱為「*引擎*」，如果該類別具有特定的一般特性，將在本文稍後討論。 一般而言，URNG 可以與「分佈」** 合併使用，方法是將 URNG 做為引數傳遞至分佈的 `operator()`，以產生由分佈所定義的方式而分佈的值。
+「亂數產生器」** 是一個物件，可產生一連串的虛擬隨機值。 產生統一分佈於指定範圍之值的產生器是「統一亂數產生器」**(Uniform Random Number Generator，URNG)。 如果該類別具有特定的一般特性（本文稍後會討論），則設計為作為 URNG 的類別樣板稱為 *引擎* 。 一般而言，URNG 可以與「分佈」** 合併使用，方法是將 URNG 做為引數傳遞至分佈的 `operator()`，以產生由分佈所定義的方式而分佈的值。
 
 這些連結會跳到本文的主要小節：
 
@@ -225,9 +225,8 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 #### <a name="non-deterministic-generator"></a><a name="rd"></a> 不具決定性產生器
 
-|||
-|-|-|
-|[random_device 類別](../standard-library/random-device-class.md)|使用外部裝置，產生不具決定性且以加密編譯方式保護的隨機序列。 通常用於植入引擎。 低效能，品質很高。 如需詳細資訊，請參閱[備註](#comments)。|
+[random_device 類別](../standard-library/random-device-class.md)\
+使用外部裝置，產生不具決定性且以加密編譯方式保護的隨機序列。 通常用於植入引擎。 低效能，品質很高。 如需詳細資訊，請參閱 [備註](#comments)。
 
 #### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> 具有預先定義參數的引擎 Typedef
 
@@ -281,7 +280,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24`24位 RANLUX 引擎（聖馬丁 Lüscher 和 Fred James，1994）。
+- `ranlux24` 24位 RANLUX 引擎 (聖馬丁 Lüscher 和 Fred James，1994) 。
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -293,7 +292,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48`48位 RANLUX 引擎（聖馬丁 Lüscher 和 Fred James，1994）。
+- `ranlux48` 48位 RANLUX 引擎 (聖馬丁 Lüscher 和 Fred James，1994) 。
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -309,7 +308,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 引擎範本用做獨立 URNG，或用做傳遞給[引擎配接器](#engadapt)的基底引擎。 這些通常使用[預先定義的引擎 typedef](#typedefs) 進行具現化，並傳遞給[分佈](#distributions)。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。
 
-|||
+|名稱|描述|
 |-|-|
 |[linear_congruential_engine 類別](../standard-library/linear-congruential-engine-class.md)|使用線性同餘演算法，產生隨機序列。 最為簡單且品質最低。|
 |[mersenne_twister_engine 類別](../standard-library/mersenne-twister-engine-class.md)|使用梅森旋轉演算法，產生隨機序列。 最為複雜，但品質最高 (random_device 類別除外)。 效能極為快速。|
@@ -319,7 +318,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 引擎配接器是可配接其他 (基底) 引擎的範本。 這些通常使用[預先定義的引擎 typedef](#typedefs) 進行具現化，並傳遞給[分佈](#distributions)。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。
 
-|||
+|名稱|描述|
 |-|-|
 |[discard_block_engine 類別](../standard-library/discard-block-engine-class.md)|捨棄其基底引擎所傳回的值，以產生隨機序列。|
 |[independent_bits_engine 類別](../standard-library/independent-bits-engine-class.md)|重新封裝其基底引擎所傳回之值的位元，以產生具有指定位元數的隨機序列。|
@@ -333,41 +332,41 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 #### <a name="uniform-distributions"></a>統一分佈
 
-|||
+|名稱|描述|
 |-|-|
 |[uniform_int_distribution 類別](../standard-library/uniform-int-distribution-class.md)|產生跨封閉間隔 \[a, b] (內含 - 內含) 中某個範圍的統一整數值分佈。|
 |[uniform_real_distribution 類別](../standard-library/uniform-real-distribution-class.md)|產生跨半開間隔 [a, b) (內含 - 排除) 中某個範圍的統一實數 (浮點) 值分佈。|
 |[generate_canonical](../standard-library/random-functions.md#generate_canonical)|產生跨 [0, 1) (內含 - 排除) 之指定精確度的實數 (浮點) 值平均分佈。|
 
-[[隨機編號分佈](#distributions)]
+[[亂數字分佈](#distributions)]
 
 #### <a name="bernoulli-distributions"></a>白努利分佈
 
-|||
+|名稱|描述|
 |-|-|
-|[bernoulli_distribution 類別](../standard-library/bernoulli-distribution-class.md)|產生值的以利的分佈 **`bool`** 。|
+|[bernoulli_distribution 類別](../standard-library/bernoulli-distribution-class.md)|產生值的利利分佈分佈 **`bool`** 。|
 |[binomial_distribution 類別](../standard-library/binomial-distribution-class.md)|產生整數值的二項式分佈。|
 |[geometric_distribution 類別](../standard-library/geometric-distribution-class.md)|產生整數值的幾何分佈。|
 |[negative_binomial_distribution 類別](../standard-library/negative-binomial-distribution-class.md)|產生整數值的負二項式分佈。|
 
-[[隨機編號分佈](#distributions)]
+[[亂數字分佈](#distributions)]
 
 #### <a name="normal-distributions"></a>常態分佈
 
-|||
+|名稱|描述|
 |-|-|
 |[cauchy_distribution 類別](../standard-library/cauchy-distribution-class.md)|產生實數 (浮點) 值的柯西分佈。|
 |[chi_squared_distribution 類別](../standard-library/chi-squared-distribution-class.md)|產生實數 (浮點) 值的卡方分佈。|
-|[fisher_f_distribution 類別](../standard-library/fisher-f-distribution-class.md)|產生實數（浮點）值的 F 分佈（也稱為 Snedecor 的 F 分佈或費雪-Snedecor 分佈）。|
+|[fisher_f_distribution 類別](../standard-library/fisher-f-distribution-class.md)|產生 F 分佈 (也稱為 Snedecor 的 F 分佈，或真實 (浮點數) 值的費雪 Snedecor 分佈) 。|
 |[lognormal_distribution 類別](../standard-library/lognormal-distribution-class.md)|產生實數 (浮點) 值的對數常態分佈。|
 |[normal_distribution 類別](../standard-library/normal-distribution-class.md)|產生實數 (浮點) 值的常態 (高斯) 分佈。|
 |[student_t_distribution 類別](../standard-library/student-t-distribution-class.md)|產生實數 (浮點) 值的學生 *t* 分佈。|
 
-[[隨機編號分佈](#distributions)]
+[[亂數字分佈](#distributions)]
 
 #### <a name="poisson-distributions"></a>波氏分佈
 
-|||
+|名稱|描述|
 |-|-|
 |[exponential_distribution 類別](../standard-library/exponential-distribution-class.md)|產生實數 (浮點) 值的指數分佈。|
 |[extreme_value_distribution 類別](../standard-library/extreme-value-distribution-class.md)|產生實數 (浮點) 值的極值分佈。|
@@ -375,23 +374,23 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |[poisson_distribution 類別](../standard-library/poisson-distribution-class.md)|產生整數值的波氏分佈。|
 |[weibull_distribution 類別](../standard-library/weibull-distribution-class.md)|產生實數 (浮點) 值的 Weibull 分佈。|
 
-[[隨機編號分佈](#distributions)]
+[[亂數字分佈](#distributions)]
 
 #### <a name="sampling-distributions"></a>取樣分佈
 
-|||
+|名稱|描述|
 |-|-|
 |[discrete_distribution 類別](../standard-library/discrete-distribution-class.md)|產生離散整數分佈。|
 |[piecewise_constant_distribution 類別](../standard-library/piecewise-constant-distribution-class.md)|產生實數 (浮點) 值的分段常數分佈。|
 |[piecewise_linear_distribution 類別](../standard-library/piecewise-linear-distribution-class.md)|產生實數 (浮點) 值的分段線性分佈。|
 
-[[隨機編號分佈](#distributions)]
+[[亂數字分佈](#distributions)]
 
 ### <a name="utility-functions"></a>公用程式函數
 
 本節列出 \<random> 標頭中提供的一般公用程式函式。
 
-|||
+|名稱|描述|
 |-|-|
 |[seed_seq 類別](../standard-library/seed-seq-class.md)|產生無偏差干擾種子序列。 用來避免複寫隨機變量資料流。 從引擎具現化許多 URNG 時十分有用。|
 
@@ -399,28 +398,28 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 本節列出 \<random> 標頭中提供的運算子。
 
-|||
+|名稱|描述|
 |-|-|
 |`operator==`|測試運算子左邊的 URNG 是否等於右邊的引擎。|
 |`operator!=`|測試運算子左邊的 URNG 是否不等於右邊的引擎。|
 |`operator<<`|將狀態資訊寫入資料流。|
 |`operator>>`|從資料流中擷取狀態資訊。|
 
-## <a name="engines-and-distributions"></a><a name="engdist"></a>引擎和分佈
+## <a name="engines-and-distributions"></a><a name="engdist"></a> 引擎和分佈
 
-請參閱下列各節，以取得中所定義之每個類別範本類別的相關資訊 \<random> 。 這兩個類別範本類別都採用類型做為引數，並使用共用範本參數名稱來描述允許作為實際引數類型的類型屬性，如下所示：
+請參閱下列各節，以取得在中定義的每個類別樣板分類的相關資訊 \<random> 。 這兩個類別樣板類別都採用型別做為引數，並使用共用的範本參數名稱來描述允許作為實際引數型別的型別屬性，如下所示：
 
-- `IntType`表示 **`short`** 、 **`int`** 、 **`long`** 、 **`long long`** 、、、 **`unsigned short`** **`unsigned int`** **`unsigned long`** 或 **`unsigned long long`** 。
+- `IntType` 指出 **`short`** 、、 **`int`** 、、、、 **`long`** **`long long`** **`unsigned short`** **`unsigned int`** **`unsigned long`** 或 **`unsigned long long`** 。
 
-- `UIntType`指出 **`unsigned short`** 、 **`unsigned int`** 、 **`unsigned long`** 或 **`unsigned long long`** 。
+- `UIntType` 指出 **`unsigned short`** 、 **`unsigned int`** 、 **`unsigned long`** 或 **`unsigned long long`** 。
 
-- `RealType`表示 **`float`** 、 **`double`** 或 **`long double`** 。
+- `RealType` 指出 **`float`** 、 **`double`** 或 **`long double`** 。
 
 ### <a name="engines"></a>引擎
 
 [引擎範本](#eng)和[引擎配接器範本](#engadapt)是其參數會自訂所建立之產生器的範本。
 
-*引擎*是一個類別或類別樣板，其實例（產生器）做為統一分佈在最小值和最大值之間的亂數字來源。 「引擎配接器」** 會採用部分其他亂數引擎所產生的值，並將某種類型的演算法套用至那些值，以傳遞一連串具有不同隨機性屬性的值。
+*引擎*是一種類別或類別樣板，其實例 (產生器) 作為在最小值與最大值之間一致分佈的亂數字來源。 「引擎配接器」** 會採用部分其他亂數引擎所產生的值，並將某種類型的演算法套用至那些值，以傳遞一連串具有不同隨機性屬性的值。
 
 每個引擎和引擎配接器都具有下列成員：
 
@@ -458,15 +457,15 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="distributions"></a>散發
 
-[亂數字](#distributions)散發是一個類別或類別樣板，其實例會將從引擎取得之統一散發亂數的資料流程，轉換為具有特定分佈之亂數的資料流程。 每個分佈都有下列成員：
+[亂數分佈](#distributions)是一種類別或類別範本，其實例會將從引擎取得之一致分佈亂數的資料流程，轉換為具有特定分佈之亂數的資料流程。 每個分佈都有下列成員：
 
-- **`typedef`** 這 `numeric-type` `result_type` 是散發的所傳回的型別 `operator()` 。 在具現化時，會將 `numeric-type` 傳遞為範本參數。
+- **`typedef`** 這 `numeric-type` `result_type` 是散發所傳回的型別 `operator()` 。 在具現化時，會將 `numeric-type` 傳遞為範本參數。
 
 - `template <class URNG> result_type operator()(URNG& gen)` 會傳回根據分佈定義所分佈的值，方法是使用 `gen` 做為統一分佈隨機值的來源，以及儲存之「分佈的參數」**。
 
 - `template <class URNG> result_type operator()(URNG& gen, param_type p)` 會傳回按照分佈定義所分佈的值，方法是使用 `gen` 做為統一分佈隨機值的來源，以及參數結構 `p`。
 
-- **`typedef`**`unspecified-type` `param_type` 這是選擇性傳遞至的參數封裝 `operator()` ，用來取代儲存的參數以產生其傳回值。
+- **`typedef`**`unspecified-type` `param_type` 是選擇性傳遞給的參數套件 `operator()` ，用來取代儲存的參數，以產生其傳回值。
 
 - `const param&` 建構函式會從其引數初始化儲存的參數。
 
@@ -482,7 +481,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 參數結構是一個物件，其中儲存分佈所需的所有參數。 它包含：
 
-- **`typedef`**`distribution-type` `distribution_type` ，這是其散發的類型。
+- **`typedef`**`distribution-type` `distribution_type` ，也就是其分佈的型別。
 
 - 一個或多個建構函式，採用與分佈建構函式所採用的相同參數清單。
 
@@ -503,7 +502,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 <sup>* 提供已知種子時。</sup>
 
-雖然 ISO C++ 標準不需要加密保護 `random_device`，但在 Visual Studio 中，會將它實作為進行加密保護。 「加密保護」這個詞彙並不表示提供保證，而是指給定隨機演算法所提供的最低熵層級 (因此是預測層級)。 如需詳細資訊，請參閱維琪百科文章密碼編譯安全的虛擬[亂數產生器](https://go.microsoft.com/fwlink/p/?linkid=398017)）。因為 ISO c + + 標準不需要這麼做，所以其他平臺可能會實 `random_device` 作為簡單虛擬亂數產生器（未加密保護），而且可能只適合做為另一個產生器的種子來源。 在跨平台程式碼中使用 `random_device` 時，請參閱哪些平台的文件。
+雖然 ISO C++ 標準不需要加密保護 `random_device`，但在 Visual Studio 中，會將它實作為進行加密保護。 「加密保護」這個詞彙並不表示提供保證，而是指給定隨機演算法所提供的最低熵層級 (因此是預測層級)。 如需詳細資訊，請參閱維琪百科 [密碼編譯安全的亂數產生器](https://go.microsoft.com/fwlink/p/?linkid=398017)。 ) 因為 ISO c + + 標準不需要這項功能，所以其他平臺可能會 `random_device` 將實作為簡單的虛擬亂數產生器， (未以密碼編譯方式保護) ，而且可能只適合做為另一個產生器的種子來源。 在跨平台程式碼中使用 `random_device` 時，請參閱哪些平台的文件。
 
 透過定義，`random_device` 結果是無法重新產生的，而且副作用是執行速度會明顯比其他 URNG 慢。 雖然您可能想要使用 `random_device` 呼叫來進行植入 (如[程式碼範例](#code)中所示)，但大部分不需要加密保護的應用程式都會使用 `mt19937` 或類似的引擎。
 

@@ -4,33 +4,33 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 7e18b4504ddbfdd9a4399f33c34c6e6e9900233b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 40ac3b6871d13420797279629a2661b22545d1d8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752862"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832369"
 ---
 # <a name="application-control"></a>應用程式控制
 
-OLE 要求對應用程式及其物件進行大量控制。 OLE 系統 DLL 必須能夠自動啟動和釋放應用程式,協調物件的生成和修改,等等。 本主題中的函數滿足這些要求。 除了被 OLE 系統 DLL 調用外,應用程式有時還必須調用這些函數。
+OLE 需要對應用程式及其物件有大量的控制權。 OLE 系統 Dll 必須能夠自動啟動和發行應用程式、協調其生產和修改物件等等。 本主題中的函數符合這些需求。 除了由 OLE 系統 Dll 呼叫之外，這些函數有時也必須由應用程式呼叫。
 
 ### <a name="application-control"></a>應用程式控制
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[AfxOleCanExitApp](#afxolecanexitapp)|指示應用程式是否可以結束。|
 |[AfxOleGetMessageFilter](#afxolegetmessagefilter)|擷取應用程式的目前訊息篩選器。|
 |[AfxOleGetUserCtrl](#afxolegetuserctrl)|擷取目前使用者控制旗標。|
-|[AfxOleSetUserCtrl](#afxolesetuserctrl)|設置或清除使用者控制標誌。|
-|[AfxOleLockApp](#afxolelockapp)|增加框架在應用程式中活動物件數的全域計數。|
-|[AfxOleLockControl](#afxolelockcontrol)| 鎖定指定控制項的類工廠。 |
-|[AfxOleUnlockApp](#afxoleunlockapp)|聲明框架對應用程式中活動物件數的計數。|
-|[AfxOleUnlockControl](#afxoleunlockcontrol)| 解鎖指定控制件的類工廠。 |
-|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|在 OLE 系統註冊表中註冊伺服器。|
-|[AfxOleSetEditMenu](#afxoleseteditmenu)|實現*類型名稱*物件命令的用戶介面。|
+|[AfxOleSetUserCtrl](#afxolesetuserctrl)|設定或清除使用者控制項旗標。|
+|[AfxOleLockApp](#afxolelockapp)|遞增架構在應用程式中使用中物件數目的全域計數。|
+|[AfxOleLockControl](#afxolelockcontrol)| 鎖定指定控制項的 class factory。 |
+|[AfxOleUnlockApp](#afxoleunlockapp)|減少應用程式中使用中物件數目的架構計數。|
+|[AfxOleUnlockControl](#afxoleunlockcontrol)| 解除鎖定所指定控制項的 class factory。 |
+|[AfxOleRegisterServerClass](#afxoleregisterserverclass)|在 OLE 系統登錄中註冊伺服器。|
+|[AfxOleSetEditMenu](#afxoleseteditmenu)|實作為 *typename* 物件命令的使用者介面。|
 
-## <a name="afxolecanexitapp"></a><a name="afxolecanexitapp"></a>AfxOleCanExitApp
+## <a name="afxolecanexitapp"></a><a name="afxolecanexitapp"></a> AfxOleCanExitApp
 
 指示應用程式是否可以結束。
 
@@ -44,17 +44,17 @@ BOOL AFXAPI AfxOleCanExitApp();
 
 ### <a name="remarks"></a>備註
 
-如果對應用程式物件有未完成的參考，則不應該結束。 全域函式 `AfxOleLockApp` 和 `AfxOleUnlockApp` 分別會遞增和遞減應用程式物件的參考計數。 這個計數器為非零值時，應用程式不應該結束。 如果計數器是非零值，當使用者從 [系統] 功能表選擇 [關閉]，或從 [檔案] 功能表選擇 [結束] 時，應用程式的主視窗將會隱藏 (不會終結)。 框架在`CFrameWnd::OnClose`中調用此函數。
+如果對應用程式物件有未完成的參考，則不應該結束。 全域函式 `AfxOleLockApp` 和 `AfxOleUnlockApp` 分別會遞增和遞減應用程式物件的參考計數。 這個計數器為非零值時，應用程式不應該結束。 如果計數器是非零值，當使用者從 [系統] 功能表選擇 [關閉]，或從 [檔案] 功能表選擇 [結束] 時，應用程式的主視窗將會隱藏 (不會終結)。 架構會在中呼叫這個函數 `CFrameWnd::OnClose` 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題**: afxdisp.h
+**標頭**： afxdisp.h。h
 
-## <a name="afxolegetmessagefilter"></a><a name="afxolegetmessagefilter"></a>AfxOleGet訊息過濾器
+## <a name="afxolegetmessagefilter"></a><a name="afxolegetmessagefilter"></a> AfxOleGetMessageFilter
 
 擷取應用程式的目前訊息篩選器。
 
@@ -76,11 +76,11 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
 
 [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題**: afxwin.h
+**標頭**： afxwin.h。h
 
-## <a name="afxolegetuserctrl"></a><a name="afxolegetuserctrl"></a>阿福奧萊格瑟克拉爾
+## <a name="afxolegetuserctrl"></a><a name="afxolegetuserctrl"></a> AfxOleGetUserCtrl
 
 擷取目前使用者控制旗標。
 
@@ -96,13 +96,13 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 
 當使用者具有已明確開啟或建立的新文件時，應用程式是在使用者的控制之下。 如果應用程式不是由 OLE 系統 DLL 啟動，也就是說如果使用者是使用系統殼層啟動應用程式，表示仍然在使用者的控制之下。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題**: afxdisp.h
+**標頭**： afxdisp.h。h
 
-## <a name="afxolesetuserctrl"></a><a name="afxolesetuserctrl"></a>阿福奧萊塞塞瑟克拉爾
+## <a name="afxolesetuserctrl"></a><a name="afxolesetuserctrl"></a> AfxOleSetUserCtrl
 
-設置或清除使用者控制標誌,這在引用中`AfxOleGetUserCtrl`解釋。
+設定或清除使用者控制項旗標，此旗標會在的參考中加以說明 `AfxOleGetUserCtrl` 。
 
 ```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
@@ -111,21 +111,21 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ### <a name="parameters"></a>參數
 
 *bUserCtrl*<br/>
-指定是設置還是清除使用者控制標誌。
+指定是否要設定或清除使用者控制項旗標。
 
 ### <a name="remarks"></a>備註
 
-當使用者創建或載入文檔時,框架呼叫此函數,但當透過間接操作(如從容器應用程式載入嵌入物件)載入或創建文檔時,框架將調用此函數。
+當使用者建立或載入檔時，架構會呼叫這個函式，而不是在透過間接動作（例如從容器應用程式載入内嵌物件）載入或建立檔時呼叫這個函數。
 
-如果應用程式中的其他操作應使用戶控制應用程式,請調用此函數。
+如果您應用程式中的其他動作應該讓使用者控制應用程式，請呼叫此函式。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題**: afxdisp.h
+**標頭**： afxdisp.h。h
 
-## <a name="afxolelockapp"></a><a name="afxolelockapp"></a>阿FXOlelockApp
+## <a name="afxolelockapp"></a><a name="afxolelockapp"></a> AfxOleLockApp
 
-增加框架在應用程式中活動物件數的全域計數。
+遞增架構在應用程式中使用中物件數目的全域計數。
 
 ```cpp
 void AFXAPI AfxOleLockApp();
@@ -133,23 +133,23 @@ void AFXAPI AfxOleLockApp();
 
 ### <a name="remarks"></a>備註
 
-框架保留應用程式中活動物件數的計數。 和`AfxOleLockApp``AfxOleUnlockApp`函數,分別,增量和遞減此計數。
+架構會保留應用程式中的作用中物件數目的計數。 `AfxOleLockApp`和 `AfxOleUnlockApp` 函數會分別遞增和遞減此計數。
 
-當使用者嘗試關閉具有活動物件的應用程式(活動物件的計數為非零的應用程式)時,框架會將應用程式從使用者的視圖中隱藏,而不是完全關閉它。 該`AfxOleCanExitApp`函數指示應用程式是否可以終止。
+當使用者嘗試關閉具有使用中物件的應用程式時（使用中物件的計數為非零），此架構會將應用程式從使用者的觀點中隱藏，而不是完全關閉。 此 `AfxOleCanExitApp` 函數會指出應用程式是否可以終止。
 
-從`AfxOleLockApp`公開 OLE 介面的任何物件調用,如果該物件在用戶端應用程式仍在使用時銷毀該物件是不可取的。 還要在`AfxOleUnlockApp`建構函數中調用`AfxOleLockApp`的任何物件的析構函數中調用。 預設情況下,(`COleDocument`和派生類)會自動鎖定和解鎖應用程式。
+`AfxOleLockApp`從任何公開 OLE 介面的物件呼叫，如果在用戶端應用程式仍在使用該物件時，該物件不需要終結。 此外，也請在函式中呼叫的 `AfxOleUnlockApp` 任何物件的析構函數中呼叫 `AfxOleLockApp` 。 根據預設， `COleDocument` (和衍生類別) 會自動鎖定和解除鎖定應用程式。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題**: afxdisp.h
+**標頭**： afxdisp.h。h
 
-## <a name="afxoleunlockapp"></a><a name="afxoleunlockapp"></a>AfxOle 解鎖應用程式
+## <a name="afxoleunlockapp"></a><a name="afxoleunlockapp"></a> AfxOleUnlockApp
 
-聲明框架在應用程式中的活動物件的計數。
+遞減架構在應用程式中使用中物件的計數。
 
 ```cpp
 void AFXAPI AfxOleUnlockApp();
@@ -157,17 +157,17 @@ void AFXAPI AfxOleUnlockApp();
 
 ### <a name="remarks"></a>備註
 
-有關詳細資訊`AfxOleLockApp`,請參閱。
+`AfxOleLockApp`如需詳細資訊，請參閱。
 
-當活動物件數達到零時,`AfxOleOnReleaseAllObjects`將調用。
+當使用中物件的數目到達零時， `AfxOleOnReleaseAllObjects` 會呼叫。
 
 ### <a name="example"></a>範例
 
-請參閱[AfxOleLockApp](#afxolelockapp)的範例。
+請參閱 [AfxOleLockApp](#afxolelockapp)的範例。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題**: afxdisp.h
+**標頭**： afxdisp.h。h
 
 ## <a name="afxolelockcontrol"></a>AfxOleLockControl
 
@@ -206,13 +206,13 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標題:** afxwin.h
 
-## <a name="afxoleregisterserverclass"></a><a name="afxoleregisterserverclass"></a>AfxOle註冊伺服器類
+## <a name="afxoleregisterserverclass"></a><a name="afxoleregisterserverclass"></a> AfxOleRegisterServerClass
 
-此功能允許您在 OLE 系統註冊表中註冊伺服器。
+此函式可讓您在 OLE 系統登錄中註冊您的伺服器。
 
 ```
 BOOL AFXAPI AfxOleRegisterServerClass(
@@ -228,61 +228,61 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ### <a name="parameters"></a>參數
 
 *Clsid*<br/>
-引用伺服器的 OLE 類 ID。
+伺服器之 OLE 類別識別碼的參考。
 
-*lpszClass 名稱*<br/>
-指向包含伺服器物件的類名的字串的指標。
+*lpszClassName*<br/>
+字串的指標，其中包含伺服器物件的類別名稱。
 
-*lpsz短類型名稱*<br/>
-指向包含伺服器物件類型的短名稱的字串的指標,如「圖表」。
+*lpszShortTypeName*<br/>
+字串的指標，其中包含伺服器物件類型的簡短名稱，例如「圖表」。
 
-*lpszLongType 名稱*<br/>
-指向包含伺服器物件類型的長名稱的字串的指標,例如「Microsoft Excel 5.0 圖表」。
+*lpszLongTypeName*<br/>
+字串的指標，其中包含伺服器物件類型的完整名稱，例如「Microsoft Excel 5.0 圖表」。
 
 *nAppType*<br/>
-從OLE_APPTYPE枚舉中獲取的值,指定 OLE 應用程式的類型。 可能的值如下：
+取自 OLE_APPTYPE 列舉的值，指定 OLE 應用程式的類型。 可能的值如下：
 
-- OAT_INPLACE_SERVER伺服器具有完整的伺服器用戶介面。
+- OAT_INPLACE_SERVER Server 具有完整的伺服器使用者介面。
 
-- OAT_SERVER伺服器僅支援嵌入。
+- OAT_SERVER 伺服器僅支援內嵌。
 
-- OAT_CONTAINER容器支援指向嵌入的連結。
+- OAT_CONTAINER 容器支援內嵌的連結。
 
-- OAT_DISPATCH_OBJECT `IDispatch`- 支援物件。
+- `IDispatch`支援 OAT_DISPATCH_OBJECT 的物件。
 
-*rglpsz註冊*<br/>
-如果找不到鍵的現有值,則指向表示要添加到 OLE 系統註冊表的鍵和值的字串的指標陣列。
+*rglpszRegister*<br/>
+字串指標的陣列，如果找不到索引鍵的現有值，則表示要加入至 OLE 系統登錄的索引鍵和值。
 
-*rglpsz 覆寫*<br/>
-如果註冊表包含給定鍵的現有值,則指向表示要添加到 OLE 系統註冊表的鍵和值的字串的指標陣列。
+*rglpszOverwrite*<br/>
+字串指標的陣列，如果登錄包含指定索引鍵的現有值，則表示要加入至 OLE 系統登錄的索引鍵和值。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功註冊伺服器類,則非零;否則 0。
+如果成功註冊伺服器類別，則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-大多數應用程式都可用於`COleTemplateServer::Register`註冊應用程式的文件類型。 如果應用程式的系統註冊表格式不符合典型模式,則可以使用`AfxOleRegisterServerClass`更多控制項。
+大部分的應用程式都可以使用 `COleTemplateServer::Register` 來註冊應用程式的檔案類型。 如果您應用程式的系統登錄格式不符合一般模式，您可以使用 `AfxOleRegisterServerClass` 來進行更多控制。
 
-註冊表由一組鍵和值組成。 *rglpsz註冊*和*rglpszOverwrite*參數是指向字串的指標陣列,每個參數由鍵和由**NULL**字`'\0'`元 () 分隔的值組成。 每個字串都可以具有可取代的參數,其位置由字串序列 *%1*到 *%5*標籤。
+登錄是由一組索引鍵和值所組成。 *RglpszRegister*和*rglpszOverwrite*引數是字串指標的陣列，每個都是由一個索引鍵和一個值（以**Null**字元分隔） ( `'\0'`) 。 每個字串都可以有可替換的參數，其位置會由字元序列 *%1* 到 *%5*標記。
 
-符號填寫如下:
+這些符號的填入方式如下：
 
 |符號|值|
 |------------|-----------|
-|%1|類別識別碼為字串|
+|%1|類別識別碼，格式為字串|
 |%2|類別名稱|
-|%3|執行檔路徑|
-|%4|短類型名稱|
-|%5|長類型名稱|
+|%3|可執行檔的路徑|
+|%4|簡短類型名稱|
+|%5|完整類型名稱|
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題**: afxdisp.h
+**標頭**： afxdisp.h。h
 
-## <a name="afxoleseteditmenu"></a><a name="afxoleseteditmenu"></a>阿FXOleseteditMenu
+## <a name="afxoleseteditmenu"></a><a name="afxoleseteditmenu"></a> AfxOleSetEditMenu
 
-實現*類型名稱*物件命令的用戶介面。
+實作為 *typename* 物件命令的使用者介面。
 
 ```cpp
 void AFXAPI AfxOleSetEditMenu(
@@ -297,38 +297,38 @@ void AFXAPI AfxOleSetEditMenu(
 ### <a name="parameters"></a>參數
 
 *pClient*<br/>
-指向用戶端 OLE 項的指標。
+用戶端 OLE 專案的指標。
 
 *pMenu*<br/>
-指向要更新的功能表物件的指標。
+要更新之功能表物件的指標。
 
-*iMenu 專案*<br/>
-要更新的功能表項的索引。
+*iMenuItem*<br/>
+要更新之功能表項目的索引。
 
 *nIDVerbMin*<br/>
-對應於主謂詞的命令 ID。
+對應至主要動詞命令的命令識別碼。
 
 *nIDVerbMax*<br/>
-對應於最後一個謂詞的命令 ID。
+對應到最後一個動詞命令的命令識別碼。
 
 *nIDConvert*<br/>
-"轉換"選單項的 ID。
+[轉換] 功能表項目的識別碼。
 
 ### <a name="remarks"></a>備註
 
-如果伺服器僅識別主謂詞,功能表項將成為"動詞*類型物件*",當用戶選擇該命令時發送*nIDVerbMin*命令。 如果伺服器識別多個謂詞,則功能表項將成為 *"typename*物件",並在使用者選擇該命令時顯示列出所有謂詞的子選單。 當使用者從子功能表中選擇動詞時,如果選擇了第一個動詞,則發送*nIDVerbMin;* 如果選擇了第二個謂詞,則發送*nIDVerbMin* = 1,依此類推。 預設`COleDocument`實現會自動處理此功能。
+如果伺服器只辨識主要動詞命令，功能表項目就會變成「動詞 *typename* 物件」，而 *nIDVerbMin* 命令會在使用者選擇命令時傳送。 如果伺服器辨識了數個動詞，則功能表項目會變成「 *typename* 物件」，而當使用者選擇此命令時，會出現一個子功能表，列出所有的動詞命令。 當使用者從子功能表選擇動詞時，如果選擇第一個動詞，則會傳送 *nIDVerbMin* ，如果選擇第二個動詞，則會傳送 *nIDVerbMin* + 1 等等。 預設的 `COleDocument` 執行會自動處理這項功能。
 
-用戶端的應用程式資源腳本 (中必須具有以下語句。RC) 檔案:
+您必須在用戶端的應用程式資源腳本 ( 中具有下列語句。RC) 檔案：
 
-**#include\<阿波諾爾克>**
+**#include \<afxolecl.rc>**
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題**: afxole.h
+**標頭**： afxole。h
 
-## <a name="afxoleunlockcontrol"></a><a name="afxoleunlockcontrol"></a>AfxOle解鎖控制
+## <a name="afxoleunlockcontrol"></a><a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
-解鎖指定控制件的類工廠。
+解除鎖定所指定控制項的 class factory。
 
 ### <a name="syntax"></a>語法
 
@@ -347,11 +347,11 @@ BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 
 ### <a name="return-value"></a>傳回值
 
-如果控件的類工廠已成功解鎖,則非零;否則 0。
+如果已成功解除鎖定控制項的 class factory，則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-控制項與`AfxOleLockControl`鎖定,以便與控制項關聯的動態創建的數據保留在記憶體中。 這可以顯著加快控制項的顯示速度,因為不必在每次顯示控制項時創建和銷毀該控制項。 當您準備終結控制項時，請呼叫 `AfxOleUnlockControl`。
+控制項已被鎖定 `AfxOleLockControl` ，因此與控制項相關聯的動態建立資料仍會保留在記憶體中。 這可能會大幅加速控制項的顯示，因為不需要在每次顯示控制項時都建立和終結控制項。 當您準備終結控制項時，請呼叫 `AfxOleUnlockControl`。
 
 ### <a name="example"></a>範例
 
@@ -361,7 +361,7 @@ BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標題:** afxwin.h
 

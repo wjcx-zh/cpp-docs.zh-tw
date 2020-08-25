@@ -10,22 +10,24 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f3117ce7e962468855172a463c375392930e7c81
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366410"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833227"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 運算子
 
-||||
-|-|-|-|
-|[操作員!](#op_neq)|[算子&gt;](#op_gt)|[算子&gt;=](#op_gt_eq)|
-|[算子&lt;](#op_lt)|[算子&lt;&lt;](#op_lt_lt)|[算子&lt;=](#op_lt_eq)|
-|[運算子*](#op_eq_eq)|
+[operator！ =](#op_neq)\
+[運算元&gt;](#op_gt)\
+[運算元&gt;=](#op_gt_eq)\
+[運算元&lt;](#op_lt)\
+[運算元&lt;&lt;](#op_lt_lt)\
+[運算元&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>操作員!
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 不同物件的不等於比較。
 
@@ -66,13 +68,13 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>參數
 
-*比比*\
+*BidIt*\
 迭代器類型。
 
 *IOtraits*\
 字串特性類別。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
 *離開*\
@@ -144,7 +146,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 運算元&lt;
 
 不同物件的小於比較。
 
@@ -181,13 +183,13 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*比比*\
+*BidIt*\
 迭代器類型。
 
 *IOtraits*\
 字串特性類別。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
 *離開*\
@@ -198,7 +200,7 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="remarks"></a>備註
 
-每個範本運算符將其參數轉換為字串類型,並且僅在*左側*的轉換值比*右*的轉換值小於 時才返回 true。
+每個範本運算子都會將其引數轉換為字串類型，而且只有在已轉換的 *left* 值小於 *right*的轉換值時，才會傳回 true。
 
 ### <a name="example"></a>範例
 
@@ -254,7 +256,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 運算元&lt;&lt;
 
 在資料流中插入 sub_match。
 
@@ -266,16 +268,16 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>參數
 
-*埃萊姆*\
+*Elem*\
 元素類型。
 
 *IOtraits*\
 字串特性類別。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
-*比比*\
+*BidIt*\
 迭代器類型。
 
 *作業系統*\
@@ -314,7 +316,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 運算元&lt;=
 
 不同物件的小於或等於比較。
 
@@ -351,13 +353,13 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*比比*\
+*BidIt*\
 迭代器類型。
 
 *IOtraits*\
 字串特性類別。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
 *離開*\
@@ -424,7 +426,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 不同物件的等於比較。
 
@@ -465,13 +467,13 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>參數
 
-*比比*\
+*BidIt*\
 迭代器類型。
 
 *IOtraits*\
 字串特性類別。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
 *離開*\
@@ -486,11 +488,11 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 當範本運算子將其引數轉換為字串類型之後，它會使用下列第一個適用的轉換：
 
-其類型為類範本`match_results`的專門化或`sub_match`通過 調用成員函數`str`轉換的 參數;
+其型別為類別樣板特製化的引數， `match_results` 或藉 `sub_match` 由呼叫成員函式進行轉換 `str` ;
 
-類型為類範本`basic_string`的專門化的參數保持不變;
+類型為類別樣板特製化的引數 `basic_string` 不會變更;
 
-所有其他參數類型都通過將參數值傳遞給構造函數來轉換,以便對類範本`basic_string`進行適當的專門化。
+所有其他引數型別都是藉由將引數值傳遞至函式，以進行類別樣板的適當特製化來轉換 `basic_string` 。
 
 ### <a name="example"></a>範例
 
@@ -551,7 +553,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 運算元&gt;
 
 不同物件的大於比較。
 
@@ -588,13 +590,13 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*比比*\
+*BidIt*\
 迭代器類型。
 
 *IOtraits*\
 字串特性類別。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
 *離開*\
@@ -661,7 +663,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 運算元&gt;=
 
 不同物件的大於或等於比較。
 
@@ -698,13 +700,13 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*比比*\
+*BidIt*\
 迭代器類型。
 
 *IOtraits*\
 字串特性類別。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
 *離開*\
@@ -773,11 +775,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>另請參閱
 
-[\<正則>](../standard-library/regex.md)\
-[regex_constants類](../standard-library/regex-constants-class.md)\
-[regex_error類](../standard-library/regex-error-class.md)\
-[\<正規表示式>函數](../standard-library/regex-functions.md)\
-[regex_iterator類](../standard-library/regex-iterator-class.md)\
-[regex_token_iterator類](../standard-library/regex-token-iterator-class.md)\
-[regex_traits類](../standard-library/regex-traits-class.md)\
-[\<正則>型態](../standard-library/regex-typedefs.md)
+[\<regex>](../standard-library/regex.md)\
+[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
+[RegEx_error 類別](../standard-library/regex-error-class.md)\
+[\<regex> 功能](../standard-library/regex-functions.md)\
+[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[\<regex> typedef](../standard-library/regex-typedefs.md)

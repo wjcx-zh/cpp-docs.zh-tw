@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: ea0ac6ab89179683d04f6b6233c6fa1996e51a1f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: d5d8c10e30886c1b34bb5dc95296bc594acda1a4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373563"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831849"
 ---
 # <a name="countryregion-strings"></a>國家/地區字串
 
-國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各種 Windows 作業系統版本支援的國家/地區名稱清單，請參閱[附錄 A：產品行為](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)（MS-lcid）： Windows 語言代碼識別碼（LCID）參考中資料表的**語言**、**位置**和**語言標記**資料行 \[ 。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/win32/intl/nls--name-based-apis-sample)。
+國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各種 Windows 作業系統版本所支援的國家/地區名稱清單，請參閱附錄 A 中的表格 **語言**、 **位置**和 **語言** 標籤資料行（MS-LCID 中的 [產品行為](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) ） \[ ： Windows 語言代碼識別碼 (LCID) 參考。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/win32/intl/nls--name-based-apis-sample)。
 
 ## <a name="additional-supported-country-and-region-strings"></a>其他支援的國家與地區設定字串
 

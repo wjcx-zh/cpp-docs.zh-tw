@@ -1,21 +1,21 @@
 ---
-title: call_as （C++ COM 屬性）
+title: 'call_as (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ae620ed6f2b01cc52e4a9c76217f044db925f11
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167327"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838916"
 ---
 # <a name="call_as"></a>call_as
 
-讓[區域](local-cpp.md)函式能夠對應至遠端函式，以便在呼叫遠端函式時叫用區域函式。
+讓 [區域](local-cpp.md) 函式對應至遠端函式，以便在呼叫遠端函式時叫用區域函數。
 
 ## <a name="syntax"></a>語法
 
@@ -26,15 +26,15 @@ ms.locfileid: "80167327"
 ### <a name="parameters"></a>參數
 
 *函數*<br/>
-您想要在叫用遠端函數時呼叫的區域函式。
+當叫用遠端函式時，您想要呼叫的區域函式。
 
 ## <a name="remarks"></a>備註
 
-**Call_as** C++屬性具有與[call_as](/windows/win32/Midl/call-as) MIDL 屬性相同的功能。
+**Call_as** c + + 屬性具有與[call_as](/windows/win32/Midl/call-as) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**call_as**將不可遠端處理函式（`f1`）對應到可遠端處理的函式（`Remf1`）：
+下列程式碼示範如何使用 **call_as** 將不可遠端處理函式 () 對應到可遠端處理的函式 `f1` (`Remf1`) ：
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -48,16 +48,14 @@ __interface IMInterface {
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面方法|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -65,4 +63,4 @@ __interface IMInterface {
 
 [IDL 屬性](idl-attributes.md)<br/>
 [方法屬性](method-attributes.md)<br/>
-[local](local-cpp.md)
+[當地](local-cpp.md)

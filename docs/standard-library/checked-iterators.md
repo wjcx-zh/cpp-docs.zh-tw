@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452131"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845688"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -25,12 +25,12 @@ ms.locfileid: "68452131"
 
 如需如何停用由已檢查迭代器所產生之警告的資訊，請參閱 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)。
 
-您可以使用 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 前置處理器巨集，啟用或停用已檢查的迭代器功能。 如果 _ITERATOR_DEBUG_LEVEL 定義為1或 2, 不安全的反覆運算器使用會導致執行階段錯誤, 而且程式會終止。 如果已定義為 0，已檢查的迭代器停用。 根據預設, 發行組建的 _ITERATOR_DEBUG_LEVEL 值為 0, 而針對 DEBUG 組建則為2。
+您可以使用[ \_ 反覆運算器 \_ DEBUG \_ LEVEL](../standard-library/iterator-debug-level.md)預處理器宏來啟用或停用已檢查的反覆運算器功能。 如果 _ITERATOR_DEBUG_LEVEL 定義為1或2，不安全的反覆運算器使用會導致執行階段錯誤，而且程式會終止。 如果已定義為 0，已檢查的迭代器停用。 根據預設，發行組建的 _ITERATOR_DEBUG_LEVEL 值為0，而針對 DEBUG 組建則為2。
 
 > [!IMPORTANT]
 > 舊版文件和原始程式碼可能會參考 [_SECURE_SCL](../standard-library/secure-scl.md) 巨集。 使用 _ITERATOR_DEBUG_LEVEL 來控制 _SECURE_SCL。 如需詳細資訊，請參閱 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)。
 
-當 _ITERATOR_DEBUG_LEVEL 定義為1或2時, 就會執行這些反覆運算器檢查:
+當 _ITERATOR_DEBUG_LEVEL 定義為1或2時，會執行這些反覆運算器檢查：
 
 - 檢查所有標準迭代器 (例如 [vector::iterator](../standard-library/vector-class.md#iterator))。
 
@@ -40,13 +40,28 @@ ms.locfileid: "68452131"
 
 - 如果在容器界限之外存取，下列函式會產生執行階段錯誤：
 
-|||||
-|-|-|-|-|
-|[basic_string::operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset::operator\[\]](../standard-library/bitset-class.md#op_at)|[back](../standard-library/deque-class.md#back)|[front](../standard-library/deque-class.md#front)|
-|[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[front](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|
-|[front](../standard-library/queue-class.md#front)|[vector::operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[front](../standard-library/vector-class.md#front)|
+:::row:::
+   :::column span="":::
+      &emsp;&emsp;[`basic_string::operator[]`](../standard-library/basic-string-class.md#op_at)\
+      &emsp;&emsp;[`bitset::operator[]`](../standard-library/bitset-class.md#op_at)\
+      &emsp;&emsp;[`deque::back`](../standard-library/deque-class.md#back)\
+      &emsp;&emsp;[`deque::front`](../standard-library/deque-class.md#front)
+   :::column-end:::
+   :::column span="":::
+      [`deque::operator[]`](../standard-library/deque-class.md#op_at)\
+      [`list::back`](../standard-library/list-class.md#back)\
+      [`list::front`](../standard-library/list-class.md#front)\
+      [`queue::back`](../standard-library/queue-class.md#back)
+   :::column-end:::
+   :::column span="":::
+      [`queue::front`](../standard-library/queue-class.md#front)\
+      [`vector::back`](../standard-library/vector-class.md#back)\
+      [`vector::front`](../standard-library/vector-class.md#front)\
+      [`vector::operator[]`](../standard-library/vector-class.md#op_at)
+   :::column-end:::
+:::row-end:::
 
-當 _ITERATOR_DEBUG_LEVEL 定義為0時:
+當 _ITERATOR_DEBUG_LEVEL 定義為0時：
 
 - 不會檢查任何標準迭代器。 迭代器可移到容器界限之外，因而導致未定義的行為。
 
@@ -60,7 +75,7 @@ ms.locfileid: "68452131"
 
 ## <a name="example"></a>範例
 
-當您使用設為1或2的 _ITERATOR_DEBUG_LEVEL 進行編譯時, 如果您嘗試使用特定類別的索引運算子來存取容器界限外的元素, 就會發生執行階段錯誤。
+當您使用 _ITERATOR_DEBUG_LEVEL 設定為1或2的編譯時，如果您嘗試使用特定類別的索引運算子來存取容器界限之外的專案，就會發生執行階段錯誤。
 
 ```cpp
 // checked_iterators_1.cpp
@@ -89,7 +104,7 @@ int main()
 
 ## <a name="example"></a>範例
 
-同樣地, 當您使用設為1或2的 _ITERATOR_DEBUG_LEVEL 進行編譯時, 如果您嘗試在容器是空的時, 使用`front`或`back`在容器類別中存取元素, 就會發生執行階段錯誤。
+同樣地，當您使用 _ITERATOR_DEBUG_LEVEL 設定為1或2時，如果您嘗試在 `front` `back` 容器為空白時使用或在容器類別中存取專案，則會發生執行階段錯誤。
 
 ```cpp
 // checked_iterators_2.cpp
@@ -113,7 +128,7 @@ int main()
 
 ## <a name="example"></a>範例
 
-下列程式碼示範各種迭代器使用案例，附帶每個使用案例的註解。 根據預設, 在 [偵錯工具] 組建中, _ITERATOR_DEBUG_LEVEL 會設為 2, 在零售組建中則設定為0。
+下列程式碼示範各種迭代器使用案例，附帶每個使用案例的註解。 根據預設，在偵錯工具組建中，_ITERATOR_DEBUG_LEVEL 設定為2，在零售組建中設定為0。
 
 ```cpp
 // checked_iterators_3.cpp
@@ -219,5 +234,5 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)
+[C + + 標準程式庫總覽](../standard-library/cpp-standard-library-overview.md)\
+[Debug Iterator 支援](../standard-library/debug-iterator-support.md)

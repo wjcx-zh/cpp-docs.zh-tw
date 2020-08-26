@@ -1,21 +1,21 @@
 ---
-title: switch_type （c + + COM 屬性）
+title: 'switch_type (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c39aa442c9d4eaf3a482e411cda762fe0cc34b3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211927"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838525"
 ---
 # <a name="switch_type"></a>switch_type
 
-識別用來做為聯集判別之變數的類型。
+識別當做聯集判別使用之變數的類型。
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +34,7 @@ type
 
 **Switch_type** c + + 屬性具有與[switch_type](/windows/win32/Midl/switch-type) MIDL 屬性相同的功能。
 
-C + + 屬性不支援[封裝](/windows/win32/Midl/encapsulated-unions)的等位。 僅支援下列形式的[Nonencapsulated](/windows/win32/Midl/nonencapsulated-unions)等位：
+C + + 屬性不支援 [封裝](/windows/win32/Midl/encapsulated-unions)的等位。 只有下列格式支援[Nonencapsulated](/windows/win32/Midl/nonencapsulated-unions)聯集：
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -55,16 +55,14 @@ struct SizedValue2 {
 
 ## <a name="example"></a>範例
 
-如需**switch_type**使用範例，請參閱[案例](case-cpp.md)範例。
+如需**switch_type**的使用範例，請參閱[案例](case-cpp.md)範例。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**`typedef`**|
-|**可重複**|否|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 
@@ -74,4 +72,4 @@ struct SizedValue2 {
 
 [IDL 屬性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[進出口](export.md)
+[出口](export.md)

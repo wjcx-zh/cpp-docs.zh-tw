@@ -1,17 +1,17 @@
 ---
-title: 可系C++結（COM 屬性）
+title: '可系結 (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167351"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838967"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ ms.locfileid: "80167351"
 
 ## <a name="remarks"></a>備註
 
-可系結C++屬性的功能與可系[結的](/windows/win32/Midl/bindable) **MIDL 屬性相同**。 您可以在使用[propget](propget.md)、 [propput](propput.md)或[propputref](propputref.md)屬性定義的屬性上使用它，或者您可以手動定義可系結的方法。
+可系結 **的 c +** + 屬性具有與可系 [結 MIDL 屬性相同的功能](/windows/win32/Midl/bindable) 。 您可以將它用於以 [propget](propget.md)、 [propput](propput.md)或 [propputref](propputref.md) 屬性定義的屬性，也可以手動定義可系結的方法。
 
 下列 MFC 範例示範如何使用可系**結：**
 
 - [控制項範例：以 MFC 為基礎的 ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [CIRC 範例： ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [圓形範例： ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [TESTHELP 範例：具有工具提示和說明的 ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>範例
 
-下列程式碼說明如何在**屬性上使用**可系結：
+下列程式碼說明如何在 **屬性上使用** 可系結：
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -58,16 +58,14 @@ __interface IPropDemo : IDispatch {
 [ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面方法|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

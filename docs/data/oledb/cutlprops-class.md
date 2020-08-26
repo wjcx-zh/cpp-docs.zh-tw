@@ -29,16 +29,16 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211103"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845662"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
 
-會針對各種 OLE DB 屬性介面（例如 `IDBProperties`、`IDBProperties`和 `IRowsetInfo`）來執行屬性。
+針對各種 OLE DB 的屬性 (介面執行屬性，例如、、 `IDBProperties` `IDBProperties` 和 `IRowsetInfo`) 。
 
 ## <a name="syntax"></a>語法
 
@@ -50,9 +50,9 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-包含 `BEGIN_PROPSET_MAP`的類別。
+包含的類別 `BEGIN_PROPSET_MAP` 。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **Header:** atldb.h
 
@@ -60,23 +60,23 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 ### <a name="methods"></a>方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[GetPropValue](#getpropvalue)|從屬性集取得屬性。|
 |[IsValidValue](#isvalidvalue)|在設定屬性之前用來驗證值。|
-|[OnInterfaceRequested](#oninterfacerequested)|當取用者在物件建立介面上呼叫方法時，處理選擇性介面的要求。|
-|[OnPropertyChanged](#onpropertychanged)|在設定屬性以處理連結的屬性後呼叫。|
+|[OnInterfaceRequested](#oninterfacerequested)|當取用者在物件建立介面上呼叫方法時，處理選用介面的要求。|
+|[OnPropertyChanged](#onpropertychanged)|設定屬性以處理連結的屬性之後呼叫。|
 |[SetPropValue](#setpropvalue)|設定屬性集內的屬性。|
 
 ## <a name="remarks"></a>備註
 
-此類別大多是一個執行詳細資料。
+此類別大部分是實作為的詳細資料。
 
-`CUtlProps` 包含在內部設定屬性的兩個成員： [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)和[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。
+`CUtlProps` 包含兩個在內部設定屬性的成員： [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) 和 [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。
 
-如需屬性集對應中所用宏的詳細資訊，請參閱[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)和[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)。
+如需屬性集對應中所使用之宏的詳細資訊，請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 和 [END_PROPSET_MAP](../../data/oledb/end-propset-map.md)。
 
-## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps：： GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps：： GetPropValue
 
 從屬性集取得屬性。
 
@@ -97,13 +97,13 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 在屬性索引。
 
 *pvValue*<br/>
-脫銷Variant 的指標，其中包含新的屬性值。
+擴展Variant 的指標，其中包含新的屬性值。
 
 ### <a name="return-value"></a>傳回值
 
-`Failure` 失敗時，S_OK 成功。
+`Failure` 失敗時 S_OK，如果成功則為。
 
-## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps：： IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a> CUtlProps：： IsValidValue
 
 在設定屬性之前用來驗證值。
 
@@ -117,22 +117,22 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 #### <a name="parameters"></a>參數
 
 *iCurSet*<br/>
-屬性集陣列中的索引。如果只有一個屬性集，則為零。
+屬性集陣列中的索引;如果只有一個屬性集，則為零。
 
 *pDBProp*<br/>
 [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))結構中的屬性識別碼和新值。
 
 ### <a name="return-value"></a>傳回值
 
-標準 HRESULT。 預設傳回值為 S_OK。
+標準 HRESULT。 預設的傳回值為 S_OK。
 
 ### <a name="remarks"></a>備註
 
-如果您想要在要用來設定屬性的值上執行任何驗證常式，您應該覆寫此函式。 例如，您可以針對密碼資料表驗證 DBPROP_AUTH_PASSWORD，以判斷有效的值。
+如果您想要在要用來設定屬性的值上執行任何驗證常式，則應該覆寫此函式。 例如，您可以針對密碼資料表驗證 DBPROP_AUTH_PASSWORD，以判斷有效的值。
 
-## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps：： OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a> CUtlProps：： OnInterfaceRequested
 
-當取用者在其中一個物件建立介面上呼叫方法時，處理選擇性介面的要求。
+當取用者在其中一個物件建立介面上呼叫方法時，處理選用介面的要求。
 
 ### <a name="syntax"></a>語法
 
@@ -143,15 +143,15 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 #### <a name="parameters"></a>參數
 
 *riid*<br/>
-在所要求介面的 IID。 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*（在*MDAC SDK*中）中 `ICommand::Execute` 的*riid*參數描述。
+在所要求介面的 IID。 如需詳細資訊，請參閱*riid* `ICommand::Execute` *MDAC SDK*) 中 OLE DB 程式設計*人員參考* (中的 riid 參數描述。
 
 ### <a name="remarks"></a>備註
 
-當取用者在其中一個物件建立介面（例如 `IDBCreateSession`、`IDBCreateCommand`、`IOpenRowset`或 `ICommand`）上呼叫方法時，`OnInterfaceRequested` 會處理選擇性介面的取用者要求。 它會為要求的介面設定對應的 OLE DB 屬性。 例如，如果取用者要求 `IID_IRowsetLocate`，`OnInterfaceRequested` 會設定 `DBPROP_IRowsetLocate` 介面。 這麼做會在資料列集建立期間維持正確的狀態。
+`OnInterfaceRequested` 當取用者在其中一個物件建立 (介面上呼叫方法時（例如 `IDBCreateSession` 、 `IDBCreateCommand` 、 `IOpenRowset` 或) ），處理選擇性介面的取用者要求 `ICommand` 。 它會為要求的介面設定對應的 OLE DB 屬性。 例如，如果取用者要求 `IID_IRowsetLocate` ，則 `OnInterfaceRequested` 設定 `DBPROP_IRowsetLocate` 介面。 這樣做會在資料列集建立期間維持正確的狀態。
 
-當取用者呼叫 `IOpenRowset::OpenRowset` 或 `ICommand::Execute`時，會呼叫這個方法。
+當取用者呼叫或時，會呼叫這個方法 `IOpenRowset::OpenRowset` `ICommand::Execute` 。
 
-如果取用者開啟物件並要求選用的介面，則提供者應該將與該介面相關聯的屬性設定為 VARIANT_TRUE。 若要允許屬性特定的處理，在呼叫提供者的 `Execute` 方法之前，會呼叫 `OnInterfaceRequested`。 根據預設，`OnInterfaceRequested` 會處理下列介面：
+如果取用者開啟物件，並要求選擇性的介面，則提供者應該將與該介面相關聯的屬性設定為 VARIANT_TRUE。 若要允許屬性特定的處理， `OnInterfaceRequested` 會在呼叫提供者的方法之前呼叫 `Execute` 。 預設會 `OnInterfaceRequested` 處理下列介面：
 
 - `IRowsetLocate`
 
@@ -163,11 +163,11 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 - `IRowsetScroll`
 
-如果您想要處理其他介面，請覆寫資料來源、會話、命令或資料列集類別中的這個函式，以處理函式。 您的覆寫應經過一般設定/取得屬性介面，以確保設定屬性也會設定任何連結的屬性（請參閱[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)）。
+如果您想要處理其他介面，請在您的資料來源、會話、命令或資料列集類別中覆寫此函數，以處理函式。 您的覆寫應該經過一般 set/get 屬性介面，以確保設定屬性也會設定任何連結的屬性 (請參閱 [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)) 。
 
-## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps：： OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps：： OnPropertyChanged
 
-在設定屬性以處理連結的屬性後呼叫。
+設定屬性以處理連結的屬性之後呼叫。
 
 ### <a name="syntax"></a>語法
 
@@ -179,26 +179,26 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 #### <a name="parameters"></a>參數
 
 *iCurSet*<br/>
-屬性集陣列中的索引。如果只有一個屬性集，則為零。
+屬性集陣列中的索引;如果只有一個屬性集，則為零。
 
 *pDBProp*<br/>
 [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))結構中的屬性識別碼和新值。
 
 ### <a name="return-value"></a>傳回值
 
-標準 HRESULT。 預設傳回值為 S_OK。
+標準 HRESULT。 預設的傳回值為 S_OK。
 
 ### <a name="remarks"></a>備註
 
-如果您想要處理連結的屬性（例如，其值相依于另一個屬性值的書簽或更新），您應該覆寫此函數。
+如果您想要處理連結的屬性，例如其值相依于另一個屬性值的書簽或更新，您應該覆寫此函數。
 
 ### <a name="example"></a>範例
 
-在此函數中，使用者會從 `DBPROP*` 參數取得屬性識別碼。 現在，您可以將識別碼與屬性相比較，以進行連鎖。 找到屬性時，會使用屬性來呼叫 `SetProperties`，此屬性現在會與另一個屬性一起設定。 在此情況下，如果其中一個取得 `DBPROP_IRowsetLocate`、`DBPROP_LITERALBOOKMARKS`或 `DBPROP_ORDEREDBOOKMARKS` 屬性，則可以設定 `DBPROP_BOOKMARKS` 屬性。
+在此函數中，使用者從參數取得屬性識別碼 `DBPROP*` 。 現在，您可以將識別碼與屬性進行比較，以進行鏈。 當找到屬性時， `SetProperties` 會使用現在會與其他屬性一起設定的屬性來呼叫。 在此情況下，如果一個取得 `DBPROP_IRowsetLocate` 、 `DBPROP_LITERALBOOKMARKS` 或 `DBPROP_ORDEREDBOOKMARKS` 屬性，就可以設定 `DBPROP_BOOKMARKS` 屬性。
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps：： SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a> CUtlProps：： SetPropValue
 
 設定屬性集內的屬性。
 
@@ -223,7 +223,7 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 
 ### <a name="return-value"></a>傳回值
 
-`Failure` 失敗時，S_OK 成功。
+`Failure` 失敗時 S_OK，如果成功則為。
 
 ## <a name="see-also"></a>另請參閱
 

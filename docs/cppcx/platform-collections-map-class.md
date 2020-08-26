@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610903"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839136"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
@@ -90,16 +90,15 @@ Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 
 
 ### <a name="events"></a>事件
 
-|||
-|-|-|
-|名稱|描述|
-|[Map：： MapChanged](#mapchanged) 事件|發生於 Map 變更時。|
+| 名稱 | 描述 |
+|--|--|
+| [Map：： MapChanged](#mapchanged) 事件 | 發生於 Map 變更時。 |
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `Map`
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** collection.h
 

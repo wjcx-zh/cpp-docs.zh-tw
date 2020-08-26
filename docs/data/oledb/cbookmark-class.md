@@ -66,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: d3d82ea09b7ed2c1cbaf325906b4f9b480e1eb4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359327"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838473"
 ---
 # <a name="cbookmark-class"></a>CBookmark 類別
 
-在其緩衝區中保存書籤值。
+將書簽值保存在其緩衝區中。
 
 ## <a name="syntax"></a>語法
 
@@ -90,9 +90,9 @@ class CBookmark< 0 > : public CBookmarkBase
 ### <a name="parameters"></a>參數
 
 *nSize*<br/>
-書籤緩衝區的大小(以位元組為單位)。 當*nSize*為零時,將在運行時動態創建書籤緩衝區。
+書簽緩衝區的大小（以位元組為單位）。 當 *nSize* 為零時，就會在執行時間以動態方式建立書簽緩衝區。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標題:** atldbcli.h
 
@@ -100,24 +100,24 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="methods"></a>方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
-|[CBook 標誌](#cbookmark)|建構函數|
-|[GetBuffer](#getbuffer)|檢索指向緩衝區的指標。|
-|[GetSize](#getsize)|檢索以位元組為單位的緩衝區大小。|
-|[設定書籤](#setbookmark)|設置書籤值。|
+|[CBookmark](#cbookmark)|函數|
+|[GetBuffer](#getbuffer)|擷取緩衝區的指標。|
+|[GetSize](#getsize)|抓取緩衝區的大小（以位元組為單位）。|
+|[SetBookmark](#setbookmark)|設定書簽值。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
-|||
+| 名稱 | 描述 |
 |-|-|
-|[運算符 |](#operator)|將一個`CBookmark`類分配給另一個類。|
+|[運算子 =](#operator)|將一個 `CBookmark` 類別指派給另一個類別。|
 
 ## <a name="remarks"></a>備註
 
-`CBookmark<0>`是 樣本專業化`CBookmark`。其緩衝區在運行時動態創建。
+`CBookmark<0>` 是的樣板特製化， `CBookmark` 其緩衝區會在執行時間以動態方式建立。
 
-## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBook標誌::CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a> CBookmark：： CBookmark
 
 建構函式。
 
@@ -135,14 +135,14 @@ CBookmark(DBLENGTH nSize);
 
 ### <a name="remarks"></a>備註
 
-第一個函式會將緩衝區設定為 NULL，將緩衝區大小設定為 0。 第二個函數將緩衝區大小設置為*nSize,* 將緩衝區設置為*nSize*位元組的位元組。
+第一個函式會將緩衝區設定為 NULL，將緩衝區大小設定為 0。 第二個函式會將緩衝區大小設定為 *nSize*，並將緩衝區設定為 *nSize* 位元組的位元組陣列。
 
 > [!NOTE]
-> 此功能僅在中`CBookmark<0>`可用。
+> 此函數僅適用于 `CBookmark<0>` 。
 
-## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBook標誌:取得緩衝區
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a> CBookmark：： GetBuffer
 
-檢索指向書籤緩衝區的指標。
+捕獲書簽緩衝區的指標。
 
 ### <a name="syntax"></a>語法
 
@@ -152,9 +152,9 @@ virtual BYTE* GetBuffer() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-指向書籤緩衝區的指標。
+書簽緩衝區的指標。
 
-## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBook 標誌:取得 Size
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a> CBookmark：： GetSize
 
 擷取書籤緩衝區的大小。
 
@@ -168,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 以位元組為單位的緩衝區大小。
 
-## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBook標誌::設定書籤
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a> CBookmark：： SetBookmark
 
-將*pBuffer*引用的書籤值複製到緩`CBookmark`衝區 ,並將緩衝區大小設定為*nSize*。
+將 *pBuffer* 所參考的書簽值複製到 `CBookmark` 緩衝區，並將緩衝區大小設定為 *nSize*。
 
 ### <a name="syntax"></a>語法
 
@@ -181,10 +181,10 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 #### <a name="parameters"></a>參數
 
 *nSize*<br/>
-[在]書籤緩衝區的大小。
+在書簽緩衝區的大小。
 
 *pBuffer*<br/>
-[在]指向包含書籤值的位元組的指標。
+在包含書簽值的位元組陣列指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -192,9 +192,9 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 ### <a name="remarks"></a>備註
 
-此功能僅在中`CBookmark<0>`可用。
+此函數僅適用于 `CBookmark<0>` 。
 
-## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBook標誌::運算符 |
+## <a name="cbookmarkoperator-"></a><a name="operator"></a> CBookmark：： operator =
 
 指派 `CBookmark` 物件給另一個。
 
@@ -206,9 +206,9 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 ### <a name="remarks"></a>備註
 
-此運算碼僅在 中`CBookmark<0>`才需要。
+只有在中才需要此運算子 `CBookmark<0>` 。
 
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

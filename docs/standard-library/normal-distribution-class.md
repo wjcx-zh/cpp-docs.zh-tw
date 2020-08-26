@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 138011ec4ccf6c010f002d61cdb8ae8b0bac1796
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fed268b6c3f318b3e308f90e94862fdf969e3fa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212146"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836396"
 ---
 # <a name="normal_distribution-class"></a>normal_distribution 類別
 
@@ -72,18 +72,16 @@ public:
 ### <a name="parameters"></a>參數
 
 *RealType*\
-浮點結果類型，預設值為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+浮點結果類型，預設為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述產生使用者指定之整數類型值的分佈（ **`double`** 如果未提供，則為類型）（根據一般散發散發）。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之整數類型的值的分佈， **`double`** 如果沒有提供，則為類型，並根據一般分佈進行散發。 下表提供各個成員的文章連結。
 
-||||
-|-|-|-|
-|[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
-|`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
+[normal_distribution](#normal_distribution)\
+[param_type](#param_type)
 
-屬性函式 `mean()` 和會 `stddev()` 分別傳回儲存的散發參數值*mean*和*stddev* 。
+屬性函式會傳回 `mean()` `stddev()` 預存分佈參數的值，分別 *代表* 和 *stddev* 。
 
 屬性成員 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。
 
@@ -181,13 +179,13 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a>normal_distribution：： normal_distribution
+## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a> normal_distribution：： normal_distribution
 
 建構分佈。
 
@@ -198,13 +196,13 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*表明*\
+*意味 著*\
 `mean` 分佈參數。
 
 *stddev*\
 `stddev` 分佈參數。
 
-*parm*\
+*>parm*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -215,7 +213,7 @@ explicit normal_distribution(const param_type& parm);
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="normal_distributionparam_type"></a><a name="param_type"></a>normal_distribution：:p aram_type
+## <a name="normal_distributionparam_type"></a><a name="param_type"></a> normal_distribution：:p aram_type
 
 儲存分佈的參數。
 
@@ -233,13 +231,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*表明*\
+*意味 著*\
 `mean` 分佈參數。
 
 *stddev*\
 `stddev` 分佈參數。
 
-*再*\
+*對*\
 用來進行比較的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註

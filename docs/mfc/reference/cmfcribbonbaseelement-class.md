@@ -232,16 +232,16 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 8cf84df16feac39406c80af8c91973ba81d3c815
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 18f158bd9e984c750769742c43c4dd3b65e5e731
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752479"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836630"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 類別
 
-類`CMFCRibbonBaseElement`是可以添加到[功能區欄](../../mfc/reference/cmfcribbonbar-class.md)的所有元素的基類。 功能區項目的範例包括功能區按鈕、功能區核取方塊和功能區下拉式方塊。
+`CMFCRibbonBaseElement`類別是可以加入至[功能區](../../mfc/reference/cmfcribbonbar-class.md)列之所有專案的基類（base class）。 功能區項目的範例包括功能區按鈕、功能區核取方塊和功能區下拉式方塊。
 
 ## <a name="syntax"></a>語法
 
@@ -261,140 +261,140 @@ class CMFCRibbonBaseElement : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFC 功能基礎元素::新增到關鍵清單](#addtokeylist)|將功能區元素的鍵提示添加到一系列鍵提示。|
-|[CMFC 功能基礎元素::新增到列表框](#addtolistbox)|將功能區元素添加到指定的功能區命令列表框。|
-|[CMFC 功能基礎元素::可新增到快速存取工具列](#canbeaddedtoquickaccesstoolbar)|指示功能區元素是否可以添加到快速存取工具列。|
-|[CMFC 功能基礎元素::可壓縮](#canbecompacted)|指示功能區元素的大小是否可以緊湊。|
-|[CMFC 功能基礎元素::可拉伸](#canbestretched)|指示功能區元素的高度是否可以垂直增加到功能區行的高度。|
-|[CMFC 功能基礎元素::可橫向拉伸](#canbestretchedhorizontally)|指示功能區元素的寬度是否可以更改。|
-|[CMFC 功能基礎元素::清理](#cleanupsizes)|清理功能區元素的尺寸設置。|
-|[CMFC 功能基礎元素::閉合彈出功能表](#closepopupmenu)|關閉功能區元素的彈出功能表。|
-|[CMFC 功能基礎元素::從](#copyfrom)|將指定的`CMFCRibbonBaseElement`狀態複製到當前物件。|
-|[CMFC功能基礎元素::D](#destroyctrl)|銷毀功能區元素。|
-|[CMFC功能基礎元素::D原始圖像](#drawimage)|繪製功能區元素的圖像。|
-|[CMFC 功能基礎元素:尋找](#find)|如果指定指標指向當前物件,則返回指向功能區元素的指定指標。|
-|[CMFC 功能基礎元素::尋找資料](#findbydata)|如果功能區元素包含指定的數據,則檢索指向功能區元素的指標。|
-|[CMFC 功能基礎元素::尋找ByID](#findbyid)|如果指定的命令 ID 標識了該元素,則檢索指向功能區元素的指標。|
-|[CMFC 功能基礎元素::按原始查找](#findbyoriginal)|如果功能區元素的原始功能區元素與指定的功能區元素匹配,則檢索指向功能區元素的指標。|
-|[CMFC 功能基礎元素:取得壓縮大小](#getcompactsize)|傳回功能區項目的壓縮大小。|
-|[CMFC 功能基礎元素:取得資料](#getdata)|檢索與功能區元素關聯的用戶定義的數據。|
-|[CMFC 功能基礎元素:取得描述](#getdescription)|返回功能區元素的說明。|
-|[CMFC 功能基礎元素::向下刪除](#getdroppeddown)|如果功能區元素的彈出功能表被下拉,則檢索指向功能區元素的指標。|
-|[CMFC功能基礎元素:取得元素](#getelements)|將當前功能區元素添加到指定的陣列。|
-|[CMFC 功能基礎元素:取得元素 ByID](#getelementsbyid)|如果當前功能區元素包含指定的命令 ID,則將當前功能區元素添加到指定的陣列中。|
-|[CMFC 功能基礎元素::獲得突出顯示](#gethighlighted)|如果功能區元素突出顯示,則檢索該指標。|
-|[CMFC 功能基礎元素:GetID](#getid)|返回功能區元素的命令 ID。|
-|[CMFC 功能基礎元素:取得影像大小](#getimagesize)|傳回功能區項目的影像大小。|
-|[CMFC 功能基礎元素:取得中間大小](#getintermediatesize)|傳回中繼狀態之功能區項目的大小。|
-|[CMFC 功能基礎元素:取得金鑰](#getkeys)|返回與功能區元素關聯的鍵尖。|
-|[CMFC 功能基礎元素::取得金鑰提示](#getkeytiprect)|檢索功能區元素的鍵尖邊界矩形。|
-|[CMFC 功能基礎元素::取得關鍵提示大小](#getkeytipsize)|檢索鍵提示文字的大小。|
-|[CMFC 功能基礎元素::取得定位群組](#getlocationingroup)|指示功能區組中功能區元素的顯示位置。|
-|[CMFC功能基礎元素:取得選單鍵](#getmenukeys)|返回與按鈕關聯的鍵提示。|
-|[CMFC 功能基礎元素:取得NotifyID](#getnotifyid)|檢索功能區元素的通知命令 ID。|
-|[CMFC功能基礎元素:取得原始元素](#getoriginal)|檢索原始功能區元素。|
-|[CMFC 功能基礎元素:取得父項目](#getparentcategory)|檢索功能區元素的功能區類別。|
-|[CMFC 功能基礎元素:獲取家長面板](#getparentpanel)|檢索包含功能區元素的功能區面板。|
-|[CMFC 功能基礎元素:取得父功能列](#getparentribbonbar)|檢索功能區元素的父功能區欄。|
-|[CMFC 功能基礎元素:獲取家長](#getparentwnd)|檢索功能區元素的父視窗。|
-|[CMFC 功能基礎元素::獲取壓榨](#getpressed)|如果使用者當前按下功能區元素,則檢索指向功能區元素的指標。|
-|[CMFC 功能基礎元素:取得快速存取工具Barid](#getquickaccesstoolbarid)|在功能區元素位於快速存取工具列中時檢索其命令 ID。|
-|[CMFC 功能基礎元素::取得 Rect](#getrect)|返回功能區元素的邊界矩形。|
-|[CMFC 功能基礎元素:取得一般大小](#getregularsize)|傳回功能區項目的一般大小。|
-|[CMFC 功能基礎元素:取得大小](#getsize)|傳回功能區元素的當前大小。|
-|[CMFC 功能基礎元素:取得文字](#gettext)|返回與功能區元素關聯的文本。|
-|[CMFC 功能基礎元素::取得工具提示文字](#gettooltiptext)|傳回功能區項目的工具提示文字。|
-|[CMFC 功能基礎元素:取得頂級功能區列](#gettoplevelribbonbar)|檢索功能區元素的頂層功能區欄。|
-|[CMFC 功能基礎元素::具有壓縮模式](#hascompactmode)|指定功能區項目是否有精簡模式。|
-|[CMFC 功能基礎元素::有焦點](#hasfocus)|指示父元素是否具有鍵盤焦點。|
-|[CMFC功能基礎元素::具有中間模式](#hasintermediatemode)|指定功能區項目是否有中繼模式。|
-|[CMFC功能基礎元素::具有大模式](#haslargemode)|指定功能區元素是否具有大模式。|
-|[CMFC功能基礎元素::哈斯梅因](#hasmenu)|指示功能區元素是否具有功能表。|
-|[CMFC功能基礎元素:hitTest](#hittest)|如果指定點位於其中,則檢索指向功能區元素的指標。|
-|[CMFC 功能基礎元素::正對齊比列](#isalignbycolumn)|指示功能區元素是否與其他功能區元素垂直對齊。|
-|[CMFC 功能基礎元素::始終較大的圖像](#isalwayslargeimage)|指示功能區元素圖像大小是否始終較大。|
-|[CMFC 功能基礎元素::自動重複模式](#isautorepeatmode)|指示功能區元素是否處於自動重複模式。|
-|[CMFC 功能基礎元素::已選中](#ischecked)|指定是否選擇功能區元素。|
-|[CMFC 功能基礎元素:壓縮模式](#iscompactmode)|指定功能區元素是否處於緊湊模式。|
-|[CMFC 功能基礎元素::預設選單檢視](#isdefaultmenulook)||
-|[CMFC 功能基礎元素::已關閉](#isdisabled)|指定功能區元素是否關閉。|
-|[CMFC 功能基礎元素::已丟棄](#isdroppeddown)|確定功能區元素是否顯示彈出功能表並向下下拉。|
-|[CMFC 功能基礎元素::聚焦](#isfocused)|指定功能區元素是否具有焦點。|
-|[CMFC功能基礎元素::IsgalleryIcon](#isgalleryicon)|指示功能區元素是否包含在功能區庫中。|
-|[CMFC 功能基礎元素::已突出顯示](#ishighlighted)|指定功能區元素是否突出顯示。|
-|[CMFC 功能基礎元素::中間模式](#isintermediatemode)|指示功能區元素的當前圖像是否為中間大小。|
-|[CMFC 功能基礎元素::是大模式](#islargemode)|指示功能區元素的當前圖像是否大。|
-|[CMFC功能基礎元素::即選單模式](#ismenumode)|指示功能區元素是否包含在菜單中。|
-|[CMFC 功能基礎元素::按壓](#ispressed)|指示使用者是否已按下功能區元素。|
-|[CMFC功能基礎元素:isQAT模式](#isqatmode)|指示功能區元素是否包含在快速訪問工具列中。|
-|[CMFC功能基礎元素:分離器](#isseparator)|指示功能區元素是否為顯示分隔符。|
-|[CMFC 功能基礎元素::IsShowGroup邊框](#isshowgroupborder)|指示功能區元素是否包含在顯示公共邊框的組中。|
-|[CMFC 功能基礎元素::isShowTooltipon 底部](#isshowtooltiponbottom)|指示工具提示是否顯示在功能區元素下。|
-|[CMFC 功能基礎元素::IsTabStop](#istabstop)|指示是否可以使用鍵盤選擇功能區元素。|
-|[CMFC 功能基礎元素::文本始終正確](#istextalwaysonright)|指示功能區元素的文本是否顯示在右側。|
-|[CMFC 功能基礎元素:可見](#isvisible)|指示功能區元素當前是否顯示。|
-|[CMFC 功能基礎元素::完整羅高](#iswholerowheight)|指示功能區元素的顯示高度是否與包含功能區面板的顯示高度相同。|
-|[CMFC 功能基礎元素::通知命令](#notifycommand)|向功能區元素的父視窗發送命令通知。|
-|[CMFC 功能基礎元素::通知突出顯示清單項](#notifyhighlightlistitem)|當使用者突出顯示位於清單中的功能區元素時,通知功能區列的父視窗。|
-|[CMFC功能基礎元素::在ADDtoQA工具列上](#onaddtoqatoolbar)|將功能區元素添加到指定的快速存取工具列。|
-|[CMFC 功能基礎元素::在轉換后](#onafterchangerect)|更新功能區元素的工具提示。|
-|[CMFC功能基礎元素::自動重複](#onautorepeat)|更新功能區元素以回應持續的用戶輸入。|
-|[CMFC 功能基礎元素::在文字大小上](#oncalctextsize)|計算功能區元素的文字大小。|
-|[CMFC 功能基礎元素::在更改選單高亮顯示](#onchangemenuhighlight)|當突出顯示更改位於功能表中的功能區元素時,由框架調用。|
-|[CMFC 功能基礎元素::開拉](#ondraw)|由架構呼叫以繪製功能區項目。|
-|[CMFC 功能基礎元素::繪製鍵提示](#ondrawkeytip)|由框架調用以繪製功能區元素的鍵尖。|
-|[CMFC功能基礎元素::在繪製選單影像](#ondrawmenuimage)|繪製功能區元素的功能表圖像時由框架調用。|
-|[CMFC功能基礎元素:在畫上清單](#ondrawonlist)|由框架呼叫以在命令清單框中繪製功能區元素。|
-|[CMFC功能基礎元素::在鍵上](#onkey)|當使用者按下鍵尖並且功能區元素具有焦點時,由框架調用。|
-|[CMFC功能基礎元素::上選單鍵](#onmenukey)||
-|[CMFC 功能基礎元素::在RTL改變](#onrtlchanged)|當佈局更改方向時由框架調用。|
-|[CMFC 功能基礎元素::上展](#onshow)|由框架呼叫以顯示或隱藏功能區元素。|
-|[CMFC功能基礎元素::在顯示彈出選單](#onshowpopupmenu)|當功能區元素要顯示彈出功能表時,由框架調用。|
-|[CMFC功能基礎元素::P奧斯特庫梅命令](#postmenucommand)||
-|[CMFC 功能基礎元素::重繪](#redraw)|更新功能區元素的顯示。|
-|[CMFC 功能基礎元素::設定ACC資料](#setaccdata)|設定功能區項目的協助工具資料。|
-|[CMFC 功能基礎元素::設定壓縮模式](#setcompactmode)|設定功能區元素的顯示大小。|
-|[CMFC 功能基礎元素::集數據](#setdata)|將數據項與功能區元素關聯。|
-|[CMFC 功能基礎元素::設定預設選單檢視](#setdefaultmenulook)||
-|[CMFC 功能基礎元素::設定描述](#setdescription)|設定功能區項目的描述。|
-|[CMFC 功能基礎元素::SetID](#setid)|設置功能區元素的命令 ID。|
-|[CMFC 功能基礎元素::設定初始模式](#setinitialmode)|設定功能區元素的初始顯示大小。|
-|[CMFC 功能基礎元素::設定鍵](#setkeys)|設置功能區元素的鍵尖。|
-|[CMFC 功能基礎元素::設定原始](#setoriginal)|設置功能區元素的原始功能區元素。|
-|[CMFC 功能基礎元素::設定父項目類別](#setparentcategory)|設置功能區元素的父類別。|
-|[CMFC 功能基礎元素::設定父選單](#setparentmenu)|設置功能區元素的父功能表容器。|
-|[CMFC 功能基礎元素::設定父功能區列](#setparentribbonbar)|設置功能區元素的父功能區列。|
-|[CMFC 功能基礎元素::設定 Rect](#setrect)|設置他顯示功能區元素矩形的尺寸。|
-|[CMFC 功能基礎元素::設定文字](#settext)|設定功能區項目的文字。|
-|[CMFC 功能基礎元素::設定文字始終正確](#settextalwaysonright)|設置功能區元素的文本,以便顯示在右側。|
-|[CMFC 功能基礎元素::設定工具提示文字](#settooltiptext)|設定功能區元素的工具提示文本。|
-|[CMFC 功能基礎元素::設定可見](#setvisible)|設置功能區元素的可見性狀態。|
-|[CMFC 功能基礎元素::水準拉伸](#stretchhorizontally)|拉伸功能區元素的寬度。|
-|[CMFC 功能基礎元素::拉伸到整體行](#stretchtowholerow)|將功能區元素的顯示高度更改為指定的行高度。|
-|[CMFC 功能基礎元素::更新工具提示資訊](#updatetooltipinfo)|使用功能區元素的命令資源更新工具提示文本。|
+|[CMFCRibbonBaseElement：： AddToKeyList](#addtokeylist)|將功能區專案的按鍵提示加入至快速鍵陣列。|
+|[CMFCRibbonBaseElement：： AddToListBox](#addtolistbox)|將功能區專案加入至指定的 [功能區命令] 清單方塊。|
+|[CMFCRibbonBaseElement：： CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|指出是否可以將功能區專案加入至快速存取工具列。|
+|[CMFCRibbonBaseElement：： CanBeCompacted](#canbecompacted)|指出功能區元素的大小是否可以精簡。|
+|[CMFCRibbonBaseElement：： CanBeStretched](#canbestretched)|指出功能區專案的高度是否可以垂直增加至功能區列的高度。|
+|[CMFCRibbonBaseElement：： CanBeStretchedHorizontally](#canbestretchedhorizontally)|指出功能區元素的寬度是否可以變更。|
+|[CMFCRibbonBaseElement：： CleanUpSizes](#cleanupsizes)|清除功能區元素的維度設定。|
+|[CMFCRibbonBaseElement：： ClosePopupMenu](#closepopupmenu)|關閉功能區元素的快顯功能表。|
+|[CMFCRibbonBaseElement：： CopyFrom](#copyfrom)|將指定的狀態複製 `CMFCRibbonBaseElement` 到目前的物件。|
+|[CMFCRibbonBaseElement：:D estroyCtrl](#destroyctrl)|終結功能區元素。|
+|[CMFCRibbonBaseElement：:D rawImage](#drawimage)|繪製功能區元素的影像。|
+|[CMFCRibbonBaseElement：： Find](#find)|如果指向目前物件，則傳回功能區元素的指定指標。|
+|[CMFCRibbonBaseElement：： FindByData](#findbydata)|如果包含指定的資料，則抓取功能區元素的指標。|
+|[CMFCRibbonBaseElement：： FindByID](#findbyid)|如果該專案是由指定的命令識別碼識別，則抓取功能區元素的指標。|
+|[CMFCRibbonBaseElement：： FindByOriginal](#findbyoriginal)|如果其原始功能區專案符合指定的功能區專案，則抓取功能區專案的指標。|
+|[CMFCRibbonBaseElement：： GetCompactSize](#getcompactsize)|傳回功能區項目的壓縮大小。|
+|[CMFCRibbonBaseElement：：：：的](#getdata)|抓取與功能區元素相關聯的使用者定義資料。|
+|[CMFCRibbonBaseElement：： GetDescription](#getdescription)|傳回功能區元素的描述。|
+|[CMFCRibbonBaseElement：： GetDroppedDown](#getdroppeddown)|抓取功能區專案的指標（如果它的快顯功能表已中斷）。|
+|[CMFCRibbonBaseElement：： GetElements](#getelements)|將目前的功能區元素加入至指定的陣列。|
+|[CMFCRibbonBaseElement：： GetElementsByID](#getelementsbyid)|如果目前的功能區元素包含指定的命令識別碼，則將目前的功能區專案加入至指定的陣列。|
+|[CMFCRibbonBaseElement：： GetHighlighted](#gethighlighted)|如果已反白顯示功能區專案，則抓取其指標。|
+|[CMFCRibbonBaseElement：： GetID](#getid)|傳回功能區元素的命令識別碼。|
+|[CMFCRibbonBaseElement：： GetImageSize](#getimagesize)|傳回功能區項目的影像大小。|
+|[CMFCRibbonBaseElement：： GetIntermediateSize](#getintermediatesize)|傳回中繼狀態之功能區項目的大小。|
+|[CMFCRibbonBaseElement：： GetKeys](#getkeys)|傳回與功能區專案相關聯的按鍵提示。|
+|[CMFCRibbonBaseElement：： GetKeyTipRect](#getkeytiprect)|抓取功能區專案的 keytip 界限矩形。|
+|[CMFCRibbonBaseElement：： GetKeyTipSize](#getkeytipsize)|抓取快速鍵提示文字的大小。|
+|[CMFCRibbonBaseElement：： GetLocationInGroup](#getlocationingroup)|指出功能區元素在功能區群組中的顯示位置。|
+|[CMFCRibbonBaseElement：： GetMenuKeys](#getmenukeys)|傳回與按鈕相關聯的按鍵提示。|
+|[CMFCRibbonBaseElement：： GetNotifyID](#getnotifyid)|抓取功能區元素的通知命令識別碼。|
+|[CMFCRibbonBaseElement：： GetOriginal](#getoriginal)|抓取原始功能區元素。|
+|[CMFCRibbonBaseElement：： GetParentCategory](#getparentcategory)|抓取功能區元素的功能區分類。|
+|[CMFCRibbonBaseElement：： GetParentPanel](#getparentpanel)|抓取包含功能區元素的功能區面板。|
+|[CMFCRibbonBaseElement：： GetParentRibbonBar](#getparentribbonbar)|抓取功能區元素的父功能區列。|
+|[CMFCRibbonBaseElement：： GetParentWnd](#getparentwnd)|抓取功能區元素的父視窗。|
+|[CMFCRibbonBaseElement：： GetPressed](#getpressed)|如果使用者目前按下它，則抓取功能區元素的指標。|
+|[CMFCRibbonBaseElement：： GetQuickAccessToolBarID](#getquickaccesstoolbarid)|在快速存取工具列中找到功能區專案的命令識別碼。|
+|[CMFCRibbonBaseElement：： GetRect](#getrect)|傳回功能區專案的周框。|
+|[CMFCRibbonBaseElement：： GetRegularSize](#getregularsize)|傳回功能區項目的一般大小。|
+|[CMFCRibbonBaseElement：： GetSize](#getsize)|傳回功能區元素的目前大小。|
+|[CMFCRibbonBaseElement：： GetText](#gettext)|傳回與功能區元素相關聯的文字。|
+|[CMFCRibbonBaseElement：： GetToolTipText](#gettooltiptext)|傳回功能區項目的工具提示文字。|
+|[CMFCRibbonBaseElement：： GetTopLevelRibbonBar](#gettoplevelribbonbar)|抓取功能區元素的最上層功能區列。|
+|[CMFCRibbonBaseElement：： HasCompactMode](#hascompactmode)|指定功能區項目是否有精簡模式。|
+|[CMFCRibbonBaseElement：： HasFocus](#hasfocus)|指出父元素是否具有鍵盤焦點。|
+|[CMFCRibbonBaseElement：： HasIntermediateMode](#hasintermediatemode)|指定功能區項目是否有中繼模式。|
+|[CMFCRibbonBaseElement：： HasLargeMode](#haslargemode)|指定功能區專案是否具有大型模式。|
+|[CMFCRibbonBaseElement：： HasMenu](#hasmenu)|指出功能區元素是否有功能表。|
+|[CMFCRibbonBaseElement：： System.windows.media.visualtreehelper.hittest](#hittest)|如果有指定的點，則抓取功能區專案的指標。|
+|[CMFCRibbonBaseElement：： IsAlignByColumn](#isalignbycolumn)|指出功能區專案是否與其他功能區元素垂直對齊。|
+|[CMFCRibbonBaseElement：： IsAlwaysLargeImage](#isalwayslargeimage)|指出功能區元素影像大小是否一律為大型。|
+|[CMFCRibbonBaseElement：： IsAutoRepeatMode](#isautorepeatmode)|指出功能區元素是否處於自動重複模式。|
+|[CMFCRibbonBaseElement：： IsChecked](#ischecked)|指定是否檢查功能區元素。|
+|[CMFCRibbonBaseElement：： IsCompactMode](#iscompactmode)|指定功能區專案是否處於 compact 模式。|
+|[CMFCRibbonBaseElement：： IsDefaultMenuLook](#isdefaultmenulook)||
+|[CMFCRibbonBaseElement：： IsDisabled](#isdisabled)|指定是否停用功能區元素。|
+|[CMFCRibbonBaseElement：： IsDroppedDown](#isdroppeddown)|決定功能區專案是否顯示快顯功能表，並將其卸載。|
+|[CMFCRibbonBaseElement：： IsFocused](#isfocused)|指定功能區專案是否具有焦點。|
+|[CMFCRibbonBaseElement：： IsGalleryIcon](#isgalleryicon)|指出功能區元素是否包含在功能區圖庫中。|
+|[CMFCRibbonBaseElement：： IsHighlighted](#ishighlighted)|指定是否要反白顯示功能區元素。|
+|[CMFCRibbonBaseElement：： IsIntermediateMode](#isintermediatemode)|指出功能區元素的目前影像是否為中繼大小。|
+|[CMFCRibbonBaseElement：： IsLargeMode](#islargemode)|指出功能區元素的目前影像是否大小過大。|
+|[CMFCRibbonBaseElement：： IsMenuMode](#ismenumode)|指出功能區元素是否包含在功能表中。|
+|[CMFCRibbonBaseElement：： IsPressed](#ispressed)|指出使用者是否已按一下功能區元素。|
+|[CMFCRibbonBaseElement：： IsQATMode](#isqatmode)|指出功能區元素是否包含在快速存取工具列中。|
+|[CMFCRibbonBaseElement：： IsSeparator](#isseparator)|指出功能區元素是否為顯示分隔符號。|
+|[CMFCRibbonBaseElement：： IsShowGroupBorder](#isshowgroupborder)|指出功能區元素是否包含在顯示通用框線的群組中。|
+|[CMFCRibbonBaseElement：： IsShowTooltipOnBottom](#isshowtooltiponbottom)|指出工具提示是否顯示在功能區元素之下。|
+|[CMFCRibbonBaseElement：： IsTabStop](#istabstop)|指出是否可以使用鍵盤選取功能區元素。|
+|[CMFCRibbonBaseElement：： IsTextAlwaysOnRight](#istextalwaysonright)|指出功能區元素的文字是否顯示在右側。|
+|[CMFCRibbonBaseElement：： IsVisible](#isvisible)|指出目前是否顯示功能區元素。|
+|[CMFCRibbonBaseElement：： IsWholeRowHeight](#iswholerowheight)|指出功能區專案的顯示 heigth 是否與包含它的功能區面板顯示高度相同。|
+|[CMFCRibbonBaseElement：： NotifyCommand](#notifycommand)|將命令通知傳送至功能區專案的父視窗。|
+|[CMFCRibbonBaseElement：： NotifyHighlightListItem](#notifyhighlightlistitem)|當使用者反白顯示位於清單中的功能區專案時，通知功能區列的父視窗。|
+|[CMFCRibbonBaseElement：： OnAddToQAToolbar](#onaddtoqatoolbar)|將功能區元素加入至指定的快速存取工具列。|
+|[CMFCRibbonBaseElement：： OnAfterChangeRect](#onafterchangerect)|更新功能區元素的工具提示。|
+|[CMFCRibbonBaseElement：： OnAutoRepeat](#onautorepeat)|更新功能區元素以回應持續的使用者輸入。|
+|[CMFCRibbonBaseElement：： OnCalcTextSize](#oncalctextsize)|計算功能區元素的文字大小。|
+|[CMFCRibbonBaseElement：： OnChangeMenuHighlight](#onchangemenuhighlight)|當位於功能表中的功能區專案的醒目提示變更時，由架構呼叫。|
+|[CMFCRibbonBaseElement：： OnDraw](#ondraw)|由架構呼叫以繪製功能區項目。|
+|[CMFCRibbonBaseElement：： OnDrawKeyTip](#ondrawkeytip)|由架構呼叫以繪製功能區專案的按鍵提示。|
+|[CMFCRibbonBaseElement：： OnDrawMenuImage](#ondrawmenuimage)|當繪製功能區元素的功能表影像時，由架構呼叫。|
+|[CMFCRibbonBaseElement：： OnDrawOnList](#ondrawonlist)|由架構呼叫，以在 [命令] 清單方塊中繪製功能區元素。|
+|[CMFCRibbonBaseElement：： OnKey](#onkey)|當使用者按下按鍵提示，並將焦點放在功能區專案時，由架構呼叫。|
+|[CMFCRibbonBaseElement：： OnMenuKey](#onmenukey)||
+|[CMFCRibbonBaseElement：： OnRTLChanged](#onrtlchanged)|當版面配置變更方向時，由架構呼叫。|
+|[CMFCRibbonBaseElement：： OnShow](#onshow)|由架構呼叫以顯示或隱藏功能區元素。|
+|[CMFCRibbonBaseElement：： OnShowPopupMenu](#onshowpopupmenu)|當功能區專案即將顯示快顯功能表時，由架構呼叫。|
+|[CMFCRibbonBaseElement：:P ostMenuCommand](#postmenucommand)||
+|[CMFCRibbonBaseElement：：重繪](#redraw)|更新功能區元素的顯示。|
+|[CMFCRibbonBaseElement：： SetACCData](#setaccdata)|設定功能區項目的協助工具資料。|
+|[CMFCRibbonBaseElement：： SetCompactMode](#setcompactmode)|設定功能區元素的顯示大小。|
+|[CMFCRibbonBaseElement：： SetData](#setdata)|使資料項目與功能區專案產生關聯。|
+|[CMFCRibbonBaseElement：： SetDefaultMenuLook](#setdefaultmenulook)||
+|[CMFCRibbonBaseElement：： SetDescription](#setdescription)|設定功能區項目的描述。|
+|[CMFCRibbonBaseElement：： SetID](#setid)|設定功能區元素的命令識別碼。|
+|[CMFCRibbonBaseElement：： SetInitialMode](#setinitialmode)|設定功能區元素的初始顯示大小。|
+|[CMFCRibbonBaseElement：： SetKeys](#setkeys)|設定功能區元素的 keytip。|
+|[CMFCRibbonBaseElement：： SetOriginal](#setoriginal)|設定功能區元素的原始功能區元素。|
+|[CMFCRibbonBaseElement：： SetParentCategory](#setparentcategory)|設定功能區元素的父類別目錄。|
+|[CMFCRibbonBaseElement：： SetParentMenu](#setparentmenu)|設定功能區元素的父功能表容器。|
+|[CMFCRibbonBaseElement：： SetParentRibbonBar](#setparentribbonbar)|設定功能區元素的父功能區列。|
+|[CMFCRibbonBaseElement：： SetRect](#setrect)|設定功能區元素的受顯示矩形的維度。|
+|[CMFCRibbonBaseElement：： SetText](#settext)|設定功能區項目的文字。|
+|[CMFCRibbonBaseElement：： SetTextAlwaysOnRight](#settextalwaysonright)|設定要顯示在右側的功能區元素文字。|
+|[CMFCRibbonBaseElement：： SetToolTipText](#settooltiptext)|設定功能區元素的工具提示文字。|
+|[CMFCRibbonBaseElement：： SetVisible](#setvisible)|設定功能區元素的可見度狀態。|
+|[CMFCRibbonBaseElement：： StretchHorizontally](#stretchhorizontally)|伸展功能區元素的寬度。|
+|[CMFCRibbonBaseElement：： StretchToWholeRow](#stretchtowholerow)|將功能區元素的顯示高度變更為指定的資料列高度。|
+|[CMFCRibbonBaseElement：： UpdateTooltipInfo](#updatetooltipinfo)|使用功能區元素的命令資源，更新工具提示文字。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFC 功能基礎元素::在進程鍵上](#onprocesskey)|當使用者按下快速鍵時,由框架調用。|
-|[CMFC 功能基礎元素::上集焦點](#onsetfocus)|當功能區元素接收或丟失輸入焦點時,由框架調用。|
+|[CMFCRibbonBaseElement：： OnProcessKey](#onprocesskey)|當使用者按下快速鍵時，由架構呼叫。|
+|[CMFCRibbonBaseElement：： OnSetFocus](#onsetfocus)|當功能區元素接收或失去輸入焦點時，由架構呼叫。|
 
 ## <a name="remarks"></a>備註
 
-該`CMFCRibbonBaseElement`類定義所有功能區元素共有的屬性,包括命令 ID、文本標籤、工具提示文本、元素描述和狀態(可以集中、突出顯示、按下、禁用、選中或下拉)。
+`CMFCRibbonBaseElement`類別會定義所有功能區專案通用的屬性，這些專案包括命令識別碼、文字標籤、工具提示文字、專案描述和狀態 (可以聚焦、反白顯示、按下、停用、核取或卸載) 。
 
-功能區元素的影像大小由`RibbonImageType`成員定義,可以是以下值之一:
+功能區元素的影像大小是由成員所定義 `RibbonImageType` ，它可以是下列其中一個值：
 
 - `RibbonImageLarge`
 
 - `RibbonImageSmall`
 
-根據其大小,功能區元素顯示小圖像或大圖像。
+視其大小而定，功能區元素會顯示小型或大型影像。
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCRibbonBaseElement` 類別中使用各種方法。 該範例展示如何從`CMFCRibbonBaseElement``CMFCRibbonStatusBar`類獲取物件、設置功能區元素的說明、設定文本、設置鍵提示以及設置功能區元素的工具提示文本。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
+下例示範如何在 `CMFCRibbonBaseElement` 類別中使用各種方法。 此範例示範如何 `CMFCRibbonBaseElement` 從類別取得物件 `CMFCRibbonStatusBar` 、設定功能區專案的描述、設定文字、設定快速鍵，以及設定功能區元素的工具提示文字。 這段程式碼片段是 [Draw 用戶端範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -405,13 +405,13 @@ class CMFCRibbonBaseElement : public CObject
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：** afxbaseribbonelement.h
 
-## <a name="cmfcribbonbaseelementaddtokeylist"></a><a name="addtokeylist"></a>CMFC 功能基礎元素::新增到關鍵清單
+## <a name="cmfcribbonbaseelementaddtokeylist"></a><a name="addtokeylist"></a> CMFCRibbonBaseElement：： AddToKeyList
 
-將功能區元素的鍵提示添加到一系列鍵提示。
+將功能區專案的按鍵提示加入至快速鍵陣列。
 
 ```
 virtual void AddToKeyList(
@@ -420,16 +420,16 @@ virtual void AddToKeyList(
 
 ### <a name="parameters"></a>參數
 
-*阿雷姆斯*<br/>
-[在]引用[一](../../mfc/reference/carray-class.md)系列鍵尖。
+*arElems*<br/>
+在快速鍵 [CArray](../../mfc/reference/carray-class.md) 的參考。
 
 ### <a name="remarks"></a>備註
 
-啟用功能區鍵提示功能后,當使用者按下 ALT 鍵或 F10 鍵時,框架將顯示功能區鍵提示。
+啟用功能區按鍵提示功能時，當使用者按下 ALT 鍵或 F10 鍵時，架構會顯示功能區按鍵提示。
 
-## <a name="cmfcribbonbaseelementaddtolistbox"></a><a name="addtolistbox"></a>CMFC 功能基礎元素::新增到列表框
+## <a name="cmfcribbonbaseelementaddtolistbox"></a><a name="addtolistbox"></a> CMFCRibbonBaseElement：： AddToListBox
 
-將功能區元素添加到指定的功能區命令列表框。
+將功能區專案加入至指定的 [功能區命令] 清單方塊。
 
 ```
 virtual int AddToListBox(
@@ -440,22 +440,22 @@ virtual int AddToListBox(
 ### <a name="parameters"></a>參數
 
 *pWndListBox*<br/>
-[在]指向命令清單框的指標。
+在命令清單方塊的指標。
 
 *bDeep*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-添加的功能區元素的零基索引。
+加入之功能區專案的以零為基底的索引。
 
 ### <a name="remarks"></a>備註
 
-框架將功能區元素添加到命令列表框,以使用戶能夠自定義使用者介面。
+架構會將功能區專案加入至命令清單方塊，讓使用者自訂使用者介面。
 
-## <a name="cmfcribbonbaseelementcanbeaddedtoquickaccesstoolbar"></a><a name="canbeaddedtoquickaccesstoolbar"></a>CMFC 功能基礎元素::可新增到快速存取工具列
+## <a name="cmfcribbonbaseelementcanbeaddedtoquickaccesstoolbar"></a><a name="canbeaddedtoquickaccesstoolbar"></a> CMFCRibbonBaseElement：： CanBeAddedToQuickAccessToolBar
 
-指示功能區元素是否可以添加到快速存取工具列。
+指出是否可以將功能區專案加入至快速存取工具列。
 
 ```
 virtual BOOL CanBeAddedToQuickAccessToolBar() const;
@@ -463,13 +463,13 @@ virtual BOOL CanBeAddedToQuickAccessToolBar() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果元素可以添加,則為 TRUE;如果元素可以添加,則為 TRUE。否則,FALSE。
+如果可以加入元素，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementcanbecompacted"></a><a name="canbecompacted"></a>CMFC 功能基礎元素::可壓縮
+## <a name="cmfcribbonbaseelementcanbecompacted"></a><a name="canbecompacted"></a> CMFCRibbonBaseElement：： CanBeCompacted
 
-指示功能區元素的大小是否可以緊湊。
+指出功能區元素的大小是否可以精簡。
 
 ```
 virtual BOOL CanBeCompacted() const;
@@ -477,15 +477,15 @@ virtual BOOL CanBeCompacted() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素的大小可以緊湊,則為 TRUE;否則,FALSE。
+如果功能區元素的大小可以是 compact，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-功能區元素的大小可以是緊湊、中間或大。
+功能區元素的大小可以是 compact、中繼或大型。
 
-## <a name="cmfcribbonbaseelementcanbestretched"></a><a name="canbestretched"></a>CMFC 功能基礎元素::可拉伸
+## <a name="cmfcribbonbaseelementcanbestretched"></a><a name="canbestretched"></a> CMFCRibbonBaseElement：： CanBeStretched
 
-指示功能區元素的高度是否可以垂直增加到功能區行的高度。
+指出功能區專案的高度是否可以垂直增加至功能區列的高度。
 
 ```
 virtual BOOL CanBeStretched();
@@ -493,15 +493,15 @@ virtual BOOL CanBeStretched();
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 TRUE。
+一律傳回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 TRUE。 重寫此方法以指示功能區元素的高度是否可以垂直增加到功能區行的高度。
+根據預設，這個方法一律會傳回 TRUE。 覆寫這個方法，以指出功能區專案的高度是否可以垂直增加至功能區資料列的高度。
 
-## <a name="cmfcribbonbaseelementcanbestretchedhorizontally"></a><a name="canbestretchedhorizontally"></a>CMFC 功能基礎元素::可橫向拉伸
+## <a name="cmfcribbonbaseelementcanbestretchedhorizontally"></a><a name="canbestretchedhorizontally"></a> CMFCRibbonBaseElement：： CanBeStretchedHorizontally
 
-指示功能區元素的寬度是否可以更改。
+指出功能區元素的寬度是否可以變更。
 
 ```
 virtual BOOL CanBeStretchedHorizontally();
@@ -509,15 +509,15 @@ virtual BOOL CanBeStretchedHorizontally();
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 FALSE。 重寫此方法以指示功能區元素的寬度是否可以更改。
+根據預設，這個方法一律會傳回 FALSE。 覆寫這個方法，以指出功能區元素的寬度是否可以變更。
 
-## <a name="cmfcribbonbaseelementcleanupsizes"></a><a name="cleanupsizes"></a>CMFC 功能基礎元素::清理
+## <a name="cmfcribbonbaseelementcleanupsizes"></a><a name="cleanupsizes"></a> CMFCRibbonBaseElement：： CleanUpSizes
 
-清理功能區元素的尺寸設置。
+清除功能區元素的維度設定。
 
 ```
 virtual void CleanUpSizes();
@@ -525,11 +525,11 @@ virtual void CleanUpSizes();
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法不執行任何操作。 在派生類中重寫此方法以重置功能區元素的尺寸設置。
+依預設，這個方法不會執行任何動作。 在衍生類別中覆寫這個方法，以重設功能區元素的維度設定。
 
-## <a name="cmfcribbonbaseelementclosepopupmenu"></a><a name="closepopupmenu"></a>CMFC 功能基礎元素::閉合彈出功能表
+## <a name="cmfcribbonbaseelementclosepopupmenu"></a><a name="closepopupmenu"></a> CMFCRibbonBaseElement：： ClosePopupMenu
 
-關閉功能區元素的彈出功能表。
+關閉功能區元素的快顯功能表。
 
 ```
 virtual void ClosePopupMenu();
@@ -537,9 +537,9 @@ virtual void ClosePopupMenu();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementcopyfrom"></a><a name="copyfrom"></a>CMFC 功能基礎元素::從
+## <a name="cmfcribbonbaseelementcopyfrom"></a><a name="copyfrom"></a> CMFCRibbonBaseElement：： CopyFrom
 
-將指定的[CMFCRibbonBase 元素](../../mfc/reference/cmfcribbonbaseelement-class.md)的狀態複製到當前物件。
+將指定之 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) 的狀態複製到目前的物件。
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -548,13 +548,13 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="parameters"></a>參數
 
 *src*<br/>
-[在]源[CMFC 功能基礎元素](../../mfc/reference/cmfcribbonbaseelement-class.md)物件。
+在來源 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) 物件。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementdestroyctrl"></a><a name="destroyctrl"></a>CMFC功能基礎元素::D
+## <a name="cmfcribbonbaseelementdestroyctrl"></a><a name="destroyctrl"></a> CMFCRibbonBaseElement：:D estroyCtrl
 
-銷毀功能區元素。
+終結功能區元素。
 
 ```
 virtual void DestroyCtrl();
@@ -562,11 +562,11 @@ virtual void DestroyCtrl();
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法不執行任何操作。 重寫派生類中的此方法以銷毀功能區元素。
+依預設，這個方法不會執行任何動作。 在衍生類別中覆寫這個方法，以終結功能區元素。
 
-## <a name="cmfcribbonbaseelementdrawimage"></a><a name="drawimage"></a>CMFC功能基礎元素::D原始圖像
+## <a name="cmfcribbonbaseelementdrawimage"></a><a name="drawimage"></a> CMFCRibbonBaseElement：:D rawImage
 
-繪製功能區元素的圖像。
+繪製功能區元素的影像。
 
 ```
 virtual void DrawImage(
@@ -577,29 +577,29 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 *type*<br/>
-[在]枚舉的圖像類型。 有關可能值的清單,請參閱備註部分。
+在列舉值的影像類型。 如需可能值的清單，請參閱「備註」一節。
 
 *rectImage*<br/>
-[在]圖像矩形。
+在影像矩形。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法不執行任何操作。 在派生類中重寫此方法以繪製功能區元素的圖像。
+依預設，這個方法不會執行任何動作。 在衍生類別中覆寫這個方法，以繪製功能區元素的影像。
 
-下表列的*參數*的可能值:
+下表列出 *類型* 參數的可能值：
 
-|||
+|值|描述|
 |-|-|
-| `RibbonImageLarge`  | 大 32x32 像素的圖像大小。  |
-| `RibbonImageSmall`  | 小 16x16 像素的圖像大小。  |
+| `RibbonImageLarge`  | 大型32x32 圖元影像大小。  |
+| `RibbonImageSmall`  | Small 16x16 圖元影像大小。  |
 
-## <a name="cmfcribbonbaseelementfind"></a><a name="find"></a>CMFC 功能基礎元素:尋找
+## <a name="cmfcribbonbaseelementfind"></a><a name="find"></a> CMFCRibbonBaseElement：： Find
 
-如果指定的指標指向當前物件,則返回該指標。
+如果指向目前的物件，則傳回指定的指標。
 
 ```
 virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
@@ -607,18 +607,18 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 
 ### <a name="parameters"></a>參數
 
-*p 元素*<br/>
-[在]指向功能區元素的指標。
+*pElement*<br/>
+在功能區元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果*pElement*指向當前物件,則指向功能區元素的指標;否則 NULL。
+如果 *pElement* 指向目前物件，則為功能區元素的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementfindbydata"></a><a name="findbydata"></a>CMFC 功能基礎元素::尋找資料
+## <a name="cmfcribbonbaseelementfindbydata"></a><a name="findbydata"></a> CMFCRibbonBaseElement：： FindByData
 
-如果功能區元素包含指定的數據,則檢索指向功能區元素的指標。
+如果包含指定的資料，則抓取功能區元素的指標。
 
 ```
 virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
@@ -627,17 +627,17 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ### <a name="parameters"></a>參數
 
 *dwData*<br/>
-[在]與功能區元素關聯的數據。
+在與功能區元素相關聯的資料。
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素包含指定數據,則指向功能區元素的指標;否則 NULL。
+如果包含指定的資料，則為功能區元素的指標。否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementfindbyid"></a><a name="findbyid"></a>CMFC 功能基礎元素::尋找ByID
+## <a name="cmfcribbonbaseelementfindbyid"></a><a name="findbyid"></a> CMFCRibbonBaseElement：： FindByID
 
-如果指定的命令 ID 標識了該元素,則檢索指向功能區元素的指標。
+如果該專案是由指定的命令識別碼識別，則抓取功能區元素的指標。
 
 ```
 virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
@@ -645,18 +645,18 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 
 ### <a name="parameters"></a>參數
 
-*烏伊CmdID*<br/>
-[在]功能區元素的命令 ID。
+*uiCmdID*<br/>
+在功能區元素的命令識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果指定的命令 ID 標識了該元素,則指向功能區元素的指標;否則 NULL。
+如果該專案是由指定的命令識別碼所識別，則為功能區專案的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementfindbyoriginal"></a><a name="findbyoriginal"></a>CMFC 功能基礎元素::按原始查找
+## <a name="cmfcribbonbaseelementfindbyoriginal"></a><a name="findbyoriginal"></a> CMFCRibbonBaseElement：： FindByOriginal
 
-如果當前功能區元素的原始功能區元素與指定的功能區元素匹配,則檢索指向當前功能區元素的指標。
+如果其原始功能區專案符合指定的功能區專案，則抓取目前功能區元素的指標。
 
 ```
 virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
@@ -664,18 +664,18 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 
 ### <a name="parameters"></a>參數
 
-*p原始*<br/>
-[在]指向功能區元素的指標。
+*pOriginal*<br/>
+在功能區元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素的原始功能區元素與指定的功能區元素匹配,則指向功能區元素的指標;否則 NULL。
+如果功能區專案的原始功能區專案符合指定的功能區專案，則為該元素的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-複製到另一個容器的功能區元素將保留指向原始功能區元素的指標。
+複製到另一個容器的功能區專案會保留原始功能區元素的指標。
 
-## <a name="cmfcribbonbaseelementgetcompactsize"></a><a name="getcompactsize"></a>CMFC 功能基礎元素:取得壓縮大小
+## <a name="cmfcribbonbaseelementgetcompactsize"></a><a name="getcompactsize"></a> CMFCRibbonBaseElement：： GetCompactSize
 
 傳回功能區項目的壓縮大小。
 
@@ -685,19 +685,19 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素的緊湊大小。
+功能區元素的壓縮大小。
 
 > [!NOTE]
-> 緊湊大小表示功能區元素被截斷(它顯示一個小圖像,或沒有文本的圖像)。
+> 壓縮大小表示功能區專案會被截斷 (它會顯示小影像，或不含文字) 的影像。
 
-## <a name="cmfcribbonbaseelementgetdata"></a><a name="getdata"></a>CMFC 功能基礎元素:取得資料
+## <a name="cmfcribbonbaseelementgetdata"></a><a name="getdata"></a> CMFCRibbonBaseElement：：：：的
 
-檢索與功能區元素關聯的用戶定義的數據。
+抓取與功能區元素相關聯的使用者定義資料。
 
 ```
 DWORD_PTR GetData() const;
@@ -705,11 +705,11 @@ DWORD_PTR GetData() const;
 
 ### <a name="return-value"></a>傳回值
 
-與功能區元素關聯的用戶定義的數據。
+與功能區元素相關聯的使用者定義資料。
 
-## <a name="cmfcribbonbaseelementgetdescription"></a><a name="getdescription"></a>CMFC 功能基礎元素:取得描述
+## <a name="cmfcribbonbaseelementgetdescription"></a><a name="getdescription"></a> CMFCRibbonBaseElement：： GetDescription
 
-返回功能區元素的說明。
+傳回功能區元素的描述。
 
 ```
 virtual CString GetDescription() const;
@@ -717,11 +717,11 @@ virtual CString GetDescription() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素描述。 如果功能區元素位於[CMFCRibbonMainPanel 類](../../mfc/reference/cmfcribbonmainpanel-class.md)上,則說明將顯示在狀態列、工具提示或菜單按鈕下。
+功能區元素描述。 描述會顯示在狀態列或工具提示中，如果功能區元素位於 [CMFCRibbonMainPanel 類別](../../mfc/reference/cmfcribbonmainpanel-class.md)，則會顯示在 [功能表] 按鈕下。
 
-## <a name="cmfcribbonbaseelementgetdroppeddown"></a><a name="getdroppeddown"></a>CMFC 功能基礎元素::向下刪除
+## <a name="cmfcribbonbaseelementgetdroppeddown"></a><a name="getdroppeddown"></a> CMFCRibbonBaseElement：： GetDroppedDown
 
-如果功能區元素的彈出功能表被下拉,則檢索指向功能區元素的指標。
+抓取功能區專案的指標（如果它的快顯功能表已中斷）。
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -729,13 +729,13 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素的彈出功能表被下拉,則指向其帶狀元素的指標;否則 NULL。
+功能區專案的指標，如果其快顯功能表已中斷，則為否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetelements"></a><a name="getelements"></a>CMFC功能基礎元素:取得元素
+## <a name="cmfcribbonbaseelementgetelements"></a><a name="getelements"></a> CMFCRibbonBaseElement：： GetElements
 
-將當前功能區元素添加到指定的陣列。
+將目前的功能區元素加入至指定的陣列。
 
 ```
 virtual void GetElements(
@@ -744,14 +744,14 @@ virtual void GetElements(
 
 ### <a name="parameters"></a>參數
 
-*ar 元素*<br/>
-[進出]功能區元素的陣列。
+*arElements*<br/>
+[in，out]功能區元素的陣列。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetelementsbyid"></a><a name="getelementsbyid"></a>CMFC 功能基礎元素:取得元素 ByID
+## <a name="cmfcribbonbaseelementgetelementsbyid"></a><a name="getelementsbyid"></a> CMFCRibbonBaseElement：： GetElementsByID
 
-如果當前功能區元素包含指定的命令 ID,則將當前功能區元素添加到指定的陣列中。
+如果目前的功能區元素包含指定的命令識別碼，則將目前的功能區專案加入至指定的陣列。
 
 ```
 virtual void GetElementsByID(
@@ -761,17 +761,17 @@ virtual void GetElementsByID(
 
 ### <a name="parameters"></a>參數
 
-*烏伊CmdID*<br/>
-[在]功能區元素的命令 ID。
+*uiCmdID*<br/>
+在功能區元素的命令識別碼。
 
-*ar 元素*<br/>
-[在]功能區元素的陣列。
+*arElements*<br/>
+在功能區元素的陣列。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgethighlighted"></a><a name="gethighlighted"></a>CMFC 功能基礎元素::獲得突出顯示
+## <a name="cmfcribbonbaseelementgethighlighted"></a><a name="gethighlighted"></a> CMFCRibbonBaseElement：： GetHighlighted
 
-如果功能區元素突出顯示,則檢索該指標。
+如果已反白顯示功能區專案，則抓取其指標。
 
 ```
 virtual CMFCRibbonBaseElement* GetHighlighted();
@@ -779,13 +779,13 @@ virtual CMFCRibbonBaseElement* GetHighlighted();
 
 ### <a name="return-value"></a>傳回值
 
-如果突出顯示功能區元素,則指向該功能區元素的指標;如果該元素突出顯示,則指向該元素。否則 NULL。
+若已反白顯示功能區元素，則為其指標。否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetid"></a><a name="getid"></a>CMFC 功能基礎元素:GetID
+## <a name="cmfcribbonbaseelementgetid"></a><a name="getid"></a> CMFCRibbonBaseElement：： GetID
 
-返回功能區元素的命令 ID。
+傳回功能區元素的命令識別碼。
 
 ```
 UINT GetID() const;
@@ -793,9 +793,9 @@ UINT GetID() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素的命令 ID。
+功能區元素的命令識別碼。
 
-## <a name="cmfcribbonbaseelementgetimagesize"></a><a name="getimagesize"></a>CMFC 功能基礎元素:取得影像大小
+## <a name="cmfcribbonbaseelementgetimagesize"></a><a name="getimagesize"></a> CMFCRibbonBaseElement：： GetImageSize
 
 傳回功能區項目的影像大小。
 
@@ -805,9 +805,9 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素的圖像大小。
+功能區元素的影像大小。
 
-## <a name="cmfcribbonbaseelementgetintermediatesize"></a><a name="getintermediatesize"></a>CMFC 功能基礎元素:取得中間大小
+## <a name="cmfcribbonbaseelementgetintermediatesize"></a><a name="getintermediatesize"></a> CMFCRibbonBaseElement：： GetIntermediateSize
 
 傳回中繼狀態之功能區項目的大小。
 
@@ -817,16 +817,16 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素在其中間狀態下的大小。
+功能區元素在其中繼狀態中的大小。
 
-## <a name="cmfcribbonbaseelementgetkeys"></a><a name="getkeys"></a>CMFC 功能基礎元素:取得金鑰
+## <a name="cmfcribbonbaseelementgetkeys"></a><a name="getkeys"></a> CMFCRibbonBaseElement：： GetKeys
 
-返回與功能區元素關聯的鍵尖。
+傳回與功能區專案相關聯的按鍵提示。
 
 ```
 LPCTSTR GetKeys() const;
@@ -834,11 +834,11 @@ LPCTSTR GetKeys() const;
 
 ### <a name="return-value"></a>傳回值
 
-與功能區元素關聯的鍵尖。
+與功能區元素相關聯的 keytip。
 
-## <a name="cmfcribbonbaseelementgetkeytiprect"></a><a name="getkeytiprect"></a>CMFC 功能基礎元素::取得金鑰提示
+## <a name="cmfcribbonbaseelementgetkeytiprect"></a><a name="getkeytiprect"></a> CMFCRibbonBaseElement：： GetKeyTipRect
 
-檢索功能區元素的鍵尖邊界矩形。
+抓取功能區專案的 keytip 界限矩形。
 
 ```
 virtual CRect GetKeyTipRect(
@@ -848,23 +848,23 @@ virtual CRect GetKeyTipRect(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 *bIsMenu*<br/>
-[在]如果功能區元素顯示彈出功能表,則為 TRUE;如果功能區元素顯示彈出功能表,則為 TRUE。否則 FALSE。
+在如果功能區元素顯示快顯功能表，則為 TRUE。否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回具有 0 值的矩形。
+一律傳回有0個值的矩形。
 
 ### <a name="remarks"></a>備註
 
-在派生類中重寫此方法以返回鍵尖邊界矩形。
+在衍生類別中覆寫這個方法，以傳回快速鍵的界限矩形。
 
-## <a name="cmfcribbonbaseelementgetkeytipsize"></a><a name="getkeytipsize"></a>CMFC 功能基礎元素::取得關鍵提示大小
+## <a name="cmfcribbonbaseelementgetkeytipsize"></a><a name="getkeytipsize"></a> CMFCRibbonBaseElement：： GetKeyTipSize
 
-檢索鍵提示文字的大小。
+抓取快速鍵提示文字的大小。
 
 ```
 virtual CSize GetKeyTipSize(CDC* pDC);
@@ -872,18 +872,18 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 ### <a name="return-value"></a>傳回值
 
-鍵尖文字的大小。
+快速鍵提示文字的大小。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetlocationingroup"></a><a name="getlocationingroup"></a>CMFC 功能基礎元素::取得定位群組
+## <a name="cmfcribbonbaseelementgetlocationingroup"></a><a name="getlocationingroup"></a> CMFCRibbonBaseElement：： GetLocationInGroup
 
-指示功能區組中功能區元素的顯示位置。
+指出功能區元素在功能區群組中的顯示位置。
 
 ```
 RibbonElementLocation GetLocationInGroup() const;
@@ -891,23 +891,23 @@ RibbonElementLocation GetLocationInGroup() const;
 
 ### <a name="return-value"></a>傳回值
 
-`RibbonElementLocation` 列舉值。 下表列出了可能的值。
+`RibbonElementLocation` 列舉值。 下表列出可能的值。
 
 |值|描述|
 |-----------|-----------------|
-|`RibbonElementNotInGroup`|功能區元素不包含在功能區組中。|
-|`RibbonElementSingleInGroup`|功能區元素顯示為功能區組中的唯一項。|
-|`RibbonElementFirstInGroup`|功能區元素顯示在功能區組的左端。|
-|`RibbonElementLastInGroup`|功能區元素顯示在功能區組的右端。|
-|`RibbonElementMiddleInGroup`|功能區元素不顯示在功能區組的兩端。|
+|`RibbonElementNotInGroup`|功能區元素未包含在功能區群組中。|
+|`RibbonElementSingleInGroup`|功能區元素會顯示為功能區群組中的唯一專案。|
+|`RibbonElementFirstInGroup`|功能區元素會顯示在功能區群組的左邊。|
+|`RibbonElementLastInGroup`|功能區元素會顯示在功能區群組的右端。|
+|`RibbonElementMiddleInGroup`|功能區元素不會顯示在功能區群組的任一端。|
 
 ### <a name="remarks"></a>備註
 
-功能區元素組僅水準對齊。
+功能區元素群組只會水準對齊。
 
-## <a name="cmfcribbonbaseelementgetmenukeys"></a><a name="getmenukeys"></a>CMFC功能基礎元素:取得選單鍵
+## <a name="cmfcribbonbaseelementgetmenukeys"></a><a name="getmenukeys"></a> CMFCRibbonBaseElement：： GetMenuKeys
 
-返回功能區元素的功能表鍵提示。
+傳回功能區元素的功能表 keytip。
 
 ```
 LPCTSTR GetMenuKeys() const;
@@ -915,15 +915,15 @@ LPCTSTR GetMenuKeys() const;
 
 ### <a name="return-value"></a>傳回值
 
-與功能區元素關聯的功能表鍵提示。
+與功能區元素相關聯的功能表快捷方式。
 
 ### <a name="remarks"></a>備註
 
-調用時,功能表鍵提示將顯示一個彈出式功能表。
+叫用時，功能表 keytip 會顯示快顯功能表。
 
-## <a name="cmfcribbonbaseelementgetnotifyid"></a><a name="getnotifyid"></a>CMFC 功能基礎元素:取得NotifyID
+## <a name="cmfcribbonbaseelementgetnotifyid"></a><a name="getnotifyid"></a> CMFCRibbonBaseElement：： GetNotifyID
 
-檢索功能區元素的通知命令 ID。
+抓取功能區元素的通知命令識別碼。
 
 ```
 virtual UINT GetNotifyID();
@@ -931,13 +931,13 @@ virtual UINT GetNotifyID();
 
 ### <a name="return-value"></a>傳回值
 
-通知命令 ID。
+通知命令識別碼。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetoriginal"></a><a name="getoriginal"></a>CMFC功能基礎元素:取得原始元素
+## <a name="cmfcribbonbaseelementgetoriginal"></a><a name="getoriginal"></a> CMFCRibbonBaseElement：： GetOriginal
 
-檢索原始功能區元素。
+抓取原始功能區元素。
 
 ```
 CMFCRibbonBaseElement* GetOriginal() const;
@@ -945,15 +945,15 @@ CMFCRibbonBaseElement* GetOriginal() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向原始功能區元素的指標。
+原始功能區元素的指標。
 
 ### <a name="remarks"></a>備註
 
-複製到另一個容器的功能區元素將保留指向原始功能區元素的指標。
+複製到另一個容器的功能區專案會保留原始功能區元素的指標。
 
-## <a name="cmfcribbonbaseelementgetparentcategory"></a><a name="getparentcategory"></a>CMFC 功能基礎元素:取得父項目
+## <a name="cmfcribbonbaseelementgetparentcategory"></a><a name="getparentcategory"></a> CMFCRibbonBaseElement：： GetParentCategory
 
-檢索功能區元素的功能區類別。
+抓取功能區元素的功能區分類。
 
 ```
 CMFCRibbonCategory* GetParentCategory() const;
@@ -961,13 +961,13 @@ CMFCRibbonCategory* GetParentCategory() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向功能區類別的指標。
+功能區分類的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetparentpanel"></a><a name="getparentpanel"></a>CMFC 功能基礎元素:獲取家長面板
+## <a name="cmfcribbonbaseelementgetparentpanel"></a><a name="getparentpanel"></a> CMFCRibbonBaseElement：： GetParentPanel
 
-檢索包含功能區元素的功能區面板。
+抓取包含功能區元素的功能區面板。
 
 ```
 virtual CMFCRibbonPanel* GetParentPanel() const;
@@ -975,13 +975,13 @@ virtual CMFCRibbonPanel* GetParentPanel() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向包含功能區元素的功能區面板的指標。
+包含功能區元素的功能區面板指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetparentribbonbar"></a><a name="getparentribbonbar"></a>CMFC 功能基礎元素:取得父功能列
+## <a name="cmfcribbonbaseelementgetparentribbonbar"></a><a name="getparentribbonbar"></a> CMFCRibbonBaseElement：： GetParentRibbonBar
 
-檢索功能區元素的父功能區欄。
+抓取功能區元素的父功能區列。
 
 ```
 CMFCRibbonBar* GetParentRibbonBar() const;
@@ -989,13 +989,13 @@ CMFCRibbonBar* GetParentRibbonBar() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向功能區元素的父功能區欄的指標。
+功能區元素的父功能區列的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetparentwnd"></a><a name="getparentwnd"></a>CMFC 功能基礎元素:獲取家長
+## <a name="cmfcribbonbaseelementgetparentwnd"></a><a name="getparentwnd"></a> CMFCRibbonBaseElement：： GetParentWnd
 
-檢索功能區元素的父視窗。
+抓取功能區元素的父視窗。
 
 ```
 virtual CWnd* GetParentWnd() const;
@@ -1003,15 +1003,15 @@ virtual CWnd* GetParentWnd() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則指向功能區元素的父視窗的指標;否則,NULL。
+如果方法成功，則為功能區元素父視窗的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-功能區元素的父視窗是[CMFC 功能區列類別](../../mfc/reference/cmfcribbonbar-class.md)或[CMFCRibbonPanelMenuBar](internal-classes.md)。
+功能區元素的父視窗是 [CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md) 或 [CMFCRibbonPanelMenuBar](internal-classes.md)。
 
-## <a name="cmfcribbonbaseelementgetpressed"></a><a name="getpressed"></a>CMFC 功能基礎元素::獲取壓榨
+## <a name="cmfcribbonbaseelementgetpressed"></a><a name="getpressed"></a> CMFCRibbonBaseElement：： GetPressed
 
-如果使用者當前按下功能區元素,則檢索指向功能區元素的指標。
+如果使用者目前按下它，則抓取功能區元素的指標。
 
 ```
 virtual CMFCRibbonBaseElement* GetPressed();
@@ -1019,13 +1019,13 @@ virtual CMFCRibbonBaseElement* GetPressed();
 
 ### <a name="return-value"></a>傳回值
 
-如果使用者當前按下功能區元素,則指向功能區元素的指標;否則,NULL。
+如果使用者目前按下該專案，則為功能區元素的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetquickaccesstoolbarid"></a><a name="getquickaccesstoolbarid"></a>CMFC 功能基礎元素:取得快速存取工具Barid
+## <a name="cmfcribbonbaseelementgetquickaccesstoolbarid"></a><a name="getquickaccesstoolbarid"></a> CMFCRibbonBaseElement：： GetQuickAccessToolBarID
 
-在功能區元素位於快速存取工具列中時檢索其命令 ID。
+在快速存取工具列中找到功能區專案的命令識別碼。
 
 ```
 virtual UINT GetQuickAccessToolBarID() const;
@@ -1033,13 +1033,13 @@ virtual UINT GetQuickAccessToolBarID() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素位於快速存取工具列中時的命令 ID。
+當功能區專案位於快速存取工具列時的命令識別碼。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementgetrect"></a><a name="getrect"></a>CMFC 功能基礎元素::取得 Rect
+## <a name="cmfcribbonbaseelementgetrect"></a><a name="getrect"></a> CMFCRibbonBaseElement：： GetRect
 
-返回功能區元素的邊界矩形。
+傳回功能區專案的周框。
 
 ```
 CRect GetRect() const;
@@ -1047,9 +1047,9 @@ CRect GetRect() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素的邊界矩形。 矩形的位置位於父功能區控制項的座標中。
+功能區元素的周框。 矩形的位置是在父功能區控制項的座標中。
 
-## <a name="cmfcribbonbaseelementgetregularsize"></a><a name="getregularsize"></a>CMFC 功能基礎元素:取得一般大小
+## <a name="cmfcribbonbaseelementgetregularsize"></a><a name="getregularsize"></a> CMFCRibbonBaseElement：： GetRegularSize
 
 傳回功能區項目的一般大小。
 
@@ -1059,21 +1059,21 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素的常規大小。
+功能區元素的一般大小。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
-> 常規大小是功能區元素的最大可能大小。
+> 一般大小是功能區元素的最大可能大小。
 
-## <a name="cmfcribbonbaseelementgetsize"></a><a name="getsize"></a>CMFC 功能基礎元素:取得大小
+## <a name="cmfcribbonbaseelementgetsize"></a><a name="getsize"></a> CMFCRibbonBaseElement：： GetSize
 
-傳回功能區元素的當前大小。
+傳回功能區元素的目前大小。
 
 ```
 virtual CSize GetSize(CDC* pDC);
@@ -1081,16 +1081,16 @@ virtual CSize GetSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素的當前大小。
+功能區元素的目前大小。
 
-## <a name="cmfcribbonbaseelementgettext"></a><a name="gettext"></a>CMFC 功能基礎元素:取得文字
+## <a name="cmfcribbonbaseelementgettext"></a><a name="gettext"></a> CMFCRibbonBaseElement：： GetText
 
-返回與功能區元素關聯的文本。
+傳回與功能區元素相關聯的文字。
 
 ```
 LPCTSTR GetText() const;
@@ -1098,9 +1098,9 @@ LPCTSTR GetText() const;
 
 ### <a name="return-value"></a>傳回值
 
-與功能區元素關聯的文本。
+與功能區元素相關聯的文字。
 
-## <a name="cmfcribbonbaseelementgettooltiptext"></a><a name="gettooltiptext"></a>CMFC 功能基礎元素::取得工具提示文字
+## <a name="cmfcribbonbaseelementgettooltiptext"></a><a name="gettooltiptext"></a> CMFCRibbonBaseElement：： GetToolTipText
 
 傳回功能區項目的工具提示文字。
 
@@ -1110,11 +1110,11 @@ virtual CString GetToolTipText() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區元素的工具提示文本。
+功能區元素的工具提示文字。
 
-## <a name="cmfcribbonbaseelementgettoplevelribbonbar"></a><a name="gettoplevelribbonbar"></a>CMFC 功能基礎元素:取得頂級功能區列
+## <a name="cmfcribbonbaseelementgettoplevelribbonbar"></a><a name="gettoplevelribbonbar"></a> CMFCRibbonBaseElement：： GetTopLevelRibbonBar
 
-檢索功能區元素的頂層功能區欄。
+抓取功能區元素的最上層功能區列。
 
 ```
 CMFCRibbonBar* GetTopLevelRibbonBar() const;
@@ -1122,11 +1122,11 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則指向功能區元素的頂層功能區欄的指標;否則,NULL。
+如果方法成功，則為功能區元素最上層功能區列的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementhascompactmode"></a><a name="hascompactmode"></a>CMFC 功能基礎元素::具有壓縮模式
+## <a name="cmfcribbonbaseelementhascompactmode"></a><a name="hascompactmode"></a> CMFCRibbonBaseElement：： HasCompactMode
 
 指定功能區項目是否有精簡模式。
 
@@ -1136,14 +1136,14 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素具有緊湊模式,則為 TRUE。 否則為 FALSE。
+如果功能區元素具有 compact 模式，則為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
-> 在緊湊模式下,元素僅顯示小圖像。
+> 在 compact 模式中，專案只會顯示小影像。
 
-## <a name="cmfcribbonbaseelementhasintermediatemode"></a><a name="hasintermediatemode"></a>CMFC功能基礎元素::具有中間模式
+## <a name="cmfcribbonbaseelementhasintermediatemode"></a><a name="hasintermediatemode"></a> CMFCRibbonBaseElement：： HasIntermediateMode
 
 指定功能區項目是否有中繼模式。
 
@@ -1153,11 +1153,11 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素具有中間模式,則為 TRUE,否則為 FALSE。 在中間模式中,元素在圖像的右側顯示一個小圖像和文本。
+如果功能區元素有中繼模式，則為 TRUE，否則為 FALSE。 在中繼模式中，元素會顯示影像右邊的小影像和文字。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementhaslargemode"></a><a name="haslargemode"></a>CMFC功能基礎元素::具有大模式
+## <a name="cmfcribbonbaseelementhaslargemode"></a><a name="haslargemode"></a> CMFCRibbonBaseElement：： HasLargeMode
 
 指定功能區項目是否有大型模式。
 
@@ -1167,15 +1167,15 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素具有大模式,則為 TRUE。 否則為 FALSE。
+如果功能區元素有大型模式，則為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-在大型模式下,元素可以獲取父面板的完整高度。
+在大型模式中，元素可以取得父面板的完整高度。
 
-## <a name="cmfcribbonbaseelementhasmenu"></a><a name="hasmenu"></a>CMFC功能基礎元素::哈斯梅因
+## <a name="cmfcribbonbaseelementhasmenu"></a><a name="hasmenu"></a> CMFCRibbonBaseElement：： HasMenu
 
-指示功能區元素是否具有功能表。
+指出功能區元素是否有功能表。
 
 ```
 virtual BOOL HasMenu() const;
@@ -1183,15 +1183,15 @@ virtual BOOL HasMenu() const;
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 FALSE。 在派生類中重寫此方法以指示功能區元素是否具有菜單。
+根據預設，這個方法一律會傳回 FALSE。 在衍生類別中覆寫這個方法，以指出功能區專案是否有功能表。
 
-## <a name="cmfcribbonbaseelementhittest"></a><a name="hittest"></a>CMFC功能基礎元素:hitTest
+## <a name="cmfcribbonbaseelementhittest"></a><a name="hittest"></a> CMFCRibbonBaseElement：： System.windows.media.visualtreehelper.hittest
 
-如果指定點位於其中,則檢索指向功能區元素的指標。
+如果有指定的點，則抓取功能區專案的指標。
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(CPoint point);
@@ -1200,19 +1200,19 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-指向功能區元素的指標(如果存在);否則 FALSE。
+功能區元素的指標（如果有的話）;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回指向功能區元素的有效指標(當它存在時)。 重寫此方法以指示點是否駐留在功能區元素中。
+根據預設，這個方法會在功能區專案存在時一律傳回有效的指標。 覆寫這個方法，以指出點是否位於功能區專案中。
 
-## <a name="cmfcribbonbaseelementisalignbycolumn"></a><a name="isalignbycolumn"></a>CMFC 功能基礎元素::正對齊比列
+## <a name="cmfcribbonbaseelementisalignbycolumn"></a><a name="isalignbycolumn"></a> CMFCRibbonBaseElement：： IsAlignByColumn
 
-指示功能區元素是否與其他功能區元素垂直對齊。
+指出功能區專案是否與其他功能區元素垂直對齊。
 
 ```
 virtual BOOL IsAlignByColumn() const;
@@ -1220,15 +1220,15 @@ virtual BOOL IsAlignByColumn() const;
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 TRUE。
+一律傳回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 TRUE。 在派生類中重寫此方法,以指示派生的功能區元素是否與其他功能區元素垂直對齊。
+根據預設，這個方法一律會傳回 TRUE。 在衍生類別中覆寫這個方法，以指出衍生的功能區專案是否與其他功能區元素垂直對齊。
 
-## <a name="cmfcribbonbaseelementisalwayslargeimage"></a><a name="isalwayslargeimage"></a>CMFC 功能基礎元素::始終較大的圖像
+## <a name="cmfcribbonbaseelementisalwayslargeimage"></a><a name="isalwayslargeimage"></a> CMFCRibbonBaseElement：： IsAlwaysLargeImage
 
-指示功能區元素圖像大小是否始終較大。
+指出功能區元素影像大小是否一律為大型。
 
 ```
 virtual BOOL IsAlwaysLargeImage() const;
@@ -1236,15 +1236,15 @@ virtual BOOL IsAlwaysLargeImage() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素圖像大小始終較大,則為 TRUE;如果功能區元素圖像大小始終較大,則為 TRUE。否則 FALSE。
+如果功能區元素影像大小一律為大，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-大圖像大小為 32 x 32 圖元。
+大影像大小為 32 x 32 圖元。
 
-## <a name="cmfcribbonbaseelementisautorepeatmode"></a><a name="isautorepeatmode"></a>CMFC 功能基礎元素::自動重複模式
+## <a name="cmfcribbonbaseelementisautorepeatmode"></a><a name="isautorepeatmode"></a> CMFCRibbonBaseElement：： IsAutoRepeatMode
 
-指示功能區元素是否處於自動重複模式。
+指出功能區元素是否處於自動重複模式。
 
 ```
 virtual BOOL IsAutoRepeatMode(int& nDelay) const;
@@ -1253,21 +1253,21 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ### <a name="parameters"></a>參數
 
 *nDelay*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 FALSE。 重寫此方法以指示功能區元素是否處於自動重複模式。
+根據預設，這個方法一律會傳回 FALSE。 覆寫這個方法，以指出功能區元素是否為自動重複模式。
 
-在自動重複模式下,功能區元素以設定的間隔(以毫秒為單位)回應持續用戶輸入。
+在「自動重複模式」中，功能區專案會依設定的間隔（以毫秒為單位）回應持續的使用者輸入。
 
-## <a name="cmfcribbonbaseelementischecked"></a><a name="ischecked"></a>CMFC 功能基礎元素::已選中
+## <a name="cmfcribbonbaseelementischecked"></a><a name="ischecked"></a> CMFCRibbonBaseElement：： IsChecked
 
-指定是否選擇功能區元素。
+指定是否檢查功能區元素。
 
 ```
 virtual BOOL IsChecked() const;
@@ -1275,11 +1275,11 @@ virtual BOOL IsChecked() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果選中功能區元素,則為 TRUE;如果已檢查功能區元素,則為 TRUE。否則 FALSE。
+如果已核取功能區元素，則為 TRUE;否則為 FALSE。
 
-## <a name="cmfcribbonbaseelementiscompactmode"></a><a name="iscompactmode"></a>CMFC 功能基礎元素:壓縮模式
+## <a name="cmfcribbonbaseelementiscompactmode"></a><a name="iscompactmode"></a> CMFCRibbonBaseElement：： IsCompactMode
 
-指定功能區元素是否處於緊湊模式。
+指定功能區專案是否處於 compact 模式。
 
 ```
 BOOL IsCompactMode() const;
@@ -1287,11 +1287,11 @@ BOOL IsCompactMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素處於緊湊模式,則為 TRUE;如果功能區元素處於緊湊模式。否則 FALSE。
+如果功能區專案處於壓縮模式，則為 TRUE;否則為 FALSE。
 
-## <a name="cmfcribbonbaseelementisdefaultmenulook"></a><a name="isdefaultmenulook"></a>CMFC 功能基礎元素::預設選單檢視
+## <a name="cmfcribbonbaseelementisdefaultmenulook"></a><a name="isdefaultmenulook"></a> CMFCRibbonBaseElement：： IsDefaultMenuLook
 
-指示功能區元素是否設置為顯示為彈出命令。
+指出是否將功能區元素設定為顯示為快顯命令。
 
 ```
 BOOL IsDefaultMenuLook() const;
@@ -1299,13 +1299,13 @@ BOOL IsDefaultMenuLook() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素設置為顯示為彈出命令,則為 TRUE;如果功能區元素設置為彈出命令,則為 TRUE。否則 FALSE。
+如果功能區元素設定為顯示為快顯命令，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementisdisabled"></a><a name="isdisabled"></a>CMFC 功能基礎元素::已關閉
+## <a name="cmfcribbonbaseelementisdisabled"></a><a name="isdisabled"></a> CMFCRibbonBaseElement：： IsDisabled
 
-指定功能區元素是否關閉。
+指定是否停用功能區元素。
 
 ```
 virtual BOOL IsDisabled() const;
@@ -1313,11 +1313,11 @@ virtual BOOL IsDisabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素已禁用,則為 TRUE;如果功能區元素已禁用,則為 TRUE。否則 FALSE。
+如果已停用功能區元素，則為 TRUE;否則為 FALSE。
 
-## <a name="cmfcribbonbaseelementisdroppeddown"></a><a name="isdroppeddown"></a>CMFC 功能基礎元素::已丟棄
+## <a name="cmfcribbonbaseelementisdroppeddown"></a><a name="isdroppeddown"></a> CMFCRibbonBaseElement：： IsDroppedDown
 
-指定功能區元素是否顯示彈出式功能表並下拉。
+指定功能區專案是否顯示快顯功能表，並將其拖放。
 
 ```
 virtual BOOL IsDroppedDown() const;
@@ -1325,11 +1325,11 @@ virtual BOOL IsDroppedDown() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素向下下降並顯示彈出功能表,則為 TRUE;否則 FALSE。
+如果功能區專案下拉並顯示快顯功能表，則為 TRUE。否則為 FALSE。
 
-## <a name="cmfcribbonbaseelementisfocused"></a><a name="isfocused"></a>CMFC 功能基礎元素::聚焦
+## <a name="cmfcribbonbaseelementisfocused"></a><a name="isfocused"></a> CMFCRibbonBaseElement：： IsFocused
 
-指定功能區元素是否具有焦點。
+指定功能區專案是否具有焦點。
 
 ```
 virtual BOOL IsFocused() const;
@@ -1337,11 +1337,11 @@ virtual BOOL IsFocused() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素具有焦點,則為 TRUE;否則 FALSE。
+如果功能區元素具有焦點，則為 TRUE;否則為 FALSE。
 
-## <a name="cmfcribbonbaseelementisgalleryicon"></a><a name="isgalleryicon"></a>CMFC功能基礎元素::IsgalleryIcon
+## <a name="cmfcribbonbaseelementisgalleryicon"></a><a name="isgalleryicon"></a> CMFCRibbonBaseElement：： IsGalleryIcon
 
-指示功能區元素是否包含在功能區庫中。
+指出功能區元素是否包含在功能區圖庫中。
 
 ```
 virtual BOOL IsGalleryIcon() const;
@@ -1349,15 +1349,15 @@ virtual BOOL IsGalleryIcon() const;
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 FALSE。 在派生類中重寫此方法,以指示功能區元素是否包含在功能區庫中。
+根據預設，這個方法一律會傳回 FALSE。 在衍生類別中覆寫這個方法，以指出功能區專案是否包含在功能區圖庫中。
 
-## <a name="cmfcribbonbaseelementishighlighted"></a><a name="ishighlighted"></a>CMFC 功能基礎元素::已突出顯示
+## <a name="cmfcribbonbaseelementishighlighted"></a><a name="ishighlighted"></a> CMFCRibbonBaseElement：： IsHighlighted
 
-指定功能區元素是否突出顯示。
+指定是否要反白顯示功能區元素。
 
 ```
 virtual BOOL IsHighlighted() const;
@@ -1365,13 +1365,13 @@ virtual BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素突出顯示,則為 TRUE;如果功能區元素突出顯示,則為 TRUE。否則 FALSE。
+如果已反白顯示功能區元素，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementisintermediatemode"></a><a name="isintermediatemode"></a>CMFC 功能基礎元素::中間模式
+## <a name="cmfcribbonbaseelementisintermediatemode"></a><a name="isintermediatemode"></a> CMFCRibbonBaseElement：： IsIntermediateMode
 
-指示功能區元素的當前圖像是否為中間大小。
+指出功能區元素的目前影像是否為中繼大小。
 
 ```
 BOOL IsIntermediateMode() const;
@@ -1379,15 +1379,15 @@ BOOL IsIntermediateMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素的圖像為中間大小,則為 TRUE;如果功能區元素的圖像為中間大小,則為 TRUE。否則 FALSE。
+如果功能區元素的影像為中繼大小，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-中間圖像大小為 16 x 16 圖元。
+中繼映射大小為 16 x 16 圖元。
 
-## <a name="cmfcribbonbaseelementislargemode"></a><a name="islargemode"></a>CMFC 功能基礎元素::是大模式
+## <a name="cmfcribbonbaseelementislargemode"></a><a name="islargemode"></a> CMFCRibbonBaseElement：： IsLargeMode
 
-指示功能區元素的當前圖像是否大。
+指出功能區專案的目前影像是否為較大的大小。
 
 ```
 BOOL IsLargeMode() const;
@@ -1395,15 +1395,15 @@ BOOL IsLargeMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素的圖像大小較大,則為 TRUE;否則 FALSE。
+如果功能區元素的影像大小很大，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-大圖像大小為 32 x 32 圖元。
+大影像大小為 32 x 32 圖元。
 
-## <a name="cmfcribbonbaseelementismenumode"></a><a name="ismenumode"></a>CMFC功能基礎元素::即選單模式
+## <a name="cmfcribbonbaseelementismenumode"></a><a name="ismenumode"></a> CMFCRibbonBaseElement：： IsMenuMode
 
-指示功能區元素是否包含在菜單中。
+指出功能區元素是否包含在功能表中。
 
 ```
 BOOL IsMenuMode() const;
@@ -1411,13 +1411,13 @@ BOOL IsMenuMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素包含在功能表中,則為 TRUE;如果功能區元素包含在功能表中,則為 TRUE。否則,FALSE。
+如果功能表中包含功能區元素，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementispressed"></a><a name="ispressed"></a>CMFC 功能基礎元素::按壓
+## <a name="cmfcribbonbaseelementispressed"></a><a name="ispressed"></a> CMFCRibbonBaseElement：： IsPressed
 
-指示使用者是否已按下功能區元素。
+指出使用者是否已按一下功能區元素。
 
 ```
 virtual BOOL IsPressed() const;
@@ -1425,11 +1425,11 @@ virtual BOOL IsPressed() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果用戶按一下功能區元素,則為 TRUE;如果用戶按下功能區元素,則為 TRUE。否則 FALSE。
+如果使用者已按一下功能區元素，則為 TRUE。否則為 FALSE。
 
-## <a name="cmfcribbonbaseelementisqatmode"></a><a name="isqatmode"></a>CMFC功能基礎元素:isQAT模式
+## <a name="cmfcribbonbaseelementisqatmode"></a><a name="isqatmode"></a> CMFCRibbonBaseElement：： IsQATMode
 
-指示功能區元素是否包含在快速訪問工具列中。
+指出功能區元素是否包含在快速存取工具列中。
 
 ```
 BOOL IsQATMode() const;
@@ -1437,13 +1437,13 @@ BOOL IsQATMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素包含在快速存取工具列中,則為 TRUE;如果功能區元素包含在快速存取工具列中,則為 TRUE。否則,FALSE。
+如果功能區元素包含在快速存取工具列中，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementisseparator"></a><a name="isseparator"></a>CMFC功能基礎元素:分離器
+## <a name="cmfcribbonbaseelementisseparator"></a><a name="isseparator"></a> CMFCRibbonBaseElement：： IsSeparator
 
-指示功能區元素是否為顯示分隔符。
+指出功能區元素是否為顯示分隔符號。
 
 ```
 virtual BOOL IsSeparator() const;
@@ -1451,13 +1451,13 @@ virtual BOOL IsSeparator() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素是顯示分隔符,則為 TRUE;如果功能區元素是顯示分隔符,則為 TRUE。否則 FALSE。
+如果功能區元素是顯示分隔符號，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementisshowgroupborder"></a><a name="isshowgroupborder"></a>CMFC 功能基礎元素::IsShowGroup邊框
+## <a name="cmfcribbonbaseelementisshowgroupborder"></a><a name="isshowgroupborder"></a> CMFCRibbonBaseElement：： IsShowGroupBorder
 
-指示功能區元素是否包含在顯示公共邊框的組中。
+指出功能區元素是否包含在顯示通用框線的群組中。
 
 ```
 BOOL IsShowGroupBorder() const;
@@ -1465,13 +1465,13 @@ BOOL IsShowGroupBorder() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素包含在顯示公共邊框的組中,則為 TRUE;如果功能區元素包含在顯示公共邊框的組中,則為 TRUE。否則,FALSE。
+如果功能區元素包含在顯示通用框線的群組中，則為 TRUE。否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementisshowtooltiponbottom"></a><a name="isshowtooltiponbottom"></a>CMFC 功能基礎元素::isShowTooltipon 底部
+## <a name="cmfcribbonbaseelementisshowtooltiponbottom"></a><a name="isshowtooltiponbottom"></a> CMFCRibbonBaseElement：： IsShowTooltipOnBottom
 
-指示工具提示是否顯示在功能區元素下。
+指出工具提示是否顯示在功能區元素之下。
 
 ```
 virtual BOOL IsShowTooltipOnBottom() const;
@@ -1479,13 +1479,13 @@ virtual BOOL IsShowTooltipOnBottom() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果工具提示顯示在功能區元素下,則為 TRUE;如果工具提示顯示在功能區元素下,則為 TRUE。如果工具提示顯示在指標附近,則 FALSE。
+如果工具提示顯示在功能區專案下方，則為 TRUE;如果出現在指標附近的工具提示，則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementistabstop"></a><a name="istabstop"></a>CMFC 功能基礎元素::IsTabStop
+## <a name="cmfcribbonbaseelementistabstop"></a><a name="istabstop"></a> CMFCRibbonBaseElement：： IsTabStop
 
-指示是否可以使用鍵盤選擇功能區元素。
+指出是否可以使用鍵盤選取功能區元素。
 
 ```
 virtual BOOL IsTabStop() const;
@@ -1493,15 +1493,15 @@ virtual BOOL IsTabStop() const;
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 TRUE。
+一律傳回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 TRUE。 重寫此方法以指示是否可以使用鍵盤選擇功能區元素。
+根據預設，這個方法一律會傳回 TRUE。 覆寫這個方法，以指出是否可以使用鍵盤選取功能區元素。
 
-## <a name="cmfcribbonbaseelementistextalwaysonright"></a><a name="istextalwaysonright"></a>CMFC 功能基礎元素::文本始終正確
+## <a name="cmfcribbonbaseelementistextalwaysonright"></a><a name="istextalwaysonright"></a> CMFCRibbonBaseElement：： IsTextAlwaysOnRight
 
-指示功能區元素的文本是否顯示在右側。
+指出功能區元素的文字是否顯示在右側。
 
 ```
 BOOL IsTextAlwaysOnRight() const;
@@ -1509,13 +1509,13 @@ BOOL IsTextAlwaysOnRight() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素的文本顯示在右側,則為 TRUE;否則,FALSE。
+如果功能區元素的文字顯示在右側，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementisvisible"></a><a name="isvisible"></a>CMFC 功能基礎元素:可見
+## <a name="cmfcribbonbaseelementisvisible"></a><a name="isvisible"></a> CMFCRibbonBaseElement：： IsVisible
 
-指示功能區元素當前是否顯示。
+指出目前是否顯示功能區元素。
 
 ```
 BOOL IsVisible() const;
@@ -1523,13 +1523,13 @@ BOOL IsVisible() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素目前顯示為 TRUE;如果功能區元素當前顯示,則為 TRUE。否則,FALSE。
+如果目前顯示功能區元素，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementiswholerowheight"></a><a name="iswholerowheight"></a>CMFC 功能基礎元素::完整羅高
+## <a name="cmfcribbonbaseelementiswholerowheight"></a><a name="iswholerowheight"></a> CMFCRibbonBaseElement：： IsWholeRowHeight
 
-指示功能區元素的顯示高度是否與包含功能區面板的顯示高度相同。
+指出功能區專案的顯示高度是否與包含它的功能區面板顯示高度相同。
 
 ```
 virtual BOOL IsWholeRowHeight() const;
@@ -1537,15 +1537,15 @@ virtual BOOL IsWholeRowHeight() const;
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 FALSE。 重寫此方法以指示功能區元素的顯示高度是否與包含功能區面板的顯示高度相同。
+根據預設，這個方法一律會傳回 FALSE。 覆寫這個方法，以指出功能區專案的顯示高度是否與包含它的功能區面板顯示高度相同。
 
-## <a name="cmfcribbonbaseelementnotifycommand"></a><a name="notifycommand"></a>CMFC 功能基礎元素::通知命令
+## <a name="cmfcribbonbaseelementnotifycommand"></a><a name="notifycommand"></a> CMFCRibbonBaseElement：： NotifyCommand
 
-向功能區元素的父視窗發送命令通知。
+將命令通知傳送至功能區專案的父視窗。
 
 ```
 BOOL NotifyCommand(BOOL bWithDelay = FALSE);
@@ -1553,18 +1553,18 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 
 ### <a name="parameters"></a>參數
 
-*b 延遲*<br/>
-[在]TRUE 將命令通知添加到父視窗的消息佇列;FALSE 立即將消息發送到父視窗。
+*bWithDelay*<br/>
+在TRUE 表示將命令通知新增至父視窗的訊息佇列;FALSE 表示立即將訊息傳送至父視窗。
 
 ### <a name="return-value"></a>傳回值
 
-如果消息已發送,則為 TRUE;否則,FALSE。
+如果訊息已傳送，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementnotifyhighlightlistitem"></a><a name="notifyhighlightlistitem"></a>CMFC 功能基礎元素::通知突出顯示清單項
+## <a name="cmfcribbonbaseelementnotifyhighlightlistitem"></a><a name="notifyhighlightlistitem"></a> CMFCRibbonBaseElement：： NotifyHighlightListItem
 
-當使用者突出顯示位於清單中的功能區元素時,通知功能區列的父視窗。
+當使用者反白顯示位於清單中的功能區專案時，通知功能區列的父視窗。
 
 ```
 virtual void NotifyHighlightListItem(int nIndex);
@@ -1573,13 +1573,13 @@ virtual void NotifyHighlightListItem(int nIndex);
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[在]清單中功能區元素的索引。
+在清單中功能區元素的索引。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementonaddtoqatoolbar"></a><a name="onaddtoqatoolbar"></a>CMFC功能基礎元素::在ADDtoQA工具列上
+## <a name="cmfcribbonbaseelementonaddtoqatoolbar"></a><a name="onaddtoqatoolbar"></a> CMFCRibbonBaseElement：： OnAddToQAToolbar
 
-將功能區元素添加到指定的快速存取工具列。
+將功能區元素加入至指定的快速存取工具列。
 
 ```
 virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
@@ -1588,15 +1588,15 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ### <a name="parameters"></a>參數
 
 *qat*<br/>
-[在]快速訪問工具列。
+在快速存取工具列。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 TRUE,指示功能區元素已添加到快速存取工具列。
+一律傳回 TRUE，表示已將功能區專案加入至快速存取工具列。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementonafterchangerect"></a><a name="onafterchangerect"></a>CMFC 功能基礎元素::在轉換后
+## <a name="cmfcribbonbaseelementonafterchangerect"></a><a name="onafterchangerect"></a> CMFCRibbonBaseElement：： OnAfterChangeRect
 
 更新功能區元素的工具提示。
 
@@ -1606,16 +1606,16 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]不使用此參數。
+*Pdc*<br/>
+在未使用此參數。
 
 ### <a name="remarks"></a>備註
 
-預設情況下,此方法更新功能區元素的工具提示。 重寫此方法,以在功能區元素的顯示矩形更改後更新其功能區元素。
+根據預設，這個方法會更新功能區元素的工具提示。 覆寫這個方法，以在其顯示矩形變更後更新功能區專案。
 
-## <a name="cmfcribbonbaseelementonautorepeat"></a><a name="onautorepeat"></a>CMFC功能基礎元素::自動重複
+## <a name="cmfcribbonbaseelementonautorepeat"></a><a name="onautorepeat"></a> CMFCRibbonBaseElement：： OnAutoRepeat
 
-更新功能區元素以回應持續的用戶輸入。
+更新功能區元素以回應持續的使用者輸入。
 
 ```
 virtual BOOL OnAutoRepeat();
@@ -1623,13 +1623,13 @@ virtual BOOL OnAutoRepeat();
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 FALSE。 重寫此方法以處理持續的用戶輸入。
+根據預設，這個方法一律會傳回 FALSE。 覆寫此方法以處理持續的使用者輸入。
 
-## <a name="cmfcribbonbaseelementoncalctextsize"></a><a name="oncalctextsize"></a>CMFC 功能基礎元素::在文字大小上
+## <a name="cmfcribbonbaseelementoncalctextsize"></a><a name="oncalctextsize"></a> CMFCRibbonBaseElement：： OnCalcTextSize
 
 計算功能區元素的文字大小。
 
@@ -1639,16 +1639,16 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]不使用此參數。
+*Pdc*<br/>
+在未使用此參數。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法不執行任何操作。 重寫此方法以計算功能區元素的文本大小。
+依預設，這個方法不會執行任何動作。 覆寫這個方法，以計算功能區專案的文字大小。
 
-## <a name="cmfcribbonbaseelementonchangemenuhighlight"></a><a name="onchangemenuhighlight"></a>CMFC 功能基礎元素::在更改選單高亮顯示
+## <a name="cmfcribbonbaseelementonchangemenuhighlight"></a><a name="onchangemenuhighlight"></a> CMFCRibbonBaseElement：： OnChangeMenuHighlight
 
-當突出顯示更改位於功能表中的功能區元素時,由框架調用。
+當位於功能表中的功能區專案的醒目提示變更時，由架構呼叫。
 
 ```
 virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
@@ -1658,16 +1658,16 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ### <a name="parameters"></a>參數
 
 *pPanelMenuBar*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *pHot*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法不執行任何操作。 重寫此方法以在突出顯示更改時更新位於功能表中的功能區元素。
+依預設，這個方法不會執行任何動作。 覆寫這個方法，以更新醒目提示變更時位於功能表中的功能區元素。
 
-## <a name="cmfcribbonbaseelementondraw"></a><a name="ondraw"></a>CMFC 功能基礎元素::開拉
+## <a name="cmfcribbonbaseelementondraw"></a><a name="ondraw"></a> CMFCRibbonBaseElement：： OnDraw
 
 由架構呼叫以繪製功能區項目。
 
@@ -1677,16 +1677,16 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 ### <a name="remarks"></a>備註
 
-如果要自定義特定功能區元素的圖形,請在派生類中重寫此方法。
+如果您想要自訂特定功能區元素的繪圖，請在衍生類別中覆寫這個方法。
 
-## <a name="cmfcribbonbaseelementondrawkeytip"></a><a name="ondrawkeytip"></a>CMFC 功能基礎元素::繪製鍵提示
+## <a name="cmfcribbonbaseelementondrawkeytip"></a><a name="ondrawkeytip"></a> CMFCRibbonBaseElement：： OnDrawKeyTip
 
-由框架調用以繪製功能區元素的鍵尖。
+由架構呼叫以繪製功能區專案的按鍵提示。
 
 ```
 virtual void OnDrawKeyTip(
@@ -1697,20 +1697,20 @@ virtual void OnDrawKeyTip(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 *矩形*<br/>
-[在]鍵尖的邊界矩形。
+在Keytip 的界限矩形。
 
 *bIsMenu*<br/>
-[在]如果鍵尖是用於彈出式功能表按鈕的,則為 TRUE;否則,FALSE。
+在如果快速鍵提示是針對快顯功能表按鈕則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFC功能基礎元素::在繪製選單影像
+## <a name="cmfcribbonbaseelementondrawmenuimage"></a><a name="ondrawmenuimage"></a> CMFCRibbonBaseElement：： OnDrawMenuImage
 
-繪製功能區元素的功能表圖像時由框架調用。
+當繪製功能區元素的功能表影像時，由架構呼叫。
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -1720,21 +1720,21 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 *矩形*<br/>
-[在]功能表影像矩形。
+在功能表影像矩形。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 TRUE 以指示已繪製圖像。
+一律傳回 TRUE，表示已繪製影像。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementondrawonlist"></a><a name="ondrawonlist"></a>CMFC功能基礎元素:在畫上清單
+## <a name="cmfcribbonbaseelementondrawonlist"></a><a name="ondrawonlist"></a> CMFCRibbonBaseElement：： OnDrawOnList
 
-由框架呼叫以在命令清單框中繪製功能區元素。
+由架構呼叫，以在 [命令] 清單方塊中繪製功能區元素。
 
 ```
 virtual void OnDrawOnList(
@@ -1748,31 +1748,31 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向功能區元素的設備上下文。
+*Pdc*<br/>
+在功能區元素之裝置內容的指標。
 
-*斯特文字*<br/>
-[在]顯示文字。
+*strText*<br/>
+在顯示文字。
 
-*n文字位移*<br/>
-[在]從清單框左側到顯示文本的距離(以像素為單位)。
+*nTextOffset*<br/>
+在從清單方塊左側到顯示文字的距離（以圖元為單位）。
 
 *矩形*<br/>
-[在]功能區元素的顯示矩形。
+在功能區元素的顯示矩形。
 
-*bIs 選擇*<br/>
-[在]不使用此參數。
+*bIsSelected*<br/>
+在未使用此參數。
 
-*突顯突顯*<br/>
-[在]不使用此參數。
+*bHighlighted*<br/>
+在未使用此參數。
 
 ### <a name="remarks"></a>備註
 
-命令列表框顯示功能區元素,使用戶能夠自定義快速存取工具列。
+[命令] 清單方塊會顯示功能區元素，讓使用者自訂快速存取工具列。
 
-## <a name="cmfcribbonbaseelementonkey"></a><a name="onkey"></a>CMFC功能基礎元素::在鍵上
+## <a name="cmfcribbonbaseelementonkey"></a><a name="onkey"></a> CMFCRibbonBaseElement：： OnKey
 
-當使用者按下鍵尖並且功能區元素具有焦點時,由框架調用。
+當使用者按下按鍵提示，並將焦點放在功能區專案時，由架構呼叫。
 
 ```
 virtual BOOL OnKey(BOOL bIsMenuKey);
@@ -1780,18 +1780,18 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 
 ### <a name="parameters"></a>參數
 
-*bIsMenu 鍵*<br/>
-[在]如果鑰匙提示顯示彈出式功能表,則為 TRUE;否則,FALSE。
+*bIsMenuKey*<br/>
+在如果快速鍵提示顯示快顯功能表，則為 TRUE。否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果事件已處理,則為 TRUE;否則 FALSE。
+如果事件已處理，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementonmenukey"></a><a name="onmenukey"></a>CMFC功能基礎元素::上選單鍵
+## <a name="cmfcribbonbaseelementonmenukey"></a><a name="onmenukey"></a> CMFCRibbonBaseElement：： OnMenuKey
 
-當使用者按下主面板上的功能表鍵提示時,由框架調用。
+當使用者按下主面板上的功能表快捷方式時，由架構呼叫。
 
 ```
 virtual BOOL OnMenuKey(UINT nUpperChar);
@@ -1799,20 +1799,20 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 
 ### <a name="parameters"></a>參數
 
-*n 上沙爾*<br/>
-[在]不使用此參數。
+*nUpperChar*<br/>
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 FALSE。 重寫此方法,當使用者按下主面板上的功能表鍵提示時做出回應。
+根據預設，這個方法一律會傳回 FALSE。 覆寫這個方法，以便在使用者按下主面板上的功能表快捷方式時回應。
 
-## <a name="cmfcribbonbaseelementonprocesskey"></a><a name="onprocesskey"></a>CMFC 功能基礎元素::在進程鍵上
+## <a name="cmfcribbonbaseelementonprocesskey"></a><a name="onprocesskey"></a> CMFCRibbonBaseElement：： OnProcessKey
 
-當使用者按下快速鍵時,由框架調用。
+當使用者按下快速鍵時，由架構呼叫。
 
 ```
 virtual BOOL OnProcessKey(UINT nChar);
@@ -1820,20 +1820,20 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-*n查爾*<br/>
-[在]不使用此參數。
+*nChar*<br/>
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果希望功能區元素處理快速鍵,則重寫此方法。
+如果您想要讓功能區專案處理快速鍵，請覆寫這個方法。
 
-## <a name="cmfcribbonbaseelementonrtlchanged"></a><a name="onrtlchanged"></a>CMFC 功能基礎元素::在RTL改變
+## <a name="cmfcribbonbaseelementonrtlchanged"></a><a name="onrtlchanged"></a> CMFCRibbonBaseElement：： OnRTLChanged
 
-當佈局更改方向時由框架調用。
+當版面配置變更方向時，由架構呼叫。
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -1841,16 +1841,16 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>參數
 
-*比塞爾*<br/>
-[在]不使用此參數。
+*bIsRTL*<br/>
+在未使用此參數。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法不執行任何操作。 重寫此方法,在佈局更改方向時調整功能區元素。 默認佈局方向從左至右。
+依預設，這個方法不會執行任何動作。 當版面配置變更方向時，覆寫這個方法以調整功能區專案。 預設的版面配置方向為從左至右。
 
-## <a name="cmfcribbonbaseelementonsetfocus"></a><a name="onsetfocus"></a>CMFC 功能基礎元素::上集焦點
+## <a name="cmfcribbonbaseelementonsetfocus"></a><a name="onsetfocus"></a> CMFCRibbonBaseElement：： OnSetFocus
 
-當功能區元素接收或丟失輸入焦點時,由框架調用。
+當功能區元素接收或失去輸入焦點時，由架構呼叫。
 
 ```
 virtual void OnSetFocus(BOOL B);
@@ -1858,11 +1858,11 @@ virtual void OnSetFocus(BOOL B);
 
 ### <a name="remarks"></a>備註
 
-如果希望應用程式處理功能區元素焦點中的更改,請覆蓋派生類中的此方法。
+如果您想要讓應用程式處理功能區元素焦點的變更，請在衍生類別中覆寫這個方法。
 
-## <a name="cmfcribbonbaseelementonshow"></a><a name="onshow"></a>CMFC 功能基礎元素::上展
+## <a name="cmfcribbonbaseelementonshow"></a><a name="onshow"></a> CMFCRibbonBaseElement：： OnShow
 
-由框架呼叫以顯示或隱藏功能區元素。
+由架構呼叫以顯示或隱藏功能區元素。
 
 ```
 virtual void OnShow(BOOL bShow);
@@ -1870,16 +1870,16 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>參數
 
-*b 顯示*<br/>
-[在]不使用此參數。
+*bShow*<br/>
+在未使用此參數。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法不執行任何操作。 重寫此方法以顯示或隱藏功能區元素。
+依預設，這個方法不會執行任何動作。 覆寫此方法以顯示或隱藏功能區元素。
 
-## <a name="cmfcribbonbaseelementonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CMFC功能基礎元素::在顯示彈出選單
+## <a name="cmfcribbonbaseelementonshowpopupmenu"></a><a name="onshowpopupmenu"></a> CMFCRibbonBaseElement：： OnShowPopupMenu
 
-在功能區元素顯示彈出式功能表之前由框架調用。
+在功能區專案顯示快顯功能表之前，由架構呼叫。
 
 ```
 virtual void OnShowPopupMenu();
@@ -1887,11 +1887,11 @@ virtual void OnShowPopupMenu();
 
 ### <a name="remarks"></a>備註
 
-此方法通知功能區列的父視窗功能區元素將顯示一個彈出式功能表。
+這個方法會通知功能區列的父視窗，功能區元素將會顯示快顯功能表。
 
-## <a name="cmfcribbonbaseelementpostmenucommand"></a><a name="postmenucommand"></a>CMFC功能基礎元素::P奧斯特庫梅命令
+## <a name="cmfcribbonbaseelementpostmenucommand"></a><a name="postmenucommand"></a> CMFCRibbonBaseElement：:P ostMenuCommand
 
-關閉功能區元素的彈出功能表,並向父功能表發送一條近消息。
+關閉功能區元素的快顯功能表，並將關閉訊息傳送至父功能表。
 
 ```cpp
 void PostMenuCommand(UINT uiCmdId);
@@ -1899,14 +1899,14 @@ void PostMenuCommand(UINT uiCmdId);
 
 ### <a name="parameters"></a>參數
 
-*烏伊CmDId*<br/>
-[在]不使用該參數。
+*uiCmdId*<br/>
+在不使用參數。
 
 ### <a name="remarks"></a>備註
 
-僅當功能區元素位於彈出功能表上時,才會發送關閉消息。
+只有在功能區元素位於快顯功能表上時，才會傳送關閉訊息。
 
-## <a name="cmfcribbonbaseelementredraw"></a><a name="redraw"></a>CMFC 功能基礎元素::重繪
+## <a name="cmfcribbonbaseelementredraw"></a><a name="redraw"></a> CMFCRibbonBaseElement：：重繪
 
 更新功能區元素的顯示。
 
@@ -1916,9 +1916,9 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>備註
 
-此方法通過調用[CWnd::redrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow)並設置RDW_INVALIDATE、RDW_ERASE和RDW_UPDATENOW標誌來重繪功能區元素的顯示矩形。
+這個方法會藉由呼叫 [CWnd：： RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) 並設定 RDW_INVALIDATE、RDW_ERASE 和 RDW_UPDATENOW 旗標，來重新繪製功能區元素的顯示矩形。
 
-## <a name="cmfcribbonbaseelementsetaccdata"></a><a name="setaccdata"></a>CMFC 功能基礎元素::設定ACC資料
+## <a name="cmfcribbonbaseelementsetaccdata"></a><a name="setaccdata"></a> CMFCRibbonBaseElement：： SetACCData
 
 設定功能區項目的協助工具資料。
 
@@ -1933,18 +1933,18 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 功能區項目的父視窗。
 
-*資料*<br/>
+*data*<br/>
 功能區項目的協助工具資料。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 TRUE。
+一律傳回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法設置功能區元素的輔助功能數據,並始終返回 TRUE。 覆寫此方法以設定協助工具資料並傳回值，以指出成功或失敗。
+根據預設，這個方法會設定功能區專案的協助工具資料，而且一律會傳回 TRUE。 覆寫此方法以設定協助工具資料並傳回值，以指出成功或失敗。
 
-## <a name="cmfcribbonbaseelementsetcompactmode"></a><a name="setcompactmode"></a>CMFC 功能基礎元素::設定壓縮模式
+## <a name="cmfcribbonbaseelementsetcompactmode"></a><a name="setcompactmode"></a> CMFCRibbonBaseElement：： SetCompactMode
 
 設定功能區元素的顯示大小。
 
@@ -1954,23 +1954,23 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*b 壓縮模式*<br/>
-[在]TRUE 以減小功能區元素的顯示大小;FALSE 可增加功能區元素的顯示大小。
+*bCompactMode*<br/>
+在TRUE 表示縮小功能區元素的顯示大小;FALSE 以增加功能區元素的顯示大小。
 
 ### <a name="remarks"></a>備註
 
-下表總結了此方法的邏輯。
+下表摘要說明此方法的邏輯。
 
-|*b 壓縮模式*|目前功能區元素大小|新的功能區元素大小|
+|*bCompactMode*|目前的功能區元素大小|新的功能區元素大小|
 |--------------------|---------------------------------|-----------------------------|
-|TRUE|精簡|無變更。|
-|TRUE|中級者|如果可能,則緊湊。|
-|TRUE|大型|如果可能,則中間。|
-|FALSE|精簡|如果可能,中間;否則大。|
+|TRUE|精簡|沒有變更。|
+|TRUE|中級|壓縮（如果可能的話）。|
+|TRUE|大|中繼（如果可能的話）。|
+|false|精簡|如果有的話，則為中繼;否則很龐大。|
 
-## <a name="cmfcribbonbaseelementsetdata"></a><a name="setdata"></a>CMFC 功能基礎元素::集數據
+## <a name="cmfcribbonbaseelementsetdata"></a><a name="setdata"></a> CMFCRibbonBaseElement：： SetData
 
-將數據項與功能區元素關聯。
+使資料項目與功能區專案產生關聯。
 
 ```cpp
 void SetData(DWORD_PTR dwData);
@@ -1979,11 +1979,11 @@ void SetData(DWORD_PTR dwData);
 ### <a name="parameters"></a>參數
 
 *dwData*<br/>
-[在]數據值。
+在資料值。
 
-## <a name="cmfcribbonbaseelementsetdefaultmenulook"></a><a name="setdefaultmenulook"></a>CMFC 功能基礎元素::設定預設選單檢視
+## <a name="cmfcribbonbaseelementsetdefaultmenulook"></a><a name="setdefaultmenulook"></a> CMFCRibbonBaseElement：： SetDefaultMenuLook
 
-將功能區元素設為彈出命令。
+將功能區元素設定為顯示為快顯命令。
 
 ```cpp
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
@@ -1991,12 +1991,12 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*bIsdefaultMenuLook*<br/>
-[在]TRUE 將功能區元素設置為顯示為彈出命令;如果為"真",則設置為"TRUE",將功能區元素設置為彈出命令。否則 FALSE。
+*bIsDefaultMenuLook*<br/>
+在TRUE 表示將功能區專案顯示為快顯命令;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementsetdescription"></a><a name="setdescription"></a>CMFC 功能基礎元素::設定描述
+## <a name="cmfcribbonbaseelementsetdescription"></a><a name="setdescription"></a> CMFCRibbonBaseElement：： SetDescription
 
 設定功能區項目的描述。
 
@@ -2007,15 +2007,15 @@ virtual void SetDescription(LPCTSTR lpszText);
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-[在]功能區元素的說明。
+在功能區元素的描述。
 
 ### <a name="remarks"></a>備註
 
-框架在狀態列、工具提示或功能表按鈕下顯示新說明。
+架構會在狀態列或工具提示中或在 [功能表] 按鈕下顯示新的描述。
 
-## <a name="cmfcribbonbaseelementsetid"></a><a name="setid"></a>CMFC 功能基礎元素::SetID
+## <a name="cmfcribbonbaseelementsetid"></a><a name="setid"></a> CMFCRibbonBaseElement：： SetID
 
-設置功能區元素的命令 ID。
+設定功能區元素的命令識別碼。
 
 ```
 virtual void SetID(UINT nID);
@@ -2024,9 +2024,9 @@ virtual void SetID(UINT nID);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-[在]命令識別碼。
+在命令識別碼。
 
-## <a name="cmfcribbonbaseelementsetinitialmode"></a><a name="setinitialmode"></a>CMFC 功能基礎元素::設定初始模式
+## <a name="cmfcribbonbaseelementsetinitialmode"></a><a name="setinitialmode"></a> CMFCRibbonBaseElement：： SetInitialMode
 
 設定功能區元素的初始顯示大小。
 
@@ -2037,15 +2037,15 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ### <a name="parameters"></a>參數
 
 *bOneRow*<br/>
-[在]TRUE 將功能區元素的顯示大小限制為緊湊或中間;否則,FALSE。
+在TRUE 表示將功能區元素的顯示大小限制為 compact 或中級;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-功能區元素的顯示大小可以是緊湊、中間或大。
+功能區元素的顯示大小可以是 compact、中繼或大型。
 
-## <a name="cmfcribbonbaseelementsetkeys"></a><a name="setkeys"></a>CMFC 功能基礎元素::設定鍵
+## <a name="cmfcribbonbaseelementsetkeys"></a><a name="setkeys"></a> CMFCRibbonBaseElement：： SetKeys
 
-設置功能區元素的鍵提示。
+設定功能區元素的按鍵提示。
 
 ```
 virtual void SetKeys(
@@ -2056,14 +2056,14 @@ virtual void SetKeys(
 ### <a name="parameters"></a>參數
 
 *lpszKeys*<br/>
-[在]功能區元素的鍵尖。
+在功能區元素的快速鍵提示。
 
 *lpszMenuKeys*<br/>
-[在]功能區元素的彈出功能表的鍵尖。
+在功能區元素快顯功能表的快速鍵提示。
 
-## <a name="cmfcribbonbaseelementsetoriginal"></a><a name="setoriginal"></a>CMFC 功能基礎元素::設定原始
+## <a name="cmfcribbonbaseelementsetoriginal"></a><a name="setoriginal"></a> CMFCRibbonBaseElement：： SetOriginal
 
-設置功能區元素的原始功能區元素。
+設定功能區元素的原始功能區元素。
 
 ```
 virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
@@ -2071,16 +2071,16 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 
 ### <a name="parameters"></a>參數
 
-*p原始*<br/>
-[在]指向功能區元素的指標。
+*pOriginal*<br/>
+在功能區元素的指標。
 
 ### <a name="remarks"></a>備註
 
-複製到另一個容器的功能區元素將保留指向原始功能區元素的指標。
+複製到另一個容器的功能區專案會保留原始功能區元素的指標。
 
-## <a name="cmfcribbonbaseelementsetparentcategory"></a><a name="setparentcategory"></a>CMFC 功能基礎元素::設定父項目類別
+## <a name="cmfcribbonbaseelementsetparentcategory"></a><a name="setparentcategory"></a> CMFCRibbonBaseElement：： SetParentCategory
 
-設置功能區元素的父類別。
+設定功能區元素的父類別目錄。
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
@@ -2089,15 +2089,15 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ### <a name="parameters"></a>參數
 
 *pParent*<br/>
-[在]指向功能區類別的指標。
+在功能區分類的指標。
 
 ### <a name="remarks"></a>備註
 
-功能區控件中的選項卡式組稱為類別。
+功能區控制項中的索引標籤式群組稱為類別目錄。
 
-## <a name="cmfcribbonbaseelementsetparentmenu"></a><a name="setparentmenu"></a>CMFC 功能基礎元素::設定父選單
+## <a name="cmfcribbonbaseelementsetparentmenu"></a><a name="setparentmenu"></a> CMFCRibbonBaseElement：： SetParentMenu
 
-設置功能區元素的父功能表容器。
+設定功能區元素的父功能表容器。
 
 ```
 virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
@@ -2106,13 +2106,13 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ### <a name="parameters"></a>參數
 
 *pMenuBar*<br/>
-[在]父功能表。
+在父功能表。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementsetparentribbonbar"></a><a name="setparentribbonbar"></a>CMFC 功能基礎元素::設定父功能區列
+## <a name="cmfcribbonbaseelementsetparentribbonbar"></a><a name="setparentribbonbar"></a> CMFCRibbonBaseElement：： SetParentRibbonBar
 
-設置功能區元素的父功能區列。
+設定功能區元素的父功能區列。
 
 ```
 virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
@@ -2120,14 +2120,14 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 
 ### <a name="parameters"></a>參數
 
-*pRibbonbar*<br/>
-[在]指向父功能區欄。
+*pRibbonBar*<br/>
+在父項功能區列的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementsetrect"></a><a name="setrect"></a>CMFC 功能基礎元素::設定 Rect
+## <a name="cmfcribbonbaseelementsetrect"></a><a name="setrect"></a> CMFCRibbonBaseElement：： SetRect
 
-設置功能區元素的顯示矩形的尺寸。
+設定功能區專案的顯示矩形的維度。
 
 ```cpp
 void SetRect(CRect rect);
@@ -2136,13 +2136,13 @@ void SetRect(CRect rect);
 ### <a name="parameters"></a>參數
 
 *矩形*<br/>
-[在]矩形的尺寸。
+在矩形的維度。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementsettext"></a><a name="settext"></a>CMFC 功能基礎元素::設定文字
+## <a name="cmfcribbonbaseelementsettext"></a><a name="settext"></a> CMFCRibbonBaseElement：： SetText
 
-設置功能區元素的文本和鍵尖。
+設定功能區元素的文字和快速鍵提示。
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -2151,11 +2151,11 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-[在]功能區元素的文本和鍵尖。
+在功能區元素的文字和快速鍵提示。
 
 ### <a name="remarks"></a>備註
 
-要設定功能區元素的鍵尖,將換行元轉義序列後跟鍵尖字元加入*到 lpszText*。
+若要設定功能區專案的按鍵提示，請將分行符號後面接著要 *lpszText*的 keytip 字元附加到行 escape 序列。
 
 ### <a name="example"></a>範例
 
@@ -2168,9 +2168,9 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))
 ```
 
-## <a name="cmfcribbonbaseelementsettextalwaysonright"></a><a name="settextalwaysonright"></a>CMFC 功能基礎元素::設定文字始終正確
+## <a name="cmfcribbonbaseelementsettextalwaysonright"></a><a name="settextalwaysonright"></a> CMFCRibbonBaseElement：： SetTextAlwaysOnRight
 
-設置功能區元素的文本,以便顯示在右側。
+設定要顯示在右側的功能區元素文字。
 
 ```
 virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
@@ -2179,13 +2179,13 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ### <a name="parameters"></a>參數
 
 *bSet*<br/>
-[在]TRUE 顯示右側的文本;否則 FALSE。
+在TRUE 表示顯示右邊的文字;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementsettooltiptext"></a><a name="settooltiptext"></a>CMFC 功能基礎元素::設定工具提示文字
+## <a name="cmfcribbonbaseelementsettooltiptext"></a><a name="settooltiptext"></a> CMFCRibbonBaseElement：： SetToolTipText
 
-設定功能區元素的工具提示文本。
+設定功能區元素的工具提示文字。
 
 ```
 virtual void SetToolTipText(LPCTSTR lpszText);
@@ -2194,11 +2194,11 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-[在]工具提示文字。
+在工具提示文字。
 
-## <a name="cmfcribbonbaseelementsetvisible"></a><a name="setvisible"></a>CMFC 功能基礎元素::設定可見
+## <a name="cmfcribbonbaseelementsetvisible"></a><a name="setvisible"></a> CMFCRibbonBaseElement：： SetVisible
 
-設置功能區元素的可見性。
+設定功能區元素的可見度。
 
 ```cpp
 void SetVisible(BOOL bIsVisible);
@@ -2206,14 +2206,14 @@ void SetVisible(BOOL bIsVisible);
 
 ### <a name="parameters"></a>參數
 
-*b 可見*<br/>
-[在]TRUE 以顯示功能區元素;FALSE 以隱藏功能區元素。
+*bIsVisible*<br/>
+在TRUE 表示顯示功能區元素;FALSE 表示隱藏功能區元素。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementstretchhorizontally"></a><a name="stretchhorizontally"></a>CMFC 功能基礎元素::水準拉伸
+## <a name="cmfcribbonbaseelementstretchhorizontally"></a><a name="stretchhorizontally"></a> CMFCRibbonBaseElement：： StretchHorizontally
 
-拉伸功能區元素的寬度。
+伸展功能區元素的寬度。
 
 ```
 virtual void StretchHorizontally();
@@ -2221,11 +2221,11 @@ virtual void StretchHorizontally();
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法在調試生成中生成斷言失敗,因此不應調用。 重寫此方法以拉伸功能區元素的寬度。
+根據預設，這個方法會在 debug 組建中產生判斷提示失敗，因此不應該呼叫。 覆寫這個方法以延展功能區元素的寬度。
 
-## <a name="cmfcribbonbaseelementstretchtowholerow"></a><a name="stretchtowholerow"></a>CMFC 功能基礎元素::拉伸到整體行
+## <a name="cmfcribbonbaseelementstretchtowholerow"></a><a name="stretchtowholerow"></a> CMFCRibbonBaseElement：： StretchToWholeRow
 
-將功能區元素的顯示高度更改為指定的行高度。
+將功能區元素的顯示高度變更為指定的資料列高度。
 
 ```
 virtual BOOL StretchToWholeRow(
@@ -2235,23 +2235,23 @@ virtual BOOL StretchToWholeRow(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]不使用此參數。
+*Pdc*<br/>
+在未使用此參數。
 
 *nHeight*<br/>
-[在]行的高度。
+在資料列的高度。
 
 ### <a name="return-value"></a>傳回值
 
-如果已設置顯示高度,則為 TRUE;如果已設置顯示高度,則為 TRUE。否則,FALSE。
+如果顯示高度已設定，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-重寫此方法可將功能區元素的顯示高度更改為指定的行高度。
+覆寫這個方法，將功能區元素的顯示高度變更為指定的資料列高度。
 
-## <a name="cmfcribbonbaseelementupdatetooltipinfo"></a><a name="updatetooltipinfo"></a>CMFC 功能基礎元素::更新工具提示資訊
+## <a name="cmfcribbonbaseelementupdatetooltipinfo"></a><a name="updatetooltipinfo"></a> CMFCRibbonBaseElement：： UpdateTooltipInfo
 
-使用功能區元素的命令資源更新工具提示文本。
+使用功能區元素的命令資源，更新工具提示文字。
 
 ```
 virtual void UpdateTooltipInfo();
@@ -2259,9 +2259,9 @@ virtual void UpdateTooltipInfo();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaseelementhasfocus"></a><a name="hasfocus"></a>CMFC 功能基礎元素::有焦點
+## <a name="cmfcribbonbaseelementhasfocus"></a><a name="hasfocus"></a> CMFCRibbonBaseElement：： HasFocus
 
-指示父元素是否具有鍵盤焦點。
+指出父元素是否具有鍵盤焦點。
 
 ```
 virtual BOOL HasFocus() const;
@@ -2269,7 +2269,7 @@ virtual BOOL HasFocus() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素是焦點,則為 TRUE;如果功能區元素是焦點的,則為 TRUE。否則 FALSE。
+如果功能區元素為焦點，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 

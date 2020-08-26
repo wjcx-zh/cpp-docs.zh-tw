@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 0b951fc76635f67115f4a832ed316d66b6de7497
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376288"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836695"
 ---
 # <a name="translation-mode-constants"></a>轉譯模式常數
 
@@ -38,7 +38,7 @@ ms.locfileid: "68376288"
 
 允許的值包括：
 
-|||
+|值|描述|
 |-|-|
 `_O_TEXT`  | 以文字 (已轉譯) 模式開啟檔案。 歸位字元–換行字元 (CR-LF) 的組合會在輸入中轉譯為單行換行 (LF)。 換行字元會在輸出中轉譯為 CR-LF 組合。 此外，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在為了讀取或讀取和寫入而開啟的檔案中，`fopen` 會儘可能檢查檔案結尾是否有 Ctrl+Z 並加以移除。 這樣做的原因是因為使用 `fseek` 和 `ftell` 函式在以 Ctrl+Z 結束的檔案內移動可能會讓 `fseek` 在檔案結尾附近產生不當行為。
 `_O_BINARY`  | 以二進位 (未轉譯) 模式開啟檔案。 會隱藏上述轉譯。

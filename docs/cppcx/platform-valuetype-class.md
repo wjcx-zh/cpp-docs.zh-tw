@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182947"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846546"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType 類別
 
@@ -26,15 +26,15 @@ public ref class ValueType : Object
 
 ## <a name="public-methods"></a>公用方法
 
-|||
-|-|-|
-|[ValueType::ToString](#tostring)|傳回物件的字串表示。 繼承自[platform:: object](../cppcx/platform-object-class.md)。|
+| 名稱 | 描述 |
+|--|--|
+| [ValueType：： ToString](#tostring) | 傳回物件的字串表示。 繼承自 [Platform：： Object](../cppcx/platform-object-class.md)。 |
 
 ### <a name="remarks"></a>備註
 
 ValueType 類別用以建構值類型。 具有基本成員的 ValueType 衍生自物件。 不過，編譯器會中斷基本成員和衍生自 ValueType 類別之值類型的連結。 當值類型經過方塊化處理後，編譯器會重新附加這些基本成員。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **最低支援用戶端：** Windows 8
 
@@ -44,7 +44,7 @@ ValueType 類別用以建構值類型。 具有基本成員的 ValueType 衍生�
 
 **中繼資料：** platform.winmd
 
-## <a name="tostring"></a> Valuetype:: Tostring 方法
+## <a name="valuetypetostring-method"></a><a name="tostring"></a> ValueType：： ToString 方法
 
 傳回物件的字串表示。
 
@@ -56,7 +56,7 @@ Platform::String ToString();
 
 ### <a name="return-value"></a>傳回值
 
-Platform:: string，表示的值。
+代表值的 Platform：： String。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -48,23 +48,31 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322965"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840410"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn、_wspawn 函式
 
 所有 `_spawn` 函式都會建立並執行新的處理序：
 
-|||
-|-|-|
-|[_spawnl、_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv、_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|
-|[_spawnle、_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve、_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|
-|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp、_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|
-|[_spawnlpe、_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe、_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|
+:::row:::
+   :::column span="":::
+      [_spawnl，_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)\
+      [_spawnle，_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)\
+      [_spawnlp，_wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)\
+      [_spawnlpe，_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)\
+   :::column-end:::
+   :::column span="":::
+      [_spawnv，_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)\
+      [_spawnve，_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)\
+      [_spawnvp，_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)\
+      [_spawnvpe，_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)\
+   :::column-end:::
+:::row-end:::
 
 函式名稱結尾的字母決定了變化。
 
@@ -94,7 +102,7 @@ ms.locfileid: "81322965"
 
 必須有足夠的記憶體才能載入和執行新的處理序。 `mode` 引數會決定呼叫處理序在 `_spawn` 之前及期間所採取的動作。 `mode` 的下列值是在 Process.h 中定義︰
 
-|||
+|值|描述|
 |-|-|
 | `_P_OVERLAY`  | 重疊呼叫處理序與新的處理序，會終結呼叫處理序 (與 `_exec` 呼叫的效果相同)。  |
 | `_P_WAIT`  | 暫停呼叫執行緒直到新的處理序執行完成 (同步的 `_spawn`)。  |
@@ -130,7 +138,7 @@ ms.locfileid: "81322965"
 
 ## <a name="environment-of-the-spawned-process"></a>繁衍處理序的環境
 
-執行 `_spawn` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 呼叫透過 `envp` 引數傳遞環境設定的清單，來改變新處理序的環境。 引數 `envp` 是字元指標的陣列，其每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 (請注意,`value`未以雙引弧括起來。陣列的最後一`envp`個元素應為**NULL**。 當 `envp` 本身是 **NULL** 時，繁衍的處理序會繼承父代處理序的環境設定。
+執行 `_spawn` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 呼叫透過 `envp` 引數傳遞環境設定的清單，來改變新處理序的環境。 引數 `envp` 是字元指標的陣列，其每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。  (注意 `value` 不是以雙引號括住。 ) 陣列的最後一個元素 `envp` 應該是 **Null**。 當 `envp` 本身是 **NULL** 時，繁衍的處理序會繼承父代處理序的環境設定。
 
 `_spawn` 函式可以將開啟的檔案的所有資訊，包括轉譯模式在內，傳遞至新的處理序。 這項資訊會透過環境中的 `C_FILE_INFO` 項目以真實模式傳遞。 啟始程式碼通常會處理此項目，再從環境中刪除它。 不過，如果 `_spawn` 函式產生非 C 程序，此項目會保留在環境中。 列印環境會在此項目的定義字串中顯示圖形字元，因為環境資訊以真實模式的二進位格式傳遞。 它對正常作業應該沒有任何其他影響。 在受保護的模式中，環境資訊會以文字格式傳遞，因此不包含任何圖形字元。
 
@@ -231,13 +239,13 @@ from SPAWN!
 
 ## <a name="see-also"></a>另請參閱
 
-[處理序和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
+[流程式控制制和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[_exec、_wexec 函式](../c-runtime-library/exec-wexec-functions.md)<br/>
-[exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[_exec，_wexec 函數](../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_flushall](../c-runtime-library/reference/flushall.md)<br/>
 [_getmbcp](../c-runtime-library/reference/getmbcp.md)<br/>
-[_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
+[_onexit，_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
 [_setmbcp](../c-runtime-library/reference/setmbcp.md)<br/>
 [system、_wsystem](../c-runtime-library/reference/system-wsystem.md)

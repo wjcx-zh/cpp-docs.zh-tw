@@ -56,23 +56,33 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351669"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839721"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 函式
 
 每個此系列中的函式都會載入並執行新處理序：
 
-|||
-|-|-|
-|[_execl、_wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv、_wexecv](../c-runtime-library/reference/execv-wexecv.md)|
-|[_execle、_wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve、_wexecve](../c-runtime-library/reference/execve-wexecve.md)|
-|[_execlp、_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp、_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|
-|[_execlpe、_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe、_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
+:::row:::
+   :::column span="":::
+      [_execl，_wexecl](../c-runtime-library/reference/execl-wexecl.md)\
+      [_execv，_wexecv](../c-runtime-library/reference/execv-wexecv.md)\
+      [_execle、_wexecle](../c-runtime-library/reference/execle-wexecle.md)
+   :::column-end:::
+   :::column span="":::
+      [_execve，_wexecve](../c-runtime-library/reference/execve-wexecve.md)\
+      [_execlp，_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)\
+      [_execvp、_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)
+   :::column-end:::
+   :::column span="":::
+      [_execlpe，_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)\
+      [_execvpe、_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)
+   :::column-end:::
+:::row-end:::
 
 函式名稱結尾的字母決定了變化。
 
@@ -118,7 +128,7 @@ ms.locfileid: "81351669"
 
 當新處理序的參數數目為變數時，`_execv`、`_execve`、`_execvp` 和 `_execvpe` 呼叫就很實用。 參數的指標會作為陣列 `argv` 進行傳遞。 參數 `argv`[0] 通常是 `cmdname` 的指標。 參數 `argv`[1] 到 `argv`[`n`] 會指向形成新參數清單的字元字串。 參數 `argv`[`n`+1] 必須是 **NULL** 指標，以標記參數清單的結尾。
 
-執行 `_exec` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 `_execle`、`_execlpe`、`_execve` 和 `_execvpe` 呼叫可透過 `envp` 參數傳遞環境設定的清單，來改變新處理序的環境。 `envp` 是字元指標的陣列，其中每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 (請注意,`value`未以雙引弧括起來。陣列的最後一`envp`個元素應為**NULL**。 當 `envp` 本身是 **NULL** 時，新處理序會繼承呼叫處理序的環境設定。
+執行 `_exec` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 `_execle`、`_execlpe`、`_execve` 和 `_execvpe` 呼叫可透過 `envp` 參數傳遞環境設定的清單，來改變新處理序的環境。 `envp` 是字元指標的陣列，其中每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。  (注意 `value` 不是以雙引號括住。 ) 陣列的最後一個元素 `envp` 應該是 **Null**。 當 `envp` 本身是 **NULL** 時，新處理序會繼承呼叫處理序的環境設定。
 
 使用其中一個 `_exec` 函式執行的程式會一律載入至記憶體中，正如同程式的 .exe 檔案標頭中的最大配置欄位是設為 0xFFFFH 的預設值。
 
@@ -232,16 +242,16 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：** process.h
 
 ## <a name="see-also"></a>另請參閱
 
-[處理序和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
+[流程式控制制和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
-[_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[_spawn、_wspawn 函式](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[_onexit，_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
+[_spawn，_wspawn 函數](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](../c-runtime-library/reference/system-wsystem.md)

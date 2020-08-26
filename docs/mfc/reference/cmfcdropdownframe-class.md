@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: d99dae9d8e7eca96c736a33621f0b544f1962f0f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62bab0fbde364406f35edb959abb6e55a9125504
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560890"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840735"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 類別
 
@@ -37,17 +37,15 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|預設建構函式。|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CMFCDropDownFrame：： Create](#create)|建立 `CMFCDropDownFrame` 物件。|
 |`CMFCDropDownFrame::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|
 |[CMFCDropDownFrame：： GetParentMenuBar](#getparentmenubar)|抓取下拉式框架的上層功能表列。|

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb63451c8789f7d390e2387ed8fadae23d1c7a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230255"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846520"
 ---
 # <a name="bernoulli_distribution-class"></a>bernoulli_distribution 類別
 
@@ -67,16 +67,14 @@ public:
 ### <a name="parameters"></a>參數
 
 *URNG*\
-統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-此類別描述產生類型值的分佈，而此散發是根據每個 **`bool`** 利的分佈離散機率函數來散發。 下表提供各個成員的文章連結。
+類別描述產生型別值的分佈，此分佈會 **`bool`** 根據「利利」分佈離散機率函式來散發。 下表提供各個成員的文章連結。
 
-||||
-|-|-|-|
-|[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|
-|`bernoulli_distribution::operator()`||[param_type](#param_type)|
+[bernoulli_distribution](#bernoulli_distribution)\
+[param_type](#param_type)
 
 屬性成員 `p()` 會傳回目前儲存的分佈參數值 `p`。
 
@@ -152,13 +150,13 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 true :::::::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution：： bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a> bernoulli_distribution：： bernoulli_distribution
 
 建構分佈。
 
@@ -169,10 +167,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p&id*\
+*P*\
 儲存的 `p` 分佈參數。
 
-*parm*\
+*>parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -183,17 +181,17 @@ explicit bernoulli_distribution(const param_type& parm);
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution：:p aram_type
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a> bernoulli_distribution：:p aram_type
 
 包含分佈的參數。
 
-結構 param_type {typedef bernoulli_distribution distribution_type; param_type （雙 p = 0.5）; 雙 p （） const;
+結構 param_type {typedef bernoulli_distribution distribution_type; param_type (雙 p = 0.5) ; 雙 p ( # A3 const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>參數
 
-*p&id*\
+*P*\
 儲存的 `p` 分佈參數。
 
 ### <a name="remarks"></a>備註

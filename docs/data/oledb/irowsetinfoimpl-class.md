@@ -25,16 +25,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210440"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840384"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 類別
 
-提供[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))介面的執行。
+提供 [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) 介面的實作為。
 
 ## <a name="syntax"></a>語法
 
@@ -48,12 +48,12 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自 `IRowsetInfoImpl`的類別。
+衍生自的類別 `IRowsetInfoImpl` 。
 
 *PropClass*<br/>
-使用者可定義的屬性類別，預設為*T*。
+使用者可定義的屬性類別，預設為 *T*。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：** altdb。h
 
@@ -61,19 +61,19 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ### <a name="interface-methods"></a>介面方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[GetProperties](#getproperties)|傳回資料列集 (Rowset) 支援之所有屬性的目前設定。|
-|[GetReferencedRowset](#getreferencedrowset)|將介面指標傳回至要套用書簽的資料列集。|
+|[GetReferencedRowset](#getreferencedrowset)|傳回要套用書簽之資料列集的介面指標。|
 |[GetSpecification](#getspecification)|傳回建立此資料列集之物件 (命令或工作階段) 上的介面指標。|
 
 ## <a name="remarks"></a>備註
 
-資料列集上的強制介面。 這個類別會使用在命令類別中定義的[屬性集對應](../../data/oledb/begin-propset-map.md)來實作為資料列集屬性。 雖然資料列集類別似乎是使用命令類別的屬性集，但當資料列集是由命令或會話物件所建立時，它會隨附其本身的執行時間屬性複本。
+資料列集上的強制介面。 這個類別會使用您命令類別中定義的 [屬性集對應](../../data/oledb/begin-propset-map.md) 來執行資料列集屬性。 雖然資料列集類別似乎是使用命令類別的屬性集，但是當資料列集是由命令或會話物件建立時，會提供它自己的執行時間屬性複本。
 
-## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl：： GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl：： GetProperties
 
-傳回 `DBPROPSET_ROWSET` 群組中屬性的目前設定。
+傳回群組中屬性的目前設定 `DBPROPSET_ROWSET` 。
 
 ### <a name="syntax"></a>語法
 
@@ -88,9 +88,9 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IRowsetInfo：： GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) 。
 
-## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl：： GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a> IRowsetInfoImpl：： GetReferencedRowset
 
-將介面指標傳回至要套用書簽的資料列集。
+傳回要套用書簽之資料列集的介面指標。
 
 ### <a name="syntax"></a>語法
 
@@ -102,9 +102,9 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>參數
 
-請參閱 OLE DB 程式設計*人員參考*中的[IRowsetInfo：： GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) 。 *IOrdinal*參數必須是書簽資料行。
+請參閱 OLE DB 程式設計*人員參考*中的[IRowsetInfo：： GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) 。 *>iordinal*參數必須是書簽資料行。
 
-## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl：： GetSpecification
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a> IRowsetInfoImpl：： GetSpecification
 
 傳回建立此資料列集之物件 (命令或工作階段) 上的介面指標。
 
@@ -121,7 +121,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 ### <a name="remarks"></a>備註
 
-使用此方法搭配[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) ，從資料來源物件中抓取屬性。
+使用這個方法搭配 [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) ，以從資料來源物件取出屬性。
 
 ## <a name="see-also"></a>另請參閱
 

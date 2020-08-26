@@ -1,21 +1,21 @@
 ---
-title: transmit_as （c + + COM 屬性）
+title: 'transmit_as (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: a34d57cc60dcc65e8b111c595fdd819dea407b78
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9483bfd7ca95aa1121beb56aac8a286c25fa17cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201124"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840800"
 ---
 # <a name="transmit_as"></a>transmit_as
 
-指示編譯器將用戶端和伺服器應用程式操作的呈現類型與傳送的類型產生關聯。
+指示編譯器將用戶端和伺服器應用程式操作的呈現型別與傳送的型別產生關聯。
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +34,7 @@ ms.locfileid: "87201124"
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**transmit_as**屬性：
+下列程式碼示範如何使用 **transmit_as** 屬性：
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -64,14 +64,12 @@ struct _TREE_NODE_TYPE * right;
 [transmit_as(TREE_XMIT_TYPE)] typedef TREE_NODE_TYPE * TREE_TYPE;
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**`typedef`**|
-|**可重複**|否|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 
@@ -81,4 +79,4 @@ struct _TREE_NODE_TYPE * right;
 
 [IDL 屬性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
-[進出口](export.md)
+[出口](export.md)

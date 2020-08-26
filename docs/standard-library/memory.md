@@ -7,18 +7,18 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202957"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836461"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 定義幫助配置和釋放物件的類別、運算子和數個範本。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<memory>
 
@@ -26,12 +26,12 @@ ms.locfileid: "87202957"
 
 ## <a name="members"></a>成員
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
-|||
+|名稱|描述|
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|取得物件真正的位址。|
-|[對齊](../standard-library/memory-functions.md#align)|根據所提供的對齊和開始位址，傳回指向指定大小之範圍的指標。|
+|[align](../standard-library/memory-functions.md#align)|根據所提供的對齊和開始位址，傳回指向指定大小之範圍的指標。|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|建立 `shared_ptr`，指向透過指定的配置器為特定類型配置及建構的物件。|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
 |[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
@@ -48,9 +48,9 @@ ms.locfileid: "87202957"
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|通知記憶體回收行程，在指定之位址開頭且落在指示之區塊大小內的字元不包含任何可追蹤指標。|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|告知記憶體回收，指示的位址是前往配置儲存體且可連接。|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|刪除使用 `operator new` 配置的物件。 適合搭配 `unique_ptr` 使用。|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|縮寫 `destroy` 方法。|
-|[予以](../standard-library/memory-functions.md#destroy)|縮寫 `destroy` 方法。|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|縮寫 `destroy` 方法。|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|速記 `destroy` 方法。|
+|[摧毀](../standard-library/memory-functions.md#destroy)|速記 `destroy` 方法。|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|速記 `destroy` 方法。|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|動態轉型為 `shared_ptr`。|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|從 `shared_ptr` 取得刪除者。|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|傳回任何記憶體回收行程所假設之指標安全的類型。|
@@ -60,40 +60,40 @@ ms.locfileid: "87202957"
 |[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|`get_pointer_safety` 所有可能的傳回值的列舉。|
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|將使用 `get_temporary_buffer` 樣板函式配置的暫存記憶體取消配置。|
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|靜態轉型至 `shared_ptr`。|
-|[調換](../standard-library/memory-functions.md#swap)|交換兩個 `shared_ptr` 或 `weak_ptr` 物件。|
+|[交換](../standard-library/memory-functions.md#swap)|交換兩個 `shared_ptr` 或 `weak_ptr` 物件。|
 |[undeclare_no_pointers](../standard-library/memory-functions.md#undeclare_no_pointers)|通知記憶體回收行程，基底位址指標和區塊大小定義的記憶體區塊中的字元現在可能會包含可追蹤的指標。|
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|通知 `garbage_collector`，指定的記憶體位置無法連接。|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|從指定的輸入範圍將物件複製到未初始化的目的範圍內。|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|從輸入迭代器建立所指定項目數的複本。 複本會放在正向迭代器中。|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|縮寫 `uninitialized_default_construct` 方法。|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|縮寫 `uninitialized_construct` 方法。|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|速記 `uninitialized_default_construct` 方法。|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|速記 `uninitialized_construct` 方法。|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|將所指定值的物件複製到未初始化的目的範圍內。|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|將所指定值的物件複製到未初始化目的範圍的指定項目數內。|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|縮寫 `uninitialized_move` 方法。|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|縮寫 `uninitialized_move` 方法。|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|縮寫 `uninitialized_value_construct` 方法。|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|縮寫 `uninitialized_value_construct` 方法。|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|速記 `uninitialized_move` 方法。|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|速記 `uninitialized_move` 方法。|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|速記 `uninitialized_value_construct` 方法。|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|速記 `uninitialized_value_construct` 方法。|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>運算子
 
-|||
+|名稱|描述|
 |-|-|
 |[operator！ =](../standard-library/memory-operators.md#op_neq)|測試指定類別的配置器物件之間是否不等。|
 |[operator = =](../standard-library/memory-operators.md#op_eq_eq)|測試指定類別的配置器物件之間是否相等。|
 |[運算子>=](../standard-library/memory-operators.md#op_gt_eq)|測試指定之類別的一個配置器物件是否大於或等於第二個配置器物件。|
 |[運算子<](../standard-library/memory-operators.md#op_lt)|測試指定之類別的一個物件是否小於第二個物件。|
-|[操作\<=](../standard-library/memory-operators.md#op_gt_eq)|測試指定之類別的一個物件是否小於或等於第二個物件。|
+|[運算元\<=](../standard-library/memory-operators.md#op_gt_eq)|測試指定之類別的一個物件是否小於或等於第二個物件。|
 |[運算子>](../standard-library/memory-operators.md#op_gt)|測試指定之類別的一個物件是否大於第二個物件。|
 |[運算子<<](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` 插入者。|
 
 ### <a name="classes"></a>類別
 
-|||
+|名稱|描述|
 |-|-|
-|[allocator](../standard-library/allocator-class.md)|類別樣板描述一個物件，它會管理類型**類型**之物件陣列的儲存空間配置和釋放。|
+|[allocator](../standard-library/allocator-class.md)|類別樣板描述物件，該物件會 **管理類型類型**之物件陣列的儲存空間配置和釋放。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|描述物件，用來判斷啟用配置器之容器所需的所有資訊。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|類別樣板描述一個物件，它會儲存類型**類型**之設定物件的指標，確保其 <strong>\*</strong> 所指向的物件會在其封入 auto_ptr 遭到終結時被刪除。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|類別樣板描述一個物件，該物件會 **儲存型別類型之**已設定物件的指標 <strong>\*</strong> ，以確保它所指向的物件會在其封入 auto_ptr 終結時遭到刪除。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|報告錯誤 weak_ptr 例外狀況。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|幫助產生 `shared_ptr`。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|提供類型物件所需的資訊， `allocator_traits` 以描述具有指標類型的配置器 `Ptr` 。|
@@ -104,17 +104,17 @@ ms.locfileid: "87202957"
 
 ### <a name="structures"></a>結構
 
-|||
+|名稱|描述|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|雜湊|提供和專用的多載 `unique_ptr` `shared_ptr` 。|
+|雜湊|提供針對和特製化的多載 `unique_ptr` `shared_ptr` 。|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|允許按擁有權混合比較共用指標和弱式指標。|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
 ### <a name="specializations"></a>特製化
 
-|||
+|名稱|描述|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|類別樣板配置器至類型的特製化 **`void`** ，只定義在此特製化內容中有意義的成員類型。|
 

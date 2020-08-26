@@ -1,21 +1,21 @@
 ---
-title: pragma （C++ COM 屬性）
+title: 'pragma (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 56b1aa4bf445095b86a1ea6792bfc78f45266e9a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5683a6f52eccf9eae7c29010849a148e506b286
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166480"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836165"
 ---
 # <a name="pragma"></a>pragma
 
-將指定的字串發出到產生的 .idl 檔案中，而不使用引號。
+將指定的字串發出至產生的 .idl 檔案，而不使用引號。
 
 ## <a name="syntax"></a>語法
 
@@ -26,11 +26,11 @@ ms.locfileid: "80166480"
 ### <a name="parameters"></a>參數
 
 *pragma_statement*<br/>
-您想要移入產生之 .idl 檔的 pragma。
+您要進入產生的 .idl 檔案的 pragma。
 
 ## <a name="remarks"></a>備註
 
-**Pragma** C++屬性的功能與[pragma](/windows/win32/Midl/pragma) MIDL 屬性相同。
+**Pragma** c + + 屬性具有與[pragma](/windows/win32/Midl/pragma) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -48,16 +48,14 @@ __interface A
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|任何位置|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

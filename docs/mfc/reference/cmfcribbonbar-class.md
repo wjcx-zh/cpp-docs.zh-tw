@@ -188,18 +188,18 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 26f130206a84c81120dce090ce65971f01a2dade
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749746"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836643"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 類別
 
 `CMFCRibbonBar` 類別會實作類似於 Office 2007 中使用的功能區列。
 
-有關詳細資訊,請參閱位於 Visual Studio 安裝的**VC\\\\\\atlmfc src mfc**資料夾中的原始程式碼。
+如需詳細資訊，請參閱位於 Visual Studio 安裝的 **VC \\ atlmfc \\ src \\ mfc** 資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -226,20 +226,20 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
 |[CMFCRibbonBar::AddToTabs](#addtotabs)|將功能區項目加入至功能區列的右側。|
-|[CMFCRibbonBar::CreateEx](#createex)|創建控制欄並將其附加到[CPane](../../mfc/reference/cpane-class.md)物件。 (覆蓋[CPane:createEx](../../mfc/reference/cpane-class.md#createex).)|
+|[CMFCRibbonBar::CreateEx](#createex)|建立控制列，並將它附加至 [CPane](../../mfc/reference/cpane-class.md) 物件。  (覆寫 [CPane：： CreateEx](../../mfc/reference/cpane-class.md#createex)。 ) |
 |[CMFCRibbonBar::Create](#create)|建立功能區列控制項並將它附加至功能區列。|
 |[CMFCRibbonBar::DeactivateKeyboardFocus](#deactivatekeyboardfocus)||
 |[CMFCRibbonBar::DrawMenuImage](#drawmenuimage)||
 |[CMFCRibbonBar::DWMCompositionChanged](#dwmcompositionchanged)||
 |[CMFCRibbonBar::EnableKeyTips](#enablekeytips)|啟用或停用功能區控制項的按鍵提示。|
-|[CMFCRibbonBar::EnablePrintPreview](#enableprintpreview)|啟用 **「列印預覽」** 選項卡。|
+|[CMFCRibbonBar::EnablePrintPreview](#enableprintpreview)|啟用 [ **預覽列印** ] 索引標籤。|
 |[CMFCRibbonBar::EnableToolTips](#enabletooltips)|啟用或停用功能區列上的工具提示和工具提示描述。|
 |[CMFCRibbonBar::FindByData](#findbydata)|利用使用者指定的資料尋找功能區項目。|
 |[CMFCRibbonBar::FindByID](#findbyid)|尋找具有指定的命令識別碼的功能區項目。|
 |[CMFCRibbonBar::FindCategoryIndexByData](#findcategoryindexbydata)|尋找包含使用者定義資料的功能區分類的索引。|
 |[CMFCRibbonBar::ForceRecalcLayout](#forcerecalclayout)||
 |[CMFCRibbonBar::GetActiveCategory](#getactivecategory)|取得作用中分類的指標。|
-|[CMFCRibbonBar::GetCaptionHeight](#getcaptionheight)|傳回標題高度。 (覆蓋[CBasePane::取得標題高度](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|
+|[CMFCRibbonBar::GetCaptionHeight](#getcaptionheight)|傳回標題高度。  (覆寫 [CBasePane：： GetCaptionHeight](../../mfc/reference/cbasepane-class.md#getcaptionheight)。 ) |
 |[CMFCRibbonBar::GetCategory](#getcategory)|取得位於指定索引的分類的指標。|
 |[CMFCRibbonBar::GetCategoryCount](#getcategorycount)|取得功能區列中的功能區分類數目。|
 |[CMFCRibbonBar::GetCategoryHeight](#getcategoryheight)||
@@ -268,7 +268,7 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::HitTest](#hittest)|尋找位於功能區列的用戶端座標指定點的功能區項目的指標。|
 |[CMFCRibbonBar::IsKeyTipEnabled](#iskeytipenabled)|決定按鍵提示是否啟用。|
 |[CMFCRibbonBar::IsMainRibbonBar](#ismainribbonbar)||
-|[CMFCRibbonBar::IsPrintPreviewEnabled](#isprintpreviewenabled)|確定是否啟用**了「列印預覽」** 選項卡。|
+|[CMFCRibbonBar::IsPrintPreviewEnabled](#isprintpreviewenabled)|決定是否啟用 [ **預覽列印** ] 索引標籤。|
 |[CMFCRibbonBar::IsQATEmpty](#isqatempty)||
 |[CMFCRibbonBar::IsQuickAccessToolbarOnTop](#isquickaccesstoolbarontop)|指定快速存取工具列是否位於功能區列上方。|
 |[CMFCRibbonBar::IsReplaceFrameCaption](#isreplaceframecaption)|決定功能區列是否取代主框架標題，或加入至框架標題下方。|
@@ -277,18 +277,18 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|決定功能區列的工具提示是否啟用。|
 |[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||
 |[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|指出功能區是否具有 Windows 7 樣式外觀 (小型矩形應用程式按鈕)。|
-|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|已多載。 從應用程式資源載入功能區列。|
+|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|多載。 從應用程式資源載入功能區列。|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
 |[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|(覆寫 `CPane::OnRTLChanged`。)|
-|[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(覆蓋[CBasePane:onSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
+|[CMFCRibbonBar::OnSetAccData](#onsetaccdata)| (覆寫 [CBasePane：： OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata)。 ) |
 |[CMFCRibbonBar::OnShowRibbonContextMenu](#onshowribboncontextmenu)||
 |[CMFCRibbonBar::OnShowRibbonQATMenu](#onshowribbonqatmenu)||
 |[CMFCRibbonBar::OnSysKeyDown](#onsyskeydown)||
 |[CMFCRibbonBar::OnSysKeyUp](#onsyskeyup)||
 |[CMFCRibbonBar::PopTooltip](#poptooltip)||
 |[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|(覆寫 `CBasePane::PreTranslateMessage`。)|
-|[CMFCRibbonBar::RecalcLayout](#recalclayout)|(覆蓋[CPane:Recalclayout](../../mfc/reference/cpane-class.md#recalclayout).)|
+|[CMFCRibbonBar::RecalcLayout](#recalclayout)| (覆寫 [CPane：： RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout)。 ) |
 |[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|從功能區列中移除所有功能區分類。|
 |[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|從索引標籤區域中移除所有功能區項目。|
 |[CMFCRibbonBar::RemoveCategory](#removecategory)|移除位於指定索引的功能區分類。|
@@ -317,9 +317,9 @@ Microsoft 在發行 Microsoft Office 2007 的同時，也引進 Office Fluent �
 
 出現在功能區列的項目會展開和收合，以充分利用可用空間。 例如，如果功能區面板的空間不足以顯示項目，則會變成功能表按鈕，以快顯功能表來顯示子項目。 功能區列就像靜態 (非浮動) 控制列，可停駐在框架頂端。
 
-您可以使用 `CMFCRibbonStatusBar` 類別來實作類似於 Office 2007 中使用的狀態列。 功能區類別包含(並顯示)一組[功能區面板](../../mfc/reference/cmfcribbonpanel-class.md)。 每個功能區面板包含一個或多個功能區元素,這些元素派生自[CMFC 功能區基元素](../../mfc/reference/cmfcribbonbaseelement-class.md)。
+您可以使用 `CMFCRibbonStatusBar` 類別來實作類似於 Office 2007 中使用的狀態列。 功能區類別包含 (和顯示) 一組 [功能區面板](../../mfc/reference/cmfcribbonpanel-class.md)。 每個功能區面板都包含一或多個衍生自 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)的功能區元素。
 
-有關如何向現有 MFC 應用程式添加功能區欄的資訊,請參閱[演練:更新 MFC 塗鴉應用程式](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
+如需如何將功能區列新增至現有 MFC 應用程式的詳細資訊，請參閱 [逐步解說：更新 Mfc 自由曲線應用程式](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -335,11 +335,11 @@ Microsoft 在發行 Microsoft Office 2007 的同時，也引進 Office Fluent �
 
 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：** afxribbonbar.h
 
-## <a name="cmfcribbonbaractivatecontextcategory"></a><a name="activatecontextcategory"></a>CMFC 功能列:啟動內容類別
+## <a name="cmfcribbonbaractivatecontextcategory"></a><a name="activatecontextcategory"></a> CMFCRibbonBar：： ActivateCoNtextCategory
 
 啟動已經可見的內容分類。
 
@@ -349,16 +349,16 @@ BOOL ActivateContextCategory(UINT uiContextID);
 
 ### <a name="parameters"></a>參數
 
-*uiContextID*<br/>
-[在]上下文類別識別碼。
+*uiCoNtextID*<br/>
+在內容類別別目錄識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-找不到並啟動了具有*uiContextID*的上下文類別,則為 TRUE;否則 FALSE。
+如果找到具有 *uiCoNtextID* 的內容類別別目錄，則為 TRUE，否則為。否則為 FALSE。
 
-## <a name="cmfcribbonbaraddcategory"></a><a name="addcategory"></a>CMFC 功能列:新增類別
+## <a name="cmfcribbonbaraddcategory"></a><a name="addcategory"></a> CMFCRibbonBar：： AddCategory
 
-為功能區列創建和初始化新的功能區類別。
+建立並初始化功能區列的新功能區分類。
 
 ```
 CMFCRibbonCategory* AddCategory(
@@ -375,44 +375,44 @@ CMFCRibbonCategory* AddCategory(
 
 ### <a name="parameters"></a>參數
 
-*lpsz名稱*<br/>
-[在]功能區類別的名稱。
+*lpszName*<br/>
+在功能區分類的名稱。
 
-*ui 小圖像雷斯ID*<br/>
-[在]功能區類別的小圖像清單的資源識別碼。
+*uiSmallImagesResID*<br/>
+在功能區分類之小型影像清單的資源識別碼。
 
 *uiLargeImagesResID*<br/>
-[在]功能區類別的大圖像清單的資源識別碼。
+在功能區分類之大型影像清單的資源識別碼。
 
-*大小小圖像*<br/>
-[在]指定功能區類別的小影像的大小。
+*sizeSmallImage*<br/>
+在指定功能區分類的小型影像大小。
 
-*大小大圖像*<br/>
-[在]指定功能區類別的大圖像大小。
+*sizeLargeImage*<br/>
+在指定功能區分類的大型影像大小。
 
-*n 插入At*<br/>
-[在]類別位置的基於零的索引。
+*nInsertAt*<br/>
+在類別目錄位置以零為基底的索引。
 
 *pRTI*<br/>
-[在]指向[CMFC 功能區類別類](../../mfc/reference/cmfcribboncategory-class.md)運行時類的指標,以在運行時動態創建功能區類別。
+在 [CMFCRibbonCategory 類別](../../mfc/reference/cmfcribboncategory-class.md) 執行時間類別的指標，可在執行時間動態建立功能區類別。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則指向新功能區類別的指標;否則,NULL。
+如果方法成功，則為新功能區類別的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果*pRTI*參數不是 NULL,則使用執行時類動態創建新功能區類別。
+如果 *pRTI* 參數不是 Null，就會使用執行時間類別動態建立新的功能區類別。
 
 ### <a name="example"></a>範例
 
-下面的示例演示如何在`AddCategory``CMFCRibbonBar`類中使用 方法。
+下列範例示範如何使用 `AddCategory` 類別中的方法 `CMFCRibbonBar` 。
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-## <a name="cmfcribbonbaraddcontextcategory"></a><a name="addcontextcategory"></a>CMFC 功能列:新增上下文類別
+## <a name="cmfcribbonbaraddcontextcategory"></a><a name="addcontextcategory"></a> CMFCRibbonBar：： AddCoNtextCategory
 
-為功能區列創建和初始化新的上下文類別。
+建立並初始化功能區列的新內容類別別目錄。
 
 ```
 CMFCRibbonCategory* AddContextCategory(
@@ -431,42 +431,42 @@ CMFCRibbonCategory* AddContextCategory(
 
 ### <a name="parameters"></a>參數
 
-*lpsz名稱*<br/>
-[在]類別的名稱。
+*lpszName*<br/>
+在類別目錄的名稱。
 
-*lpszContext 名稱*<br/>
-[在]上下文類別標題的名稱。
+*lpszCoNtextName*<br/>
+在內容類別別目錄標題的名稱。
 
-*uiContextID*<br/>
-[在]上下文識別碼。
+*uiCoNtextID*<br/>
+在內容識別碼。
 
-*clrContext*<br/>
-[在]上下文類別標題的顏色。
+*clrCoNtext*<br/>
+在內容類別別目錄標題的色彩。
 
-*ui 小圖像雷斯ID*<br/>
-[在]上下文類別的小圖像的資源 ID。
+*uiSmallImagesResID*<br/>
+在內容類別別目錄之小型影像的資源識別碼。
 
 *uiLargeImagesResID*<br/>
-[在]上下文類別的大圖像的資源 ID。
+在內容類別別目錄之大型影像的資源識別碼。
 
-*大小小圖像*<br/>
-[在]小圖像的大小。
+*sizeSmallImage*<br/>
+在小型影像的大小。
 
-*大小大圖像*<br/>
-[在]大圖像的大小。
+*sizeLargeImage*<br/>
+在大型影像的大小。
 
 *pRTI*<br/>
-[在]指向運行時類的指標。
+在執行時間類別的指標。
 
 ### <a name="return-value"></a>傳回值
 
-指向新創建的類別的指標,如果`CreateObject`*pRTI*的方法無法建立指定的類別,則指向 NULL。
+新建立之類別的指標，如果 `CreateObject` *pRTI* 的方法無法建立指定的類別，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-使用此函數可以添加上下文類別。 上下文類別是一種特殊類型的類別,可在運行時顯示或隱藏,具體取決於當前應用程式上下文。 例如,當使用者選擇物件時,可以顯示具有上下文類別的特殊選項卡,用於更改特定選定物件。
+使用此函式來加入內容類別別目錄。 內容類別別是一種特殊類型的類別，可在執行時間顯示或隱藏（視目前的應用程式內容而定）。 例如，當使用者選取物件時，您可以顯示具有內容分類的特殊索引標籤，您可以使用這些索引標籤來變更特定選取的物件。
 
-內容的顏色可以是以下值之一:
+內容分類的色彩可以是下列其中一個值：
 
 - AFX_CategoryColor_None
 
@@ -484,9 +484,9 @@ CMFCRibbonCategory* AddContextCategory(
 
 - AFX_CategoryColor_Violet
 
-## <a name="cmfcribbonbaraddmaincategory"></a><a name="addmaincategory"></a>CMFC 功能列::新增主類別
+## <a name="cmfcribbonbaraddmaincategory"></a><a name="addmaincategory"></a> CMFCRibbonBar：： AddMainCategory
 
-為功能區列創建新的主功能區類別。
+建立功能區列的新主要功能區分類。
 
 ```
 CMFCRibbonMainPanel* AddMainCategory(
@@ -501,38 +501,38 @@ CMFCRibbonMainPanel* AddMainCategory(
 
 ### <a name="parameters"></a>參數
 
-*lpsz名稱*<br/>
-[在]主功能區類別的名稱。
+*lpszName*<br/>
+在主要功能區類別目錄的名稱。
 
-*ui 小圖像雷斯ID*<br/>
-[在]小圖像的資源識別碼。
+*uiSmallImagesResID*<br/>
+在小型影像的資源識別碼。
 
 *uiLargeImagesResID*<br/>
-[在]大型圖像的資源識別碼。
+在大型影像的資源識別碼。
 
-*大小小圖像*<br/>
-[在]小圖像的大小。
+*sizeSmallImage*<br/>
+在小型影像的大小。
 
-*大小大圖像*<br/>
-[在]大圖像的大小。
+*sizeLargeImage*<br/>
+在大型影像的大小。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則指向新的主功能區類別;否則,NULL。
+如果方法成功，則為新的主要功能區類別的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果主功能區類別已存在,則刪除該類別。
+如果主要功能區類別已經存在，則會將其刪除。
 
 ### <a name="example"></a>範例
 
-下面的示例演示如何在`AddMainCategory``CMFCRibbonBar`類中使用 方法。
+下列範例示範如何使用 `AddMainCategory` 類別中的方法 `CMFCRibbonBar` 。
 
 [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]
 
-## <a name="cmfcribbonbaraddprintpreviewcategory"></a><a name="addprintpreviewcategory"></a>CMFC 功能列::新增列印預覽類別
+## <a name="cmfcribbonbaraddprintpreviewcategory"></a><a name="addprintpreviewcategory"></a> CMFCRibbonBar：： AddPrintPreviewCategory
 
-在功能區列上創建列印預覽類別。
+在功能區列上建立預覽列印分類。
 
 ```
 CMFCRibbonCategory* AddPrintPreviewCategory();
@@ -540,15 +540,15 @@ CMFCRibbonCategory* AddPrintPreviewCategory();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則指向新功能區類別的指標;否則,NULL。
+如果方法成功，則為新功能區類別的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-此方法創建功能區類別及其所需的控制項,以便提供列印預覽。
+這個方法會建立功能區類別以及其所需的控制項，以便提供預覽列印。
 
-## <a name="cmfcribbonbaraddqatonlycategory"></a><a name="addqatonlycategory"></a>CMFC 功能列::僅新增QAT類別
+## <a name="cmfcribbonbaraddqatonlycategory"></a><a name="addqatonlycategory"></a> CMFCRibbonBar：： AddQATOnlyCategory
 
-創建快速存取工具列功能區類別。
+建立快速存取工具列功能區類別。
 
 ```
 CMFCRibbonCategory* AddQATOnlyCategory(
@@ -560,26 +560,26 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 
 ### <a name="parameters"></a>參數
 
-*lpsz名稱*<br/>
-[在]類別的名稱。
+*lpszName*<br/>
+在類別目錄的名稱。
 
-*ui 小圖像雷斯ID*<br/>
-[在]類別的影像清單的資源識別碼。
+*uiSmallImagesResID*<br/>
+在類別目錄之影像清單的資源識別碼。
 
-*大小小圖像*<br/>
-[在]類別中功能區元素的圖像大小。
+*sizeSmallImage*<br/>
+在類別中功能區元素的影像大小。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則指向新類別的指標;否則,NULL。
+如果方法成功，則為新類別的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-快速存取工具列功能區類別僅在快速存取工具列自訂對話方塊中使用。
+快速存取工具列功能區類別僅適用于 [快速存取工具列自訂] 對話方塊。
 
-## <a name="cmfcribbonbaraddtotabs"></a><a name="addtotabs"></a>CMFC 功能列::新增標籤
+## <a name="cmfcribbonbaraddtotabs"></a><a name="addtotabs"></a> CMFCRibbonBar：： AddToTabs
 
-將指定的功能區元素添加到功能區列的選項卡行。
+將指定的功能區元素加入功能區列的索引標籤列。
 
 ```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
@@ -587,16 +587,16 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 
 ### <a name="parameters"></a>參數
 
-*p 元素*<br/>
-[在]指向功能區元素的指標。
+*pElement*<br/>
+在功能區元素的指標。
 
 ### <a name="remarks"></a>備註
 
 功能區元素位於任何系統按鈕之前。
 
-## <a name="cmfcribbonbarcmfcribbonbar"></a><a name="cmfcribbonbar"></a>CMFC剪條列:CMFC剪條列
+## <a name="cmfcribbonbarcmfcribbonbar"></a><a name="cmfcribbonbar"></a> CMFCRibbonBar：： CMFCRibbonBar
 
-建構並初始化[CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)物件。
+結構和初始化 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) 物件。
 
 ```
 CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
@@ -604,14 +604,14 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*b 取代框架標題*<br/>
-[在]TRUE,用於替換主框架視窗的標題的功能區列;FALSE 以在主框架視窗的標題下定位功能區列。
+*bReplaceFrameCaption*<br/>
+在如果功能區列取代主框架視窗的標題，則為 TRUE;FALSE 可在主框架視窗的標題下找出功能區列。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarcreate"></a><a name="create"></a>CMFC 功能列:建立
+## <a name="cmfcribbonbarcreate"></a><a name="create"></a> CMFCRibbonBar：： Create
 
-為功能區列創建一個視窗。
+建立功能區列的視窗。
 
 ```
 BOOL Create(
@@ -622,30 +622,30 @@ BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-*pparentwnd*<br/>
-[在]指向功能區欄的父視窗。
+*pParentWnd*<br/>
+在功能區列之父視窗的指標。
 
 *dwStyle*<br/>
-[在]新視窗樣式的邏輯組合。
+在新視窗樣式的邏輯組合。
 
 *nID*<br/>
-[在]新視窗的識別碼。
+在新視窗的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果創建了視窗,則為 TRUE;如果創建了視窗,則為 TRUE。否則 FALSE。
+如果已建立視窗，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
 ### <a name="example"></a>範例
 
-下面的示例演示如何使用`Create``CMFCRibbonBar`類的方法。
+下列範例示範如何使用 `Create` 類別的方法 `CMFCRibbonBar` 。
 
 [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]
 
-## <a name="cmfcribbonbarcreateex"></a><a name="createex"></a>CMFC 功能列:建立Ex
+## <a name="cmfcribbonbarcreateex"></a><a name="createex"></a> CMFCRibbonBar：： CreateEx
 
-為功能區列創建一個視窗。
+建立功能區列的視窗。
 
 ```
 BOOL CreateEx(
@@ -657,27 +657,27 @@ BOOL CreateEx(
 
 ### <a name="parameters"></a>參數
 
-*pparentwnd*<br/>
-[在]指向功能區欄的父視窗。
+*pParentWnd*<br/>
+在功能區列之父視窗的指標。
 
-*dwCtrl風格*<br/>
-[在]不使用此參數。
+*dwCtrlStyle*<br/>
+在未使用此參數。
 
 *dwStyle*<br/>
-[在]新視窗樣式的邏輯組合。
+在新視窗樣式的邏輯組合。
 
 *nID*<br/>
-[在]新視窗的識別碼。
+在新視窗的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果創建了視窗,則為 TRUE;如果創建了視窗,則為 TRUE。否則 FALSE。
+如果已建立視窗，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbardeactivatekeyboardfocus"></a><a name="deactivatekeyboardfocus"></a>CMFC功能列::D啟動鍵盤焦點
+## <a name="cmfcribbonbardeactivatekeyboardfocus"></a><a name="deactivatekeyboardfocus"></a> CMFCRibbonBar：:D eactivateKeyboardFocus
 
-關閉功能區欄上的所有鍵尖控件。
+關閉功能區列上的所有快速鍵提示控制項。
 
 ```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
@@ -686,13 +686,13 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ### <a name="parameters"></a>參數
 
 *bSetFocus*<br/>
-[在]TRUE 將焦點設置為功能區列的父視窗。
+在TRUE 表示將焦點設定至功能區列的父視窗。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbardrawmenuimage"></a><a name="drawmenuimage"></a>CMFC功能列::D原始選單影像
+## <a name="cmfcribbonbardrawmenuimage"></a><a name="drawmenuimage"></a> CMFCRibbonBar：:D rawMenuImage
 
-繪製功能表按鈕的圖像。
+繪製功能表按鈕的影像。
 
 ```
 BOOL DrawMenuImage(
@@ -703,24 +703,24 @@ BOOL DrawMenuImage(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向功能表按鈕的設備上下文。
+*Pdc*<br/>
+在功能表按鈕之裝置內容的指標。
 
-*pMenu 專案*<br/>
-[在]指向工具列功能表按鈕的指標。
+*pMenuItem*<br/>
+在工具列功能表按鈕的指標。
 
 *rectImage*<br/>
-[在]選單按鈕的顯示矩形。
+在功能表按鈕的顯示矩形。
 
 ### <a name="return-value"></a>傳回值
 
-如果繪製了圖像,則為 TRUE;否則 FALSE。
+如果已繪製影像，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbardwmcompositionchanged"></a><a name="dwmcompositionchanged"></a>CMFC 功能列::DWM 組合已更改
+## <a name="cmfcribbonbardwmcompositionchanged"></a><a name="dwmcompositionchanged"></a> CMFCRibbonBar：:D WMCompositionChanged
 
-啟用或禁用桌面視窗管理員 (DWM) 合成時調整功能區列的顯示。
+當啟用或停用桌面視窗管理員 (DWM) 組合時，調整功能區列的顯示。
 
 ```
 virtual void DWMCompositionChanged();
@@ -728,9 +728,9 @@ virtual void DWMCompositionChanged();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarenablekeytips"></a><a name="enablekeytips"></a>CMFC 功能列::啟用關鍵提示
+## <a name="cmfcribbonbarenablekeytips"></a><a name="enablekeytips"></a> CMFCRibbonBar：： EnableKeyTips
 
-啟用或禁用功能區欄的鍵尖功能。
+啟用或停用功能區列的 [快速鍵提示] 功能。
 
 ```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
@@ -738,16 +738,16 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*b 啟用*<br/>
-[在]TRUE 啟用關鍵提示功能;FALSE 以禁用鑰匙提示功能。
+*bEnable*<br/>
+在TRUE 表示啟用快速鍵功能;FALSE 表示停用按鍵提示功能。
 
 ### <a name="remarks"></a>備註
 
-啟用此功能時,當使用者按下 ALT 或 F10 按鈕時,將顯示關鍵提示。 當使用者按下 ALT 鍵時,鍵提示將顯示 200 毫秒的延遲。 此延遲允許執行快捷方式,以便按下的 ALT 鍵不會干擾包括 ALT 鍵的其他組合。
+當您啟用此功能時，當使用者按下 ALT 或 F10 按鈕時，會顯示金鑰提示。 當使用者按下 ALT 鍵時，會顯示具有200毫秒延遲的按鍵提示。 此延遲允許執行快速鍵，讓按下的 ALT 鍵不會干擾其他包含 ALT 鍵的組合。
 
-## <a name="cmfcribbonbarenableprintpreview"></a><a name="enableprintpreview"></a>CMFC 功能列::啟用列印預覽
+## <a name="cmfcribbonbarenableprintpreview"></a><a name="enableprintpreview"></a> CMFCRibbonBar：： EnablePrintPreview
 
-啟用或禁用**列印預覽**功能。
+啟用或停用 **預覽列印** 功能。
 
 ```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
@@ -755,18 +755,18 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*b 啟用*<br/>
-[在]TRUE 以啟用**列印預覽**功能;FALSE 以禁用**列印預覽**功能。
+*bEnable*<br/>
+在TRUE 表示啟用 **預覽列印** 功能;FALSE 表示停用 **預覽列印** 功能。
 
 ### <a name="remarks"></a>備註
 
-如果*bEnable*是 FALSE,並且存在列印預覽類別,則刪除它。
+如果 *bEnable* 為 FALSE 且預覽列印分類存在，則會將其刪除。
 
-預設情況下,**啟用了「列印預覽」** 功能。
+預設會啟用 **預覽列印** 功能。
 
-## <a name="cmfcribbonbarenabletooltips"></a><a name="enabletooltips"></a>CMFC 功能列:啟用工具提示
+## <a name="cmfcribbonbarenabletooltips"></a><a name="enabletooltips"></a> CMFCRibbonBar：： EnableToolTips
 
-啟用或禁用功能區列上的工具提示和可選工具提示說明。
+啟用或停用功能區列上的工具提示和選擇性的工具提示描述。
 
 ```cpp
 void EnableToolTips(
@@ -776,19 +776,19 @@ void EnableToolTips(
 
 ### <a name="parameters"></a>參數
 
-*b 啟用*<br/>
-[在]TRUE 在功能區列上啟用工具提示;FALSE 禁用功能區列上的工具提示。
+*bEnable*<br/>
+在TRUE 表示啟用功能區列上的工具提示;FALSE 表示停用功能區列上的工具提示。
 
 *bEnableDescr*<br/>
-[在]TRUE 啟用工具提示上的工具提示說明;FALSE 停用工具提示上的工具提示說明。
+在TRUE 表示啟用工具提示上的工具提示描述;FALSE 表示停用工具提示的工具提示描述。
 
 ### <a name="remarks"></a>備註
 
-*bEnable*參數確定當滑鼠懸停在功能區元素上時是否顯示工具提示。 *bEnableDescr*參數確定工具提示文本是否顯示其他描述性文本。
+當滑鼠停留在功能區專案上方時， *bEnable* 參數會決定是否要顯示工具提示。 *BEnableDescr*參數會決定是否以工具提示文字顯示額外的描述性文字。
 
-## <a name="cmfcribbonbarfindbydata"></a><a name="findbydata"></a>CMFC 功能列:尋找資料
+## <a name="cmfcribbonbarfindbydata"></a><a name="findbydata"></a> CMFCRibbonBar：： FindByData
 
-如果功能區元素具有指定的數據和可見性,則檢索指向功能區元素的指標。
+如果有指定的資料和可見度，則抓取功能區元素的指標。
 
 ```
 CMFCRibbonBaseElement* FindByData(
@@ -799,22 +799,22 @@ CMFCRibbonBaseElement* FindByData(
 ### <a name="parameters"></a>參數
 
 *dwData*<br/>
-[在]與功能區元素關聯的數據。
+在與功能區元素相關聯的資料。
 
-*只可見*<br/>
-[在]僅搜索可見功能區元素的 TRUE;FALSE 以搜索所有功能區元素。
+*bVisibleOnly*<br/>
+在TRUE 表示只搜尋可見的功能區元素;FALSE 表示搜尋所有功能區元素。
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區元素具有指定的數據和可見性,則指向功能區元素的指標;否則 NULL。
+如果有指定的資料和可見度，則為功能區元素的指標。否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-功能區元素是可以添加到功能區的任何控制項,例如功能區按鈕、功能區類別或功能區滑塊。
+功能區元素是您可以加入功能區的任何控制項，例如功能區按鈕或功能區類別，或是功能區滑杆。
 
-## <a name="cmfcribbonbarfindbyid"></a><a name="findbyid"></a>CMFC 功能列:尋找ByID
+## <a name="cmfcribbonbarfindbyid"></a><a name="findbyid"></a> CMFCRibbonBar：： FindByID
 
-檢索指向具有指定命令 ID 和搜尋值的功能區元素的指標。
+抓取具有指定的命令識別碼和搜尋值之功能區元素的指標。
 
 ```
 CMFCRibbonBaseElement* FindByID(
@@ -825,28 +825,28 @@ CMFCRibbonBaseElement* FindByID(
 
 ### <a name="parameters"></a>參數
 
-*烏伊CmdID*<br/>
-[在]功能區元素的命令 ID。
+*uiCmdID*<br/>
+在功能區元素的命令識別碼。
 
-*只可見*<br/>
-[在]僅搜索可見功能區元素的 TRUE;FALSE 以搜索所有功能區元素。
+*bVisibleOnly*<br/>
+在TRUE 表示只搜尋可見的功能區元素;FALSE 表示搜尋所有功能區元素。
 
-*b 排除QAT*<br/>
-[在]TRUE 從搜索中排除快速訪問工具欄元素;否則,FALSE。
+*bExcludeQAT*<br/>
+在TRUE 表示從搜尋中排除快速存取工具列元素;否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-指向功能區元素的指標(如果具有指定的命令 ID 和搜尋值);否則,NULL。
+如果有指定的命令識別碼和搜尋值，則為功能區元素的指標。否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-功能區元素是可添加到功能區的任何功能區控制項,如功能區按鈕、功能區類別或功能區滑塊。
+功能區專案是可以加入功能區的任何功能區控制項，例如功能區按鈕或功能區類別，或是功能區滑杆。
 
-通常,可以有多個功能區元素具有相同的命令 ID。 如果要獲取指向使用指定命令 ID 的所有功能區元素的指標,請使用[CMFCRibbonBar::GetElementsByID](#getelementsbyid)方法。
+一般情況下，可以有一個以上的功能區元素具有相同的命令識別碼。 如果您想要取得所有使用指定命令識別碼之功能區元素的指標，請使用 [CMFCRibbonBar：： GetElementsByID](#getelementsbyid) 方法。
 
-## <a name="cmfcribbonbarfindcategoryindexbydata"></a><a name="findcategoryindexbydata"></a>CMFC 功能列:尋找類別索引資料
+## <a name="cmfcribbonbarfindcategoryindexbydata"></a><a name="findcategoryindexbydata"></a> CMFCRibbonBar：： FindCategoryIndexByData
 
-檢索包含指定數據的功能區類別的索引。
+抓取包含指定資料之功能區分類的索引。
 
 ```
 int FindCategoryIndexByData(DWORD dwData) const;
@@ -855,15 +855,15 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ### <a name="parameters"></a>參數
 
 *dwData*<br/>
-[在]與功能區類別關聯的數據。
+在與功能區分類相關聯的資料。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則功能區類別的零基索引;否則 -1。
+如果方法成功，則為功能區類別目錄的以零為基底的索引;否則為-1。
 
-## <a name="cmfcribbonbarforcerecalclayout"></a><a name="forcerecalclayout"></a>CMFC 功能列:強制重鈣佈局
+## <a name="cmfcribbonbarforcerecalclayout"></a><a name="forcerecalclayout"></a> CMFCRibbonBar：： ForceRecalcLayout
 
-調整功能區列和父視窗中所有項的佈局,然後重繪整個視窗。
+調整功能區列和父視窗中所有專案的版面配置，並重新繪製整個視窗。
 
 ```cpp
 void ForceRecalcLayout();
@@ -871,9 +871,9 @@ void ForceRecalcLayout();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbargetactivecategory"></a><a name="getactivecategory"></a>CMFC 功能列:抓取活動類別
+## <a name="cmfcribbonbargetactivecategory"></a><a name="getactivecategory"></a> CMFCRibbonBar：： GetActiveCategory
 
-檢索指向活動功能區類別的指標。
+抓取活動功能區分類的指標。
 
 ```
 CMFCRibbonCategory* GetActiveCategory() const;
@@ -881,17 +881,17 @@ CMFCRibbonCategory* GetActiveCategory() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向活動功能區類別的指標;指向活動功能區類別的指標。或 NULL,如果沒有類別處於活動狀態。
+作用中功能區類別的指標;如果沒有作用中的類別，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果類別具有焦點,則該類別處於活動狀態。 默認情況下,活動類別是功能區欄左側的第一個類別。
+如果分類具有焦點，則為作用中。 根據預設，使用中的類別目錄是功能區列左邊的第一個類別。
 
-當使用者按下應用程式按鈕時,將顯示主類別,它不能是活動類別。
+當使用者按下應用程式按鈕且不能是使用中的類別時，就會顯示主要類別。
 
-## <a name="cmfcribbonbargetapplicationbutton"></a><a name="getapplicationbutton"></a>CMFC功能列:抓取應用程式按鈕
+## <a name="cmfcribbonbargetapplicationbutton"></a><a name="getapplicationbutton"></a> CMFCRibbonBar：： GetApplicationButton
 
-檢索指向應用程式按鈕的指標。
+抓取應用程式按鈕的指標。
 
 ```
 CMFCRibbonApplicationButton* GetApplicationButton() const;
@@ -899,11 +899,11 @@ CMFCRibbonApplicationButton* GetApplicationButton() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向應用程式按鈕的指標;或 NULL,如果按鈕尚未設置。
+應用程式按鈕的指標;如果尚未設定按鈕，則為 Null。
 
-## <a name="cmfcribbonbargetcaptionheight"></a><a name="getcaptionheight"></a>CMFC 功能列:取得標題高度
+## <a name="cmfcribbonbargetcaptionheight"></a><a name="getcaptionheight"></a> CMFCRibbonBar：： GetCaptionHeight
 
-檢索功能區欄的標題區域的高度。
+抓取功能區列的標題區域高度。
 
 ```
 int GetCaptionHeight() const;
@@ -911,13 +911,13 @@ int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區列的標題區域的高度(以像素為單位)。
+功能區列標題區域的高度（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbargetcategory"></a><a name="getcategory"></a>CMFC 功能列:取得類別
+## <a name="cmfcribbonbargetcategory"></a><a name="getcategory"></a> CMFCRibbonBar：： GetCategory
 
-檢索指向指定索引處的功能區類別的指標。
+在指定的索引處，抓取功能區分類的指標。
 
 ```
 CMFCRibbonCategory* GetCategory(int nIndex) const;
@@ -926,15 +926,15 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[在]功能區列中包含的功能區類別清單中的功能區類別的零基索引。
+在功能區類別清單中的功能區分類之以零為起始的索引，包含在功能區列中。
 
 ### <a name="return-value"></a>傳回值
 
-指向指定索引處的功能區類別的指標;否則,如果*nIndex*不在範圍內,則 NULL。
+位於指定索引處之功能區分類的指標;否則，如果 *nIndex* 超出範圍，則為 Null。
 
-## <a name="cmfcribbonbargetcategorycount"></a><a name="getcategorycount"></a>CMFC 功能列:取得類別計數
+## <a name="cmfcribbonbargetcategorycount"></a><a name="getcategorycount"></a> CMFCRibbonBar：： GetCategoryCount
 
-檢索功能區欄中的功能區類別數。
+抓取功能區列中的功能區類別目錄數目。
 
 ```
 int GetCategoryCount() const;
@@ -942,11 +942,11 @@ int GetCategoryCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區列中的功能區類別數。
+功能區列中的功能區類別目錄數目。
 
-## <a name="cmfcribbonbargetcategoryheight"></a><a name="getcategoryheight"></a>CMFC 功能列:抓取類別高度
+## <a name="cmfcribbonbargetcategoryheight"></a><a name="getcategoryheight"></a> CMFCRibbonBar：： GetCategoryHeight
 
-檢索類別的高度。
+抓取類別目錄的高度。
 
 ```
 int GetCategoryHeight() const;
@@ -958,11 +958,11 @@ int GetCategoryHeight() const;
 
 ### <a name="remarks"></a>備註
 
-類別高度包括類別選項卡的高度。
+類別高度包含 [類別目錄] 索引標籤的高度。
 
-## <a name="cmfcribbonbargetcategoryindex"></a><a name="getcategoryindex"></a>CMFC 功能列:取得類別索引
+## <a name="cmfcribbonbargetcategoryindex"></a><a name="getcategoryindex"></a> CMFCRibbonBar：： GetCategoryIndex
 
-檢索指定功能區類別的索引。
+抓取所指定功能區類別目錄的索引。
 
 ```
 int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
@@ -970,16 +970,16 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 
 ### <a name="parameters"></a>參數
 
-*p 類別*<br/>
-[在]指向功能區類別的指標。
+*pCategory*<br/>
+在功能區分類的指標。
 
 ### <a name="return-value"></a>傳回值
 
-pCategory 指定的功能區類別的零基索*pCategory*引 ;或 -1,如果未找到功能區類別。
+*PCategory*所指定之功能區類別目錄的以零為基底的索引;如果找不到功能區類別，則為-1。
 
-## <a name="cmfcribbonbargetcontextname"></a><a name="getcontextname"></a>CMFC 功能列:抓取上下文名稱
+## <a name="cmfcribbonbargetcontextname"></a><a name="getcontextname"></a> CMFCRibbonBar：： GetCoNtextName
 
-檢索上下文 ID 指定的上下文類別標題的名稱。
+抓取內容識別碼所指定之內容類別別目錄標題的名稱。
 
 ```
 BOOL GetContextName(
@@ -989,19 +989,19 @@ BOOL GetContextName(
 
 ### <a name="parameters"></a>參數
 
-*uiContextID*<br/>
-[在]功能區類別上下文 ID。
+*uiCoNtextID*<br/>
+在功能區類別內容識別碼。
 
 *strName*<br/>
-[出]上下文類別標題的名稱。
+擴展內容類別別目錄標題的名稱。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則為 TRUE;否則,如果*uiContextID*為零或未找到上下文類別標題,則 FALSE。
+如果方法成功，則為 TRUE;否則，如果 *uiCoNtextID* 是零或找不到內容類別別目錄標題，則為 FALSE。
 
-## <a name="cmfcribbonbargetdroppeddown"></a><a name="getdroppeddown"></a>CMFC 功能列:抓取向下
+## <a name="cmfcribbonbargetdroppeddown"></a><a name="getdroppeddown"></a> CMFCRibbonBar：： GetDroppedDown
 
-檢索當前向下丟棄的功能區元素。
+抓取目前卸載的功能區元素。
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -1009,13 +1009,13 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="return-value"></a>傳回值
 
-當前下落的功能區元素;或 NULL,如果當前沒有功能區元素下拉。
+目前卸載的功能區元素;如果目前沒有功能區元素，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbargetelementsbyid"></a><a name="getelementsbyid"></a>CMFC 功能列:取得元素 ByID
+## <a name="cmfcribbonbargetelementsbyid"></a><a name="getelementsbyid"></a> CMFCRibbonBar：： GetElementsByID
 
-檢索指向具有特定命令 ID 的所有功能區元素的指標陣列。
+抓取具有特定命令識別碼之所有功能區專案的指標陣列。
 
 ```cpp
 void GetElementsByID(
@@ -1025,19 +1025,19 @@ void GetElementsByID(
 
 ### <a name="parameters"></a>參數
 
-*烏伊CmdID*<br/>
-[在]功能區元素的命令 ID。
+*uiCmdID*<br/>
+在功能區元素的命令識別碼。
 
 *arButtons*<br/>
-[出]指向功能區元素的指標陣列。
+擴展功能區元素的指標陣列。
 
 ### <a name="remarks"></a>備註
 
-多個功能區元素可以具有相同的命令 ID,因為某些功能區元素可以複製到快速存取工具列。
+多個功能區元素可以有相同的命令識別碼，因為某些功能區專案可以複製到快速存取工具列。
 
-## <a name="cmfcribbonbargethideflags"></a><a name="gethideflags"></a>CMFC 功能列:抓取隱藏旗標
+## <a name="cmfcribbonbargethideflags"></a><a name="gethideflags"></a> CMFCRibbonBar：： GetHideFlags
 
-檢索指示功能區條可見量的標誌。
+抓取旗標，指出可見的功能區列數量。
 
 ```
 DWORD GetHideFlags() const;
@@ -1045,20 +1045,20 @@ DWORD GetHideFlags() const;
 
 ### <a name="return-value"></a>傳回值
 
-指示功能區條可見的數量的標誌。
+旗標，指出可見的功能區列數量。
 
 ### <a name="remarks"></a>備註
 
-下表列出傳回值的旗標的可能組合:
+下表列出傳回值之旗標的可能組合：
 
-|||
+|旗標|描述|
 |-|-|
-|AFX_RIBBONBAR_HIDE_ELEMENTS|功能區列垂直最小化,只有類別選項卡、主按鈕和快速訪問工具列可見。  |
-|AFX_RIBBONBAR_HIDE_ALL|功能區條的寬度小於最小寬度,完全隱藏。  |
+|AFX_RIBBONBAR_HIDE_ELEMENTS|功能區列會垂直最小化，而且只會顯示 [類別] 索引標籤、[主按鈕] 和 [快速存取] 工具列。  |
+|AFX_RIBBONBAR_HIDE_ALL|功能區列的寬度小於最小寬度，且完全隱藏。  |
 
-## <a name="cmfcribbonbargetitemidslist"></a><a name="getitemidslist"></a>CMFC功能列:取得項目Ids清單
+## <a name="cmfcribbonbargetitemidslist"></a><a name="getitemidslist"></a> CMFCRibbonBar：： GetItemIDsList
 
-檢索功能區列上指定功能區元素集合的命令指示。
+抓取功能區列上所指定功能區專案集合的命令識別碼。
 
 ```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
@@ -1067,17 +1067,17 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 
 ### <a name="parameters"></a>參數
 
-*lstItem*<br/>
-[出]功能區列中包含的功能區元素的命令指示指示清單。
+*lstItems*<br/>
+擴展包含在功能區列中功能區元素的命令識別碼清單。
 
-*只隱藏*<br/>
-[在]TRUE 以排除顯示的功能區元素;FALSE 以在功能區列中包含所有功能區元素。
+*bHiddenOnly*<br/>
+在TRUE 表示排除顯示的功能區元素;FALSE 表示在功能區列中包含所有功能區元素。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbargetkeyboardnavigationlevel"></a><a name="getkeyboardnavigationlevel"></a>CMFC功能列:取得鍵盤導航等級
+## <a name="cmfcribbonbargetkeyboardnavigationlevel"></a><a name="getkeyboardnavigationlevel"></a> CMFCRibbonBar：： GetKeyboardNavigationLevel
 
-當使用者按下功能區列中包含的鍵提示時,檢索當前導航級別。
+當使用者按下功能區列上所含的按鍵提示，以抓取目前的導覽層級。
 
 ```
 int GetKeyboardNavigationLevel() const;
@@ -1085,19 +1085,19 @@ int GetKeyboardNavigationLevel() const;
 
 ### <a name="return-value"></a>傳回值
 
-當使用者按下功能區列中包含的鍵提示時,當前導航級別。 下表列出了可能的傳回值:
+當使用者按下功能區列上所含的按鍵提示時的目前導覽層級。 下表列出可能的傳回值：
 
-|||
+|值|描述|
 |-|-|
-|-1|不顯示關鍵提示。|
-|0|將顯示關鍵提示。|
-|1|使用者已按下顯示的鍵尖。|
+|-1|不會顯示按鍵提示。|
+|0|隨即顯示按鍵提示。|
+|1|使用者已按下顯示的快速鍵提示。|
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbargetkeyboardnavlevelcurrent"></a><a name="getkeyboardnavlevelcurrent"></a>CMFC 功能列:取得鍵盤導航水準電流
+## <a name="cmfcribbonbargetkeyboardnavlevelcurrent"></a><a name="getkeyboardnavlevelcurrent"></a> CMFCRibbonBar：： GetKeyboardNavLevelCurrent
 
-檢索功能區欄上的當前鍵盤導航物件。
+抓取功能區列上目前的鍵盤導覽物件。
 
 ```
 CObject* GetKeyboardNavLevelCurrent() const;
@@ -1105,15 +1105,15 @@ CObject* GetKeyboardNavLevelCurrent() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區列上的當前鍵盤導航物件;否則 NULL,如果當前沒有對象顯示鍵尖。
+功能區列上的目前鍵盤導覽物件;否則，如果目前沒有任何物件顯示快速鍵提示，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-當前顯示鍵提示的對像是當前鍵盤導航物件。
+目前顯示按鍵提示的物件是目前的鍵盤導覽物件。
 
-## <a name="cmfcribbonbargetkeyboardnavlevelparent"></a><a name="getkeyboardnavlevelparent"></a>CMFC 功能列:取得鍵盤導航等級父級
+## <a name="cmfcribbonbargetkeyboardnavlevelparent"></a><a name="getkeyboardnavlevelparent"></a> CMFCRibbonBar：： GetKeyboardNavLevelParent
 
-檢索功能區欄上的父鍵盤導航物件。
+抓取功能區列上的父鍵盤流覽物件。
 
 ```
 CObject* GetKeyboardNavLevelParent() const;
@@ -1121,15 +1121,15 @@ CObject* GetKeyboardNavLevelParent() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區欄上的父鍵盤導航物件;否則 NULL。
+功能區列上的父鍵盤流覽物件;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-當使用者按功能區欄上的鍵尖時,當前鍵盤導航對象將成為父鍵盤導航物件。
+當使用者在功能區列上按下按鍵時，目前的鍵盤導覽物件會變成父鍵盤流覽物件。
 
-## <a name="cmfcribbonbargetmaincategory"></a><a name="getmaincategory"></a>CMFC 功能列:取得主要類別
+## <a name="cmfcribbonbargetmaincategory"></a><a name="getmaincategory"></a> CMFCRibbonBar：： GetMainCategory
 
-檢索指向主功能區類別的指標。
+抓取主要功能區分類的指標。
 
 ```
 CMFCRibbonCategory* GetMainCategory() const;
@@ -1137,15 +1137,15 @@ CMFCRibbonCategory* GetMainCategory() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向主功能區類別的指標。
+主要功能區分類的指標。
 
 ### <a name="remarks"></a>備註
 
-主功能區類別包含主功能區面板。
+主要功能區類別包含主要功能區面板。
 
-## <a name="cmfcribbonbargetqatcommandslocation"></a><a name="getqatcommandslocation"></a>CMFC 功能列:取得QAT命令位置
+## <a name="cmfcribbonbargetqatcommandslocation"></a><a name="getqatcommandslocation"></a> CMFCRibbonBar：： GetQATCommandsLocation
 
-檢索快速存取工具列的命令部分的顯示矩形。
+抓取快速存取工具列之命令區段的顯示矩形。
 
 ```
 CRect GetQATCommandsLocation() const;
@@ -1153,15 +1153,15 @@ CRect GetQATCommandsLocation() const;
 
 ### <a name="return-value"></a>傳回值
 
-快速存取工具列的命令部分的顯示矩形。
+快速存取工具列之命令區段的顯示矩形。
 
 ### <a name="remarks"></a>備註
 
-顯示矩形的命令部分不包括自定義按鈕。
+顯示矩形的 [命令] 區段不包含 [自訂] 按鈕。
 
-## <a name="cmfcribbonbargetqatdroppeddown"></a><a name="getqatdroppeddown"></a>CMFC 功能列:取得丟棄
+## <a name="cmfcribbonbargetqatdroppeddown"></a><a name="getqatdroppeddown"></a> CMFCRibbonBar：： GetQATDroppedDown
 
-檢索指向快速訪問工具列上的功能區元素的指標,該工具列的彈出式功能表已下拉。
+在快速存取工具列上抓取功能區專案的指標，其快顯功能表已卸載。
 
 ```
 CMFCRibbonBaseElement* GetQATDroppedDown();
@@ -1169,13 +1169,13 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
 
 ### <a name="return-value"></a>傳回值
 
-指向快速存取工具列上的功能區元素的指標,該工具列的彈出式功能表已下拉。
+快速存取工具列上功能區專案的指標，其快顯功能表已卸載。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbargetquickaccesscommands"></a><a name="getquickaccesscommands"></a>CMFC 功能列:取得快速存取命令
+## <a name="cmfcribbonbargetquickaccesscommands"></a><a name="getquickaccesscommands"></a> CMFCRibbonBar：： GetQuickAccessCommands
 
-檢索快速訪問工具列上功能區元素的命令指示指示清單。
+抓取快速存取工具列上功能區專案的命令識別碼清單。
 
 ```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
@@ -1184,15 +1184,15 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ### <a name="parameters"></a>參數
 
 *lstCommands*<br/>
-[出]快速存取工具列上功能區元素的命令指示指示清單。
+擴展快速存取工具列上功能區元素的命令識別碼清單。
 
 ### <a name="remarks"></a>備註
 
-該清單不包含控制項分隔符的功能區元素。
+此清單不包含屬於控制項分隔符號的功能區元素。
 
-## <a name="cmfcribbonbargetquickaccesstoolbarlocation"></a><a name="getquickaccesstoolbarlocation"></a>CMFC 功能列:抓取快速存取工具列位置
+## <a name="cmfcribbonbargetquickaccesstoolbarlocation"></a><a name="getquickaccesstoolbarlocation"></a> CMFCRibbonBar：： GetQuickAccessToolbarLocation
 
-檢索快速訪問工具列的顯示矩形。
+抓取快速存取工具列的顯示矩形。
 
 ```
 CRect GetQuickAccessToolbarLocation() const;
@@ -1204,9 +1204,9 @@ CRect GetQuickAccessToolbarLocation() const;
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbargettabtrancateratio"></a><a name="gettabtrancateratio"></a>CMFC 功能列:取得 Tabtran
+## <a name="cmfcribbonbargettabtrancateratio"></a><a name="gettabtrancateratio"></a> CMFCRibbonBar：： GetTabTrancateRatio
 
-檢索類別選項卡的顯示寬度中減小的百分比。
+抓取 [類別] 索引標籤顯示寬度的減少百分比。
 
 ```
 int GetTabTrancateRatio() const;
@@ -1214,15 +1214,15 @@ int GetTabTrancateRatio() const;
 
 ### <a name="return-value"></a>傳回值
 
-類別選項卡的顯示寬度中減小的百分比。
+在 [類別] 索引標籤的顯示寬度中減少的百分比大小。
 
 ### <a name="remarks"></a>備註
 
-當功能區列上的寬度不足時,類別選項卡的寬度會減小。
+當功能區列上沒有足夠的寬度時，[類別] 索引標籤會以寬度縮小。
 
-## <a name="cmfcribbonbargettooltipfixedwidthlargeimage"></a><a name="gettooltipfixedwidthlargeimage"></a>CMFC 功能列::取得工具提示固定寬度大圖像
+## <a name="cmfcribbonbargettooltipfixedwidthlargeimage"></a><a name="gettooltipfixedwidthlargeimage"></a> CMFCRibbonBar：： GetTooltipFixedWidthLargeImage
 
-檢索功能區條的工具提示寬度的較大大小。
+抓取功能區列之工具提示寬度的大小時。
 
 ```
 int GetTooltipFixedWidthLargeImage() const;
@@ -1230,15 +1230,15 @@ int GetTooltipFixedWidthLargeImage() const;
 
 ### <a name="return-value"></a>傳回值
 
-工具提示寬度的大小時(以像素為單位)。
+大工具提示寬度的大小（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
-如果工具提示寬度的大尺寸為 0,則寬度會有所不同。
+如果工具提示寬度的大小為0，則寬度會有所不同。
 
-## <a name="cmfcribbonbargettooltipfixedwidthregular"></a><a name="gettooltipfixedwidthregular"></a>CMFC 功能列:取得工具提示固定寬度常規
+## <a name="cmfcribbonbargettooltipfixedwidthregular"></a><a name="gettooltipfixedwidthregular"></a> CMFCRibbonBar：： GetTooltipFixedWidthRegular
 
-檢索功能區條的工具提示寬度的常規大小。
+抓取功能區列的工具提示寬度一般大小。
 
 ```
 int GetTooltipFixedWidthRegular() const;
@@ -1246,15 +1246,15 @@ int GetTooltipFixedWidthRegular() const;
 
 ### <a name="return-value"></a>傳回值
 
-工具提示寬度(以像素為單位)的常規大小。
+工具提示寬度的一般大小（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
-如果工具提示寬度的常規大小為 0,則寬度會有所不同。
+如果工具提示寬度的一般大小為0，則寬度會有所不同。
 
-## <a name="cmfcribbonbargetvisiblecategorycount"></a><a name="getvisiblecategorycount"></a>CMFC 功能列:取得可見類別計數
+## <a name="cmfcribbonbargetvisiblecategorycount"></a><a name="getvisiblecategorycount"></a> CMFCRibbonBar：： GetVisibleCategoryCount
 
-檢索功能區列上的可見類別數。
+抓取功能區列上的可見類別數目。
 
 ```
 int GetVisibleCategoryCount() const;
@@ -1262,13 +1262,13 @@ int GetVisibleCategoryCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能區列上的可見類別數。
+功能區列上的可見類別數目。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarhideallcontextcategories"></a><a name="hideallcontextcategories"></a>CMFC 功能列:隱藏所有上下文類別
+## <a name="cmfcribbonbarhideallcontextcategories"></a><a name="hideallcontextcategories"></a> CMFCRibbonBar：： HideAllCoNtextCategories
 
-隱藏功能區列上的所有上下文類別。
+隱藏功能區列上的所有內容分類。
 
 ```
 BOOL HideAllContextCategories();
@@ -1276,15 +1276,15 @@ BOOL HideAllContextCategories();
 
 ### <a name="return-value"></a>傳回值
 
-如果至少隱藏了一個上下文類別,則為 TRUE;否則,FALSE。
+如果至少有一個內容分類為隱藏，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果上下文類別處於活動狀態,則活動類別將重置為類別清單中的第一個可見類別。
+如果內容類別別目錄為作用中，作用中的類別會重設為 [類別目錄] 清單中的第一個可見類別。
 
-## <a name="cmfcribbonbarhidekeytips"></a><a name="hidekeytips"></a>CMFC 剪貼列:隱藏關鍵提示
+## <a name="cmfcribbonbarhidekeytips"></a><a name="hidekeytips"></a> CMFCRibbonBar：： HideKeyTips
 
-隱藏功能區列上的所有關鍵提示。
+隱藏功能區列上的所有快速鍵提示。
 
 ```cpp
 void HideKeyTips();
@@ -1292,9 +1292,9 @@ void HideKeyTips();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarhittest"></a><a name="hittest"></a>CMFC功能列:HitTest
+## <a name="cmfcribbonbarhittest"></a><a name="hittest"></a> CMFCRibbonBar：： System.windows.media.visualtreehelper.hittest
 
-檢索指向點位置指定的功能區元素的指標。
+抓取指向點位置所指定之功能區元素的指標。
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(
@@ -1306,25 +1306,25 @@ virtual CMFCRibbonBaseElement* HitTest(
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-[在]帶色帶條座標中點的位置。
+在功能區列座標中的點位置。
 
-*B 檢查活動類別*<br/>
-[在]TRUE 以搜索活動類別;FALSE 不搜索活動類別。
+*bCheckActiveCategory*<br/>
+在TRUE 表示搜尋作用中的類別;FALSE 表示不搜尋作用中的類別。
 
-*b 檢查面板標題*<br/>
-[在]TRUE 以測試帶功能區面板的標題,其中的點位於其中;FALSE 不要使用其中的點測試功能區面板的標題。 如需詳細資訊，請參閱「備註」一節。
+*bCheckPanelCaption*<br/>
+在TRUE 表示測試功能區面板的標題，並在其中找到點;FALSE 則不會測試功能區面板的標題，其位置位於其位置。 如需詳細資訊，請參閱＜備註＞一節。
 
 ### <a name="return-value"></a>傳回值
 
-指向指定點的功能區元素的指標;否則 NULL,如果點不位於功能區元素中。
+位於指定點之功能區元素的指標;否則，如果點不在功能區元素中，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-除非*bCheckActiveCategory 參數*為 TRUE,否則不會測試包含其點的功能區面板的標題。
+除非 *bCheckActiveCategory* 參數為 TRUE，否則不會測試功能區面板的標題，其點位於其中。
 
-## <a name="cmfcribbonbariskeytipenabled"></a><a name="iskeytipenabled"></a>CMFC 功能列:即啟用金鑰提示
+## <a name="cmfcribbonbariskeytipenabled"></a><a name="iskeytipenabled"></a> CMFCRibbonBar：： IsKeyTipEnabled
 
-指示是否啟用了關鍵提示功能。
+指出是否已啟用按鍵提示功能。
 
 ```
 BOOL IsKeyTipEnabled() const;
@@ -1332,11 +1332,11 @@ BOOL IsKeyTipEnabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果啟用了鑰匙提示功能,則為 TRUE;否則 FALSE。
+如果已啟用按鍵提示功能，則為 TRUE;否則為 FALSE。
 
-## <a name="cmfcribbonbarismainribbonbar"></a><a name="ismainribbonbar"></a>CMFC功能列:是主帶欄
+## <a name="cmfcribbonbarismainribbonbar"></a><a name="ismainribbonbar"></a> CMFCRibbonBar：： IsMainRibbonBar
 
-指示功能區條是否是主功能區欄。
+指出功能區列是否為主要功能區列。
 
 ```
 virtual BOOL IsMainRibbonBar() const;
@@ -1344,15 +1344,15 @@ virtual BOOL IsMainRibbonBar() const;
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 TRUE。
+一律傳回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 TRUE。 重寫此方法以指示功能區條是否是主功能區列。
+根據預設，這個方法一律會傳回 TRUE。 覆寫這個方法，以指出功能區列是否為主要功能區列。
 
-## <a name="cmfcribbonbarisprintpreviewenabled"></a><a name="isprintpreviewenabled"></a>CMFC 功能列:已啟用列印預覽
+## <a name="cmfcribbonbarisprintpreviewenabled"></a><a name="isprintpreviewenabled"></a> CMFCRibbonBar：： IsPrintPreviewEnabled
 
-指示是否啟用**了「列印預覽」** 功能。
+指出是否已啟用 **預覽列印** 功能。
 
 ```
 BOOL IsPrintPreviewEnabled() const;
@@ -1360,11 +1360,11 @@ BOOL IsPrintPreviewEnabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果啟用了 **「列印預覽」** 功能,則為 TRUE;如果啟用了「列印預覽」功能,則為 TRUE。否則 FALSE。
+如果啟用 **預覽列印** 功能，則為 TRUE;否則為 FALSE。
 
-## <a name="cmfcribbonbarisqatempty"></a><a name="isqatempty"></a>CMFC 功能列:IsQAT空
+## <a name="cmfcribbonbarisqatempty"></a><a name="isqatempty"></a> CMFCRibbonBar：： IsQATEmpty
 
-指示快速存取工具列是否包含命令按鈕。
+指出快速存取工具列是否包含命令按鈕。
 
 ```
 BOOL IsQATEmpty() const;
@@ -1372,13 +1372,13 @@ BOOL IsQATEmpty() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果快速訪問工具列包含命令按鈕,則為 TRUE;否則 FALSE。
+如果快速存取工具列包含命令按鈕則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarisquickaccesstoolbarontop"></a><a name="isquickaccesstoolbarontop"></a>CMFC 功能列::是快速存取工具列頂部
+## <a name="cmfcribbonbarisquickaccesstoolbarontop"></a><a name="isquickaccesstoolbarontop"></a> CMFCRibbonBar：： IsQuickAccessToolbarOnTop
 
-指示快速訪問工具列位於功能區欄的上還是下方。
+指出快速存取工具列是否位於功能區列的上方或下方。
 
 ```
 BOOL IsQuickAccessToolbarOnTop() const;
@@ -1386,11 +1386,11 @@ BOOL IsQuickAccessToolbarOnTop() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果快速存取工具列位於功能區列上,則為 TRUE;如果快速存取工具列位於功能區列上,則為 TRUE。如果快速訪問工具列位於功能區列下方,則 FALSE。
+如果快速存取工具列位於功能區列上方，則為 TRUE;如果快速存取工具列位於功能區列下方，則為 FALSE。
 
-## <a name="cmfcribbonbarisreplaceframecaption"></a><a name="isreplaceframecaption"></a>CMFC 功能列::正在取代框架標題
+## <a name="cmfcribbonbarisreplaceframecaption"></a><a name="isreplaceframecaption"></a> CMFCRibbonBar：： IsReplaceFrameCaption
 
-指示功能區條是替換還是位於主框架視窗的標題下。
+指出功能區列是否取代或位於主框架視窗的標題底下。
 
 ```
 BOOL IsReplaceFrameCaption() const;
@@ -1398,11 +1398,11 @@ BOOL IsReplaceFrameCaption() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區列替換了主框架視窗的標題,則為 TRUE;如果功能區欄替換了主框架視窗的標題,則為 TRUE。如果功能區列位於主框架視窗的標題下,則 FALSE。
+如果功能區列取代主框架視窗的標題，則為 TRUE;如果功能區列在主框架視窗的標題下方，則為 FALSE。
 
-## <a name="cmfcribbonbarisshowgroupborder"></a><a name="isshowgroupborder"></a>CMFC 功能列::IsShowGroup 邊框
+## <a name="cmfcribbonbarisshowgroupborder"></a><a name="isshowgroupborder"></a> CMFCRibbonBar：： IsShowGroupBorder
 
-指示位於功能區列上的按鈕組是否顯示組邊框。
+指出位於功能區列上的按鈕群組是否會顯示群組框線。
 
 ```
 virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
@@ -1410,20 +1410,20 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 
 ### <a name="parameters"></a>參數
 
-*p組*<br/>
-[在]不使用此參數。
+*pGroup*<br/>
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 FALSE。
+一律傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法始終返回 FALSE。 重寫此方法以指示位於功能區列上的按鈕組是否顯示組邊框。
+根據預設，這個方法一律會傳回 FALSE。 覆寫這個方法，以指出位於功能區列上的按鈕群組是否顯示群組框線。
 
-## <a name="cmfcribbonbaristooltipdescrenabled"></a><a name="istooltipdescrenabled"></a>CMFC 功能列:已啟用「小工具提示」功能
+## <a name="cmfcribbonbaristooltipdescrenabled"></a><a name="istooltipdescrenabled"></a> CMFCRibbonBar：： IsToolTipDescrEnabled
 
-指示是否啟用了工具提示說明。
+指出是否已啟用工具提示描述。
 
 ```
 BOOL IsToolTipDescrEnabled() const;
@@ -1431,15 +1431,15 @@ BOOL IsToolTipDescrEnabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果啟用了工具提示說明,則為 TRUE;如果禁用工具提示說明,則 FALSE。
+如果已啟用工具提示描述，則為 TRUE;如果停用工具提示描述，則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-工具提示說明是工具提示文本中顯示的其他描述性文本。
+工具提示描述是以工具提示文字顯示的其他描述性文字。
 
-## <a name="cmfcribbonbaristooltipenabled"></a><a name="istooltipenabled"></a>CMFC 功能列:啟用"功能提示"
+## <a name="cmfcribbonbaristooltipenabled"></a><a name="istooltipenabled"></a> CMFCRibbonBar：： IsToolTipEnabled
 
-指示功能區列是啟用還是禁用工具提示。
+指出是否啟用或停用功能區列的工具提示。
 
 ```
 BOOL IsToolTipEnabled() const;
@@ -1447,11 +1447,11 @@ BOOL IsToolTipEnabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果啟用了工具提示,則為 TRUE;如果禁用工具提示,則 FALSE。
+如果已啟用工具提示，則為 TRUE;如果停用工具提示，則為 FALSE。
 
-## <a name="cmfcribbonbaristransparentcaption"></a><a name="istransparentcaption"></a>CMFC 功能列::透明標題
+## <a name="cmfcribbonbaristransparentcaption"></a><a name="istransparentcaption"></a> CMFCRibbonBar：： IsTransparentCaption
 
-指示是否為 Windows Aero 配色配置了顯示。
+指出是否已針對 Windows Aero 色彩配置設定顯示。
 
 ```
 BOOL IsTransparentCaption() const;
@@ -1459,13 +1459,13 @@ BOOL IsTransparentCaption() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果色彩配置為 Windows Aero,則為 TRUE;否則 FALSE。
+如果色彩配置為 Windows Aero，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaronclickbutton"></a><a name="onclickbutton"></a>CMFC 功能列:按下按鈕
+## <a name="cmfcribbonbaronclickbutton"></a><a name="onclickbutton"></a> CMFCRibbonBar：： OnClickButton
 
-此方法保留用於與現有應用程式的向後相容性,不應用於新開發。
+這種方法是為了與現有應用程式的回溯相容性而保留，不應該用於新的開發。
 
 ```
 virtual void OnClickButton(
@@ -1476,14 +1476,14 @@ virtual void OnClickButton(
 ### <a name="parameters"></a>參數
 
 *pButton*<br/>
-[在]指向按一下的按鈕的指標。
+在已按一下按鈕的指標。
 
 *點*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaroneditcontextmenu"></a><a name="oneditcontextmenu"></a>CMFC 功能列::在編輯上下文選單
+## <a name="cmfcribbonbaroneditcontextmenu"></a><a name="oneditcontextmenu"></a> CMFCRibbonBar：： OnEditCoNtextMenu
 
 ```
 virtual void OnEditContextMenu(
@@ -1493,14 +1493,14 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>參數
 
-[在]*pEdit*<br/>
-[在]*點*<br/>
+在 *pEdit*<br/>
+在 *點*<br/>
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaronrtlchanged"></a><a name="onrtlchanged"></a>CMFC 剪條:在RTL改變
+## <a name="cmfcribbonbaronrtlchanged"></a><a name="onrtlchanged"></a> CMFCRibbonBar：： OnRTLChanged
 
-當佈局更改方向時由框架調用。
+當版面配置變更方向時，由架構呼叫。
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -1508,14 +1508,14 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>參數
 
-*比塞爾*<br/>
-[在]如果佈局從右到左,則為 TRUE;如果佈局從右到左,則為 TRUE。如果佈局從左到右,則 FALSE。
+*bIsRTL*<br/>
+在如果版面配置是由右至左，則為 TRUE;如果版面配置是由左至右，則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此方法調整功能區列上所有控制項的佈局,以用於新的佈局方向。
+這個方法會針對新的版面配置方向，調整功能區列上所有控制項的版面配置。
 
-## <a name="cmfcribbonbaronsetaccdata"></a><a name="onsetaccdata"></a>CMFC 功能列:OnSetAccData
+## <a name="cmfcribbonbaronsetaccdata"></a><a name="onsetaccdata"></a> CMFCRibbonBar：： OnSetAccData
 
 這個方法為架構內部使用，不用於從使用者程式碼呼叫。
 
@@ -1525,7 +1525,7 @@ BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>參數
 
-長*lVal*可訪問物件的索引。
+long *lVal* 可存取物件的索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1533,7 +1533,7 @@ BOOL OnSetAccData(long lVal);
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaronshowribboncontextmenu"></a><a name="onshowribboncontextmenu"></a>CMFC 功能列::在顯示功能上下文選單
+## <a name="cmfcribbonbaronshowribboncontextmenu"></a><a name="onshowribboncontextmenu"></a> CMFCRibbonBar：： OnShowRibbonCoNtextMenu
 
 ```
 virtual BOOL OnShowRibbonContextMenu(
@@ -1545,16 +1545,16 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>參數
 
-[在]*pwnd*<br/>
-[在]*x*<br/>
-[在]*y*<br/>
-[在]*pHit*<br/>
+在 *pWnd*<br/>
+在 *x*<br/>
+在 *y*<br/>
+在 *pHit*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaronshowribbonqatmenu"></a><a name="onshowribbonqatmenu"></a>CMFC功能列:上秀卡塔梅
+## <a name="cmfcribbonbaronshowribbonqatmenu"></a><a name="onshowribbonqatmenu"></a> CMFCRibbonBar：： OnShowRibbonQATMenu
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1566,18 +1566,18 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>參數
 
-[在]*pwnd*<br/>
-[在]*x*<br/>
-[在]*y*<br/>
-[在]*pHit*<br/>
+在 *pWnd*<br/>
+在 *x*<br/>
+在 *y*<br/>
+在 *pHit*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaronsyskeydown"></a><a name="onsyskeydown"></a>CMFC功能列:onsysKeyDown
+## <a name="cmfcribbonbaronsyskeydown"></a><a name="onsyskeydown"></a> CMFCRibbonBar：： OnSysKeyDown
 
-當使用者按下 F10 鍵或按下 ALT 鍵,然後按下另一個鍵時,由框架調用。
+當使用者按下 F10 鍵，或按住 ALT 鍵，然後按下另一個按鍵時，由架構呼叫。
 
 ```
 BOOL OnSysKeyDown(
@@ -1588,24 +1588,24 @@ BOOL OnSysKeyDown(
 
 ### <a name="parameters"></a>參數
 
-*pFramewnd*<br/>
-[在]指向功能區列的父主框架視窗。
+*pFrameWnd*<br/>
+在功能區列之父主框架視窗的指標。
 
 *wParam*<br/>
-[在]正在按下的密鑰的虛擬金鑰代碼。
+在要按下之按鍵的虛擬按鍵碼。
 
 *lParam*<br/>
-[在]按鍵時鍵盤狀態標誌。
+在按下按鍵時的鍵盤狀態旗標。
 
 ### <a name="return-value"></a>傳回值
 
-如果處理了擊鍵事件,則為 TRUE;否則 FALSE。
+如果已處理按鍵事件，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbaronsyskeyup"></a><a name="onsyskeyup"></a>CMFC功能列:onsysKeyup
+## <a name="cmfcribbonbaronsyskeyup"></a><a name="onsyskeyup"></a> CMFCRibbonBar：： OnSysKeyUp
 
-當使用者釋放 F10 密鑰、ALT 鍵或按住 ALT 鍵時按下的鍵時,由框架調用。
+當使用者放開 F10 鍵、ALT 鍵或按住 ALT 鍵時所按下的按鍵時，由架構呼叫。
 
 ```
 BOOL OnSysKeyUp(
@@ -1616,24 +1616,24 @@ BOOL OnSysKeyUp(
 
 ### <a name="parameters"></a>參數
 
-*pFramewnd*<br/>
-[在]指向功能區列的父主框架視窗。
+*pFrameWnd*<br/>
+在功能區列之父主框架視窗的指標。
 
 *wParam*<br/>
-[在]要釋放的密鑰的虛擬金鑰代碼。
+在要釋放之金鑰的虛擬金鑰碼。
 
 *lParam*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果處理了擊鍵事件,則為 TRUE;否則 FALSE。
+如果已處理按鍵事件，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarpoptooltip"></a><a name="poptooltip"></a>CMFC功能列::PopTooltip
+## <a name="cmfcribbonbarpoptooltip"></a><a name="poptooltip"></a> CMFCRibbonBar：:P opTooltip
 
-從檢視中刪除工具提示。
+從 view 移除工具提示。
 
 ```cpp
 void PopTooltip();
@@ -1641,9 +1641,9 @@ void PopTooltip();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFC功能列::P重新翻譯消息
+## <a name="cmfcribbonbarpretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCRibbonBar：:P reTranslateMessage
 
-確定指定的消息是否由功能區欄處理。
+判斷指定的訊息是否由功能區列處理。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1652,17 +1652,17 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-[在]指向消息的指標。
+在訊息的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果消息由功能區欄處理,則為 TRUE;如果消息由功能區欄處理,則為 TRUE。否則 FALSE。
+如果訊息是由功能區列處理，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarrecalclayout"></a><a name="recalclayout"></a>CMFC 功能列:Recalclayout
+## <a name="cmfcribbonbarrecalclayout"></a><a name="recalclayout"></a> CMFCRibbonBar：： RecalcLayout
 
-調整功能區列上所有控制項的佈局。
+調整功能區列上所有控制項的版面配置。
 
 ```
 virtual void RecalcLayout();
@@ -1670,11 +1670,11 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>備註
 
-布局調整后,功能區欄的顯示將更新。
+版面配置調整之後，會更新功能區列的顯示。
 
-## <a name="cmfcribbonbarremoveallcategories"></a><a name="removeallcategories"></a>CMFC 功能列:移除所有類別
+## <a name="cmfcribbonbarremoveallcategories"></a><a name="removeallcategories"></a> CMFCRibbonBar：： RemoveAllCategories
 
-從功能區列中刪除所有功能區類別。
+從功能區列刪除所有功能區分類。
 
 ```cpp
 void RemoveAllCategories();
@@ -1682,9 +1682,9 @@ void RemoveAllCategories();
 
 ### <a name="remarks"></a>備註
 
-此方法從記憶體和類別清單中刪除所有功能區類別。
+這個方法會從記憶體和 [類別目錄] 清單中刪除所有功能區類別。
 
-## <a name="cmfcribbonbarremoveallfromtabs"></a><a name="removeallfromtabs"></a>CMFC 功能列:移除所有從標籤
+## <a name="cmfcribbonbarremoveallfromtabs"></a><a name="removeallfromtabs"></a> CMFCRibbonBar：： RemoveAllFromTabs
 
 從索引標籤區域中移除所有功能區項目。
 
@@ -1694,11 +1694,11 @@ void RemoveAllFromTabs();
 
 ### <a name="remarks"></a>備註
 
-如果要使用[CMFCRibbonBar::addToTabs](#addtotabs)方法刪除添加到選項卡區域的所有元素,請使用此功能。
+如果您想要使用 [CMFCRibbonBar：： AddToTabs](#addtotabs) 方法來移除新增到索引標籤區域中的所有專案，請使用此函數。
 
-## <a name="cmfcribbonbarremovecategory"></a><a name="removecategory"></a>CMFC 功能列:刪除類別
+## <a name="cmfcribbonbarremovecategory"></a><a name="removecategory"></a> CMFCRibbonBar：： RemoveCategory
 
-從功能區列中刪除指定的功能區類別。
+從功能區列刪除指定的功能區分類。
 
 ```
 BOOL RemoveCategory(int nIndex);
@@ -1707,19 +1707,19 @@ BOOL RemoveCategory(int nIndex);
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[在]功能區列中包含的功能區類別清單中的類別的零基索引。
+在在功能區列的功能區分類清單中，類別目錄的以零為起始的索引。
 
 ### <a name="return-value"></a>傳回值
 
-如果刪除了指定的功能區類別,則為 TRUE;如果已刪除指定的功能區類別,則為 TRUE。否則 FALSE。
+如果已刪除指定的功能區分類，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-指定的功能區類別將從記憶體和類別清單中刪除。
+指定的功能區類別會從記憶體和 [類別目錄] 清單中刪除。
 
-## <a name="cmfcribbonbarsetactivecategory"></a><a name="setactivecategory"></a>CMFC 功能列:設定活動類別
+## <a name="cmfcribbonbarsetactivecategory"></a><a name="setactivecategory"></a> CMFCRibbonBar：： SetActiveCategory
 
-將指定的功能區類別設置為活動類別。
+將指定的功能區類別設定為使用中的分類。
 
 ```
 BOOL SetActiveCategory(
@@ -1729,25 +1729,25 @@ BOOL SetActiveCategory(
 
 ### <a name="parameters"></a>參數
 
-*p 類別*<br/>
-[在]功能區列中包含的功能區類別。
+*pCategory*<br/>
+在包含在功能區列中的功能區類別。
 
-*bForce 還原*<br/>
-[在]如果功能區條最小化,則 TRUE 可最大化其如果功能區條最小化,則 FALSE 在彈出視窗中顯示活動類別。
+*bForceRestore*<br/>
+在TRUE 表示盡可能將功能區列最小化，FALSE 表示如果功能區列最小化，則在快顯視窗中顯示使用中的類別。
 
 ### <a name="return-value"></a>傳回值
 
-如果指定類別設置為活動類別,則為 TRUE;否則 FALSE。
+如果指定的類別設定為使用中的類別，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-主功能區類別不能是活動類別。
+主要功能區類別不可以是使用中的類別。
 
-如果未顯示*pCategory*指定的類別,則無法將其設置為活動類別。
+如果未顯示 *pCategory* 所指定的類別目錄，就不能將它設為使用中的類別。
 
-## <a name="cmfcribbonbarsetactivemdichild"></a><a name="setactivemdichild"></a>CMFC 功能列:設定活動 MDI 子級
+## <a name="cmfcribbonbarsetactivemdichild"></a><a name="setactivemdichild"></a> CMFCRibbonBar：： SetActiveMDIChild
 
-將屬於多文件介面 (MDI) 子視窗的功能區列上的系統按鈕關聯到指定的 MDI 子視窗。
+將屬於多重文件介面的功能區列上的系統按鈕關聯 (MDI) 子視窗到指定的 MDI 子視窗。
 
 ```cpp
 void SetActiveMDIChild(CWnd* pWnd);
@@ -1755,12 +1755,12 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-*pwnd*<br/>
-[在]指向 MDI 子視窗的指標。
+*pWnd*<br/>
+在MDI 子視窗的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarsetapplicationbutton"></a><a name="setapplicationbutton"></a>CMFC 功能列:設定應用程式按鈕
+## <a name="cmfcribbonbarsetapplicationbutton"></a><a name="setapplicationbutton"></a> CMFCRibbonBar：： SetApplicationButton
 
 將應用程式功能區按鈕指派給功能區列。
 
@@ -1773,24 +1773,24 @@ void SetApplicationButton(
 ### <a name="parameters"></a>參數
 
 *pButton*<br/>
-[在]指向應用程式功能區按鈕的指標。
+在應用程式功能區按鈕的指標。
 
-*大小按鈕*<br/>
-[在]應用程式功能區按鈕的大小。
+*sizeButton*<br/>
+在應用程式功能區按鈕的大小。
 
 ### <a name="remarks"></a>備註
 
-應用程式功能區按鈕是位於功能區控制元件左上角的大型圓角按鈕。
+[應用程式] 功能區按鈕是位於功能區控制項左上角的大圓角按鈕。
 
 ### <a name="example"></a>範例
 
-下面的示例演示如何在`SetApplicationButton``CMFCRibbonBar`類中使用 方法。
+下列範例示範如何使用 `SetApplicationButton` 類別中的方法 `CMFCRibbonBar` 。
 
 [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]
 
-## <a name="cmfcribbonbarsetelementkeys"></a><a name="setelementkeys"></a>CMFC 功能列:設定元素鍵
+## <a name="cmfcribbonbarsetelementkeys"></a><a name="setelementkeys"></a> CMFCRibbonBar：： SetElementKeys
 
-設置具有指定命令 ID 的所有功能區元素的鍵提示。
+設定具有指定命令識別碼的所有功能區專案的按鍵提示。
 
 ```
 BOOL SetElementKeys(
@@ -1801,26 +1801,26 @@ BOOL SetElementKeys(
 
 ### <a name="parameters"></a>參數
 
-*烏伊CmdID*<br/>
-[在]功能區元素的命令 ID。
+*uiCmdID*<br/>
+在功能區元素的命令識別碼。
 
 *lpszKeys*<br/>
-[在]鑰匙尖。
+在快速鍵提示。
 
 *lpszMenuKeys*<br/>
-[在]功能表鍵提示。
+在功能表快速鍵。
 
 ### <a name="return-value"></a>傳回值
 
-如果至少設置了一個功能區元素的鍵尖,則為 TRUE;如果至少設置了一個功能區元素的鍵尖。否則 FALSE。
+如果至少設定一個功能區專案的按鍵提示，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-可選菜單鍵提示適用於帶功能區元素,帶有一個拆分按鈕,該按鈕可打開彈出功能表。
+選用功能表 keytip 適用于具有可開啟快顯功能表的 [分割] 按鈕的功能區元素。
 
-## <a name="cmfcribbonbarsetkeyboardnavigationlevel"></a><a name="setkeyboardnavigationlevel"></a>CMFC 功能列:設定鍵盤導覽層級
+## <a name="cmfcribbonbarsetkeyboardnavigationlevel"></a><a name="setkeyboardnavigationlevel"></a> CMFCRibbonBar：： SetKeyboardNavigationLevel
 
-在使用者按下功能區列中包含的鍵提示時設置鍵盤導航級別。
+當使用者按下功能區列上所含的按鍵提示時，設定鍵盤導覽層級。
 
 ```cpp
 void SetKeyboardNavigationLevel(
@@ -1830,19 +1830,19 @@ void SetKeyboardNavigationLevel(
 
 ### <a name="parameters"></a>參數
 
-*p 等級*<br/>
-[在]指向當前鍵盤導航物件的指標。
+*pLevel*<br/>
+在目前鍵盤導覽物件的指標。
 
 *bSetFocus*<br/>
-[在]TRUE 將鍵盤焦點設置為功能區列。
+在TRUE 表示將鍵盤焦點設定至功能區列。
 
 ### <a name="remarks"></a>備註
 
-當使用者按下 ALT 或 F10 鍵時,功能區列的鍵盤導航將啟動。 用戶通過按功能區欄上的鍵尖來選擇下一個導航級別。 使用者可以通過按轉義鍵返回到以前的導航級別。
+當使用者按下 ALT 或 F10 鍵時，就會啟動功能區列的鍵盤導覽。 使用者在功能區列上按下按鍵鍵，即可選取下一個流覽層級。 使用者可以按下 esc 鍵，回到先前的導覽層級。
 
-## <a name="cmfcribbonbarsetmaximizemode"></a><a name="setmaximizemode"></a>CMFC 功能列::設定最大化模式
+## <a name="cmfcribbonbarsetmaximizemode"></a><a name="setmaximizemode"></a> CMFCRibbonBar：： SetMaximizeMode
 
-當多文件介面 (MDI) 子視窗的視窗大小進入或離開最大化狀態時,調整功能區列。
+當多重文件介面的視窗大小 (MDI) 子視窗進入或離開最大化的狀態時，調整功能區列。
 
 ```cpp
 void SetMaximizeMode(
@@ -1853,16 +1853,16 @@ void SetMaximizeMode(
 ### <a name="parameters"></a>參數
 
 *bMax*<br/>
-[在]TRUE 顯示在功能區列上 MDI 子視窗的系統按鈕;FALSE 從功能區列中刪除 MDI 子視窗的系統按鈕。
+在TRUE 表示在功能區列上顯示 MDI 子視窗的系統按鈕;FALSE 表示從功能區列移除 MDI 子視窗的系統按鈕。
 
-*pwnd*<br/>
-[在]指向功能區列的主框架視窗。
+*pWnd*<br/>
+在功能區列之主框架視窗的指標。
 
 ### <a name="remarks"></a>備註
 
-當最大化 MDI 子視窗時,功能區列在選項卡行中顯示 MDI 子視窗的系統按鈕。
+當 MDI 子視窗最大化時，功能區列會在索引標籤資料列中顯示 MDI 子視窗的系統按鈕。
 
-## <a name="cmfcribbonbarsetquickaccesscommands"></a><a name="setquickaccesscommands"></a>CMFC 功能列:設定快速存取命令
+## <a name="cmfcribbonbarsetquickaccesscommands"></a><a name="setquickaccesscommands"></a> CMFCRibbonBar：： SetQuickAccessCommands
 
 將一或多個功能區項目加入至快速存取工具列。
 
@@ -1875,20 +1875,20 @@ void SetQuickAccessCommands(
 ### <a name="parameters"></a>參數
 
 *lstCommands*<br/>
-[在]要放置在「快速存取」工具列上的命令清單。
+在要放在快速存取工具列上的命令清單。
 
 *bRecalcLayout*<br/>
-[在]如果要在添加功能區元素後重新繪製功能區,則為 TRUE;否則。
+在如果想要在加入功能區元素之後重新繪製功能區，則為 TRUE;否則為 FALSE。
 
 ### <a name="example"></a>範例
 
-下面的示例演示如何在`SetQuickAccessCommands``CMFCRibbonBar`類中使用 方法。
+下列範例示範如何使用 `SetQuickAccessCommands` 類別中的方法 `CMFCRibbonBar` 。
 
 [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]
 
-## <a name="cmfcribbonbarsetquickaccessdefaultstate"></a><a name="setquickaccessdefaultstate"></a>CMFC 功能列::設定快速存取預設狀態
+## <a name="cmfcribbonbarsetquickaccessdefaultstate"></a><a name="setquickaccessdefaultstate"></a> CMFCRibbonBar：： SetQuickAccessDefaultState
 
-將快速存取工具列設置為預設狀態。
+將快速存取工具列設定為預設狀態。
 
 ```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
@@ -1897,21 +1897,21 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ### <a name="parameters"></a>參數
 
 *state*<br/>
-[在]快速存取工具列默認狀態。
+在快速存取工具列預設狀態。
 
 ### <a name="remarks"></a>備註
 
-快速存取工具列狀態包括命令清單及其可見性。
+快速存取工具列狀態包含命令清單及其可見度。
 
 ### <a name="example"></a>範例
 
-下面的示例演示如何在`SetQuickAccessDefaultState``CMFCRibbonBar`類中使用 方法。
+下列範例示範如何使用 `SetQuickAccessDefaultState` 類別中的方法 `CMFCRibbonBar` 。
 
 [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]
 
-## <a name="cmfcribbonbarsetquickaccesstoolbarontop"></a><a name="setquickaccesstoolbarontop"></a>CMFC 功能列:設定快速存取工具列頂部
+## <a name="cmfcribbonbarsetquickaccesstoolbarontop"></a><a name="setquickaccesstoolbarontop"></a> CMFCRibbonBar：： SetQuickAccessToolbarOnTop
 
-將快速存取工具列定位在功能區列上方或下方。
+將快速存取工具列放置在功能區列的上方或下方。
 
 ```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
@@ -1919,12 +1919,12 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 ### <a name="parameters"></a>參數
 
-*蓬托普*<br/>
-[在]TRUE 將快速訪問工具列放置在功能區欄上方;FALSE 將快速訪問工具列放置在功能區列下方。
+*bOnTop*<br/>
+在TRUE 表示將快速存取工具列放置在功能區列上方;FALSE 可將快速存取工具列放置在功能區列下方。
 
-## <a name="cmfcribbonbarsettooltipfixedwidth"></a><a name="settooltipfixedwidth"></a>CMFC 功能列::設定工具提示固定寬度
+## <a name="cmfcribbonbarsettooltipfixedwidth"></a><a name="settooltipfixedwidth"></a> CMFCRibbonBar：： SetTooltipFixedWidth
 
-設置功能區列的固定寬度的正尺寸和大尺寸工具提示固定寬度。
+為功能區列設定工具提示固定寬度的一般和大小。
 
 ```cpp
 void SetTooltipFixedWidth(
@@ -1934,17 +1934,17 @@ void SetTooltipFixedWidth(
 
 ### <a name="parameters"></a>參數
 
-*nWidth 一般*<br/>
-[在]常規固定大小的工具尖的寬度(以像素為單位)。
+*nWidthRegular*<br/>
+在一般固定大小工具提示的寬度（以圖元為單位）。
 
-*nWidth 大型影像*<br/>
-[在]大型固定大小的工具提示的寬度(以像素為單位)。
+*nWidthLargeImage*<br/>
+在大型固定大小工具提示的寬度（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
-將參數設置為 0 會導致相應的寬度發生變化。
+將參數設定為0會導致對應的寬度變化。
 
-## <a name="cmfcribbonbarshowcategory"></a><a name="showcategory"></a>CMFC 功能列:顯示類別
+## <a name="cmfcribbonbarshowcategory"></a><a name="showcategory"></a> CMFCRibbonBar：： ShowCategory
 
 顯示或隱藏指定的功能區分類。
 
@@ -1957,12 +1957,12 @@ void ShowCategory(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[在]功能區類別的索引。
+在功能區分類的索引。
 
-*b 顯示*<br/>
-[在]如果為 TRUE,則顯示功能區類別;如果為 TRUE,則顯示功能區類別。否則,隱藏功能區類別。
+*bShow*<br/>
+在若為 TRUE，則顯示功能區分類;否則，隱藏功能區分類。
 
-## <a name="cmfcribbonbarshowcontextcategories"></a><a name="showcontextcategories"></a>CMFC 功能列:顯示內容的文字類別
+## <a name="cmfcribbonbarshowcontextcategories"></a><a name="showcontextcategories"></a> CMFCRibbonBar：： ShowCoNtextCategories
 
 顯示或隱藏具有指定識別碼的內容分類。
 
@@ -1974,15 +1974,15 @@ void ShowContextCategories(
 
 ### <a name="parameters"></a>參數
 
-*uiContextID*<br/>
-[在]上下文類別識別碼。
+*uiCoNtextID*<br/>
+在內容類別別目錄識別碼。
 
-*b 顯示*<br/>
-[在]如果為 TRUE,則顯示具有指定 ID 的類別;如果為 TRUE,則顯示具有指定 ID 的類別。否則,隱藏具有指定ID的類別。
+*bShow*<br/>
+在若為 TRUE，則顯示具有指定識別碼的類別。否則，請隱藏具有指定識別碼的類別。
 
-## <a name="cmfcribbonbarshowkeytips"></a><a name="showkeytips"></a>CMFC 剪貼列:顯示關鍵提示
+## <a name="cmfcribbonbarshowkeytips"></a><a name="showkeytips"></a> CMFCRibbonBar：： ShowKeyTips
 
-在功能區列上顯示每個功能區元素的鍵提示。
+在功能區列上顯示每個功能區元素的按鍵提示。
 
 ```cpp
 void ShowKeyTips();
@@ -1990,7 +1990,7 @@ void ShowKeyTips();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbartogglemimimizestate"></a><a name="togglemimimizestate"></a>CMFC 功能列::切換米米米澤州
+## <a name="cmfcribbonbartogglemimimizestate"></a><a name="togglemimimizestate"></a> CMFCRibbonBar：： ToggleMimimizeState
 
 在最小化和最大化狀態之間切換功能區列。
 
@@ -2004,9 +2004,9 @@ void ToggleMimimizeState();
 
 在最小化狀態，功能區控制項是隱藏的，並且只顯示索引標籤。 當使用者按一下索引標籤時，功能區控制項顯示為快顯視窗。 當使用者按一下離開或執行命令，視窗會關閉。
 
-## <a name="cmfcribbonbartranslatechar"></a><a name="translatechar"></a>CMFC功能列:翻譯查爾
+## <a name="cmfcribbonbartranslatechar"></a><a name="translatechar"></a> CMFCRibbonBar：： TranslateChar
 
-確定指定的擊鍵字元代碼是否由功能區欄處理。
+判斷指定的按鍵字元碼是否由功能區列處理。
 
 ```
 virtual BOOL TranslateChar(UINT nChar);
@@ -2014,18 +2014,18 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>參數
 
-*n查爾*<br/>
-[在]用戶擊鍵字元代碼。
+*nChar*<br/>
+在使用者擊鍵字元碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果字元代碼由功能區欄處理,則為 TRUE;如果字元代碼由功能區欄處理,則為 TRUE。否則 FALSE。
+如果功能區列已處理字元碼，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-關鍵提示功能使用戶能夠使用鍵盤導航功能區列。
+按鍵提示功能可讓使用者使用鍵盤流覽功能區列。
 
-## <a name="cmfcribbonbargetfocused"></a><a name="getfocused"></a>CMFC功能列:獲得重點
+## <a name="cmfcribbonbargetfocused"></a><a name="getfocused"></a> CMFCRibbonBar：： GetFocused
 
 傳回具有焦點的項目。
 
@@ -2035,13 +2035,13 @@ virtual CMFCRibbonBaseElement* GetFocused();
 
 ### <a name="return-value"></a>傳回值
 
-指向焦點元素或 NULL 的指標。
+指向焦點元素或 Null 的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbariswindows7look"></a><a name="iswindows7look"></a>CMFC 功能列::是 Windows7 查看
+## <a name="cmfcribbonbariswindows7look"></a><a name="iswindows7look"></a> CMFCRibbonBar：： IsWindows7Look
 
-指示功能區是否具有 Windows 7 外觀(小型矩形應用程式按鈕)。
+指出功能區是否具有 Windows 7 外觀 (小型矩形應用程式按鈕) 。
 
 ```
 BOOL IsWindows7Look() const;
@@ -2049,13 +2049,13 @@ BOOL IsWindows7Look() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能區具有 Windows 7 外觀,則為 TRUE;如果功能區具有 Windows 7 外觀,則為 TRUE。否則 FALSE。
+如果功能區具有 Windows 7 外觀，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarloadfromresource"></a><a name="loadfromresource"></a>CMFC 功能列:從資源載入
+## <a name="cmfcribbonbarloadfromresource"></a><a name="loadfromresource"></a> CMFCRibbonBar：： LoadFromResource
 
-已多載。 從應用程式資源載入功能區列。
+多載。 從應用程式資源載入功能區列。
 
 ```
 virtual BOOL LoadFromResource(
@@ -2072,24 +2072,24 @@ virtual BOOL LoadFromResource(
 ### <a name="parameters"></a>參數
 
 *uiXMLResID*<br/>
-使用功能區列資訊指定 XML 字串的資源 ID。
+使用功能區列資訊指定 XML 字串的資源識別碼。
 
-*lpszRes 類型*<br/>
-指定位於*uiXMLResID*的資源類型。
+*lpszResType*<br/>
+指定位於 *uiXMLResID*的資源類型。
 
 *hInstance*<br/>
-處理其可執行檔包含資源的模組。 如果*hAA*為 NULL,則系統將從用於創建當前進程的模組中載入資源。
+模組的控制碼，可執行檔包含資源。 如果 *hInstance* 為 Null，系統會從用來建立目前進程的模組載入資源。
 
 *lpszXMLResID*<br/>
-使用功能區列資訊指定資源 ID(以字串形式)。
+使用功能區列資訊，以字串格式指定資源識別碼 () 。
 
 ### <a name="return-value"></a>傳回值
 
-如果負載成功,則為 TRUE;否則 FALSE。
+如果載入成功則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarsavetoxmlbuffer"></a><a name="savetoxmlbuffer"></a>CMFC 功能列::儲存到XML緩衝區
+## <a name="cmfcribbonbarsavetoxmlbuffer"></a><a name="savetoxmlbuffer"></a> CMFCRibbonBar：： SaveToXMLBuffer
 
 將功能區列儲存至緩衝區。
 
@@ -2100,7 +2100,7 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ### <a name="parameters"></a>參數
 
 *ppBuffer*<br/>
-當此函數返回時 *,ppBuffer*指向此方法分配的緩衝區,並包含 XML 格式的功能區條資訊。
+當此函式傳回時， *ppBuffer* 會指向這個方法所配置的緩衝區，並包含 XML 格式的功能區列資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2108,9 +2108,9 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarsavetoxmlfile"></a><a name="savetoxmlfile"></a>CMFC 功能列::儲存到XML檔
+## <a name="cmfcribbonbarsavetoxmlfile"></a><a name="savetoxmlfile"></a> CMFCRibbonBar：： SaveToXMLFile
 
-將功能區列保存到 XML 檔。
+將功能區列儲存至 XML 檔案。
 
 ```
 BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
@@ -2118,7 +2118,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 
 ### <a name="parameters"></a>參數
 
-*lpsz 檔案路徑*<br/>
+*lpszFilePath*<br/>
 指定輸出檔。
 
 ### <a name="return-value"></a>傳回值
@@ -2127,9 +2127,9 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 
 ### <a name="remarks"></a>備註
 
-## <a name="cmfcribbonbarsetwindows7look"></a><a name="setwindows7look"></a>CMFC 功能列:設定 Windows7 檢視
+## <a name="cmfcribbonbarsetwindows7look"></a><a name="setwindows7look"></a> CMFCRibbonBar：： SetWindows7Look
 
-啟用或禁用功能區 Windows 7 外觀(小型矩形應用程式按鈕)。
+啟用或停用功能區的 Windows 7 外觀 (小型矩形應用程式按鈕) 。
 
 ```cpp
 void SetWindows7Look(
@@ -2139,11 +2139,11 @@ void SetWindows7Look(
 
 ### <a name="parameters"></a>參數
 
-*bWindows7 看*<br/>
-TRUE 設置 Windows 7 外觀;否則。
+*bWindows7Look*<br/>
+TRUE 會設定 Windows 7 的外觀;否則為 FALSE。
 
 *bRecalc*<br/>
-TRUE 重新計算功能區佈局;否則。
+TRUE 會重新計算功能區版面配置;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -2151,8 +2151,8 @@ TRUE 重新計算功能區佈局;否則。
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CPane Class](../../mfc/reference/cpane-class.md)<br/>
+[CPane 類別](../../mfc/reference/cpane-class.md)<br/>
 [CMFCRibbonCategory 類別](../../mfc/reference/cmfcribboncategory-class.md)<br/>
-[CMFC 剪彩面板類](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
+[CMFCRibbonPanel 類別](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement 類別](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[演練:更新 MFC 塗鴉應用程式](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[逐步解說：更新 MFC 自由曲線應用程式](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

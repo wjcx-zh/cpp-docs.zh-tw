@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920273"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846585"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -71,34 +71,34 @@ int _waccess(
 
 ## <a name="return-value"></a>傳回值
 
-如果檔案有指定模式，每個函式都會傳回 0。 如果命名的檔案不存在或沒有指定的模式，則函式會傳回-1;在此情況下`errno` ，會依照下表所示設定。
+如果檔案有指定模式，每個函式都會傳回 0。 如果指定的檔案不存在或沒有指定的模式，則函式會傳回-1;在此情況下， `errno` 設定如下表所示。
 
-|||
-|-|-|
-`EACCES`|拒絕存取：檔案的權限設定不允許指定的存取。
-`ENOENT`|找不到檔案名稱或路徑。
-`EINVAL`|無效的參數。
+| 值 | 描述 |
+|--|--|
+| `EACCES` | 拒絕存取：檔案的權限設定不允許指定的存取。 |
+| `ENOENT` | 找不到檔案名稱或路徑。 |
+| `EINVAL` | 無效的參數。 |
 
 如需這些傳回碼和其他傳回碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-搭配檔案使用時， **_access**函式會判斷指定的檔案或目錄是否存在，以及是否具有*模式*值所指定的屬性。 搭配目錄使用時， **_access**只會判斷指定的目錄是否存在;在 Windows 2000 和更新版本的作業系統中，所有目錄都有讀取和寫入存取權。
+搭配檔案使用時， **_access** 函式會判斷指定的檔案或目錄是否存在，而且具有由 *模式*值指定的屬性。 搭配目錄使用時， **_access** 只會判斷指定的目錄是否存在;在 Windows 2000 和更新版本的作業系統中，所有目錄都有讀取和寫入存取權。
 
-|*模式*值|檢查檔案|
+|*模式* 值|檢查檔案|
 |------------------|---------------------|
 |00|只存在|
 |02|唯寫|
 |04|唯讀|
-|06|讀取和寫入|
+|06|讀取及寫入|
 
 此函式只檢查檔案和目錄是否為唯讀，不檢查檔案系統安全性設定。 該項作業需要存取權杖。 如需檔案系統安全性的詳細資訊，請參閱 [Access Tokens](/windows/win32/SecAuthZ/access-tokens) (存取權杖)。 ATL 類別的存在就是提供這項功能，請參閱 [CAccessToken 類別](../../atl/reference/caccesstoken-class.md)。
 
-**_waccess**是寬字元版本的 **_access**;**_waccess**的*path*引數是寬字元字串。 相反地， **_waccess**和 **_access**的行為相同。
+**_waccess**是寬字元版本的 **_access**;**_waccess**的*路徑*引數是寬字元字串。 否則， **_waccess**和 **_access**的行為相同。
 
-這個函式會驗證它的參數。 如果*path*為 Null，或*模式*未指定有效的模式，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會將 `errno` 設定為 `EINVAL` 並傳回 -1。
+這個函式會驗證它的參數。 如果 *path* 為 Null 或 *模式* 未指定有效的模式，則會叫用不正確參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會將 `errno` 設定為 `EINVAL` 並傳回 -1。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -106,7 +106,7 @@ int _waccess(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_taccess`|**_access**|**_access**|**_waccess**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
@@ -115,7 +115,7 @@ int _waccess(
 
 ## <a name="example"></a>範例
 
-下列範例會使用 **_access**來檢查名為 crt_ACCESS 的檔案。C 以查看它是否存在，以及是否允許寫入。
+下列範例會使用 **_access** 來檢查名為 crt_ACCESS 的檔案。C 以查看它是否存在以及是否允許寫入。
 
 ```C
 // crt_access.c

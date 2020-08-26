@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 1794e16489ab48d919bbd4116588fba4b74b88d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55d6a56f566416bb25f3ee3ae508c86f17f0df99
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372879"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840449"
 ---
 # <a name="type-library-access"></a>類型程式庫存取
 
@@ -19,14 +19,14 @@ ms.locfileid: "81372879"
 
 ### <a name="type-library-access"></a>類型程式庫存取
 
-|||
+|名稱|描述|
 |-|-|
 |[DECLARE_OLETYPELIB](#declare_oletypelib)|宣告 OLE 控制項的 `GetTypeLib` 成員函式 (必須在類別宣告中使用)。|
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|實作 OLE 控制項的 `GetTypeLib` 成員函式 (必須在類別實作中使用)。|
 
-## <a name="declare_oletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
+## <a name="declare_oletypelib"></a><a name="declare_oletypelib"></a> DECLARE_OLETYPELIB
 
-聲明控件類`GetTypeLib`的成員函數。
+宣告 `GetTypeLib` 控制項類別的成員函式。
 
 ```
 DECLARE_OLETYPELIB(class_name)
@@ -35,19 +35,19 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="parameters"></a>參數
 
 *class_name*<br/>
-與類型庫相關的控制項類的名稱。
+與類型程式庫相關的控制項類別名稱。
 
 ### <a name="remarks"></a>備註
 
-在控件類標頭檔中使用此宏。
+在控制項類別標頭檔中使用此宏。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** afxdisp.h
 
-## <a name="implement_oletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
+## <a name="implement_oletypelib"></a><a name="implement_oletypelib"></a> IMPLEMENT_OLETYPELIB
 
-實現控件的成員`GetTypeLib`函數。
+實行控制項的成員函式 `GetTypeLib` 。
 
 ```
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
@@ -56,22 +56,22 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ### <a name="parameters"></a>參數
 
 *class_name*<br/>
-與類型庫相關的控制項類的名稱。
+與類型程式庫相關的控制項類別名稱。
 
 *tlid*<br/>
-類型庫的 ID 號。
+類型程式庫的識別碼。
 
 *wVerMajor*<br/>
-類型庫主要版本號。
+類型程式庫的主要版本號碼。
 
 *wVerMinor*<br/>
-類型庫次要版本號。
+類型程式庫次要版本號碼。
 
 ### <a name="remarks"></a>備註
 
-對於使用DECLARE_OLETYPELIB宏的任何控制類,此宏必須出現在實現檔中。
+此宏必須出現在使用 DECLARE_OLETYPELIB 宏之任何控制項類別的執行檔中。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** afxdisp.h
 

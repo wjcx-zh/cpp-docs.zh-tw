@@ -1,17 +1,17 @@
 ---
-title: ptr （c + + COM 屬性）
+title: 'ptr (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 9e45cd529562fe238f96f98cf7f91e15df34270a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c01fe93d8c4092b3a4754b0c70ff161d66dfe49f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224379"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839864"
 ---
 # <a name="ptr"></a>ptr
 
@@ -29,16 +29,14 @@ ms.locfileid: "87224379"
 
 ## <a name="example"></a>範例
 
-如需使用**ptr**的範例，請參閱[defaultvalue](defaultvalue.md)的範例。
+如需使用**ptr**的範例，請參閱[defaultvalue](defaultvalue.md)範例。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
-|**適用於**|介面參數，介面方法，**`typedef`**|
-|**可重複**|否|
+|**適用於**|介面參數、介面方法、 **`typedef`**|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 

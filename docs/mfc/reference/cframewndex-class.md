@@ -178,16 +178,16 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5aeffddcaa62732d2cba731f897f543e660cbab2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752922"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832762"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 類別
 
-實作 Windows 單一文件介面 (SDI) 重疊或快顯框架視窗的功能，並提供管理視窗的成員。 它擴展了[CFrameWnd](../../mfc/reference/cframewnd-class.md)類。
+實作 Windows 單一文件介面 (SDI) 重疊或快顯框架視窗的功能，並提供管理視窗的成員。 它會擴充 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 類別。
 
 ## <a name="syntax"></a>語法
 
@@ -201,97 +201,97 @@ class CFrameWndEx : public CFrameWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CFramewndEx::活動專案Recalc佈局](#activeitemrecalclayout)|調整 OLE 用戶端項的佈局和幀的工作區。|
+|[CFrameWndEx：： ActiveItemRecalcLayout](#activeitemrecalclayout)|調整 OLE 用戶端專案和框架工作區的版面配置。|
 |`CFrameWndEx::AddDockSite`|沒有使用這個方法。|
-|[CFramewndEx::添加窗格](#addpane)|向停靠管理器註冊控制欄。|
-|[CFramewndEx::調整擴展佈局](#adjustdockinglayout)|重新計算停靠到框架視窗的所有窗格的佈局。|
-|[CFramewndEx::D更新框架功能表](#delayupdateframemenu)|設置幀功能表,然後在命令處理空閒時更新它。|
-|[CFramewndEx::DockPane](#dockpane)|將指定的窗格停靠到框架視窗。|
-|[CframewndEx::D奧克帕內左側](#dockpaneleftof)|將窗格停駐在另一個窗格的左邊。|
-|[CFramewndEx:啟用自動隱藏窗格](#enableautohidepanes)|當窗格停靠在主框架視窗的指定邊時,啟用它們自動隱藏模式。|
-|[CFramewndEx::啟用停靠](#enabledocking)|啟用屬於框架視窗的窗格的停靠。|
-|[CFramewndEx:啟用全屏主功能表](#enablefullscreenmainmenu)|在全螢幕模式下顯示或隱藏主菜單。|
-|[CFramewndEx::啟用全屏模式](#enablefullscreenmode)|啟用框架視窗的全屏模式。|
-|[CFramewndEx::啟用LoadDockState](#enableloaddockstate)|啟用或禁用停靠狀態的載入。|
-|[CFramewndEx::啟用PaneMenu](#enablepanemenu)|啟用或禁用窗格功能表的自動處理。|
-|[CFramewndEx:取得活動彈出](#getactivepopup)|返回指向當前顯示的彈出式功能表的指標。|
-|[CFramewndEx:取得預設ResId](#getdefaultresid)|返回框架載入框架視窗時指定的資源 ID。|
-|[CFramewndEx::獲取對接管理器](#getdockingmanager)|檢索框架視窗的[CDockingManager 類](../../mfc/reference/cdockingmanager-class.md)物件。|
-|[CFramewndEx::獲取功能表欄](#getmenubar)|將指標傳回到附加在框架視窗的功能表列物件。|
-|[CFramewndEx::獲取窗格](#getpane)|返回指向具有指定 ID 的窗格的指標。|
-|[CFramewndEx::獲取功能列](#getribbonbar)|檢索框架的功能區條控制項。|
-|[CFramewndEx::獲取關閉條形](#gettearoffbars)|傳回分割狀態的窗格物件清單。|
-|[CFramewndEx::取得工具列按鈕工具提示文字](#gettoolbarbuttontooltiptext)|當應用程式顯示工具列按鈕的工具提示時,由框架調用。|
-|[CFrameWndEx::InsertPane](#insertpane)|向停靠管理器註冊窗格。|
-|[CFramewndEx::全屏](#isfullscreen)|確定框架視窗是否處於全屏模式。|
-|[CFramewndEx::IsMenuBar可用](#ismenubaravailable)|確定指向功能表欄物件的指標是否有效。|
-|[CFramewndEx::IsPointNearDockSite](#ispointneardocksite)|指示點是否位於對齊區域中。|
-|[CFramewndEx::是列印預覽](#isprintpreview)|指示框架視窗是否處於列印預覽模式。|
-|[CFramewndEx::載入幀](#loadframe)|在建構後調用此方法以創建幀視窗並載入其資源。|
-|[CFramewndEx::談判邊界空間](#negotiateborderspace)|實現 OLE 客戶端邊界協商。|
-|[CFramewndEx::打開啟動](#onactivate)|當使用者輸入切換到或遠離幀時,框架調用此方法。|
-|[CFramewndEx:打開ActivateApp](#onactivateapp)|在選擇或取消選擇應用程式時由框架呼叫。|
-|[CFramewndEx::打開視覺管理器](#onchangevisualmanager)|當對框架的更改需要更改視覺管理器時,由框架調用。|
-|[CFramewndEx::關閉](#onclose)|框架調用此方法以關閉幀。|
-|[CFramewndEx::關閉對接窗格](#onclosedockingpane)|當用戶按下停靠窗格上的 **「關閉**」按鈕時,由框架呼叫。|
-|[CFramewndEx::在關閉迷你框架上](#oncloseminiframe)|當用戶按下浮動迷你框架視窗中的 **「關閉**」按鈕時,由框架呼叫。|
-|[CFramewndEx::在關閉彈出功能表](#onclosepopupmenu)|架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。|
-|[CFramewndEx::OnCmdMsg](#oncmdmsg)|調度命令消息。|
-|[CFramewndEx::在上下文説明](#oncontexthelp)|由框架調用以顯示上下文相關説明。|
-|[CFramewndEx::打開創建](#oncreate)|創建框架後由框架調用。|
-|[CFramewndEx::On銷毀](#ondestroy)|框架被銷毀時由框架調用。|
-|[CFramewndEx::在DrawMenu圖像](#ondrawmenuimage)|當應用程式繪製與功能表項關聯的圖像時,由框架調用。|
-|[CFramewndEx::在DrawMenuLogo](#ondrawmenulogo)|當`CMFCPopupMenu`物件處理[WM_PAINT](/windows/win32/gdi/wm-paint)消息時,由框架調用。|
-|[CFramewndEx:onDWM 組合已更改](#ondwmcompositionchanged)|當桌面視窗管理員 (DWM) 組合已啟用或禁用時,由框架呼叫。|
-|[CFramewndEx:打開退出大小移動](#onexitsizemove)|當框架停止移動或調整大小時,由框架調用。|
-|[CFramewndEx::OnGetminMaxinfo](#ongetminmaxinfo)|當框架調整大小以設置視窗尺寸限制時,由框架調用。|
-|[CFramewndEx::上線更新CmdUI](#onidleupdatecmdui)|當命令處理處於空閒狀態時,框架調用以更新幀顯示。|
-|[CFramewndEx::打開按鈕](#onlbuttondown)|當使用者按下滑鼠左鍵時,框架將調用此方法。|
-|[CFramewndEx::OnLButtonUp](#onlbuttonup)|當使用者釋放滑鼠左鍵時,框架將調用此方法。|
-|[CFramewndEx::在MenuButton工具命中測試](#onmenubuttontoolhittest)|當`CMFCToolBarButton`物件處理WM_NCHITTEST消息時,由框架調用。|
-|[CFramewndEx::在MenuChar](#onmenuchar)|當顯示功能表並且使用者按下與命令不對應的鍵時,由框架調用。|
-|[CFramewndEx::滑鼠移動](#onmousemove)|當指標移動時,框架調用此方法。|
-|[CFramewndEx::在移動迷你框架](#onmoveminiframe)|當窗格窗口移動時由框架調用。|
-|[CFramewndEx::打開NcActivate](#onncactivate)|當必須重新繪製框架的非工作區以指示活動狀態的更改時,框架調用框架。|
-|[CFramewndEx:在NcCalcsize上](#onnccalcsize)|當必須計算工作區的大小和位置時,由框架調用。|
-|[CFramewndEx::OnNcHitTest](#onnchittest)|當指標移動或按下或釋放滑鼠按鈕時,框架調用。|
-|[CFramewndEx::在NcMouseMove上](#onncmousemove)|當指標在非工作區中移動時,由框架調用。|
-|[CFramewndEx:onNcPaint](#onncpaint)|當必須繪製非工作區時,框架調用。|
-|[CFramewndEx::在窗格檢查](#onpanecheck)|由框架調用以控制窗格的可見性。|
-|[CFramewndEx:在後預覽幀上](#onpostpreviewframe)|當使用者更改列印預覽模式時,由框架調用。|
-|[CFramewndEx::在功率廣播](#onpowerbroadcast)|發生電源管理事件時由框架調用。|
-|[CFramewndEx::打開選單](#onsetmenu)|由框架調用以替換框架視窗功能表。|
-|[CFramewndEx::打開預覽模式](#onsetpreviewmode)|由框架調用,以設置框架的列印預覽模式。|
-|[CFramewndEx::打開文字](#onsettext)|由框架調用以設置視窗的文字。|
-|[CFramewndEx::在顯示自訂窗格](#onshowcustomizepane)|啟用快速自定義窗格時由框架呼叫。|
-|[CFramewndEx::在顯示窗格](#onshowpanes)|由框架呼叫以顯示或隱藏窗格。|
-|[CFramewndEx::在顯示彈出功能表](#onshowpopupmenu)|啟用彈出式功能表時由框架呼叫。|
-|[CFramewndEx::打開尺寸](#onsize)|框架在幀大小更改後調用此方法。|
-|[CFramewndEx::打開](#onsizing)|當用戶調整幀大小時,框架將調用此方法。|
-|[CFramewndEx::SysColorChange](#onsyscolorchange)|當系統顏色發生變化時由框架調用。|
-|[CFramewndEx::在TearoffMenu上](#ontearoffmenu)|啟用具有撕開條的功能表時,由框架調用。|
-|[CFramewndEx::在工具列上下文菜單上](#ontoolbarcontextmenu)|由框架調用以生成工具列上下文菜單。|
-|[CFramewndEx::在工具列創建新](#ontoolbarcreatenew)|框架呼叫此方法以創建新工具列。|
-|[CFramewndEx::打開工具列刪除](#ontoolbardelete)|刪除工具列時由框架調用。|
-|[CFramewndEx::更新框架功能表](#onupdateframemenu)|由框架調用以設置框架功能表。|
-|[CFramewndEx::更新幀標題](#onupdateframetitle)|框架呼叫此方法以更新框架視窗的標題列。|
-|[CFramewndEx::更新窗格功能表](#onupdatepanemenu)|由框架調用以更新窗格功能表。|
-|[CFramewndEx::在視窗Pos上](#onwindowposchanged)|當幀大小、位置或 z 順序因調用視窗管理方法而發生更改時,由框架調用。|
-|[CFramewndEx::P從點](#panefrompoint)|返回包含指定點的停靠窗格。|
-|[CFramewndEx::P重新翻譯訊息](#pretranslatemessage)|在調度特定視窗消息之前處理它們。|
-|[CFramewndEx:recalclayout](#recalclayout)|調整框架及其子窗口的佈局。|
-|[CFramewndEx::從Dock管理器中刪除Pane](#removepanefromdockmanager)|取消註冊窗格並將其從停靠管理器的內部清單中刪除。|
-|[CFramewndEx::SetDockstate](#setdockstate)|將停靠佈局還原到存儲在註冊表中的停靠狀態。|
-|[CFramewndEx::設定列印預覽框架](#setprintpreviewframe)|設置列印預覽框架視窗。|
-|[CFramewndEx::設定工具列選單](#setuptoolbarmenu)|將使用者定義的命令插入工具列功能表。|
-|[CFramewndEx::顯示全屏](#showfullscreen)|在全屏和常規模式之間切換主框架。|
-|[CFramewndEx::顯示窗格](#showpane)|顯示或隱藏指定的窗格。|
-|[CFramewndEx::更新標題](#updatecaption)|由框架調用以更新視窗框架標題。|
-|[CFramewndEx::贏説明](#winhelp)|調用`WinHelp`應用程式或上下文相關的説明。|
+|[CFrameWndEx：： AddPane](#addpane)|向銜接管理員註冊控制列。|
+|[CFrameWndEx：： AdjustDockingLayout](#adjustdockinglayout)|重新計算停駐至框架視窗之所有窗格的配置。|
+|[CFrameWndEx：:D elayUpdateFrameMenu](#delayupdateframemenu)|設定畫面格功能表，然後在命令處理處於閒置狀態時進行更新。|
+|[CFrameWndEx：:D ockPane](#dockpane)|將指定的窗格停駐至框架視窗。|
+|[CFrameWndEx：:D ockPaneLeftOf](#dockpaneleftof)|將窗格停駐在另一個窗格的左邊。|
+|[CFrameWndEx：： EnableAutoHidePanes](#enableautohidepanes)|當窗格停駐于主框架視窗的指定側邊時，啟用窗格的自動隱藏模式。|
+|[CFrameWndEx：： EnableDocking](#enabledocking)|啟用屬於框架視窗的窗格銜接。|
+|[CFrameWndEx：： EnableFullScreenMainMenu](#enablefullscreenmainmenu)|以全螢幕模式顯示或隱藏主功能表。|
+|[CFrameWndEx：： EnableFullScreenMode](#enablefullscreenmode)|啟用框架視窗的全螢幕模式。|
+|[CFrameWndEx：： EnableLoadDockState](#enableloaddockstate)|啟用或停用銜接狀態的載入。|
+|[CFrameWndEx：： EnablePaneMenu](#enablepanemenu)|啟用或停用窗格功能表的自動處理。|
+|[CFrameWndEx：： GetActivePopup](#getactivepopup)|傳回目前所顯示快顯功能表的指標。|
+|[CFrameWndEx：： GetDefaultResId](#getdefaultresid)|傳回架構載入框架視窗時所指定的資源識別碼。|
+|[CFrameWndEx：： GetDockingManager](#getdockingmanager)|抓取框架視窗的 [CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md) 物件。|
+|[CFrameWndEx：： GetMenuBar](#getmenubar)|將指標傳回到附加在框架視窗的功能表列物件。|
+|[CFrameWndEx：： GetPane](#getpane)|傳回具有指定識別碼之窗格的指標。|
+|[CFrameWndEx：： GetRibbonBar](#getribbonbar)|抓取框架的功能區列控制項。|
+|[CFrameWndEx：： GetTearOffBars](#gettearoffbars)|傳回分割狀態的窗格物件清單。|
+|[CFrameWndEx：： GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|當應用程式顯示工具列按鈕的工具提示時由架構呼叫。|
+|[CFrameWndEx::InsertPane](#insertpane)|向銜接管理員註冊窗格。|
+|[CFrameWndEx：： IsFullScreen](#isfullscreen)|判斷框架視窗是否處於全螢幕模式。|
+|[CFrameWndEx：： IsMenuBarAvailable](#ismenubaravailable)|決定功能表列物件的指標是否有效。|
+|[CFrameWndEx：： IsPointNearDockSite](#ispointneardocksite)|指出點是否位於對齊區域中。|
+|[CFrameWndEx：： IsPrintPreview](#isprintpreview)|指出框架視窗是否處於預覽列印模式。|
+|[CFrameWndEx：： LoadFrame](#loadframe)|這個方法會在結構建立之後呼叫，以建立框架視窗並載入其資源。|
+|[CFrameWndEx：： NegotiateBorderSpace](#negotiateborderspace)|實行 OLE 用戶端框線協商。|
+|[CFrameWndEx：： OnActivate](#onactivate)|當使用者輸入切換至框架或離開框架時，架構會呼叫這個方法。|
+|[CFrameWndEx：： OnActivateApp](#onactivateapp)|當您選取或取消選取應用程式時，由架構呼叫。|
+|[CFrameWndEx：： OnChangeVisualManager](#onchangevisualmanager)|當框架的變更需要變更視覺管理員時，由架構呼叫。|
+|[CFrameWndEx：： OnClose](#onclose)|架構會呼叫這個方法來關閉框架。|
+|[CFrameWndEx：： OnCloseDockingPane](#onclosedockingpane)|當使用者按一下停駐窗格上的 [ **關閉** ] 按鈕時，由架構呼叫。|
+|[CFrameWndEx：： OnCloseMiniFrame](#oncloseminiframe)|當使用者按一下浮動迷你框架視窗上的 [ **關閉** ] 按鈕時，由架構呼叫。|
+|[CFrameWndEx：： OnClosePopupMenu](#onclosepopupmenu)|架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。|
+|[CFrameWndEx：： OnCmdMsg](#oncmdmsg)|分派命令訊息。|
+|[CFrameWndEx：： OnCoNtextHelp](#oncontexthelp)|由架構呼叫以顯示即時線上說明。|
+|[CFrameWndEx：： >oncreate](#oncreate)|在建立框架之後由架構呼叫。|
+|[CFrameWndEx：： OnDestroy](#ondestroy)|當框架損毀時由架構呼叫。|
+|[CFrameWndEx：： OnDrawMenuImage](#ondrawmenuimage)|當應用程式繪製與功能表項目相關聯的影像時，由架構呼叫。|
+|[CFrameWndEx：： OnDrawMenuLogo](#ondrawmenulogo)|當 `CMFCPopupMenu` 物件處理 [WM_PAINT](/windows/win32/gdi/wm-paint) 訊息時，由架構呼叫。|
+|[CFrameWndEx：： OnDWMCompositionChanged](#ondwmcompositionchanged)|當桌面視窗管理員 (DWM) 組合已啟用或停用時，由架構呼叫。|
+|[CFrameWndEx：： OnExitSizeMove](#onexitsizemove)|當框架停止移動或調整大小時，由架構呼叫。|
+|[CFrameWndEx：： OnGetMinMaxInfo](#ongetminmaxinfo)|當框架調整大小以設定視窗維度限制時，由架構呼叫。|
+|[CFrameWndEx：： OnIdleUpdateCmdUI](#onidleupdatecmdui)|在命令處理閒置時，由架構呼叫以更新框架顯示。|
+|[CFrameWndEx：： OnLButtonDown](#onlbuttondown)|當使用者按下滑鼠左鍵時，架構會呼叫這個方法。|
+|[CFrameWndEx：： OnLButtonUp](#onlbuttonup)|當使用者放開滑鼠左鍵時，架構會呼叫這個方法。|
+|[CFrameWndEx：： OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|當物件處理 WM_NCHITTEST 訊息時，由架構呼叫 `CMFCToolBarButton` 。|
+|[CFrameWndEx：： OnMenuChar](#onmenuchar)|由架構在顯示功能表時呼叫，且使用者按下未對應至命令的按鍵。|
+|[CFrameWndEx：： OnMouseMove](#onmousemove)|當指標移動時，架構會呼叫這個方法。|
+|[CFrameWndEx：： OnMoveMiniFrame](#onmoveminiframe)|在窗格視窗移動時由架構呼叫。|
+|[CFrameWndEx：： OnNcActivate](#onncactivate)|當框架的非工作區必須重新繪製以表示作用中狀態的變更時，由架構呼叫。|
+|[CFrameWndEx：： OnNcCalcSize](#onnccalcsize)|當必須計算工作區的大小和位置時，由架構呼叫。|
+|[CFrameWndEx：： OnNcHitTest](#onnchittest)|當指標移動或按下或放開滑鼠按鍵時，由架構呼叫。|
+|[CFrameWndEx：： OnNcMouseMove](#onncmousemove)|當指標在非工作區中移動時，由架構呼叫。|
+|[CFrameWndEx：： OnNcPaint](#onncpaint)|當必須繪製非工作區時，由架構呼叫。|
+|[CFrameWndEx：： OnPaneCheck](#onpanecheck)|由架構呼叫以控制窗格的可見度。|
+|[CFrameWndEx：： OnPostPreviewFrame](#onpostpreviewframe)|當使用者變更預覽列印模式時，由架構呼叫。|
+|[CFrameWndEx：： OnPowerBroadcast](#onpowerbroadcast)|當電源管理事件發生時，由架構呼叫。|
+|[CFrameWndEx：： OnSetMenu](#onsetmenu)|由架構呼叫以取代框架視窗功能表。|
+|[CFrameWndEx：： OnSetPreviewMode](#onsetpreviewmode)|由架構呼叫以設定框架的預覽列印模式。|
+|[CFrameWndEx：： OnSetText](#onsettext)|由架構呼叫以設定視窗的文字。|
+|[CFrameWndEx：： OnShowCustomizePane](#onshowcustomizepane)|當快速自訂窗格啟用時，由架構呼叫。|
+|[CFrameWndEx：： OnShowPanes](#onshowpanes)|由架構呼叫以顯示或隱藏窗格。|
+|[CFrameWndEx：： OnShowPopupMenu](#onshowpopupmenu)|在啟用快顯功能表時由架構呼叫。|
+|[CFrameWndEx：： OnSize](#onsize)|架構會在框架的大小變更之後呼叫這個方法。|
+|[CFrameWndEx：： OnSizing](#onsizing)|當使用者調整框架大小時，架構會呼叫這個方法。|
+|[CFrameWndEx：： OnSysColorChange](#onsyscolorchange)|當系統色彩變更時由架構呼叫。|
+|[CFrameWndEx：： OnTearOffMenu](#ontearoffmenu)|當已啟用卸載列的功能表時，由架構呼叫。|
+|[CFrameWndEx：： OnToolbarCoNtextMenu](#ontoolbarcontextmenu)|由架構呼叫以建立工具列內容功能表。|
+|[CFrameWndEx：： OnToolbarCreateNew](#ontoolbarcreatenew)|架構會呼叫這個方法來建立新的工具列。|
+|[CFrameWndEx：： OnToolbarDelete](#ontoolbardelete)|當工具列刪除時由架構呼叫。|
+|[CFrameWndEx：： OnUpdateFrameMenu](#onupdateframemenu)|由架構呼叫以設定框架功能表。|
+|[CFrameWndEx：： OnUpdateFrameTitle](#onupdateframetitle)|架構會呼叫這個方法來更新框架視窗的標題列。|
+|[CFrameWndEx：： OnUpdatePaneMenu](#onupdatepanemenu)|由架構呼叫以更新窗格功能表。|
+|[CFrameWndEx：： OnWindowPosChanged](#onwindowposchanged)|當框架大小、位置或迭置順序因為呼叫視窗管理方法而變更時，由架構呼叫。|
+|[CFrameWndEx：:P aneFromPoint](#panefrompoint)|傳回包含指定點的停駐窗格。|
+|[CFrameWndEx：:P reTranslateMessage](#pretranslatemessage)|在分派特定視窗訊息之前加以處理。|
+|[CFrameWndEx：： RecalcLayout](#recalclayout)|調整框架和其子視窗的版面配置。|
+|[CFrameWndEx：： RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊窗格，並將它從停駐管理員的內部清單中移除。|
+|[CFrameWndEx：： SetDockState](#setdockstate)|將停駐配置還原為儲存在登錄中的銜接狀態。|
+|[CFrameWndEx：： SetPrintPreviewFrame](#setprintpreviewframe)|設定預覽列印框架視窗。|
+|[CFrameWndEx：： SetupToolbarMenu](#setuptoolbarmenu)|將使用者定義的命令插入工具列功能表中。|
+|[CFrameWndEx：： ShowFullScreen](#showfullscreen)|切換全螢幕和一般模式之間的主框架。|
+|[CFrameWndEx：： ShowPane](#showpane)|顯示或隱藏指定的窗格。|
+|[CFrameWndEx：： UpdateCaption](#updatecaption)|由架構呼叫以更新視窗框架標題。|
+|[CFrameWndEx：： WinHelp](#winhelp)|叫用 `WinHelp` 應用程式或內容相關説明。|
 
 ## <a name="example"></a>範例
 
-下面的示例演示如何從`CFrameWndEx`類繼承類。 此範例展示子類別的方法, 以及如何重寫該方法`OnShowPopupMenu`。 此程式碼片段是 [WordPad 範例](../../overview/visual-cpp-samples.md)的一部分。
+下列範例示範如何從類別繼承類別 `CFrameWndEx` 。 此範例說明子類別中的方法簽章，以及如何覆寫 `OnShowPopupMenu` 方法。 此程式碼片段是 [WordPad 範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_WordPad#3](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#4](../../mfc/reference/codesnippet/cpp/cframewndex-class_2.cpp)]
@@ -308,13 +308,13 @@ class CFrameWndEx : public CFrameWnd
 
 [CFrameWndEx](../../mfc/reference/cframewndex-class.md)
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：** afxframewndex.h
 
-## <a name="cframewndexactiveitemrecalclayout"></a><a name="activeitemrecalclayout"></a>CFramewndEx::活動專案Recalc佈局
+## <a name="cframewndexactiveitemrecalclayout"></a><a name="activeitemrecalclayout"></a> CFrameWndEx：： ActiveItemRecalcLayout
 
-調整 OLE 用戶端項的佈局和幀的工作區。
+調整 OLE 用戶端專案和框架工作區的版面配置。
 
 ```cpp
 void ActiveItemRecalcLayout();
@@ -322,9 +322,9 @@ void ActiveItemRecalcLayout();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexaddpane"></a><a name="addpane"></a>CFramewndEx::添加窗格
+## <a name="cframewndexaddpane"></a><a name="addpane"></a> CFrameWndEx：： AddPane
 
-向停靠管理器註冊控制欄。
+向銜接管理員註冊控制列。
 
 ```
 BOOL AddPane(
@@ -334,19 +334,19 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>參數
 
-*p控制列*<br/>
-[在]要註冊的控制列列窗格。
+*pControlBar*<br/>
+在要註冊的控制列窗格。
 
-*b泰爾*<br/>
-[在]如果要將控制列列窗格添加到清單的末尾,則為 TRUE;如果要將控制件欄窗格添加到清單的末尾,則為 TRUE。否則。
+*bTail*<br/>
+在如果您想要將控制列窗格加入至清單的結尾，則為 TRUE;否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果控制欄已成功註冊,則為 TRUE;否則。
+如果已成功註冊控制列，則為 TRUE;否則為 FALSE。
 
-## <a name="cframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CFramewndEx::調整擴展佈局
+## <a name="cframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a> CFrameWndEx：： AdjustDockingLayout
 
-重新計算停靠到框架視窗的所有窗格的佈局。
+重新計算停駐至框架視窗之所有窗格的配置。
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
@@ -355,15 +355,15 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="parameters"></a>參數
 
 *hdwp*<br/>
-包含多個視窗位置的結構的句柄。 .
+結構的控制碼，其中包含多個視窗的位置。 .
 
 ### <a name="remarks"></a>備註
 
-hdwp 結構由[BeginDeferWindowPos](/windows/win32/api/winuser/nf-winuser-begindeferwindowpos)方法初始化。
+Hdwp 結構是由 [BeginDeferWindowPos](/windows/win32/api/winuser/nf-winuser-begindeferwindowpos) 方法初始化。
 
-## <a name="cframewndexdelayupdateframemenu"></a><a name="delayupdateframemenu"></a>CFramewndEx::D更新框架功能表
+## <a name="cframewndexdelayupdateframemenu"></a><a name="delayupdateframemenu"></a> CFrameWndEx：:D elayUpdateFrameMenu
 
-設置幀功能表,然後在命令處理空閒時更新它。
+設定畫面格功能表，然後在命令處理處於閒置狀態時進行更新。
 
 ```
 virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
@@ -371,14 +371,14 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 ### <a name="parameters"></a>參數
 
-*哈梅內阿爾特*<br/>
-[在]處理備用功能表。
+*hMenuAlt*<br/>
+在替代功能表的控制碼。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexdockpane"></a><a name="dockpane"></a>CFramewndEx::DockPane
+## <a name="cframewndexdockpane"></a><a name="dockpane"></a> CFrameWndEx：:D ockPane
 
-將指定的窗格停靠到框架視窗。
+將指定的窗格停駐至框架視窗。
 
 ```cpp
 void DockPane(
@@ -390,17 +390,17 @@ void DockPane(
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[在]指向要停靠的控制欄的指標。
+在要停駐的控制項列指標。
 
 *nDockBarID*<br/>
-[在]要停靠到的幀視窗一側的 ID。
+在要停駐的框架視窗側邊的識別碼。
 
 *lpRect*<br/>
-[在]指向常量整流結構的指標,用於指定視窗的螢幕位置和大小。
+在常數矩形結構的指標，指定視窗的螢幕位置和大小。
 
 ### <a name="remarks"></a>備註
 
-*nDockBarID*參數可以具有以下值之一:
+*NDockBarID*參數可以是下列其中一個值：
 
 - AFX_IDW_DOCKBAR_TOP
 
@@ -410,9 +410,9 @@ void DockPane(
 
 - AFX_IDW_DOCKBAR_RIGHT
 
-## <a name="cframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>CframewndEx::D奧克帕內左側
+## <a name="cframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a> CFrameWndEx：:D ockPaneLeftOf
 
-將指定的窗格停靠到另一個窗格的左側。
+將指定的窗格停駐到另一個窗格的左邊。
 
 ```
 BOOL DockPaneLeftOf(
@@ -423,22 +423,22 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[在]指向要停靠的窗格物件的指標。
+在要停駐之窗格物件的指標。
 
-*左撇子*<br/>
-[在]指向左側窗格的指標,用於停靠*pBar*指定的窗格。
+*pLeftOf*<br/>
+在要停駐 *pBar*所指定之窗格的左邊窗格指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果*pBar*已成功停靠,則為 TRUE。 否則為 FALSE。
+如果成功停駐 *pBar* ，則為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-該方法採用*pBar*參數指定的工具列,並將其停靠在*pLeftOf*參數指定的工具列左側。
+方法會採用 *pBar* 參數所指定的工具列，並將其停駐在 *pLeftOf* 參數所指定的工具列左側。
 
-## <a name="cframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>CFramewndEx:啟用自動隱藏窗格
+## <a name="cframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a> CFrameWndEx：： EnableAutoHidePanes
 
-當窗格停靠在主框架視窗的指定一側時,該窗格啟用自動隱藏模式。
+當窗格停駐于主框架視窗的指定端時，會啟用該窗格的自動隱藏模式。
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -446,28 +446,28 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>參數
 
-*dwDock 風格*<br/>
-[在]指定要停靠窗格的主框架視窗的一側。
+*dwDockStyle*<br/>
+在指定主框架視窗的側邊，以停駐窗格。
 
 ### <a name="return-value"></a>傳回值
 
-如果條形窗格成功停靠到*dwDockStyle*指定的幀視窗側,則為 TRUE,否則。
+如果橫條窗格成功停駐于 *dwDockStyle*所指定的框架視窗端，則為 TRUE，否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*dwDockStyle*可以具有以下值之一:
+*dwDockStyle* 可以具有下列其中一個值：
 
-- CBRS_ALIGN_TOP:允許控制欄停靠到框架視窗的工作區的頂部。
+- CBRS_ALIGN_TOP：允許將控制列停駐在框架視窗的工作區頂端。
 
-- CBRS_ALIGN_BOTTOM:允許控制欄停靠到框架視窗的工作區的底部。
+- CBRS_ALIGN_BOTTOM：允許在框架視窗的工作區底部停駐控制列。
 
-- CBRS_ALIGN_LEFT:允許控制欄停靠到框架視窗的工作區左側。
+- CBRS_ALIGN_LEFT：允許將控制列停駐在框架視窗的工作區左邊。
 
-- CBRS_ALIGN_RIGHT:允許控制欄停靠到框架視窗的工作區的右側。
+- CBRS_ALIGN_RIGHT：允許將控制列停駐在框架視窗的工作區右邊。
 
-## <a name="cframewndexenabledocking"></a><a name="enabledocking"></a>CFramewndEx::啟用停靠
+## <a name="cframewndexenabledocking"></a><a name="enabledocking"></a> CFrameWndEx：： EnableDocking
 
-啟用框架視窗窗格的停靠。
+啟用框架視窗的窗格銜接。
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -475,16 +475,16 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>參數
 
-*dwDock 風格*<br/>
-[在]指定窗格列停靠的主框架視窗的一側。
+*dwDockStyle*<br/>
+在指定主框架視窗的側邊，在此窗格中會放置窗格列。
 
 ### <a name="return-value"></a>傳回值
 
-如果條形窗格可以成功停靠在指定端,則為 TRUE。 否則為 FALSE。
+如果橫條窗格可以成功停駐在指定的側邊，則為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*dwDockStyle*參數可以具有以下值之一:
+*DwDockStyle*參數可以是下列其中一個值：
 
 - CBRS_ALIGN_TOP
 
@@ -494,9 +494,9 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 - CBRS_ALIGN_RIGHT
 
-## <a name="cframewndexenablefullscreenmainmenu"></a><a name="enablefullscreenmainmenu"></a>CFramewndEx:啟用全屏主功能表
+## <a name="cframewndexenablefullscreenmainmenu"></a><a name="enablefullscreenmainmenu"></a> CFrameWndEx：： EnableFullScreenMainMenu
 
-在全螢幕模式下顯示或隱藏主菜單。
+以全螢幕模式顯示或隱藏主功能表。
 
 ```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
@@ -504,12 +504,12 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 ### <a name="parameters"></a>參數
 
-*b啟用選單*<br/>
-[在]TRUE 以全螢幕模式顯示主選單,否則為 FALSE。
+*bEnableMenu*<br/>
+在TRUE 表示以全螢幕模式顯示主功能表，否則為 FALSE。
 
-## <a name="cframewndexenablefullscreenmode"></a><a name="enablefullscreenmode"></a>CFramewndEx::啟用全屏模式
+## <a name="cframewndexenablefullscreenmode"></a><a name="enablefullscreenmode"></a> CFrameWndEx：： EnableFullScreenMode
 
-啟用框架視窗的全屏模式。
+啟用框架視窗的全螢幕模式。
 
 ```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
@@ -517,20 +517,20 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 ### <a name="parameters"></a>參數
 
-*ui 全螢幕Cmd*<br/>
-[在]啟用和禁用全螢幕模式的命令的 ID。
+*uiFullScreenCmd*<br/>
+在啟用及停用全螢幕模式之命令的識別碼。
 
 ### <a name="remarks"></a>備註
 
-在全螢幕模式下,所有停靠控制欄、工具列和功能表都隱藏,活動視圖將調整大小以佔據全屏。
+在全螢幕模式中，所有停駐控制列、工具列和功能表都是隱藏的，且使用中的視圖會調整大小以佔用全螢幕。
 
-啟用全螢幕模式時,必須指定啟用或禁用全螢幕模式的命令的 ID。 可以從主框架`EnableFullScreenMode`的功能`OnCreate`調用。 當框架視窗切換到全屏模式時,框架將創建一個浮動工具列,其中一個按鈕具有指定的命令 ID。
+當您啟用全螢幕模式時，必須指定啟用或停用全螢幕模式之命令的識別碼。 您可以 `EnableFullScreenMode` 從主框架的函式呼叫 `OnCreate` 。 當框架視窗切換至全螢幕模式時，架構會建立浮動工具列，其中有一個具有指定命令識別碼的按鈕。
 
-如果要將主選單保留在螢幕上,請致電[CFrameWndEx::啟用全螢幕主選單](#enablefullscreenmainmenu)。
+如果您想要保留畫面上的主功能表，請呼叫 [CFrameWndEx：： EnableFullScreenMainMenu](#enablefullscreenmainmenu)。
 
-## <a name="cframewndexenableloaddockstate"></a><a name="enableloaddockstate"></a>CFramewndEx::啟用LoadDockState
+## <a name="cframewndexenableloaddockstate"></a><a name="enableloaddockstate"></a> CFrameWndEx：： EnableLoadDockState
 
-啟用或禁用停靠狀態的載入。
+啟用或停用銜接狀態的載入。
 
 ```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
@@ -538,12 +538,12 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>參數
 
-*b 啟用*<br/>
-[在]TRUE 要啟用停靠狀態的載入,FALSE 將禁用停靠狀態的載入。
+*bEnable*<br/>
+在TRUE 表示啟用銜接狀態的載入，FALSE 則停用停駐狀態的載入。
 
-## <a name="cframewndexenablepanemenu"></a><a name="enablepanemenu"></a>CFramewndEx::啟用PaneMenu
+## <a name="cframewndexenablepanemenu"></a><a name="enablepanemenu"></a> CFrameWndEx：： EnablePaneMenu
 
-啟用或禁用窗格功能表的自動處理。
+啟用或停用窗格功能表的自動處理。
 
 ```cpp
 void EnablePaneMenu(
@@ -557,27 +557,27 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>參數
 
-*b 啟用*<br/>
-[在]TRUE 可自動處理控制欄彈出式功能表;FALSE 以禁用控制欄彈出式功能表的自動處理。
+*bEnable*<br/>
+在TRUE 表示啟用控制列快顯功能表的自動處理;FALSE 表示停用控制列快顯功能表的自動處理。
 
-*ui 客製化Cmd*<br/>
-[在]**「自訂」** 選單項的命令 ID。
+*uiCustomizeCmd*<br/>
+在 **自訂** 功能表項目的命令識別碼。
 
-*str定製標籤*<br/>
-[在]**要為「自訂」** 選單項目顯示的標籤
+*strCustomizeLabel*<br/>
+在要針對 [ **自訂** ] 功能表項目顯示的標籤
 
-*uiView 工具列選單入口ID*<br/>
-[在]在控制列中打開彈出功能表的工具列功能表項的 ID。
+*uiViewToolbarsMenuEntryID*<br/>
+在在控制列中開啟快顯功能表的工具列功能表項目的識別碼。
 
-*bContextMenu 只顯示工具列*<br/>
-[在]如果為 TRUE,則控制欄上下文菜單僅顯示工具列清單。 如果 FALSE,功能表將顯示工具列和停靠欄的清單。
+*bCoNtextMenuShowsToolbarsOnly*<br/>
+在若為 TRUE，則控制列內容功能表只會顯示工具列的清單。 如果為 FALSE，則功能表會顯示工具列和停駐列的清單。
 
-*b 只檢視選單顯示工具列*<br/>
-[在]如果為 TRUE,則控制欄選單僅顯示工具列的清單。 如果 FALSE,功能表將顯示工具列和停靠欄的清單。
+*bViewMenuShowsToolbarsOnly*<br/>
+在若為 TRUE，則控制列功能表只會顯示工具列的清單。 如果為 FALSE，則功能表會顯示工具列和停駐列的清單。
 
-## <a name="cframewndexgetactivepopup"></a><a name="getactivepopup"></a>CFramewndEx:取得活動彈出
+## <a name="cframewndexgetactivepopup"></a><a name="getactivepopup"></a> CFrameWndEx：： GetActivePopup
 
-返回指向當前顯示的彈出式功能表的指標。
+傳回目前所顯示快顯功能表的指標。
 
 ```
 CMFCPopupMenu* GetActivePopup() const;
@@ -585,11 +585,11 @@ CMFCPopupMenu* GetActivePopup() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向當前顯示的彈出式功能表的指標;否則 NULL。
+目前顯示之快顯功能表的指標;否則為 Null。
 
-## <a name="cframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>CFramewndEx:取得預設ResId
+## <a name="cframewndexgetdefaultresid"></a><a name="getdefaultresid"></a> CFrameWndEx：： GetDefaultResId
 
-返回框架載入框架視窗時指定的資源 ID。
+傳回架構載入框架視窗時所指定的資源識別碼。
 
 ```
 UINT GetDefaultResId() const;
@@ -597,11 +597,11 @@ UINT GetDefaultResId() const;
 
 ### <a name="return-value"></a>傳回值
 
-使用者在框架載入框架視窗時指定的資源 ID 值。 如果框架窗口沒有功能表欄,則為零。
+當 framework 載入框架視窗時，使用者所指定的資源識別碼值。 如果框架視窗沒有功能表列，則為零。
 
-## <a name="cframewndexgetdockingmanager"></a><a name="getdockingmanager"></a>CFramewndEx::獲取對接管理器
+## <a name="cframewndexgetdockingmanager"></a><a name="getdockingmanager"></a> CFrameWndEx：： GetDockingManager
 
-檢索框架視窗的[CDockingManager 類](../../mfc/reference/cdockingmanager-class.md)物件。
+抓取框架視窗的 [CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md) 物件。
 
 ```
 CDockingManager* GetDockingManager();
@@ -609,13 +609,13 @@ CDockingManager* GetDockingManager();
 
 ### <a name="return-value"></a>傳回值
 
-指向[CDockingManager 類](../../mfc/reference/cdockingmanager-class.md)的指標。
+[CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md)的指標。
 
 ### <a name="remarks"></a>備註
 
-框架窗口創建並使用[CDockingManager 類](../../mfc/reference/cdockingmanager-class.md)物件來管理子視窗停靠。
+框架視窗會建立和使用 [CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md) 物件來管理子視窗銜接。
 
-## <a name="cframewndexgetmenubar"></a><a name="getmenubar"></a>CFramewndEx::獲取功能表欄
+## <a name="cframewndexgetmenubar"></a><a name="getmenubar"></a> CFrameWndEx：： GetMenuBar
 
 將指標傳回到附加在框架視窗的功能表列物件。
 
@@ -625,11 +625,11 @@ const CMFCMenuBar* GetMenuBar() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向附加到框架視窗的功能表欄物件的指標。
+附加至框架視窗的功能表列物件的指標。
 
-## <a name="cframewndexgetpane"></a><a name="getpane"></a>CFramewndEx::獲取窗格
+## <a name="cframewndexgetpane"></a><a name="getpane"></a> CFrameWndEx：： GetPane
 
-返回指向具有指定 ID 的窗格的指標。
+傳回具有指定識別碼之窗格的指標。
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -638,15 +638,15 @@ CBasePane* GetPane(UINT nID);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-[在]控件識別碼。
+在控制項識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-指向具有指定 ID 的窗格的指標。 NULL,如果沒有此類窗格。
+具有指定識別碼之窗格的指標。 如果沒有這類窗格，則為 Null。
 
-## <a name="cframewndexgetribbonbar"></a><a name="getribbonbar"></a>CFramewndEx::獲取功能列
+## <a name="cframewndexgetribbonbar"></a><a name="getribbonbar"></a> CFrameWndEx：： GetRibbonBar
 
-檢索框架的功能區條控制項。
+抓取框架的功能區列控制項。
 
 ```
 CMFCRibbonBar* GetRibbonBar();
@@ -654,11 +654,11 @@ CMFCRibbonBar* GetRibbonBar();
 
 ### <a name="return-value"></a>傳回值
 
-指向框架的[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)。
+框架 [CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md) 的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexgettearoffbars"></a><a name="gettearoffbars"></a>CFramewndEx::獲取關閉條形
+## <a name="cframewndexgettearoffbars"></a><a name="gettearoffbars"></a> CFrameWndEx：： GetTearOffBars
 
 傳回分割狀態的窗格物件清單。
 
@@ -668,11 +668,11 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>傳回值
 
-對`CObList`包含指向處於分淚狀態的窗格物件的指標集合的物件的引用。
+`CObList`物件的參考，其中包含處於終止狀態的窗格物件指標集合。
 
-## <a name="cframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>CFramewndEx::取得工具列按鈕工具提示文字
+## <a name="cframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a> CFrameWndEx：： GetToolbarButtonToolTipText
 
-當應用程式顯示工具列按鈕的工具提示時,由框架調用。
+當應用程式顯示工具列按鈕的工具提示時由架構呼叫。
 
 ```
 virtual BOOL GetToolbarButtonToolTipText(
@@ -683,20 +683,20 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="parameters"></a>參數
 
 *pButton*<br/>
-[在]指向工具列按鈕的指標。
+在工具列按鈕的指標。
 
-*斯特特文字*<br/>
-[在]要顯示按鈕的工具提示文本。
+*strTTText*<br/>
+在要針對按鈕顯示的工具提示文字。
 
 ### <a name="return-value"></a>傳回值
 
-如果已顯示工具提示,則為 TRUE。 否則為 FALSE。
+如果顯示工具提示，則為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-默認情況下,此方法不執行任何操作。 如果要顯示工具列按鈕的工具提示,則重寫此方法。
+根據預設，這個方法不會執行任何動作。 如果您想要顯示工具列按鈕的工具提示，請覆寫這個方法。
 
-## <a name="cframewndexinsertpane"></a><a name="insertpane"></a>CFramewndEx::插入窗格
+## <a name="cframewndexinsertpane"></a><a name="insertpane"></a> CFrameWndEx：： InsertPane
 
 將窗格插入控制列清單中，並向停駐的管理員註冊此窗格。
 
@@ -709,26 +709,26 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>參數
 
-*p控制列*<br/>
+*pControlBar*<br/>
 要插入控制列清單，以及向停駐的管理員註冊的控制列指標。
 
-*p 目標*<br/>
+*pTarget*<br/>
 控制列指標，在其前後插入窗格。
 
-*b 後*<br/>
-如果想在*pTarget*之後插入*pControlBar,* 則為 TRUE,否則。
+*bAfter*<br/>
+如果您想要在*pTarget*之後插入*pControlBar* ，則為 TRUE，否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果控制欄已成功插入和註冊,則為 TRUE,否則為 FALSE。
+如果已成功插入並註冊控制項列，則為 TRUE，否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
 您必須使用 [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) 參與停駐的配置，註冊每個控制列。
 
-## <a name="cframewndexisfullscreen"></a><a name="isfullscreen"></a>CFramewndEx::全屏
+## <a name="cframewndexisfullscreen"></a><a name="isfullscreen"></a> CFrameWndEx：： IsFullScreen
 
-確定框架視窗是否處於全屏模式。
+判斷框架視窗是否處於全螢幕模式。
 
 ```
 BOOL IsFullScreen() const;
@@ -736,15 +736,15 @@ BOOL IsFullScreen() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果幀視窗處於全屏模式,則為 TRUE;如果幀視窗處於全屏模式,則為 TRUE。否則 FALSE。
+如果框架視窗處於全螢幕模式，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-您可以通過調用[CFrameWndEx::啟用全屏模式](#enablefullscreenmode)方法來設置全屏模式。
+您可以藉由呼叫 [CFrameWndEx：： EnableFullScreenMode](#enablefullscreenmode) 方法來設定全螢幕模式。
 
-## <a name="cframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>CFramewndEx::IsMenuBar可用
+## <a name="cframewndexismenubaravailable"></a><a name="ismenubaravailable"></a> CFrameWndEx：： IsMenuBarAvailable
 
-確定指向功能表欄物件的指標是否有效。
+決定功能表列物件的指標是否有效。
 
 ```
 BOOL IsMenuBarAvailable() const;
@@ -752,11 +752,11 @@ BOOL IsMenuBarAvailable() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果框架視窗具有功能表欄,則為 TRUE;如果框架視窗具有功能表欄。否則 FALSE。
+如果框架視窗有功能表列則為 TRUE;否則為 FALSE。
 
-## <a name="cframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>CFramewndEx::IsPointNearDockSite
+## <a name="cframewndexispointneardocksite"></a><a name="ispointneardocksite"></a> CFrameWndEx：： IsPointNearDockSite
 
-確定點是否位於對齊區域中。
+判中斷點是否位於對齊區域中。
 
 ```
 BOOL IsPointNearDockSite(
@@ -768,32 +768,32 @@ BOOL IsPointNearDockSite(
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-[在]點的位置。
+在點的位置。
 
-*dwBaralignment*<br/>
-[出]點對齊的位置。 有關可能的值,請參閱備註部分中的表。
+*dwBarAlignment*<br/>
+擴展點對齊的位置。 如需可能的值，請參閱「備註」一節中的表格。
 
-*bouterEdge*<br/>
-[出]如果點位於靠近框架邊框的位置,則為 TRUE;如果點位於框架邊框附近,則為 TRUE。如果點位於工作區中,則 FALSE。
+*bOuterEdge*<br/>
+擴展如果點靠近框架框線，則為 TRUE;如果點位於工作區，則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果點位於對齊區域中,則為 TRUE;如果點位於對齊區域中,則為 TRUE。否則,FALSE。
+如果點位於對齊區域，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-下表列出了*dwBarAlignment*參數的可能值。
+下表列出 *dwBarAlignment* 參數的可能值。
 
-|||
+|值|描述|
 |-|-|
-|CBRS_ALIGN_TOP|對齊到頂部。  |
-|CBRS_ALIGN_RIGHT|向右對齊。  |
-|CBRS_ALIGN_BOTTOM|與底部對齊。  |
-|CBRS_ALIGN_LEFT|向左對齊。  |
+|CBRS_ALIGN_TOP|對齊頂端。  |
+|CBRS_ALIGN_RIGHT|靠右對齊。  |
+|CBRS_ALIGN_BOTTOM|靠下對齊。  |
+|CBRS_ALIGN_LEFT|靠左對齊。  |
 
-## <a name="cframewndexisprintpreview"></a><a name="isprintpreview"></a>CFramewndEx::是列印預覽
+## <a name="cframewndexisprintpreview"></a><a name="isprintpreview"></a> CFrameWndEx：： IsPrintPreview
 
-確定框架視窗是否處於列印預覽模式。
+判斷框架視窗是否處於預覽列印模式。
 
 ```
 BOOL IsPrintPreview();
@@ -801,13 +801,13 @@ BOOL IsPrintPreview();
 
 ### <a name="return-value"></a>傳回值
 
-如果幀視窗處於列印預覽模式,則為 TRUE;如果框架視窗處於列印預覽模式,則為 TRUE。否則,FALSE。
+如果框架視窗處於預覽列印模式，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexloadframe"></a><a name="loadframe"></a>CFramewndEx::載入幀
+## <a name="cframewndexloadframe"></a><a name="loadframe"></a> CFrameWndEx：： LoadFrame
 
-在建構後調用此方法以創建幀視窗並載入其資源。
+這個方法會在結構建立之後呼叫，以建立框架視窗並載入其資源。
 
 ```
 virtual BOOL LoadFrame(
@@ -819,27 +819,27 @@ virtual BOOL LoadFrame(
 
 ### <a name="parameters"></a>參數
 
-*nID資源*<br/>
-[在]用於載入所有幀資源的資源 ID。
+*nIDResource*<br/>
+在用來載入所有框架資源的資源識別碼。
 
-*dwDefault 樣式*<br/>
-[在]默認框架視窗樣式。
+*dwDefaultStyle*<br/>
+在預設的框架視窗樣式。
 
-*pparentwnd*<br/>
-[在]指向框架的父視窗。
+*pParentWnd*<br/>
+在框架父視窗的指標。
 
 *pContext*<br/>
-[在]指向框架在應用程式創建期間使用的[CCreateContext 結構](../../mfc/reference/ccreatecontext-structure.md)類的指標。
+在在應用程式建立期間，架構所使用之 [CCreateCoNtext 結構](../../mfc/reference/ccreatecontext-structure.md) 類別的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功,則為 TRUE;否則,FALSE。
+如果方法成功，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexnegotiateborderspace"></a><a name="negotiateborderspace"></a>CFramewndEx::談判邊界空間
+## <a name="cframewndexnegotiateborderspace"></a><a name="negotiateborderspace"></a> CFrameWndEx：： NegotiateBorderSpace
 
-實現 OLE 客戶端邊界協商。
+實行 OLE 用戶端框線協商。
 
 ```
 virtual BOOL NegotiateBorderSpace(
@@ -850,31 +850,31 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>參數
 
 *nBorderCmd*<br/>
-[在]邊界協商命令。 有關可能的值,請參閱備註部分。
+在框線協商命令。 如需可能的值，請參閱備註一節。
 
-*lprect邊框*<br/>
-[進出]邊框的尺寸。
+*lpRectBorder*<br/>
+[in，out]框線的維度。
 
 ### <a name="return-value"></a>傳回值
 
-如果必須重新計算佈局,則為 TRUE;如果必須重新計算佈局,則為 TRUE。否則,FALSE。
+如果必須重新計算版面配置，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-下表列出了*nBorderCmd*參數的可能值。
+下表列出 *nBorderCmd* 參數的可能值。
 
-*邊框取得*<br/>
-獲取可用的 OLE 客戶端空間。
+*borderGet*<br/>
+取得可用的 OLE 用戶端空間。
 
-*邊框要求*<br/>
-請求 OLE 客戶端空間。
+*borderRequest*<br/>
+要求 OLE 用戶端空間。
 
-*邊框集*<br/>
-設置 OLE 用戶端空間。
+*borderSet*<br/>
+設定 OLE 用戶端空間。
 
-## <a name="cframewndexonactivate"></a><a name="onactivate"></a>CFramewndEx::打開啟動
+## <a name="cframewndexonactivate"></a><a name="onactivate"></a> CFrameWndEx：： OnActivate
 
-當使用者輸入切換到或遠離幀時,框架調用此方法。
+當使用者輸入切換至框架或離開框架時，架構會呼叫這個方法。
 
 ```
 afx_msg void OnActivate(
@@ -885,28 +885,28 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>參數
 
-*n州*<br/>
-[在]幀是活動還是非活動。 有關可能的值,請參閱備註部分中的表。
+*nState*<br/>
+在框架是否為使用中或非作用中狀態。 如需可能的值，請參閱「備註」一節中的表格。
 
-*pWnd 其他*<br/>
-[在]指向使用當前窗口切換使用者輸入的另一個視窗。
+*pWndOther*<br/>
+在另一個視窗的指標，此視窗正在切換使用者輸入與目前的視窗。
 
-*b 最小化*<br/>
-[在]幀的最小化狀態。 如果幀最小化,則為 TRUE;否則,FALSE。
+*bMinimized*<br/>
+在框架的最小化狀態。 如果框架最小化，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-下表列出了*nState*參數的可能值。
+下表列出 *nState* 參數的可能值。
 
-|||
+|值|描述|
 |-|-|
-|WA_ACTIVE|框架由滑鼠按一下以外的方法選擇。  |
-|WA_CLICKACTIVE|按下滑鼠即可選擇框架。  |
-|WA_INACTIVE|未選擇框架。  |
+|WA_ACTIVE|畫面是由滑鼠點擊以外的方法所選取。  |
+|WA_CLICKACTIVE|畫面是由滑鼠按一下所選取。  |
+|WA_INACTIVE|未選取畫面格。  |
 
-## <a name="cframewndexonactivateapp"></a><a name="onactivateapp"></a>CFramewndEx:打開ActivateApp
+## <a name="cframewndexonactivateapp"></a><a name="onactivateapp"></a> CFrameWndEx：： OnActivateApp
 
-在選擇或取消選擇應用程式時由框架呼叫。
+當您選取或取消選取應用程式時，由架構呼叫。
 
 ```
 afx_msg void OnActivateApp(
@@ -916,17 +916,17 @@ afx_msg void OnActivateApp(
 
 ### <a name="parameters"></a>參數
 
-*b 活動*<br/>
-[在]如果選擇了應用程式,則為 TRUE;如果選擇了"真"。如果未選擇應用程式,則 FALSE。
+*bActive*<br/>
+在如果已選取應用程式，則為 TRUE;如果未選取應用程式，則為 FALSE。
 
 *dwThreadID*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonchangevisualmanager"></a><a name="onchangevisualmanager"></a>CFramewndEx::打開視覺管理器
+## <a name="cframewndexonchangevisualmanager"></a><a name="onchangevisualmanager"></a> CFrameWndEx：： OnChangeVisualManager
 
-當對框架的更改需要更改視覺管理器時,由框架調用。
+當框架的變更需要變更視覺管理員時，由架構呼叫。
 
 ```
 afx_msg LRESULT OnChangeVisualManager(
@@ -937,10 +937,10 @@ afx_msg LRESULT OnChangeVisualManager(
 ### <a name="parameters"></a>參數
 
 *wParam*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lParam*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -948,9 +948,9 @@ afx_msg LRESULT OnChangeVisualManager(
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonclose"></a><a name="onclose"></a>CFramewndEx::關閉
+## <a name="cframewndexonclose"></a><a name="onclose"></a> CFrameWndEx：： OnClose
 
-框架調用此方法以關閉幀。
+架構會呼叫這個方法來關閉框架。
 
 ```
 afx_msg void OnClose();
@@ -958,11 +958,11 @@ afx_msg void OnClose();
 
 ### <a name="remarks"></a>備註
 
-如果框架處於列印預覽模式,則會發送 Windows 消息以關閉列印預覽;如果框架處於列印預覽狀態,則會發送 Windows 消息以關閉列印預覽。否則,如果幀承載 OLE 用戶端,則用戶端將停用。
+如果畫面格處於預覽列印模式，則會傳送 Windows 訊息以關閉預覽列印;否則，如果框架裝載 OLE 用戶端，則會停用用戶端。
 
-## <a name="cframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>CFramewndEx::關閉對接窗格
+## <a name="cframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a> CFrameWndEx：： OnCloseDockingPane
 
-當用戶按下停靠窗格上的 **「關閉**」按鈕時,由框架呼叫。
+當使用者按一下停駐窗格上的 [ **關閉** ] 按鈕時，由架構呼叫。
 
 ```
 virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
@@ -970,15 +970,15 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 
 ### <a name="return-value"></a>傳回值
 
-如果停靠條可以關閉,則為 TRUE。 否則
+如果停駐行可關閉，則為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-預設實現不執行任何操作。 如果要處理停靠欄的隱藏,則重寫此方法。
+預設值不會執行任何動作。 如果您想要處理停駐列的隱藏，請覆寫這個方法。
 
-## <a name="cframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>CFramewndEx::在關閉迷你框架上
+## <a name="cframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a> CFrameWndEx：： OnCloseMiniFrame
 
-當用戶按下浮動迷你框架視窗中的 **「關閉**」按鈕時,由框架呼叫。
+當使用者按一下浮動迷你框架視窗上的 [ **關閉** ] 按鈕時，由架構呼叫。
 
 ```
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
@@ -986,13 +986,13 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="return-value"></a>傳回值
 
-如果可以關閉浮動迷你框架視窗,則為 TRUE。 否則為 FALSE。
+如果可以關閉浮動迷你框架視窗，則為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-預設實作不做任何動作。 如果要處理浮動迷你框架視窗的隱藏,則重寫此方法。
+預設實作不做任何動作。 如果您想要處理浮動迷你框架視窗的隱藏，請覆寫這個方法。
 
-## <a name="cframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>CFramewndEx::在關閉彈出功能表
+## <a name="cframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a> CFrameWndEx：： OnClosePopupMenu
 
 架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。
 
@@ -1003,15 +1003,15 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="parameters"></a>參數
 
 *pMenuPopup*<br/>
-指向彈出功能表的指標。
+快顯功能表的指標。
 
 ### <a name="remarks"></a>備註
 
-框架在即將關閉視窗時發送WM_DESTROY消息。 如果要處理`CMFCPopupMenu`物件在處理框架在關閉視窗時`CMFCPopupMenu`發送 WM_DESTROY消息時屬於框架視窗的物件的通知,則重寫此方法。
+架構會在即將關閉視窗時傳送 WM_DESTROY 訊息。 如果您想要在 `CMFCPopupMenu` `CMFCPopupMenu` 物件處理由架構在視窗關閉時傳送的 WM_DESTROY 訊息時，從屬於框架視窗的物件處理通知，請覆寫這個方法。
 
-## <a name="cframewndexoncmdmsg"></a><a name="oncmdmsg"></a>CFramewndEx::OnCmdMsg
+## <a name="cframewndexoncmdmsg"></a><a name="oncmdmsg"></a> CFrameWndEx：： OnCmdMsg
 
-調度命令消息。
+分派命令訊息。
 
 ```
 virtual BOOL OnCmdMsg(
@@ -1024,26 +1024,26 @@ virtual BOOL OnCmdMsg(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-[在]命令識別碼。
+在命令識別碼。
 
-*n代碼*<br/>
-[在]命令消息類別。
+*nCode*<br/>
+在命令訊息類別。
 
 *pExtra*<br/>
-[進出]指向命令物件的指標。
+[in，out]命令物件的指標。
 
 *pHandlerInfo*<br/>
-[進出]指向命令處理程序結構的指標。
+[in，out]命令處理常式結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果處理命令消息,則為 TRUE;如果已處理命令消息,則為 TRUE。否則,FALSE。
+如果已處理命令訊息，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexoncontexthelp"></a><a name="oncontexthelp"></a>CFramewndEx::在上下文説明
+## <a name="cframewndexoncontexthelp"></a><a name="oncontexthelp"></a> CFrameWndEx：： OnCoNtextHelp
 
-由框架調用以顯示與上下文相關的説明。
+由架構呼叫以顯示內容相關的說明。
 
 ```
 afx_msg void OnContextHelp();
@@ -1051,9 +1051,9 @@ afx_msg void OnContextHelp();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexoncreate"></a><a name="oncreate"></a>CFramewndEx::打開創建
+## <a name="cframewndexoncreate"></a><a name="oncreate"></a> CFrameWndEx：： >oncreate
 
-創建框架後由框架調用。
+在建立框架之後由架構呼叫。
 
 ```
 afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
@@ -1061,18 +1061,18 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 
 ### <a name="parameters"></a>參數
 
-*lpCreatestruct*<br/>
-[在]指向新幀的[「創建結構」](/windows/win32/api/winuser/ns-winuser-createstructw)的指標。
+*lpCreateStruct*<br/>
+在新框架的 [CREATESTRUCT 結構](/windows/win32/api/winuser/ns-winuser-createstructw) 指標。
 
 ### <a name="return-value"></a>傳回值
 
-0 繼續創建幀;-1 摧毀框架。
+0以繼續建立框架;-1 可終結框架。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexondestroy"></a><a name="ondestroy"></a>CFramewndEx::On銷毀
+## <a name="cframewndexondestroy"></a><a name="ondestroy"></a> CFrameWndEx：： OnDestroy
 
-框架被銷毀時由框架調用。
+當框架損毀時由架構呼叫。
 
 ```
 afx_msg void OnDestroy();
@@ -1080,11 +1080,11 @@ afx_msg void OnDestroy();
 
 ### <a name="remarks"></a>備註
 
-加速器表和所有視窗都已銷毀。
+快速鍵對應表和所有視窗都會損毀。
 
-## <a name="cframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>CFramewndEx::在DrawMenu圖像
+## <a name="cframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a> CFrameWndEx：： OnDrawMenuImage
 
-當應用程式繪製與功能表項關聯的圖像時,由框架調用。
+當應用程式繪製與功能表項目相關聯的影像時，由架構呼叫。
 
 ```
 virtual BOOL OnDrawMenuImage(
@@ -1095,26 +1095,26 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
-*pMenu 按鈕*<br/>
-[在]指向正在渲染其圖像的功能表按鈕的指標。
+*pMenuButton*<br/>
+在要呈現其影像的功能表按鈕指標。
 
 *rectImage*<br/>
-[在]指向指定影像的`Rect`螢幕位置和大小的結構的指標。
+在 `Rect` 結構的指標，指定影像的螢幕位置和大小。
 
 ### <a name="return-value"></a>傳回值
 
-如果框架成功呈現圖像,則為 TRUE;如果框架成功呈現圖像,則為 TRUE。否則。
+如果架構成功呈現映射，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果要為屬於`CFrameWndEx`派生對象擁有的功能表欄的功能表項自定義圖像渲染,請重寫此方法。
+如果您想要針對屬於衍生物件所擁有之功能表項目的功能表項目自訂影像轉譯，請覆寫這個方法 `CFrameWndEx` 。
 
-## <a name="cframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>CFramewndEx::在DrawMenuLogo
+## <a name="cframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a> CFrameWndEx：： OnDrawMenuLogo
 
-當`CMFCPopupMenu`物件處理WM_PAINT消息時,由框架調用。
+當物件處理 WM_PAINT 訊息時，由架構呼叫 `CMFCPopupMenu` 。
 
 ```
 virtual void OnDrawMenuLogo(
@@ -1125,22 +1125,22 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="parameters"></a>參數
 
-*pDC*<br/>
-[在]指向設備上下文的指標。
+*Pdc*<br/>
+在裝置內容的指標。
 
 *pMenu*<br/>
-[在]指向功能表項的指標。
+在功能表項目的指標。
 
-*雷科洛格*<br/>
-[在]對指定選單標誌標的`CRect`螢幕位置和大小的常量結構的引用。
+*rectLogo*<br/>
+在常數結構的參考 `CRect` ，指定功能表標誌的螢幕位置和大小。
 
 ### <a name="remarks"></a>備註
 
-如果要在屬於`CFrameWndEx`派生對象擁有的功能表欄的彈出式功能表上顯示徽標,則重寫此函數。
+如果您想要在屬於衍生物件所擁有之功能表列的快顯功能表上顯示標誌，請覆寫此函式 `CFrameWndEx` 。
 
-## <a name="cframewndexondwmcompositionchanged"></a><a name="ondwmcompositionchanged"></a>CFramewndEx:onDWM 組合已更改
+## <a name="cframewndexondwmcompositionchanged"></a><a name="ondwmcompositionchanged"></a> CFrameWndEx：： OnDWMCompositionChanged
 
-當桌面視窗管理員 (DWM) 組合已啟用或禁用時,由框架呼叫。
+當桌面視窗管理員 (DWM) 組合已啟用或停用時，由架構呼叫。
 
 ```
 afx_msg LRESULT OnDWMCompositionChanged(
@@ -1151,10 +1151,10 @@ afx_msg LRESULT OnDWMCompositionChanged(
 ### <a name="parameters"></a>參數
 
 *Wp*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lp*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1162,9 +1162,9 @@ afx_msg LRESULT OnDWMCompositionChanged(
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonexitsizemove"></a><a name="onexitsizemove"></a>CFramewndEx:打開退出大小移動
+## <a name="cframewndexonexitsizemove"></a><a name="onexitsizemove"></a> CFrameWndEx：： OnExitSizeMove
 
-當框架停止移動或調整大小時,由框架調用。
+當框架停止移動或調整大小時，由架構呼叫。
 
 ```
 LRESULT OnExitSizeMove(
@@ -1175,10 +1175,10 @@ LRESULT OnExitSizeMove(
 ### <a name="parameters"></a>參數
 
 *Wp*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lp*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1186,9 +1186,9 @@ LRESULT OnExitSizeMove(
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexongetminmaxinfo"></a><a name="ongetminmaxinfo"></a>CFramewndEx::OnGetminMaxinfo
+## <a name="cframewndexongetminmaxinfo"></a><a name="ongetminmaxinfo"></a> CFrameWndEx：： OnGetMinMaxInfo
 
-當框架調整大小以設置視窗尺寸限制時,由框架調用。
+當框架調整大小以設定視窗維度限制時，由架構呼叫。
 
 ```
 afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
@@ -1197,13 +1197,13 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ### <a name="parameters"></a>參數
 
 *lpMMI*<br/>
-[在]指向[MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo)結構的指標。
+在 [MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo) 結構的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonidleupdatecmdui"></a><a name="onidleupdatecmdui"></a>CFramewndEx::上線更新CmdUI
+## <a name="cframewndexonidleupdatecmdui"></a><a name="onidleupdatecmdui"></a> CFrameWndEx：： OnIdleUpdateCmdUI
 
-當命令處理處於空閒狀態時,框架調用以更新幀顯示。
+在命令處理閒置時，由架構呼叫以更新框架顯示。
 
 ```
 afx_msg LRESULT OnIdleUpdateCmdUI(
@@ -1214,10 +1214,10 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 ### <a name="parameters"></a>參數
 
 *wParam*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lParam*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1225,9 +1225,9 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonlbuttondown"></a><a name="onlbuttondown"></a>CFramewndEx::打開按鈕
+## <a name="cframewndexonlbuttondown"></a><a name="onlbuttondown"></a> CFrameWndEx：： OnLButtonDown
 
-當使用者按下滑鼠左鍵時,框架將調用此方法。
+當使用者按下滑鼠左鍵時，架構會呼叫這個方法。
 
 ```
 afx_msg void OnLButtonDown(
@@ -1238,16 +1238,16 @@ afx_msg void OnLButtonDown(
 ### <a name="parameters"></a>參數
 
 *nFlags*<br/>
-[在]指示使用者是否按下修改器鍵。 有關可能的值,請參閱[WM_LBUTTONDOWN通知](/windows/win32/inputdev/wm-lbuttondown)中的參數*wParam。*
+在指出使用者是否按下輔助按鍵。 如需可能的值，請參閱[WM_LBUTTONDOWN 通知](/windows/win32/inputdev/wm-lbuttondown)中的參數*wParam* 。
 
 *點*<br/>
-[在]指定指標相對於視窗左上角的 x 和 y 座標。
+在指定指標的 x 和 y 座標（相對於視窗的左上角）。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonlbuttonup"></a><a name="onlbuttonup"></a>CFramewndEx::OnLButtonUp
+## <a name="cframewndexonlbuttonup"></a><a name="onlbuttonup"></a> CFrameWndEx：： OnLButtonUp
 
-當使用者釋放滑鼠左鍵時,框架將調用此方法。
+當使用者放開滑鼠左鍵時，架構會呼叫這個方法。
 
 ```
 afx_msg void OnLButtonUp(
@@ -1258,16 +1258,16 @@ afx_msg void OnLButtonUp(
 ### <a name="parameters"></a>參數
 
 *nFlags*<br/>
-[在]指示使用者是否按下修改器鍵。 有關可能的值,請參閱[WM_LBUTTONUP通知](/windows/win32/inputdev/wm-lbuttonup)中的參數*wParam。*
+在指出使用者是否按下輔助按鍵。 如需可能的值，請參閱[WM_LBUTTONUP 通知](/windows/win32/inputdev/wm-lbuttonup)中的參數*wParam* 。
 
 *點*<br/>
-[在]指定指標相對於視窗左上角的 x 和 y 座標。
+在指定指標的 x 和 y 座標（相對於視窗的左上角）。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>CFramewndEx::在MenuButton工具命中測試
+## <a name="cframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a> CFrameWndEx：： OnMenuButtonToolHitTest
 
-當`CMFCToolBarButton`物件處理WM_NCHITTEST消息時,由框架調用。
+當物件處理 WM_NCHITTEST 訊息時，由架構呼叫 `CMFCToolBarButton` 。
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1278,22 +1278,22 @@ virtual BOOL OnMenuButtonToolHitTest(
 ### <a name="parameters"></a>參數
 
 *pButton*<br/>
-[在]指向工具列按鈕的指標。
+在工具列按鈕的指標。
 
 *Pti*<br/>
-[出]指向工具資訊結構的指標。
+擴展工具資訊結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果應用程式填充*pTI*參數,則為 TRUE。 否則為 FALSE。
+如果應用程式填滿 *pTI* 參數，則為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果要提供有關特定功能表項的工具提示資訊,請重寫此方法。
+如果您想要提供有關特定功能表項目的工具提示資訊，請覆寫這個方法。
 
-## <a name="cframewndexonmenuchar"></a><a name="onmenuchar"></a>CFramewndEx::在MenuChar
+## <a name="cframewndexonmenuchar"></a><a name="onmenuchar"></a> CFrameWndEx：： OnMenuChar
 
-當顯示功能表並且使用者按下與命令不對應的鍵時,由框架調用。
+由架構在顯示功能表時呼叫，且使用者按下未對應至命令的按鍵。
 
 ```
 afx_msg LRESULT OnMenuChar(
@@ -1304,28 +1304,28 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>參數
 
-*n查爾*<br/>
-[在]按鍵的字元代碼。
+*nChar*<br/>
+在已按下之按鍵的字元碼。
 
 *nFlags*<br/>
-[在]如果顯示的功能表是子功能表,則包含MF_POPUP標誌;如果顯示的功能表是控件功能表,則包含MF_SYSMENU標誌。
+在如果顯示的功能表是子功能表，則包含 MF_POPUP 旗標;如果顯示的功能表是控制項功能表，則包含 MF_SYSMENU 旗標。
 
 *pMenu*<br/>
-[在]指向功能表的指標。
+在功能表的指標。
 
 ### <a name="return-value"></a>傳回值
 
-高階單詞必須是以下值之一。
+高序位字必須是下列值之一。
 
-|||
-|-|-|
-`0` | 框架應忽略擊鍵。
-`1`  | 框架應關閉功能表。
-`2`  | 框架應選擇功能表中顯示的專案之一。 低階單詞包含要選擇的命令的 ID。
+| 值 | 描述 |
+|--|--|
+| `0` | 架構應忽略擊鍵。 |
+| `1` | 架構應該會關閉功能表。 |
+| `2` | 架構應該選取功能表中所顯示的其中一個專案。 低序位單字包含要選取之命令的識別碼。 |
 
-## <a name="cframewndexonmousemove"></a><a name="onmousemove"></a>CFramewndEx::滑鼠移動
+## <a name="cframewndexonmousemove"></a><a name="onmousemove"></a> CFrameWndEx：： OnMouseMove
 
-當指標移動時,框架調用此方法。
+當指標移動時，架構會呼叫這個方法。
 
 ```
 afx_msg void OnMouseMove(
@@ -1336,16 +1336,16 @@ afx_msg void OnMouseMove(
 ### <a name="parameters"></a>參數
 
 *nFlags*<br/>
-[在]指示使用者是否按下修改器鍵。 有關可能的值,請參閱[WM_MOUSEMOVE通知](/windows/win32/inputdev/wm-mousemove)中的參數*wParam。*
+在指出使用者是否按下輔助按鍵。 如需可能的值，請參閱[WM_MOUSEMOVE 通知](/windows/win32/inputdev/wm-mousemove)中的參數*wParam* 。
 
 *點*<br/>
-[在]指定指標相對於視窗左上角的 x 和 y 座標。
+在指定相對於視窗左上角之指標的 x 和 y 座標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>CFramewndEx::在移動迷你框架
+## <a name="cframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a> CFrameWndEx：： OnMoveMiniFrame
 
-當窗格窗口移動時由框架調用。
+在窗格視窗移動時由架構呼叫。
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -1354,17 +1354,17 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="parameters"></a>參數
 
 *pFrame*<br/>
-[在]指向[CPaneFramewnd 類](../../mfc/reference/cpaneframewnd-class.md)窗格視窗。
+在 [CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md) 窗格視窗的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果窗格視窗未停靠,則為 TRUE;如果窗格視窗已停靠,則 FALSE。
+如果窗格視窗未固定，則為 TRUE;如果窗格視窗已停駐，則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonncactivate"></a><a name="onncactivate"></a>CFramewndEx::打開NcActivate
+## <a name="cframewndexonncactivate"></a><a name="onncactivate"></a> CFrameWndEx：： OnNcActivate
 
-當必須重新繪製框架的非工作區以指示活動狀態的更改時,框架調用框架。
+當框架的非工作區必須重新繪製以表示作用中狀態的變更時，由架構呼叫。
 
 ```
 afx_msg BOOL OnNcActivate(BOOL bActive);
@@ -1372,18 +1372,18 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 
 ### <a name="parameters"></a>參數
 
-*b 活動*<br/>
-[在]TRUE 以啟動幀;FALSE 以將幀繪製為非活動狀態。
+*bActive*<br/>
+在TRUE 表示要將框架繪製為使用中;FALSE 表示繪製非作用中的框架。
 
 ### <a name="return-value"></a>傳回值
 
-非零繼續默認處理;0 以防止非工作區停用。
+非零，以繼續進行預設處理;0以防止非工作區遭到停用。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonnccalcsize"></a><a name="onnccalcsize"></a>CFramewndEx:在NcCalcsize上
+## <a name="cframewndexonnccalcsize"></a><a name="onnccalcsize"></a> CFrameWndEx：： OnNcCalcSize
 
-當必須計算工作區的大小和位置時,由框架調用。
+當必須計算工作區的大小和位置時，由架構呼叫。
 
 ```
 afx_msg void OnNcCalcSize(
@@ -1393,17 +1393,17 @@ afx_msg void OnNcCalcSize(
 
 ### <a name="parameters"></a>參數
 
-*bCalcValidrects*<br/>
-[在]當應用程式必須指定有效的工作區時為 TRUE;否則,FALSE。
+*bCalcValidRects*<br/>
+在當應用程式必須指定有效的工作區時，則為 TRUE;否則為 FALSE。
 
 *lpncsp*<br/>
-[在]指向包含幀`NCCALCSIZE_PARAMS`尺寸更改的結構的指標。
+在 `NCCALCSIZE_PARAMS` 包含框架維度變更之結構的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonnchittest"></a><a name="onnchittest"></a>CFramewndEx::OnNcHitTest
+## <a name="cframewndexonnchittest"></a><a name="onnchittest"></a> CFrameWndEx：： OnNcHitTest
 
-當指標移動或按下或釋放滑鼠按鈕時,框架調用。
+當指標移動或按下或放開滑鼠按鍵時，由架構呼叫。
 
 ```
 afx_msg LRESULT OnNcHitTest(CPoint point);
@@ -1412,17 +1412,17 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-[在]指標在螢幕座標中的位置。
+在螢幕座標中指標的位置。
 
 ### <a name="return-value"></a>傳回值
 
-指標命中枚舉值。 有關可能值的清單,請參閱[WM_NCHITTEST通知](/windows/win32/inputdev/wm-nchittest)。
+指標叫用列舉值。 如需可能值的清單，請參閱 [WM_NCHITTEST 通知](/windows/win32/inputdev/wm-nchittest)。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonncmousemove"></a><a name="onncmousemove"></a>CFramewndEx::在NcMouseMove上
+## <a name="cframewndexonncmousemove"></a><a name="onncmousemove"></a> CFrameWndEx：： OnNcMouseMove
 
-當指標在非工作區中移動時,由框架調用。
+當指標在非工作區中移動時，由架構呼叫。
 
 ```
 afx_msg void OnNcMouseMove(
@@ -1433,16 +1433,16 @@ afx_msg void OnNcMouseMove(
 ### <a name="parameters"></a>參數
 
 *nHitTest*<br/>
-[在]指標命中枚舉值。 有關可能值的清單,請參閱[WM_NCHITTEST通知](/windows/win32/inputdev/wm-nchittest)。
+在指標叫用列舉值。 如需可能值的清單，請參閱 [WM_NCHITTEST 通知](/windows/win32/inputdev/wm-nchittest)。
 
 *點*<br/>
-[在]指標在螢幕座標中的位置。
+在螢幕座標中指標的位置。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonncpaint"></a><a name="onncpaint"></a>CFramewndEx:onNcPaint
+## <a name="cframewndexonncpaint"></a><a name="onncpaint"></a> CFrameWndEx：： OnNcPaint
 
-當必須繪製非工作區時,框架調用。
+當必須繪製非工作區時，由架構呼叫。
 
 ```
 afx_msg void OnNcPaint();
@@ -1450,9 +1450,9 @@ afx_msg void OnNcPaint();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonpanecheck"></a><a name="onpanecheck"></a>CFramewndEx::在窗格檢查
+## <a name="cframewndexonpanecheck"></a><a name="onpanecheck"></a> CFrameWndEx：： OnPaneCheck
 
-由框架調用以控制窗格的可見性。
+由架構呼叫以控制窗格的可見度。
 
 ```
 afx_msg BOOL OnPaneCheck(UINT nID);
@@ -1461,17 +1461,17 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-[在]窗格的控制 ID。
+在窗格的控制項識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果處理命令,則為 TRUE;如果已處理命令,則為 TRUE。FALSE 繼續處理命令。
+如果已處理命令，則為 TRUE;FALSE 以繼續進行命令處理。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonpostpreviewframe"></a><a name="onpostpreviewframe"></a>CFramewndEx:在後預覽幀上
+## <a name="cframewndexonpostpreviewframe"></a><a name="onpostpreviewframe"></a> CFrameWndEx：： OnPostPreviewFrame
 
-當使用者更改列印預覽模式時,由框架調用。
+當使用者變更預覽列印模式時，由架構呼叫。
 
 ```
 afx_msg LRESULT OnPostPreviewFrame(
@@ -1482,10 +1482,10 @@ afx_msg LRESULT OnPostPreviewFrame(
 ### <a name="parameters"></a>參數
 
 *wParam*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lParam*<br/>
-[在]當幀處於列印預覽模式時為 TRUE;如果幀處於列印預覽模式,則為 TRUE。列印預覽模式關閉時 FALSE。
+在當框架處於預覽列印模式時，則為 TRUE;當預覽列印模式為關閉時為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1493,9 +1493,9 @@ afx_msg LRESULT OnPostPreviewFrame(
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonpowerbroadcast"></a><a name="onpowerbroadcast"></a>CFramewndEx::在功率廣播
+## <a name="cframewndexonpowerbroadcast"></a><a name="onpowerbroadcast"></a> CFrameWndEx：： OnPowerBroadcast
 
-發生電源管理事件時由框架調用。
+當電源管理事件發生時，由架構呼叫。
 
 ```
 afx_msg LRESULT OnPowerBroadcast(
@@ -1506,20 +1506,20 @@ afx_msg LRESULT OnPowerBroadcast(
 ### <a name="parameters"></a>參數
 
 *Wp*<br/>
-[在]電源管理事件。 有關可能值的清單,請參閱[WM_POWERBROADCAST訊息](/windows/win32/Power/wm-powerbroadcast)。
+在電源管理事件。 如需可能值的清單，請參閱 [WM_POWERBROADCAST 訊息](/windows/win32/Power/wm-powerbroadcast)。
 
 *lp*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-調用預設視窗過程的結果。
+呼叫預設視窗程式的結果。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonsetmenu"></a><a name="onsetmenu"></a>CFramewndEx::打開選單
+## <a name="cframewndexonsetmenu"></a><a name="onsetmenu"></a> CFrameWndEx：： OnSetMenu
 
-由框架調用以替換框架視窗功能表。
+由架構呼叫以取代框架視窗功能表。
 
 ```
 afx_msg LRESULT OnSetMenu(
@@ -1532,25 +1532,25 @@ BOOL OnSetMenu(HMENU hmenu);
 ### <a name="parameters"></a>參數
 
 *Wp*<br/>
-[在]處理新的框架視窗功能表。
+在新框架視窗功能表的控制碼。
 
 *lp*<br/>
-[在]處理新視窗功能表。
+在新視窗功能表的控制碼。
 
-*赫梅努*<br/>
-[在]處理新的框架視窗功能表。
+*hmenu*<br/>
+在新框架視窗功能表的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-LRESULT 是調用默認視窗過程的結果。
+LRESULT 是呼叫預設視窗程式的結果。
 
-如果事件已處理,BOOL 為 TRUE;如果事件已處理,則為 TRUE。否則,FALSE。
+如果事件已處理，則布林值為 TRUE。否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CFramewndEx::打開預覽模式
+## <a name="cframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a> CFrameWndEx：： OnSetPreviewMode
 
-由框架調用,以設置框架的列印預覽模式。
+由架構呼叫以設定框架的預覽列印模式。
 
 ```
 virtual void OnSetPreviewMode(
@@ -1560,17 +1560,17 @@ virtual void OnSetPreviewMode(
 
 ### <a name="parameters"></a>參數
 
-*b預覽*<br/>
-[在]TRUE 以啟用列印預覽;FALSE 以禁用列印預覽。
+*bPreview*<br/>
+在TRUE 表示啟用預覽列印;FALSE 表示停用預覽列印。
 
 *pState*<br/>
-[在]指向幀狀態`CPrintPreviewState`結構的指標。
+在 `CPrintPreviewState` 框架狀態結構的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonsettext"></a><a name="onsettext"></a>CFramewndEx::打開文字
+## <a name="cframewndexonsettext"></a><a name="onsettext"></a> CFrameWndEx：： OnSetText
 
-由框架調用以設置視窗的文字。
+由架構呼叫以設定視窗的文字。
 
 ```
 afx_msg LRESULT OnSetText(
@@ -1581,20 +1581,20 @@ afx_msg LRESULT OnSetText(
 ### <a name="parameters"></a>參數
 
 *wParam*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lParam*<br/>
-[在]指向視窗的文本。
+在視窗文字的指標。
 
 ### <a name="return-value"></a>傳回值
 
-從呼叫傳回值到[DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw)。
+從呼叫 [DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw)傳回值。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>CFramewndEx::在顯示自訂窗格
+## <a name="cframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a> CFrameWndEx：： OnShowCustomizePane
 
-當框架顯示`QuickCustomizePane`時 ,它被調用。
+架構在顯示時呼叫 `QuickCustomizePane` 。
 
 ```
 virtual BOOL OnShowCustomizePane(
@@ -1605,22 +1605,22 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="parameters"></a>參數
 
 *pMenuPane*<br/>
-[在]指向快速自定義窗格的指標。
+在快速自訂窗格的指標。
 
 *uiToolbarID*<br/>
-[在]要自定義的工具列的控制 ID。
+在要自訂之工具列的控制項識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-此方法始終返回 TRUE。
+這個方法一律會傳回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-快速自訂選單是單擊工具列的自訂按鈕時出現的彈出式選單
+[快速自訂] 功能表是按一下工具列的 [自訂] 按鈕時所顯示的快顯功能表
 
-## <a name="cframewndexonshowpanes"></a><a name="onshowpanes"></a>CFramewndEx::在顯示窗格
+## <a name="cframewndexonshowpanes"></a><a name="onshowpanes"></a> CFrameWndEx：： OnShowPanes
 
-由框架呼叫以顯示或隱藏窗格。
+由架構呼叫以顯示或隱藏窗格。
 
 ```
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -1628,24 +1628,24 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>參數
 
-*b 顯示*<br/>
-[在]如果應用程式顯示窗格,則為 TRUE;如果應用程式顯示窗格,則為 TRUE。否則。
+*bShow*<br/>
+在如果應用程式顯示窗格則為 TRUE;否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-此方法始終返回 FALSE。
+這個方法一律會傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果*bShow*為 TRUE,並且窗格處於隱藏狀態,或者*bShow*為 FALSE 並且窗格可見,則默認實現將顯示窗格。
+如果 *bShow* 為 TRUE，而且隱藏窗格或 *bShow* 為 FALSE，而且窗格是可見的，則預設的執行會顯示窗格。
 
-如果*bShow*為 TRUE,並且窗格可見,或者*bShow*為 FALSE 並且窗格處於隱藏狀態,則默認實現將隱藏窗格。
+如果 *bShow* 為 TRUE，而且窗格是可見的，或當 *bShow* 為 FALSE 且隱藏窗格時，預設的執行會隱藏窗格。
 
-在派生類中重寫此方法,在框架顯示或隱藏窗格時執行自定義代碼。
+覆寫衍生類別中的這個方法，以在架構顯示或隱藏窗格時執行自訂程式碼。
 
-## <a name="cframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CFramewndEx::在顯示彈出功能表
+## <a name="cframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a> CFrameWndEx：： OnShowPopupMenu
 
-當框架顯示彈出式功能表時,由它調用。
+架構在顯示快顯功能表時呼叫。
 
 ```
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
@@ -1654,19 +1654,19 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ### <a name="parameters"></a>參數
 
 *pMenu*<br/>
-[在]指向彈出功能表的指標。
+在快顯功能表的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果彈出式功能表可見,則為 TRUE;否則 FALSE。
+如果快顯功能表是可見的，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-在派生類中重寫此方法,在框架顯示彈出功能表時執行自定義代碼。 例如,重寫此方法以更改彈出功能表中命令的背景顏色。
+當 framework 顯示快顯功能表時，在衍生類別中覆寫這個方法，以執行自訂程式碼。 例如，覆寫這個方法來變更快顯功能表中命令的背景色彩。
 
-## <a name="cframewndexonsize"></a><a name="onsize"></a>CFramewndEx::打開尺寸
+## <a name="cframewndexonsize"></a><a name="onsize"></a> CFrameWndEx：： OnSize
 
-框架大小更改後由框架調用。
+架構在框架大小變更之後呼叫。
 
 ```
 afx_msg void OnSize(
@@ -1678,19 +1678,19 @@ afx_msg void OnSize(
 ### <a name="parameters"></a>參數
 
 *nType*<br/>
-[在]調整大小的類型。 有關可能的值,請參閱[WM_SIZE通知](/windows/win32/winmsg/wm-size)中的參數*wParam。*
+在調整大小的類型。 如需可能的值，請參閱[WM_SIZE 通知](/windows/win32/winmsg/wm-size)中的參數*wParam* 。
 
 *殘雪*<br/>
-[在]以像素為單位的幀新寬度。
+在框架的新寬度（以圖元為單位）。
 
 *cy*<br/>
-[在]以像素為單位的幀的新高度。
+在框架的新高度（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonsizing"></a><a name="onsizing"></a>CFramewndEx::打開
+## <a name="cframewndexonsizing"></a><a name="onsizing"></a> CFrameWndEx：： OnSizing
 
-當用戶調整框架的大小時,由框架調用。
+當使用者調整框架大小時，由架構呼叫。
 
 ```
 afx_msg void OnSizing(
@@ -1701,16 +1701,16 @@ afx_msg void OnSizing(
 ### <a name="parameters"></a>參數
 
 *fwSide*<br/>
-[在]移動的幀邊緣。 請參閱[WM_SIZING通知](/windows/win32/winmsg/wm-sizing)中的參數*wParam。*
+在移動的框架邊緣。 請參閱[WM_SIZING 通知](/windows/win32/winmsg/wm-sizing)中的參數*wParam* 。
 
-*普雷克*<br/>
-[進出]指向包含幀座標的[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](/windows/win32/api/windef/ns-windef-rect)結構的指標。
+*pRect*<br/>
+[in，out]包含框架座標之 [CRect](../../atl-mfc-shared/reference/crect-class.md) 或 [RECT](/windows/win32/api/windef/ns-windef-rect) 結構的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonsyscolorchange"></a><a name="onsyscolorchange"></a>CFramewndEx::SysColorChange
+## <a name="cframewndexonsyscolorchange"></a><a name="onsyscolorchange"></a> CFrameWndEx：： OnSysColorChange
 
-當系統顏色發生變化時由框架調用。
+當系統色彩變更時由架構呼叫。
 
 ```cpp
 void OnSysColorChange();
@@ -1718,9 +1718,9 @@ void OnSysColorChange();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>CFramewndEx::在TearoffMenu上
+## <a name="cframewndexontearoffmenu"></a><a name="ontearoffmenu"></a> CFrameWndEx：： OnTearOffMenu
 
-當應用程式顯示具有撕開條的菜單時,由框架調用。
+當應用程式顯示具有清除列的功能表時，由架構呼叫。
 
 ```
 virtual BOOL OnTearOffMenu(
@@ -1731,24 +1731,24 @@ virtual BOOL OnTearOffMenu(
 ### <a name="parameters"></a>參數
 
 *pMenuPopup*<br/>
-[在]指向彈出功能表的指標。
+在快顯功能表的指標。
 
 *pBar*<br/>
-[在]指向撕裂條的指標。
+在終止列的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果啟用了帶撕開條的彈出功能表,則為 TRUE;如果啟用了帶撕下條的彈出功能表。否則 FALSE。
+如果已啟用卸載列的快顯功能表，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-在派生類中重寫此方法,在框架顯示控制欄時執行自定義代碼。
+當架構顯示控制列時，在衍生類別中覆寫這個方法，以執行自訂程式碼。
 
-預設實現不執行任何操作,並返回 TRUE。
+預設的執行不會執行任何動作，而且會傳回 TRUE。
 
-## <a name="cframewndexontoolbarcontextmenu"></a><a name="ontoolbarcontextmenu"></a>CFramewndEx::在工具列上下文菜單上
+## <a name="cframewndexontoolbarcontextmenu"></a><a name="ontoolbarcontextmenu"></a> CFrameWndEx：： OnToolbarCoNtextMenu
 
-由框架調用以生成工具列彈出式功能表。
+由架構呼叫以建立工具列快顯功能表。
 
 ```
 afx_msg LRESULT OnToolbarContextMenu(
@@ -1759,20 +1759,20 @@ afx_msg LRESULT OnToolbarContextMenu(
 ### <a name="parameters"></a>參數
 
 *Wp*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lp*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 ### <a name="return-value"></a>傳回值
 
-始終返回 1。
+一律傳回1。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexontoolbarcreatenew"></a><a name="ontoolbarcreatenew"></a>CFramewndEx::在工具列創建新
+## <a name="cframewndexontoolbarcreatenew"></a><a name="ontoolbarcreatenew"></a> CFrameWndEx：： OnToolbarCreateNew
 
-框架呼叫此方法以創建新工具列。
+架構會呼叫這個方法來建立新的工具列。
 
 ```
 afx_msg LRESULT OnToolbarCreateNew(
@@ -1783,20 +1783,20 @@ afx_msg LRESULT OnToolbarCreateNew(
 ### <a name="parameters"></a>參數
 
 *Wp*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lp*<br/>
-[在]指向工具列標題列的文字。
+在工具列標題列之文字的指標。
 
 ### <a name="return-value"></a>傳回值
 
-指向新工具列的指標;如果未建立工具列,則為 NULL。
+新工具列的指標;如果未建立工具列，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexontoolbardelete"></a><a name="ontoolbardelete"></a>CFramewndEx::打開工具列刪除
+## <a name="cframewndexontoolbardelete"></a><a name="ontoolbardelete"></a> CFrameWndEx：： OnToolbarDelete
 
-刪除工具列時由框架調用。
+當工具列刪除時由架構呼叫。
 
 ```
 afx_msg LRESULT OnToolbarDelete(
@@ -1807,20 +1807,20 @@ afx_msg LRESULT OnToolbarDelete(
 ### <a name="parameters"></a>參數
 
 *閒置*<br/>
-[在]不使用此參數。
+在未使用此參數。
 
 *lp*<br/>
-[在]指向工具列的指標。
+在工具列的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果工具列已刪除,則為 TRUE;如果工具列已刪除,則為 TRUE。否則,FALSE。
+如果工具列已刪除，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonupdateframemenu"></a><a name="onupdateframemenu"></a>CFramewndEx::更新框架功能表
+## <a name="cframewndexonupdateframemenu"></a><a name="onupdateframemenu"></a> CFrameWndEx：： OnUpdateFrameMenu
 
-由框架調用以設置框架功能表。
+由架構呼叫以設定框架功能表。
 
 ```
 virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
@@ -1828,14 +1828,14 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 
 ### <a name="parameters"></a>參數
 
-*哈梅內阿爾特*<br/>
-[在]處理備用功能表。
+*hMenuAlt*<br/>
+在替代功能表的控制碼。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonupdateframetitle"></a><a name="onupdateframetitle"></a>CFramewndEx::更新幀標題
+## <a name="cframewndexonupdateframetitle"></a><a name="onupdateframetitle"></a> CFrameWndEx：： OnUpdateFrameTitle
 
-框架呼叫此方法以更新框架視窗的標題列。
+架構會呼叫這個方法來更新框架視窗的標題列。
 
 ```
 virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
@@ -1844,13 +1844,13 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ### <a name="parameters"></a>參數
 
 *bAddToTitle*<br/>
-[在]TRUE 將活動文檔標題添加到框架窗口標題列;否則 FALSE。
+在TRUE 表示將使用中的文檔標題新增至框架視窗標題列;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonupdatepanemenu"></a><a name="onupdatepanemenu"></a>CFramewndEx::更新窗格功能表
+## <a name="cframewndexonupdatepanemenu"></a><a name="onupdatepanemenu"></a> CFrameWndEx：： OnUpdatePaneMenu
 
-由框架調用以更新窗格功能表。
+由架構呼叫以更新窗格功能表。
 
 ```
 afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
@@ -1859,13 +1859,13 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>參數
 
 *pCmdUI*<br/>
-[在]指向窗格用戶介面物件的指標。
+在窗格使用者介面物件的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexonwindowposchanged"></a><a name="onwindowposchanged"></a>CFramewndEx::在視窗Pos上
+## <a name="cframewndexonwindowposchanged"></a><a name="onwindowposchanged"></a> CFrameWndEx：： OnWindowPosChanged
 
-當幀大小、位置或 z 順序因調用視窗管理方法而發生更改時,由框架調用。
+當框架大小、位置或迭置順序因為呼叫視窗管理方法而變更時，由架構呼叫。
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
@@ -1874,13 +1874,13 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>參數
 
 *lpwndpos*<br/>
-[在]指向包含新大小和位置的[WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos)結構的指標。
+在 [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) 結構的指標，其中包含新的大小和位置。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexpanefrompoint"></a><a name="panefrompoint"></a>CFramewndEx::P從點
+## <a name="cframewndexpanefrompoint"></a><a name="panefrompoint"></a> CFrameWndEx：:P aneFromPoint
 
-搜索每個窗格的給定點。
+在每個窗格中搜尋指定的點。
 
 ```
 CBasePane* PaneFromPoint(
@@ -1899,33 +1899,33 @@ CBasePane* PaneFromPoint(
 ### <a name="parameters"></a>參數
 
 *點*<br/>
-[在]要檢查的點的螢幕座標。
+在要檢查的點螢幕座標。
 
 *nSensitivity*<br/>
-[在]搜索點時,按此量展開每個控制列欄的邊界矩形。
+在在搜尋點時，依此數量展開每個控制列的周框。
 
 *bExactBar*<br/>
-[在]TRUE 忽略*n 敏感參數*;否則,FALSE。
+在TRUE 表示忽略 *nSensitivity* 參數;否則為 FALSE。
 
-*pRTCBar 類型*<br/>
-[在]如果不是 NULL,該方法將僅搜尋指定類型的控制列。
+*pRTCBarType*<br/>
+在如果不是 Null，方法只會搜尋指定類型的控制列。
 
-*dwalignment*<br/>
-[出]如果成功,此參數包含最接近指定點的控制欄的一側。 否則,不會初始化此參數。
+*dwAlignment*<br/>
+擴展如果成功，這個參數會包含最接近指定點之控制列的側邊。 否則，此參數不會初始化。
 
 ### <a name="return-value"></a>傳回值
 
-指向包含點的控制欄的*指標*;如果未找到控制項,則為 NULL。
+包含 *點*的控制列指標。如果找不到控制項，則為 Null。
 
 ### <a name="remarks"></a>備註
 
-此方法搜尋應用程式中的所有控制列以搜尋*點*。
+這個方法會在應用程式中搜尋某個 *點*的所有控制列。
 
-使用*nSensitivity*可增加搜尋區域的大小。 使用*pRTCBarType*限制方法搜索的控制欄的類型。
+使用 *nSensitivity* 來增加搜尋區域的大小。 使用 *pRTCBarType* 來限制方法所搜尋的控制列類型。
 
-## <a name="cframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a>CFramewndEx::P重新翻譯訊息
+## <a name="cframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a> CFrameWndEx：:P reTranslateMessage
 
-在調度特定視窗消息之前處理它們。
+在分派特定視窗訊息之前加以處理。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1934,17 +1934,17 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-[在]指向包含要處理的消息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)結構的指標。
+在包含要處理之訊息的 [MSG](/windows/win32/api/winuser/ns-winuser-msg) 結構指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果消息已處理且不應調度,則為非零;0 如果消息未處理,則應調度。
+如果訊息已處理且不應分派，則為非零;如果訊息未經過處理且應該分派，則為0。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexrecalclayout"></a><a name="recalclayout"></a>CFramewndEx:recalclayout
+## <a name="cframewndexrecalclayout"></a><a name="recalclayout"></a> CFrameWndEx：： RecalcLayout
 
-調整框架及其子窗口的佈局。
+調整框架和其子視窗的版面配置。
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -1952,16 +1952,16 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*b 通知*<br/>
-[在]指定是否通知 OLE 客戶端項有關佈局更改。
+*bNotify*<br/>
+在指定是否要通知 OLE 用戶端專案有關版面配置變更。
 
 ### <a name="remarks"></a>備註
 
-當框架視窗的大小已更改或顯示或隱藏控制欄時,將調用此方法。
+當框架視窗的大小變更或顯示或隱藏控制列時，會呼叫這個方法。
 
-## <a name="cframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CFramewndEx::從Dock管理器中刪除Pane
+## <a name="cframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a> CFrameWndEx：： RemovePaneFromDockManager
 
-取消註冊窗格並從停靠管理器中刪除它。
+取消註冊窗格，並將它從停駐管理員移除。
 
 ```cpp
 void RemovePaneFromDockManager(
@@ -1974,30 +1974,30 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>參數
 
-*p控制列*<br/>
-[在]指向要刪除的控制欄窗格的指標。
+*pControlBar*<br/>
+在要移除之控制列窗格的指標。
 
-*b破壞*<br/>
-[在]TRUE 在卸下控制條后將其銷毀;否則。
+*bDestroy*<br/>
+在TRUE 表示在移除控制列之後予以終結;否則為 FALSE。
 
-*b 調整佈局*<br/>
-[在]TRUE 調整停靠佈局;否則。
+*bAdjustLayout*<br/>
+在TRUE 表示調整停駐版面配置;否則為 FALSE。
 
 *bAutoHide*<br/>
-[在]如果控制欄處於自動隱藏模式,則為 TRUE;否則。
+在如果控制項行處於自動隱藏模式，則為 TRUE;否則為 FALSE。
 
-*pBar 取代*<br/>
-[在]指向替換已刪除窗格的窗格的指標。
+*pBarReplacement*<br/>
+在取代已移除窗格之窗格的指標。
 
 ### <a name="remarks"></a>備註
 
-使用此方法從框架視窗的停靠佈局中刪除控制欄。
+您可以使用這個方法，從框架視窗的停駐配置中移除控制列。
 
-[CDockingManager 類](../../mfc/reference/cdockingmanager-class.md)處理控制欄的佈局。 您必須使用[CFrameWndEx::addPane](#addpane)方法或[CFrameWndEx:::插入窗格](#insertpane)方法向停靠管理器註冊每個控制欄。
+[CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md)會處理控制列的版面配置。 您必須使用 [CFrameWndEx：： AddPane](#addpane) 方法或 [CFrameWndEx：： InsertPane](#insertpane) 方法，向銜接管理員註冊每個控制列。
 
-## <a name="cframewndexsetdockstate"></a><a name="setdockstate"></a>CFramewndEx::SetDockstate
+## <a name="cframewndexsetdockstate"></a><a name="setdockstate"></a> CFrameWndEx：： SetDockState
 
-將停靠佈局還原到存儲在註冊表中的停靠狀態。
+將停駐配置還原為儲存在登錄中的銜接狀態。
 
 ```cpp
 void SetDockState(const CDockState& state);
@@ -2006,11 +2006,11 @@ void SetDockState(const CDockState& state);
 ### <a name="parameters"></a>參數
 
 *state*<br/>
-停靠狀態。 此參數會被忽略。
+銜接狀態。 這個參數已忽略。
 
-## <a name="cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CFramewndEx::設定列印預覽框架
+## <a name="cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a> CFrameWndEx：： SetPrintPreviewFrame
 
-設置列印預覽框架視窗。
+設定預覽列印框架視窗。
 
 ```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
@@ -2018,14 +2018,14 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 ### <a name="parameters"></a>參數
 
-*pwnd*<br/>
-[在]指向列印預覽框架視窗的指標。
+*pWnd*<br/>
+在預覽列印框架視窗的指標。
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>CFramewndEx::設定工具列選單
+## <a name="cframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a> CFrameWndEx：： SetupToolbarMenu
 
-將使用者定義的命令插入工具列功能表。
+將使用者定義的命令插入工具列功能表中。
 
 ```cpp
 void SetupToolbarMenu(
@@ -2036,28 +2036,28 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>參數
 
-*選單*<br/>
-[在]要`CMenu`修改的物件。
+*功能表*<br/>
+在 `CMenu` 要修改的物件。
 
 *uiViewUserToolbarCmdFirst*<br/>
-[在]第一個使用者定義的命令。
+在第一個使用者定義的命令。
 
 *uiViewUserToolbarCmdLast*<br/>
-[在]最後一個使用者定義的命令。
+在最後一個使用者定義的命令。
 
 ### <a name="remarks"></a>備註
 
-框架將使用者定義的命令存儲在清單中。 使用*uiViewUserToolbarCmdFirst*和*uiViewUserToolbarCmdList*指定要插入的命令的索引。
+架構會將使用者定義的命令儲存在清單中。 使用 *uiViewUserToolbarCmdFirst* 和 *uiViewUserToolbarCmdList* 來指定要插入的命令索引。
 
-## <a name="cframewndexshowfullscreen"></a><a name="showfullscreen"></a>CFramewndEx::顯示全屏
+## <a name="cframewndexshowfullscreen"></a><a name="showfullscreen"></a> CFrameWndEx：： ShowFullScreen
 
-在全螢幕模式和常規模式之間切換主框架。
+切換全螢幕模式和一般模式之間的主框架。
 
 ```cpp
 void ShowFullScreen();
 ```
 
-## <a name="cframewndexshowpane"></a><a name="showpane"></a>CFramewndEx::顯示窗格
+## <a name="cframewndexshowpane"></a><a name="showpane"></a> CFrameWndEx：： ShowPane
 
 顯示或隱藏指定的窗格。
 
@@ -2072,20 +2072,20 @@ void ShowPane(
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-[在]指向要顯示或隱藏的控制欄的指標。
+在要顯示或隱藏的控制列指標。
 
-*b 顯示*<br/>
-[在]如果為 TRUE,則應用程式將顯示控制欄。 否則,應用程式將隱藏控制欄。
+*bShow*<br/>
+在若為 TRUE，則應用程式會顯示控制列。 否則，應用程式會隱藏控制列。
 
 *bDelay*<br/>
-[在]如果為 TRUE,請延遲停靠佈局的調整,直到框架呼叫[CFrameWndEx::調整停靠佈局](#adjustdockinglayout)。 否則,立即重新計算停靠佈局。
+在若為 TRUE，則會延遲調整停駐配置，直到架構呼叫 [CFrameWndEx：： AdjustDockingLayout](#adjustdockinglayout)為止。 否則，請立即重新計算停駐版面配置。
 
-*b 啟動*<br/>
-[在]如果為 TRUE,則使控制欄處於活動狀態。 否則,將控制欄顯示為非活動狀態。
+*bActivate*<br/>
+在若為 TRUE，則使控制列成為使用中。 否則，會將控制列顯示為非作用中狀態。
 
-## <a name="cframewndexupdatecaption"></a><a name="updatecaption"></a>CFramewndEx::更新標題
+## <a name="cframewndexupdatecaption"></a><a name="updatecaption"></a> CFrameWndEx：： UpdateCaption
 
-由框架調用以更新視窗框架標題。
+由架構呼叫以更新視窗框架標題。
 
 ```cpp
 void UpdateCaption();
@@ -2093,9 +2093,9 @@ void UpdateCaption();
 
 ### <a name="remarks"></a>備註
 
-## <a name="cframewndexwinhelp"></a><a name="winhelp"></a>CFramewndEx::贏説明
+## <a name="cframewndexwinhelp"></a><a name="winhelp"></a> CFrameWndEx：： WinHelp
 
-調用 WinHelp 應用程式或上下文相關説明。
+叫用 WinHelp 應用程式或內容相關説明。
 
 ```
 virtual void WinHelp(
@@ -2106,10 +2106,10 @@ virtual void WinHelp(
 ### <a name="parameters"></a>參數
 
 *dwData*<br/>
-依賴於*nCmd*參數的數據。 有關可能值的清單,請參閱[WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw)。
+相依于 *nCmd* 參數的資料。 如需可能值的清單，請參閱 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw)。
 
 *nCmd*<br/>
-説明命令。 有關可能值的清單,請參閱[WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw)。
+Help 命令。 如需可能值的清單，請參閱 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw)。
 
 ### <a name="remarks"></a>備註
 

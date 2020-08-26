@@ -1,21 +1,21 @@
 ---
-title: wire_marshal （c + + COM 屬性）
+title: 'wire_marshal (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: ff01d20117e2f04aca96b0fee7489d7195cc7488
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04d6e7dcc887815b6f1b3becd67bd11bef4a81d7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213771"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832877"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
-指定將用於傳輸的資料類型，而不是應用程式特定的資料類型。
+指定要用於傳輸的資料類型，而不是應用程式特定的資料類型。
 
 ## <a name="syntax"></a>語法
 
@@ -29,7 +29,7 @@ ms.locfileid: "87213771"
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**wire_marshal**：
+下列程式碼示範如何使用 **wire_marshal**：
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -47,14 +47,12 @@ ms.locfileid: "87213771"
 [export, wire_marshal(TWO_X_TWO_BYTE_DATA)] typedef _FOUR_BYTE_DATA FOUR_BYTE_DATA;
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**`typedef`**|
-|**可重複**|否|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 

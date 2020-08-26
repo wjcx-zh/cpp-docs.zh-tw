@@ -23,39 +23,39 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: a6b1ce33fe201338a0cc9356f2ef86e598629fd6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10d11b2b6e78220c1c562d100ee7886026a94b22
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228033"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833864"
 ---
 # <a name="atl-typedefs"></a>ATL Typedef
 
 Active Template Library 包含下列 typedef。
 
-|||
+|Typedef|描述|
 |-|-|
-|[_ATL_BASE_MODULE](#_atl_base_module)|定義為以[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)為基礎的 typedef。|
-|[_ATL_COM_MODULE](#_atl_com_module)|定義為以[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)為基礎的 typedef。|
-|[_ATL_MODULE](#_atl_module)|定義為以[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)為基礎的 typedef。|
-|[_ATL_WIN_MODULE](#_atl_win_module)|定義為以[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)為基礎的 typedef|
-|[ATL_URL_PORT](#atl_url_port)|由[捲曲](../../atl/reference/curl-class.md)用來指定埠號碼的類型。|
-|[CComDispatchDriver](#ccomdispatchdriver)|這個類別會管理 COM 介面指標。|
-|[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|不論使用的執行緒模型為何，都會呼叫適當的執行緒模型方法。|
-|[CComObjectThreadModel](#ccomobjectthreadmodel)|不論使用的執行緒模型為何，都會呼叫適當的執行緒模型方法。|
+|[_ATL_BASE_MODULE](#_atl_base_module)|根據 [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)定義為 typedef。|
+|[_ATL_COM_MODULE](#_atl_com_module)|根據 [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)定義為 typedef。|
+|[_ATL_MODULE](#_atl_module)|根據 [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)定義為 typedef。|
+|[_ATL_WIN_MODULE](#_atl_win_module)|根據[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)定義為 typedef|
+|[ATL_URL_PORT](#atl_url_port)|由 [捲曲](../../atl/reference/curl-class.md) 用來指定通訊埠編號的型別。|
+|[CComDispatchDriver](#ccomdispatchdriver)|此類別會管理 COM 介面指標。|
+|[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|無論使用的執行緒模型為何，都會呼叫適當的執行緒模型方法。|
+|[CComObjectThreadModel](#ccomobjectthreadmodel)|無論使用的執行緒模型為何，都會呼叫適當的執行緒模型方法。|
 |[CContainedWindow](#ccontainedwindow)|這個類別是的特製化 `CContainedWindowT` 。|
-|[CPath](#cpath)|使用[CPathT](../../atl/reference/cpatht-class.md)的特製化 `CString` 。|
-|[CPathA](#cpatha)|使用[CPathT](../../atl/reference/cpatht-class.md)的特製化 `CStringA` 。|
-|[CPathW](#cpathw)|使用[CPathT](../../atl/reference/cpatht-class.md)的特製化 `CStringW` 。|
-|[CSimpleValArray](#csimplevalarray)|表示用於儲存簡單類型的陣列。|
-|[DefaultThreadTraits](#defaultthreadtraits)|預設執行緒特性類別。|
-|[LPCURL](#lpcurl)|常數[捲曲](../../atl/reference/curl-class.md)物件的指標。|
+|[CPath](#cpath)|使用 [CPathT](../../atl/reference/cpatht-class.md) 的特製化 `CString` 。|
+|[CPathA](#cpatha)|使用 [CPathT](../../atl/reference/cpatht-class.md) 的特製化 `CStringA` 。|
+|[CPathW](#cpathw)|使用 [CPathT](../../atl/reference/cpatht-class.md) 的特製化 `CStringW` 。|
+|[CSimpleValArray](#csimplevalarray)|表示用來儲存簡單類型的陣列。|
+|[DefaultThreadTraits](#defaultthreadtraits)|預設的執行緒特性類別。|
+|[LPCURL](#lpcurl)|常數 [捲曲](../../atl/reference/curl-class.md) 物件的指標。|
 |[LPURL](#lpurl)|[捲曲](../../atl/reference/curl-class.md)物件的指標。|
 
-## <a name="_atl_base_module"></a><a name="_atl_base_module"></a>_ATL_BASE_MODULE
+## <a name="_atl_base_module"></a><a name="_atl_base_module"></a> _ATL_BASE_MODULE
 
-定義為以 _ATL_BASE_MODULE70 為基礎的 typedef。
+根據 _ATL_BASE_MODULE70 定義為 typedef。
 
 ```cpp
 typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
@@ -63,17 +63,17 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 
 ### <a name="remarks"></a>備註
 
-用於每個 ATL 專案。 根據[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)。
+用於每個 ATL 專案。 根據 [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)。
 
-屬於 ATL 7.0 模組類別之一部分的類別，衍生自 _ATL_BASE_MODULE 結構。  如需 ATL 模組類別的詳細資訊，請參閱[COM 模組類別](../../atl/com-modules-classes.md)。
+屬於 ATL 7.0 模組類別一部分的類別會衍生自 _ATL_BASE_MODULE 結構。  如需 ATL 模組類別的詳細資訊，請參閱 [COM 模組類別](../../atl/com-modules-classes.md)。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlcore。h
 
-## <a name="_atl_com_module"></a><a name="_atl_com_module"></a>_ATL_COM_MODULE
+## <a name="_atl_com_module"></a><a name="_atl_com_module"></a> _ATL_COM_MODULE
 
-定義為以 _ATL_COM_MODULE70 為基礎的 typedef。
+根據 _ATL_COM_MODULE70 定義為 typedef。
 
 ```cpp
 typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
@@ -81,31 +81,31 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 
 ### <a name="remarks"></a>備註
 
-由使用 COM 功能的 ATL 專案所使用。 根據[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)。
+由使用 COM 功能的 ATL 專案所使用。 根據 [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlbase.h。h
 
-## <a name="_atl_module"></a><a name="_atl_module"></a>_ATL_MODULE
+## <a name="_atl_module"></a><a name="_atl_module"></a> _ATL_MODULE
 
-定義為以 _ATL_MODULE70 為基礎的 typedef。
+根據 _ATL_MODULE70 定義為 typedef。
 
 ```cpp
 typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭**
+**頭：**
 
 ### <a name="remarks"></a>備註
 
-根據[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)。
+根據 [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)。
 
-## <a name="_atl_win_module"></a><a name="_atl_win_module"></a>_ATL_WIN_MODULE
+## <a name="_atl_win_module"></a><a name="_atl_win_module"></a> _ATL_WIN_MODULE
 
-定義為以 _ATL_WIN_MODULE70 為基礎的 typedef。
+根據 _ATL_WIN_MODULE70 定義為 typedef。
 
 ```cpp
 typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
@@ -113,39 +113,39 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 
 ### <a name="remarks"></a>備註
 
-由任何使用視窗化功能的 ATL 專案所使用。 根據[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)。
+由使用視窗化功能的任何 ATL 專案使用。 根據 [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlbase.h。h
 
-## <a name="atl_url_port"></a><a name="atl_url_port"></a>ATL_URL_PORT
+## <a name="atl_url_port"></a><a name="atl_url_port"></a> ATL_URL_PORT
 
-由[捲曲](curl-class.md)用來指定埠號碼的類型。
+由 [捲曲](curl-class.md) 用來指定通訊埠編號的型別。
 
 ```cpp
 typedef WORD ATL_URL_PORT;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlutil。h
 
-## <a name="ccomdispatchdriver"></a><a name="ccomdispatchdriver"></a>CComDispatchDriver
+## <a name="ccomdispatchdriver"></a><a name="ccomdispatchdriver"></a> CComDispatchDriver
 
-這個類別會管理 COM 介面指標。
+此類別會管理 COM 介面指標。
 
 ```cpp
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlbase.h。h
 
-## <a name="ccomglobalsthreadmodel"></a><a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel
+## <a name="ccomglobalsthreadmodel"></a><a name="ccomglobalsthreadmodel"></a> CComGlobalsThreadModel
 
-不論使用的執行緒模型為何，都會呼叫適當的執行緒模型方法。
+無論使用的執行緒模型為何，都會呼叫適當的執行緒模型方法。
 
 ```cpp
 #if defined(_ATL_SINGLE_THREADED)
@@ -161,31 +161,31 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 ### <a name="remarks"></a>備註
 
-根據您的應用程式所使用的執行緒模型， **`typedef`** 名稱會 `CComGlobalsThreadModel` 參考[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 這些類別會提供 **`typedef`** 參考重要區段類別的其他名稱。
+根據您的應用程式所使用的執行緒模型， **`typedef`** 名稱會 `CComGlobalsThreadModel` 參考 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 或 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 這些類別會提供其他 **`typedef`** 名稱來參考重要的區段類別。
 
 > [!NOTE]
-> `CComGlobalsThreadModel`未參考類別[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。
+> `CComGlobalsThreadModel` 未參考類別 [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。
 
-使用 `CComGlobalsThreadModel` 可讓您指定特定的執行緒模型類別。 不論使用的執行緒模型為何，將會呼叫適當的方法。
+使用 `CComGlobalsThreadModel` 可讓您指定特定的執行緒模型類別。 無論使用的執行緒模型為何，都會呼叫適當的方法。
 
-除了之外 `CComGlobalsThreadModel` ，ATL 也提供 **`typedef`** 名稱[CComObjectThreadModel](#ccomobjectthreadmodel)。 每個所參考的類別都 **`typedef`** 取決於所使用的執行緒模型，如下表所示：
+除了之外 `CComGlobalsThreadModel` ，ATL 也提供 **`typedef`** 名稱 [CComObjectThreadModel](#ccomobjectthreadmodel)。 每個所參考的類別 **`typedef`** 取決於所使用的執行緒模型，如下表所示：
 
 |typedef|單一線程|單元執行緒|自由執行緒|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel` ;M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ;M = `CComMultiThreadModel`
 
-`CComObjectThreadModel`在單一物件類別中使用。 使用 `CComGlobalsThreadModel` 于全域可用的物件中，或當您想要跨多個執行緒保護模組資源時。
+`CComObjectThreadModel`在單一物件類別中使用。 在可供 `CComGlobalsThreadModel` 您的程式全域使用的物件中使用，或當您想要跨多個執行緒保護模組資源時使用。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlbase.h。h
 
-## <a name="ccomobjectthreadmodel"></a><a name="ccomobjectthreadmodel"></a>CComObjectThreadModel
+## <a name="ccomobjectthreadmodel"></a><a name="ccomobjectthreadmodel"></a> CComObjectThreadModel
 
-不論使用的執行緒模型為何，都會呼叫適當的執行緒模型方法。
+無論使用的執行緒模型為何，都會呼叫適當的執行緒模型方法。
 
 ```cpp
 #if defined(_ATL_SINGLE_THREADED)
@@ -201,29 +201,29 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 ### <a name="remarks"></a>備註
 
-根據您的應用程式所使用的執行緒模型， **`typedef`** 名稱會 `CComObjectThreadModel` 參考[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 這些類別會提供 **`typedef`** 參考重要區段類別的其他名稱。
+根據您的應用程式所使用的執行緒模型， **`typedef`** 名稱會 `CComObjectThreadModel` 參考 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 或 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 這些類別會提供其他 **`typedef`** 名稱來參考重要的區段類別。
 
 > [!NOTE]
-> `CComObjectThreadModel`未參考類別[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。
+> `CComObjectThreadModel` 未參考類別 [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。
 
-使用 `CComObjectThreadModel` 可讓您指定特定的執行緒模型類別。 不論使用的執行緒模型為何，將會呼叫適當的方法。
+使用 `CComObjectThreadModel` 可讓您指定特定的執行緒模型類別。 無論使用的執行緒模型為何，都會呼叫適當的方法。
 
-除了之外 `CComObjectThreadModel` ，ATL 也提供 **`typedef`** 名稱[CComGlobalsThreadModel](#ccomglobalsthreadmodel)。 每個所參考的類別都 **`typedef`** 取決於所使用的執行緒模型，如下表所示：
+除了之外 `CComObjectThreadModel` ，ATL 也提供 **`typedef`** 名稱 [CComGlobalsThreadModel](#ccomglobalsthreadmodel)。 每個所參考的類別 **`typedef`** 取決於所使用的執行緒模型，如下表所示：
 
 |typedef|單一線程|單元執行緒|自由執行緒|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel` ;M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ;M = `CComMultiThreadModel`
 
-`CComObjectThreadModel`在單一物件類別中使用。 `CComGlobalsThreadModel`在可全域提供給您的程式的物件中使用，或當您想要跨多個執行緒保護模組資源時使用。
+`CComObjectThreadModel`在單一物件類別中使用。 在可供 `CComGlobalsThreadModel` 您的程式全域使用的物件中使用，或當您想要跨多個執行緒保護模組資源時使用。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlbase.h。h
 
-## <a name="ccontainedwindow"></a><a name="ccontainedwindow"></a>CContainedWindow
+## <a name="ccontainedwindow"></a><a name="ccontainedwindow"></a> CContainedWindow
 
 這個類別是的特製化 `CContainedWindowT` 。
 
@@ -231,53 +231,53 @@ S = `CComSingleThreadModel` ;M =`CComMultiThreadModel`
 typedef CContainedWindowT<CWindow> CContainedWindow;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭：** atlwin.h。h
+**標頭：** atlwin。h
 
 ### <a name="remarks"></a>備註
 
-`CContainedWindow`是[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)的特製化。 如果您想要變更基類或特性，請直接使用 `CContainedWindowT` 。
+`CContainedWindow` 是 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)的特製化。 如果您想要變更基類或特性，請直接使用 `CContainedWindowT` 。
 
-## <a name="cpath"></a><a name="cpath"></a>CPath
+## <a name="cpath"></a><a name="cpath"></a> CPath
 
-使用[CPathT](../../atl/reference/cpatht-class.md)的特製化 `CString` 。
+使用 [CPathT](../../atl/reference/cpatht-class.md) 的特製化 `CString` 。
 
 ```cpp
 typedef CPathT<CString> CPath;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭：** 與 atlpath.h。h
+**標頭：** atlpath.h。h
 
-## <a name="cpatha"></a><a name="cpatha"></a>CPathA
+## <a name="cpatha"></a><a name="cpatha"></a> CPathA
 
-使用[CPathT](../../atl/reference/cpatht-class.md)的特製化 `CStringA` 。
+使用 [CPathT](../../atl/reference/cpatht-class.md) 的特製化 `CStringA` 。
 
 ```cpp
 typedef CPathT<CStringA> CPathA;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭：** 與 atlpath.h。h
+**標頭：** atlpath.h。h
 
-## <a name="cpathw"></a><a name="cpathw"></a>CPathW
+## <a name="cpathw"></a><a name="cpathw"></a> CPathW
 
-使用[CPathT](../../atl/reference/cpatht-class.md)的特製化 `CStringW` 。
+使用 [CPathT](../../atl/reference/cpatht-class.md) 的特製化 `CStringW` 。
 
 ```cpp
 typedef ATL::CPathT<CStringW> CPathW;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭：** 與 atlpath.h。h
+**標頭：** atlpath.h。h
 
-## <a name="csimplevalarray"></a><a name="csimplevalarray"></a>CSimpleValArray
+## <a name="csimplevalarray"></a><a name="csimplevalarray"></a> CSimpleValArray
 
-表示用於儲存簡單類型的陣列。
+表示用來儲存簡單類型的陣列。
 
 ```cpp
 #define CSimpleValArray CSimpleArray
@@ -285,27 +285,27 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 ### <a name="remarks"></a>備註
 
-`CSimpleValArray`提供來建立和管理包含單一資料型別的陣列。 這是[CSimpleArray](../../atl/reference/csimplearray-class.md)的簡單 #define。
+`CSimpleValArray` 提供用來建立和管理包含單一資料型別的陣列。 這是 [CSimpleArray](../../atl/reference/csimplearray-class.md)的簡單 #define。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlsimpcoll。h
 
-## <a name="lpcurl"></a><a name="lpcurl"></a>LPCURL
+## <a name="lpcurl"></a><a name="lpcurl"></a> LPCURL
 
-常數[捲曲](../../atl/reference/curl-class.md)物件的指標。
+常數 [捲曲](../../atl/reference/curl-class.md) 物件的指標。
 
 ```cpp
 typedef const CUrl* LPCURL;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlutil。h
 
-## <a name="defaultthreadtraits"></a><a name="defaultthreadtraits"></a>DefaultThreadTraits
+## <a name="defaultthreadtraits"></a><a name="defaultthreadtraits"></a> DefaultThreadTraits
 
-預設執行緒特性類別。
+預設的執行緒特性類別。
 
 ### <a name="syntax"></a>語法
 
@@ -319,13 +319,13 @@ typedef const CUrl* LPCURL;
 
 ## <a name="remarks"></a>備註
 
-如果目前的專案使用多執行緒 CRT，則 DefaultThreadTraits 會定義為 CRTThreadTraits。 否則，會使用 Win32ThreadTraits。
+如果目前的專案使用多執行緒 CRT，DefaultThreadTraits 會定義為 CRTThreadTraits。 否則會使用 Win32ThreadTraits。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlbase.h。h
 
-## <a name="lpurl"></a><a name="lpurl"></a>LPURL
+## <a name="lpurl"></a><a name="lpurl"></a> LPURL
 
 [捲曲](../../atl/reference/curl-class.md)物件的指標。
 
@@ -333,7 +333,7 @@ typedef const CUrl* LPCURL;
 typedef CUrl* LPURL;
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 **標頭：** atlutil。h
 

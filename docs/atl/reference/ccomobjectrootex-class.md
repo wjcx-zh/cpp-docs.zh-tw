@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b4dbc42cb0c6fe2c9c6692e0db37267ce3fff361
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747899"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833643"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 
-此類提供了處理非聚合物件和聚合物件的物件引用計數管理的方法。
+這個類別提供方法來處理非匯總和匯總物件的物件參考計數管理。
 
 ## <a name="syntax"></a>語法
 
@@ -40,76 +40,76 @@ class CComObjectRootEx : public CComObjectRootBase
 
 #### <a name="parameters"></a>參數
 
-*螺紋模型*<br/>
-其方法實現所需線程模型的類。 您可以通過將*線程模型*設置為[CCom 單線程模型](../../atl/reference/ccomsinglethreadmodel-class.md)[、CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)來顯式選擇線程模型。 通過將*ThreadModel*設置為[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel,](atl-typedefs.md#ccomglobalsthreadmodel)可以接受伺服器的預設線程模型。
+*ThreadModel*<br/>
+類別，其方法會執行所需的執行緒模型。 您可以將 *ThreadModel* 設定為 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)或 [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，以明確選擇執行緒模型。 您可以將 *ThreadModel* 設定為 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) 或 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)，以接受伺服器的預設執行緒模型。
 
 ## <a name="members"></a>成員
 
 ### <a name="methods"></a>方法
 
-|||
+|函式|描述|
 |-|-|
 |[CComObjectRootEx](#ccomobjectrootex)|建構函式。|
-|[內部新增參考](#internaladdref)|增加非聚合物件的引用計數。|
-|[內部發佈](#internalrelease)|取消非聚合物件的引用計數。|
-|[鎖](#lock)|如果線程模型是多線程的,則獲取關鍵部分物件的擁有權。|
-|[解除鎖定](#unlock)|如果線程模型是多線程的,則釋放關鍵部分物件的擁有權。|
+|[InternalAddRef](#internaladdref)|遞增非匯總物件的參考計數。|
+|[InternalRelease](#internalrelease)|遞減非匯總物件的參考計數。|
+|[鎖定](#lock)|如果執行緒模型為多執行緒，則取得重要區段物件的擁有權。|
+|[解 鎖](#unlock)|如果執行緒模型為多執行緒，則釋放重要區段物件的擁有權。|
 
-### <a name="ccomobjectrootbase-methods"></a>CComObjectRootbase 方法
+### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase 方法
 
-|||
+|函式|描述|
 |-|-|
-|[最終建構](#finalconstruct)|在類中重寫以執行物件所需的任何初始化。|
-|[最終發佈](#finalrelease)|在類中重寫以執行物件所需的任何清理。|
-|[外加參照](#outeraddref)|增加聚合物件的引用計數。|
-|[外部查詢介面](#outerqueryinterface)|表示到聚合物件的`IUnknown`外部。|
-|[外部釋放](#outerrelease)|取消聚合物件的引用計數。|
+|[FinalConstruct](#finalconstruct)|在您的類別中覆寫，以執行您的物件所需的任何初始化。|
+|[FinalRelease](#finalrelease)|在您的類別中覆寫，以執行您的物件所需的任何清除。|
+|[OuterAddRef](#outeraddref)|遞增匯總物件的參考計數。|
+|[OuterQueryInterface](#outerqueryinterface)|委派至 `IUnknown` 匯總物件的外部。|
+|[OuterRelease](#outerrelease)|遞減匯總物件的參考計數。|
 
 ### <a name="static-functions"></a>靜態函式
 
-|||
+|函式|描述|
 |-|-|
-|[內部查詢介面](#internalqueryinterface)|委託給`IUnknown`非聚合物件的。|
-|[物件主](#objectmain)|在模組初始化和物件映射中列出的派生類終止期間調用。|
+|[InternalQueryInterface](#internalqueryinterface)|委派至 `IUnknown` 非匯總物件的。|
+|[ObjectMain](#objectmain)|在模組初始化期間呼叫，並且在物件對應中所列的衍生類別終止時呼叫。|
 
 ### <a name="data-members"></a>資料成員
 
-|||
+|資料成員|描述|
 |-|-|
-|[m_dwRef](#m_dwref)|與`m_pOuterUnknown`, 工會的一部分。 當物件未聚合以保存和`AddRef``Release`的引用計數時使用。|
-|[m_pOuterUnknown](#m_pouterunknown)|與`m_dwRef`, 工會的一部分。 當物件聚合以保存指向外部未知指標時使用。|
+|[m_dwRef](#m_dwref)|With `m_pOuterUnknown` （union 的一部分）。 當物件未匯總以保存和的參考計數時使用 `AddRef` `Release` 。|
+|[m_pOuterUnknown](#m_pouterunknown)|With `m_dwRef` （union 的一部分）。 在匯總物件以保存外部未知指標時使用。|
 
 ## <a name="remarks"></a>備註
 
-`CComObjectRootEx`處理非聚合物件和聚合物件的物件引用計數管理。 如果物件未聚合,它將保存物件引用計數,並且保留指向外部未知物件的指標(如果物件正在聚合)。 對於聚合物件,`CComObjectRootEx`可以使用方法來處理內部物件構造的失敗,並在釋放內部介面或刪除內部物件時保護外部物件不被刪除。
+`CComObjectRootEx` 處理非匯總和匯總物件的物件參考計數管理。 如果您的物件未進行匯總，它會保存物件參考計數，如果您的物件正在匯總，則會將指標保留為未知。 針對匯總的物件， `CComObjectRootEx` 方法可以用來處理內建物件所要建立的失敗，並在釋放內部介面或刪除內建物件時，保護外部物件的刪除。
 
-從 COM 伺服器的類別`CComObjectRootEx`必須繼承或[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)。
+實 COM 伺服器的類別必須繼承自 `CComObjectRootEx` 或 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)。
 
-如果類定義指定[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)宏,ATL 將創建`CComPolyObject<CYourClass>``IClassFactory::CreateInstance`調用時 的實例。 在創建期間,將檢查外部未知值。 如果為 NULL,`IUnknown`則為非聚合物件實現。 如果外部未知值不是 NULL,`IUnknown`則為聚合對象實現。
+如果您的類別定義指定 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) 宏， `CComPolyObject<CYourClass>` 則 ATL 會在呼叫時建立的實例 `IClassFactory::CreateInstance` 。 在建立期間，會檢查外部 [未知] 的值。 如果是 Null， `IUnknown` 就會針對非匯總物件來執行。 如果外部未知不是 Null， `IUnknown` 就會針對匯總的物件執行。
 
-如果類未指定DECLARE_POLY_AGGREGATABLE宏,ATL`CAggComObject<CYourClass>`將創建聚合物件的實例`CComObject<CYourClass>`或 非聚合物件的實例。
+如果您的類別未指定 DECLARE_POLY_AGGREGATABLE 宏，ATL 會 `CAggComObject<CYourClass>` 為非匯總物件的匯總物件或實例建立的實例 `CComObject<CYourClass>` 。
 
-使用`CComPolyObject`的優點是,您避免在模組`CComAggObject``CComObject`中同時處理聚合和非聚合情況。 單個`CComPolyObject`物件處理這兩種情況。 因此,模組中僅存在一個 vtable 副本和函數副本。 如果 vtable 很大,這可大幅減小模組大小。 但是,如果 vtable 很小`CComPolyObject`,則使用可能會導致模組大小稍大一些,因為它未針對聚合或非聚合物件進行優化`CComAggObject`,`CComObject`例如和 。
+使用的優點 `CComPolyObject` 是您可以避免在 `CComAggObject` 模組中同時使用和 `CComObject` 來處理匯總和非匯總案例。 單一 `CComPolyObject` 物件會處理這兩種情況。 因此，您的模組中只會有一個 vtable 複本和一個函數複本。 如果您的 vtable 很大，這可能會大幅降低您的模組大小。 但是，如果您的 vtable 很小，使用 `CComPolyObject` 可能會產生稍微較大的模組大小，因為它並未針對匯總或非匯總的物件優化，如同 `CComAggObject` 和 `CComObject` 。
 
-如果物件是聚合的,[則 IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)`CComAggObject`由`CComPolyObject`或 實現。 這些類別的`QueryInterface``AddRef`委託`Release`與呼`CComObjectRootEx`叫`OuterQueryInterface`的`OuterAddRef`,`OuterRelease`並轉發到外部未知。 通常,在類`CComObjectRootEx::FinalConstruct`中重寫以創建任何聚合物件,並重`CComObjectRootEx::FinalRelease`寫 以釋放任何聚合物件。
+如果您的物件已匯總，則會由或實作為 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) `CComAggObject` `CComPolyObject` 。 這些類別會將、和呼叫委派給、和， `QueryInterface` `AddRef` `Release` `CComObjectRootEx` `OuterQueryInterface` `OuterAddRef` `OuterRelease` 以轉寄至外部未知。 一般而言，您會 `CComObjectRootEx::FinalConstruct` 在類別中覆寫以建立任何匯總物件，並覆寫 `CComObjectRootEx::FinalRelease` 以釋放任何匯總的物件。
 
-如果物件未聚合,`IUnknown`則`CComObject`由`CComPolyObject`或實現。 在這種情況下,`QueryInterface`對`AddRef``Release`的調用 將`CComObjectRootEx`委`InternalQueryInterface``InternalAddRef`派給`InternalRelease`的 , 以及執行實際操作。
+如果您的物件未匯總， `IUnknown` 則會由 `CComObject` 或實作為 `CComPolyObject` 。 在此情況下， `QueryInterface` `AddRef` 會將、和的呼叫 `Release` 委派給 `CComObjectRootEx` 的、和， `InternalQueryInterface` `InternalAddRef` `InternalRelease` 以執行實際的作業。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題:** atlcom.h
+**標頭：** atlcom.h。h
 
-## <a name="ccomobjectrootexccomobjectrootex"></a><a name="ccomobjectrootex"></a>CComObjectRootEx:CComObjectRootEx
+## <a name="ccomobjectrootexccomobjectrootex"></a><a name="ccomobjectrootex"></a> CComObjectRootEx：： CComObjectRootEx
 
-建構函數將引用計數初始化為 0。
+此函數會將參考計數初始化為0。
 
 ```
 CComObjectRootEx();
 ```
 
-## <a name="ccomobjectrootexfinalconstruct"></a><a name="finalconstruct"></a>CComObjectRootEx:最終建構
+## <a name="ccomobjectrootexfinalconstruct"></a><a name="finalconstruct"></a> CComObjectRootEx：： FinalConstruct
 
-可以在派生類中重寫此方法,以執行物件所需的任何初始化。
+您可以在衍生類別中覆寫這個方法，以執行您的物件所需的任何初始化。
 
 ```
 HRESULT FinalConstruct();
@@ -117,43 +117,43 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>傳回值
 
-返回成功時S_OK或標準錯誤 HRESULT 值之一。
+傳回成功或其中一個標準錯誤 HRESULT 值的 S_OK。
 
 ### <a name="remarks"></a>備註
 
-預設情況下,`CComObjectRootEx::FinalConstruct`只需返回S_OK。
+根據預設， `CComObjectRootEx::FinalConstruct` 只會傳回 S_OK。
 
-在 類別`FinalConstruct`執行初始化的優點,而不是類的建構函數:
+在中執行初始化， `FinalConstruct` 而不是類別的函式，會有一些優點：
 
-- 您不能從建構函數返回狀態代碼,但可以`FinalConstruct`通過的返回值返回 HRESULT。 使用 ATL 提供的標準類工廠創建類的物件時,此返回值將傳播回 COM 客戶端,從而允許您向他們提供詳細的錯誤資訊。
+- 您無法從函式傳回狀態碼，但您可以透過的傳回值傳回 HRESULT `FinalConstruct` 。 當您使用 ATL 所提供的標準 class factory 來建立類別的物件時，此傳回值會傳播回 COM 用戶端，讓您提供詳細的錯誤資訊。
 
-- 不能通過類的構造函數調用虛擬函數機制。 從類的構造函數調用虛擬函數會導致對函數的靜態解析調用,因為它在繼承層次結構中定義。 對純虛擬函數的調用會導致連結器錯誤。
+- 您無法從類別的函式使用虛擬函式機制來呼叫虛擬函式。 從類別的函式呼叫虛擬函式時，會產生靜態解析的函式呼叫，因為它是在繼承階層中的該點定義。 呼叫純虛擬函式會導致連結器錯誤。
 
-   類不是繼承層次結構中派生最多的類 - 它依賴於 ATL 提供的派生類來提供其某些功能。 初始化很可能需要使用該類提供的要素(當類的物件需要聚合其他物件時,情況確實如此),但類中的構造函數無法訪問這些要素。 在完全構造最派生的類之前,將執行類的構造代碼。
+   您的類別不是繼承階層架構中最常衍生的類別，它依賴 ATL 提供的衍生類別來提供其部分功能。 您的初始化很有可能需要使用該類別所提供的功能 (當您類別的物件需要將其他物件匯總) ，但您的類別中的函式無法存取這些功能時，這是正確的。 您類別的結構程式碼會在完全建立最衍生的類別之前執行。
 
-   但是,`FinalConstruct`在完全建構最派生的類後立即調用,允許您調用虛擬函數並使用 ATL 提供的引用計數實現。
+   不過，在 `FinalConstruct` 完整建立衍生的類別之後，會立即呼叫，讓您能夠呼叫虛擬函式，並使用 ATL 所提供的參考計數實作為參考。
 
 ### <a name="example"></a>範例
 
-通常,在派生的`CComObjectRootEx`類中重寫此方法以創建任何聚合物件。 例如：
+通常會在衍生自的類別中覆寫這個方法， `CComObjectRootEx` 以建立任何匯總的物件。 例如：
 
 [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]
 
-如果建構失敗,您可以傳回錯誤。 如果內部聚合物件在創建過程中增加引用計數,然後將計數化為 0,則可以使用宏[DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct)來保護外部物件不被刪除。
+如果結構失敗，您可能會傳回錯誤。 您也可以使用宏 [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) ，以防止外部物件被刪除，如果在建立期間，內部匯總物件會遞增參考計數，然後將計數遞減為0。
 
-以下是建立聚合的典型方法:
+以下是建立匯總的一般方式：
 
-- 向類`IUnknown`物件添加指標,並將其初始化到建構函數中的 NULL。
+- 將 `IUnknown` 指標加入至您的類別物件，並在函式中將它初始化為 Null。
 
-- 重寫`FinalConstruct`以創建聚合。
+- 覆寫 `FinalConstruct` 以建立匯總。
 
-- 使用定義為`IUnknown`參數的指標[,COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate)宏。
+- 使用 `IUnknown` 您定義的指標做為 [COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate) 宏的參數。
 
-- 重寫`FinalRelease`以`IUnknown`釋放指標。
+- 覆寫 `FinalRelease` 以釋放 `IUnknown` 指標。
 
-## <a name="ccomobjectrootexfinalrelease"></a><a name="finalrelease"></a>CComObjectRootEx:最終發佈
+## <a name="ccomobjectrootexfinalrelease"></a><a name="finalrelease"></a> CComObjectRootEx：： FinalRelease
 
-可以在派生類中重寫此方法,以執行物件所需的任何清理。
+您可以在衍生類別中覆寫這個方法，以執行您的物件所需的任何清除。
 
 ```cpp
 void FinalRelease();
@@ -161,13 +161,13 @@ void FinalRelease();
 
 ### <a name="remarks"></a>備註
 
-預設情況下,`CComObjectRootEx::FinalRelease`不執行任何操作。
+預設 `CComObjectRootEx::FinalRelease` 不會執行任何動作。
 
-執行清理`FinalRelease`比向類的析構函數添加代碼更可取,因為物件仍在調用`FinalRelease`的 點完全構造。 這使您能夠安全地訪問最派生類提供的方法。 這對刪除之前釋放任何聚合物件尤其重要。
+`FinalRelease`若要將程式碼加入至類別的函式，最好是將程式碼加入至類別的函式，因為物件仍會在呼叫的位置進行完整的結構化 `FinalRelease` 。 這可讓您安全地存取由最衍生的類別所提供的方法。 這對於在刪除之前釋放任何匯總的物件而言特別重要。
 
-## <a name="ccomobjectrootexinternaladdref"></a><a name="internaladdref"></a>CComObjectRootEx::內部AddRef
+## <a name="ccomobjectrootexinternaladdref"></a><a name="internaladdref"></a> CComObjectRootEx：： InternalAddRef
 
-將非聚合物件的引用計數增加1。
+將非匯總物件的參考計數遞增1。
 
 ```
 ULONG InternalAddRef();
@@ -175,13 +175,13 @@ ULONG InternalAddRef();
 
 ### <a name="return-value"></a>傳回值
 
-可用於診斷和測試的值。
+可能適用于診斷和測試的值。
 
 ### <a name="remarks"></a>備註
 
-如果線程模型是多線程的,`InterlockedIncrement`則用於防止多個線程同時更改引用計數。
+如果執行緒模型為多執行緒， `InterlockedIncrement` 則用來防止一個以上的執行緒同時變更參考計數。
 
-## <a name="ccomobjectrootexinternalqueryinterface"></a><a name="internalqueryinterface"></a>CComObjectRootEx:內部查詢介面
+## <a name="ccomobjectrootexinternalqueryinterface"></a><a name="internalqueryinterface"></a> CComObjectRootEx：： InternalQueryInterface
 
 擷取所要求介面的指標。
 
@@ -195,29 +195,29 @@ static HRESULT InternalQueryInterface(
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
-[在]指向物件的指標,其中包含向 公開的介面的 COM`QueryInterface`映射 。
+*pThis*<br/>
+在物件的指標，該物件包含公開之介面的 COM 對應 `QueryInterface` 。
 
-*p 項目*<br/>
-[在]指向訪問可用介面`_ATL_INTMAP_ENTRY`對應的結構的指標。
+*pEntries*<br/>
+在 `_ATL_INTMAP_ENTRY` 存取可用介面對應之結構的指標。
 
 *Iid*<br/>
-[在]請求的介面的 GUID。
+在所要求之介面的 GUID。
 
 *ppvObject*<br/>
-[出]指向*iid*中指定的介面指標,如果找不到介面,則指向 NULL 中的指標。
+擴展 *Iid*中指定之介面指標的指標，如果找不到介面，則為 Null。
 
 ### <a name="return-value"></a>傳回值
 
-標準 HRESULT 值之一。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-`InternalQueryInterface` 只處理 COM 對應表格中的介面。 如果物件是聚合的,`InternalQueryInterface`則不委託給外部未知物件。 您可以使用巨[集COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)或其變體之一在 COM 地圖表中輸入介面。
+`InternalQueryInterface` 只處理 COM 對應表格中的介面。 如果您的物件已匯總，則 `InternalQueryInterface` 不會委派給外部未知。 您可以使用宏 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) 或其中一個變體來輸入 COM map 資料表中的介面。
 
-## <a name="ccomobjectrootexinternalrelease"></a><a name="internalrelease"></a>CComObjectRootEx:內部發佈
+## <a name="ccomobjectrootexinternalrelease"></a><a name="internalrelease"></a> CComObjectRootEx：： InternalRelease
 
-將非聚合物件的引用計數減少 1。
+將非匯總物件的參考計數遞減1。
 
 ```
 ULONG InternalRelease();
@@ -225,15 +225,15 @@ ULONG InternalRelease();
 
 ### <a name="return-value"></a>傳回值
 
-在非調試和調試生成中,此函數返回一個可用於診斷或測試的值。 返回的確切值取決於許多因素,如使用的操作系統,並且可能是引用計數,也可能不是。
+在非 debug 錯和 debug 組建中，此函式會傳回一個值，這個值可能有助於診斷或測試。 傳回的確切值取決於許多因素，例如使用的作業系統，而且不一定是參考計數。
 
 ### <a name="remarks"></a>備註
 
-如果線程模型是多線程的,`InterlockedDecrement`則用於防止多個線程同時更改引用計數。
+如果執行緒模型為多執行緒， `InterlockedDecrement` 則用來防止一個以上的執行緒同時變更參考計數。
 
-## <a name="ccomobjectrootexlock"></a><a name="lock"></a>CComObjectRootEx:鎖定
+## <a name="ccomobjectrootexlock"></a><a name="lock"></a> CComObjectRootEx：： Lock
 
-如果線程模型是多線程的,此方法將調用 Win32 API 函數[EnterDataSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection),它等待線程可以取得通過私有數據成員獲得的關鍵部分物件的擁有權。
+如果執行緒模型為多執行緒，這個方法會呼叫 WIN32 API 函式 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection)，它會等到執行緒可以取得透過私用資料成員取得之重要區段物件的擁有權。
 
 ```cpp
 void Lock();
@@ -241,13 +241,13 @@ void Lock();
 
 ### <a name="remarks"></a>備註
 
-當受保護的代碼完成執行時,線程必須調用`Unlock`以釋放關鍵部分的擁有權。
+當受保護的程式碼完成執行時，執行緒必須呼叫 `Unlock` 來釋放重要區段的擁有權。
 
-如果線程模型是單線程的,則此方法不執行任何操作。
+如果執行緒模型為單一執行緒，則這個方法不會執行任何動作。
 
-## <a name="ccomobjectrootexm_dwref"></a><a name="m_dwref"></a>CComObjectRootEx:m_dwRef
+## <a name="ccomobjectrootexm_dwref"></a><a name="m_dwref"></a> CComObjectRootEx：： m_dwRef
 
-訪問四個字節記憶體的聯合的一部分。
+存取四個位元組記憶體的等位的一部分。
 
 ```
 long m_dwRef;
@@ -255,7 +255,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>備註
 
-使用`m_pOuterUnknown`,聯合的一部分:
+With `m_pOuterUnknown` ，union 的一部分：
 
 ```
 union {
@@ -264,11 +264,11 @@ union {
 };
 ```
 
-如果未聚合物件,則`AddRef``Release`和訪問的引用計數將存儲在中。 `m_dwRef` 如果對象是聚合的,則指向外部未知值的指標存儲在[m_pOuterUnknown](#m_pouterunknown)中。
+如果未匯總物件，則由和存取的參考計數 `AddRef` `Release` 會儲存在中 `m_dwRef` 。 如果物件已匯總，則外部未知的指標會儲存在 [m_pOuterUnknown](#m_pouterunknown)中。
 
-## <a name="ccomobjectrootexm_pouterunknown"></a><a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown
+## <a name="ccomobjectrootexm_pouterunknown"></a><a name="m_pouterunknown"></a> CComObjectRootEx：： m_pOuterUnknown
 
-訪問四個字節記憶體的聯合的一部分。
+存取四個位元組記憶體的等位的一部分。
 
 ```
 IUnknown*
@@ -277,7 +277,7 @@ IUnknown*
 
 ### <a name="remarks"></a>備註
 
-使用`m_dwRef`,聯合的一部分:
+With `m_dwRef` ，union 的一部分：
 
 ```
 union {
@@ -286,11 +286,11 @@ union {
 };
 ```
 
-如果對象是聚合的,則指向外部未知值的指標存儲在`m_pOuterUnknown`中。 如果未聚合物件,則訪問`AddRef`和`Release`的引用計數存儲在[m_dwRef](#m_dwref)中。
+如果已匯總物件，則會將外部未知的指標儲存在中 `m_pOuterUnknown` 。 如果未匯總物件，則存取的參考計數 `AddRef` `Release` 會儲存在 [m_dwRef](#m_dwref)中。
 
-## <a name="ccomobjectrootexobjectmain"></a><a name="objectmain"></a>CComObjectRootEx:物件Main
+## <a name="ccomobjectrootexobjectmain"></a><a name="objectmain"></a> CComObjectRootEx：： ObjectMain
 
-對於物件映射中列出的每個類,在初始化模組時調用此函數一次,在終止模組時再次調用該函數。
+針對物件對應中列出的每個類別，此函式會在初始化模組時呼叫一次，並在終止時呼叫。
 
 ```
 static void WINAPI ObjectMain(bool bStarting);
@@ -298,22 +298,22 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="parameters"></a>參數
 
-*b 開始*<br/>
-[出]如果要初始化類,則該值為 TRUE;如果正在初始化該類,則該值為 TRUE。否則 FALSE。
+*bStarting*<br/>
+擴展如果正在初始化類別，則此值為 TRUE。否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-*bStarting*參數的值指示模組是初始化還是終止。 的`ObjectMain`預設實現不執行任何操作,但您可以重寫類中的此函數,以初始化或清理要為類分配的資源。 請注意,`ObjectMain`在請求類的任何實例之前調用。
+*BStarting*參數的值會指出模組是否正在初始化或終止。 的預設執行 `ObjectMain` 不會執行任何動作，但是您可以在類別中覆寫這個函式，以初始化或清除您想要為類別配置的資源。 請注意， `ObjectMain` 會在要求類別的任何實例之前呼叫。
 
-`ObjectMain`從 DLL 的入口點調用,因此入口點函數可以執行的操作類型受到限制。 有關這些限制的詳細資訊,請參閱[DLL 和 VisualC++執行時庫行為](../../build/run-time-library-behavior.md)與[DllMain](/windows/win32/Dlls/dllmain)。
+`ObjectMain` 從 DLL 的進入點呼叫，因此，進入點函數可以執行的作業類型會受到限制。 如需這些限制的詳細資訊，請參閱 [dll 和 Visual C++ 執行時間程式庫行為](../../build/run-time-library-behavior.md) 和 [DllMain](/windows/win32/Dlls/dllmain)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]
 
-## <a name="ccomobjectrootexouteraddref"></a><a name="outeraddref"></a>CComObjectRootEx::外部AddRef
+## <a name="ccomobjectrootexouteraddref"></a><a name="outeraddref"></a> CComObjectRootEx：： OuterAddRef
 
-遞增聚合的外部未知數。
+遞增匯總之外部未知的參考計數。
 
 ```
 ULONG OuterAddRef();
@@ -321,11 +321,11 @@ ULONG OuterAddRef();
 
 ### <a name="return-value"></a>傳回值
 
-可用於診斷和測試的值。
+可能適用于診斷和測試的值。
 
-## <a name="ccomobjectrootexouterqueryinterface"></a><a name="outerqueryinterface"></a>CComObjectRootEx:外部查詢介面
+## <a name="ccomobjectrootexouterqueryinterface"></a><a name="outerqueryinterface"></a> CComObjectRootEx：： OuterQueryInterface
 
-檢索指向請求的介面的間接指標。
+抓取所要求介面的間接指標。
 
 ```
 HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
@@ -334,18 +334,18 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>參數
 
 *Iid*<br/>
-[在]請求的介面的 GUID。
+在所要求之介面的 GUID。
 
 *ppvObject*<br/>
-[出]指向*iid*中指定的介面指標,如果聚合不支援介面,則指向 NULL 中的指標。
+擴展 *Iid*中指定之介面指標的指標，如果匯總不支援介面，則為 Null。
 
 ### <a name="return-value"></a>傳回值
 
-標準 HRESULT 值之一。
+其中一個標準 HRESULT 值。
 
-## <a name="ccomobjectrootexouterrelease"></a><a name="outerrelease"></a>CComObjectRootEx:外部釋放
+## <a name="ccomobjectrootexouterrelease"></a><a name="outerrelease"></a> CComObjectRootEx：： OuterRelease
 
-取消聚合外部未知項的引用計數。
+遞減匯總之外部未知的參考計數。
 
 ```
 ULONG OuterRelease();
@@ -353,11 +353,11 @@ ULONG OuterRelease();
 
 ### <a name="return-value"></a>傳回值
 
-在非調試生成中,始終返回 0。 在調試生成中,返回可用於診斷或測試的值。
+在非 debug 組建中，一律會傳回0。 在 debug 組建中，會傳回可能有助於診斷或測試的值。
 
-## <a name="ccomobjectrootexunlock"></a><a name="unlock"></a>CComObjectRootEx:解鎖
+## <a name="ccomobjectrootexunlock"></a><a name="unlock"></a> CComObjectRootEx：： Unlock
 
-如果線程模型是多線程的,此方法調用 Win32 API 函數[Leave臨界節](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection),它釋放通過私有數據成員獲取的關鍵部分物件的擁有權。
+如果執行緒模型為多執行緒，這個方法會呼叫 WIN32 API 函式 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection)，此函式會釋放透過私用資料成員取得之重要區段物件的擁有權。
 
 ```cpp
 void Unlock();
@@ -365,13 +365,13 @@ void Unlock();
 
 ### <a name="remarks"></a>備註
 
-要取得所有權,線程必須呼叫`Lock`。 每個調用`Lock`都需要相應的調用`Unlock`以 釋放關鍵部分的擁有權。
+若要取得擁有權，執行緒必須呼叫 `Lock` 。 的每個呼叫都 `Lock` 需要對應的呼叫， `Unlock` 才能釋放重要區段的擁有權。
 
-如果線程模型是單線程的,則此方法不執行任何操作。
+如果執行緒模型為單一執行緒，則這個方法不會執行任何動作。
 
 ## <a name="see-also"></a>另請參閱
 
 [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject 類別](../../atl/reference/ccomobject-class.md)<br/>
-[CComPoly 物件類別](../../atl/reference/ccompolyobject-class.md)<br/>
+[CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

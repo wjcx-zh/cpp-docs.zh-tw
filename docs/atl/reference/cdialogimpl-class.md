@@ -1,5 +1,5 @@
 ---
-title: CDialogImplclass
+title: CDialogImpl 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CDialogImpl
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: d5ab7293f73429a93c3fcab243c2e34d3c78f28a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b92b5130b31e88565d79b59a24b2bd377d0d84c0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747714"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834722"
 ---
-# <a name="cdialogimpl-class"></a>CDialogImplclass
+# <a name="cdialogimpl-class"></a>CDialogImpl 類別
 
-此類提供了創建模式或無模式對話方塊的方法。
+這個類別提供建立強制回應或非強制回應對話方塊的方法。
 
 > [!IMPORTANT]
-> 此類及其成員不能在Windows運行時中執行的應用程式中使用。
+> 在 Windows 執行階段中執行的應用程式中，無法使用這個類別和其成員。
 
 ## <a name="syntax"></a>語法
 
@@ -42,66 +42,66 @@ template <class T,
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類,派生自`CDialogImpl`。
+衍生自的類別 `CDialogImpl` 。
 
 *TBase*<br/>
-新類的基類。 預設基項是[CWindow](../../atl/reference/cwindow-class.md)。
+新類別的基類。 預設基類是 [CWindow](../../atl/reference/cwindow-class.md)。
 
 ## <a name="members"></a>成員
 
 ### <a name="methods"></a>方法
 
-|||
+|函式|描述|
 |-|-|
-|[建立](#create)|創建無模式對話方塊。|
-|[銷毀視窗](#destroywindow)|銷毀無模式對話方塊。|
-|[多模態](#domodal)|創建模式對話方塊。|
-|[結束交談](#enddialog)|銷毀模式對話方塊。|
+|[建立](#create)|建立非強制回應對話方塊。|
+|[DestroyWindow](#destroywindow)|終結非強制回應對話方塊。|
+|[DoModal](#domodal)|建立強制回應對話方塊。|
+|[EndDialog](#enddialog)|終結強制回應對話方塊。|
 
-### <a name="cdialogimplbaset-methods"></a>CDialogimplbaseT 方法
+### <a name="cdialogimplbaset-methods"></a>CDialogImplBaseT 方法
 
-|||
+|函式|描述|
 |-|-|
-|[取得對話](#getdialogproc)|返回當前對話框過程。|
-|[對應對話](#mapdialogrect)|將指定矩形的對話框單位映射到螢幕單位(圖元)。|
-|[OnFinalMessage](#onfinalmessage)|收到最後一條消息后調用,通常WM_NCDESTROY。|
+|[GetDialogProc](#getdialogproc)|傳回目前的對話方塊程式。|
+|[MapDialogRect](#mapdialogrect)|將指定之矩形的對話方塊單位對應至螢幕單位 (圖元) 。|
+|[OnFinalMessage](#onfinalmessage)|在收到最後一個訊息之後呼叫，通常是 WM_NCDESTROY。|
 
 ### <a name="static-functions"></a>靜態函式
 
-|||
+|函式|描述|
 |-|-|
-|[DialogProc](#dialogproc)|處理發送到對話框的消息。|
-|[開始對話](#startdialogproc)|收到第一條消息以處理發送到對話框的消息時調用。|
+|[DialogProc](#dialogproc)|處理傳送至對話方塊的訊息。|
+|[StartDialogProc](#startdialogproc)|在收到第一個訊息以處理傳送至對話方塊的訊息時呼叫。|
 
 ## <a name="remarks"></a>備註
 
-有了`CDialogImpl`,您可以創建一個模態或無模式對話方塊。 `CDialogImpl`提供對話框過程,該過程使用預設消息映射將消息定向到相應的處理程式。
+`CDialogImpl`您可以使用來建立強制回應或非強制回應對話方塊。 `CDialogImpl` 提供對話方塊程式，此程式會使用預設的訊息對應，將訊息導向至適當的處理常式。
 
-基類析構函數`~CWindowImplRoot`可確保在銷毀物件之前視窗已消失。
+基類的函式 `~CWindowImplRoot` 可確保視窗會在終結物件之前消失。
 
-`CDialogImpl`衍生,`CDialogImplBaseT`後者又派生`CWindowImplRoot`自 。
+`CDialogImpl` 衍生自 `CDialogImplBaseT` ，而後者又衍生自 `CWindowImplRoot` 。
 
 > [!NOTE]
-> 類別必須定義指定對話框`IDD`樣本資源 ID 的成員。 例如,ATL 專案精靈會自動將以下行添加到您的類:
+> 您的類別必須定義 `IDD` 指定對話方塊範本資源識別碼的成員。 例如，ATL 專案嚮導會自動將下行加入至您的類別：
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]
 
-嚮導`MyDlg`名稱頁中輸入的**短名稱**的位置。 **Names**
+其中 `MyDlg` 是在 [Wizard**名稱**] 頁面中輸入的**簡短名稱**。
 
 |如需下列項目的詳細資訊|請參閱|
 |--------------------------------|---------|
 |建立控制項|[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)|
-|在 ATL 中使用對話框|[ATL 視窗類別](../../atl/atl-window-classes.md)|
+|在 ATL 中使用對話方塊|[ATL 視窗類別](../../atl/atl-window-classes.md)|
 |ATL 專案精靈|[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)|
-|對話方塊|[Windows](/windows/win32/dlgbox/dialog-boxes) SDK 中的對話框及其後續主題|
+|對話方塊|Windows SDK 中的[對話方塊](/windows/win32/dlgbox/dialog-boxes)和後續主題|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題:** atlwin.h
+**標頭：** atlwin。h
 
-## <a name="cdialogimplcreate"></a><a name="create"></a>CDialogImpl::建立
+## <a name="cdialogimplcreate"></a><a name="create"></a> CDialogImpl：： Create
 
-創建無模式對話方塊。
+建立非強制回應對話方塊。
 
 ```
 HWND Create(
@@ -116,25 +116,25 @@ HWND Create(
 
 ### <a name="parameters"></a>參數
 
-*hWnd 父母*<br/>
-[在]擁有者視窗的句柄。
+*hWndParent*<br/>
+在擁有者視窗的控制碼。
 
-**RECT&** *rect* [in] 指定對話框大小和位置的[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
+**Rect&** *rect* [in] 指定對話方塊大小和位置的 [矩形](/windows/win32/api/windef/ns-windef-rect) 結構。
 
-*德維尼帕拉姆*<br/>
-[在]指定要傳遞給WM_INITDIALOG訊息的*lParam*參數中的對話框的值。
+*dwInitParam*<br/>
+在指定要傳遞給 WM_INITDIALOG 訊息 *lParam* 參數中之對話方塊的值。
 
 ### <a name="return-value"></a>傳回值
 
-新創建的對話框的句柄。
+新建立之對話方塊的控制碼。
 
 ### <a name="remarks"></a>備註
 
-此對話框會自動附加到`CDialogImpl`物件。 要建立模態對話框,請呼叫[DoModal](#domodal)。 上面的第二個覆寫僅用於[CComControl](../../atl/reference/ccomcontrol-class.md)。
+這個對話方塊會自動附加到 `CDialogImpl` 物件。 若要建立強制回應對話方塊，請呼叫 [DoModal](#domodal)。 上述的第二個覆寫僅適用于 [CComControl](../../atl/reference/ccomcontrol-class.md)。
 
-## <a name="cdialogimpldestroywindow"></a><a name="destroywindow"></a>CDialogimpl::D
+## <a name="cdialogimpldestroywindow"></a><a name="destroywindow"></a> CDialogImpl：:D estroyWindow
 
-銷毀無模式對話方塊。
+終結非強制回應對話方塊。
 
 ```
 BOOL DestroyWindow();
@@ -142,15 +142,15 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>傳回值
 
-如果對話框已成功銷毀,則為 TRUE;否則 FALSE。
+如果已成功終結對話方塊，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果對話框已成功銷毀,則返回 TRUE;否則 FALSE。
+如果已成功終結此對話方塊，則傳回 TRUE;否則為 FALSE。
 
-## <a name="cdialogimpldialogproc"></a><a name="dialogproc"></a>CDialogImpl::DialogProc
+## <a name="cdialogimpldialogproc"></a><a name="dialogproc"></a> CDialogImpl：:D ialogProc
 
-此靜態函數實現對話框過程。
+此靜態函式會實作用對話方塊程式。
 
 ```
 static LRESULT CALLBACK DialogProc(
@@ -163,30 +163,30 @@ static LRESULT CALLBACK DialogProc(
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-[在]對話框的句柄。
+在對話方塊的控制碼。
 
-*烏姆斯格*<br/>
-[在]發送到對話框的消息。
+*uMsg*<br/>
+在傳送至對話方塊的訊息。
 
 *wParam*<br/>
-[在]其他特定於消息的資訊。
+在其他訊息特定資訊。
 
 *lParam*<br/>
-[在]其他特定於消息的資訊。
+在其他訊息特定資訊。
 
 ### <a name="return-value"></a>傳回值
 
-如果處理消息,則為 TRUE;如果消息已處理,則為 TRUE。否則,FALSE。
+如果已處理訊息，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`DialogProc`使用預設消息映射將消息定向到相應的處理程式。
+`DialogProc` 使用預設的訊息對應，將訊息導向至適當的處理常式。
 
-您可以重寫`DialogProc`以提供用於處理消息的不同機制。
+您可以覆寫 `DialogProc` 以提供不同的機制來處理訊息。
 
-## <a name="cdialogimpldomodal"></a><a name="domodal"></a>CDialogimpl::Do模態
+## <a name="cdialogimpldomodal"></a><a name="domodal"></a> CDialogImpl：:D oModal
 
-創建模式對話方塊。
+建立強制回應對話方塊。
 
 ```
 INT_PTR DoModal(
@@ -196,25 +196,25 @@ INT_PTR DoModal(
 
 ### <a name="parameters"></a>參數
 
-*hWnd 父母*<br/>
-[在]擁有者視窗的句柄。 默認值是[GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32 函數的返回值。
+*hWndParent*<br/>
+在擁有者視窗的控制碼。 預設值是 [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32 函數的傳回值。
 
-*德維尼帕拉姆*<br/>
-[在]指定要傳遞給WM_INITDIALOG訊息的*lParam*參數中的對話框的值。
+*dwInitParam*<br/>
+在指定要傳遞給 WM_INITDIALOG 訊息 *lParam* 參數中之對話方塊的值。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功,則調用[EndDialog](#enddialog)中指定的*nRetCode*參數的值。 否則為 -1。
+如果成功，則為[EndDialog](#enddialog)呼叫中所指定的*nRetCode*參數值。 否則為 -1。
 
 ### <a name="remarks"></a>備註
 
-此對話框會自動附加到`CDialogImpl`物件。
+這個對話方塊會自動附加到 `CDialogImpl` 物件。
 
-要建立無模式對話框,請呼叫["創建](#create)"。
+若要建立非強制回應對話方塊，請呼叫 [create](#create)。
 
-## <a name="cdialogimplenddialog"></a><a name="enddialog"></a>CDialogimpl:結束對話
+## <a name="cdialogimplenddialog"></a><a name="enddialog"></a> CDialogImpl：： EndDialog
 
-銷毀模式對話方塊。
+終結強制回應對話方塊。
 
 ```
 BOOL EndDialog(int nRetCode);
@@ -223,22 +223,22 @@ BOOL EndDialog(int nRetCode);
 ### <a name="parameters"></a>參數
 
 *nRetCode*<br/>
-[在][CDialogImpl::Do模態](#domodal))要返回的值。
+在 [CDialogImpl：:D omodal](#domodal)所要傳回的值。
 
 ### <a name="return-value"></a>傳回值
 
-如果對話框已銷毀,則為 TRUE;如果對話框已銷毀,則為 TRUE。否則,FALSE。
+如果對話方塊已損毀，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`EndDialog`必須通過對話過程調用。 銷毀對話框後,Windows 使用*nRetCode*的值作為`DoModal`創建對話框的返回值。
+`EndDialog` 必須透過對話程式來呼叫。 終結對話方塊之後，Windows 會使用 *nRetCode* 的值做為的傳回值，而此值會 `DoModal` 建立對話方塊。
 
 > [!NOTE]
-> 不要調用`EndDialog`以銷毀無模式對話方塊。 呼叫[CWindow::D視窗](../../atl/reference/cwindow-class.md#destroywindow)。
+> 請勿呼叫 `EndDialog` 來摧毀非強制回應對話方塊。 請改 [為呼叫 CWindow：:D estroywindow](../../atl/reference/cwindow-class.md#destroywindow) 。
 
-## <a name="cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CDialogImpl::取得對話Proc
+## <a name="cdialogimplgetdialogproc"></a><a name="getdialogproc"></a> CDialogImpl：： GetDialogProc
 
-返回`DialogProc`,當前對話框過程。
+傳回 `DialogProc` 目前的對話方塊程式。
 
 ```
 virtual WNDPROC GetDialogProc();
@@ -246,15 +246,15 @@ virtual WNDPROC GetDialogProc();
 
 ### <a name="return-value"></a>傳回值
 
-當前對話框過程。
+目前的對話方塊程式。
 
 ### <a name="remarks"></a>備註
 
-重寫此方法以將對話框過程替換為您自己的對話框過程。
+覆寫此方法以將對話程式取代為您自己的程式。
 
-## <a name="cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>CDialogimpl::映射對話重新
+## <a name="cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a> CDialogImpl：： MapDialogRect
 
-將指定矩形的對話框單位轉換為螢幕單位(圖元)。
+將指定矩形的對話方塊單位)  (對應轉換為螢幕單位 (圖元) 。
 
 ```
 BOOL MapDialogRect(LPRECT lpRect);
@@ -263,19 +263,19 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向物件`CRect`或[RECT](/windows/win32/api/windef/ns-windef-rect)結構,該結構用於接收包含更新區域的更新的用戶端座標。
+指向 `CRect` 物件或 [RECT](/windows/win32/api/windef/ns-windef-rect) 結構，此結構會接收包含更新區域之更新的用戶端座標。
 
 ### <a name="return-value"></a>傳回值
 
-如果更新成功,則非零;如果更新失敗,為 0。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。
+如果更新成功，則為非零;如果更新失敗，則為0。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。
 
 ### <a name="remarks"></a>備註
 
-該函數將指定`RECT`結構中的座標替換為轉換的座標,從而允許該結構用於創建對話方塊或在對話方塊中定位控制件。
+函式會將指定結構中的座標取代 `RECT` 為已轉換的座標，讓您可以使用結構來建立對話方塊或將控制項放在對話方塊中。
 
-## <a name="cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>CDialogimpl::在最終消息
+## <a name="cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a> CDialogImpl：： OnFinalMessage
 
-收到最後一條消息後調用`WM_NCDESTROY`( 通常 )。
+在收到最後一個訊息之後呼叫 (通常是 `WM_NCDESTROY`) 。
 
 ```
 virtual void OnFinalMessage(HWND hWnd);
@@ -284,15 +284,15 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-[在]正在銷毀的視窗的句柄。
+在要終結的視窗控制碼。
 
 ### <a name="remarks"></a>備註
 
-請注意,如果要在視窗銷毀時自動刪除物件,可以調用 **「刪除此」;** 此處。
+請注意，如果您想要在視窗損毀時自動刪除您的物件，您可以呼叫 **delete** ，如下所示。
 
-## <a name="cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>CDialogImpl::開始對話
+## <a name="cdialogimplstartdialogproc"></a><a name="startdialogproc"></a> CDialogImpl：： StartDialogProc
 
-只調用一次,當收到第一條消息時,處理發送到對話方塊的消息。
+只有在收到第一個訊息時呼叫一次，以處理傳送至對話方塊的訊息。
 
 ```
 static LRESULT CALLBACK StartDialogProc(
@@ -305,24 +305,24 @@ static LRESULT CALLBACK StartDialogProc(
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-[在]對話框的句柄。
+在對話方塊的控制碼。
 
-*烏姆斯格*<br/>
-[在]發送到對話框的消息。
+*uMsg*<br/>
+在傳送至對話方塊的訊息。
 
 *wParam*<br/>
-[在]其他特定於消息的資訊。
+在其他訊息特定資訊。
 
 *lParam*<br/>
-[在]其他特定於消息的資訊。
+在其他訊息特定資訊。
 
 ### <a name="return-value"></a>傳回值
 
-視窗過程。
+視窗程式。
 
 ### <a name="remarks"></a>備註
 
-初始呼叫 後`StartDialogProc``DialogProc`, 設定為對話框過程,並進一步調用轉到那裡。
+初次呼叫之後 `StartDialogProc` ， `DialogProc` 會將設定為對話程式，並在該處進行進一步的呼叫。
 
 ## <a name="see-also"></a>另請參閱
 

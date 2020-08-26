@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: fe59c58659252f5d799339fdd83237e56f81a2ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf5cd289ab0ee02d6c9e09e95d01008191899cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232959"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832642"
 ---
 # <a name="poisson_distribution-class"></a>poisson_distribution 類別
 
@@ -68,16 +68,14 @@ public:
 ### <a name="parameters"></a>參數
 
 *IntType*\
-整數結果類型，預設值為 **`int`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+整數結果類型，預設為 **`int`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述以波氏分佈產生使用者指定之整數類型值的分佈。 下表提供各個成員的文章連結。
+類別樣板描述以波氏分佈產生使用者指定之整數類型的值的分佈。 下表提供各個成員的文章連結。
 
-||||
-|-|-|-|
-|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
-|`poisson_distribution::operator()`||[param_type](#param_type)|
+[poisson_distribution](#poisson_distribution)\
+[param_type](#param_type)
 
 屬性函式 `mean()` 會傳回儲存的分佈參數 *mean* 的值。
 
@@ -190,13 +188,13 @@ Distribution for 100 samples:
    17 :
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution：:p oisson_distribution
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a> poisson_distribution：:p oisson_distribution
 
 建構分佈。
 
@@ -207,10 +205,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*表明*\
+*意味 著*\
 `mean` 分佈參數。
 
-*parm*\
+*>parm*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -221,7 +219,7 @@ explicit binomial_distribution(const param_type& parm);
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution：:p aram_type
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a> poisson_distribution：:p aram_type
 
 儲存分佈的參數。
 

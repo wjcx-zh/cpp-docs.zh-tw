@@ -1,5 +1,5 @@
 ---
-title: 複合控制巨集
+title: 複合控制項宏
 ms.date: 05/06/2019
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 67ad18c07a92cfecca44667908a8488e8c2da234
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7ac13a11646faca53b38ec610dc0388bdd14d251
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331522"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833539"
 ---
-# <a name="composite-control-macros"></a>複合控制巨集
+# <a name="composite-control-macros"></a>複合控制項宏
 
-這些宏定義事件接收器映射和條目。
+這些宏會定義事件接收對應和專案。
 
-|||
+|巨集|描述|
 |-|-|
-|[BEGIN_SINK_MAP](#begin_sink_map)|標記複合控件的事件接收器映射的開頭。|
-|[END_SINK_MAP](#end_sink_map)|標記複合控制件的事件接收器映射的末尾。|
-|[SINK_ENTRY](#sink_entry)|進入事件接收器映射。|
-|[SINK_ENTRY_EX](#sink_entry_ex)|使用附加參數進入事件接收器對應。|
-|[SINK_ENTRY_EX_P](#sink_entry_ex)| (視覺工作室 2017)類似於SINK_ENTRY_EX,只不過它需要指向 iid 的指標。|
-|[SINK_ENTRY_INFO](#sink_entry_info)|項目事件接收器映射與手動提供的類型資訊,用於與[IDispEventSimple.](../../atl/reference/idispeventsimpleimpl-class.md)|
-|[SINK_ENTRY_INFO_P](#sink_entry_info)| (視覺工作室 2017)類似於SINK_ENTRY_INFO,只不過它需要指向 iid 的指標。|
+|[BEGIN_SINK_MAP](#begin_sink_map)|標記複合控制項的事件接收對應開頭。|
+|[END_SINK_MAP](#end_sink_map)|標記複合控制項的事件接收對應結尾。|
+|[SINK_ENTRY](#sink_entry)|進入事件接收器對應。|
+|[SINK_ENTRY_EX](#sink_entry_ex)|具有額外參數的事件接收對應專案。|
+|[SINK_ENTRY_EX_P](#sink_entry_ex)|  (Visual Studio 2017) 類似于 SINK_ENTRY_EX，只不過它會採用 iid 的指標。|
+|[SINK_ENTRY_INFO](#sink_entry_info)|以手動提供的類型資訊進入事件接收對應，以搭配 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)使用。|
+|[SINK_ENTRY_INFO_P](#sink_entry_info)|  (Visual Studio 2017) 類似于 SINK_ENTRY_INFO，只不過它會採用 iid 的指標。|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題:** atlcom.h
+**標頭：** atlcom.h。h
 
-## <a name="begin_sink_map"></a><a name="begin_sink_map"></a>BEGIN_SINK_MAP
+## <a name="begin_sink_map"></a><a name="begin_sink_map"></a> BEGIN_SINK_MAP
 
-聲明複合控件的事件接收器映射的開頭。
+宣告複合控制項之事件接收對應的開頭。
 
 ```
 BEGIN_SINK_MAP(_class)
@@ -44,7 +44,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="parameters"></a>參數
 
 *_class*<br/>
-[在]指定控制項。
+在指定控制項。
 
 ### <a name="example"></a>範例
 
@@ -52,11 +52,11 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="remarks"></a>備註
 
-ActiveX 事件接收器的 CE ATL 實現僅支援事件處理程式方法中 HRESULT 類型的傳回值或 void;任何其他返回值不受支援,其行為未定義。
+適用于 ActiveX 事件接收器的 CE ATL 執行只支援從事件處理常式方法傳回 HRESULT 或 void 類型的值;不支援任何其他傳回值，且其行為未定義。
 
-## <a name="end_sink_map"></a><a name="end_sink_map"></a>END_SINK_MAP
+## <a name="end_sink_map"></a><a name="end_sink_map"></a> END_SINK_MAP
 
-聲明複合控制項的事件接收器對應的結束。
+宣告複合控制項之事件接收對應的結尾。
 
 ```
 END_SINK_MAP()
@@ -68,11 +68,11 @@ END_SINK_MAP()
 
 ### <a name="remarks"></a>備註
 
-ActiveX 事件接收器的 CE ATL 實現僅支援事件處理程式方法中 HRESULT 類型的傳回值或 void;任何其他返回值不受支援,其行為未定義。
+適用于 ActiveX 事件接收器的 CE ATL 執行只支援從事件處理常式方法傳回 HRESULT 或 void 類型的值;不支援任何其他傳回值，且其行為未定義。
 
-## <a name="sink_entry"></a><a name="sink_entry"></a>SINK_ENTRY
+## <a name="sink_entry"></a><a name="sink_entry"></a> SINK_ENTRY
 
-聲明*識別*碼的控制項指定事件 (*不pid)* 的處理程式函數 *(fn)。*
+宣告處理常式函式， () *識別碼*所識別的控制項 (*dispid*) 之指定事件的*fn* 。
 
 ```
 SINK_ENTRY( id, dispid, fn )
@@ -81,13 +81,13 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[在]標識控件。
+在識別控制項。
 
-*不一部分*<br/>
-[在]標識指定的事件。
+*dispid*<br/>
+在識別指定的事件。
 
 *Fn*<br/>
-[在]事件處理程式函數的名稱。 此函數必須使用`_stdcall`調用約定,並具有適當的非介面樣式簽名。
+在事件處理常式函數的名稱。 此函式必須使用 `_stdcall` 呼叫慣例，且具有適當的分配介面樣式簽章。
 
 ### <a name="example"></a>範例
 
@@ -95,11 +95,11 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="remarks"></a>備註
 
-ActiveX 事件接收器的 CE ATL 實現僅支援事件處理程式方法中 HRESULT 類型的傳回值或 void;任何其他返回值不受支援,其行為未定義。
+適用于 ActiveX 事件接收器的 CE ATL 執行只支援從事件處理常式方法傳回 HRESULT 或 void 類型的值;不支援任何其他傳回值，且其行為未定義。
 
-## <a name="sink_entry_ex-and-sink_entry_ex_p"></a><a name="sink_entry_ex"></a>SINK_ENTRY_EX和SINK_ENTRY_EX_P
+## <a name="sink_entry_ex-and-sink_entry_ex_p"></a><a name="sink_entry_ex"></a> SINK_ENTRY_EX 和 SINK_ENTRY_EX_P
 
-宣告調度介面 *(iid)* 的指定事件 (*不 pid)* 的處理程式函數 *(fn),* 用於*由 id*識別的控制項。
+宣告處理常式函式 (*fn*) 適用于分派介面 (*iid*) 的指定事件 (*dispid*) ，以供*識別碼*識別的控制項使用。
 
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
@@ -109,19 +109,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[在]標識控件。
+在識別控制項。
 
 *Iid*<br/>
-[在]標識調度介面。
+在識別分派介面。
 
-*皮伊德*<br/>
-[在]指向調度介面的指標。
+*piid*<br/>
+在分派介面的指標。
 
-*不一部分*<br/>
-[在]標識指定的事件。
+*dispid*<br/>
+在識別指定的事件。
 
 *Fn*<br/>
-[在]事件處理程式函數的名稱。 此函數必須使用`_stdcall`調用約定,並具有適當的非介面樣式簽名。
+在事件處理常式函數的名稱。 此函式必須使用 `_stdcall` 呼叫慣例，且具有適當的分配介面樣式簽章。
 
 ### <a name="example"></a>範例
 
@@ -129,11 +129,11 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="remarks"></a>備註
 
-ActiveX 事件接收器的 CE ATL 實現僅支援事件處理程式方法中 HRESULT 類型的傳回值或 void;任何其他返回值不受支援,其行為未定義。
+適用于 ActiveX 事件接收器的 CE ATL 執行只支援從事件處理常式方法傳回 HRESULT 或 void 類型的值;不支援任何其他傳回值，且其行為未定義。
 
-## <a name="sink_entry_info-and-sink_entry_info_p"></a><a name="sink_entry_info"></a>SINK_ENTRY_INFO和SINK_ENTRY_INFO_P
+## <a name="sink_entry_info-and-sink_entry_info_p"></a><a name="sink_entry_info"></a> SINK_ENTRY_INFO 和 SINK_ENTRY_INFO_P
 
-使用事件接收器映射中的SINK_ENTRY_INFO宏來提供[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)所需的資訊,以將事件路由到相關的處理程式函數。
+在事件接收對應中使用 SINK_ENTRY_INFO 宏，以提供 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) 將事件路由至相關處理常式函式所需的資訊。
 
 ```
 SINK_ENTRY_INFO( id, iid, dispid, fn, info )
@@ -143,28 +143,28 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[在]標識事件源的無符號整數。 此值必須與相關[IDispEventSimple](../../atl/reference/idispeventsimpleimpl-class.md)基礎類中使用的*nID*範本參數匹配。
+在識別事件來源的不帶正負號的整數。 此值必須符合相關[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基類中使用的*nID*範本參數。
 
 *Iid*<br/>
-[在]標識調度介面的 IID。
+在識別分派介面的 IID。
 
-*皮伊德*<br/>
-[在]指向標識派單介面的 IID 的指標。
+*piid*<br/>
+在識別分派介面之 IID 的指標。
 
-*不一部分*<br/>
-[在]識別指定事件的 DISPID。
+*dispid*<br/>
+在DISPID 識別指定的事件。
 
 *Fn*<br/>
-[在]事件處理程式函數的名稱。 此函數必須使用`_stdcall`調用約定,並具有適當的非介面樣式簽名。
+在事件處理常式函數的名稱。 此函式必須使用 `_stdcall` 呼叫慣例，且具有適當的分配介面樣式簽章。
 
-*info*<br/>
-[在]鍵入事件處理程式函數的資訊。 此類型資訊以指向`_ATL_FUNC_INFO`結構的指標的形式提供。 CC_CDECL是`_ATL_FUNC_INFO`Windows CE 中支援結構 CALLCONV 欄位的唯一選項。 任何其他值不受支援,因此其行為未定義。
+*資訊*<br/>
+在事件處理常式函數的型別資訊。 此類型資訊是以結構指標的形式提供 `_ATL_FUNC_INFO` 。 CC_CDECL 是在結構的 [CALLCONV] 欄位 Windows CE 中唯一支援的選項 `_ATL_FUNC_INFO` 。 不支援任何其他值，因此其行為未定義。
 
 ### <a name="remarks"></a>備註
 
-前四個宏參數與[SINK_ENTRY_EX](#sink_entry_ex)宏的參數相同。 最終參數提供事件的類型資訊。 ActiveX 事件接收器的 CE ATL 實現僅支援事件處理程式方法中 HRESULT 類型的傳回值或 void;任何其他返回值不受支援,其行為未定義。
+前四個巨集引數與 [SINK_ENTRY_EX](#sink_entry_ex) 宏的巨集引數相同。 最後一個參數會提供事件的類型資訊。 適用于 ActiveX 事件接收器的 CE ATL 執行只支援從事件處理常式方法傳回 HRESULT 或 void 類型的值;不支援任何其他傳回值，且其行為未定義。
 
 ## <a name="see-also"></a>另請參閱
 
 [巨集](../../atl/reference/atl-macros.md)<br/>
-[複合控制全域函數](../../atl/reference/composite-control-global-functions.md)
+[複合控制項全域函式](../../atl/reference/composite-control-global-functions.md)

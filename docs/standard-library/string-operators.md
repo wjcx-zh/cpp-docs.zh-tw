@@ -20,22 +20,26 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217385"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832538"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 運算子
 
-||||
-|-|-|-|
-|[operator！ =](#op_neq)|[操作&gt;](#op_gt)|[操作&gt;&gt;](#op_gt_gt)|
-|[操作&gt;=](#op_gt_eq)|[操作&lt;](#op_lt)|[操作&lt;&lt;](#op_lt_lt)|
-|[操作&lt;=](#op_lt_eq)|[運算子 +](#op_add)|[operator = =](#op_eq_eq)|
+[operator！ =](#op_neq)\
+[運算元&gt;](#op_gt)\
+[運算元&gt;&gt;](#op_gt_gt)\
+[運算元&gt;=](#op_gt_eq)\
+[運算元&lt;](#op_lt)\
+[運算元&lt;&lt;](#op_lt_lt)\
+[運算元&lt;=](#op_lt_eq)\
+[運算子 +](#op_add)\
+[operator = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_add"></a>運算子 +
+## <a name="operator"></a><a name="op_add"></a> 運算子 +
 
 串連兩個字串物件。
 
@@ -103,10 +107,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 要串連的 C 樣式字串或 `basic_string` 類型物件。
 
-*再*\
+*對*\
 要串連的 C 樣式字串或 `basic_string` 類型物件。
 
 ### <a name="return-value"></a>傳回值
@@ -115,7 +119,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>備註
 
-每個函式都會多載 `operator+` ，以串連類別樣板[basic_string 類別](../standard-library/basic-string-class.md)的兩個物件。 全部有效地傳回 `basic_string< CharType, Traits, Allocator>(Left).append(right)` 。 如需詳細資訊，請參閱[append](../standard-library/basic-string-class.md#append)。
+每個函式都會多載 `operator+` ，以串連類別樣板 [basic_string 類別](../standard-library/basic-string-class.md)的兩個物件。 全部有效地傳回 `basic_string< CharType, Traits, Allocator>(Left).append(right)` 。 如需詳細資訊，請參閱 [附加](../standard-library/basic-string-class.md#append)。
 
 ### <a name="example"></a>範例
 
@@ -169,7 +173,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 測試運算子左邊的字串物件是否不等於右邊的字串物件。
 
@@ -192,15 +196,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*再*\
+*對*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果運算子左邊的 string 物件不是詞典編纂等於右邊的字串物件，則為，否則為 **`false`** 。
+**`true`** 如果運算子左邊的 string 物件不是詞典編纂等於右邊的 string 物件，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -260,7 +264,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 測試運算子左邊的字串物件是否等於右邊的字串物件。
 
@@ -283,15 +287,15 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*再*\
+*對*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果運算子左邊的 string 物件詞典編纂等於右邊的字串物件，則為，否則為 **`false`** 。
+**`true`** 如果運算子左邊的 string 物件詞典編纂等於右邊的 string 物件，則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -351,7 +355,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 運算元&lt;
 
 測試運算子左邊的字串物件是否小於右邊的字串物件。
 
@@ -374,15 +378,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*再*\
+*對*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果運算子左邊的 string 物件詞典編纂小於右邊的字串物件，則為，否則為 **`false`** 。
+**`true`** 如果運算子左邊的 string 物件詞典編纂小於右邊的字串物件，則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -447,7 +451,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 運算元&lt;=
 
 測試運算子左邊的字串物件是否小於或等於右邊的字串物件。
 
@@ -470,10 +474,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*再*\
+*對*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -550,7 +554,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 運算元&lt;&lt;
 
 將字串寫入輸出資料流的樣板函式。
 
@@ -571,13 +575,13 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="return-value"></a>傳回值
 
-將指定的字串值寫入輸出資料流程 *_Ostr*。
+將指定之字串的值寫入輸出資料流程 *_Ostr*。
 
 ### <a name="remarks"></a>備註
 
-範本函式多載**運算子<<** 將類別樣板的物件*str* [basic_string](../standard-library/basic-string-class.md)插入資料流程* \_ Ostr*中。 函式會有效地傳回 `_Ostr.write( str.c_str, str.size )` 。
+樣板函式多載**運算子<<** 將[basic_string](../standard-library/basic-string-class.md)類別樣板的物件*str*插入資料流程* \_ Ostr*中。 函數會有效地傳回 `_Ostr.write( str.c_str, str.size )` 。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 運算元&gt;
 
 測試運算子左邊的字串物件是否大於右邊的字串物件。
 
@@ -600,15 +604,15 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*再*\
+*對*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果運算子左邊的 string 物件詞典編纂大於右邊的字串物件，則為，否則為 **`false`** 。
+**`true`** 如果運算子左邊的 string 物件詞典編纂大於右邊的 string 物件，則為。否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -680,7 +684,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 運算元&gt;=
 
 測試運算子左邊的字串物件是否大於或等於右邊的字串物件。
 
@@ -703,15 +707,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*再*\
+*對*\
 要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果運算子左邊的 string 物件詞典編纂大於或等於右邊的字串物件，則為，否則為 **`false`** 。
+**`true`** 如果運算子左邊的 string 物件詞典編纂大於或等於右邊的 string 物件，則為，否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -783,7 +787,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>操作&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> 運算元&gt;&gt;
 
 從輸入資料流讀取字串的樣板函式。
 
@@ -799,18 +803,18 @@ basic_istream<CharType, Traits>& operator>>(
 *_Istr*\
 用來擷取序列的輸入資料流
 
-*再*\
+*對*\
 要從輸入資料流擷取的字串。
 
 ### <a name="return-value"></a>傳回值
 
-從 *_Istr*讀取指定字串的值，並將它傳回*right*。
+從 *_Istr* 讀取指定之字串的值，並將其傳回 *右邊*。
 
 ### <a name="remarks"></a>備註
 
 除非設定了 `skipws` 旗標，否則運算子會略過開頭的空白字元。 它會讀取後續所有字元，直到下一個字元是空白字元或到達檔案結尾為止。
 
-樣板函式多載**運算子>>** ，以從串流 *_Istr*中解壓縮的專案序列取代*right*所控制的序列。 擷取停止：
+樣板函式多載**運算子>>** ，以從資料流程 *_Istr*中解壓縮的一系列元素來取代向*右*控制的序列。 擷取停止：
 
 - 到達檔案結尾時。
 
@@ -818,9 +822,9 @@ basic_istream<CharType, Traits>& operator>>(
 
 在函式擷取 `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) 項目之後。
 
-- 在函式解壓縮元素*ch*之後， [use_facet](../standard-library/basic-filebuf-class.md#open) <  **ctype** \< **CharType**> > （ `getloc` ）。 **is**（ **ctype** \< **CharType**> ：： **space**， *ch*）為 true，在此情況下會將字元放回。
+- 在函式中，會*ch*將[use_facet](../standard-library/basic-filebuf-class.md#open) <  **ctype** \< **CharType**> > () 的元素 ch 解壓縮 `getloc` 。 **是** ( **ctype** \< **CharType**> ：： **space**， *ch*) 為 true，在此情況下，會將字元放回。
 
-如果函式未解壓縮任何元素，則會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)（ `ios_base::failbit` ）。 在任何情況下，它會呼叫 **istr**. **width**（0），並傳回 \* **`this`** 。
+如果函式未解壓縮任何元素，則會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate) (`ios_base::failbit`) 。 在任何情況下，它會呼叫 **istr**. **width** (0) 並傳回 \* **`this`** 。
 
 ### <a name="example"></a>範例
 

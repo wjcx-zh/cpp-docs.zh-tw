@@ -1,18 +1,18 @@
 ---
-title: 如何：修改 c + + 專案屬性和目標而不變更專案檔
+title: How to：修改 c + + 專案屬性和目標而不變更專案檔
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a1ba5647542f69cfc7748986e512e74401bfc404
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328466"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833357"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>如何：修改 c + + 專案屬性和目標而不變更專案檔
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>How to：修改 c + + 專案屬性和目標而不變更專案檔
 
-您可以從 MSBuild 命令提示字元覆寫專案屬性和目標，而不需變更專案檔。 當您想要暫時或偶爾套用某些屬性時，這非常有用。 它會假設需要一些 MSBuild 知識。 如需詳細資訊，請參閱 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)。
+您可以從 MSBuild 命令提示字元覆寫專案屬性和目標，而不需變更專案檔。 當您想要暫時或偶爾套用某些屬性時，這非常有用。 它會假設需要一些 MSBuild 知識。 如需詳細資訊，請參閱 [MSBuild](/visualstudio/msbuild/msbuild)。
 
 > [!IMPORTANT]
 > 您可以使用 Visual Studio 的 XML 編輯器或任何文字編輯器來建立 .props 或 .targets 檔案。 請勿使用此案例中的 [屬性管理員]****，因為它會將屬性新增至專案檔。

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232933"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832603"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -42,23 +42,23 @@ class queue
 
 ### <a name="parameters"></a>參數
 
-*型*\
+*類型*\
 要存放在佇列中的項目資料類型
 
-*箱*\
+*容器*\
 用來實作佇列的基礎容器類型。
 
 ## <a name="remarks"></a>備註
 
-`Type`在佇列物件的第一個樣板參數中，類別約定的元素與[value_type](#value_type)同義，而且必須符合第二個樣板參數所約定之基礎容器類別中的元素類型 `Container` 。 `Type`必須是可指派的，如此才能複製該類型的物件，並將值指派給該類型的變數。
+`Type`在佇列物件的第一個樣板參數中，約定類別的元素與[value_type](#value_type)同義，且必須符合第二個樣板參數所約定之基礎容器類別中的元素類型 `Container` 。 必須是可指派的，如此一來，就可以 `Type` 複製該類型的物件，並將值指派給該類型的變數。
 
-適用于佇列的基礎容器類別包括[deque](../standard-library/deque-class.md)和[list](../standard-library/list-class.md)，或任何其他支援 `front` 、 `back` 、和作業的序列容器 `push_back` `pop_front` 。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
+適用于佇列的適用基礎容器類別包括 [deque](../standard-library/deque-class.md) 和 [list](../standard-library/list-class.md)，或任何其他支援 `front` 、、和作業的時序容器 `back` `push_back` `pop_front` 。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
 
-佇列物件只有在類別的專案可進行等號比較時才可進行等號比較 `Type` ，而且只有在類別的元素 `Type` 小於可比較時，才會小於可比較的。
+只有當類別的專案 `Type` 是相等的可比較，且只有在類別的元素小於比較時才可比較，佇列物件才可進行相等比較 `Type` 。
 
 有三種由 C++ 標準程式庫定義的容器配接器類型：stack、queue 和 priority_queue。 每個類型都會限制某些基礎容器類別的功能，以精確地為標準資料結構提供受控制的介面。
 
-- [Stack 類別](../standard-library/stack-class.md)支援後進先出（LIFO）的資料結構。 就好像盤子的堆疊一樣，這是一種較為貼切好記的類比。 項目 (盤子) 可能會插入、檢查，或只從堆疊頂端移除，這是基底容器尾端的最後一個項目。 限制只存取最上層項目是使用 stack 類別的原因。
+- [Stack 類別](../standard-library/stack-class.md)支援後進先出 (LIFO) 資料結構。 就好像盤子的堆疊一樣，這是一種較為貼切好記的類比。 項目 (盤子) 可能會插入、檢查，或只從堆疊頂端移除，這是基底容器尾端的最後一個項目。 限制只存取最上層項目是使用 stack 類別的原因。
 
 - queue 類別支援先進先出 (FIFO) 的資料結構。 就好像人們排隊等候銀行櫃員一樣，這是一種較為貼切好記的類比。 項目 (人) 可能會加入隊伍的尾端，以及從隊伍的前面移除。 隊伍的前端和後端都可能會進行檢查。 限制以這種方式只存取前端和後端項目是使用 queue 類別的原因。
 
@@ -68,30 +68,30 @@ class queue
 
 ### <a name="constructors"></a>建構函式
 
-|||
+|名稱|描述|
 |-|-|
 |[佇列](#queue)|建構空的，或是基底容器物件複本的 `queue`。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名稱|描述|
 |-|-|
 |[container_type](#container_type)|提供基底容器以讓 `queue` 配接的類型。|
 |[size_type](#size_type)|不帶正負號的整數類型，可以表示 `queue` 中的項目數。|
 |[value_type](#value_type)|此類型代表儲存為 `queue` 項目的物件類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
-|||
+|名稱|描述|
 |-|-|
 |[返回](#back)|傳回 `queue` 後端最後且最近新增的項目。|
 |[empty](#empty)|測試 `queue` 是否為空白。|
-|[前端](#front)|傳回 `queue` 前端第一個項目的參考。|
-|[提示](#pop)|從 `queue` 前端移除項目。|
+|[前面](#front)|傳回 `queue` 前端第一個項目的參考。|
+|[流行](#pop)|從 `queue` 前端移除項目。|
 |[push](#push)|將項目加入 `queue` 的後端。|
 |[size](#size)|傳回 `queue` 中項目的數目。|
 
-## <a name="back"></a><a name="back"></a>返回
+## <a name="back"></a><a name="back"></a> 返回
 
 傳回佇列後端最後且最近新增的項目。
 
@@ -107,7 +107,7 @@ const_reference back() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `back` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果將的傳回值 `back` 指派給 `reference` ，則可以修改佇列物件。
+如果 `back` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果的傳回值 `back` 已指派給 `reference` ，則可以修改佇列物件。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 提供要配接之基底容器的類型。
 
@@ -155,7 +155,7 @@ typedef Container container_type;
 
 如需如何宣告及使用 `container_type` 的範例，請參閱 [queue](#queue) 的範例。
 
-## <a name="empty"></a><a name="empty"></a>空
+## <a name="empty"></a><a name="empty"></a> 空
 
 測試佇列是否為空白。
 
@@ -165,7 +165,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果佇列是空的，則為，**`false`** 如果佇列不是空的，則為。
+**`true`** 如果佇列是空的，則為。 **`false`** 如果佇列不是空的。
 
 ### <a name="example"></a>範例
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a><a name="front"></a>前端
+## <a name="front"></a><a name="front"></a> 前面
 
 傳回佇列前端第一個項目的參考。
 
@@ -217,9 +217,9 @@ const_reference front() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `front` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果將的傳回值 `front` 指派給 `reference` ，則可以修改佇列物件。
+如果 `front` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果的傳回值 `front` 已指派給 `reference` ，則可以修改佇列物件。
 
-此成員函式會將傳回 `reference` 至受控制序列的第一個元素，這不能是空的。
+成員函式會將 `reference` 設為受控制序列的第一個專案，而該專案必須是空的。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a><a name="pop"></a>提示
+## <a name="pop"></a><a name="pop"></a> 流行
 
 從佇列前端移除項目。
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>式
+## <a name="push"></a><a name="push"></a> 推
 
 將項目加入佇列的後端。
 
@@ -319,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*初始值*\
+*瓦爾*\
 加入至佇列後端的項目。
 
 ### <a name="remarks"></a>備註
@@ -370,8 +370,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
-**`const`** 建立結構化佇列的容器是複本。
+*對*\
+**`const`** 結構化佇列要作為複本的容器。
 
 ### <a name="remarks"></a>備註
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a><a name="size"></a>容量
+## <a name="size"></a><a name="size"></a> 大小
 
 傳回佇列中的項目數目。
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 不帶正負號的整數類型，可以表示佇列中的項目數。
 
@@ -482,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 如需如何宣告及使用 `size_type` 的範例，請參閱 [queue::front](#front) 的範例。
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 此類型代表儲存為佇列項目的物件類型。
 

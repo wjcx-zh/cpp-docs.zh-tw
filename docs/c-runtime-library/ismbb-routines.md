@@ -20,25 +20,35 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b8828018040b8b6b7b13c88c08599333dc1124d0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944535"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839370"
 ---
 # <a name="_ismbb-routines"></a>_ismbb 常式
 
 使用目前的地區設定或指定的 LC_CTYPE 轉換狀態分類，測試指定的整數值 `c` 是否符合特定條件。
 
-|||
-|-|-|
-|[_ismbbalnum、_ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|
-|[_ismbbalpha、_ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|[_ismbbkpunct、_ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|
-|[_ismbbblank、_ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|[_ismbblead、_ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|
-|[_ismbbgraph、_ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|[_ismbbprint、_ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|
-|[_ismbbkalnum、_ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct、_ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|
-|[_ismbbkana、_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|
+:::row:::
+   :::column span="":::
+      [_ismbbalnum，_ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)\
+      [_ismbbAlpha，_ismbbAlpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)\
+      [_ismbbblank，_ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)\
+      [_ismbbgraph，_ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)\
+      [_ismbbkalnum，_ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)\
+      [_ismbbkana，_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)\
+   :::column-end:::
+   :::column span="":::
+      [_ismbbkprint，_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)\
+      [_ismbbkpunct，_ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)\
+      [_ismbblead，_ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)\
+      [_ismbbprint，_ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)\
+      [_ismbbpunct，_ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)\
+      [_ismbbtrail，_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)\
+   :::column-end:::
+:::row-end:::
 
 ## <a name="remarks"></a>備註
 
@@ -56,7 +66,7 @@ ms.locfileid: "70944535"
 |[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|與 `_ismbbprint`相同，但 `_ismbbgraph` 不包含空格字元 (0x20)。|
 |[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|標點符號以外的非 ASCII 文字符號。 例如，僅限字碼頁 932， `_ismbbkalnum` 會測試片假名英數字元。|
 |[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|片假名 (0xA1 - 0xDF)。 僅限字碼頁 932。|
-|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文字符號或非 ASCII 標點符號。 例如，僅限字碼頁 932，`_ismbbkprint` 會測試片假名英數字元或片假名標點符號 (範圍：0xA1-0xDF)。|
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文字符號或非 ASCII 標點符號。 例如，僅限字碼頁 932，`_ismbbkprint` 會測試片假名英數字元或片假名標點符號 (範圍：0xA1 - 0xDF)。|
 |[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|非 ASCII 標點符號。 例如，只在字碼頁 932 中的片假名標點符號之 `_ismbbkpunct` 測試。|
 |[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|多位元組字元的第一個位元組 例如，僅限在字碼頁 932 中，有效範圍是 0x81 - 0x9F 和 0xE0 - 0xFC。|
 |[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint** 包含空格字元 (0x20)。|
@@ -65,7 +75,7 @@ ms.locfileid: "70944535"
 
 下表顯示撰寫這些常式之測試條件的 ORed 值。 資訊清單常數 `_BLANK`、 `_DIGIT`、 `_LOWER`、 `_PUNCT`和 `_UPPER` 是在 Ctype.h 中所定義。
 
-|常式傳回的值|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|非<br /><br /> ASCII<br /><br /> 文字|非<br /><br /> ASCII<br /><br /> punct|
+|常式傳回的值|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|非<br /><br /> ASCII<br /><br /> text|非<br /><br /> ASCII<br /><br /> punct|
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|
 |`_ismbbalnum`|—|x|x|—|x|x|—|
 |`_ismbbalpha`|—|—|x|—|x|x|—|
@@ -82,6 +92,6 @@ ms.locfileid: "70944535"
 ## <a name="see-also"></a>另請參閱
 
 [位元組分類](../c-runtime-library/byte-classification.md)<br/>
-[is、isw 常式](../c-runtime-library/is-isw-routines.md)<br/>
+[是，isw 常式](../c-runtime-library/is-isw-routines.md)<br/>
 [_mbbtombc、_mbbtombc_l](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)<br/>
 [_mbctombb、_mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)

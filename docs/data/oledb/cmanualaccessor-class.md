@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211844"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838096"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 類別
 
-表示專為先進使用而設計的存取子類型。
+表示專為 advanced 使用而設計的存取子類型。
 
 ## <a name="syntax"></a>語法
 
@@ -47,7 +47,7 @@ ms.locfileid: "80211844"
 class CManualAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標題:** atldbcli.h
 
@@ -55,18 +55,18 @@ class CManualAccessor : public CAccessorBase
 
 ### <a name="methods"></a>方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[AddBindEntry](#addbindentry)|將繫結項目加入至輸出資料行。|
 |[AddParameterEntry](#addparameterentry)|將參數專案加入至參數存取子。|
-|[CreateAccessor](#createaccessor)|配置資料行系結結構的記憶體，並初始化資料行資料成員。|
+|[CreateAccessor](#createaccessor)|為數據行系結結構配置記憶體，並將資料行資料成員初始化。|
 |[CreateParameterAccessor](#createparameteraccessor)|配置參數系結結構的記憶體，並初始化參數資料成員。|
 
 ## <a name="remarks"></a>備註
 
-使用 `CManualAccessor`，您可以透過執行時間函式呼叫來指定參數和輸出資料行系結。
+`CManualAccessor`您可以使用，透過執行時間函式呼叫來指定參數和輸出資料行系結。
 
-## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor：： AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a> CManualAccessor：： AddBindEntry
 
 將繫結項目加入至輸出資料行。
 
@@ -93,7 +93,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 *nColumnSize*<br/>
 在資料行大小（以位元組為單位）。
 
-*pData*<br/>
+*.Pdata*<br/>
 在緩衝區中儲存之資料行資料的指標。
 
 *pLength*<br/>
@@ -104,9 +104,9 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 ### <a name="remarks"></a>備註
 
-若要使用此函數，您必須先呼叫[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 您無法新增超過 `CreateAccessor`中指定之資料行數目的專案。
+若要使用此函數，您必須先呼叫 [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 您無法加入超過所指定之資料行數目的專案 `CreateAccessor` 。
 
-## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor：： AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor：： AddParameterEntry
 
 將參數專案加入至參數專案結構。
 
@@ -134,7 +134,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 *nColumnSize*<br/>
 在資料行大小（以位元組為單位）。
 
-*pData*<br/>
+*.Pdata*<br/>
 在緩衝區中儲存之資料行資料的指標。
 
 *pLength*<br/>
@@ -148,11 +148,11 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 ### <a name="remarks"></a>備註
 
-若要使用此函數，您必須先呼叫[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
+若要使用此函數，您必須先呼叫 [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
 
-## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor：： CreateAccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor：： CreateAccessor
 
-配置資料行系結結構的記憶體，並初始化資料行資料成員。
+為數據行系結結構配置記憶體，並將資料行資料成員初始化。
 
 ### <a name="syntax"></a>語法
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>參數
 
 *nBindEntries*<br/>
-在資料行數目。 這個數位應符合[CManualAccessor：： AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)函式的呼叫次數。
+在資料行數目。 這個數位應該符合 [CManualAccessor：： AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) 函數的呼叫次數。
 
 *pBuffer*<br/>
 在儲存輸出資料行之緩衝區的指標。
@@ -179,9 +179,9 @@ HRESULT CreateAccessor(int nBindEntries,
 
 ### <a name="remarks"></a>備註
 
-呼叫 `CManualAccessor::AddBindEntry` 函式之前，請先呼叫此函式。
+呼叫此函式之前，請先呼叫這個函數 `CManualAccessor::AddBindEntry` 。
 
-## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor：： CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a> CManualAccessor：： CreateParameterAccessor
 
 配置參數系結結構的記憶體，並初始化參數資料成員。
 
@@ -210,13 +210,13 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 ### <a name="remarks"></a>備註
 
-呼叫[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前，您必須先呼叫此函式。
+呼叫 [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前，您必須先呼叫此函數。
 
 ## <a name="see-also"></a>另請參閱
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)

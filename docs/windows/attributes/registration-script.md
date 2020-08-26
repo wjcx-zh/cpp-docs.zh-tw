@@ -1,17 +1,17 @@
 ---
-title: registration_script （c + + COM 屬性）
+title: 'registration_script (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 53b5cb0cb36d9d6627f16f99cbb0d142af8cee6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8a57f0b3d0925d1e1096a31734fa4c9d666c5743
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217216"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846078"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -26,17 +26,17 @@ ms.locfileid: "87217216"
 ### <a name="parameters"></a>參數
 
 *指令碼*<br/>
-自訂註冊腳本（.rgs）檔案的完整路徑。 值為 [**無**] （例如 `script = "none"` ），表示 coclass 沒有註冊需求。
+自訂註冊腳本的完整路徑， ( .rgs) 檔。 值為 **none**（例如 `script = "none"` ）表示 coclass 沒有註冊需求。
 
 ## <a name="remarks"></a>備註
 
-**Registration_script** c + + 屬性會執行*腳本*所指定的自訂註冊腳本。 如果未指定這個屬性，則會使用標準的 .rgs 檔案（包含註冊元件的資訊）。 如需 .rgs 檔案的詳細資訊，請參閱[ATL 登錄元件（註冊機構）](../../atl/atl-registry-component-registrar.md)。
+**Registration_script** c + + 屬性會執行*腳本*所指定的自訂註冊腳本。 如果未指定此屬性，則會使用標準的 .rgs 檔 (包含註冊元件) 的資訊。 如需 .rgs 檔案的詳細資訊，請參閱 [ (註冊機構) 的 ATL 登錄元件 ](../../atl/atl-registry-component-registrar.md)。
 
 此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。
 
 ## <a name="example"></a>範例
 
-下列程式碼指定元件具有名為 cpp_attr_ref_registration_script 的登入指令檔。
+下列程式碼指定元件具有稱為 cpp_attr_ref_registration_script 的登入指令檔。
 
 ```cpp
 // cpp_attr_ref_registration_script.cpp
@@ -57,15 +57,13 @@ __interface IFace {};
 class CMyClass:public IFace {};
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**`class`**, **`struct`**|
-|**可重複**|否|
-|**必要的屬性**|下列一或多項： `coclass` 、 `progid` 或 `vi_progid` 。|
+|**重複**|否|
+|**必要的屬性**|下列其中一項或多項： `coclass` 、 `progid` 或 `vi_progid` 。|
 |**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

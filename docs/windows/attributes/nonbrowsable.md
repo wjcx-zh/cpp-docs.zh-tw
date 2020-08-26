@@ -1,17 +1,17 @@
 ---
-title: nonbrowsable （C++ COM 屬性）
+title: 'nonbrowsable (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: f0aae070c1c97695180797b228178b210493b7bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 561622cc30573ace606eccb6aa7b5f2dfd188dfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166558"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836100"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166558"
 
 ## <a name="remarks"></a>備註
 
-**Nonbrowsable** C++屬性具有與[nonbrowsable](/windows/win32/Midl/nonbrowsable) MIDL 屬性相同的功能。
+**Nonbrowsable** c + + 屬性具有與[nonbrowsable](/windows/win32/Midl/nonbrowsable) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -43,16 +43,14 @@ __interface IMyI
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面方法|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

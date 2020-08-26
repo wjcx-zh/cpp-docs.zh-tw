@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403864"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837784"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>資料錄集：動態地繫結資料行 (ODBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "86403864"
 - [如何在執行階段動態繫結資料行](#_core_how_to_bind_columns_dynamically)。
 
 > [!NOTE]
-> 本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果您要使用大量資料列擷取，則不建議使用一般說明的技術。 如需大量資料列提取的詳細資訊，請參閱[記錄集：大量提取記錄（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本主題適用於衍生自尚未實作大量資料列擷取之 `CRecordset` 的物件。 如果您要使用大量資料列擷取，則不建議使用一般說明的技術。 如需大量資料列提取的詳細資訊，請參閱 [記錄集：大量提取記錄 (ODBC) ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> 當您可能要動態繫結資料行時
 
@@ -45,7 +45,7 @@ ms.locfileid: "86403864"
 
 您的資料錄集仍會包含您已在設計階段知道之資料行的資料成員。 它也會包含少量的額外程式碼，可動態判斷是否已將任何新的資料行加入至您的目標資料表，而且如果是這樣，請將這些新的資料行繫結至動態配置的儲存空間 (而非繫結至資料錄集資料成員)。
 
-本主題並未涵蓋其他動態繫結案例，例如，已卸除的資料表或資料行。 針對那些案例，您需要更直接使用 ODBC API 呼叫。 如需相關資訊，請參閱 ODBC 程式設計[人員參考](/sql/odbc/reference/odbc-programmer-s-reference)。
+本主題並未涵蓋其他動態繫結案例，例如，已卸除的資料表或資料行。 針對那些案例，您需要更直接使用 ODBC API 呼叫。 如需詳細資訊，請參閱《 ODBC 程式設計 [人員參考](/sql/odbc/reference/odbc-programmer-s-reference)》。
 
 ## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> 如何動態繫結資料行
 
@@ -92,12 +92,12 @@ ms.locfileid: "86403864"
 
 下表顯示您需要用到的四個清單。
 
-|||
-|-|-|
-|**Current-Table-Columns**| (圖中的清單 1) 目前在資料來源上之資料表中的資料行清單。 此清單可能會比對資料錄集中目前繫結的資料行清單。|
-|**Bound-Recordset-Columns**| (圖中的清單 2) 資料錄集中繫結的資料行清單。 這些資料行在 `DoFieldExchange` 函式中已經有 RFX 陳述式。|
-|**Columns-To-Bind-Dynamically**| (圖中的清單 3) 位於資料表但不在資料錄集中的資料行清單。 這些是您想要動態繫結的資料行。|
-|**Dynamic-Column-Values**| (圖中的清單 4) 此清單包含從動態繫結的資料行中擷取之值的儲存空間。 此清單的元素會以一對一方式對應至 Columns-to-Bind-Dynamically 中的元素。|
+| 清單 | 描述 |
+|--|--|
+| **Current-Table-Columns** | (圖中的清單 1) 目前在資料來源上之資料表中的資料行清單。 此清單可能會比對資料錄集中目前繫結的資料行清單。 |
+| **Bound-Recordset-Columns** | (圖中的清單 2) 資料錄集中繫結的資料行清單。 這些資料行在 `DoFieldExchange` 函式中已經有 RFX 陳述式。 |
+| **Columns-To-Bind-Dynamically** | (圖中的清單 3) 位於資料表但不在資料錄集中的資料行清單。 這些是您想要動態繫結的資料行。 |
+| **Dynamic-Column-Values** | (圖中的清單 4) 此清單包含從動態繫結的資料行中擷取之值的儲存空間。 此清單的元素會以一對一方式對應至 Columns-to-Bind-Dynamically 中的元素。 |
 
 ### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> 建置您的清單
 
@@ -139,14 +139,14 @@ ms.locfileid: "86403864"
 
 1. 建置 Dynamic-Column-Values (與 Columns-to-Bind-Dynamically 平行)，以包含每個資料行中的資料值。
 
-   例如，此圖顯示具有一個元素的動態資料行值（清單4）：物件， `CString` 其中包含目前記錄的實際電話號碼： "555-1212"。
+   例如，此圖顯示動態資料行值 (清單 4) 具有一個元素：一個物件， `CString` 包含目前記錄的實際電話號碼： "555-1212"。
 
    在最常見的情況下，Dynamic-Column-Values 具有 `CString` 型別的元素。 如果您正在處理各種不同資料型別的資料行，則您需要可包含各種型別元素的清單。
 
-前述程式的結果是兩個主要清單：動態包含資料行名稱的資料行和動態資料行值，其中包含目前記錄之資料行中的值。
+上述程式的結果是兩個主要清單：包含資料行名稱的資料行和動態資料行值，包含目前記錄之資料行中的值。
 
 > [!TIP]
-> 如果新的資料行並非全都是相同的資料型別，則您可能想要額外的平行清單，其中包含以某種方式在資料行清單中定義每個對應元素之型別的項目。 (您可以在需要時針對此項目使用 AFX_RFX_BOOL、AFX_RFX_BYTE 等值。 這些常數會定義在 AFXDB 中。H.）根據您代表資料行資料類型的方式來挑選清單類型。
+> 如果新的資料行並非全都是相同的資料型別，則您可能想要額外的平行清單，其中包含以某種方式在資料行清單中定義每個對應元素之型別的項目。 (您可以在需要時針對此項目使用 AFX_RFX_BOOL、AFX_RFX_BYTE 等值。 這些常數定義于 AFXDB.H 中。H. ) 根據您代表資料行資料類型的方式挑選清單類型。
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 加入 RFX 呼叫以繫結資料行
 
@@ -174,4 +174,4 @@ RFX_Text( pFX,
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[記錄集：使用大型資料項目（ODBC）](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[記錄集：使用大型資料項目 (ODBC) ](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

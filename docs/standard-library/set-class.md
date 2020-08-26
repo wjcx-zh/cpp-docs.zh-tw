@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 80e7c2258fc1fbeabeb8174df18d5cb46aa682bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e879e7ffd9f674769e32548195f5017e27e64576
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560525"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846234"
 ---
 # <a name="set-class"></a>set 類別
 
@@ -145,13 +145,13 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 
 ### <a name="constructors"></a>建構函式
 
-|||
+|名稱|描述|
 |-|-|
 |[set](#set)|建構一個空的集合，或者建構其他集合的全部或部分複本。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 set 物件的 `allocator` 類別。|
 |[const_iterator](#const_iterator)|一種類型，提供可以讀取集合中元素的雙向反覆運算器 **`const`** 。|
@@ -169,9 +169,9 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 |[value_compare](#value_compare)|類型，提供可比較兩個項目之函式物件，以判斷項目在集合中的相對順序。|
 |[value_type](#value_type)|此類型描述在做為值的產能上，做為集合的項目儲存的物件。|
 
-### <a name="functions"></a>函數
+### <a name="functions"></a>Functions
 
-|||
+|名稱|描述|
 |-|-|
 |[開始](#begin)|傳回迭代器，為集合中的第一個項目定址。|
 |[cbegin](#cbegin)|傳回常數迭代器，為集合中的第一個項目定址。|
@@ -199,9 +199,9 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 |[upper_bound](#upper_bound)|傳回迭代器，指向集合中索引鍵大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|擷取集合中用於排序項目值的比較物件之複本。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
-|||
+|名稱|描述|
 |-|-|
 |[運算子 =](#op_eq)|用另一個集合複本取代集合的項目。|
 

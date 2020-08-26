@@ -35,16 +35,16 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0b4baa4671a013699e51a9ab28c002a680dfcd61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211819"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838135"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 類別
 
-由[CEnumerator](../../data/oledb/cenumerator-class.md)用來存取列舉值資料列集的資料。
+供 [CEnumerator](../../data/oledb/cenumerator-class.md) 用來存取列舉值資料列集的資料。
 
 ## <a name="syntax"></a>語法
 
@@ -52,7 +52,7 @@ ms.locfileid: "80211819"
 class CEnumeratorAccessor
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標題:** atldbcli.h
 
@@ -60,21 +60,21 @@ class CEnumeratorAccessor
 
 ### <a name="data-members"></a>資料成員
 
-|||
+| 名稱 | 描述 |
 |-|-|
-|[m_bIsParent](#bisparent)|變數，指出列舉值是否為父枚舉器（如果資料列是列舉值）。|
+|[m_bIsParent](#bisparent)|變數，指出列舉值是否為父代列舉值（如果資料列是列舉值）。|
 |[m_nType](#ntype)|變數，指出資料列是否描述資料來源或列舉值。|
 |[m_szDescription](#szdescription)|資料來源或列舉值的描述。|
 |[m_szName](#szname)|資料來源或列舉值的名稱。|
-|[m_szParseName](#szparsename)|要傳遞至[IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname)以取得資料來源或列舉值之標記的字串。|
+|[m_szParseName](#szparsename)|要傳遞至 [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) 以取得資料來源或列舉值之標記的字串。|
 
 ## <a name="remarks"></a>備註
 
-這個資料列集是由目前列舉值所顯示的資料來源和枚舉器所組成。
+此資料列集是由目前列舉值所顯示的資料來源和列舉值所組成。
 
-## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor：： m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a> CEnumeratorAccessor：： m_bIsParent
 
-變數，指出列舉值是否為父枚舉器（如果資料列是列舉值）。
+變數，指出列舉值是否為父代列舉值（如果資料列是列舉值）。
 
 ### <a name="syntax"></a>語法
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor：： m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a> CEnumeratorAccessor：： m_nType
 
 變數，指出資料列是否描述資料來源或列舉值。
 
@@ -100,7 +100,7 @@ USHORT m_nType;
 
 如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor：： m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a> CEnumeratorAccessor：： m_szDescription
 
 資料來源或列舉值的描述。
 
@@ -114,7 +114,7 @@ WCHAR m_szDescription[129];
 
 如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor：： m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a> CEnumeratorAccessor：： m_szName
 
 資料來源或列舉值的名稱。
 
@@ -128,9 +128,9 @@ WCHAR m_szName[129];
 
 如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor：： m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a> CEnumeratorAccessor：： m_szParseName
 
-要傳遞至[IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname)以取得資料來源或列舉值之標記的字串。
+要傳遞至 [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) 以取得資料來源或列舉值之標記的字串。
 
 ### <a name="syntax"></a>語法
 
@@ -145,4 +145,4 @@ WCHAR m_szParseName[129];
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

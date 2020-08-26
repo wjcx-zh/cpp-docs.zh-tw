@@ -23,21 +23,20 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301687"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836074"
 ---
 # <a name="to-functions"></a>to 函式
 
 每個 **to** 函式和其相關聯巨集 (如果有的話) 都會將單一字元轉換為另一個字元。
 
-|||
-|-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper、_toupper、towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower、_tolower、towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+[__toascii](../c-runtime-library/reference/toascii-toascii.md)\
+[tolower、_tolower、towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
+[toupper、_toupper、towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 ## <a name="remarks"></a>備註
 
@@ -48,10 +47,10 @@ ms.locfileid: "75301687"
 |`__toascii`|`__toascii`|將 `c` 轉換為 ASCII 字元|
 |`tolower`|`tolower`|適用時，將 `c` 轉換為小寫|
 |`_tolower`|`_tolower`|將 `c` 轉換為小寫|
-|`towlower`|None|將 `c` 轉換為對應寬字元小寫字母|
+|`towlower`|無|將 `c` 轉換為對應寬字元小寫字母|
 |`toupper`|`toupper`|適用時，將 `c` 轉換為大寫|
 |`_toupper`|`_toupper`|將 `c` 轉換為大寫|
-|`towupper`|None|將 c 轉換為對應寬字元大寫字母|
+|`towupper`|無|將 c 轉換為對應寬字元大寫字母|
 
 若要使用同時定義為巨集之函式版本的 **to** 常式，請使用 `#undef` 指示詞來移除巨集定義，或不包括 CTYPE.H。 如果您使用 /Za 編譯器選項，編譯器會使用函式版本的 `toupper` 或 `tolower`。 `toupper` 和 `tolower` 函式的宣告是在 STDLIB.H 中。
 
@@ -67,7 +66,7 @@ ms.locfileid: "75301687"
 
 - 與地區設定無關且更快速的 `tolower` 和 **toupper** 版本。
 
-- 只有在 **isascii(** `c` **)** 且 **isupper(** `c` **)** 或 **islower(** `c` **)** 分別為非零時才能使用。
+- 只有在**isascii (** `c` **) ** ，以及**isupper (** `c` **) **或**islower (** `c` **) **分別為非零時，才能使用。
 
 - 如果 `c` 不是可進行轉換之適當大小寫的 ASCII 字母，則會有未定義的結果。
 
@@ -115,8 +114,8 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [資料轉換](../c-runtime-library/data-conversion.md)<br/>
 [地區設定](../c-runtime-library/locale.md)<br/>
-[is、isw 常式](../c-runtime-library/is-isw-routines.md)
+[是，isw 常式](../c-runtime-library/is-isw-routines.md)

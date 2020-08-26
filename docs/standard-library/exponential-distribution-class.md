@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: db176bef55455c0553e5865e268c4e4e8fed089d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dbb8425047d9076343922dfbcf5c6162b6054c3b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212354"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835905"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution 類別
 
@@ -68,19 +68,17 @@ public:
 ### <a name="parameters"></a>參數
 
 *RealType*\
-浮點結果類型，預設值為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+浮點結果類型，預設為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 *URNG*\
 亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述產生使用者指定之整數類型值的分佈（ **`double`** 如果未提供，則為類型）（根據指數分佈散發）。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之整數類型的值的分佈，或 **`double`** 如果沒有提供，則為類型，根據指數分佈進行散發。 下表提供各個成員的文章連結。
 
-||||
-|-|-|-|
-|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
-|`exponential_distribution::operator()`||[param_type](#param_type)|
+[exponential_distribution](#exponential_distribution)\
+[param_type](#param_type)
 
 屬性成員函式 `lambda()` 會傳回預存的分佈參數 `lambda` 值。
 
@@ -165,13 +163,13 @@ Distribution for 10 samples:
     10: 2.1201210996
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution：： exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a> exponential_distribution：： exponential_distribution
 
 建構分佈。
 
@@ -182,10 +180,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*lambda*\
+*Lambda*\
 `lambda` 分佈參數。
 
-*parm*\
+*>parm*\
 用於建構分佈的參數封裝。
 
 ### <a name="remarks"></a>備註
@@ -196,7 +194,7 @@ explicit exponential_distribution(const param_type& parm);
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution：:p aram_type
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a> exponential_distribution：:p aram_type
 
 儲存分佈的參數。
 
@@ -213,10 +211,10 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*lambda*\
+*Lambda*\
 `lambda` 分佈參數。
 
-*再*\
+*對*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註

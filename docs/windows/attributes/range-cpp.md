@@ -1,17 +1,17 @@
 ---
-title: range （C++ COM 屬性）
+title: c + + COM 屬性) 範圍 (
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214613"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839474"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,15 +25,15 @@ ms.locfileid: "80214613"
 
 ### <a name="parameters"></a>參數
 
-*low*<br/>
-低範圍的值。
+*低*<br/>
+範圍下限值。
 
-*high*<br/>
-最大範圍值。
+*高*<br/>
+最高範圍的值。
 
 ## <a name="remarks"></a>備註
 
-**Range** C++屬性的功能與[範圍](/windows/win32/Midl/range)MIDL 屬性相同。
+**範圍**c + + 屬性的功能與[範圍](/windows/win32/Midl/range)MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
@@ -51,16 +51,14 @@ __interface ICustom {
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面方法，介面參數|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

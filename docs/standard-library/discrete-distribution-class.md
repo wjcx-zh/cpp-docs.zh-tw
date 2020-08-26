@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 65d5c993efd1cb9c6dd35f11223ed39e026ed7c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217801"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846273"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution 類別
 
@@ -73,7 +73,7 @@ public:
 ### <a name="parameters"></a>參數
 
 *IntType*\
-整數結果類型，預設值為 **`int`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+整數結果類型，預設為 **`int`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
@@ -81,10 +81,8 @@ public:
 
 下表提供各個成員的文章連結：
 
-|||
-|-|-|
-|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|
-|`discrete_distribution::operator()`|[param_type](#param_type)|
+[discrete_distribution](#discrete_distribution)\
+[param_type](#param_type)
 
 屬性函式 `vector<double> probabilities()` 會傳回每個產生之整數的個別可能性。
 
@@ -169,13 +167,13 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution：:d iscrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a> discrete_distribution：:d iscrete_distribution
 
 建構分佈。
 
@@ -200,28 +198,28 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*firstW*\
+*>firstw*\
 要建構分佈的清單中的第一個迭代器。
 
-*lastW*\
+*>lastw*\
 要建構分佈的清單中的最後一個迭代器 (非內含，因為迭代器針對結尾使用空的項目)。
 
-*weightlist*\
+*>weightlist*\
 要建構分佈的 [initializer_list](../cpp/initializers.md)。
 
-*計數*\
+*count*\
 分佈範圍中的元素數目。 若 `count==0`，則相當於預設建構函式 (一律產生零)。
 
-*量*\
+*低*\
 分佈範圍中的最低值。
 
-*更*\
+*高*\
 分佈範圍中的最高值。
 
 *weightfunc*\
 表示分佈的可能性函式的物件。 參數和傳回值都必須可以轉換成 **`double`** 。
 
-*parm*\
+*>parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -230,16 +228,16 @@ explicit discrete_distribution(const param_type& parm);
 
 如果是具有 *firstW* 和 *lastW* 參數的迭代器範圍建構函式，其會使用加權值來建構分佈物件，這些加權值是取自間隔序列 [*firstW*, *lastW*) 的迭代器。
 
-具有*weightlist*參數的初始化運算式清單，會使用初始化運算式清單*weightlist*中的權數來建立散發物件。
+具有 *>weightlist* 參數的初始化運算式清單函式會從初始化運算式清單 *>weightlist*中，使用加權來建立散發物件。
 
 如果是具有 *count*、*low*、*high* 和 *weightfunc* 參數的建構函式，其會根據下列規則建構初始化的分佈物件：
 
 - 若 *count* < 1、**n** = 1，而因此相當於預設建構函式，則一律會產生零。
-- 如果 *count* > 0，則 **n** = *count*。 提供**的 d** =*（高*  -  *low*）/ **n**大於零，使用**d**統一子範圍，每個權數的指派方式如下： `weight[k] = weightfunc(x)` ，其中**x**  =  *low*  +  **k**  *  **d**  +  **d** /2，代表**k** = 0，...， **n-1** 。
+- 如果 *count* > 0，則 **n** = *count*。 提供的**d** = (*high*  -  *低*) / **n**大於零，使用**d**統一子範圍，每個權數都會指派如下： `weight[k] = weightfunc(x)` ，其中**x**  =  *低*  +  **k**  *  **d**d  +  **d** /2，代表**k** = 0，...， **n-1** 。
 
 如果是具有 `param_type` 參數 *parm* 的建構函式，其會使用 *parm* 作為預存參數結構來建構分佈物件。
 
-## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution：:p aram_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a> discrete_distribution：:p aram_type
 
 儲存分佈的所有參數。
 
@@ -268,28 +266,28 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*firstW*\
+*>firstw*\
 要建構分佈的清單中的第一個迭代器。
 
-*lastW*\
+*>lastw*\
 要建構分佈的清單中的最後一個迭代器 (非內含，因為迭代器針對結尾使用空的項目)。
 
-*weightlist*\
+*>weightlist*\
 要建構分佈的 [initializer_list](../cpp/initializers.md)。
 
-*計數*\
+*count*\
 分佈範圍中的元素數目。 若 *count* 為 0，此項目就相當於預設建構函式 (一律產生零)。
 
-*量*\
+*低*\
 分佈範圍中的最低值。
 
-*更*\
+*高*\
 分佈範圍中的最高值。
 
 *weightfunc*\
 表示分佈的可能性函式的物件。 參數和傳回值都必須可以轉換成 **`double`** 。
 
-*再*\
+*對*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: eb00945084affb2be9299953e5ca9352c56d3b32
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6f7b11c360f58e6a838b22fbf2c68366dce973a3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688098"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846286"
 ---
 # <a name="discard_block_engine-class"></a>discard_block_engine 類別
 
@@ -26,34 +26,36 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>參數
 
-*引擎*\
+*發動機*\
 基底引擎類型。
 
-*P* \
+*P*\
 **區塊大小**。 每個區塊中的值數目。
 
 *R*\
-**已使用的區塊**。 每個區塊中使用的值數目。 其餘部分會被捨棄（`P`  -  `R`）。 **前置條件：** `0 < R ≤ P`
+**已使用的區塊**。 每個區塊中使用的值數目。 其餘部分會被捨棄 (`P`  -  `R`) 。 **前置條件**： `0 < R ≤ P`
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
-||||
-|-|-|-|
-|`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|
-|`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|
+`discard_block_engine::discard_block_engine`\
+`discard_block_engine::base`\
+`discard_block_engine::base_type`\
+`discard_block_engine::discard`\
+`discard_block_engine::operator()`\
+`discard_block_engine::seed`
 
-如需引擎成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+如需引擎成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-此類別範本會藉由捨棄其基底引擎所傳回的一些值來描述產生值的引擎介面卡。
+這個類別樣板會藉由捨棄其基底引擎所傳回的一些值，來描述產生值的引擎介面卡。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標頭：** \<random>
+**標頭：**\<random>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<random>](../standard-library/random.md)

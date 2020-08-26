@@ -1,17 +1,17 @@
 ---
-title: ref （c + + COM 屬性）
+title: 'ref (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: 6cf78930b19891832369e9b96c0a761d2752e4a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92b3c7b2cddf17a70a949914ef82540457696f20
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232738"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846104"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -25,11 +25,11 @@ ms.locfileid: "87232738"
 
 ## <a name="remarks"></a>備註
 
-**Ref** c + + 屬性的功能與[ref](/windows/win32/Midl/ref) MIDL 屬性相同。
+**Ref** c + + 屬性具有與[ref](/windows/win32/Midl/ref) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示如何使用**ref**屬性：
+下列程式碼顯示如何使用 **ref** 屬性：
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -43,14 +43,12 @@ __interface IFireTabCtrl
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
-|**適用於**|**`typedef`**，介面參數，介面方法|
-|**可重複**|否|
+|**適用於**|**`typedef`**、介面參數、介面方法|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 

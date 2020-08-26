@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 6a9e2c55da7278c50d43a63a4cce79d2a21f573c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98ecbc96d104a900d222c660de7f16563f566a9c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233180"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837875"
 ---
 # <a name="geometric_distribution-class"></a>geometric_distribution 類別
 
@@ -67,19 +67,17 @@ public:
 ### <a name="parameters"></a>參數
 
 *IntType*\
-整數結果類型，預設值為 **`int`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+整數結果類型，預設為 **`int`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 *URNG*\
-統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述使用幾何分佈產生使用者指定之整數類型值的分佈。 下表提供各個成員的文章連結。
+類別樣板描述使用幾何分佈產生使用者指定之整數類型的值的分佈。 下表提供各個成員的文章連結。
 
-||||
-|-|-|-|
-|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
-|`geometric_distribution::operator()`||[param_type](#param_type)|
+[geometric_distribution](#geometric_distribution)\
+[param_type](#param_type)
 
 屬性函式 `p()` 會傳回儲存的分佈參數 `p` 的值。
 
@@ -203,13 +201,13 @@ Distribution for 100 samples:
    35 :
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution：： geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a> geometric_distribution：： geometric_distribution
 
 建構分佈。
 
@@ -220,10 +218,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p&id*\
+*P*\
 `p` 分佈參數。
 
-*parm*\
+*>parm*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -234,7 +232,7 @@ explicit geometric_distribution(const param_type& parm);
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution：:p aram_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a> geometric_distribution：:p aram_type
 
 儲存分佈的參數。
 
@@ -251,10 +249,10 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*p&id*\
+*P*\
 `p` 分佈參數。
 
-*再*\
+*對*\
 要與此項目比較的 `param_type` 執行個體。
 
 ### <a name="remarks"></a>備註

@@ -1,17 +1,17 @@
 ---
-title: defaultvtable （c + + COM 屬性）
+title: 'defaultvtable (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 2da0d8070f961f1ae0fc075585eb28881f712fb4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6b1d6960a065bf2df46852d3df1ca53d4239f1bc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215253"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839487"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -34,7 +34,7 @@ ms.locfileid: "87215253"
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示使用**defaultvtable**指定預設介面之類別上的屬性：
+下列程式碼顯示使用 **defaultvtable** 來指定預設介面之類別上的屬性：
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -62,14 +62,12 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**`class`**, **`struct`**|
-|**可重複**|否|
+|**重複**|否|
 |**必要的屬性**|**coclass**|
 |**無效屬性**|無|
 

@@ -2,16 +2,16 @@
 title: 命名空間和類型可視性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: cbfbd8c27065121eb176d9a62662eab7e1f4271b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230970"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837797"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空間和類型可視性 (C++/CX)
 
-命名空間是標準 C++ 建構，可將具有相關功能的類型組合在一起，並防止程式庫中發生名稱衝突。 Windows 執行階段類型系統要求必須在命名空間範圍的命名空間中宣告所有公用 Windows 執行階段類型（包括您自己程式碼中的）。 在全域範圍中宣告或以巢狀方式存在於其他類別中的公用型別會造成編譯時期錯誤。
+命名空間是標準 C++ 建構，可將具有相關功能的類型組合在一起，並防止程式庫中發生名稱衝突。 Windows 執行階段類型系統必須在命名空間範圍的命名空間中宣告所有公用 Windows 執行階段類型（包括您自己的程式碼中的型別）。 在全域範圍中宣告或以巢狀方式存在於其他類別中的公用型別會造成編譯時期錯誤。
 
 .winmd 檔案必須具有根命名空間的相同名稱。 例如，名為 A.B.C.MyClass 的類別必須在名為 A.winmd、A.B.winmd 或 A.B.C.winmd 的中繼資料檔案中定義，才能執行個體化。 可執行檔的名稱不需符合 .winmd 檔案名稱。
 
@@ -28,31 +28,29 @@ ms.locfileid: "87230970"
 
 使用下列存取修飾詞控制中繼資料可視性和原始程式碼存取範圍。
 
-||||
-|-|-|-|
-|修飾詞|意義|發出至中繼資料？|
-|private|預設存取範圍。 等同於在 Standard C++ 中。|否|
-|受保護|等同於在 Standard C++ 中，同時在應用程式 (或元件) 和中繼資料內。|是|
-|公開|等同於在 Standard C++ 中。|是|
-|`public protected` -或- `protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|是|
-|`protected private` 或 `private protected`|在中繼資料內是不可見的，在應用程式或元件內為受保護存取範圍。||
-|`internal` 或 `private public`|此成員在應用程式或元件內是公用的，但是在中繼資料內是不可見的。|否|
+| 修飾詞 | 意義 | 發出至中繼資料？ |
+|--|--|--|
+| **`private`** | 預設存取範圍。 等同於在 Standard C++ 中。 | 否 |
+| **`protected`** | 等同於在 Standard C++ 中，同時在應用程式 (或元件) 和中繼資料內。 | 是 |
+| **`public`** | 等同於在 Standard C++ 中。 | 是 |
+| **`public protected`** 等於 **`protected public`** | 在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。 | 是 |
+| **`protected private`** 或 **`private protected`** | 在中繼資料內是不可見的，在應用程式或元件內為受保護存取範圍。 |  |
+| **`internal`** 或 **`private public`** | 此成員在應用程式或元件內是公用的，但是在中繼資料內是不可見的。 | 否 |
 
 ## <a name="windows-runtime-namespaces"></a>Windows 執行階段命名空間
 
-Windows API 是由在 Windows：：命名空間中宣告的類型所組成 \* 。 這些命名空間保留給 Windows，不能在其中加入類型。 在 [ **物件瀏覽器**] 中，您可以檢視 windows.winmd 檔案中的命名空間。 如需這些命名空間的文件，請參閱 [Windows API](/uwp/api/)。
+Windows API 包含在 Windows：：命名空間中宣告的類型 \* 。 這些命名空間保留給 Windows，不能在其中加入類型。 在 [ **物件瀏覽器**] 中，您可以檢視 windows.winmd 檔案中的命名空間。 如需這些命名空間的文件，請參閱 [Windows API](/uwp/api/)。
 
 ## <a name="ccx-namespaces"></a>C++/CX 命名空間
 
-C + +/CX 會在 Windows 執行階段類型系統的投影中定義這些命名空間中的某些類型。
+C + +/CX 定義這些命名空間中的特定類型，作為 Windows 執行階段類型系統投射的一部分。
 
-|||
-|-|-|
-|**Namespace**|**說明**|
-|預設|包含內建的數字和 char16 類型。 這些類型位於每個命名空間的範圍內，而且 **`using`** 永遠不需要語句。|
-|平台|主要包含對應至 Windows 執行階段類型（例如 `Array<T>` 、、和）的公用類型 `String` `Guid` `Boolean` 。 同時也包含特製化協助程式類型，例如 `Platform::Agile<T>` 和 `Platform::Box<T>`。|
-|Platform::Collections|包含實作為 Windows 執行階段集合介面的實體集合類別， `IVector` `IMap` 等等。 這些類型在標頭檔 collection.h 中定義，而不是在 platform.winmd 中。|
-|Platform::Details|包含編譯器使用的類型，而不開放使用。|
+| 命名空間 | 描述 |
+|--|--|
+| default | 包含內建的數字和 char16 類型。 這些類型在每個命名空間的範圍內，而且 **`using`** 永遠不需要語句。 |
+| `Platform` | 包含的主要公用類型，會對應至 Windows 執行階段類型 `Array<T>` ，例如、 `String` 、 `Guid` 和 `Boolean` 。 同時也包含特製化協助程式類型，例如 `Platform::Agile<T>` 和 `Platform::Box<T>`。 |
+| `Platform::Collections` | 包含實 Windows 執行階段集合介面、等等的具體集合類別 `IVector` `IMap` 。 這些類型在標頭檔 collection.h 中定義，而不是在 platform.winmd 中。 |
+| `Platform::Details` | 包含編譯器使用的類型，而不開放使用。 |
 
 ## <a name="see-also"></a>另請參閱
 

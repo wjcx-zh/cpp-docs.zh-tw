@@ -5,20 +5,19 @@ f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 45da89793c3f4ea131404fc3392413e7aea9ef3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 907772069c192b3ef75c7366e079b1da1dd36f8d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373386"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846247"
 ---
 # <a name="ltscoped_allocatorgt-operators"></a>&lt;scoped_allocator&gt; 運算子
 
-|||
-|-|-|
-|[操作員!](#op_neq)|[運算子*](#op_eq_eq)|
+[operator！ =](#op_neq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>操作員!
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 測試兩個 `scoped_allocator_adaptor` 物件是否不相等。
 
@@ -41,7 +40,7 @@ bool operator!=(
 
 `!(left == right)`
 
-## <a name="operator"></a><a name="op_eq_eq"></a>運算子*
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 測試兩個 `scoped_allocator_adaptor` 物件是否相等。
 

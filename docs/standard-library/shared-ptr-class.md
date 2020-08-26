@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217463"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846208"
 ---
 # <a name="shared_ptr-class"></a>shared_ptr 類別
 
@@ -53,7 +53,7 @@ class shared_ptr;
 
 `shared_ptr`類別描述使用參考計數來管理資源的物件。 `shared_ptr`物件實際上存放了它擁有之資源的指標，或是存放 null 指標。 資源可以由多個 `shared_ptr` 物件擁有；當擁有特定資源的最後一個 `shared_ptr` 物件終結時，會釋放資源。
 
-`shared_ptr`會在重新指派或重設時停止擁有資源。
+在 `shared_ptr` 重新指派或重設時，會停止擁有資源。
 
 樣板引數 `T` 可能是不完整的類型，針對特定成員函式註明者除外。
 
@@ -81,7 +81,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 - 如果它是從擁有該資源的 `shared_ptr` 物件建構，
 
-- 如果它是從指向該資源的[weak_ptr](weak-ptr-class.md)物件進行構造，則為，否則為。
+- 如果它是從指向該資源的 [weak_ptr](weak-ptr-class.md) 物件所構成，或
 
 - 如果已將該資源的擁有權指派給它，不論是利用 [shared_ptr::operator=](#op_eq) 或藉由呼叫成員函式 [shared_ptr::reset](#reset)。
 
@@ -107,11 +107,11 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 無引數 -- 產生的物件是空白的 `shared_ptr` 物件或是空白的 `weak_ptr` 物件。
 
-`ptr` -- `Other*` 類型的待管理資源指標。 `T` 必須是完整的類型。 如果函式失敗（因為無法配置控制區塊），它會評估運算式 `delete ptr` 。
+`ptr` -- `Other*` 類型的待管理資源指標。 `T` 必須是完整的類型。 如果函式失敗 (因為無法) 配置控制區塊，所以會評估運算式 `delete ptr` 。
 
-`ptr, deleter` -- `Other*` 類型的待管理資源指源，以及該資源的刪除者。 如果函式失敗（因為無法配置控制區塊），它會呼叫 `deleter(ptr)` ，這必須妥善定義。
+`ptr, deleter` -- `Other*` 類型的待管理資源指源，以及該資源的刪除者。 如果函式失敗 (因為無法) 配置控制區塊，所以它會呼叫 `deleter(ptr)` ，這必須妥善定義。
 
-`ptr, deleter, alloc` -- `Other*` 類型的待管理資源指標、該資源的刪除者，以及管理任何必須配置和釋放之儲存體的配置器。 如果函式失敗（因為無法配置控制區塊），它會呼叫 `deleter(ptr)` ，這必須妥善定義。
+`ptr, deleter, alloc` -- `Other*` 類型的待管理資源指標、該資源的刪除者，以及管理任何必須配置和釋放之儲存體的配置器。 如果函式失敗 (因為無法) 配置控制區塊，所以它會呼叫 `deleter(ptr)` ，這必須妥善定義。
 
 `sp` -- 擁有待管理資源的 `shared_ptr<Other>` 物件。
 
@@ -127,28 +127,28 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 ## <a name="members"></a>成員
 
-|||
+|名稱|描述|
 |-|-|
 | **建構函式** | |
 |[shared_ptr](#shared_ptr)|建構 `shared_ptr`。|
 |[~ shared_ptr](#dtorshared_ptr)|終結 `shared_ptr`。|
 | **Typedef** | |
 |[element_type](#element_type)|項目的類型。|
-|[weak_type](#weak_type)|元素之弱式指標的類型。|
+|[weak_type](#weak_type)|元素的弱式指標類型。|
 | **成員函式** | |
 |[get](#get)|取得擁有的資源位址。|
 |[owner_before](#owner_before)|如果這個 `shared_ptr` 排序在所提供的指標之前 (或小於)，則傳回 true。|
 |[reset](#reset)|取代所擁有的資源。|
-|[調換](#swap)|交換兩個 `shared_ptr` 物件。|
+|[交換](#swap)|交換兩個 `shared_ptr` 物件。|
 |[unique](#unique)|測試擁有的資源是否唯一。|
 |[use_count](#use_count)|計算資源擁有者的數目。|
 | **運算子** | |
 |[運算子 bool](#op_bool)|測試擁有的資源是否存在。|
-|[操作](#op_star)|取得指定的值。|
-|[operator =](#op_eq)|取代所擁有的資源。|
-|[操作&gt;](#op_arrow)|取得指定值的指標。|
+|[運算子](#op_star)|取得指定的值。|
+|[運算子 =](#op_eq)|取代所擁有的資源。|
+|[運算子&gt;](#op_arrow)|取得指定值的指標。|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 項目的類型。
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a><a name="get"></a>獲取
+## <a name="get"></a><a name="get"></a> 獲取
 
 取得擁有的資源位址。
 
@@ -194,7 +194,7 @@ element_type* get() const noexcept;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回所擁有資源的位址。 如果物件不具有資源，則會傳回0。
+此成員函式會傳回所擁有資源的位址。 如果物件未擁有資源，則會傳回0。
 
 ### <a name="example"></a>範例
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>運算子 bool
+## <a name="operator-bool"></a><a name="op_bool"></a> 運算子 bool
 
 測試擁有的資源是否存在。
 
@@ -232,7 +232,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>備註
 
-若為，則運算子會傳回的值 **`true`** `get() != nullptr` ，否則為 **`false`** 。
+否則，運算子會傳回的 **`true`** 值 `get() != nullptr` ，否則為 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_star"></a>操作
+## <a name="operator"></a><a name="op_star"></a> 運算子
 
 取得指定的值。
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> 運算子 =
 
 取代所擁有的資源。
 
@@ -319,20 +319,20 @@ shared_ptr& operator=(unique_ptr<Other, Deleter>&& up);
 
 ### <a name="parameters"></a>參數
 
-*行距*\
+*Sp*\
 要複製或移動的共用指標。
 
-*ap*\
+*美聯社*\
 要移動的自動指標。 多載 `auto_ptr` 在 c + + 11 中已被取代，並在 c + + 17 中移除。
 
-*設定*\
-要採用擁有權之物件的唯一指標。 在呼叫之後， *up*不會擁有任何物件。
+*創建*\
+要採用擁有權之物件的唯一指標。 在呼叫之後，*不擁有任何*物件。
 
-*另一方面*\
+*其他*\
 *Sp*、 *ap*或*up*所指向的物件類型。
 
 *刪除者*\
-所擁有物件的刪除者類型，儲存以供日後刪除物件。
+所擁有物件的刪除者型別，儲存以供稍後刪除物件。
 
 ### <a name="remarks"></a>備註
 
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="operator-"></a><a name="op_arrow"></a>operator->
+## <a name="operator-"></a><a name="op_arrow"></a> 運算子->
 
 取得指定值的指標。
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 如果這個 `shared_ptr` 排序在所提供的指標之前 (或小於)，則傳回 true。
 
@@ -418,14 +418,14 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*Ptr*\
 或的左值參考 `shared_ptr` `weak_ptr` 。
 
 ### <a name="remarks"></a>備註
 
-如果在之前排序，則範本成員函式會傳回 true **`*this`** `ptr` 。
+如果 **`*this`** 之前已排序，則範本成員函式會傳回 true `ptr` 。
 
-## <a name="reset"></a><a name="reset"></a>啟動
+## <a name="reset"></a><a name="reset"></a> 重 置
 
 取代所擁有的資源。
 
@@ -449,19 +449,19 @@ void reset(
 
 ### <a name="parameters"></a>參數
 
-*另一方面*\
+*其他*\
 引數指標所控制的類型。
 
 *刪除者*\
 刪除者的類型。
 
-*指標*\
+*Ptr*\
 要複製的指標。
 
 *刪除者*\
 要複製的刪除者。
 
-*配置器*\
+*分配器*\
 配置器的類型。
 
 *配置*\
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a> shared_ptr
 
 建構 `shared_ptr`。
 
@@ -592,16 +592,16 @@ shared_ptr(
 
 ### <a name="parameters"></a>參數
 
-*另一方面*\
+*其他*\
 引數指標所控制的類型。
 
-*指標*\
+*Ptr*\
 要複製的指標。
 
 *刪除者*\
 刪除者的類型。
 
-*配置器*\
+*分配器*\
 配置器的類型。
 
 *刪除者*\
@@ -610,18 +610,18 @@ shared_ptr(
 *配置*\
 配置器。
 
-*行距*\
+*Sp*\
 要複製的智慧型指標。
 
-*wp*\
+*Wp*\
 弱式指標。
 
-*ap*\
+*美聯社*\
 要複製的自動指標。
 
 ### <a name="remarks"></a>備註
 
-每個建構函式都會建構擁有由運算元序列所命名之資源的物件。 如果是，則此函式會擲回 `shared_ptr(const weak_ptr<Other>& wp)` 類型[bad_weak_ptr](bad-weak-ptr-class.md)的例外狀況物件 `wp.expired()` 。
+每個建構函式都會建構擁有由運算元序列所命名之資源的物件。 如果為，則此函式會擲回 `shared_ptr(const weak_ptr<Other>& wp)` 類型為 [bad_weak_ptr](bad-weak-ptr-class.md) 的例外狀況物件 `wp.expired()` 。
 
 ### <a name="example"></a>範例
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> ~ shared_ptr
 
 終結 `shared_ptr`。
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a><a name="swap"></a>調換
+## <a name="swap"></a><a name="swap"></a> 交換
 
 交換兩個 `shared_ptr` 物件。
 
@@ -732,12 +732,12 @@ void swap(shared_ptr& sp) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*行距*\
+*Sp*\
 要交換的共用指標。
 
 ### <a name="remarks"></a>備註
 
-成員函式會保留原本由 **`*this`** *sp*所擁有的資源，以及原本由所擁有之*sp*所擁有的資源 **`*this`** 。 函式不會變更兩個資源的參考計數，且不會擲回任何例外狀況。
+成員函式會保留最初由 **`*this`** *sp*所擁有的資源，以及先前由所擁有的 *sp* 所擁有的資源 **`*this`** 。 函式不會變更兩個資源的參考計數，且不會擲回任何例外狀況。
 
 ### <a name="example"></a>範例
 
@@ -783,9 +783,9 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a><a name="unique"></a>唯一
+## <a name="unique"></a><a name="unique"></a> 獨特
 
-測試擁有的資源是否唯一。 此函式在 c + + 17 中已被取代，並在 c + + 20 中移除。
+測試擁有的資源是否唯一。 在 c + + 17 中，此函式已被取代，並在 c + + 20 中移除
 
 ```cpp
 bool unique() const noexcept;
@@ -793,7 +793,7 @@ bool unique() const noexcept;
 
 ### <a name="remarks"></a>備註
 
-**`true`** 如果沒有其他物件擁有所擁有的資源，則成員函式會傳回 `shared_ptr` **`*this`** ，否則會傳回 **`false`** 。
+**`true`** 如果沒有其他 `shared_ptr` 物件擁有所擁有的資源，則成員函式會傳回 **`*this`** ，否則會傳回 **`false`** 。
 
 ### <a name="example"></a>範例
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 計算資源擁有者的數目。
 
@@ -832,7 +832,7 @@ long use_count() const noexcept;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回擁有所 `shared_ptr` 擁有之資源的物件數目 **`*this`** 。
+成員函式會傳回擁有所 `shared_ptr` 擁有之資源的物件數目 **`*this`** 。
 
 ### <a name="example"></a>範例
 
@@ -861,9 +861,9 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a><a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a> weak_type
 
-元素之弱式指標的類型。
+元素的弱式指標類型。
 
 ```cpp
 using weak_type = weak_ptr<T>; // C++17
@@ -871,7 +871,7 @@ using weak_type = weak_ptr<T>; // C++17
 
 ### <a name="remarks"></a>備註
 
-`weak_type`定義是在 c + + 17 中加入。
+`weak_type`已在 c + + 17 中新增定義。
 
 ## <a name="see-also"></a>另請參閱
 

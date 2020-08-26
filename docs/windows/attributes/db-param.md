@@ -113,6 +113,6 @@ struct CSalesbyYear {
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [OLE DB 取用者屬性](ole-db-consumer-attributes.md)

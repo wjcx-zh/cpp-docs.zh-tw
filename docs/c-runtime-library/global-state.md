@@ -53,6 +53,6 @@ ms.locfileid: "88845181"
 - [fmode] (text-and-binary-mode-file-i-o.md) 
 - [時區資訊](time-management.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 執行時間程式庫參考](c-run-time-library-reference.md)

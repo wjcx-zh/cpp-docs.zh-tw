@@ -1,64 +1,62 @@
 ---
-title: 在視覺工作室中使用 Clang-Tidy
-description: 如何在可視化工作室中使用Clang-Tidy進行微軟C++代碼分析。
+title: 在 Visual Studio 中使用 Clang 整齊
+description: 如何在 Visual Studio 中使用 Clang 整齊的 Microsoft c + + 程式碼分析。
 ms.date: 02/19/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.clangtidy
-author: frozenpandaman
-ms.author: efessler
-ms.openlocfilehash: ff32f522eaacee67e19aedaa1153b2c68edc98d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 30378ab0713d5e00e704f778646b9d60856f2234
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355154"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842464"
 ---
-# <a name="using-clang-tidy-in-visual-studio"></a>在視覺工作室中使用 Clang-Tidy
+# <a name="using-clang-tidy-in-visual-studio"></a>在 Visual Studio 中使用 Clang 整齊
 
 ::: moniker range="<=vs-2017"
 
-支援 Clang-Tidy 需要 Visual Studio 2019 版本 16.4 或更高版本。 要查看此版本的文檔,請將本文的可視化工作室**版本**選擇器控制項設定為 Visual Studio 2019。 它位於此頁面的目錄頂部。
+Clang 的支援需要 Visual Studio 2019 16.4 版或更新版本。 若要查看此版本的檔，請將此文章的 Visual Studio **版本** 選取器控制項設定為 Visual Studio 2019。 您可在此頁面的目錄頂端找到此檔案。
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-代碼分析本機支援用於 MSBuild 和 CMake 專案的[Clang-Tidy,](https://clang.llvm.org/extra/clang-tidy/)無論是使用 Clang 還是 MSVC 工具集。 Clang-Tidy 檢查可以作為背景代碼分析的一部分運行。 它們顯示為編輯器內警告(擺動),並顯示在錯誤清單中。
+針對 MSBuild 和 CMake 專案，程式碼分析原本就支援 [Clang](https://clang.llvm.org/extra/clang-tidy/) ，不論是使用 CLANG 或 MSVC 工具組。 Clang 整齊的檢查可以作為背景程式碼分析的一部分來執行。 它們會顯示為編輯器中的警告 (波浪線) ，並顯示在錯誤清單中。
 
-Clang-Tidy 支援可從 Visual Studio 2019 版本 16.4 中開始提供。 當您在可視化工作室安裝程式中選擇C++工作負載時,它會自動包括在內。
+從 Visual Studio 2019 16.4 版開始提供 Clang 整齊的支援。 當您在 Visual Studio 安裝程式中選擇 c + + 工作負載時，它就會自動包含在內。
 
-Clang-Tidy 是使用 LLVM/clang-cl 工具集時的預設分析工具,在 MSBuild 和 CMake 中都可用。 您可以使用 MSVC 工具集與標準代碼分析體驗一起運行或替換它。 如果使用 clang-cl 工具集,則 Microsoft 代碼分析不可用。
+使用 LLVM/Clang-cl 工具組時，Clang-整齊是預設的分析工具，可在 MSBuild 和 CMake 中使用。 您可以在使用 MSVC 工具組同時執行，或取代標準的程式碼分析體驗時進行設定。 如果您使用 clang-cl 工具組，則無法使用 Microsoft 程式碼分析。
 
-Clang-Tidy 在成功編譯後運行。 您可能需要解決原始程式碼錯誤,以獲得 Clang-Tidy 結果。
+在成功編譯之後，會執行 Clang 整齊。 您可能需要解決原始程式碼錯誤，才能取得 Clang 整齊的結果。
 
 ## <a name="msbuild"></a>MSBuild
 
-您可以將 Clang-Tidy 設定為作為代碼分析的一部分運行,並在「項目屬性」視窗中的代碼**分析** > **常規**頁下生成。 配置工具的選項可以在 Clang-Tidy 子功能表下找到。
+您可以在專案屬性視窗的 [程式**代碼分析**  >  **一般**] 頁面中，將 Clang 設定為同時以程式碼分析和組建的一部分來執行。 您可以在 [Clang] 子功能表下找到設定工具的選項。
 
-有關詳細資訊,請參閱[如何:為 C/C++專案設定代碼分析屬性](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md)。
+如需詳細資訊，請參閱 [如何：為 C/c + + 專案設定程式碼分析屬性](../code-quality/how-to-set-code-analysis-properties-for-c-cpp-projects.md)。
 
 ## <a name="cmake"></a>CMake
 
-在"製作"專案中,可以在`CMakeSettings.json`中配置 Clang-Tidy 檢查。 打開後,按一下「完成項目設置編輯器」右上角的「編輯 JSON」。。 識別以下鍵:
+在 CMake 專案中，您可以在中設定 Clang 整齊的檢查 `CMakeSettings.json` 。 開啟後，選取 CMake 專案設定編輯器右上角的 [編輯 JSON]。 可辨識下列金鑰：
 
-- `enableMicrosoftCodeAnalysis`: 開啟微軟碼分析
-- `enableClangTidyCodeAnalysis`: 開啟 Clang-Tidy 分析
-- `clangTidyChecks`:Clang-Tidy 設定,指定為逗號分隔清單,即要啟用或禁用的檢查
+- `enableMicrosoftCodeAnalysis`：啟用 Microsoft 程式碼分析
+- `enableClangTidyCodeAnalysis`：啟用 Clang 整齊分析
+- `clangTidyChecks`： Clang 整齊的設定，指定為以逗號分隔的清單，也就是要啟用或停用的檢查
 
-如果未指定兩個"啟用"選項,Visual Studio 將選擇與所使用的平臺工具集匹配的分析工具。
+如果未指定任何 "enable" 選項，Visual Studio 將會選取符合所使用平臺工具組的分析工具。
 
 ## <a name="warning-display"></a>警告顯示
 
-Clang-Tidy 執行會導致錯誤列表中顯示的警告,並且作為編輯器中的代碼相關部分下方的擺動。 使用錯誤清單中的「類別」列對 Clang-Tidy 警告進行排序和組織。 您可以通過切換"禁用代碼分析擺動"設置在 **"工具** > **選項**」下配置編輯器內警告。
+Clang 整齊執行會在錯誤清單中顯示警告，並在程式碼的相關區段底下顯示為編輯器中的波浪線。 您可以使用 [錯誤清單] 中的 [類別] 資料行來排序和組織 Clang 整齊的警告。 您可以切換 [**工具**選項] 下的 [停用程式碼分析波浪線] 設定，以設定編輯器中的警告  >  ** **。
 
-## <a name="clang-tidy-configuration"></a>Clang-Tidy 設定
+## <a name="clang-tidy-configuration"></a>Clang-整齊設定
 
-您可以通過**Clang-Tidy 檢查**選項設定在 Visual Studio 中執行的支票。 此輸入提供給工具的 **--檢查**參數。 任何進一步的配置都可以包含在自定義*`.clang-tidy`* 檔中。 有關詳細資訊,請參閱[有關 LLVM.org 的 Clang-Tidy 文件](https://clang.llvm.org/extra/clang-tidy/)。
+您可以透過 [ **clang] 檢查** 選項，設定在 Visual Studio 內執行 clang 整齊的檢查。 此輸入會提供給 **`--checks`** 工具的引數。 任何進一步的設定都可以包含在自訂檔案中 *`.clang-tidy`* 。 如需詳細資訊，請參閱 [LLVM.org 上的 Clang 整齊檔](https://clang.llvm.org/extra/clang-tidy/)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [Clang/LLVM 支援 MS 建設專案](https://devblogs.microsoft.com/cppblog/clang-llvm-support-for-msbuild-projects/)
-- [Clang/LLVM 支援 CMake 專案](https://devblogs.microsoft.com/cppblog/visual-studio-cmake-support-clang-llvm-cmake-3-14-vcpkg-and-performance-improvements/)
+- [MSBuild 專案的 Clang/LLVM 支援](https://devblogs.microsoft.com/cppblog/clang-llvm-support-for-msbuild-projects/)
+- [CMake 專案的 Clang/LLVM 支援](https://devblogs.microsoft.com/cppblog/visual-studio-cmake-support-clang-llvm-cmake-3-14-vcpkg-and-performance-improvements/)
 
 ::: moniker-end

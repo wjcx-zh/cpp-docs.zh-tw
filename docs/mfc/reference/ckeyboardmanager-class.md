@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: a2d2ae8133310f3a93b6eefc30c67045a47cd94f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561462"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841489"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 類別
 
@@ -51,16 +51,14 @@ class CKeyboardManager : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CKeyboardManager：： CKeyboardManager](#ckeyboardmanager)|建構 `CKeyboardManager` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|||
-|-|-|
 |名稱|描述|
+|-|-|
 |[CKeyboardManager：：清理](#cleanup)|清除快速鍵資料表。|
 |[CKeyboardManager：： FindDefaultAccelerator](#finddefaultaccelerator)|抓取指定命令和視窗的預設快速鍵。|
 |[CKeyboardManager：： IsKeyHandled](#iskeyhandled)|判斷索引鍵是否由快速鍵對應表處理。|
@@ -138,7 +136,7 @@ static BOOL FindDefaultAccelerator(
 *uiCmd*<br/>
 在命令識別碼。
 
-*Str*<br/>
+*str*<br/>
 擴展物件的參考 `CString` 。
 
 *pWndFrame*<br/>

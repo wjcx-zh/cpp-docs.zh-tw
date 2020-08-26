@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419704"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842633"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 函式
 
-這些是 &lt;ostream&gt;中定義的全域範本函數。 如需成員函式，請參閱[Basic_ostream 類別](basic-ostream-class.md)檔。
+這些是 ostream 中定義的全域範本 &lt; 函數 &gt; 。 如需成員函式的詳細說明，請參閱 [Basic_ostream 類別](basic-ostream-class.md) 檔。
 
-||||
-|-|-|-|
-|[endl](#endl)|[ends](#ends)|[flush](#flush)|
-|[swap](#swap)|
+[endl](#endl)\
+[結束](#ends)\
+[沖洗](#flush)\
+[交換](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -55,7 +55,7 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="remarks"></a>備註
 
-操作工具會呼叫*Ostr*。[put](../standard-library/basic-ostream-class.md#put)（*Ostr*。[加寬](../standard-library/basic-ios-class.md#widen)（' \n '）），然後呼叫*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它會傳回*Ostr*。
+操作工具會呼叫 *Ostr*。[put](../standard-library/basic-ostream-class.md#put) (*Ostr*。[擴大](../standard-library/basic-ios-class.md#widen) ( ' \n ' ) # A3，然後呼叫 *Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)： 它會傳回 *Ostr*。
 
 ### <a name="example"></a>範例
 
@@ -102,7 +102,7 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="remarks"></a>備註
 
-操作工具會呼叫*Ostr*。[put](../standard-library/basic-ostream-class.md#put)（*Elem*（' \ 0 '））。 它會傳回*Ostr*。
+操作工具會呼叫 *Ostr*。[將](../standard-library/basic-ostream-class.md#put) (*Elem* ( ' \ 0 ' ) # A3。 它會傳回 *Ostr*。
 
 ### <a name="example"></a>範例
 
@@ -124,7 +124,7 @@ int main( )
 ab c
 ```
 
-## <a name="flush"></a>排清
+## <a name="flush"></a>flush
 
 清除緩衝區。
 
@@ -151,7 +151,7 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="remarks"></a>備註
 
-操作工具會呼叫*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它會傳回*Ostr*。
+操作工具會呼叫 *Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)： 它會傳回 *Ostr*。
 
 ### <a name="example"></a>範例
 
@@ -171,7 +171,7 @@ int main( )
 testing
 ```
 
-## <a name="swap"></a>交換
+## <a name="swap"></a>swap
 
 交換兩個 `basic_ostream` 物件的值。
 
@@ -190,10 +190,10 @@ void swap(
 *Tr*\
 字元特性。
 
-*左方*\
+*離開*\
 `basic_ostream` 物件的 lvalue 參考。
 
-*right*\
+*對*\
 `basic_ostream` 物件的 lvalue 參考。
 
 ### <a name="remarks"></a>備註

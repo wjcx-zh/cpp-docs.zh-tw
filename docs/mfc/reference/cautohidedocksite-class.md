@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562008"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841632"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 類別
 
@@ -43,7 +43,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |名稱|描述|
 |`CAutoHideDockSite::CAutoHideDockSite`|建構 `CAutoHideDockSite` 物件。|
@@ -51,7 +51,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-methods"></a>公用方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |名稱|描述|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|指出是否 `CAutoHideDockSite` 顯示在窗格功能表上。|
@@ -65,7 +65,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="data-members"></a>資料成員
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |名稱|描述|
 |[CAutoHideDockSite：： m_nExtraSpace](#m_nextraspace)|定義工具列和銜接列邊緣之間的空間大小。 此空間是從左邊緣或上邊緣測量，視 dock 空間的對齊方式而定。|

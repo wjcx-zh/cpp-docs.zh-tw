@@ -1,17 +1,17 @@
 ---
-title: include （C++ COM 屬性）
+title: '包含 (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b75df74ee69ee4f89eb7bf18fb6bcd77d8a6284
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166779"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842191"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -26,17 +26,17 @@ ms.locfileid: "80166779"
 ### <a name="parameters"></a>參數
 
 *header_file*<br/>
-您想要包含在產生的 .idl 檔案中的檔案名。
+您要包含在產生的 .idl 檔案中的檔案名。
 
 ## <a name="remarks"></a>備註
 
-**Include** C++屬性會導致 `#include` 語句放在產生的 .idl 檔案中的 `import "docobj.idl"` 語句之下。
+**Include** c + + 屬性會將 `#include` 語句放在產生的 `import "docobj.idl"` .idl 檔案中的語句下方。
 
-**Include** C++屬性的功能與[include](/windows/win32/Midl/include) MIDL 屬性相同。
+**Include** c + + 屬性具有與[include](/windows/win32/Midl/include) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示如何使用**include**的範例。 在此範例中，檔案包含 .h 只包含 `#include` 語句。
+下列程式碼顯示如何使用 **include**的範例。 在此範例中，檔案包含 .h 只包含 `#include` 語句。
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -45,16 +45,14 @@ ms.locfileid: "80166779"
 [include(cpp_attr_ref_include.h)];
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|任何位置|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

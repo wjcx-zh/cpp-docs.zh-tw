@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: c796f24ad37b3bae11314e2885bf25e25f85aba6
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561969"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842919"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 類別
 
@@ -83,13 +83,13 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="constructors"></a>建構函式
 
-|||
+|名稱|描述|
 |-|-|
 |[CDataRecoveryHandler：： CDataRecoveryHandler](#cdatarecoveryhandler)|建構 `CDataRecoveryHandler` 物件。|
 
 ### <a name="methods"></a>方法
 
-|||
+|名稱|描述|
 |-|-|
 |[CDataRecoveryHandler：： AutosaveAllDocumentInfo](#autosavealldocumentinfo)|Autosaves 每個以類別註冊的檔案 `CDataRecoveryHandler` 。|
 |[CDataRecoveryHandler：： AutosaveDocumentInfo](#autosavedocumentinfo)|Autosaves 指定的檔。|
@@ -121,7 +121,7 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="data-members"></a>資料成員
 
-|||
+|名稱|描述|
 |-|-|
 |m_bRestoringPreviousOpenDocs|指出資料恢復處理常式是否重新開啟先前開啟的檔。|
 |m_bSaveDocumentInfoOnIdle|指出資料恢復處理常式是否 autosaves 下一個閒置迴圈的檔。|

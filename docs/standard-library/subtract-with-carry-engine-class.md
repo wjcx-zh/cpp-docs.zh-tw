@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: cf82c4ca3ce995fa9a53dbea21293dc8515ff491
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685824"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840904"
 ---
 # <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine 類別
 
@@ -36,33 +36,36 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>參數
 
-*UIntType* \
-不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*UIntType*\
+不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
-*W* \
-**字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件：** `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*\
+**字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**： `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S* \
-**短延隔**。 整數值數目。 **前置條件：** `0 < S < R`
+*！*\
+**短延隔**。 整數值數目。 **前置條件**： `0 < S < R`
 
 *R*\
 **長延隔**。 決定所產生數列中的週期。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
-||||
-|-|-|-|
-|`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|
-|`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|
-|`default_seed` 是一個成員常數，定義為 `19780503u`，用做 `subtract_with_carry_engine::seed` 的預設參數值以及單一值建構函式。|||
+`subtract_with_carry_engine::subtract_with_carry_engine`
+`subtract_with_carry_engine::max`\
+`subtract_with_carry_engine::min`\
+`subtract_with_carry_engine::discard`\
+`subtract_with_carry_engine::operator()`\
+`subtract_with_carry_engine::seed`
 
-如需引擎成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+`default_seed` 是一個成員常數，定義為 `19780503u`，用做 `subtract_with_carry_engine::seed` 的預設參數值以及單一值建構函式。
+
+如需引擎成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-@No__t_0 類別的範本是[linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)的改善。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。
+`substract_with_carry_engine`類別樣板是[linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)的改善。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。
 
-此引擎會使用週期關聯（ *period*） `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 來產生使用者指定之不帶正負號整數類資料類型的值，其中 `1` `cy(i)` 如果 `x(i - S) - x(i - R) - cy(i - 1) < 0`，則為，否則 `0`，而 `M` 的值 `2`<sup>W</sup>。引擎的狀態是一個帶有指標加上*R*值。 這些值是由已呼叫至少*r*次 `operator()` 時所傳回的最後一個*r*值所組成，否則會傳回 `N` 值，以及種子的最後一個 `R - N` 值。
+此引擎會使用週期性關聯 (*期間*) 來產生使用者指定之不帶正負號的整數類型的值 `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` ，其中的值為 `cy(i)` `1` ，如果為，則為，而值 `x(i - S) - x(i - R) - cy(i - 1) < 0` `0` `M` 為 `2` <sup>W</sup>。引擎的狀態是帶有帶有指標和*R*值。 這些值包含最後一個傳回的 *r* 值 `operator()` （如果至少已呼叫 *r* 次），否則就是 `N` 傳回的值以及種子的最後一個 `R - N` 值。
 
 範本引數 `UIntType` 必須夠大，才能保留最多 `M - 1` 個值。
 
@@ -76,12 +79,12 @@ class subtract_with_carry_engine;
 
 如需帶進位減法引擎演算法的詳細資訊，請參閱維基百科文章：[延隔 Fibonacci 產生器 (英文)](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標頭：** \<random>
+**標頭：**\<random>
 
-**命名空間:** std
+**命名空間：** std
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<random>](../standard-library/random.md)

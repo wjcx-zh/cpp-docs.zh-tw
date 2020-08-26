@@ -5,20 +5,19 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1fede2726d3d8f5dd678b95fd7a22a301ea95a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363071"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840969"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 函式
 
-|||
-|-|-|
-|[交換](#istream_swap)|[Ws](#ws)|
+[交換](#istream_swap)\
+[Ws](#ws)
 
-## <a name="swap"></a><a name="istream_swap"></a>交換
+## <a name="swap"></a><a name="istream_swap"></a> 交換
 
 交換兩個資料流物件的元素。
 
@@ -42,7 +41,7 @@ void swap(
 *對*\
 資料流。
 
-## <a name="ws"></a><a name="ws"></a>Ws
+## <a name="ws"></a><a name="ws"></a> Ws
 
 略過資料流中的空白字元。
 
@@ -61,9 +60,9 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="remarks"></a>備註
 
-操縱器提取`ch`並丟棄[use_facet](../standard-library/basic-filebuf-class.md#open)< **型**\<**Elem> >(getloc)** 的任何元素。 [getloc](../standard-library/ios-base-class.md#getloc) **is**( **ctype**\< **Elem**>:: **space**, **ch**) 為 true。
+操作工具會將任何 `ch` [use_facet](../standard-library/basic-filebuf-class.md#open) <  **ctype** \< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)) 的元素解壓縮並捨棄。 ** (** **ctype** \< **Elem**> ：： **space**， **ch**) 為 true。
 
-此函數如果在擷取元素時遇到檔案結尾，就會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)。 傳回 *_Istr*。
+此函數如果在擷取元素時遇到檔案結尾，就會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)。 它會傳回 *_Istr*。
 
 ### <a name="example"></a>範例
 

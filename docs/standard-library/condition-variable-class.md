@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222546"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842425"
 ---
 # <a name="condition_variable-class"></a>condition_variable 類別
 
-當您具有 `unique_lock<mutex>` 類型的 `mutex` 時，可使用 `condition_variable` 類別來等候事件。 此類型的物件可能會比類型[condition_variable_any<unique_lock \<mutex> > ](../standard-library/condition-variable-any-class.md)的物件具有更佳的效能。
+當您具有 `unique_lock<mutex>` 類型的 `mutex` 時，可使用 `condition_variable` 類別來等候事件。 這種類型的物件可能比[condition_variable_any<unique_lock \<mutex> > ](../standard-library/condition-variable-any-class.md)類型的物件具有更佳的效能。
 
 ## <a name="syntax"></a>語法
 
@@ -41,22 +41,22 @@ class condition_variable;
 
 ### <a name="constructors"></a>建構函式
 
-|||
+|名稱|描述|
 |-|-|
 |[condition_variable](#condition_variable)|建構 `condition_variable` 物件。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
-|||
+|名稱|描述|
 |-|-|
 |[native_handle](#native_handle)|傳回代表 condition_variable 控制代碼的實作特定類型。|
 |[notify_all](#notify_all)|解除封鎖所有等候 `condition_variable` 物件的執行緒。|
 |[notify_one](#notify_one)|解除封鎖其中一個等候 `condition_variable` 物件的執行緒。|
-|[等候](#wait)|封鎖執行緒。|
+|[等](#wait)|封鎖執行緒。|
 |[wait_for](#wait_for)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|
 |[wait_until](#wait_until)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|
 
-## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a> condition_variable
 
 建構 `condition_variable` 物件。
 
@@ -68,7 +68,7 @@ condition_variable();
 
 如果可用的記憶體不足，建構函式會擲回具有 `not_enough_memory` 錯誤碼的 [system_error](../standard-library/system-error-class.md) 物件。 如果因為無法使用其他部分資源，而無法建構物件，建構函式會擲回具有 `resource_unavailable_try_again` 錯誤碼的 `system_error` 物件。
 
-## <a name="native_handle"></a><a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a> native_handle
 
 傳回代表 condition_variable 控制代碼的實作特定類型。
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 系統會將 `native_handle_type` 定義為並行執行階段內部資料結構的指標。
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 解除封鎖所有等候 `condition_variable` 物件的執行緒。
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 解除封鎖其中一個等候 `condition_variable` 物件的執行緒。
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>等候
+## <a name="wait"></a><a name="wait"></a> 等
 
 封鎖執行緒。
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。
 
@@ -156,13 +156,13 @@ bool wait_for(
 
 ### <a name="return-value"></a>傳回值
 
-`cv_status::timeout`如果*Rel_time*已過，則第一個方法會傳回。 否則，方法會傳回 `cv_status::no_timeout`。
+`cv_status::timeout`如果等候*Rel_time*已過，則第一個方法會傳回。 否則，方法會傳回 `cv_status::no_timeout`。
 
-第二個方法會傳回*Pred*的值。
+第二個方法會傳回 *Pred*的值。
 
 ### <a name="remarks"></a>備註
 
-第一個方法會封鎖，直到 `condition_variable` 呼叫[notify_one](#notify_one)或[notify_all](#notify_all) ，或直到時間間隔*Rel_time*經過信號為止。 它也可能會假性喚醒。
+第一個方法會封鎖，直到 `condition_variable` 物件被呼叫 [notify_one](#notify_one) 或 [notify_all](#notify_all) ，或直到經過 *Rel_time* 時間間隔為止。 它也可能會假性喚醒。
 
 而第二種方法會執行下列程式碼。
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。
 
@@ -214,7 +214,7 @@ bool wait_until(
 
 ### <a name="return-value"></a>傳回值
 
-`cv_status` `cv_status::timeout` 如果*Abs_time*超過時，則傳回類型的方法會傳回。 否則，方法會傳回 `cv_status::no_timeout`。
+`cv_status` `cv_status::timeout` 如果在*Abs_time*結束時等候終止，則會傳回型別的方法。 否則，方法會傳回 `cv_status::no_timeout`。
 
 傳回的方法會傳回 **`bool`** *Pred*的值。
 

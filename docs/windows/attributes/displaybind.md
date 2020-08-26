@@ -1,17 +1,17 @@
 ---
-title: displaybind （C++ COM 屬性）
+title: 'displaybind (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 9ca5c84e859d395d71b7f37a34b1158800bceed7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5c870aefbc73893b5bf14edec384a93fe0b057b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168248"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841658"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -25,22 +25,20 @@ ms.locfileid: "80168248"
 
 ## <a name="remarks"></a>備註
 
-**Displaybind** C++屬性具有與[displaybind](/windows/win32/Midl/displaybind) MIDL 屬性相同的功能。
+**Displaybind** c + + 屬性具有與[displaybind](/windows/win32/Midl/displaybind) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-如需如何使用**displaybind**的範例，請參閱可系[結的範例](bindable.md)。
+如需如何使用**displaybind**的[範例，請](bindable.md)參閱可系結的範例。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面方法|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

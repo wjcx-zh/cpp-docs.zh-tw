@@ -1,21 +1,21 @@
 ---
-title: helpstringdll （c + + COM 屬性）
+title: 'helpstringdll (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 46323a7ff4164111b48aed24b12bef5d400afacc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c90a6a203189eff927819a3319fac6a8e9f6a55
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217242"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842841"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
-指定要用來執行檔字串查閱（當地語系化）之 DLL 的名稱。
+指定要用來執行檔字串查閱 (當地語系化) 的 DLL 名稱。
 
 ## <a name="syntax"></a>語法
 
@@ -26,7 +26,7 @@ ms.locfileid: "87217242"
 ### <a name="parameters"></a>參數
 
 *string*<br/>
-要用來執行檔字串查詢的 DLL。
+用來執行檔字串查閱的 DLL。
 
 ## <a name="remarks"></a>備註
 
@@ -47,14 +47,12 @@ __interface IMyI
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
-|**適用於**|**`class`**，**介面**，介面方法|
-|**可重複**|否|
+|**適用於**|**`class`**、 **介面**、介面方法|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 

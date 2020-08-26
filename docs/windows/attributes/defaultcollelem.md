@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: 048d2933b8c024e74511e6cb49ae5c3240f3e710
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8eb8658b178061938f7f04f5eb35a85ca1e34d07
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167117"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842360"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -25,11 +25,11 @@ ms.locfileid: "80167117"
 
 ## <a name="remarks"></a>備註
 
-**Defaultcollelem** C++屬性具有與[defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL 屬性相同的功能。
+**Defaultcollelem** c + + 屬性具有與[defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示使用**defaultcollelem**屬性的介面方法：
+下列程式碼顯示使用 **defaultcollelem** 屬性的介面方法：
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -44,16 +44,14 @@ __interface IMyForm
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面方法|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

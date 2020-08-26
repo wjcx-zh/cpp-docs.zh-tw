@@ -1,21 +1,21 @@
 ---
-title: satype （C++ COM 屬性）
+title: 'satype (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16da256f491dbb0002d92cadaceda14a49eb2192
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166272"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842776"
 ---
 # <a name="satype"></a>satype
 
-指定 `SAFEARRAY` 結構的資料類型。
+指定結構的資料類型 `SAFEARRAY` 。
 
 ## <a name="syntax"></a>語法
 
@@ -26,25 +26,23 @@ ms.locfileid: "80166272"
 ### <a name="parameters"></a>參數
 
 *data_type*<br/>
-當做參數傳遞至介面方法之 `SAFEARRAY` 資料結構的資料類型。
+以 `SAFEARRAY` 參數形式傳遞至介面方法之資料結構的資料類型。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面參數，介面方法|
-|**可重複**|否|
-|**必要屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
 |**無效屬性**|None|
 
 ## <a name="remarks"></a>備註
 
-**Satype** C++屬性會指定 `SAFEARRAY`的資料類型。
+**Satype** c + + 屬性會指定的資料類型 `SAFEARRAY` 。
 
 > [!NOTE]
-> 從產生的 .idl 檔案中的 `SAFEARRAY` 指標卸載一層間接取值，從該檔案在 .cpp 檔案中的宣告方式。
+> 從產生的 .idl 檔案中的指標卸載的間接取值層級，是 `SAFEARRAY` 在 .cpp 檔案中宣告的方式。
 
 ## <a name="example"></a>範例
 

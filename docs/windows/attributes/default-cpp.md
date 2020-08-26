@@ -1,5 +1,5 @@
 ---
-title: default （c + + COM 屬性）
+title: '預設 (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b53420d721b43f9a51b19c4cc8e4a83fc8b94ed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215266"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842438"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -28,22 +28,22 @@ ms.locfileid: "87215266"
 ### <a name="parameters"></a>參數
 
 *interface1*<br/>
-根據以屬性定義的類別建立物件的腳本環境，將可使用的預設介面 **`default`** 。
+將提供給腳本環境使用的預設介面，會根據以屬性定義的類別來建立物件 **`default`** 。
 
 如果未指定預設介面，預設會使用第一個出現的非來源介面。
 
 *interface2*<br/>
-選擇性預設的來源介面。 您也必須使用 [source](source-cpp.md) 屬性來指定此介面。
+ (選擇性) 預設來源介面。 您也必須使用 [source](source-cpp.md) 屬性來指定此介面。
 
 如果未指定預設來源介面，預設會使用第一個來源介面。
 
 ## <a name="remarks"></a>備註
 
-**`default`** C + + 屬性的功能與[預設](/windows/win32/Midl/default)的 MIDL 屬性相同。 **`default`** 屬性也會搭配[case](case-cpp.md)屬性使用。
+**`default`** C + + 屬性具有與[預設](/windows/win32/Midl/default)MIDL 屬性相同的功能。 **`default`** 屬性也會與[case](case-cpp.md)屬性搭配使用。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何 **`default`** 在 coclass 的定義上使用，以指定 `ICustomDispatch` 做為預設的可程式性介面：
+下列程式碼示範如何 **`default`** 在 coclass 的定義上使用，以指定 `ICustomDispatch` 為預設的可程式性介面：
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -93,15 +93,13 @@ int main() {
 
 [Source](source-cpp.md)屬性也有如何使用的範例 **`default`** 。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**`class`**、 **`struct`** 、資料成員|
-|**可重複**|否|
-|**必要的屬性**|**coclass** （套用至 **`class`** 或時 **`struct`** ）|
+|**重複**|否|
+|**必要的屬性**|**coclass**套用至 **`class`** 或) 的 coclass **`struct`** (|
 |**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

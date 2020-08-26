@@ -34,16 +34,16 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211116"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841073"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 類別
 
-針對[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)類別中使用的資料列控制碼，提供預設的執行。
+提供用於 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) 類別的資料列控制碼預設實作為。
 
 ## <a name="syntax"></a>語法
 
@@ -51,7 +51,7 @@ ms.locfileid: "80211116"
 class CSimpleRow
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **Header:** atldb.h
 
@@ -59,27 +59,27 @@ class CSimpleRow
 
 ### <a name="methods"></a>方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[AddRefRow](#addrefrow)|將參考次數 (Reference Count) 加入至現有的資料列控制代碼。|
-|[比較](#compare)|比較兩個數據列，以查看它們是否參考相同的資料列實例。|
+|[比較](#compare)|比較兩個數據列，看看它們是否參考相同的資料列實例。|
 |[CSimpleRow](#csimplerow)|建構函式。|
 |[ReleaseRow](#releaserow)|釋放資料列。|
 
 ### <a name="data-members"></a>資料成員
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[m_dwRef](#dwref)|現有資料列控制碼的參考計數。|
 |[m_iRowset](#irowset)|代表資料指標之資料列集的索引。|
 
 ## <a name="remarks"></a>備註
 
-資料列控制碼在邏輯上是結果資料列的唯一標記。 `IRowsetImpl` 會針對[IRowsetImpl：： GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)中要求的每個資料列建立新的 `CSimpleRow`。 `CSimpleRow` 也可以取代為您自己的資料列控制碼的執行，因為它是 `IRowsetImpl`的預設樣板引數。 取代此類別的唯一需求是讓取代類別提供接受**LONG**類型之單一參數的函式。
+資料列控制碼在邏輯上是結果資料列的唯一標記。 `IRowsetImpl``CSimpleRow`針對[IRowsetImpl：： GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)中要求的每個資料列建立新的。 `CSimpleRow` 也可以取代為您自己的資料列控制碼的執行，因為這是的預設樣板引數 `IRowsetImpl` 。 取代這個類別的唯一需求是讓取代類別提供接受 **LONG**類型之單一參數的函式。
 
-## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow：： AddRefRow
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow：： AddRefRow
 
-以執行緒安全的方式，將參考計數加入至現有的資料列控制碼。
+以安全線程的方式，將參考計數加入現有的資料列控制碼。
 
 ### <a name="syntax"></a>語法
 
@@ -87,9 +87,9 @@ class CSimpleRow
 DWORD AddRefRow();
 ```
 
-## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow：： Compare
+## <a name="csimplerowcompare"></a><a name="compare"></a> CSimpleRow：： Compare
 
-比較兩個數據列，以查看它們是否參考相同的資料列實例。
+比較兩個數據列，看看它們是否參考相同的資料列實例。
 
 ### <a name="syntax"></a>語法
 
@@ -104,9 +104,9 @@ HRESULT Compare(CSimpleRow* pRow);
 
 ### <a name="return-value"></a>傳回值
 
-HRESULT 值通常 S_OK，表示兩個數據列都是相同的資料列實例，或是 S_FALSE，表示兩個數據列不同。 如需其他可能的傳回值，請參閱 OLE DB 程式設計*人員參考*中的[IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
+HRESULT 值通常是 S_OK，表示兩個數據列是相同的資料列實例，或 S_FALSE，表示兩個數據列不同。 如需其他可能的傳回值，請參閱 OLE DB 程式設計*人員參考*中的[IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
 
-## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow：： CSimpleRow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a> CSimpleRow：： CSimpleRow
 
 建構函式。
 
@@ -123,11 +123,11 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 ### <a name="remarks"></a>備註
 
-將[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)設定為*iRowsetCur*。
+將 [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) 設定為 *iRowsetCur*。
 
-## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow：： ReleaseRow
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow：： ReleaseRow
 
-以執行緒安全的方式釋放資料列。
+以安全線程的方式釋放資料列。
 
 ### <a name="syntax"></a>語法
 
@@ -135,7 +135,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 DWORD ReleaseRow();
 ```
 
-## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow：： m_dwRef
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a> CSimpleRow：： m_dwRef
 
 現有資料列控制碼的參考計數。
 
@@ -145,7 +145,7 @@ DWORD ReleaseRow();
 DWORD m_dwRef;
 ```
 
-## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow：： m_iRowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a> CSimpleRow：： m_iRowset
 
 代表資料指標之資料列集的索引。
 

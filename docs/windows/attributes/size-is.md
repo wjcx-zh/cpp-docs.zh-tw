@@ -1,21 +1,21 @@
 ---
-title: size_is （c + + COM 屬性）
+title: 'size_is (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd0ec8622dfffdf9a0578c86d75d313042cc3c01
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213836"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841762"
 ---
 # <a name="size_is"></a>size_is
 
-指定配置給大小指標的記憶體大小、大小指標的大小指標，以及單一或多維陣列。
+指定針對調整大小的指標所配置的記憶體大小、調整大小指標大小的指標，以及單一或多維度陣列。
 
 ## <a name="syntax"></a>語法
 
@@ -34,16 +34,14 @@ ms.locfileid: "87213836"
 
 ## <a name="example"></a>範例
 
-如需如何指定陣列區段的範例，請參閱[first_is](first-is.md)的範例。
+如需如何指定陣列區段的範例，請參閱 [first_is](first-is.md) 的範例。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
-|**適用於**|或中的欄位 **`struct`** **`union`** ，介面參數，介面方法|
-|**可重複**|否|
+|**適用於**|或中的欄位 **`struct`** **`union`** 、介面參數、介面方法|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|`max_is`|
 

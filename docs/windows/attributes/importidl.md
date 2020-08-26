@@ -1,17 +1,17 @@
 ---
-title: importidl （C++ COM 屬性）
+title: 'importidl (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f3c2c5c67ac216d096d1082814c561698f3f732
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166818"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842243"
 ---
 # <a name="importidl"></a>importidl
 
@@ -26,13 +26,13 @@ ms.locfileid: "80166818"
 ### <a name="parameters"></a>參數
 
 *idl_file*<br/>
-識別要與將為應用程式產生之 .idl 檔案合併的 .idl 檔案名稱。
+識別您想要與將為應用程式產生的 .idl 檔案合併的 .idl 檔名稱。
 
 ## <a name="remarks"></a>備註
 
-**Importidl** C++屬性會將該區段放在程式庫區塊的外部（在*idl_file*中），並將其產生的 .idl 檔案和程式庫區段（在*idl_file*中）放置到程式產生的 .idl 檔案的 [程式庫] 區段中。
+**Importidl** c + + 屬性會將*idl_file*) 中的程式庫區塊 (放在程式產生的 .idl 檔案中，而程式庫區段 (*idl_file*) 至程式產生的 .idl 檔案的 [程式庫] 區段。
 
-例如，如果您想要在產生的 .idl 檔案中使用手動編碼的 .idl 檔案，您可能會想要使用**importidl**。
+例如，您可以使用 **importidl**，例如，如果您想要搭配產生的 .idl 檔案使用手動編碼的 .idl 檔案。
 
 ## <a name="example"></a>範例
 
@@ -43,16 +43,14 @@ ms.locfileid: "80166818"
 [importidl("import.idl")];
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|任何位置|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -62,5 +60,5 @@ ms.locfileid: "80166818"
 [獨立屬性](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importlib](importlib.md)<br/>
-[include](include-cpp.md)<br/>
+[包括](include-cpp.md)<br/>
 [includelib](includelib-cpp.md)

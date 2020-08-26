@@ -1,21 +1,21 @@
 ---
-title: defaultvalue （C++ COM 屬性）
+title: 'defaultvalue (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b6a50bd7156eb9d6873e5ef08f6d75508fa3e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214836"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841684"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-允許指定具類型的選擇性參數的預設值。
+允許指定具類型選擇性參數的預設值。
 
 ## <a name="syntax"></a>語法
 
@@ -30,11 +30,11 @@ ms.locfileid: "80214836"
 
 ## <a name="remarks"></a>備註
 
-**Defaultvalue** C++屬性的功能與[defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 屬性相同。
+**Defaultvalue** c + + 屬性具有與[defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示使用**defaultvalue**屬性的介面方法：
+下列程式碼顯示使用 **defaultvalue** 屬性的介面方法：
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -54,16 +54,14 @@ __interface IFireTabCtrl : IDispatch {
 [ module(name="ATLFIRELib", uuid="479B29E1-9A2C-11D0-B696-00A0C903487A",    version="1.0", helpstring="ATLFire 1.0 Type Library") ];
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|介面參數|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
@@ -71,7 +69,7 @@ __interface IFireTabCtrl : IDispatch {
 
 [IDL 屬性](idl-attributes.md)<br/>
 [參數屬性](parameter-attributes.md)<br/>
-[out](out-cpp.md)<br/>
+[擴展](out-cpp.md)<br/>
 [retval](retval.md)<br/>
 [in](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>

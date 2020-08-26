@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 72797411b100480a06e27b71b000264070e57e32
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211129"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841099"
 ---
 # <a name="csession-class"></a>CSession 類別
 
@@ -57,7 +57,7 @@ ms.locfileid: "80211129"
 class CSession
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標題:** atldbcli.h
 
@@ -65,20 +65,20 @@ class CSession
 
 ### <a name="methods"></a>方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
-|[Abort](#abort)|取消（終止）交易。|
+|[中止](#abort)|取消 (終止) 交易。|
 |[關閉](#close)|關閉會話。|
 |[認可](#commit)|認可交易。|
-|[GetTransactionInfo](#gettransactioninfo)|傳回交易的相關資訊。|
-|[開啟](#open)|為數據源物件開啟新的會話。|
+|[GetTransactionInfo](#gettransactioninfo)|傳回有關交易的資訊。|
+|[開啟](#open)|開啟資料來源物件的新會話。|
 |[StartTransaction](#starttransaction)|開始此會話的新交易。|
 
 ## <a name="remarks"></a>備註
 
-一或多個會話可以與每個提供者連接（資料來源）相關聯，其以[CDataSource](../../data/oledb/cdatasource-class.md)物件表示。 若要建立 `CDataSource`的新 `CSession`，請呼叫[CSession：： Open](../../data/oledb/csession-open.md)。 若要開始資料庫交易，`CSession` 提供 `StartTransaction` 方法。 一旦交易啟動之後，您可以使用 `Commit` 方法進行認可，或使用 `Abort` 方法將它取消。
+一或多個會話可以與每個提供者連接 (資料來源) （由 [CDataSource](../../data/oledb/cdatasource-class.md) 物件表示）相關聯。 若要建立的新 `CSession` `CDataSource` ，請呼叫 [CSession：： Open](../../data/oledb/csession-open.md)。 若要開始資料庫交易，請 `CSession` 提供 `StartTransaction` 方法。 一旦啟動交易，您可以使用方法來認可它 `Commit` ，或使用方法來取消交易 `Abort` 。
 
-## <a name="csessionabort"></a><a name="abort"></a>CSession：： Abort
+## <a name="csessionabort"></a><a name="abort"></a> CSession：： Abort
 
 終止交易。
 
@@ -98,9 +98,9 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 標準 HRESULT。
 
-## <a name="csessionclose"></a><a name="close"></a>CSession：： Close
+## <a name="csessionclose"></a><a name="close"></a> CSession：： Close
 
-關閉由[CSession：： Open](../../data/oledb/csession-open.md)開啟的會話。
+關閉會話（由 [CSession：： Open](../../data/oledb/csession-open.md)開啟）。
 
 ### <a name="syntax"></a>語法
 
@@ -112,7 +112,7 @@ void Close() throw();
 
 釋放 `m_spOpenRowset` 指標。
 
-## <a name="csessioncommit"></a><a name="commit"></a>CSession：： Commit
+## <a name="csessioncommit"></a><a name="commit"></a> CSession：： Commit
 
 認可交易。
 
@@ -134,11 +134,11 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))。
+如需詳細資訊，請參閱 [ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))。
 
-## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a>CSession：： GetTransactionInfo
+## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a> CSession：： GetTransactionInfo
 
-傳回交易的相關資訊。
+傳回有關交易的資訊。
 
 ### <a name="syntax"></a>語法
 
@@ -158,9 +158,9 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
 
-## <a name="csessionopen"></a><a name="open"></a>CSession：： Open
+## <a name="csessionopen"></a><a name="open"></a> CSession：： Open
 
-為數據源物件開啟新的會話。
+開啟資料來源物件的新會話。
 
 ### <a name="syntax"></a>語法
 
@@ -172,14 +172,14 @@ HRESULT Open(const CDataSource& ds,
 
 #### <a name="parameters"></a>參數
 
-*ds*<br/>
+*Ds*<br/>
 在要開啟會話的資料來源。
 
-*傳入 ppropset*<br/>
-在[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構陣列的指標，其中包含要設定的屬性和值。 請參閱 Windows SDK 中 OLE DB 程式設計*人員參考*中的[屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))。
+*pPropSet*<br/>
+在 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 結構陣列的指標，其中包含要設定的屬性和值。 請參閱 Windows SDK 中的 OLE DB 程式設計*人員參考*中的[屬性集和屬性群組](/previous-versions/windows/desktop/ms713696(v=vs.85))。
 
 *ulPropSets*<br/>
-在在*傳入 ppropset*引數中傳遞的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構數目。
+在在*pPropSet*引數中傳遞的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))結構數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -187,9 +187,9 @@ HRESULT Open(const CDataSource& ds,
 
 ### <a name="remarks"></a>備註
 
-您必須先使用[CDataSource：： open](../../data/oledb/cdatasource-open.md)開啟資料來源物件，然後再將它傳遞給 `CSession::Open`。
+您必須先使用 [CDataSource：： open](../../data/oledb/cdatasource-open.md) 開啟資料來源物件，再將它傳遞至 `CSession::Open` 。
 
-## <a name="csessionstarttransaction"></a><a name="starttransaction"></a>CSession：： StartTransaction
+## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession：： StartTransaction
 
 開始此會話的新交易。
 
@@ -218,4 +218,4 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

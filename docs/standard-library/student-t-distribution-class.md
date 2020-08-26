@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: c23298b931e751a8020883bfb3cf687e35ba3276
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 23ded8704e1e29dabddadfdc0a1ced3644374ad9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202008"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840956"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution 類別
 
@@ -65,16 +65,14 @@ public:
 ### <a name="parameters"></a>參數
 
 *RealType*\
-浮點結果類型，預設值為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
+浮點結果類型，預設為 **`double`** 。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md) 。
 
 ## <a name="remarks"></a>備註
 
-類別樣板描述產生使用者指定之整數類型值的分佈（ **`double`** 如果未提供，則為類型），並根據學生的*t*分佈散發。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之整數類型的值的散發，或者， **`double`** 如果沒有提供，則會根據學生的 *t*分佈散發。 下表提供各個成員的文章連結。
 
-||||
-|-|-|-|
-|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|
-|`student_t_distribution::operator()`||[param_type](#param_type)|
+[student_t_distribution](#student_t_distribution)\
+[param_type](#param_type)
 
 屬性函式 `n()` 會傳回儲存的分佈參數 `n` 的值。
 
@@ -157,13 +155,13 @@ Distribution for 10 samples:
     10: 92.7084335614
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution：： student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a> student_t_distribution：： student_t_distribution
 
 建構分佈。
 
@@ -174,10 +172,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*位*\
+*n-1*\
 `n` 分佈參數。
 
-*parm*\
+*>parm*\
 用於建構分佈的參數封裝。
 
 ### <a name="remarks"></a>備註
@@ -188,7 +186,7 @@ explicit student_t_distribution(const param_type& parm);
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
-## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution：:p aram_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a> student_t_distribution：:p aram_type
 
 儲存分佈的所有參數。
 
@@ -205,10 +203,10 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*位*\
+*n-1*\
 `n` 分佈參數。
 
-*再*\
+*對*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註

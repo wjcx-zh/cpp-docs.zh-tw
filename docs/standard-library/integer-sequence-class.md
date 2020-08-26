@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: 3de64f7855b5158f1565580d305e2a6eeaf3e76f
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 4d927be4fdd41ab75ca78a0e0e7ab0282e4fbf6a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82031468"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843868"
 ---
 # <a name="integer_sequence-class"></a>integer_sequence 類別
 
-表示整數序列。 可用來推算並展開作為引數傳遞給函式之 variadic 類型 (例如 std::tuple\<T...>) 中的參數封裝。
+表示整數序列。 可以用來推算和展開 variadic 型別中的參數套件，例如 std：：元組 \<T...> ，會當做引數傳遞至函式。
 
 ## <a name="syntax"></a>語法
 
@@ -34,15 +34,15 @@ struct integer_sequence
 
 ### <a name="parameters"></a>參數
 
-*T*\
+*10gbase-t*\
 值類型，必須是整數類型：bool、char、char16_t、char32_t、wchar_t 或代正負號或不帶正負號的整數類型。
 
-*瓦爾斯*\
+*Vals*\
 非類型參數封裝，表示整數類型 T 之值的序列。
 
 ## <a name="members"></a>成員
 
-|||
+|名稱|描述|
 |-|-|
 |`static size_t size() noexcept`|序列中的項目數。|
 |`typedef T value_type`|序列中每個項目的類型。 必須是整數類型。|
@@ -57,7 +57,7 @@ struct integer_sequence
 
 在 `a2t` 函式中，根據 `size_t` 整數類資料類型，`index_sequence` 是 `integer_sequence` 的別名。 `make_index_sequence` 是編譯時期的別名，會以呼叫端傳入之陣列相同的項目數，建立以零為起始的 `index_sequence`。 `a2t` 會將 `index_sequence` 以值傳遞至 `a2t_`，其中運算式 `a[I]...` 會解除封裝 `I`，然後項目會饋送至 `make_tuple`，它會使用它們做為個別引數。 例如，如果序列包含三個項目，則 `make_tuple` 稱為 make_tuple (a[0]、a[1]、a[2])。 當然，陣列項目本身可以是任何類型。
 
-套用函數接受[std::中陣元](../standard-library/tuple-class.md),`integer_sequence``tuple_size`並使用協助器類別產生 。 請注意[,std::decay_t](../standard-library/decay-class.md)是必需的[,因為tuple_size](../standard-library/tuple-size-class-tuple.md)不適用於引用類型。 `apply_` 函式會解除封裝 tuple 成員，並且將它們當作個別引數轉送至函式呼叫。 在此範例中，函式是會列印出值的簡單 Lambda 運算式。
+Apply 函數會接受 [std：：元組](../standard-library/tuple-class.md)，並 `integer_sequence` 使用 `tuple_size` helper 類別產生。 請注意， [std：:d ecay_t](../standard-library/decay-class.md) 是必要的，因為 [tuple_size](../standard-library/tuple-size-class-tuple.md) 無法使用參考型別。 `apply_` 函式會解除封裝 tuple 成員，並且將它們當作個別引數轉送至函式呼叫。 在此範例中，函式是會列印出值的簡單 Lambda 運算式。
 
 ```cpp
 #include <stddef.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-若要為參數封裝建立 `index_sequence`，請使用 `index_sequence_for`\<T...>，這是 `make_index_sequence`\<sizeof...(T)> 的別名
+若要建立 `index_sequence` 參數套件的，請使用 `index_sequence_for` \<T...> 它的別名作為`make_index_sequence`\<sizeof...(T)>
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-標題: \<type_traits\>
+標題：\<type_traits\>
 
 命名空間：std
 
 ## <a name="see-also"></a>另請參閱
 
-[橢圓和瓦里亞迪奇範本](../cpp/ellipses-and-variadic-templates.md)
+[省略號和 Variadic 範本](../cpp/ellipses-and-variadic-templates.md)

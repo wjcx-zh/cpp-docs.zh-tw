@@ -27,16 +27,16 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233479"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843283"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
 
-在單一類別中封裝資料列集及其相關聯的存取子。
+將資料列集和其相關聯的存取子封裝在單一類別中。
 
 ## <a name="syntax"></a>語法
 
@@ -54,7 +54,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 *TRowset*<br/>
 資料列集類別。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **標題:** atldbcli.h
 
@@ -62,21 +62,21 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ### <a name="methods"></a>方法
 
-|||
-|-|-|
-|[Bind](#bind)|建立系結（在 `bBind` **`false`** [CCommand：： Open](../../data/oledb/ccommand-open.md)中指定為時使用）。|
-|[CAccessorRowset](#caccessorrowset)|建構函式。|
-|[關閉](#close)|關閉資料列集和任何存取子。|
-|[FreeRecordMemory](#freerecordmemory)|釋放目前記錄中需要釋放的任何資料行。|
-|[GetColumnInfo](#getcolumninfo)|執行[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。|
+| 名稱 | 描述 |
+|--|--|
+| [綁定](#bind) | 當 `bBind` 指定為 **`false`** [CCommand：： Open](../../data/oledb/ccommand-open.md)) 時，會建立 (所使用的系結。 |
+| [CAccessorRowset](#caccessorrowset) | 建構函式。 |
+| [關閉](#close) | 關閉資料列集和任何存取子。 |
+| [FreeRecordMemory](#freerecordmemory) | 釋出目前記錄中需要釋放的任何資料行。 |
+| [GetColumnInfo](#getcolumninfo) | Implements [IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。 |
 
 ## <a name="remarks"></a>備註
 
-類別會 `TAccessor` 管理存取子。 [類別*TRowset* ] 會管理資料列集。
+類別會 `TAccessor` 管理存取子。 類別 *TRowset* 會管理資料列集。
 
-## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset：： Bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset：： Bind
 
-如果您 `bBind` **`false`** 在[CCommand：： Open](../../data/oledb/ccommand-open.md)中指定為，則建立系結。
+如果您 `bBind` **`false`** 在 [CCommand：： Open](../../data/oledb/ccommand-open.md)中指定為，則建立系結。
 
 ### <a name="syntax"></a>語法
 
@@ -88,7 +88,7 @@ HRESULT Bind();
 
 標準 HRESULT。
 
-## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset：： CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a> CAccessorRowset：： CAccessorRowset
 
 初始化 `CAccessorRowset` 物件。
 
@@ -98,9 +98,9 @@ HRESULT Bind();
 CAccessorRowset();
 ```
 
-## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset：： Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a> CAccessorRowset：： Close
 
-釋放任何使用中的存取子和資料列集。
+釋放任何作用中存取子和資料列集。
 
 ### <a name="syntax"></a>語法
 
@@ -112,9 +112,9 @@ void Close();
 
 釋放任何相關聯的記憶體。
 
-## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset：： FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a> CAccessorRowset：： FreeRecordMemory
 
-釋放目前記錄中需要釋放的任何資料行。
+釋出目前記錄中需要釋放的任何資料行。
 
 ### <a name="syntax"></a>語法
 
@@ -122,9 +122,9 @@ void Close();
 void FreeRecordMemory();
 ```
 
-## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset：： GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a> CAccessorRowset：： GetColumnInfo
 
-從已開啟的資料列集取得資料行資訊。
+從開啟的資料列集取得資料行資訊。
 
 ### <a name="syntax"></a>語法
 
@@ -147,7 +147,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 ### <a name="remarks"></a>備註
 
-使用者必須釋放傳回的資料行資訊和字串緩衝區。 當您使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)且需要覆寫系結時，請使用此方法的第二個版本。
+使用者必須釋放傳回的資料行資訊和字串緩衝區。 當您使用 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 時，請使用這個方法的第二個版本，且需要覆寫系結。
 
 如需詳細資訊，請參閱 OLE DB 程式設計*人員參考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 

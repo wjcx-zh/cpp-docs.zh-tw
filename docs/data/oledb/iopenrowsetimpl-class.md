@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 8ecbcd46e534baa73574f0930e1cbac4dbc49dfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3c94c75db21218aae1205bf9c5c379ab772a7f8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210531"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843712"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl 類別
 
-提供 `IOpenRowset` 介面的執行。
+提供介面的實作為 `IOpenRowset` 。
 
 ## <a name="syntax"></a>語法
 
@@ -34,9 +34,9 @@ class IOpenRowsetImpl : public IOpenRowset
 ### <a name="parameters"></a>參數
 
 *SessionClass*<br/>
-衍生自 `IOpenRowsetImpl`的類別。
+衍生自的類別 `IOpenRowsetImpl` 。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **Header:** atldb.h
 
@@ -44,18 +44,18 @@ class IOpenRowsetImpl : public IOpenRowset
 
 ### <a name="methods"></a>方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
-|[CreateRowset](#createrowset)|建立資料列集物件。 不是由使用者直接呼叫。|
-|[OpenRowset](#openrowset)|開啟並傳回資料列集，其中包含單一基表或索引的所有資料列。 （不在為 ATLDB.H 中。H|
+|[CreateRowset](#createrowset)|建立資料列集物件。 未直接由使用者呼叫。|
+|[[OpenRowset]](#openrowset)|開啟並傳回資料列集，其中包含單一基表或索引的所有資料列。  (不在 ATLDB.H 中。H) |
 
 ## <a name="remarks"></a>備註
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))介面是 session 物件的必要參數。 它會開啟並傳回一個資料列集，其中包含單一基表或索引的所有資料列。
+[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))介面是會話物件的必要項。 它會開啟並傳回資料列集，其中包含單一基表或索引的所有資料列。
 
-## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a>IOpenRowsetImpl：： CreateRowset
+## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a> IOpenRowsetImpl：： CreateRowset
 
-建立資料列集物件。 不是由使用者直接呼叫。 請參閱 OLE DB 程式設計*人員參考*中的[IOpenRowset：： OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 。
+建立資料列集物件。 未直接由使用者呼叫。 請參閱 OLE DB 程式設計*人員參考*中的[IOpenRowset：： OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 。
 
 ### <a name="syntax"></a>語法
 
@@ -74,14 +74,14 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 #### <a name="parameters"></a>參數
 
 *RowsetClass*<br/>
-範本類別成員，代表使用者的資料列集類別。 通常由 wizard 產生。
+代表使用者之資料列集類別的範本類別成員。 通常由 wizard 產生。
 
 *pRowsetObj*<br/>
-脫銷資料列集物件的指標。 通常不會使用這個參數，但如果您必須在資料列集上執行更多工做，然後才將它傳遞至 COM 物件，則可以使用此參數。 *PRowsetObj*的存留期是由*ppRowset*所系結。
+擴展資料列集物件的指標。 通常不會使用此參數，但如果您必須在資料列集上執行更多工作，才能將它傳遞給 COM 物件，則可以使用此參數。 *PRowsetObj*的存留期是由 *>pprowset*所系結。
 
 如需其他參數，請參閱 OLE DB 程式設計*人員參考*中的[IOpenRowset：： OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 。
 
-## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a>IOpenRowsetImpl：： OpenRowset
+## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a> IOpenRowsetImpl：： OpenRowset
 
 開啟並傳回資料列集，其中包含單一基表或索引的所有資料列。
 
@@ -103,7 +103,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 ### <a name="remarks"></a>備註
 
-在為 ATLDB.H 中找不到這個方法。H. 當您建立提供者時，它是由 ATL 物件 Wizard 所建立。
+在 ATLDB.H 中找不到這個方法。H。 當您建立提供者時，它是由 ATL 物件 Wizard 所建立。
 
 ## <a name="see-also"></a>另請參閱
 

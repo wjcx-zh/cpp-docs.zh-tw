@@ -12,16 +12,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 0b36e4f85b855f162e11d96f8fef296c6c07597f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210297"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844830"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 類別
 
-提供[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))介面的執行。
+提供 [ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85)) 介面的實作為。
 
 ## <a name="syntax"></a>語法
 
@@ -35,12 +35,12 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自 `ISessionPropertiesImpl`的類別。
+衍生自的類別 `ISessionPropertiesImpl` 。
 
 *PropClass*<br/>
-使用者可定義的屬性類別，預設為*T*。
+使用者可定義的屬性類別，預設為 *T*。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **Header:** atldb.h
 
@@ -48,18 +48,18 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 ### <a name="interface-methods"></a>介面方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
-|[GetProperties](#getproperties)|傳回會話中目前設定的會話屬性群組中的屬性清單。|
+|[GetProperties](#getproperties)|傳回會話屬性群組中目前在會話上設定的屬性清單。|
 |[SetProperties](#setproperties)|設定會話屬性群組中的屬性。|
 
 ## <a name="remarks"></a>備註
 
-會話上的強制介面。 這個類別會藉由呼叫[屬性集對應](../../data/oledb/begin-propset-map.md)所定義的靜態函式，來實作用會話屬性。 您應該在會話類別中指定屬性集對應。
+會話上的強制介面。 這個類別會藉由呼叫 [屬性集對應](../../data/oledb/begin-propset-map.md)所定義的靜態函式，來實作為會話屬性。 您應在您的 session 類別中指定屬性集對應。
 
-## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl：： GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl：： GetProperties
 
-傳回目前在會話上設定的 `DBPROPSET_SESSION` 屬性群組中的屬性清單。
+傳回 `DBPROPSET_SESSION` 目前在會話上設定之屬性群組中的屬性清單。
 
 ### <a name="syntax"></a>語法
 
@@ -74,9 +74,9 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 請參閱 OLE DB 程式設計*人員參考*中的[ISessionProperties：： GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) 。
 
-## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl：： SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a> ISessionPropertiesImpl：： SetProperties
 
-設定 `DBPROPSET_SESSION` 屬性群組中的屬性。
+設定屬性群組中的屬性 `DBPROPSET_SESSION` 。
 
 ### <a name="syntax"></a>語法
 

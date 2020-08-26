@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320277"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843543"
 ---
 # <a name="random_device-class"></a>random_device 類別
 
@@ -51,10 +51,9 @@ public:
 
 ## <a name="members"></a>成員
 
-|||
-|-|-|
-|[random_device](#random_device)|[熵](#entropy)|
-|[random_device::operator()](#op_call)||
+[random_device](#random_device)\
+[熵](#entropy)\
+[random_device::operator()](#op_call)
 
 ## <a name="remarks"></a>備註
 
@@ -64,7 +63,7 @@ public:
 
 `random_device` 不保證會產生未封鎖的呼叫。
 
-一般而言，會使用 `random_device` 植入使用引擎或引擎配接器建立的其他產生器。 有關詳細資訊,請參閱[\<隨機>](../standard-library/random.md)。
+一般而言，會使用 `random_device` 植入使用引擎或引擎配接器建立的其他產生器。 如需詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="example"></a>範例
 
@@ -100,15 +99,15 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-這是針對此產生器的最簡化範例，不代表一般使用情況。 有關更具代表性的代碼示例,請參閱[\<隨機>](../standard-library/random.md)。
+這是針對此產生器的最簡化範例，不代表一般使用情況。 如需更具代表性的程式碼範例，請參閱 [\<random>](../standard-library/random.md) 。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標頭：** \<random>
+**標頭：**\<random>
 
 **命名空間：** std
 
-## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device:random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a> random_device：： random_device
 
 建構產生器。
 
@@ -120,7 +119,7 @@ random_device(const std::string& = "");
 
 建構函式會視需要初始化產生器，忽略字串參數。 若無法初始化 `random_device`，會擲出衍生自 [exception](../standard-library/exception-class.md) 之實作定義類型的值。
 
-## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device:熵
+## <a name="random_deviceentropy"></a><a name="entropy"></a> random_device：：熵
 
 評估來源的隨機性。
 
@@ -132,7 +131,7 @@ double entropy() const noexcept;
 
 成員函式會傳回來源隨機性的評估 (測量單位為位元)。
 
-## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device::操作員()
+## <a name="random_deviceoperator"></a><a name="op_call"></a> random_device：： operator ( # A1
 
 傳回隨機值。
 
@@ -146,4 +145,4 @@ result_type operator()();
 
 ## <a name="see-also"></a>另請參閱
 
-[\<隨機>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

@@ -1,5 +1,5 @@
 ---
-title: _itoa，_itow 函式
+title: _itoa，_itow 函數
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +113,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216930"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843491"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
-將整數轉換成字串。 這些函式已有更安全的版本可供使用;請參閱[_itoa_s、_itow_s 函數](itoa-s-itow-s.md)。
+將整數轉換成字串。 這些函式有更安全的版本可供使用;請參閱 [_itoa_s，_itow_s 函數](itoa-s-itow-s.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -185,26 +185,26 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 *緩衝區*<br/>
 保存轉換結果的緩衝區。
 
-*基*<br/>
-*Value*的轉換所使用的基底，其必須在範圍2-36。
+*基數*<br/>
+*值*的轉換所使用的基底，其必須在2-36 範圍內。
 
 *size*<br/>
-緩衝區的長度（以字元類型的單位表示）。 這個參數是從 c + + 中的*buffer*引數推斷而來。
+緩衝區的長度（以字元類型為單位）。 此參數是從 c + + 中的 *buffer* 引數推斷而來。
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回*緩衝區*的指標。 不會傳回錯誤。
+這些函式中的每一個都會傳回 *緩衝區*的指標。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函式會將指定*值*引數的數位轉換成以 null 結束的字元字串，並將結果（最多33個字元**用於 _itoa**、 **_ltoa**和 **_ultoa**，而65用於 **_i64toa**和 **_ui64toa**）儲存在*緩衝區*中。 如果*基數*等於10且*值*為負數，則儲存字串的第一個字元是減號（ **-** ）。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函數分別是寬字元版本的 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**。
+**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函式會將指定*值*引數的數位轉換為以 null 結束的字元字串，並將** (、** **_itoa**和 **_ltoa**的結果 _ultoa 最多為33個字元，並將 **_i64toa 的 _ui64toa 和** **) **的結果儲存為*65。* 如果 *基數* 等於10且 *值* 為負數，儲存字串的第一個字元會是減號 (**-**) 。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函數分別是寬字元版本的 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**。
 
 > [!IMPORTANT]
-> 這些函式可以寫入超過緩衝區結尾太小的部分。 若要防止緩衝區溢位，請確定*緩衝區*夠大，足以容納轉換的數位加上尾端的 null 字元和正負號字元。 誤用這些函式可能會在您的程式碼中造成嚴重的安全性問題。
+> 這些函式可以寫入超過緩衝區結尾的緩衝區太小。 若要防止緩衝區溢位，請確定 *緩衝區* 夠大，足以容納轉換的數位加上尾端的 null 字元和符號字元。 誤用這些函式可能會在您的程式碼中造成嚴重的安全性問題。
 
-基於安全性問題的可能，根據預設，這些函式會造成淘汰警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此函式或變數可能不安全。請考慮改為使用** *safe_function* **。若要停用取代，請使用 _CRT_SECURE_NO_WARNINGS。** 建議您變更原始程式碼，以使用警告訊息所建議的*safe_function* 。 較安全的函式不會寫入比指定緩衝區大小更多的字元。 如需詳細資訊，請參閱[_itoa_s、_itow_s 函數](itoa-s-itow-s.md)。
+基於安全性問題的可能，根據預設，這些功能會導致淘汰警告 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：此函式 **或變數可能不安全。請考慮**改用 *safe_function* **。若要停用淘汰，請使用 _CRT_SECURE_NO_WARNINGS。** 建議您變更原始程式碼，以使用警告訊息所建議的 *safe_function* 。 更安全的函式不會寫入比指定緩衝區大小更多的字元。 如需詳細資訊，請參閱 [_itoa_s _itow_s 函數](itoa-s-itow-s.md)。
 
-若要在沒有淘汰警告的情況下使用這些函式，請在包含任何 CRT 標頭之前定義 **_CRT_SECURE_NO_WARNINGS**預處理器宏。 您可以在開發人員命令提示字元中的命令列上執行此動作，方法是將 **/D_CRT_SECURE_NO_WARNINGS**編譯器選項加入**cl**命令。 否則，請在您的原始程式檔中定義宏。 如果您使用先行編譯的標頭，請在先行編譯標頭檔的頂端定義宏，包括 file、 *pch* （Visual Studio 2017 和更早版本中的*stdafx.h* ）。 若要在原始程式碼中定義宏，請在包含任何 CRT 標頭之前使用 **#define**指示詞，如下列範例所示：
+若要在不使用取代警告的情況下使用這些函式，請在包含任何 CRT 標頭之前定義 **_CRT_SECURE_NO_WARNINGS** 預處理器宏。 您可以在「開發人員命令提示字元」中，將 **/D_CRT_SECURE_NO_WARNINGS** 編譯器選項新增至 **cl** 命令，以在命令列上進行這項操作。 否則，請在原始程式檔中定義宏。 如果您使用先行編譯標頭檔，請在先行編譯標頭檔的上方定義宏，包括 file、 *pch. h* (*stdafx.h* 在 Visual Studio 2017 及更早的) 中。 若要在原始程式碼中定義宏，請在包含任何 CRT 標頭之前使用 **#define** 指示詞，如下列範例所示：
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -213,11 +213,11 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-在 c + + 中，這些函式具有可叫用其更安全對應專案的範本多載 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+在 c + + 中，這些函式具有可叫用更安全對應專案的範本多載。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-POSIX 名稱**itoa**、 **ltoa**和**ultoa**會當做 **_itoa**、 **_ltoa**和 **_ultoa**函式的別名來存在。 POSIX 名稱已被取代，因為它們不遵循 ISO C 的實作為特定全域函式名稱慣例。根據預設，這些函式會造成淘汰警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此專案的 POSIX 名稱已被取代。請改用符合 ISO C 和 c + + 標準的名稱：** *new_name*。 建議您變更原始程式碼，以使用這些函式的更安全版本， **_itoa_s**、 **_ltoa_s**或 **_ultoa_s**。 如需詳細資訊，請參閱[_itoa_s、_itow_s 函數](itoa-s-itow-s.md)。
+POSIX 名稱 **itoa**、 **ltoa**和 **ultoa** 會以別名的形式存在於 **_itoa**、 **_ltoa**和 **_ultoa** 函數中。 POSIX 名稱已被取代，因為它們並未遵循 ISO C 的實作為特定全域函式名稱慣例。根據預設，這些函式會導致淘汰警告 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)： **此專案的 POSIX 名稱已被取代。相反地，請使用符合 ISO C 和 c + + 標準的名稱：** *new_name*。 建議您變更原始程式碼，以使用這些函式的更安全版本、 **_itoa_s**、 **_ltoa_s**或 **_ultoa_s**。 如需詳細資訊，請參閱 [_itoa_s _itow_s 函數](itoa-s-itow-s.md)。
 
-針對原始程式碼可攜性，您可能會想要在程式碼中保留 POSIX 名稱。 若要在沒有淘汰警告的情況下使用這些函式，請在包含任何 CRT 標頭之前，先定義 **_CRT_NONSTDC_NO_WARNINGS**和 **_CRT_SECURE_NO_WARNINGS**預處理器宏。 您可以在開發人員命令提示字元中的命令列上執行此動作，方法是將 **/D_CRT_SECURE_NO_WARNINGS**和 **/D_CRT_NONSTDC_NO_WARNINGS**編譯器選項加入**cl**命令。 否則，請在您的原始程式檔中定義宏。 如果您使用先行編譯的標頭，請在先行編譯標頭檔包含檔案的頂端定義宏。 若要在原始程式碼中定義宏，請在包含任何 CRT 標頭之前使用 **#define**指示詞，如下列範例所示：
+針對原始程式碼可攜性，您可能會想要將 POSIX 名稱保留在程式碼中。 若要在不使用取代警告的情況下使用這些函式，請在包含任何 CRT 標頭之前，先定義 **_CRT_NONSTDC_NO_WARNINGS** 和 **_CRT_SECURE_NO_WARNINGS** 預處理器宏。 您可以在開發人員命令提示字元中，將 **/D_CRT_SECURE_NO_WARNINGS** 和 **/D_CRT_NONSTDC_NO_WARNINGS** 編譯器選項新增至 **cl** 命令，以在命令列上進行這項操作。 否則，請在原始程式檔中定義宏。 如果您使用先行編譯標頭檔，請在先行編譯標頭檔包含檔的頂端定義宏。 若要在原始程式碼中定義宏，請在包含任何 CRT 標頭之前使用 **#define** 指示詞，如下列範例所示：
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -227,20 +227,19 @@ POSIX 名稱**itoa**、 **ltoa**和**ultoa**會當做 **_itoa**、 **_ltoa**和 
 
 ### <a name="maximum-conversion-count-macros"></a>最大轉換計數宏
 
-為了協助您建立用於轉換的安全緩衝區，CRT 包含一些方便的宏。 這些會定義針對數個通用基底，轉換每個整數類型的最長可能值時所需的緩衝區大小，包括 null 結束字元和正負號字元。 若要確保您的轉換緩衝區夠大，可以在*基數*所指定的基底中接收任何轉換，請在配置緩衝區時使用其中一個已定義的宏。 當您將整數類型轉換成字串時，這有助於防止緩衝區溢位錯誤。 當您的來源中包含 stdlib.h> 或 wchar 時，就會定義這些宏。
+為了協助您建立安全的緩衝區以進行轉換，CRT 包含一些方便的宏。 這些會定義轉換數個常用基底的每個整數類型（包括 null 結束字元和正負號字元）的最長可能值所需的緩衝區大小。 若要確保您的轉換緩衝區夠大，可以在 *基數*指定的基底中接收任何轉換，請在配置緩衝區時，使用其中一個已定義的宏。 當您將整數類資料類型轉換成字串時，這有助於避免緩衝區溢位錯誤。 當您在來源中包含 stdlib.h .h 或 wchar 時，會定義這些宏。
 
-若要在字串轉換函式中使用其中一個宏，請宣告適當字元類型的轉換緩衝區，並使用整數類型的宏值，並將基底當做緩衝區維度。 下表列出適用于所列基底之每個函數的宏：
+若要在字串轉換函式中使用這些宏的其中一個，請宣告適當的字元類型的轉換緩衝區，並使用整數型別和 base 做為緩衝區維度的宏值。 下表列出適用于每個函式的宏，適用于列出的基底：
 
-||||
+|Functions|radix|巨集|
 |-|-|-|
-|函式|radix|巨集|
 |**_itoa**， **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**， **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa**， **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
 |**_i64toa**， **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**， **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-這個範例會使用「轉換計數」宏來定義緩衝區，使其夠大，以包含 **`unsigned long long`** 基底2中的：
+此範例會使用轉換計數宏來定義夠大的緩衝區，以 **`unsigned long long`** 在基底2中包含：
 
 ```cpp
 #include <wchar.h>
@@ -262,7 +261,7 @@ int main()
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
 |**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
@@ -270,11 +269,11 @@ int main()
 |**_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**、 **_ui64toa**|\<stdlib.h>|
 |**_itow**、 **_ltow**、 **_ultow**、 **_i64tow**、 **_ui64tow**|\<stdlib.h> 或 \<wchar.h>|
 
-這些函式和宏是 Microsoft 特有的。 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
+這些函式和宏都是 Microsoft 特有的。 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-這個範例會示範一些整數轉換函數的用法。 請注意，使用 **_CRT_SECURE_NO_WARNINGS**宏來 C4996 無聲警告]。
+這個範例示範如何使用一些整數轉換函數。 請注意，使用 **_CRT_SECURE_NO_WARNINGS** 宏來無聲警告 C4996。
 
 ```C
 // crt_itoa.c
@@ -352,4 +351,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s，_itow_s 函式](itoa-s-itow-s.md)<br/>
+[_itoa_s，_itow_s 函數](itoa-s-itow-s.md)<br/>

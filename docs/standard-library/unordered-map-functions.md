@@ -8,20 +8,19 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e572e4ba8cb4c6cb15329342a7947c35ece7270
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373131"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844258"
 ---
 # <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 函式
 
-|||
-|-|-|
-|[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
+[交換 (unordered_map) ](#swap) 
+[交換 (unordered_multimap) ](#swap_function_multimap)
 
-## <a name="swap-unordered_map"></a><a name="swap"></a>交換 (unordered_map)
+## <a name="swap-unordered_map"></a><a name="swap"></a> 交換 (unordered_map) 
 
 交換兩個容器的內容。
 
@@ -46,7 +45,7 @@ void swap(
 *Pred*\
 相等比較函式物件類型。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
 *離開*\
@@ -57,7 +56,7 @@ void swap(
 
 ### <a name="remarks"></a>備註
 
-樣本函數執行`left.`[unordered_map::交換](../standard-library/unordered-map-class.md#swap)`(right)`。
+範本函式會執行 `left.` [unordered_map：： swap](../standard-library/unordered-map-class.md#swap) `(right)` 。
 
 ### <a name="example"></a>範例
 
@@ -114,7 +113,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>交換 (unordered_multimap)
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a> 交換 (unordered_multimap) 
 
 交換兩個容器的內容。
 
@@ -139,7 +138,7 @@ void swap(
 *Pred*\
 相等比較函式物件類型。
 
-*Alloc*\
+*配置*\
 配置器類別。
 
 *離開*\
@@ -150,7 +149,7 @@ void swap(
 
 ### <a name="remarks"></a>備註
 
-樣本函數執行`left.`[unordered_multimap::交換](../standard-library/unordered-multimap-class.md#swap)`(right)`。
+範本函式會執行 `left.` [unordered_multimap：： swap](../standard-library/unordered-multimap-class.md#swap) `(right)` 。
 
 ### <a name="example"></a>範例
 

@@ -10,22 +10,21 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3389ba769d6b61a363e8cbfcf5f6a4e9ec679469
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364932"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844700"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函式
 
-陣列\<`get`>标头包括两个非成员函数,`swap`和 ,它們對**陣列**進行操作。
+\<array>標頭包含兩個非成員函式， `get` 以及 `swap` 在**陣列**物件上操作的。
 
-|||
-|-|-|
-|[get](#get)|[交換](#swap)|
+[獲取](#get)\
+[交換](#swap)
 
-## <a name="get"></a><a name="get"></a>抓取
+## <a name="get"></a><a name="get"></a> 獲取
 
 傳回陣列中所指定元素的參考。
 
@@ -45,13 +44,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 *指數*\
 項目位移。
 
-*T*\
+*10gbase-t*\
 項目的類型。
 
-*N*\
+*N-1*\
 陣列中的項目數。
 
-*阿爾爾*\
+*arr*\
 要從中選取的陣列。
 
 ### <a name="example"></a>範例
@@ -86,9 +85,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a><a name="swap"></a>交換
+## <a name="swap"></a><a name="swap"></a> 交換
 
-`std::swap`交換兩個**數位**物件的非成員範本專門化。
+`std::swap`交換兩個**陣列**物件之的非成員樣板特製化。
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -100,7 +99,7 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 *泰*\
 項目的類型。
 
-*N*\
+*N-1*\
 陣列的大小。
 
 *離開*\
@@ -161,4 +160,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[\<陣列>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

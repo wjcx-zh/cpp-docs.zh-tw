@@ -15,18 +15,18 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203958"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844739"
 ---
 # <a name="any-class"></a>任何類別
 
-儲存符合函式需求的任何類型實例，或沒有任何值，這稱為類別的任何物件的狀態。
+儲存任何符合函式需求之類型的實例，或沒有任何值，稱為類別的任何物件狀態。
 
-預存的實例稱為包含的值。 如果兩個狀態都沒有值，或兩者都具有值，且包含的值相同，則兩者都相同。
+儲存的實例稱為包含的值。 如果兩個狀態都沒有值，或兩者都有值，且包含的值相同，則兩者都相同。
 
 ## <a name="syntax"></a>語法
 
@@ -38,29 +38,29 @@ class any
 
 ### <a name="constructors"></a>建構函式
 
-|||
+|名稱|描述|
 |-|-|
-|[任何](#any)|建構類型 `any` 的物件。|
+|[任意](#any)|建構類型 `any` 的物件。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
-|||
+|名稱|描述|
 |-|-|
 |[emplace](#emplace)|設定任何值。|
 |[has_value](#has_value)|**`true`** 如果有任何值，則傳回。|
-|[reset](#reset)|重設任何。|
-|[調換](#swap)|交換兩個物件。|
-|[type](#type)|傳回任何類型。|
+|[reset](#reset)|重設為 any。|
+|[交換](#swap)|交換兩個物件。|
+|[type](#type)|傳回任何型別。|
 
 ### <a name="operators"></a>運算子
 
-|||
+|名稱|描述|
 |-|-|
-|[operator =](#op_eq)|以另一個的複本取代 any。|
+|[運算子 =](#op_eq)|以另一個複本的複本取代 any。|
 
-## <a name="any"></a><a name="any"></a>任何
+## <a name="any"></a><a name="any"></a> 任何
 
-建構類型 `any` 的物件。 也包含一個析構函式。
+建構類型 `any` 的物件。 也包含一個函式。
 
 ```cpp
 constexpr any() noexcept;
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 設定任何值。
 
@@ -87,7 +87,7 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 **`true`** 如果有任何值，則傳回。
 
@@ -95,9 +95,9 @@ template <class T, class U, class... Args>
 bool has_value() const noexcept;
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> 運算子 =
 
-以另一個的複本取代 any。
+以另一個複本的複本取代 any。
 
 ```cpp
 any& operator=(const any& right);
@@ -108,18 +108,18 @@ template <class T>
 
 ### <a name="parameters"></a>參數
 
-*再*\
-任何複製到 any 的。
+*對*\
+要複製到任何的。
 
-## <a name="reset"></a><a name="reset"></a>啟動
+## <a name="reset"></a><a name="reset"></a> 重 置
 
-重設任何。
+重設為 any。
 
 ```cpp
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>調換
+## <a name="swap"></a><a name="swap"></a> 交換
 
 交換兩個物件。
 
@@ -129,7 +129,7 @@ void swap(any& rhs) noexcept;
 
 ## <a name="type"></a><a name="type"></a> 類型
 
-傳回任何類型。
+傳回任何型別。
 
 ```cpp
 const type_info& type() const noexcept;

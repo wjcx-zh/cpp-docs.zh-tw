@@ -1,21 +1,21 @@
 ---
-title: idl_quote （C++ COM 屬性）
+title: 'idl_quote (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d0aa80f64593ed347720b84e4059a0c32dce4be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168025"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844232"
 ---
 # <a name="idl_quote"></a>idl_quote
 
-可讓您使用目前版本的 Visual C++中不支援的 IDL 結構，並將它們傳遞至產生的 .idl 檔案。
+可讓您使用目前版本的 Visual C++ 不支援的 IDL 結構，並將它們傳遞至產生的 .idl 檔案。
 
 ## <a name="syntax"></a>語法
 
@@ -26,15 +26,15 @@ ms.locfileid: "80168025"
 ### <a name="parameters"></a>參數
 
 *text*<br/>
-您想要讓 Microsoft C++編譯器傳遞至產生之 .idl 檔案的屬性名稱，而不會傳回編譯器錯誤。
+您希望 Microsoft c + + 編譯器傳遞給產生的 .idl 檔案的屬性名稱，而不會傳回編譯器錯誤。
 
 ## <a name="remarks"></a>備註
 
-如果**idl_quote** C++屬性當做獨立屬性使用（在右括弧後面加上分號），則會將*文字*放在合併的 .idl 檔案中，如同原狀。 如果在符號上使用**idl_quote** ，*文字*就會放在該符號的屬性區塊內。
+如果使用 **idl_quote** c + + 屬性做為獨立屬性 (在右括弧) 之後有分號，則會將 *文字* 放在合併的 .idl 檔案中。 如果在符號上使用 **idl_quote** ，則會將 *文字* 放在該符號的屬性區塊內。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示如何指定不支援的屬性（在支援的**中**使用），以及如何定義和使用未定義的 .idl 結構：
+下列程式碼將示範如何使用 **in**來指定不支援的屬性 (，這是支援的) 以及如何定義和使用未定義的 .idl 結構：
 
 ```cpp
 // cpp_attr_ref_idl_quote.cpp
@@ -69,18 +69,16 @@ __interface IStatic{
 };
 ```
 
-這段程式碼會導致 `MYFLOT` 和 `MYDUB`，以及將*文字*輸入放在產生的 .idl 檔案中。 *Name*參數會強制將*文字*放在所產生 .idl 檔案中參考*名稱*的任何專案之前。 Dependency*參數會*強制將相依性清單定義放在產生的 .idl 檔案中的*文字*之前。
+此程式碼會使 `MYFLOT` 和 `MYDUB` 和 *文字* 專案放在產生的 .idl 檔案中。 *Name*參數會強制在產生的 .idl 檔案中參考*名稱*的任何內容之前放置*文字*。 Dependency *參數會* 強制將相依性清單定義放在產生的 .idl 檔案中的 *文字* 之前。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|任何位置|
-|**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

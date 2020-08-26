@@ -10,46 +10,46 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293104"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842971"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Windows NT 核心模式驅動程式)
 
->/DRIVER[:UPONLY |:WDM]
+>/DRIVER [： UPONLY |： WDM]
 
 ## <a name="remarks"></a>備註
 
-使用 **/DRIVER**連結器選項，來建置 Windows NT 核心模式驅動程式。
+使用 **/DRIVER** 連結器選項來建立 Windows NT 核心模式驅動程式。
 
-**/Driver: uponly**會導致連結器將加入**IMAGE_FILE_UP_SYSTEM_ONLY**位元來指定它是單一處理器 (UP) 驅動程式的輸出標頭中的特性。 作業系統會拒絕將 UP 驅動程式的多處理器 (MP) 系統上。
+**/DRIVER： UPONLY** 會讓連結器將 **IMAGE_FILE_UP_SYSTEM_ONLY** 位新增至輸出標頭中的特性，以指定它是) 驅動程式的單處理器 (。 作業系統會拒絕將驅動程式載入多處理器 (MP) 系統上。
 
-**/Driver: wdm**使設定連結器**IMAGE_DLLCHARACTERISTICS_WDM_DRIVER**選擇性標頭的 DllCharacteristics 欄位中的位元。
+**/DRIVER： WDM** 會導致連結器在選用標頭的 DLLCHARACTERISTICS 欄位中設定 **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** 位。
 
-如果 **/DRIVER**未指定，連結器未設定這些位元。
+如果未指定 **/DRIVER** ，連結器就不會設定這些位。
 
-如果 **/DRIVER**指定：
+如果指定了 **/DRIVER** ：
 
-- **/Fixed: no**作用中。 如需詳細資訊，請參閱 [/FIXED (固定基底位址)](fixed-fixed-base-address.md)。
+- **/FIXED：沒有** 作用中。 如需詳細資訊，請參閱 [/FIXED (固定基底位址)](fixed-fixed-base-address.md)。
 
-- 輸出檔的副檔名設為.sys。 使用 **/out**若要變更的預設檔名和副檔名。 如需詳細資訊，請參閱 [/OUT (輸出檔名稱)](out-output-file-name.md)。
+- 輸出檔的副檔名設定為 sys。 使用 **/out** 來變更預設的檔案名和副檔名。 如需詳細資訊，請參閱 [/OUT (輸出檔名稱)](out-output-file-name.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 **連結器**資料夾。
+1. 按一下 **Linker** 資料夾。
 
-1. 按一下 **系統**屬性頁。
+1. 按一下 [ **系統** ] 屬性頁。
 
-1. 修改**驅動程式**屬性。
+1. 修改 **驅動程式** 屬性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
-- 請參閱[VCLinkerTool.driver 屬性](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver)。
+- 請參閱 [VCLinkerTool. 驅動程式屬性](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver)。
 
 ## <a name="see-also"></a>另請參閱
 

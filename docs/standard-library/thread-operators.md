@@ -18,22 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215565"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845025"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 運算子
 
-||||
-|-|-|-|
-|[operator！ =](#op_neq)|[操作&gt;](#op_gt)|[操作&gt;=](#op_gt_eq)|
-|[操作&lt;](#op_lt)|[操作&lt;&lt;](#op_lt_lt)|[操作&lt;=](#op_lt_eq)|
-|[operator = =](#op_eq_eq)|
+[operator！ =](#op_neq)\
+[運算元&gt;](#op_gt)\
+[運算元&gt;=](#op_gt_eq)\
+[運算元&lt;](#op_lt)\
+[運算元&lt;&lt;](#op_lt_lt)\
+[運算元&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 運算元&gt;=
 
 判斷某個 `thread::id` 物件是否大於或等於另一個。
 
@@ -45,10 +47,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 左 `thread::id` 物件。
 
-*再*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -59,7 +61,7 @@ bool operator>= (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>操作&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 運算元&gt;
 
 判斷某個 `thread::id` 物件是否大於另一個。
 
@@ -71,10 +73,10 @@ bool operator> (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 左 `thread::id` 物件。
 
-*再*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -85,7 +87,7 @@ bool operator> (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 運算元&lt;=
 
 判斷某個 `thread::id` 物件是否小於或等於另一個。
 
@@ -97,10 +99,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 左 `thread::id` 物件。
 
-*再*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -111,7 +113,7 @@ bool operator<= (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="operatorlt"></a><a name="op_lt"></a>操作&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 運算元&lt;
 
 判斷某個 `thread::id` 物件是否小於另一個。
 
@@ -123,15 +125,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 左 `thread::id` 物件。
 
-*再*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果*左*在總排序中的*右邊*，則為，否則為 **`false`** 。
+**`true`** 如果 *左方* 在總 *順序的最前面，* 則為否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
@@ -139,7 +141,7 @@ bool operator<(
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="operator"></a><a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 比較兩個 `thread::id` 物件是否不相等。
 
@@ -151,10 +153,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 左 `thread::id` 物件。
 
-*再*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -165,7 +167,7 @@ bool operator!= (
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 比較兩個 `thread::id` 物件是否相等。
 
@@ -177,21 +179,21 @@ bool operator== (
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 左 `thread::id` 物件。
 
-*再*\
+*對*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果兩個物件代表相同的執行執行緒，或如果兩個物件都不是執行的執行緒，則為。否則為 **`false`** 。
+**`true`** 如果兩個物件代表相同的執行執行緒，或兩個物件都不代表執行的執行緒，則為否則為 **`false`** 。
 
 ### <a name="remarks"></a>備註
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 運算元&lt;&lt;
 
 將 `thread::id` 物件的文字表示插入資料流。
 
@@ -206,7 +208,7 @@ basic_ostream<Elem, Tr>& operator<<(
 *Ostr*\
 [basic_ostream](../standard-library/basic-ostream-class.md) 物件。
 
-*號*\
+*Id*\
 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -215,7 +217,7 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="remarks"></a>備註
 
-此函式會將*識別碼*插入*Ostr*中。
+此函式會將 *識別碼* 插入 *Ostr*中。
 
 如果有兩個 `thread::id` 物件要比較是否相等，則這些物件插入的文字表示會一樣。
 

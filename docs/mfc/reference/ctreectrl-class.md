@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561813"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837615"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -1364,9 +1364,8 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 呼叫此函式時， *pt* 參數會指定要測試之點的座標。 函數會在指定的點傳回專案的控制碼，如果沒有任何專案佔用點，則為 Null。 此外， *pFlags* 參數包含一個值，指出指定點的位置。 可能的值包括：
 
-|||
+|值|描述|
 |-|-|
-|值|意義|
 |TVHT_ABOVE|在工作區的上方。|
 |TVHT_BELOW|在工作區下方。|
 |TVHT_NOWHERE|在工作區中，但在最後一個專案之下。|
@@ -1379,7 +1378,6 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 |TVHT_ONITEMSTATEICON|在使用者定義狀態之樹狀檢視專案的狀態圖示上。|
 |TVHT_TOLEFT|在工作區的左邊。|
 |TVHT_TORIGHT|在工作區的右邊。|
-|||
 
 ### <a name="example"></a>範例
 

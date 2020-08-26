@@ -8,25 +8,25 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 42c36259b14a7f0341e383bb3a7f2760bab165aa
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a5421ff05fdbad7d78066bb95410aafe69bfaa51
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538588"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836942"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的資料存取
 
 幾乎所有 SQL 和 NoSQL 資料庫產品都會提供原生 C++ 應用程式的介面。 此業界標準介面是 ODBC，所有主要的 SQL 資料庫產品和許多 NoSQL 產品均提供相關支援。 對於非 Microsoft 產品，請洽詢廠商以取得詳細資訊。 此外，還有具各種授權條款的協力廠商程式庫可供使用。
 
-從 2011 年開始，Microsoft 已經過調整，並以 ODBC 作為原生應用程式連線到內部部署和雲端 Microsoft SQL Server 資料庫的標準。 如需詳細資訊，請參閱[資料存取程式設計 \(MFC-ATL\)](data-access-programming-mfc-atl.md)。 C++/CLI 程式庫可以使用原生 ODBC 驅動程式或 ADO.NET。 如需詳細資訊，請參閱[使用 ADO.NET 進行資料存取（c + +/cli）](../dotnet/data-access-using-adonet-cpp-cli.md)和[存取 Visual Studio 中的資料](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio)。
+從 2011 年開始，Microsoft 已經過調整，並以 ODBC 作為原生應用程式連線到內部部署和雲端 Microsoft SQL Server 資料庫的標準。 如需詳細資訊，請參閱[資料存取程式設計 \(MFC-ATL\)](data-access-programming-mfc-atl.md)。 C++/CLI 程式庫可以使用原生 ODBC 驅動程式或 ADO.NET。 如需詳細資訊，請參閱 [使用 ADO.NET 的資料存取 (c + +/cli) ](../dotnet/data-access-using-adonet-cpp-cli.md) 和 [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)。
 
 ## <a name="in-this-section"></a>本節內容
 
-[資料存取程式設計（MFC/ATL）](data-access-programming-mfc-atl.md)<br/>
+[MFC/ATL) 的資料存取程式設計 (](data-access-programming-mfc-atl.md)<br/>
 說明使用 Visual C++ 的舊版資料存取設計程式，慣用方法為使用其中一個類別庫，例如 Active Template Class Library (ATL) 或 Microsoft Foundation Class (MFC) 程式庫，這可以簡化使用資料庫 API。
 
-[開放式資料庫連接（ODBC）](odbc/open-database-connectivity-odbc.md)<br/>
+[Open Database Connectivity (ODBC) ](odbc/open-database-connectivity-odbc.md)<br/>
 Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫連接 (ODBC) 進行程式設計的類別。
 
 [OLE DB 程式設計](oledb/ole-db-programming.md)<br/>
@@ -49,12 +49,12 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 [Microsoft Azure C 和 C++ 開發人員中心](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure 可讓您使用最愛的工具，以更具有彈性、延展性及可靠的方式，輕鬆建置 C++ 應用程式。
 
-[如何使用 C++ 的 Blob 儲存體](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+[如何使用 C++ 的 Blob 儲存體](/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
 
-[ODBC 程式設計人員參考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+[ODBC 程式設計人員參考](/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 ODBC 介面是專為搭配 C 程式設計語言使用所設計。 ODBC 介面可用於下列三方面︰SQL 陳述式、ODBC 函式呼叫和 C 程式設計。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Visual Studio 中的 c + +](../overview/visual-cpp-in-visual-studio.md)
+[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)

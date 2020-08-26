@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 03afb777dc3926284cf0dc625e94a716ecdf5413
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5805d441b4fc2fc2927b57f4d94ba8b8ccecb22a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375350"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845467"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
-宣告對標準資料流的讀取和寫入進行控制的物件。 這通常包括您需要從C++程式進行輸入和輸出的唯一標頭。
+宣告對標準資料流的讀取和寫入進行控制的物件。 這通常是您從 c + + 程式進行輸入和輸出時唯一需要的標頭。
 
 ## <a name="syntax"></a>語法
 
@@ -32,38 +32,38 @@ ms.locfileid: "81375350"
 ```
 
 > [!NOTE]
-> \<iostream`#include <ios>`>库使用`#include <streambuf>``#include <istream>``#include <ostream>`、 和 語句。
+> 連結 \<iostream> 庫會使用 `#include <ios>` 、 `#include <streambuf>` 、 `#include <istream>` 和 `#include <ostream>` 語句。
 
 ## <a name="remarks"></a>備註
 
 這些物件可分為兩個群組：
 
-- [ ](#cin)cin、cout、cerr 和[clog](#clog)都是面向位元組的,執行傳統的位元[cout](#cout)[cerr](#cerr)組一次傳輸。
+- [cin](#cin)、 [cout](#cout)、 [cerr](#cerr)和 [堵塞](#clog) 是位元組導向的，可進行傳統的每次位元組傳輸。
 
 - [wcin](#wcin)、[wcout](#wcout)、[wcerr](#wcerr) 及 [wclog](#wclog) 是寬字元導向物件，會對程式在內部操作的寬字元進行雙向轉譯。
 
-對流執行某些操作(如標準輸入)后,不能在同一流上執行不同方向的操作。 因此,例如,程式不能在[cin](#cin)和[wcin](#wcin)上互換運行。
+當您對資料流程進行某些作業（例如標準輸入）時，您無法在相同資料流程上進行不同方向的作業。 因此，例如，程式無法在 [cin](#cin) 和 [wcin](#wcin)上交換。
 
-在此標頭中聲明的所有物件都共用一個奇特的屬性 - 您可以假定它們是在您定義的任何靜態物件之前構造的,\<在包含 iostream>的转换单元中。 同樣,您可以假定這些物件不會在您定義的任何此類靜態對象的析構函數之前銷毀。 (但是,輸出流在程序終止期間被刷新。因此,您可以在程式啟動之前和程序終止後安全地讀取或寫入標準流。
+在此標頭中宣告的所有物件都會共用什麼嗎屬性，您可以假設它們是在您定義的任何靜態物件之前（在包含的轉譯單位中）所構成 \<iostream> 。 同樣地，您可以假設在您定義的任何這類靜態物件的析構程式之前，不會終結這些物件。 不過， (輸出資料流程會在程式終止期間進行排清。 ) 因此，您可以在程式啟動和程式終止之後，安全地讀取或寫入標準資料流程。
 
-然而,這種保證並不普遍。 靜態建構函式可能會在另一個轉譯單位中呼叫函式。 由於轉換單元參與靜態構造的順序不確定,被調用函數不能假定在此標頭中聲明的物件已構造。 若要在這類內容中使用這些物件，您必須先建構 [ios_base::Init](../standard-library/ios-base-class.md#init) 類別的物件。
+不過，這種保證不是通用的。 靜態建構函式可能會在另一個轉譯單位中呼叫函式。 呼叫的函式不能假設在此標頭中宣告的物件是以不確定的順序參與靜態結構，而是已建立的。 若要在這類內容中使用這些物件，您必須先建構 [ios_base::Init](../standard-library/ios-base-class.md#init) 類別的物件。
 
 ### <a name="global-stream-objects"></a>全域資料流物件
 
-|||
+|名稱|描述|
 |-|-|
 |[cerr](#cerr)|指定 `cerr` 全域資料流。|
 |[Cin](#cin)|指定 `cin` 全域資料流。|
 |[堵塞](#clog)|指定 `clog` 全域資料流。|
 |[cout](#cout)|指定 `cout` 全域資料流。|
 |[wcerr](#wcerr)|指定 `wcerr` 全域資料流。|
-|[wc因](#wcin)|指定 `wcin` 全域資料流。|
+|[wcin](#wcin)|指定 `wcin` 全域資料流。|
 |[wclog](#wclog)|指定 `wclog` 全域資料流。|
 |[wcout](#wcout)|指定 `wcout` 全域資料流。|
 
-### <a name="cerr"></a><a name="cerr"></a>塞勒
+### <a name="cerr"></a><a name="cerr"></a> cerr
 
-`cerr` 物件會控制對與 `stderr` 物件 (在 \<cstdio> 中宣告) 關聯之資料流緩衝區的輸出。
+物件會 `cerr` 控制與物件相關聯之資料流程緩衝區的輸出，此物件是 `stderr` 在中宣告 \<cstdio> 。
 
 ```cpp
 extern ostream cerr;
@@ -107,7 +107,7 @@ int main( )
 }
 ```
 
-### <a name="cin"></a><a name="cin"></a>Cin
+### <a name="cin"></a><a name="cin"></a> Cin
 
 指定 `cin` 全域資料流。
 
@@ -125,7 +125,7 @@ extern istream cin;
 
 #### <a name="example"></a>範例
 
-這個選項,`cin`在流遇到非數字字元時設定失敗位。 程式清除失敗位,並從流中剝離無效字元以繼續。
+在此範例中，會在 `cin` 資料流程的非數值字元之間設定失敗位。 程式會清除失敗位，並從資料流程中移除不正確字元以繼續。
 
 ```cpp
 // iostream_cin.cpp
@@ -158,7 +158,7 @@ int main()
 2
 ```
 
-### <a name="clog"></a><a name="clog"></a>堵塞
+### <a name="clog"></a><a name="clog"></a> 堵塞
 
 指定 `clog` 全域資料流。
 
@@ -178,7 +178,7 @@ extern ostream clog;
 
 如需使用 `clog` 的範例，請參閱 [cerr](#cerr)。
 
-### <a name="cout"></a><a name="cout"></a>cout
+### <a name="cout"></a><a name="cout"></a> cout
 
 指定 `cout` 全域資料流。
 
@@ -198,7 +198,7 @@ extern ostream cout;
 
 如需使用 `cout` 的範例，請參閱 [cerr](#cerr)。
 
-### <a name="wcerr"></a><a name="wcerr"></a>wcerr
+### <a name="wcerr"></a><a name="wcerr"></a> wcerr
 
 指定 `wcerr` 全域資料流。
 
@@ -218,7 +218,7 @@ extern wostream wcerr;
 
 如需使用 `wcerr` 的範例，請參閱 [cerr](#cerr)。
 
-### <a name="wcin"></a><a name="wcin"></a>wc因
+### <a name="wcin"></a><a name="wcin"></a> wcin
 
 指定 `wcin` 全域資料流。
 
@@ -238,7 +238,7 @@ extern wistream wcin;
 
 如需使用 `wcin` 的範例，請參閱 [cerr](#cerr)。
 
-### <a name="wclog"></a><a name="wclog"></a>wclog
+### <a name="wclog"></a><a name="wclog"></a> wclog
 
 指定 `wclog` 全域資料流。
 
@@ -258,7 +258,7 @@ extern wostream wclog;
 
 如需使用 `wclog` 的範例，請參閱 [cerr](#cerr)。
 
-### <a name="wcout"></a><a name="wcout"></a>wcout
+### <a name="wcout"></a><a name="wcout"></a> wcout
 
 指定 `wcout` 全域資料流。
 
@@ -290,7 +290,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 ## <a name="see-also"></a>另請參閱
 
-[標題檔案參考](../standard-library/cpp-standard-library-header-files.md)\
-[C++標準庫中的線程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[電流程式設計](../standard-library/iostream-programming.md)\
-[iostream 慣例](../standard-library/iostreams-conventions.md)
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostreams 慣例](../standard-library/iostreams-conventions.md)

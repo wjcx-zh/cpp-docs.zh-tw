@@ -38,16 +38,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218321"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845532"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 類別
 
-提供[IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))介面的執行。
+提供 [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) 介面的實作為。
 
 ## <a name="syntax"></a>語法
 
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 *T*<br/>
 衍生自的類別 `IDBInitializeImpl` 。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **Header:** atldb.h
 
@@ -69,29 +69,29 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 ### <a name="methods"></a>方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[IDBInitializeImpl](#idbinitializeimpl)|建構函式。|
 
 ### <a name="interface-methods"></a>介面方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
-|[Initialize](#initialize)|啟動提供者。|
+|[初始 化](#initialize)|啟動提供者。|
 |[解除初始化](#uninitialize)|停止提供者。|
 
 ### <a name="data-members"></a>資料成員
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[m_dwStatus](#dwstatus)|資料來源旗標。|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|資料庫屬性資訊的執行指標。|
 
 ## <a name="remarks"></a>備註
 
-資料來源物件上的強制介面和枚舉器上的選擇性介面。
+資料來源物件上的強制介面，以及枚舉器的選擇性介面。
 
-## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl：： IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a> IDBInitializeImpl：： IDBInitializeImpl
 
 建構函式。
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 初始化所有資料成員。
 
-## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl：： Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a> IDBInitializeImpl：： Initialize
 
 您可以透過準備資料來源物件的屬性支援來初始化該物件。
 
@@ -119,9 +119,9 @@ STDMETHOD(Initialize)(void);
 
 請參閱 OLE DB 程式設計*人員參考*中的[IDBInitialize：： Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 。
 
-## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl：：解除初始化
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a> IDBInitializeImpl：：解除初始化
 
-藉由釋放內部資源（例如屬性支援），將資料來源物件置於未初始化的狀態。
+釋放內部資源（例如屬性支援），將資料來源物件置於未初始化的狀態。
 
 ### <a name="syntax"></a>語法
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 請參閱 OLE DB 程式設計*人員參考*中的[IDBInitialize：：解除初始化](/previous-versions/windows/desktop/ms719648(v=vs.85))。
 
-## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl：： m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a> IDBInitializeImpl：： m_dwStatus
 
 資料來源旗標。
 
@@ -145,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>備註
 
-這些旗標會指定或指出資料來源物件之各種屬性的狀態。 包含下列一個或多個 **`enum`** 值：
+這些旗標會指定或表示資料來源物件之各種屬性的狀態。 包含下列一或多個 **`enum`** 值：
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -155,15 +155,15 @@ enum DATASOURCE_FLAGS {
 };
 ```
 
-|||
+| 值 | 描述 |
 |-|-|
-|`DSF_MASK_INIT`|遮罩，可啟用未初始化狀態的還原。|
-|`DSF_PERSIST_DIRTY`|設定資料來源物件是否需要持續性（也就是，如果有變更的話）。|
+|`DSF_MASK_INIT`|啟用未初始化狀態還原的遮罩。|
+|`DSF_PERSIST_DIRTY`|設定資料來源物件是否需要持續性 (也就是) 變更時。|
 |`DSF_INITIALIZED`|設定資料來源是否已初始化。|
 
-## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl：： m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a> IDBInitializeImpl：： m_pCUtlPropInfo
 
-DB 屬性資訊的執行物件指標。
+DB 屬性資訊之實物件的指標。
 
 ### <a name="syntax"></a>語法
 

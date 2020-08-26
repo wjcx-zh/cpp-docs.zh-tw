@@ -1,6 +1,6 @@
 ---
-title: outp、outpw、_outp、_outpw、_outpd
-description: 描述 Microsoft C 執行時間程式庫（CRT）的已淘汰和已移除 outp、outpw、_outp、_outpw 和 _outpd 功能。
+title: outp、outpw、_outp、_outpw _outpd
+description: 描述 Microsoft C 執行時間程式庫 (CRT) 已淘汰和移除的 outp、outpw、_outp、_outpw 和 _outpd 函式。
 ms.date: 12/09/2019
 api_name:
 - _outpd
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c66710fe31b5a657a4976bea7f0aa52aac3e3825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404056"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837082"
 ---
-# <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outpw、_outp、_outpw、_outpd
+# <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outpw、_outp、_outpw _outpd
 
-輸出，位於埠、位元組（ `outp` ， `_outp` ）、單字（ `outpw` ， `_outpw` ）或雙字組（ `_outpd` ）。
+在埠、位元組 (`outp` 、 `_outp`) 、單字 (`outpw` 、 `_outpw`) 或 double word `_outpd` () 輸出。
 
 > [!IMPORTANT]
 > 這些函式已被取代。 從 Visual Studio 2015 開始，它們無法在 CRT 中使用。
@@ -75,7 +75,7 @@ unsigned long _outpd(
 
 ### <a name="parameters"></a>參數
 
-*移植*\
+*港口*\
 連接埠號碼。
 
 *data_byte，data_word*\
@@ -83,19 +83,19 @@ unsigned long _outpd(
 
 ## <a name="return-value"></a>傳回值
 
-這些函式會傳回資料輸出。 不會傳回任何錯誤。
+這些函式會傳回資料輸出。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-`_outp`、 `_outpw`及 `_outpd` 函式會個別寫入一個位元組、一個字組及雙字組到指定的輸出連接埠。 *埠*引數可以是 0-65535 範圍內的任何不帶正負號的整數。 *data_byte*可以是範圍 0-255 中的任何整數。 *data_word*可以是整數範圍內的任何值、不帶正負號的短整數，以及不帶正負號的長整數。
+`_outp`、 `_outpw`及 `_outpd` 函式會個別寫入一個位元組、一個字組及雙字組到指定的輸出連接埠。 *埠*引數可以是 0-65535 範圍內的任何不帶正負號的整數。 *data_byte* 可以是範圍 0-255 中的任何整數。 *data_word* 可以是整數範圍內的任何值、不帶正負號的短整數，以及不帶正負號的長整數。
 
-因為這些函式會直接寫入 i/o 埠，所以無法在使用者模式 Windows 程式碼中使用它們。
+因為這些函式會直接寫入 i/o 埠，所以無法在使用者模式的 Windows 程式碼中使用。
 
-如需在 Windows 作業系統中使用 i/o 埠的詳細資訊，請參閱[序列通訊](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))。
+如需在 Windows 作業系統中使用 i/o 埠的詳細資訊，請參閱 [序列通訊](/previous-versions/ff802693(v=msdn.10))。
 
-`outp`和 `outpw` 名稱是和函式的舊版、已被取代的名稱 `_outp` `_outpw` 。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+`outp`和 `outpw` 名稱是和函式的較舊、已被取代的名稱 `_outp` `_outpw` 。 如需詳細資訊，請參閱 [POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

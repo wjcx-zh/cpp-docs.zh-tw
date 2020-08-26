@@ -17,43 +17,90 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 16caacb77e052eebc8e2cd101990ee373535bd6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62893d4af1633bc2c89d2d6a0fa71309a0411ad5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171147"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836838"
 ---
 # <a name="reserved-words"></a>保留字
 
-連結器會保留下列文字。 只有當名稱以雙引號（""）括住時，這些名稱才能當做[模組定義語句](module-definition-dot-def-files.md)中的引數使用。
+連結器會保留下列單字。 只有當名稱以雙引號括住 ( "" ) 時，這些名稱才可以用來做為 [模組定義語句](module-definition-dot-def-files.md) 中的引數。
 
-||||
-|-|-|-|
-|**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**預先載入**|
-|**群體**|**IOPL**|**私人**|
-|**錯誤碼**|連結**庫**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
-|**達標**|**LOADONCALL**<sup>1</sup>|**純粹**<sup>1</sup>|
-|**DATA**|**LONGNAMES**<sup>2</sup>|**唯讀**|
-|**DESCRIPTION**|**可移動**<sup>1</sup>|**READWRITE**|
-|**DEV386**|**可移動**<sup>1</sup>|**REALMODE**<sup>1</sup>|
-|**可捨棄**|**多個**|**公民**|
-|**效果**|**名稱**|**RESIDENTNAME**<sup>1</sup>|
-|**僅執行**|**Newfiles.format.ps1xml 檔案**<sup>2</sup>|**各節**|
-|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**部門**|
-|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**共用**|
-|**EXETYPE**|**NONAME**|**單機**|
-|**EXPORTS**|**NONCONFORMING**不合格<sup>1</sup>|**STACKSIZE**|
-|已**修正**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
-|**函數**<sup>2</sup>|**NONE**|**VERSION**|
-|**HEAPSIZE**|**非共用**|**WINDOWAPI**|
-|**進口**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
-|**非純虛擬**<sup>1</sup>|**物件**|**時段**|
-|**包含**<sup>2</sup>|**舊**<sup>1</sup>||
+:::row:::
+   :::column span="":::
+      **`APPLOADER`**<sup>單</sup>\
+      **`BASE`**\
+      **`CODE`**\
+      **`CONFORMING`**\
+      **`DATA`**\
+      **`DESCRIPTION`**\
+      **`DEV386`**\
+      **`DISCARDABLE`**\
+      **`DYNAMIC`**\
+      **`EXECUTE-ONLY`**\
+      **`EXECUTEONLY`**\
+      **`EXECUTEREAD`**\
+      **`EXETYPE`**\
+      **`EXPORTS`**\
+      **`FIXED`**<sup>單</sup>
+   :::column-end:::
+   :::column span="":::
+      **`FUNCTIONS`**<sup>二級</sup>\
+      **`HEAPSIZE`**\
+      **`IMPORTS`**\
+      **`IMPURE`**<sup>單</sup>\
+      **`INCLUDE`**<sup>二級</sup>\
+      **`INITINSTANCE`**<sup>二級</sup>\
+      **`IOPL`**\
+      **`LIBRARY`**<sup>單</sup>\
+      **`LOADONCALL`**<sup>單</sup>\
+      **`LONGNAMES`**<sup>二級</sup>\
+      **`MOVABLE`**<sup>單</sup>\
+      **`MOVEABLE`**<sup>單</sup>\
+      **`MULTIPLE`**\
+      **`NAME`**\
+      **`NEWFILES`**<sup>二級</sup>
+   :::column-end:::
+   :::column span="":::
+      **`NODATA`**<sup>單</sup>\
+      **`NOIOPL`**<sup>單</sup>\
+      **`NONAME`**\
+      **`NONCONFORMING`**<sup>單</sup>\
+      **`NONDISCARDABLE`**\
+      **`NONE`**\
+      **`NONSHARED`**\
+      **`NOTWINDOWCOMPAT`**<sup>單</sup>\
+      **`OBJECTS`**\
+      **`OLD`**<sup>單</sup>\
+      **`PRELOAD`**\
+      **`PRIVATE`**\
+      **`PROTMODE`**<sup>二級</sup>\
+      **`PURE`**<sup>單</sup>\
+      **`READONLY`**
+   :::column-end:::
+   :::column span="":::
+      **`READWRITE`**\
+      **`REALMODE`**<sup>單</sup>\
+      **`RESIDENT`**\
+      **`RESIDENTNAME`**<sup>單</sup>\
+      **`SECTIONS`**\
+      **`SEGMENTS`**\
+      **`SHARED`**\
+      **`SINGLE`**\
+      **`STACKSIZE`**\
+      **`STUB`**\
+      **`VERSION`**\
+      **`WINDOWAPI`**\
+      **`WINDOWCOMPAT`**\
+      **`WINDOWS`**
+   :::column-end:::
+:::row-end:::
 
-<sup>1</sup>當連結器遇到此字詞時，會發出警告（「已忽略」）。 不過，這個字仍然是保留的。
+<sup>1</sup> 當連結器遇到此詞彙時，會發出警告 ( 「已忽略」 ) 。 但是，這個字仍然是保留的。
 
-<sup>2</sup>連結器會忽略這個字，但不發出警告。
+<sup>2</sup> 連結器會忽略這個字，但不發出警告。
 
 ## <a name="see-also"></a>另請參閱
 

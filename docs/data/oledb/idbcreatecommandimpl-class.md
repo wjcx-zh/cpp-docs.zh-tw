@@ -11,16 +11,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210713"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845545"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 類別
 
-提供[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))介面的執行。
+提供 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) 介面的實作為。
 
 ## <a name="syntax"></a>語法
 
@@ -33,12 +33,12 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自 `IDBCreateCommandImpl`的會話物件。
+衍生自的會話物件 `IDBCreateCommandImpl` 。
 
 *CommandClass*<br/>
-您的命令類別。
+命令類別。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **Header:** atldb.h
 
@@ -46,17 +46,17 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 ### <a name="interface-methods"></a>介面方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[CreateCommand](#createcommand)|建立新的命令。|
 
 ## <a name="remarks"></a>備註
 
-會話物件上的選擇性介面，可取得新的命令。
+會話物件上的選擇性介面，用來取得新的命令。
 
-## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl：： CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a> IDBCreateCommandImpl：： CreateCommand
 
-建立新的命令，並傳回要求的介面。
+建立新的命令，並傳回所要求的介面。
 
 ### <a name="syntax"></a>語法
 
@@ -70,9 +70,9 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IDBCreateCommand：： CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 。
 
-某些參數會對應至 OLE DB 程式設計*人員的*不同名稱參考參數，如 `IDBCreateCommand::CreateCommand`所述：
+某些參數會對應至不同名稱 OLE DB 程式設計 *人員參考* 參數，如中所述 `IDBCreateCommand::CreateCommand` ：
 
-|OLE DB 範本參數|*OLE DB 程式設計人員的參考*參數|
+|OLE DB 範本參數|*OLE DB 程式設計人員的參考* 參數|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 

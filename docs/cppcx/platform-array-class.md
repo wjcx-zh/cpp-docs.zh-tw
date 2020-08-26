@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 23548df6718b9397db8521b2bebc6e8389859dcd
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610695"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837756"
 ---
 # <a name="platformarray-class"></a>Platform::Array 類別
 
@@ -44,9 +44,9 @@ Platform：： Array 會從 [platform：： WriteOnlyArray 類別](../cppcx/plat
 
 ### <a name="properties"></a>屬性
 
-|||
-|-|-|
-|[Array：： Value](#value)|擷取目前陣列的控制代碼。|
+| 名稱 | 描述 |
+|--|--|
+| [Array：： Value](#value) | 擷取目前陣列的控制代碼。 |
 
 ### <a name="remarks"></a>備註
 
@@ -58,7 +58,7 @@ Windows 執行階段類型系統不支援不規則陣列的概念，因此您無
 
 此類別定義於編譯器會自動納入的 vccorlib.h 標頭中。 它會顯示在 IntelliSense 中，但不是在物件瀏覽器中，因為它不是在 platform 中定義的公用類型。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
 編譯器選項： **/ZW**
 

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210804"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845571"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 類別
 
-提供[ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85))介面的執行。
+提供 [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) 介面的實作為。
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +41,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 *PropClass*<br/>
 您的屬性類別。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **Header:** atldb.h
 
@@ -49,18 +49,18 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 ### <a name="interface-methods"></a>介面方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
-|[GetProperties](#getproperties)|傳回資料列集屬性群組中，目前要求之資料列集的屬性清單。|
+|[GetProperties](#getproperties)|傳回資料列集屬性群組中目前針對資料列集所要求的屬性清單。|
 |[SetProperties](#setproperties)|設定資料列集屬性群組中的屬性。|
 
 ## <a name="remarks"></a>備註
 
-這在命令上是必要的。 執行是由[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)宏所定義的靜態函式所提供。
+這是命令的必要項。 此實作為由 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 巨集定義的靜態函式所提供。
 
-## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl：： GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> ICommandPropertiesImpl：： GetProperties
 
-使用命令的屬性對應傳回所有要求的屬性集。
+使用命令的屬性對應，傳回所有要求的屬性集。
 
 ### <a name="syntax"></a>語法
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
 
-## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl：： SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl：： SetProperties
 
 設定命令物件的屬性。
 

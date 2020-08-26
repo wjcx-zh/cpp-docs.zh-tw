@@ -1,17 +1,17 @@
 ---
-title: 説明（c + + COM 屬性）
+title: " (c + + COM 屬性) 的説明"
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 641823779346bf5417ec0db26b83083fa949e960
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 385c6da6a432f0954e62c9f16a22f0b70b73b317
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222117"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845233"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -30,20 +30,18 @@ ms.locfileid: "87222117"
 
 ## <a name="remarks"></a>備註
 
-[提供] [提供**的 c +** +] 屬性的功能與 [提供[的 MIDL]](/windows/win32/Midl/helpfile)屬性相同。
+[功能 **説明** + +] 屬性與 [功能 [説明](/windows/win32/Midl/helpfile) ] MIDL 屬性具有相同的功能。
 
 ## <a name="example"></a>範例
 
-如需如何使用「**説明**」的範例，請參閱[module](module-cpp.md)的範例。
+如需**如何使用 [** 提供] 的範例，請參閱[模組](module-cpp.md)的範例。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
-|**適用於**|**介面**、 **`typedef`** 、 **`class`** 、方法、**`property`**|
-|**可重複**|否|
+|**適用於**|**interface**、 **`typedef`** 、 **`class`** 、方法、 **`property`**|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240265"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845064"
 ---
-# <a name="referencewrapper-class"></a>reference_wrapper 類別
+# <a name="reference_wrapper-class"></a>reference_wrapper 類別
 
 包裝一個參考。
 
@@ -59,31 +59,31 @@ Helper 函式 [std::ref](functional-functions.md#ref) 和 [std::cref](functional
 
 ### <a name="constructors"></a>建構函式
 
-|||
+|名稱|描述|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|建構 `reference_wrapper`。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名稱|描述|
 |-|-|
 |[result_type](#result_type)|包裝之參考的弱式結果類型。|
 |[type](#type)|包裝的參考類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
-|||
+|名稱|描述|
 |-|-|
 |[get](#get)|取得包裝的參考。|
 
 ### <a name="operators"></a>運算子
 
-|||
+|名稱|描述|
 |-|-|
-|[operator Ty&&amp;](#op_ty_amp)|取得包裝的參考指標。|
-|[operator()](#op_call)|呼叫包裝的參考。|
+|[運算子 Ty&amp;](#op_ty_amp)|取得包裝的參考指標。|
+|[運算子 ( # B1 ](#op_call)|呼叫包裝的參考。|
 
-## <a name="get"></a> 取得
+## <a name="get"></a><a name="get"></a> 獲取
 
 取得包裝的參考。
 
@@ -122,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> operator Ty&&amp;
+## <a name="operator-tyamp"></a><a name="op_ty_amp"></a> 運算子 Ty&amp;
 
 取得包裝的參考。
 
@@ -132,7 +132,7 @@ operator Ty&() const noexcept;
 
 ### <a name="remarks"></a>備註
 
-此成員運算子會傳回 `*ptr`。
+成員運算子會傳回 `*ptr`。
 
 ### <a name="example"></a>範例
 
@@ -158,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> operator()
+## <a name="operator"></a><a name="op_call"></a> 運算子 ( # A1
 
 呼叫包裝的參考。
 
@@ -172,7 +172,7 @@ auto operator()(Types&&... args);
 *類型*\
 引數清單類型。
 
-*引數*\
+*參數*\
 引數清單。
 
 ### <a name="remarks"></a>備註
@@ -204,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper
+## <a name="reference_wrapper"></a><a name="reference_wrapper"></a> reference_wrapper
 
 建構 `reference_wrapper`。
 
@@ -214,10 +214,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Ty*\
+*泰*\
 要包裝的類型。
 
-*val*\
+*瓦爾*\
 要包裝的值。
 
 ### <a name="remarks"></a>備註
@@ -255,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 包裝之參考的弱式結果類型。
 
@@ -294,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> 型別
+## <a name="type"></a><a name="type"></a> 類型
 
 包裝的參考類型。
 

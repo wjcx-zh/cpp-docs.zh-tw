@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222793"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837342"
 ---
 # <a name="event-maps"></a>事件對應
 
@@ -19,9 +19,9 @@ MFC 程式庫會針對引發事件提供最佳化的程式設計模型。 在這
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK`宏指出控制項將會在每次偵測到滑鼠點擊時，引發股票點擊事件。 如需其他內建事件的詳細清單，請參閱[ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)一文。 巨集也可用於表示自訂事件。
+`EVENT_STOCK_CLICK`宏指出控制項將會在每次偵測到滑鼠點擊時引發 Stock click 事件。 如需其他內建事件的詳細清單，請參閱 [ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)一文。 巨集也可用於表示自訂事件。
 
-雖然事件對應巨集很重要，但您通常不會直接將它們插入。 這是因為當您使用 [**屬性**] 視窗（**類別檢視**）將事件引發函數與事件建立關聯時，會自動在您的原始程式檔中建立事件對應專案。 每當您想要編輯或加入事件對應專案時，都可以使用 [**屬性**] 視窗。
+雖然事件對應巨集很重要，但您通常不會直接將它們插入。 這是因為當您使用它來將事件引發函式與事件產生關聯時，**類別檢視**) 中的 [**屬性**] 視窗 (會自動在您的原始程式檔中建立事件對應專案。 每當您想要編輯或加入事件對應專案時，都可以使用 [ **屬性** ] 視窗。
 
 為支援事件對應，MFC 提供下列巨集：
 
@@ -29,7 +29,7 @@ MFC 程式庫會針對引發事件提供最佳化的程式設計模型。 在這
 
 ### <a name="event-map-declaration-and-demarcation"></a>事件對應宣告和區分
 
-|||
+|名稱|描述|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|宣告事件對應將用於類別中，以將事件對應至事件引發函式 (必須在類別宣告中使用)。|
 |[BEGIN_EVENT_MAP](#begin_event_map)|開始事件對應的定義 (必須在類別實作中使用)。|
@@ -37,21 +37,21 @@ MFC 程式庫會針對引發事件提供最佳化的程式設計模型。 在這
 
 ### <a name="event-mapping-macros"></a>事件對應巨集
 
-|||
+|名稱|描述|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|指出將引發指定事件的事件引發函式。|
 |[EVENT_CUSTOM_ID](#event_custom_id)|使用指定的分派 ID，指出將引發指定事件的事件引發函式。|
 
 ### <a name="message-mapping-macros"></a>訊息對應巨集
 
-|||
+|名稱|描述|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|指出由 OLE 控制項處理的自訂動詞。|
 |[ON_STDOLEVERB](#on_stdoleverb)|覆寫 OLE 控制項的標準動詞對應。|
 
-## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
-程式中的每個 `COleControl` 衍生類別都可以提供事件對應，以指定您的控制項將引發的事件。
+`COleControl`您程式中的每個衍生類別都可以提供事件對應，以指定您的控制項將引發的事件。
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -59,15 +59,15 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>備註
 
-在類別宣告的結尾使用 DECLARE_EVENT_MAP 宏。 然後，在定義類別之成員函式的 .cpp 檔案中，使用 BEGIN_EVENT_MAP 宏、每個控制項事件的宏專案，以及 END_EVENT_MAP 宏來宣告事件清單的結尾。
+在類別宣告的結尾使用 DECLARE_EVENT_MAP 宏。 然後，在定義類別成員函式的 .cpp 檔案中，使用 BEGIN_EVENT_MAP 宏、每個控制項事件的宏專案，以及用來宣告事件清單結尾的 END_EVENT_MAP 宏。
 
-如需事件對應的詳細資訊，請參閱[ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)一文。
+如需事件對應的詳細資訊，請參閱 [ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)一文。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭**afxctl.h。h
+**標頭** afxctl.h。h
 
-## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 開始事件對應的定義。
 
@@ -78,22 +78,22 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="parameters"></a>參數
 
 *theClass*<br/>
-指定控制項類別的名稱，其事件對應為。
+指定事件對應所屬的控制項類別名稱。
 
 *baseClass*<br/>
-指定*theClass*之基類的名稱。
+指定 *theClass*基類的名稱。
 
 ### <a name="remarks"></a>備註
 
-在為您的類別定義成員函式的執行（.cpp）檔案中，使用 BEGIN_EVENT_MAP 宏啟動事件對應，然後為每個事件新增宏專案，然後使用 END_EVENT_MAP 宏完成事件對應。
+在為您的類別定義成員函式的 ( .cpp) 檔中，使用 BEGIN_EVENT_MAP 宏來啟動事件對應，然後加入每個事件的宏專案，然後使用 END_EVENT_MAP 宏來完成事件對應。
 
-如需事件對應和 BEGIN_EVENT_MAP 宏的詳細資訊，請參閱[ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)一文。
+如需事件對應和 BEGIN_EVENT_MAP 宏的詳細資訊，請參閱 [ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)一文。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭**afxctl.h。h
+**標頭** afxctl.h。h
 
-## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a> END_EVENT_MAP
 
 使用 END_EVENT_MAP 宏來結束事件對應的定義。
 
@@ -101,11 +101,11 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 END_EVENT_MAP()
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭**afxctl.h。h
+**標頭** afxctl.h。h
 
-## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a> EVENT_CUSTOM
 
 定義自訂事件的事件對應專案。
 
@@ -119,18 +119,18 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 事件的名稱。
 
 *pfnFire*<br/>
-事件引發函式的名稱。
+事件引發函數的名稱。
 
 *vtsParams*<br/>
-一或多個以空格分隔的清單，其中會指定函式的參數清單。
+一或多個以空格分隔的清單，其中有一個或多個常數指定函式的參數清單。
 
 ### <a name="remarks"></a>備註
 
-*VtsParams*參數是常數中以空格分隔的值清單 `VTS_` 。 以空格分隔的其中一個或多個值（不是逗號）會指定函式的參數清單。 例如：
+*VtsParams*參數是從常數以空格分隔的值清單 `VTS_` 。 其中一個或多個以空格分隔的值， (不是逗號) 指定函式的參數清單。 例如：
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-指定一個清單，其中包含代表 RGB 色彩值的32位整數，後面接著 `IFontDisp` OLE 字型物件介面的指標。
+指定清單，其中包含代表 RGB 色彩值的32位整數，後面接著指向 `IFontDisp` OLE 字型物件介面的指標。
 
 `VTS_`常數和其意義如下：
 
@@ -165,15 +165,15 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> 已定義所有 variant 類型的其他變異常數，但 VTS_FONT 和 VTS_PICTURE 除外，可提供 variant 資料常數的指標。 這些常數會使用慣例來命名 `VTS_Pconstantname` 。 例如，VTS_PCOLOR 是 VTS_COLOR 常數的指標。
+> 已針對所有 variant 型別定義了其他變異常數，但 VTS_FONT 和 VTS_PICTURE 例外，提供 variant 資料常數的指標。 這些常數會使用慣例來命名 `VTS_Pconstantname` 。 例如，VTS_PCOLOR 是 VTS_COLOR 常數的指標。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭**afxctl.h。h
+**標頭** afxctl.h。h
 
-## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
-針對屬於*dispid*所指定之分派識別碼的自訂事件，定義事件引發函數。
+針對屬於 *dispid*所指定分派識別碼的自訂事件，定義事件引發函數。
 
 ```cpp
 EVENT_CUSTOM_ID(
@@ -192,28 +192,28 @@ EVENT_CUSTOM_ID(
 引發事件時，控制項所使用的分派識別碼。
 
 *pfnFire*<br/>
-事件引發函式的名稱。
+事件引發函數的名稱。
 
 *vtsParams*<br/>
-當引發事件時，傳遞至控制項容器之參數的變數清單。
+引發事件時，傳遞至控制項容器之參數的變數清單。
 
 ### <a name="remarks"></a>備註
 
-*VtsParams*引數是常數中以空格分隔的值清單 `VTS_` 。 以空格分隔的其中一個或多個值（而不是逗號）會指定函式的參數清單。 例如：
+*VtsParams*引數是從常數以空格分隔的值清單 `VTS_` 。 以空格分隔的一或多個值（而不是逗號）會指定函式的參數清單。 例如：
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-指定一個清單，其中包含代表 RGB 色彩值的32位整數，後面接著 `IFontDisp` OLE 字型物件介面的指標。
+指定清單，其中包含代表 RGB 色彩值的32位整數，後面接著指向 `IFontDisp` OLE 字型物件介面的指標。
 
-如需 `VTS_` 常數清單，請參閱[EVENT_CUSTOM](#event_custom)。
+如需 `VTS_` 常數清單，請參閱 [EVENT_CUSTOM](#event_custom)。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭**afxctl.h。h
+**標頭** afxctl.h。h
 
-## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a> ON_OLEVERB
 
-這個宏會定義訊息對應專案，將自訂動詞對應至控制項的特定成員函式。
+此宏會定義將自訂動詞對應至控制項之特定成員函式的訊息對應專案。
 
 ```cpp
 ON_OLEVERB(idsVerbName,  memberFxn)
@@ -229,9 +229,9 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 
 ### <a name="remarks"></a>備註
 
-資源編輯器可以用來建立新增至字串資料表的自訂動詞名稱。
+資源編輯器可以用來建立自訂的動詞名稱，並加入至您的字串資料表。
 
-*MemberFxn*的函數原型為：
+*MemberFxn*的函式原型是：
 
 ```cpp
 BOOL memberFxn(
@@ -240,13 +240,13 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-*LpMsg*、 *hWndParent*和*lpRect*參數的值是取自成員函式的對應參數 `IOleObject::DoVerb` 。
+*LpMsg*、 *hWndParent*和*lpRect*參數的值取自成員函式的對應參數 `IOleObject::DoVerb` 。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭**afxole。h
+**標頭** afxole。h
 
-## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 使用這個巨集覆寫標準動詞的預設行為。
 
@@ -264,13 +264,13 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="remarks"></a>備註
 
-標準動詞索引的格式為 `OLEIVERB_` ，後面接著一個動作。 OLEIVERB_SHOW、OLEIVERB_HIDE 和 OLEIVERB_UIACTI加值稅E 是標準動詞的一些範例。
+標準動詞索引的格式為 `OLEIVERB_` ，後面接著動作。 OLEIVERB_SHOW、OLEIVERB_HIDE 和 OLEIVERB_UIACTI加值稅E 是標準動詞的一些範例。
 
-如需做為*memberFxn*參數使用之函式原型的描述，請參閱[ON_OLEVERB](#on_oleverb) 。
+如需當做*memberFxn*參數使用之函式原型的描述，請參閱[ON_OLEVERB](#on_oleverb) 。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標頭**afxole。h
+**標頭** afxole。h
 
 ## <a name="see-also"></a>另請參閱
 

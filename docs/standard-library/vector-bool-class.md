@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: b91167a331423ccd43ba2158c1a9d8bfce666361
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562442"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845415"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 類別
 
@@ -56,7 +56,7 @@ class vector<bool, Allocator>
 
 ### <a name="proxy-class"></a>Proxy 類別
 
-|||
+|名稱|描述|
 |-|-|
 |[vector \<bool> 參考類別](#reference_class)|類別，做為 Proxy 以模擬 `bool&` 行為，而且其物件可以提供對 `vector<bool>` 物件中項目 (單一位元) 的參考。|
 

@@ -1,5 +1,5 @@
 ---
-title: event_source （c + + COM 屬性）
+title: 'event_source (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_source
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: a7231b01cd341bbc04bcccd3c2198d1a76dd5e39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bea90020c3ec570149e11db95ff6d6f8fd0a5507
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232764"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845298"
 ---
 # <a name="event_source"></a>event_source
 
@@ -43,30 +43,28 @@ ms.locfileid: "87232764"
     #include <atlcom.h>
     ```
 
-*最優化*<br/>
-當*type*是時， `native` 您可以指定 `optimize=size` ，表示類別中所有事件有4個位元組的儲存體（最小值），或 `optimize=speed` （預設值）表示有 4 * （事件數目）個位元組的儲存體。
+*優化*<br/>
+當 *類型* 為時， `native` 您可以指定 `optimize=size` ，以表示有4個位元組的儲存體 () 類別中所有事件的最小值，或 `optimize=speed` (預設) ，表示有 4 * ( 個位元組的事件) 個位元組的儲存體。
 
 *decorate*<br/>
-當*type*是時， `native` 您可以指定 `decorate=false` ，以指出合併（. .mrg）檔案中的展開名稱不應該包含封入類別名稱。 [/Fx](../../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 `decorate=false`（這是預設值），會產生合併檔案中的完整類型名稱。
+當 *類型* 為時 `native` ，您可以指定 `decorate=false` ，以表示合併的)  ( 中的展開名稱不應該包含封入類別名稱。 [/Fx](../../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 `decorate=false`（預設值）會產生合併檔案中的完整類型名稱。
 
 ## <a name="remarks"></a>備註
 
 **event_source** C++ 屬性指定要套用它的類別或結構將是事件來源。
 
-**event_source** 是與 [event_receiver](event-receiver.md) 屬性和 [__event](../../cpp/event.md) 關鍵字搭配使用。 使用 `event_receiver` 來建立事件接收器。 **`__event`** 在事件來源內的方法上使用，將這些方法指定為事件。
+**event_source** 是與 [event_receiver](event-receiver.md) 屬性和 [__event](../../cpp/event.md) 關鍵字搭配使用。 用 `event_receiver` 來建立事件接收器。 使用 **`__event`** 事件來源內的方法，將這些方法指定為事件。
 
 > [!NOTE]
 > 樣板類別或結構不能包含事件。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**`class`**, **`struct`**|
-|**可重複**|否|
-|**必要的屬性**|**coclass** when`type`=`com`|
+|**重複**|否|
+|**必要的屬性**|**coclass** 時機 `type`=`com`|
 |**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

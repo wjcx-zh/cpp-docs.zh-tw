@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331954"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845051"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants 命名空間
 
@@ -107,19 +107,19 @@ namespace regex_constants {
 
 `regex_constants` 命名空間會封裝幾個旗標類型及其關聯的旗標值。
 
-|||
+|名稱|描述|
 |-|-|
 |[error_type](#error_type)|規則運算式語法錯誤報告的旗標。|
 |[match_flag_type](#match_flag_type)|規則運算式比對選項的旗標。|
 |[syntax_option_type](#syntax_option_type)|用於選取語法選項的旗標。|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標頭︰** \<regex>
+**標頭：**\<regex>
 
 **命名空間：** std
 
-## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants:error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a> RegEx_constants：： error_type
 
 規則運算式語法錯誤報告的旗標。
 
@@ -180,7 +180,7 @@ enum error_type
 
 `error_backref` -- 運算式包含無效的反向參考
 
-## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a> RegEx_constants：： match_flag_type
 
 規則運算式比對選項的旗標。
 
@@ -238,7 +238,7 @@ enum match_flag_type
 
 `format_first_only` -- 只會搜尋第一個相符項目
 
-## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants:syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a> RegEx_constants：： syntax_option_type
 
 用於選取語法選項的旗標。
 
@@ -290,11 +290,11 @@ enum syntax_option_type
 
 ## <a name="see-also"></a>另請參閱
 
-[\<正則>](../standard-library/regex.md)\
-[regex_error類](../standard-library/regex-error-class.md)\
-[\<正規表示式>函數](../standard-library/regex-functions.md)\
-[regex_iterator類](../standard-library/regex-iterator-class.md)\
-[\<正則>運算子](../standard-library/regex-operators.md)\
-[regex_token_iterator類](../standard-library/regex-token-iterator-class.md)\
-[regex_traits類](../standard-library/regex-traits-class.md)\
-[\<正則>型態](../standard-library/regex-typedefs.md)
+[\<regex>](../standard-library/regex.md)\
+[RegEx_error 類別](../standard-library/regex-error-class.md)\
+[\<regex> 功能](../standard-library/regex-functions.md)\
+[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[\<regex> 運營商](../standard-library/regex-operators.md)\
+[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[\<regex> typedef](../standard-library/regex-typedefs.md)

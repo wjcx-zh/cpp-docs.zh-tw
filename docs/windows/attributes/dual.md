@@ -1,21 +1,21 @@
 ---
-title: 雙重（C++ COM 屬性）
+title: '雙重 (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168209"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845402"
 ---
 # <a name="dual"></a>dual
 
-將介面放在 .idl 檔案中，做為雙重介面。
+將介面放在 .idl 檔中，作為雙重介面。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "80168209"
 
 ## <a name="remarks"></a>備註
 
-當**雙重** C++屬性在介面前面時，它會將介面放在所產生 .idl 檔案的程式庫區塊內。
+當 **雙重** c + + 屬性在介面前面時，會導致介面放在所產生 .idl 檔案的程式庫區塊內。
 
 ## <a name="example"></a>範例
 
-下列程式碼是在介面定義之前使用**雙重**的屬性區塊：
+下列程式碼是在介面定義之前使用 **雙重** 的屬性區塊：
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -53,15 +53,13 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
 |**適用於**|**interface**|
-|**可重複**|否|
-|**必要屬性**|None|
+|**重複**|否|
+|**必要的屬性**|無|
 |**無效屬性**|`dispinterface`|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
@@ -69,8 +67,8 @@ __interface IStatic : IDispatch
 ## <a name="see-also"></a>另請參閱
 
 [IDL 屬性](idl-attributes.md)<br/>
-[依使用方式分類的屬性](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[依使用量的屬性](attributes-by-usage.md)<br/>
+[自 定義](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

@@ -4,18 +4,18 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366788"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845350"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 C++ 工具和功能
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 中提供下列 C++ 功能。 除非另有說明,所有功能均在所有版本中都可用:視覺工作室社區、視覺工作室專業人員和視覺工作室企業版。 有些功能需要特定的工作負載或選擇性元件，您可以使用 Visual Studio 安裝程式來安裝它們。
+Visual Studio 2019 中提供下列 C++ 功能。 除非另有說明，否則所有版本都可使用所有功能： Visual Studio Community、Visual Studio Professional 和 Visual Studio Enterprise。 有些功能需要特定的工作負載或選擇性元件，您可以使用 Visual Studio 安裝程式來安裝它們。
 
 ## <a name="platforms"></a>平台
 
@@ -125,7 +125,7 @@ Visual Studio 包含下列工作負載以進行 C++ 開發。 您可以安裝這
 - Unreal Engine 安裝程式
 - Unreal 引擎的 Android IDE 支援
 
-### <a name="mobile-development-with-c"></a>使用 C++ 進行行動裝置開發
+### <a name="mobile-development-with-c"></a>使用 C++ 的行動裝置程式開發
 
 包含：
 
@@ -183,10 +183,10 @@ Visual Studio 包含下列工作負載以進行 C++ 開發。 您可以安裝這
 
 Windows 桌面：
 
-- 空專案
+- 空白專案
 - 主控台應用程式
-- Windows 傳統式精靈
-- Windows 傳統型應用程式
+- Windows 桌面精靈
+- Windows 桌面應用程式
 - 共用的項目專案
 - MFC 應用程式
 - 動態連結程式庫
@@ -204,7 +204,7 @@ Windows 桌面：
 
 通用 Windows 平台 (C++/CX)：
 
-- 空白應用程式
+- 空的應用程式
 - DirectX 11 和 XAML 應用程式
 - DirectX 11 應用程式
 - DirectX 12 應用程式
@@ -247,7 +247,7 @@ Linux：
 - Managed 偵錯
 - GPU 使用量
 - 記憶體使用量
-- 遠端偵錯
+- Remote Debugging
 - SQL 偵錯
 - 靜態程式碼分析
 
@@ -258,7 +258,7 @@ Linux：
 - HTML 設計工具/編輯器
 - XML 編輯器
 - 原始程式碼編輯器
-- 生產力功能:重構、EDG IntelliSense 引擎、C++代碼格式
+- 生產力功能：重構、EDG IntelliSense 引擎、c + + 程式碼格式化
 - Windows Form 設計工具
 - 資料設計工具
 - 原生資源編輯器 (.rc 檔)
@@ -315,9 +315,8 @@ Linux：
 
 ## <a name="platforms"></a>平台
 
-||||||
-|-|-|-|-|-|
 |平台|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
+|-|-|-|-|-|
 |Windows 桌面||X|X|X|
 |通用 Windows 平台 ((電話、平板電腦、電腦、Xbox、IoT 和 HoloLens))|X||X|X|
 |Linux|X|X|
@@ -362,7 +361,7 @@ Linux：
 |CLR 主控台應用程式||X|X|X|
 |CLR 空專案||X|X|X|
 |自訂精靈|||X|X|
-|空專案||X|X|X|
+|空白專案||X|X|X|
 |Makefile 專案||X|X|X|
 |MFC ActiveX 控制項|||X|X|
 |MFC 應用程式|||X|X|
@@ -403,7 +402,7 @@ Linux：
 |Managed 偵錯||X|X|X|
 |GPU 使用量|X||X|X|
 |記憶體使用量|X||X|X|
-|遠端偵錯|X|X|X|X|
+|Remote Debugging|X|X|X|X|
 |SQL 偵錯|||X|X|
 |靜態程式碼分析|限制|限制|X|X|
 
@@ -457,9 +456,8 @@ Linux：
 
 ## <a name="application-lifecycle-management-tools"></a>應用程式生命週期管理工具
 
-||||||
-|-|-|-|-|-|
 |工具|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional / Community|Visual Studio Enterprise|
+|-|-|-|-|-|
 |單元測試 (原生架構)|X|X|X|X|
 |單元測試 (Managed 架構)||X|X|X|
 |程式碼涵蓋範圍||||X|

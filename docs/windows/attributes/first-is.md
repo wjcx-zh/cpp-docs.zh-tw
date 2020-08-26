@@ -1,17 +1,17 @@
 ---
-title: first_is （c + + COM 屬性）
+title: 'first_is (c + + COM 屬性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 192d08471241526cace895bd5a5147070316cd6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a06206d7df4dace3f749fdc8ceae7f68aaf095c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228059"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845259"
 ---
 # <a name="first_is"></a>first_is
 
@@ -56,14 +56,12 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };
 ```
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-### <a name="attribute-context"></a>屬性內容
-
-|||
+| 屬性內容 | 值 |
 |-|-|
-|**適用於**|或中的欄位 **`struct`** **`union`** ，介面參數，介面方法|
-|**可重複**|否|
+|**適用於**|或中的欄位 **`struct`** **`union`** 、介面參數、介面方法|
+|**重複**|否|
 |**必要的屬性**|無|
 |**無效屬性**|無|
 

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 39aa3f5e89746d48057e0e8efe6fe62b1c2d8921
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 05e902e09c51012bd456751fb701ce2508a2fc16
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210863"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845597"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 類別
 
-提供[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))介面的執行。
+提供 [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) 介面的實作為。
 
 ## <a name="syntax"></a>語法
 
@@ -49,9 +49,9 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-衍生自 `IColumnsInfoImpl`的類別。
+衍生自的類別 `IColumnsInfoImpl` 。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **Header:** atldb.h
 
@@ -59,16 +59,16 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 
 ### <a name="methods"></a>方法
 
-|||
+| 名稱 | 描述 |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|傳回大部分消費者所需的資料行中繼資料。|
 |[MapColumnIDs](#mapcolumnids)|傳回資料列集中指定之資料行 ID 所識別資料行的序數陣列。|
 
 ## <a name="remarks"></a>備註
 
-資料列集和命令的強制介面。 若要修改提供者 `IColumnsInfo` 執行的行為，您需要修改提供者資料行對應。
+資料列集和命令的強制介面。 若要修改提供者的執行行為 `IColumnsInfo` ，您需要修改提供者資料行對應。
 
-## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>IColumnsInfoImpl：： GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a> IColumnsInfoImpl：： GetColumnInfo
 
 傳回大部分消費者所需的資料行中繼資料。
 
@@ -84,7 +84,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 請參閱 OLE DB 程式設計*人員參考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
-## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>IColumnsInfoImpl：： MapColumnIDs
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a> IColumnsInfoImpl：： MapColumnIDs
 
 傳回資料列集中指定之資料行 ID 所識別資料行的序數陣列。
 

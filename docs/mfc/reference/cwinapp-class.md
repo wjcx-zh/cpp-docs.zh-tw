@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 515307bd79059c22b5b40cd8b47ce8809ede8f04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837602"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -1303,9 +1303,8 @@ DWORD m_dwRestartManagerSupportFlags;
 
 若要啟用重新開機管理員，請將設定 `m_dwRestartManagerSupportFlags` 為您想要的行為。 下表顯示可用的旗標。
 
-|||
-|-|-|
 |旗標|描述|
+|-|-|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|應用程式是使用 [CWinApp：： RegisterWithRestartManager](#registerwithrestartmanager)來註冊。 如果應用程式意外結束，重新開機管理員會負責重新開機應用程式。|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|應用程式會向重新開機管理員註冊，而且重新開機管理員會在重新開機應用程式時呼叫復原回呼函式。 預設的復原回呼函式為 [CWinApp：： ApplicationRecoveryCallback](#applicationrecoverycallback)。|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|自動儲存已啟用，重新開機管理員會在應用程式重新開機時 autosaves 任何開啟的檔。|

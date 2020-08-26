@@ -1,39 +1,39 @@
 ---
-title: 管理 DLL 的巨集和函式
+title: 用於管理 Dll 的宏和函式
 ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e4170ba95775fd3380837673a76a8adafc8ad011
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751594"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837174"
 ---
-# <a name="macros-and-functions-for-managing-dlls"></a>管理 DLL 的巨集和函式
+# <a name="macros-and-functions-for-managing-dlls"></a>用於管理 Dll 的宏和函式
 
-|||
+|名稱|描述|
 |-|-|
-|[AFX_EXT_CLASS](#afx_ext_class)||匯出類。|
-|[AFX_MANAGE_STATE](#afx_manage_state)|保護 DLL 中的匯出函數。|
-|[AfxOleInitModule](#afxoleinitmodule)|從動態連結到 MFC 的常規 MFC DLL 提供 OLE 支援。|
-|[AfxNetInitModule](#afxnetinitmodule)|提供與 MFC 動態連結的常規 MFC DLL 的 MFC 插槽支援。|
-|[AfxGetAmbientActCtx](#afxgetambientactctx)|獲取每個模組狀態標誌的當前狀態。|
-|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|在初始化和/或清理後還原以前的模組狀態之前設置模組狀態。|
+|[AFX_EXT_CLASS](#afx_ext_class)]|匯出類別。|
+|[AFX_MANAGE_STATE](#afx_manage_state)|保護 DLL 中匯出的函式。|
+|[AfxOleInitModule](#afxoleinitmodule)|從動態連結至 MFC 的標準 MFC DLL 提供 OLE 支援。|
+|[AfxNetInitModule](#afxnetinitmodule)|從動態連結至 MFC 的標準 MFC DLL 提供 MFC 通訊端支援。|
+|[AfxGetAmbientActCtx](#afxgetambientactctx)|取得每個模組狀態旗標的目前狀態。|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|設定初始化之前的模組狀態，以及/或在清除後還原先前的模組狀態。|
 |[AfxInitExtensionModule](#afxinitextensionmodule)|初始化 DLL。|
-|[AfxSetAmbientActCtx](#afxsetambientactctx)|設置每個模組的狀態標誌,這會影響 MFC 的 WinSxS 行為。|
-|[AfxTermExtensionModule](#afxtermextensionmodule)|允許 MFC 在每個行程從 DLL 分離時清理 MFC 擴展 DLL。|
+|[AfxSetAmbientActCtx](#afxsetambientactctx)|設定每個模組的狀態旗標，其會影響 MFC 的 WinSxS 行為。|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|當每個進程從 DLL 卸離時，允許 MFC 清除 MFC 擴充 DLL。|
 
-## <a name="afx_ext_class"></a><a name="afx_ext_class"></a>AFX_EXT_CLASS
+## <a name="afx_ext_class"></a><a name="afx_ext_class"></a> AFX_EXT_CLASS
 
-[MFC 擴展 DLL](../../build/extension-dlls.md)使用宏AFX_EXT_CLASS匯出類;連結到 MFC 擴展 DLL 的可執行檔使用巨集導入類。
+[MFC 擴充 dll](../../build/extension-dlls.md) 會使用宏 AFX_EXT_CLASS 來匯出類別;連結至 MFC 擴充 DLL 的可執行檔會使用宏來匯入類別。
 
 ### <a name="remarks"></a>備註
 
-使用AFX_EXT_CLASS宏時,用於建構 MFC 擴展名 DLL 的相同標頭檔可用於連結到 DLL 的可執行檔。
+使用 AFX_EXT_CLASS 宏時，用來建立 MFC 擴充 DLL 的相同標頭檔 () s，可以與連結至 DLL 的可執行檔搭配使用。
 
-在 DLL 的標頭檔中,將AFX_EXT_CLASS關鍵字添加到類的聲明中,如下所示:
+在您的 DLL 的標頭檔中，將 AFX_EXT_CLASS 關鍵字加入至類別的宣告，如下所示：
 
 ```cpp
 class AFX_EXT_CLASS CMyClass : public CDocument
@@ -42,15 +42,15 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 };
 ```
 
-有關詳細資訊,請參閱使用[AFX_EXT_CLASS 匯出與匯入](../../build/exporting-and-importing-using-afx-ext-class.md)。
+如需詳細資訊，請參閱 [使用 AFX_EXT_CLASS 匯出和匯入](../../build/exporting-and-importing-using-afx-ext-class.md)。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** afxv_dll.h
+**標頭：** afxv_dll。h
 
-## <a name="afx_manage_state"></a><a name="afx_manage_state"></a>AFX_MANAGE_STATE
+## <a name="afx_manage_state"></a><a name="afx_manage_state"></a> AFX_MANAGE_STATE
 
-呼叫此巨集以保護 DLL 中的匯出函數。
+呼叫這個宏以保護 DLL 中匯出的函式。
 
 ### <a name="syntax"></a>語法
 
@@ -61,33 +61,33 @@ AFX_MANAGE_STATE(AFX_MODULE_STATE* pModuleState )
 ### <a name="parameters"></a>參數
 
 *pModuleState*<br/>
-指向結構的`AFX_MODULE_STATE`指標。
+結構的指標 `AFX_MODULE_STATE` 。
 
 ### <a name="remarks"></a>備註
 
-呼叫此巨集時 *,pModuleState*是直接包含作用域其餘部分的有效模組狀態。 離開作用域后,將自動還原以前的有效模塊狀態。
-結構`AFX_MODULE_STATE`包含模組的全域數據,即推送或彈出的模組狀態部分。
+叫用此宏時， *pModuleState* 是最適合立即包含範圍之其餘部分的有效模組狀態。 離開範圍之後，將會自動還原先前的有效模組狀態。
+`AFX_MODULE_STATE`結構包含模組的全域資料，也就是已推送或彈出的模組狀態部分。
 
-根據預設，MFC 會使用主應用程式的資源控制代碼來載入資源範本。 如果在 DLL 中具有匯出的函數(例如在 DLL 中啟動對話方塊的函數),則此範本實際上存儲在 DLL 模組中。 您需要切換模組狀態才能使用正確的句柄。 可以通過以下代碼加入函數的開頭來執行此操作:
+根據預設，MFC 會使用主應用程式的資源控制代碼來載入資源範本。 如果您在 dll 中有匯出的函式（例如在 DLL 中啟動對話方塊的函式），此範本實際上會儲存在 DLL 模組中。 您必須切換模組狀態，才能使用正確的控制碼。 您可以藉由將下列程式碼新增至函式的開頭來執行此動作：
 
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 ```
 
-這將將當前模組狀態與從[AfxGetStaticModuleState](#afxgetstaticmodulestate)返回的狀態交換,直到當前作用域結束。
+這會將目前的模組狀態與從 [AfxGetStaticModuleState](#afxgetstaticmodulestate) 傳回的狀態交換，直到目前的範圍結束為止。
 
-有關模組狀態和 MFC 的詳細資訊,請參閱[創建新文檔、Windows 和視圖](../creating-new-documents-windows-and-views.md)[和技術說明 58](../tn058-mfc-module-state-implementation.md)中的"管理 MFC 模組的狀態數據"
+如需模組狀態和 MFC 的詳細資訊，請參閱 [建立新檔、視窗和查看](../creating-new-documents-windows-and-views.md) 和 [技術附注 58](../tn058-mfc-module-state-implementation.md)中的「管理 MFC 模組的狀態資料」。
 
 > [!NOTE]
-> 當 MFC 為程式集創建啟動上下文時,它使用[AfxWinInit](application-information-and-management.md#afxwininit)創建上下文`AFX_MANAGE_STATE`並啟動和停用它。 另請注意,`AFX_MANAGE_STATE`為靜態 MFC 庫以及 MFC DLL 啟用,以便允許 MFC 代碼在使用者 DLL 選擇的正確啟動上下文中執行。 有關詳細資訊,請參閱[MFC 模組狀態中對啟動上下文的支援](../support-for-activation-contexts-in-the-mfc-module-state.md)。
+> 當 MFC 建立元件的啟用內容時，會使用 [AfxWinInit](application-information-and-management.md#afxwininit) 來建立內容，以及 `AFX_MANAGE_STATE` 啟用和停用它。 另外也請注意， `AFX_MANAGE_STATE` 針對靜態 MFC 程式庫和 MFC dll 啟用，以便讓 mfc 程式碼在使用者 DLL 所選取的適當啟用內容中執行。 如需詳細資訊，請參閱 [MFC 模組狀態中的啟用內容支援](../support-for-activation-contexts-in-the-mfc-module-state.md)。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** afxstat_.h
+**標頭：** afxstat_。h
 
-## <a name="a-nameafxoleinitmodule-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/>阿FXOleinit模組
+## <a name="a-nameafxoleinitmodule-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule
 
-對於動態連結到 MFC 的常規 MFC DLL 的 OLE 支援,`CWinApp::InitInstance`請在常規 MFC DLL 函數中調用此功能以初始化 MFC OLE DLL。
+若要從動態連結至 MFC 的標準 MFC DLL 取得 OLE 支援，請在您的一般 MFC DLL 函式中呼叫此函式， `CWinApp::InitInstance` 以初始化 MFC OLE DLL。
 
 ### <a name="syntax"></a>語法
 
@@ -97,17 +97,17 @@ void AFXAPI AfxOleInitModule( );
 
 ### <a name="remarks"></a>備註
 
-MFC OLE DLL 是 MFC 擴展 DLL;為了使 MFC 擴展 DLL 連接到`CDynLinkLibrary`鏈中,它必須在`CDynLinkLibrary`將使用它的每個模組 的上下文中創建一個物件。 `AfxOleInitModule`在`CDynLinkLibrary`常規 MFC DLL 的上下文中創建物件,以便將其連接到常規`CDynLinkLibrary`MFC DLL 的物件鏈中。
+MFC OLE DLL 是 MFC 擴充 DLL;為了讓 MFC 擴充 DLL 能夠進入 `CDynLinkLibrary` 鏈中，它必須 `CDynLinkLibrary` 在將使用它的每個模組的內容中建立物件。 `AfxOleInitModule``CDynLinkLibrary`在您的一般 MFC dll 內容中建立物件，使其成為 `CDynLinkLibrary` 一般 mfc dll 的物件鏈。
 
-如果要構建 OLE 控件`COleControlModule`並且正在 使用 ,則`AfxOleInitModule`不應`InitInstance``COleControlModule`調用`AfxOleInitModule`,因為調用的成員函數。
+如果您要建立 OLE 控制項並使用 `COleControlModule` ，您不應該呼叫， `AfxOleInitModule` 因為呼叫的 `InitInstance` 成員函式 `COleControlModule` `AfxOleInitModule` 。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題**\<: afxdll_.h>
+**標頭**： \<afxdll_.h>
 
-## <a name="afxnetinitmodule"></a><a name="afxnetinitmodule"></a>AfxNetInit 模組
+## <a name="afxnetinitmodule"></a><a name="afxnetinitmodule"></a> AfxNetInitModule
 
-對於動態連結到 MFC 的常規 MFC DLL 的 MFC 插槽支援,在常規 MFC`CWinApp::InitInstance`DLL 函數中添加對此函數 的調用,以初始化 MFC 插槽 DLL。
+針對可動態連結至 MFC 的標準 MFC DLL 支援 MFC 通訊端，請在您的一般 MFC DLL 函式中加入此函式的呼叫， `CWinApp::InitInstance` 以初始化 MFC 通訊端 dll。
 
 ### <a name="syntax"></a>語法
 
@@ -117,15 +117,15 @@ void AFXAPI AfxNetInitModule( );
 
 ### <a name="remarks"></a>備註
 
-MFC 插槽 DLL 是 MFC 擴展 DLL;為了使 MFC 擴展 DLL 連接到`CDynLinkLibrary`鏈中,它必須在`CDynLinkLibrary`將使用它的每個模組 的上下文中創建一個物件。 `AfxNetInitModule`在`CDynLinkLibrary`常規 MFC DLL 的上下文中創建物件,以便將其連接到常規`CDynLinkLibrary`MFC DLL 的物件鏈中。
+MFC 通訊端 DLL 是 MFC 擴充 DLL;為了讓 MFC 擴充 DLL 能夠進入 `CDynLinkLibrary` 鏈中，它必須 `CDynLinkLibrary` 在將使用它的每個模組的內容中建立物件。 `AfxNetInitModule``CDynLinkLibrary`在您的一般 MFC dll 內容中建立物件，使其成為 `CDynLinkLibrary` 一般 mfc dll 的物件鏈。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** \<afxdll_.h>
+**標頭：**\<afxdll_.h>
 
-## <a name="afxgetambientactctx"></a><a name="afxgetambientactctx"></a>AfxGet環境ActCtx
+## <a name="afxgetambientactctx"></a><a name="afxgetambientactctx"></a> AfxGetAmbientActCtx
 
-使用此函數獲取每個模組狀態標誌的當前狀態,這會影響 MFC 的 WinSxS 行為。
+您可以使用此函式來取得每個模組狀態旗標的目前狀態，這會影響 MFC 的 WinSxS 行為。
 
 ### <a name="syntax"></a>語法
 
@@ -135,23 +135,23 @@ BOOL AFXAPI AfxGetAmbientActCtx();
 
 ### <a name="return-value"></a>傳回值
 
-模組狀態標誌當前值。
+模組狀態旗標目前的值。
 
 ### <a name="remarks"></a>備註
 
-當標誌被設置(這是預設值)和線程進入 MFC 模組(請參閱[AFX_MANAGE_STATE),](#afx_manage_state)模組的上下文被啟動。
+設定旗標時 (預設) ，而執行緒進入 MFC 模組 (請參閱 [AFX_MANAGE_STATE](#afx_manage_state)) ，模組的內容會啟用。
 
 如果未設定旗標，就不會啟用模組的內容。
 
 模組的內容是從其資訊清單來決定的，通常是內嵌在模組資源中。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** afxcomctl32.h
+**標頭：** >afxcomctl32.h>。h
 
-## <a name="afxgetstaticmodulestate"></a><a name="afxgetstaticmodulestate"></a>AfxGet靜態模組狀態
+## <a name="afxgetstaticmodulestate"></a><a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
-調用此函數以在初始化之前設置模組狀態和/或在清理後還原以前的模塊狀態。
+呼叫此函式可在初始化之前設定模組狀態，以及/或在清除後還原先前的模組狀態。
 
 ### <a name="syntax"></a>語法
 
@@ -161,29 +161,29 @@ AFX_MODULE_STATE* AFXAPI AfxGetStaticModuleState( );
 
 ### <a name="return-value"></a>傳回值
 
-指向結構的`AFX_MODULE_STATE`指標。
+結構的指標 `AFX_MODULE_STATE` 。
 
 ### <a name="remarks"></a>備註
 
-結構`AFX_MODULE_STATE`包含模組的全域數據,即推送或彈出的模組狀態部分。
+`AFX_MODULE_STATE`結構包含模組的全域資料，也就是已推送或彈出的模組狀態部分。
 
-根據預設，MFC 會使用主應用程式的資源控制代碼來載入資源範本。 如果在 DLL 中具有匯出的函數(例如在 DLL 中啟動對話方塊的函數),則此範本實際上存儲在 DLL 模組中。 您需要切換模組狀態才能使用正確的句柄。 可以通過以下代碼加入函數的開頭來執行此操作:
+根據預設，MFC 會使用主應用程式的資源控制代碼來載入資源範本。 如果您在 dll 中有匯出的函式（例如在 DLL 中啟動對話方塊的函式），此範本實際上會儲存在 DLL 模組中。 您必須切換模組狀態，才能使用正確的控制碼。 您可以藉由將下列程式碼新增至函式的開頭來執行此動作：
 
 ```cpp
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 ```
 
-這將交換當前模組狀態,從當前作用域結束`AfxGetStaticModuleState`為止返回的狀態。
+這會將目前的模組狀態與從傳回的狀態交換 `AfxGetStaticModuleState` 到目前的範圍結束為止。
 
-有關模組狀態和 MFC 的詳細資訊,請參閱[創建新文檔、Windows 和視圖](../creating-new-documents-windows-and-views.md)[和技術說明 58](../tn058-mfc-module-state-implementation.md)中的"管理 MFC 模組的狀態數據"
+如需模組狀態和 MFC 的詳細資訊，請參閱 [建立新檔、視窗和查看](../creating-new-documents-windows-and-views.md) 和 [技術附注 58](../tn058-mfc-module-state-implementation.md)中的「管理 MFC 模組的狀態資料」。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** afxstat_.h
+**標頭：** afxstat_。h
 
 ## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
 
-在 MFC 延伸 DLL`DllMain`中呼叫此函數以初始化 DLL。
+在 MFC 擴充 DLL 中呼叫此函式 `DllMain` ，以初始化 DLL。
 
 ### <a name="syntax"></a>語法
 
@@ -194,14 +194,14 @@ BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModul
 ### <a name="parameters"></a>參數
 
 *state*<br/>
-對[AFX_EXTENSION_MODULE結構結構](afx-extension-module-structure.md)的引用,該結構將在初始化後包含 MFC 擴展 DLL 模組的狀態。 狀態包括 MFC 擴展 DLL 已初始化的運行時類物件的副本`DllMain`,作為輸入之前 執行的正常靜態物件構造的一部分。
+[AFX_EXTENSION_MODULE 結構](afx-extension-module-structure.md)結構的參考，該結構會在初始化之後包含 MFC 擴充 DLL 模組的狀態。 狀態包含一份由 MFC 擴充 DLL 初始化的執行時間類別物件，做為輸入之前執行之一般靜態物件結構的一部分 `DllMain` 。
 
 *hModule*<br/>
-MFC 擴展 DLL 模組的句柄。
+MFC 延伸模組 DLL 模組的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果 MFC 擴展 DLL 已成功初始化,則為 TRUE;否則,FALSE。
+如果 MFC 擴充 DLL 已成功初始化，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -225,20 +225,20 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 ...
 ```
 
-`AfxInitExtensionModule`複製 DLL 的 HMODULE 並擷取 DLL`CRuntimeClass`的執行時類別(`COleObjectFactory`結構)及其物件工廠(`CDynLinkLibrary`物件),供以後創建 物件時使用。
-MFC 延伸 DLL`DllMain`需要在其 功能中執行兩項操作:
+`AfxInitExtensionModule` 製作 DLL HMODULE 的複本，並) 取得 DLL 的執行時間類別 (結構，以及 `CRuntimeClass` 其物件 factory (`COleObjectFactory` 物件，) 稍後在 `CDynLinkLibrary` 建立物件時使用。
+MFC 擴充 Dll 需要在其函式中執行兩項 `DllMain` 工作：
 
-- 調用[AfxInit 擴展模組](#afxinitextensionmodule)並檢查返回值。
+- 呼叫 [AfxInitExtensionModule](#afxinitextensionmodule) 並檢查傳回值。
 
-- 如果`CDynLinkLibrary`DLL 將匯出[CRuntimeClass 結構](cruntimeclass-structure.md)物件或具有其自己的自訂資源,則創建物件。
+- `CDynLinkLibrary`如果 DLL 將匯出[CRuntimeClass 結構](cruntimeclass-structure.md)物件或擁有自己的自訂資源，請建立物件。
 
-當每個進程`AfxTermExtensionModule`從 MFC 分機 DLL 分離時(當行程`AfxFreeLibrary`退出時,或者由於調用而卸載 DLL 時),可以調用以清理 MFC 分機 DLL。
+您可以呼叫 `AfxTermExtensionModule` ，以在每個進程卸離 mfc 擴充 dll 時，清除 mfc 擴充 dll (這會在進程結束時或 DLL 因為呼叫) 的結果而卸載時執行 `AfxFreeLibrary` 。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** afxdll_.h
+**標頭：** afxdll_。h
 
-## <a name="afxsetambientactctx"></a><a name="afxsetambientactctx"></a>AfxSet環境ActCtx
+## <a name="afxsetambientactctx"></a><a name="afxsetambientactctx"></a> AfxSetAmbientActCtx
 
 使用這個函式來設定每個模組狀態旗標，這些旗標會影響 MFC 的 WinSxS 行為。
 
@@ -255,7 +255,7 @@ void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 
 ### <a name="remarks"></a>備註
 
-當標誌被設置(這是預設值)和線程進入 MFC 模組(請參閱[AFX_MANAGE_STATE),](#afx_manage_state)模組的上下文被啟動。
+設定旗標時 (預設) ，而執行緒進入 MFC 模組 (請參閱 [AFX_MANAGE_STATE](#afx_manage_state)) ，模組的內容會啟用。
 如果未設定旗標，就不會啟用模組的內容。
 模組的內容是從其資訊清單來決定的，通常是內嵌在模組資源中。
 
@@ -269,13 +269,13 @@ BOOL CMFCListViewApp::InitInstance()
 }
 ```
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** afxcomctl32.h
+**標頭：** >afxcomctl32.h>。h
 
-## <a name="afxtermextensionmodule"></a><a name="afxtermextensionmodule"></a>AfxTerm延伸模組
+## <a name="afxtermextensionmodule"></a><a name="afxtermextensionmodule"></a> AfxTermExtensionModule
 
-呼叫此函數,允許 MFC 在每個行程從 DLL 分離時(當`AfxFreeLibrary`行程退出或由於呼叫而卸載 DLL 時)清理 MFC 分機 DLL。
+呼叫此函式，可在每個進程卸離 DLL 時，讓 MFC 清除 MFC 擴充 DLL (這會發生在進程結束時，或 DLL 因為呼叫) 的結果而卸載時 `AfxFreeLibrary` 。
 
 ### <a name="syntax"></a>語法
 
@@ -286,14 +286,14 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 ### <a name="parameters"></a>參數
 
 *state*<br/>
-對包含 MFC 擴展 DLL 模組狀態[AFX_EXTENSION_MODULE結構的](afx-extension-module-structure.md)引用。
+[AFX_EXTENSION_MODULE](afx-extension-module-structure.md)結構的參考，其中包含 MFC 擴充 DLL 模組的狀態。
 
 *球*<br/>
-如果為 TRUE,請清理所有 MFC 擴展 DLL 模組。 否則,請僅清理當前 DLL 模組。
+若為 TRUE，請清除所有 MFC 擴充 DLL 模組。 否則，請只清除目前的 DLL 模組。
 
 ### <a name="remarks"></a>備註
 
-`AfxTermExtensionModule`將刪除附加到模組的任何本地存儲,並從消息映射快取中刪除任何條目。 例如：
+`AfxTermExtensionModule` 將會刪除任何附加至模組的本機儲存體，並從訊息對應快取中移除任何專案。 例如：
 
 ```cpp
 static AFX_EXTENSION_MODULE NVC_MFC_DLLDLL = { NULL, NULL };
@@ -325,13 +325,13 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 }
 ```
 
-如果應用程式動態載入並釋放 MFC 延伸 DLL,請務`AfxTermExtensionModule`必呼叫 。 由於大多數 MFC 擴展 DLL 不是動態載入的(通常,它們透過其匯入庫連結`AfxTermExtensionModule`),因此通常不需要呼叫 。
+如果您的應用程式會以動態方式載入和釋放 MFC 擴充 Dll，請務必呼叫 `AfxTermExtensionModule` 。 因為大部分的 MFC 擴充 Dll 都不會以動態方式載入 (通常會透過其匯入程式庫連結) ，因此 `AfxTermExtensionModule` 通常不需要呼叫。
 
-MFC 延伸 DLL`DllMain`需要在其 中呼叫[AfxInit 延伸模組](#afxinitextensionmodule)。 如果 DLL 將匯出[CRuntimeClass](cruntimeclass-structure.md)物件或有自己的自訂資源,`CDynLinkLibrary``DllMain`則還需要在 中 創建一個物件。
+MFC 延伸模組 Dll 需要在其中呼叫 [AfxInitExtensionModule](#afxinitextensionmodule) `DllMain` 。 如果 DLL 將匯出 [CRuntimeClass](cruntimeclass-structure.md) 物件，或有自己的自訂資源，您也必須 `CDynLinkLibrary` 在中建立物件 `DllMain` 。
 
-### <a name="requirements"></a>需求
+### <a name="requirements"></a>規格需求
 
-**標題:** afxdll_.h
+**標頭：** afxdll_。h
 
 ## <a name="see-also"></a>另請參閱
 

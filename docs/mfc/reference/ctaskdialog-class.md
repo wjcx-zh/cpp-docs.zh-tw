@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3fd67eed7e80a2e594710df8ae8bc6fd13f0e96c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752280"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837667"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -137,123 +137,123 @@ class CTaskDialog : public CObject
 
 ### <a name="constructors"></a>建構函式
 
-|||
+|名稱|描述|
 |-|-|
-|[C 任務對話::C任務對話](#ctaskdialog)|建構 `CTaskDialog` 物件。|
+|[CTaskDialog：： CTaskDialog](#ctaskdialog)|建構 `CTaskDialog` 物件。|
 
 ### <a name="methods"></a>方法
 
-|||
+|名稱|描述|
 |-|-|
-|[CTask對話::新增命令控制](#addcommandcontrol)|新增指令按鍵控制檔`CTaskDialog`。|
-|[CTask對話::新增無線按鈕](#addradiobutton)|新增單選按鈕`CTaskDialog`。|
-|[CTask對話::按下命令控制](#clickcommandcontrol)|以程式設計方式按下命令按鈕控制件或常用按鈕。|
-|[CTask對話::點擊收音機按鈕](#clickradiobutton)|以程式設計方式按下單選按鈕。|
-|[CTask對話::Do模態](#domodal)|顯示`CTaskDialog`。|
-|[CTask對話::取得公共按鈕計數](#getcommonbuttoncount)|檢索可用公共按鈕的數量。|
-|[CTask對話::取得公共按鈕標誌](#getcommonbuttonflag)|將標準 Windows 按鈕轉換`CTaskDialog`為與 類關聯的通用按鈕類型。|
-|[CTask對話::取得公共按鈕Id](#getcommonbuttonid)|將與`CTaskDialog`類關聯的常見按鈕類型之一轉換為標準 Windows 按鈕。|
-|[CTask 對話:抓取選項](#getoptions)|傳回`CTaskDialog`此的選項標誌。|
-|[CTask 對話:抓取所指令控制 ID](#getselectedcommandcontrolid)|返回所選命令按鈕控件。|
-|[CTask對話::取得選擇無線電按鈕ID](#getselectedradiobuttonid)|返回選定的單選按鈕。|
-|[CTask對話::抓取框狀態](#getverificationcheckboxstate)|檢索驗證複選框的狀態。|
-|[CTask對話::啟用命令控制](#iscommandcontrolenabled)|確定是否啟用命令按鈕控制件或通用按鈕。|
-|[CTask對話::開啟無線電按鈕](#isradiobuttonenabled)|確定是否啟用了單選按鈕。|
-|[CTask對話::支援](#issupported)|確定執行應用程式的電腦是否支援`CTaskDialog`。|
-|[C任務對話::載入命令控制](#loadcommandcontrols)|使用字串表中的數據添加命令按鈕控制項。|
-|[CTask對話::載入無線按鈕](#loadradiobuttons)|使用字串表中的數據添加單選按鈕。|
-|[CTask對話::導航到](#navigateto)|將焦點移至另一`CTaskDialog`個 。|
-|[CTask對話::命令控制單擊](#oncommandcontrolclick)|當用戶按下命令按鈕控制件時,框架將調用此方法。|
-|[CTask對話::開啟建立](#oncreate)|框架在建立 後呼叫此`CTaskDialog`方法 。|
-|[C任務對話::在銷毀](#ondestroy)|框架在銷毀 之前立即呼叫此`CTaskDialog`方法 。|
-|[CTask對話::打開按鈕點擊](#onexpandbuttonclick)|當用戶按一下擴展按鈕時,框架將調用此方法。|
-|[CTask對話::上説明](#onhelp)|當使用者請求説明時,框架調用此方法。|
-|[CTask對話::在超鏈接點擊](#onhyperlinkclick)|當用戶單擊超連結時,框架將調用此方法。|
-|[CTask對話::Oninit](#oninit)|初始化 時`CTaskDialog`, 框架呼叫此方法。|
-|[CTask對話::上導航頁](#onnavigatepage)|當使用者將焦點移至 上的控制項時,框架將呼叫此`CTaskDialog`方法 。|
-|[CTask對話::在電臺點擊](#onradiobuttonclick)|當用戶選擇單選按鈕控制項時,框架將調用此方法。|
-|[CTask對話:在計時器上](#ontimer)|當計時器過期時,框架調用此方法。|
-|[CTask對話::打開驗證複選框按一下](#onverificationcheckboxclick)|當用戶單擊驗證複選框時,框架將調用此方法。|
-|[CTask對話::刪除所有命令控制](#removeallcommandcontrols)|從中移除的所有指令控制器`CTaskDialog`。|
-|[CTask對話::刪除所有無線按鈕](#removeallradiobuttons)|從中移除的所有單選按鈕`CTaskDialog`。|
-|[CTask對話::設定命令控制選項](#setcommandcontroloptions)|更新 上的指令按鍵控制`CTaskDialog`器 。|
-|[CTask對話::設定公共按鈕選項](#setcommonbuttonoptions)|更新要啟用的常見按鈕的子集,並要求 UAC 提升。|
-|[CTask對話::設定公共按鈕](#setcommonbuttons)|將一般按鈕加入`CTaskDialog`。|
-|[C任務對話::設定內容](#setcontent)|更新`CTaskDialog`的內容 。|
-|[CTask對話::設定預設命令控制](#setdefaultcommandcontrol)|指定預設命令按鈕控制件。|
-|[CTask對話::設定預設的無線電按鈕](#setdefaultradiobutton)|指定預設單選按鈕。|
-|[C任務對話::設定對話寬度](#setdialogwidth)|調整的`CTaskDialog`寬度。|
-|[C 任務對話::設定擴充區域](#setexpansionarea)|更新的`CTaskDialog`擴展區域。|
-|[CTask對話::SetFooterIcon](#setfootericon)|更新`CTaskDialog`的頁腳圖示。|
-|[CTask對話::設定文字](#setfootertext)|更新 文上的`CTaskDialog`文字 。|
-|[CTask對話::設定主圖示](#setmainicon)|更新的主`CTaskDialog`圖示。|
-|[CTask對話::設定主指令](#setmaininstruction)|更新的主要`CTaskDialog`指令。|
-|[C 任務對話::設定選項](#setoptions)|設定的選項`CTaskDialog`。|
-|[CTask對話::設定進度列](#setprogressbarmarquee)|為 配置`CTaskDialog`選框列並將其添加到對話方塊中。|
-|[C任務對話::設定進度列位置](#setprogressbarposition)|調整進度條的位置。|
-|[CTask對話::設定進度列範圍](#setprogressbarrange)|調整進度條的範圍。|
-|[C任務對話::設定進度列](#setprogressbarstate)|設定進度列號的狀態並將顯示在上`CTaskDialog`。|
-|[CTask對話::設定無線按鈕選項](#setradiobuttonoptions)|啟用或禁用單選按鈕。|
-|[C任務對話::設定驗證複選框](#setverificationcheckbox)|設置驗證複選框的選中狀態。|
-|[CTask對話::設定驗證複選框文字](#setverificationcheckboxtext)|設定驗證複選框右側的文本。|
-|[C 任務對話::設定視窗標題](#setwindowtitle)|設定的標題`CTaskDialog`。|
-|[C 任務對話::顯示對話](#showdialog)|建立並顯示`CTaskDialog`。|
-|[C任務對話::工作對話回調](#taskdialogcallback)|框架調用此以回應各種 Windows 消息。|
+|[CTaskDialog：： AddCommandControl](#addcommandcontrol)|將命令按鈕控制項新增至 `CTaskDialog` 。|
+|[CTaskDialog：： AddRadioButton](#addradiobutton)|將選項按鈕加入至 `CTaskDialog` 。|
+|[CTaskDialog：： ClickCommandControl](#clickcommandcontrol)|以程式設計方式按一下命令按鈕控制項或一般按鈕。|
+|[CTaskDialog：： ClickRadioButton](#clickradiobutton)|以程式設計方式按一下選項按鈕。|
+|[CTaskDialog：:D oModal](#domodal)|顯示`CTaskDialog`。|
+|[CTaskDialog：： GetCommonButtonCount](#getcommonbuttoncount)|抓取可用的常見按鈕數目。|
+|[CTaskDialog：： GetCommonButtonFlag](#getcommonbuttonflag)|將標準 Windows 按鈕轉換成與類別相關聯的一般按鈕類型 `CTaskDialog` 。|
+|[CTaskDialog：： GetCommonButtonId](#getcommonbuttonid)|將與類別相關聯的其中一個一般按鈕類型轉換 `CTaskDialog` 成標準的 Windows 按鈕。|
+|[CTaskDialog：： GetOptions](#getoptions)|傳回這個的選項旗標 `CTaskDialog` 。|
+|[CTaskDialog：： GetSelectedCommandControlID](#getselectedcommandcontrolid)|傳回選取的命令按鈕控制項。|
+|[CTaskDialog：： GetSelectedRadioButtonID](#getselectedradiobuttonid)|傳回選取的選項按鈕。|
+|[CTaskDialog：： GetVerificationCheckboxState](#getverificationcheckboxstate)|捕獲驗證核取方塊的狀態。|
+|[CTaskDialog：： IsCommandControlEnabled](#iscommandcontrolenabled)|決定是否啟用命令按鈕控制項或一般按鈕。|
+|[CTaskDialog：： IsRadioButtonEnabled](#isradiobuttonenabled)|決定是否啟用選項按鈕。|
+|[CTaskDialog：： IsSupported](#issupported)|判斷正在執行應用程式的電腦是否支援 `CTaskDialog` 。|
+|[CTaskDialog：： LoadCommandControls](#loadcommandcontrols)|使用字串資料表中的資料，加入命令按鈕控制項。|
+|[CTaskDialog：： LoadRadioButtons](#loadradiobuttons)|使用字串資料表中的資料來加入選項按鈕。|
+|[CTaskDialog：： NavigateTo](#navigateto)|將焦點轉移到另一個 `CTaskDialog` 。|
+|[CTaskDialog：： OnCommandControlClick](#oncommandcontrolclick)|當使用者按一下命令按鈕控制項時，架構會呼叫這個方法。|
+|[CTaskDialog：： >oncreate](#oncreate)|架構會在建立之後呼叫這個方法 `CTaskDialog` 。|
+|[CTaskDialog：： OnDestroy](#ondestroy)|架構會在終結之前立即呼叫這個方法 `CTaskDialog` 。|
+|[CTaskDialog：： OnExpandButtonClick](#onexpandbuttonclick)|當使用者按一下展開按鈕時，架構會呼叫這個方法。|
+|[CTaskDialog：： OnHelp](#onhelp)|當使用者要求協助時，架構會呼叫這個方法。|
+|[CTaskDialog：： OnHyperlinkClick](#onhyperlinkclick)|當使用者按一下超連結時，架構會呼叫這個方法。|
+|[CTaskDialog：： OnInit](#oninit)|當初始化時，架構會呼叫這個方法 `CTaskDialog` 。|
+|[CTaskDialog：： OnNavigatePage](#onnavigatepage)|當使用者將焦點移至上的控制項時，架構會呼叫這個方法 `CTaskDialog` 。|
+|[CTaskDialog：： OnRadioButtonClick](#onradiobuttonclick)|當使用者選取選項按鈕控制項時，架構會呼叫這個方法。|
+|[CTaskDialog：： OnTimer](#ontimer)|當計時器到期時，架構會呼叫這個方法。|
+|[CTaskDialog：： OnVerificationCheckboxClick](#onverificationcheckboxclick)|當使用者按一下 [驗證] 核取方塊時，架構會呼叫這個方法。|
+|[CTaskDialog：： RemoveAllCommandControls](#removeallcommandcontrols)|從移除所有的命令控制項 `CTaskDialog` 。|
+|[CTaskDialog：： RemoveAllRadioButtons](#removeallradiobuttons)|從移除所有的選項按鈕 `CTaskDialog` 。|
+|[CTaskDialog：： SetCommandControlOptions](#setcommandcontroloptions)|更新上的命令按鈕控制項 `CTaskDialog` 。|
+|[CTaskDialog：： SetCommonButtonOptions](#setcommonbuttonoptions)|更新要啟用的一般按鈕子集，並要求 UAC 提高許可權。|
+|[CTaskDialog：： SetCommonButtons](#setcommonbuttons)|將一般按鈕新增至 `CTaskDialog` 。|
+|[CTaskDialog：： SetContent](#setcontent)|更新的內容 `CTaskDialog` 。|
+|[CTaskDialog：： SetDefaultCommandControl](#setdefaultcommandcontrol)|指定預設的命令按鈕控制項。|
+|[CTaskDialog：： SetDefaultRadioButton](#setdefaultradiobutton)|指定預設選項按鈕。|
+|[CTaskDialog：： SetDialogWidth](#setdialogwidth)|調整的寬度 `CTaskDialog` 。|
+|[CTaskDialog：： SetExpansionArea](#setexpansionarea)|更新的展開區域 `CTaskDialog` 。|
+|[CTaskDialog：： SetFooterIcon](#setfootericon)|更新的頁尾圖示 `CTaskDialog` 。|
+|[CTaskDialog：： SetFooterText](#setfootertext)|更新頁尾的文字 `CTaskDialog` 。|
+|[CTaskDialog：： SetMainIcon](#setmainicon)|更新的主要圖示 `CTaskDialog` 。|
+|[CTaskDialog：： SetMainInstruction](#setmaininstruction)|更新的主要指令 `CTaskDialog` 。|
+|[CTaskDialog：： >setoptions](#setoptions)|設定的選項 `CTaskDialog` 。|
+|[CTaskDialog：： SetProgressBarMarquee](#setprogressbarmarquee)|設定的滾動 `CTaskDialog` 盒列，並將它加入至對話方塊。|
+|[CTaskDialog：： SetProgressBarPosition](#setprogressbarposition)|調整進度列的位置。|
+|[CTaskDialog：： SetProgressBarRange](#setprogressbarrange)|調整進度列的範圍。|
+|[CTaskDialog：： SetProgressBarState](#setprogressbarstate)|設定進度列的狀態，並將其顯示在上 `CTaskDialog` 。|
+|[CTaskDialog：： SetRadioButtonOptions](#setradiobuttonoptions)|啟用或停用選項按鈕。|
+|[CTaskDialog：： SetVerificationCheckbox](#setverificationcheckbox)|設定驗證核取方塊的核取狀態。|
+|[CTaskDialog：： SetVerificationCheckboxText](#setverificationcheckboxtext)|設定 [驗證] 核取方塊右邊的文字。|
+|[CTaskDialog：： SetWindowTitle](#setwindowtitle)|設定的標題 `CTaskDialog` 。|
+|[CTaskDialog：： ShowDialog](#showdialog)|建立並顯示 `CTaskDialog` 。|
+|[CTaskDialog：： TaskDialogCallback](#taskdialogcallback)|架構會呼叫此來回應各種不同的 Windows 訊息。|
 
 ### <a name="data-members"></a>資料成員
 
-|||
+|名稱|描述|
 |-|-|
-|`m_aButtons`|命令按鈕控制器的陣列`CTaskDialog`。|
-|`m_aRadioButtons`|的單選按鈕控制元件的陣列`CTaskDialog`。|
-|`m_bVerified`|`TRUE`指示已選中驗證複選框;`FALSE`表示它不是。|
-|`m_footerIcon`|中腳的圖示`CTaskDialog`。|
-|`m_hWnd`|視窗的句柄`CTaskDialog`。|
-|`m_mainIcon`|的主圖示`CTaskDialog`。|
-|`m_nButtonDisabled`|指示禁用哪些常見按鈕的蒙版。|
-|`m_nButtonElevation`|指示哪些常見按鈕需要 UAC 提升的蒙版。|
-|`m_nButtonId`|所選命令按鈕控制件的識別碼。|
-|`m_nCommonButton`|指示 在 上顯示哪些常見`CTaskDialog`按鈕的 蒙版。|
-|`m_nDefaultCommandControl`|顯示 時選擇的命令按鈕控制`CTaskDialog`項的識別碼。|
-|`m_nDefaultRadioButton`|顯示 時選擇的單選按鈕控制`CTaskDialog`項的識別碼。|
-|`m_nFlags`|指示的選項的`CTaskDialog`蒙版。|
-|`m_nProgressPos`|進度條的當前位置。  這個值必須介於 `m_nProgressRangeMin` 和 `m_nProgressRangeMax` 之間。|
-|`m_nProgressRangeMax`|進度條的最大值。|
-|`m_nProgressRangeMin`|進度條的最小值。|
-|`m_nProgressState`|進度條的狀態。 有關詳細資訊,請參閱[CTaskDialog:設定進度列](#setprogressbarstate)。|
-|`m_nRadioId`|所選單選按鈕控制件的識別碼。|
+|`m_aButtons`|的命令按鈕控制項陣列 `CTaskDialog` 。|
+|`m_aRadioButtons`|選項按鈕控制項的陣列 `CTaskDialog` 。|
+|`m_bVerified`|`TRUE` 表示已核取 [驗證] 核取方塊; `FALSE` 指出它不是。|
+|`m_footerIcon`|頁尾中的圖示 `CTaskDialog` 。|
+|`m_hWnd`|的視窗控制碼 `CTaskDialog` 。|
+|`m_mainIcon`|的主要圖示 `CTaskDialog` 。|
+|`m_nButtonDisabled`|指出哪些一般按鈕已停用的遮罩。|
+|`m_nButtonElevation`|遮罩，指出哪些一般按鈕需要 UAC 提高許可權。|
+|`m_nButtonId`|所選命令按鈕控制項的識別碼。|
+|`m_nCommonButton`|表示顯示在上之一般按鈕的遮罩 `CTaskDialog` 。|
+|`m_nDefaultCommandControl`|顯示時選取的命令按鈕控制項識別碼 `CTaskDialog` 。|
+|`m_nDefaultRadioButton`|顯示時所選取之選項按鈕控制項的識別碼 `CTaskDialog` 。|
+|`m_nFlags`|表示選項的遮罩 `CTaskDialog` 。|
+|`m_nProgressPos`|進度列的目前位置。  這個值必須介於 `m_nProgressRangeMin` 和 `m_nProgressRangeMax` 之間。|
+|`m_nProgressRangeMax`|進度列的最大值。|
+|`m_nProgressRangeMin`|進度列的最小值。|
+|`m_nProgressState`|進度列的狀態。 如需詳細資訊，請參閱 [CTaskDialog：： SetProgressBarState](#setprogressbarstate)。|
+|`m_nRadioId`|選取之選項按鈕控制項的識別碼。|
 |`m_nWidth`|`CTaskDialog` 的寬度 (以像素為單位)。|
-|`m_strCollapse`|隱藏展開資訊`CTaskDialog`時,將顯示的字串顯示在擴展框的右側。|
-|`m_strContent`|的內容字串`CTaskDialog`。|
-|`m_strExpand`|顯示展開資訊`CTaskDialog`時,在擴展框右側顯示的字串。|
-|`m_strFooter`|頁腳`CTaskDialog`。|
-|`m_strInformation`|的延伸資訊`CTaskDialog`。|
-|`m_strMainInstruction`|的主要指令`CTaskDialog`。|
+|`m_strCollapse`|`CTaskDialog`隱藏展開的資訊時，顯示在展開方塊右邊的字串。|
+|`m_strContent`|的內容字串 `CTaskDialog` 。|
+|`m_strExpand`|`CTaskDialog`顯示展開的資訊時，顯示在展開方塊右邊的字串。|
+|`m_strFooter`|的頁尾 `CTaskDialog` 。|
+|`m_strInformation`|的展開資訊 `CTaskDialog` 。|
+|`m_strMainInstruction`|的主要指示 `CTaskDialog` 。|
 |`m_strTitle`|`CTaskDialog` 的標題。|
-|`m_strVerification`|在驗證複選框右側`CTaskDialog`顯示的字串。|
+|`m_strVerification`|`CTaskDialog`顯示在 [驗證] 核取方塊右邊的字串。|
 
 ## <a name="remarks"></a>備註
 
-該`CTaskDialog`類替換標準 Windows 消息框,並具有其他功能,如從使用者收集資訊的新控件。 此類位於 Visual Studio 2010 及更高版本中的 MFC 庫中。 從`CTaskDialog`Windows Vista 開始,提供 。 早期版本的 Windows`CTaskDialog`無法顯示 該物件。 用於`CTaskDialog::IsSupported`確定當前使用者是否可以顯示任務對話方塊。 仍然支持標準 Windows 消息框。
+`CTaskDialog`類別會取代標準 Windows 訊息方塊，並具有其他功能，例如從使用者收集資訊的新控制項。 此類別位於 Visual Studio 2010 和更新版本的 MFC 程式庫中。 `CTaskDialog`從 Windows Vista 開始提供。 舊版 Windows 無法顯示 `CTaskDialog` 物件。 用 `CTaskDialog::IsSupported` 來在執行時間判斷目前的使用者是否可以顯示工作對話方塊。 仍支援標準 Windows 訊息方塊。
 
-僅當`CTaskDialog`使用 Unicode 庫生成應用程式時,才可用。
+`CTaskDialog`只有當您使用 Unicode 程式庫建立您的應用程式時，才能使用。
 
-有`CTaskDialog`兩個不同的構造函數。 一個建構函數允許您指定兩個命令按鈕和最多六個常規按鈕控制項。 建立 後可以新增更多命令`CTaskDialog`按鈕 。 第二個建構函數不支援任何命令按鈕,但您可以添加無限數量的常規按鈕控制項。 有關建構函數的詳細資訊,請參閱[CTaskDialog::CTaskDialog](#ctaskdialog)。
+`CTaskDialog`有兩個不同的函式。 其中一個函式可讓您指定兩個命令按鈕，以及最多六個一般按鈕控制項。 建立之後，您可以新增更多命令按鈕 `CTaskDialog` 。 第二個函式不支援任何命令按鈕，但您可以加入無限數量的一般按鈕控制項。 如需有關這些函數的詳細資訊，請參閱 [CTaskDialog：： CTaskDialog](#ctaskdialog)。
 
-下圖顯示了一個示例`CTaskDialog`,用於說明某些控件的位置。
+下圖顯示的範例 `CTaskDialog` 說明一些控制項的位置。
 
 ![CTaskDialog 範例](../../mfc/reference/media/ctaskdialogsample.png "CTaskDialog 範例") <br/>
-C 任務對話範例
+CTaskDialog 範例
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**最低要求作業系統:** 視窗Vista
+**最低需求作業系統：** Windows Vista
 
-**標題:** afxtaskdialog.h
+**標頭：** afxtaskdialog。h
 
-## <a name="ctaskdialogaddcommandcontrol"></a><a name="addcommandcontrol"></a>CTask對話::新增命令控制
+## <a name="ctaskdialogaddcommandcontrol"></a><a name="addcommandcontrol"></a> CTaskDialog：： AddCommandControl
 
-加入新的命令按鈕控制項。 `CTaskDialog`
+將新的命令按鈕控制項新增至 `CTaskDialog` 。
 
 ```cpp
 void AddCommandControl(
@@ -265,31 +265,31 @@ void AddCommandControl(
 
 ### <a name="parameters"></a>參數
 
-*n命令控制ID*<br/>
-[在]命令控制標識號。
+*nCommandControlID*<br/>
+在命令控制項識別碼。
 
-*串標題*<br/>
-[在]向使用者顯示的`CTaskDialog`字串。 使用此字串來解釋命令的用途。
+*strCaption*<br/>
+在 `CTaskDialog` 顯示給使用者的字串。 使用這個字串來說明命令的用途。
 
-*b 啟用*<br/>
-[在]指示新按鈕是啟用還是禁用的布爾參數。
+*bEnabled*<br/>
+在布林值參數，指出新按鈕為啟用或停用。
 
-*b 要求提升*<br/>
-[在]指示命令是否需要高程的布爾參數。
+*bRequiresElevation*<br/>
+在布林值參數，指出命令是否需要提高許可權。
 
 ### <a name="remarks"></a>備註
 
-`CTaskDialog Class`可以顯示無限數量的命令按鈕控制項。 但是,如果`CTaskDialog`顯示任何命令按鈕控件,它最多可以顯示六個按鈕。 `CTaskDialog`如果沒有命令按鈕控件,它可以顯示無限數量的按鈕。
+`CTaskDialog Class`可以顯示不限數目的命令按鈕控制項。 但是，如果 `CTaskDialog` 顯示任何命令按鈕控制項，最多可顯示六個按鈕。 如果沒有 `CTaskDialog` 任何命令按鈕控制項，它可以顯示不限數目的按鈕。
 
-當使用者選擇命令按鈕控制檔時, 將`CTaskDialog`關閉 。 如果應用程式使用[CTaskDialog::DoModal](#domodal)顯示對話`DoModal`方塊, 則傳回所選命令按鈕控制項的*nCommandControlID。*
+當使用者選取命令按鈕控制項時，會 `CTaskDialog` 關閉。 如果您的應用程式使用 [CTaskDialog：:D omodal](#domodal)來顯示對話方塊，則會傳回所 `DoModal` 選命令按鈕控制項的 *nCommandControlID* 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-## <a name="ctaskdialogaddradiobutton"></a><a name="addradiobutton"></a>CTask對話::新增無線按鈕
+## <a name="ctaskdialogaddradiobutton"></a><a name="addradiobutton"></a> CTaskDialog：： AddRadioButton
 
-新增單選按鈕`CTaskDialog`。
+將選項按鈕加入至 `CTaskDialog` 。
 
 ```cpp
 void CTaskDialog::AddRadioButton(
@@ -301,27 +301,27 @@ void CTaskDialog::AddRadioButton(
 ### <a name="parameters"></a>參數
 
 *nRadioButtonID*<br/>
-[在]單選按鈕的標識號。
+在選項按鈕的識別碼。
 
-*串標題*<br/>
-[在]在單選按鈕`CTaskDialog`旁邊顯示的字串。
+*strCaption*<br/>
+在在 `CTaskDialog` 選項按鈕旁邊顯示的字串。
 
-*b 啟用*<br/>
-[在]指示是否啟用單選按鈕的布爾參數。
+*bEnabled*<br/>
+在指出是否已啟用選項按鈕的布林值參數。
 
 ### <a name="remarks"></a>備註
 
-[CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)的單選按鈕使您能夠從用戶那裡收集資訊。 使用函數[CTaskDialog:獲取選擇無線電按鈕ID](#getselectedradiobuttonid)來確定選擇了哪個單選按鈕。
+[CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)的選項按鈕可讓您收集使用者的資訊。 使用函式 [CTaskDialog：： GetSelectedRadioButtonID](#getselectedradiobuttonid) 來判斷選取的選項按鈕。
 
-不`CTaskDialog`要求*nRadioButtonID*參數對於每個單選按鈕是唯一的。 但是,如果不為每個單選按鈕使用不同的標識符,則可能會遇到意外行為。
+不 `CTaskDialog` 需要每個選項按鈕的 *nRadioButtonID* 參數都是唯一的。 但是，如果您不使用每個選項按鈕的相異識別碼，您可能會遇到非預期的行為。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-## <a name="ctaskdialogclickcommandcontrol"></a><a name="clickcommandcontrol"></a>CTask對話::按下命令控制
+## <a name="ctaskdialogclickcommandcontrol"></a><a name="clickcommandcontrol"></a> CTaskDialog：： ClickCommandControl
 
-以程式設計方式按下命令按鈕控制件或常用按鈕。
+以程式設計方式按一下命令按鈕控制項或一般按鈕。
 
 ```
 protected:
@@ -330,16 +330,16 @@ void ClickCommandControl(int nCommandControlID) const;
 
 ### <a name="parameters"></a>參數
 
-*n命令控制ID*<br/>
-[在]要按下的控制項的命令 ID。
+*nCommandControlID*<br/>
+在要按一下之控制項的命令 ID。
 
 ### <a name="remarks"></a>備註
 
-此方法生成視窗消息TDM_CLICK_BUTTON。
+這個方法會產生 windows 訊息 TDM_CLICK_BUTTON。
 
-## <a name="ctaskdialogclickradiobutton"></a><a name="clickradiobutton"></a>CTask對話::點擊收音機按鈕
+## <a name="ctaskdialogclickradiobutton"></a><a name="clickradiobutton"></a> CTaskDialog：： ClickRadioButton
 
-以程式設計方式按下單選按鈕。
+以程式設計方式按一下選項按鈕。
 
 ```
 protected:
@@ -349,15 +349,15 @@ void ClickRadioButton(int nRadioButtonID) const;
 ### <a name="parameters"></a>參數
 
 *nRadioButtonID*<br/>
-[在]要按下的單選按鈕的 ID。
+在要按一下之選項按鈕的識別碼。
 
 ### <a name="remarks"></a>備註
 
-此方法生成視窗消息TDM_CLICK_RADIO_BUTTON。
+這個方法會產生 windows 訊息 TDM_CLICK_RADIO_BUTTON。
 
-## <a name="ctaskdialogctaskdialog"></a><a name="ctaskdialog"></a>C 任務對話::C任務對話
+## <a name="ctaskdialogctaskdialog"></a><a name="ctaskdialog"></a> CTaskDialog：： CTaskDialog
 
-創建[CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)的實體。
+建立 [CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)的實例。
 
 ```
 CTaskDialog(
@@ -381,45 +381,45 @@ CTaskDialog(
 
 ### <a name="parameters"></a>參數
 
-*str 內容*<br/>
-[在]用於的內容`CTaskDialog`的字串。
+*strContent*<br/>
+在要用於內容的字串 `CTaskDialog` 。
 
-*斯特曼指令*<br/>
-[在]的主要指令`CTaskDialog`。
+*strMainInstruction*<br/>
+在的主要指示 `CTaskDialog` 。
 
-*斯特標題*<br/>
-[在]的標題`CTaskDialog`。
+*strTitle*<br/>
+在的標題 `CTaskDialog` 。
 
-*n 通用按鈕*<br/>
-[在]要新增的常用按鈕的遮罩`CTaskDialog`。
+*nCommonButtons*<br/>
+在要加入之一般按鈕的遮罩 `CTaskDialog` 。
 
-*n 工作對話選項*<br/>
-[在]用於的選項`CTaskDialog`集。
+*nTaskDialogOptions*<br/>
+在要用於的選項組 `CTaskDialog` 。
 
-*斯特福特*<br/>
-[在]要用作頁腳的字串。
+*strFooter*<br/>
+在要作為頁尾使用的字串。
 
-*nID 命令控制優先*<br/>
-[在]第一個命令的字串 ID。
+*nIDCommandControlsFirst*<br/>
+在第一個命令的字串識別碼。
 
-*nID 命令控制上次*<br/>
-[在]最後一個命令的字串 ID。
+*nIDCommandControlsLast*<br/>
+在最後一個命令的字串識別碼。
 
 ### <a name="remarks"></a>備註
 
-有兩種方法可以加入應用程式 。 `CTaskDialog` 第一種方法是使用其中一個建構函數創建`CTaskDialog`, 並使用[CTaskDialog::DoModal](#domodal)顯示它。 第二種方法是使用靜態函數[CTaskDialog::showDialog](#showdialog),它使您能夠在不顯`CTaskDialog``CTaskDialog`式建立 物件的情況下顯示 。
+有兩種方式可將加入 `CTaskDialog` 至您的應用程式。 第一種方式是使用其中一個函式來建立 `CTaskDialog` ，並使用 [CTaskDialog：:D omodal](#domodal)來顯示它。 第二種方式是使用 static function [CTaskDialog：： ShowDialog](#showdialog)，這可讓您在 `CTaskDialog` 不明確建立物件的情況下顯示 `CTaskDialog` 。
 
-第二個建構函數使用來自應用程式的資源文件的數據創建命令按鈕控制項。 資源檔中的字串表具有多個字串與關聯的字串指示。 此方法為*nIDCommandControlsFirst*和*nCommandControlsLast*之間的字串表中的每個有效項目添加命令按鈕控制項,包括。 對於這些命令按鈕控制項,字串表中的字串是控制項的標題,字串 ID 是控制項的識別碼。
+第二個函式會使用來自您應用程式資源檔的資料，建立命令按鈕控制項。 資源檔中的字串資料表有數個具有相關聯字串識別碼的字串。 這個方法會在 *nIDCommandControlsFirst* 和 *nCommandControlsLast*（含）之間的字串資料表中，為每個有效的專案新增一個命令按鈕控制項。 針對這些命令按鈕控制項，字串資料表中的字串是控制項的標題，而字串識別碼是控制項的識別碼。
 
-關於有效選項的清單,請參閱[CTaskDialog:設定選項](#setoptions)。
+如需有效選項的清單，請參閱 [CTaskDialog：： >setoptions](#setoptions) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogdomodal"></a><a name="domodal"></a>CTask對話::Do模態
+## <a name="ctaskdialogdomodal"></a><a name="domodal"></a> CTaskDialog：:D oModal
 
-顯示`CTaskDialog`和使其模態。
+顯示 `CTaskDialog` 並使其成為強制回應。
 
 ```
 INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
@@ -427,26 +427,26 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>參數
 
-*h 家長*<br/>
-[在]的`CTaskDialog`父視窗。
+*hParent*<br/>
+在的父視窗 `CTaskDialog` 。
 
 ### <a name="return-value"></a>傳回值
 
-與使用者所做的選擇對應的整數。
+對應到使用者所做選擇的整數。
 
 ### <a name="remarks"></a>備註
 
-顯示[CTaskDialog](../../mfc/reference/ctaskdialog-class.md)的此實例。 然後,應用程式等待使用者關閉對話方塊。
+顯示此 [CTaskDialog](../../mfc/reference/ctaskdialog-class.md)的實例。 然後，應用程式會等待使用者關閉對話方塊。
 
-當使用者`CTaskDialog`選擇公共按鈕、指令連結控制項或關閉`CTaskDialog`時 關閉 。 返回值是指示使用者如何關閉對話框的標識符。
+`CTaskDialog`當使用者選取通用按鈕、命令連結控制項或關閉時，就會關閉 `CTaskDialog` 。 傳回值是指出使用者關閉對話方塊之方式的識別碼。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialoggetcommonbuttoncount"></a><a name="getcommonbuttoncount"></a>CTask對話::取得公共按鈕計數
+## <a name="ctaskdialoggetcommonbuttoncount"></a><a name="getcommonbuttoncount"></a> CTaskDialog：： GetCommonButtonCount
 
-檢索常用按鈕的數量。
+捕獲一般按鈕的數目。
 
 ```
 int GetCommonButtonCount() const;
@@ -454,17 +454,17 @@ int GetCommonButtonCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-可用的常用按鈕數。
+可用的常見按鈕數目。
 
 ### <a name="remarks"></a>備註
 
-常見按鈕是提供給[CTaskDialog::CTaskDialog](#ctaskdialog)的默認按鈕。 [CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)顯示對話框底部的按鈕。
+一般按鈕是您提供給 [CTaskDialog：： CTaskDialog](#ctaskdialog)的預設按鈕。 [CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)會顯示對話方塊底部的按鈕。
 
-枚舉的按鈕清單在 CommCtrl.h 中提供。
+CommCtrl 中會提供按鈕的列舉清單。
 
-## <a name="ctaskdialoggetcommonbuttonflag"></a><a name="getcommonbuttonflag"></a>CTask對話::取得公共按鈕標誌
+## <a name="ctaskdialoggetcommonbuttonflag"></a><a name="getcommonbuttonflag"></a> CTaskDialog：： GetCommonButtonFlag
 
-將標準 Windows 按鈕轉換為與[CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)關聯的常見按鈕類型。
+將標準 Windows 按鈕轉換成與 [CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)相關聯的一般按鈕類型。
 
 ```
 int GetCommonButtonFlag(int nButtonId) const;
@@ -473,15 +473,15 @@ int GetCommonButtonFlag(int nButtonId) const;
 ### <a name="parameters"></a>參數
 
 *nButtonId*<br/>
-[在]標準 Windows 按鈕值。
+在標準 Windows 按鈕的值。
 
 ### <a name="return-value"></a>傳回值
 
-相應的`CTaskDialog`公用按鈕的值。 如果沒有相應的通用按鈕,此方法返回 0。
+對應之 `CTaskDialog` 一般按鈕的值。 如果沒有對應的一般按鈕，這個方法會傳回0。
 
-## <a name="ctaskdialoggetcommonbuttonid"></a><a name="getcommonbuttonid"></a>CTask對話::取得公共按鈕Id
+## <a name="ctaskdialoggetcommonbuttonid"></a><a name="getcommonbuttonid"></a> CTaskDialog：： GetCommonButtonId
 
-將與[CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)關聯的常見按鈕類型之一轉換為標準 Windows 按鈕。
+將與 [CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md) 相關聯的其中一個常見按鈕類型轉換成標準的 Windows 按鈕。
 
 ```
 int GetCommonButtonId(int nFlag);
@@ -490,15 +490,15 @@ int GetCommonButtonId(int nFlag);
 ### <a name="parameters"></a>參數
 
 *nFlag*<br/>
-[在]與`CTaskDialog`類關聯的通用按鈕類型。
+在與類別相關聯的一般按鈕類型 `CTaskDialog` 。
 
 ### <a name="return-value"></a>傳回值
 
-相應的標準 Windows 按鈕的值。 如果沒有相應的 Windows 按鈕,該方法將返回 0。
+對應標準 Windows 按鈕的值。 如果沒有對應的 Windows 按鈕，此方法會傳回0。
 
-## <a name="ctaskdialoggetoptions"></a><a name="getoptions"></a>CTask 對話:抓取選項
+## <a name="ctaskdialoggetoptions"></a><a name="getoptions"></a> CTaskDialog：： GetOptions
 
-傳回`CTaskDialog`此的選項標誌。
+傳回這個的選項旗標 `CTaskDialog` 。
 
 ```
 int GetOptions() const;
@@ -506,19 +506,19 @@ int GetOptions() const;
 
 ### <a name="return-value"></a>傳回值
 
-中區的旗`CTaskDialog`標 。
+的旗標 `CTaskDialog` 。
 
 ### <a name="remarks"></a>備註
 
-有關[CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)的選項的詳細資訊,請參閱[CTaskDialog::setOptions](#setoptions)。
+如需 [CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)可用選項的詳細資訊，請參閱 [CTaskDialog：： >setoptions](#setoptions)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialoggetselectedcommandcontrolid"></a><a name="getselectedcommandcontrolid"></a>CTask 對話:抓取所指令控制 ID
+## <a name="ctaskdialoggetselectedcommandcontrolid"></a><a name="getselectedcommandcontrolid"></a> CTaskDialog：： GetSelectedCommandControlID
 
-返回所選命令按鈕控件。
+傳回選取的命令按鈕控制項。
 
 ```
 int GetSelectedCommandControlID() const;
@@ -526,19 +526,19 @@ int GetSelectedCommandControlID() const;
 
 ### <a name="return-value"></a>傳回值
 
-當前選擇指令按鈕控制件的識別碼。
+目前選取的命令按鈕控制項的識別碼。
 
 ### <a name="remarks"></a>備註
 
-不必使用此方法檢索用戶選擇的命令按鈕的 ID。 該 ID 由[CTaskDialog::Do 模式或](#domodal) [CTaskDialog::顯示對話](#showdialog)返回。
+您不需要使用這個方法來取得使用者選取之命令按鈕的識別碼。 [CTaskDialog：:D omodal](#domodal)或[CTaskDialog：： ShowDialog](#showdialog)會傳回該識別碼。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-## <a name="ctaskdialoggetselectedradiobuttonid"></a><a name="getselectedradiobuttonid"></a>CTask對話::取得選擇無線電按鈕ID
+## <a name="ctaskdialoggetselectedradiobuttonid"></a><a name="getselectedradiobuttonid"></a> CTaskDialog：： GetSelectedRadioButtonID
 
-返回選定的單選按鈕。
+傳回選取的選項按鈕。
 
 ```
 int GetSelectedRadioButtonID() const;
@@ -546,19 +546,19 @@ int GetSelectedRadioButtonID() const;
 
 ### <a name="return-value"></a>傳回值
 
-所選單選按鈕的 ID。
+選取之選項按鈕的識別碼。
 
 ### <a name="remarks"></a>備註
 
-用戶可以在使用者關閉對話方塊後使用此方法來檢索選定的單選按鈕。
+您可以在使用者關閉對話方塊來取出選取的選項按鈕之後，使用這個方法。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-## <a name="ctaskdialoggetverificationcheckboxstate"></a><a name="getverificationcheckboxstate"></a>CTask對話::抓取框狀態
+## <a name="ctaskdialoggetverificationcheckboxstate"></a><a name="getverificationcheckboxstate"></a> CTaskDialog：： GetVerificationCheckboxState
 
-檢索驗證複選框的狀態。
+捕獲驗證核取方塊的狀態。
 
 ```
 BOOL GetVerificationCheckboxState() const;
@@ -566,15 +566,15 @@ BOOL GetVerificationCheckboxState() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果選中該複選框,則為 TRUE,如果沒有,則 FALSE。
+如果核取核取方塊，則為 TRUE，否則為 FALSE。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-## <a name="ctaskdialogiscommandcontrolenabled"></a><a name="iscommandcontrolenabled"></a>CTask對話::啟用命令控制
+## <a name="ctaskdialogiscommandcontrolenabled"></a><a name="iscommandcontrolenabled"></a> CTaskDialog：： IsCommandControlEnabled
 
-確定是否啟用命令按鈕控制件或按鈕。
+決定是否啟用命令按鈕控制項或按鈕。
 
 ```
 BOOL IsCommandControlEnabled(int nCommandControlID) const;
@@ -582,26 +582,26 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 ### <a name="parameters"></a>參數
 
-*n命令控制ID*<br/>
-[在]要測試的命令按鈕控制件或按鈕的 ID。
+*nCommandControlID*<br/>
+在要測試之命令按鈕控制項或按鈕的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果啟用了控制項,則為 TRUE,如果未啟用,則為 FALSE。
+如果已啟用控制項，則為 TRUE，否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-可以使用此方法確定命令按鈕控制項和`CTaskDialog`Class* 的常見按鈕的可用性。
+您可以使用這個方法來判斷命令按鈕控制項和類別的一般按鈕的可用性 `CTaskDialog` *。
 
-如果*nCommandControlID*`CTaskDialog`不是常見 按鈕或命令按鈕控制件的有效識別符,則此方法將引發異常。
+如果 *nCommandControlID* 不是一般 `CTaskDialog` 按鈕或命令按鈕控制項的有效識別碼，這個方法會擲回例外狀況。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-## <a name="ctaskdialogisradiobuttonenabled"></a><a name="isradiobuttonenabled"></a>CTask對話::開啟無線電按鈕
+## <a name="ctaskdialogisradiobuttonenabled"></a><a name="isradiobuttonenabled"></a> CTaskDialog：： IsRadioButtonEnabled
 
-確定是否啟用了單選按鈕。
+決定是否啟用選項按鈕。
 
 ```
 BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
@@ -610,23 +610,23 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 ### <a name="parameters"></a>參數
 
 *nRadioButtonID*<br/>
-[在]要測試的單選按鈕的 ID。
+在要測試之選項按鈕的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果啟用了單選按鈕,則為 TRUE,如果沒有,則 FALSE。
+如果已啟用選項按鈕則為 TRUE，否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果*nRadioButtonID*不是單選按鈕的有效標識符,則此方法將引發異常。
+如果 *nRadioButtonID* 不是選項按鈕的有效識別碼，這個方法會擲回例外狀況。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-## <a name="ctaskdialogissupported"></a><a name="issupported"></a>CTask對話::支援
+## <a name="ctaskdialogissupported"></a><a name="issupported"></a> CTaskDialog：： IsSupported
 
-確定執行應用程式的電腦是否支援`CTaskDialog`。
+判斷正在執行應用程式的電腦是否支援 `CTaskDialog` 。
 
 ```
 static BOOL IsSupported();
@@ -634,19 +634,19 @@ static BOOL IsSupported();
 
 ### <a name="return-value"></a>傳回值
 
-如果電腦支援,`CTaskDialog`則為 TRUE。否則。
+如果電腦支援，則為 TRUE `CTaskDialog` 。否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-使用此函數在運行時確定運行應用程式的計算機是否支援該`CTaskDialog`類。 如果電腦不支援`CTaskDialog`, 應提供另一種方法將資訊傳達給使用者。 如果應用程式嘗試在不支援該`CTaskDialog``CTaskDialog`類的電腦上使用, 則應用程式將崩潰。
+如果執行您應用程式的電腦支援類別，請使用此函式來判斷執行時間 `CTaskDialog` 。 如果電腦不支援 `CTaskDialog` ，您應該提供另一種方式來與使用者通訊資訊。 如果應用程式嘗試 `CTaskDialog` 在不支援類別的電腦上使用，您的應用程式將會損毀 `CTaskDialog` 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#1](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]
 
-## <a name="ctaskdialogloadcommandcontrols"></a><a name="loadcommandcontrols"></a>C任務對話::載入命令控制
+## <a name="ctaskdialogloadcommandcontrols"></a><a name="loadcommandcontrols"></a> CTaskDialog：： LoadCommandControls
 
-使用字串表中的數據添加命令按鈕控制項。
+使用字串資料表中的資料，加入命令按鈕控制項。
 
 ```cpp
 void LoadCommandControls(
@@ -656,25 +656,25 @@ void LoadCommandControls(
 
 ### <a name="parameters"></a>參數
 
-*nID 命令控制優先*<br/>
-[在]第一個命令的字串 ID。
+*nIDCommandControlsFirst*<br/>
+在第一個命令的字串識別碼。
 
-*nID 命令控制上次*<br/>
-[在]最後一個命令的字串 ID。
+*nIDCommandControlsLast*<br/>
+在最後一個命令的字串識別碼。
 
 ### <a name="remarks"></a>備註
 
-此方法透過使用來自應用程式的資源檔的資料建立命令按鈕控制項。 資源檔中的字串表具有多個字串與關聯的字串指示。 使用此方法添加的新命令按鈕控制項使用字串作為控制項的標題和控制項 ID 的字串 ID。 所選字串的範圍由*nIDCommandControlsFirst*和*nCommandControlsLast*提供,包括。 如果區域中有空條目,則 該方法不會為該條目添加命令按鈕控件。
+這個方法會使用來自您應用程式資源檔的資料，建立命令按鈕控制項。 資源檔中的字串資料表有數個具有相關聯字串識別碼的字串。 使用這個方法新增的新命令按鈕控制項，會使用控制項標題的字串和控制項識別碼的字串識別碼。 選取的字串範圍是由 *nIDCommandControlsFirst* 和 *nCommandControlsLast*（含）所提供。 如果範圍中有空白專案，此方法不會加入該專案的命令按鈕控制項。
 
-默認情況下,啟用新的命令按鈕控制項,不需要提升。
+預設會啟用新的命令按鈕控制項，而且不需要提高許可權。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-## <a name="ctaskdialogloadradiobuttons"></a><a name="loadradiobuttons"></a>CTask對話::載入無線按鈕
+## <a name="ctaskdialogloadradiobuttons"></a><a name="loadradiobuttons"></a> CTaskDialog：： LoadRadioButtons
 
-使用字串表中的數據添加單選按鈕控制項。
+使用字串資料表中的資料，加入選項按鈕控制項。
 
 ```cpp
 void LoadRadioButtons(
@@ -684,25 +684,25 @@ void LoadRadioButtons(
 
 ### <a name="parameters"></a>參數
 
-*nIDRadioButtons 首先*<br/>
-[在]第一個單選按鈕的字串 ID。
+*nIDRadioButtonsFirst*<br/>
+在第一個選項按鈕的字串識別碼。
 
-*nIDRadioButtonSLast*<br/>
-[在]最後一個單選按鈕的字串 ID。
+*nIDRadioButtonsLast*<br/>
+在最後一個選項按鈕的字串識別碼。
 
 ### <a name="remarks"></a>備註
 
-此方法使用應用程式的資源檔中的數據創建單選按鈕。 資源檔中的字串表具有多個字串與關聯的字串指示。 使用此方法添加的新單選按鈕使用單選按鈕的字幕字串和單選按鈕 ID 的字串 ID。 所選字串的範圍由*nIDRadioButtonsFirst*和*nRadioButtonSLast*提供,包括。 如果範圍內有空條目,則 該方法不會為該條目添加單選按鈕。
+這個方法會使用來自您應用程式資源檔的資料來建立選項按鈕。 資源檔中的字串資料表有數個具有相關聯字串識別碼的字串。 使用這個方法新增的選項按鈕會使用選項按鈕標題的字串，以及選項按鈕識別碼的字串識別碼。 選取的字串範圍是由 *nIDRadioButtonsFirst* 和 *nRadioButtonsLast*（含）所提供。 如果範圍中有空白專案，此方法不會為該專案加入選項按鈕。
 
-預設情況下,啟用新的單選按鈕。
+預設會啟用新的選項按鈕。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-## <a name="ctaskdialognavigateto"></a><a name="navigateto"></a>CTask對話::導航到
+## <a name="ctaskdialognavigateto"></a><a name="navigateto"></a> CTaskDialog：： NavigateTo
 
-將焦點移至另一`CTaskDialog`個 。
+將焦點轉移到另一個 `CTaskDialog` 。
 
 ```
 protected:
@@ -711,16 +711,16 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 
 ### <a name="parameters"></a>參數
 
-*o工作交談*<br/>
-[在]接收`CTaskDialog`焦點的 。
+*oTaskDialog*<br/>
+在 `CTaskDialog` 接收焦點的。
 
 ### <a name="remarks"></a>備註
 
-此方法在顯示`CTaskDialog`*oTaskDialog*時隱藏電流。 *oTaskDialog*與`CTaskDialog`當前的位置相同。
+這個方法 `CTaskDialog` 會在顯示 *oTaskDialog*時隱藏目前的。 *OTaskDialog*會顯示在與目前相同的位置 `CTaskDialog` 。
 
-## <a name="ctaskdialogoncommandcontrolclick"></a><a name="oncommandcontrolclick"></a>CTask對話::命令控制單擊
+## <a name="ctaskdialogoncommandcontrolclick"></a><a name="oncommandcontrolclick"></a> CTaskDialog：： OnCommandControlClick
 
-當用戶按下命令按鈕控制件時,框架將調用此方法。
+當使用者按一下命令按鈕控制項時，架構會呼叫這個方法。
 
 ```
 virtual HRESULT OnCommandControlClick(int nCommandControlID);
@@ -728,20 +728,20 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 
 ### <a name="parameters"></a>參數
 
-*n命令控制ID*<br/>
-[在]使用者選擇的命令按鈕控制項的識別碼。
+*nCommandControlID*<br/>
+在使用者選取的命令按鈕控制項識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogoncreate"></a><a name="oncreate"></a>CTask對話::開啟建立
+## <a name="ctaskdialogoncreate"></a><a name="oncreate"></a> CTaskDialog：： >oncreate
 
-框架在建立 後呼叫此`CTaskDialog`方法 。
+架構會在建立之後呼叫這個方法 `CTaskDialog` 。
 
 ```
 virtual HRESULT OnCreate();
@@ -749,15 +749,15 @@ virtual HRESULT OnCreate();
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogondestroy"></a><a name="ondestroy"></a>C任務對話::在銷毀
+## <a name="ctaskdialogondestroy"></a><a name="ondestroy"></a> CTaskDialog：： OnDestroy
 
-框架在銷毀 之前立即呼叫此`CTaskDialog`方法 。
+架構會在終結之前立即呼叫這個方法 `CTaskDialog` 。
 
 ```
 virtual HRESULT OnDestroy();
@@ -765,15 +765,15 @@ virtual HRESULT OnDestroy();
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogonexpandbuttonclick"></a><a name="onexpandbuttonclick"></a>CTask對話::打開按鈕點擊
+## <a name="ctaskdialogonexpandbuttonclick"></a><a name="onexpandbuttonclick"></a> CTaskDialog：： OnExpandButtonClick
 
-當用戶按一下擴展按鈕時,框架將調用此方法。
+當使用者按一下展開按鈕時，架構會呼叫這個方法。
 
 ```
 virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
@@ -781,20 +781,20 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 
 ### <a name="parameters"></a>參數
 
-*b 延伸*<br/>
-[在]非零值表示顯示額外資訊;使用 「非零」值,表示顯示額外資訊。0 表示附加資訊已隱藏。
+*bExpanded*<br/>
+在非零值表示顯示額外的資訊;0表示隱藏額外的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogonhelp"></a><a name="onhelp"></a>CTask對話::上説明
+## <a name="ctaskdialogonhelp"></a><a name="onhelp"></a> CTaskDialog：： OnHelp
 
-當使用者請求説明時,框架調用此方法。
+當使用者要求協助時，架構會呼叫這個方法。
 
 ```
 virtual HRESULT OnHelp();
@@ -802,15 +802,15 @@ virtual HRESULT OnHelp();
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogonhyperlinkclick"></a><a name="onhyperlinkclick"></a>CTask對話::在超鏈接點擊
+## <a name="ctaskdialogonhyperlinkclick"></a><a name="onhyperlinkclick"></a> CTaskDialog：： OnHyperlinkClick
 
-當用戶單擊超連結時,框架將調用此方法。
+當使用者按一下超連結時，架構會呼叫這個方法。
 
 ```
 virtual HRESULT OnHyperlinkClick(const CString& strHref);
@@ -818,22 +818,22 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="parameters"></a>參數
 
-*斯特雷赫*<br/>
-[在]表示超連結的字串。
+*strHref*<br/>
+在表示超連結的字串。
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-此方法在返回S_OK之前調用[ShellExecute。](/windows/win32/api/shellapi/nf-shellapi-shellexecutew)
+這個方法會先呼叫 [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) ，然後再傳回 S_OK。
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogoninit"></a><a name="oninit"></a>CTask對話::Oninit
+## <a name="ctaskdialogoninit"></a><a name="oninit"></a> CTaskDialog：： OnInit
 
-初始化 時`CTaskDialog`, 框架呼叫此方法。
+當初始化時，架構會呼叫這個方法 `CTaskDialog` 。
 
 ```
 virtual HRESULT OnInit();
@@ -841,15 +841,15 @@ virtual HRESULT OnInit();
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogonnavigatepage"></a><a name="onnavigatepage"></a>CTask對話::上導航頁
+## <a name="ctaskdialogonnavigatepage"></a><a name="onnavigatepage"></a> CTaskDialog：： OnNavigatePage
 
-框架呼叫此方法以回應[CTaskDialog::Navigateto](#navigateto)方法。
+架構會呼叫這個方法來回應 [CTaskDialog：： NavigateTo](#navigateto) 方法。
 
 ```
 virtual HRESULT OnNavigatePage();
@@ -857,15 +857,15 @@ virtual HRESULT OnNavigatePage();
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogonradiobuttonclick"></a><a name="onradiobuttonclick"></a>CTask對話::在電臺點擊
+## <a name="ctaskdialogonradiobuttonclick"></a><a name="onradiobuttonclick"></a> CTaskDialog：： OnRadioButtonClick
 
-當用戶選擇單選按鈕控制項時,框架將調用此方法。
+當使用者選取選項按鈕控制項時，架構會呼叫這個方法。
 
 ```
 virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
@@ -874,19 +874,19 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 ### <a name="parameters"></a>參數
 
 *nRadioButtonID*<br/>
-[在]使用者按下的單選按鈕控制的 ID。
+在使用者所按之選項按鈕控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogontimer"></a><a name="ontimer"></a>CTask對話:在計時器上
+## <a name="ctaskdialogontimer"></a><a name="ontimer"></a> CTaskDialog：： OnTimer
 
-當計時器過期時,框架調用此方法。
+當計時器到期時，架構會呼叫這個方法。
 
 ```
 virtual HRESULT OnTimer(long lTime);
@@ -895,19 +895,19 @@ virtual HRESULT OnTimer(long lTime);
 ### <a name="parameters"></a>參數
 
 *lTime*<br/>
-[在]創建 或重置計時器`CTaskDialog`以來的時間(以毫秒為單位)。
+在自 `CTaskDialog` 建立或重設計時器之後的時間（以毫秒為單位）。
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogonverificationcheckboxclick"></a><a name="onverificationcheckboxclick"></a>CTask對話::打開驗證複選框按一下
+## <a name="ctaskdialogonverificationcheckboxclick"></a><a name="onverificationcheckboxclick"></a> CTaskDialog：： OnVerificationCheckboxClick
 
-當用戶單擊驗證複選框時,框架將調用此方法。
+當使用者按一下 [驗證] 核取方塊時，架構會呼叫這個方法。
 
 ```
 virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
@@ -916,19 +916,19 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 ### <a name="parameters"></a>參數
 
 *bChecked*<br/>
-[在]TRUE 表示選擇了驗證複選框;FALSE 表示它不是。
+在TRUE 表示已選取 [驗證] 核取方塊;FALSE 表示它不是。
 
 ### <a name="return-value"></a>傳回值
 
-預設實現返回S_OK。
+預設的實值會傳回 S_OK。
 
 ### <a name="remarks"></a>備註
 
-重寫派生類中的此方法以實現自定義行為。
+在衍生類別中覆寫這個方法，以執行自訂行為。
 
-## <a name="ctaskdialogremoveallcommandcontrols"></a><a name="removeallcommandcontrols"></a>CTask對話::刪除所有命令控制
+## <a name="ctaskdialogremoveallcommandcontrols"></a><a name="removeallcommandcontrols"></a> CTaskDialog：： RemoveAllCommandControls
 
-從中移除的所有指令按鍵控制器`CTaskDialog`。
+從移除所有的命令按鈕控制項 `CTaskDialog` 。
 
 ```cpp
 void RemoveAllCommandControls();
@@ -938,9 +938,9 @@ void RemoveAllCommandControls();
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-## <a name="ctaskdialogremoveallradiobuttons"></a><a name="removeallradiobuttons"></a>CTask對話::刪除所有無線按鈕
+## <a name="ctaskdialogremoveallradiobuttons"></a><a name="removeallradiobuttons"></a> CTaskDialog：： RemoveAllRadioButtons
 
-從中移除的所有單選按鈕`CTaskDialog`。
+從移除所有的選項按鈕 `CTaskDialog` 。
 
 ```cpp
 void RemoveAllRadioButtons();
@@ -950,9 +950,9 @@ void RemoveAllRadioButtons();
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-## <a name="ctaskdialogsetcommandcontroloptions"></a><a name="setcommandcontroloptions"></a>CTask對話::設定命令控制選項
+## <a name="ctaskdialogsetcommandcontroloptions"></a><a name="setcommandcontroloptions"></a> CTaskDialog：： SetCommandControlOptions
 
-更新 上的指令按鍵控制`CTaskDialog`器 。
+更新上的命令按鈕控制項 `CTaskDialog` 。
 
 ```cpp
 void SetCommandControlOptions(
@@ -963,26 +963,26 @@ void SetCommandControlOptions(
 
 ### <a name="parameters"></a>參數
 
-*n命令控制ID*<br/>
-[在]要更新的命令控制件的 ID。
+*nCommandControlID*<br/>
+在要更新之命令控制項的識別碼。
 
-*b 啟用*<br/>
-[在]布爾參數,指示指定的命令按鈕控制項是啟用還是禁用。
+*bEnabled*<br/>
+在布林值參數，指出指定的命令按鈕控制項為啟用或停用。
 
-*b 要求提升*<br/>
-[在]布爾參數,指示指定的命令按鈕控制項是否需要高程。
+*bRequiresElevation*<br/>
+在布林值參數，指出指定的命令按鈕控制項是否需要提高許可權。
 
 ### <a name="remarks"></a>備註
 
-使用此方法可以更改命令按鈕控制項是否已啟用或在添加到`CTaskDialog`類後是否需要提升。
+您可以使用這個方法來變更命令按鈕控制項是否已啟用，或在加入至類別之後需要提高許可權 `CTaskDialog` 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-## <a name="ctaskdialogsetcommonbuttonoptions"></a><a name="setcommonbuttonoptions"></a>CTask對話::設定公共按鈕選項
+## <a name="ctaskdialogsetcommonbuttonoptions"></a><a name="setcommonbuttonoptions"></a> CTaskDialog：： SetCommonButtonOptions
 
-更新要啟用的常用按鈕的子集,並要求 UAC 提升。
+更新要啟用的一般按鈕子集，並要求 UAC 提高許可權。
 
 ```cpp
 void SetCommonButtonOptions(
@@ -992,27 +992,27 @@ void SetCommonButtonOptions(
 
 ### <a name="parameters"></a>參數
 
-*n 關閉按鈕的遮罩*<br/>
-[在]要禁用的常見按鈕的掩碼。
+*nDisabledButtonMask*<br/>
+在要停用之一般按鈕的遮罩。
 
-*n 海拔按鈕的遮罩*<br/>
-[在]需要高程的常見按鈕的蒙版。
+*nElevationButtonMask*<br/>
+在需要提高許可權之一般按鈕的遮罩。
 
 ### <a name="remarks"></a>備註
 
-可以使用建構函數[CTaskDialog::CTaskDialog](#ctaskdialog)和方法[CTaskDialog::setCommonButton,](#setcommonbuttons)設置[CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)實例可用的通用按鈕。 `CTaskDialog::SetCommonButtonOptions`不支援添加新的通用按鈕。
+您可以使用[CTaskDialog：： CTaskDialog](#ctaskdialog)和方法[CTaskDialog：： SetCommonButtons](#setcommonbuttons)，將可用的一般按鈕設定為[CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)的實例。 `CTaskDialog::SetCommonButtonOptions` 不支援加入新的一般按鈕。
 
-如果使用此方法禁用或提升對此不可用的通用按鈕`CTaskDialog`,則此方法通過使用["確保"](diagnostic-services.md#ensure)宏引發異常。
+如果您使用這個方法來停用或提高無法使用的一般按鈕 `CTaskDialog` ，這個方法會使用「 [確定](diagnostic-services.md#ensure) 」宏擲回例外狀況。
 
-此方法啟用任何可用於`CTaskDialog`但不在 n*殘疾人按鈕掩碼中的*按鈕,即使它以前已禁用也是如此。 此方法以類似的方式對待高程:如果通用按鈕可用但不包括在*nElevation Button 遮罩*中,則將通用按鈕記錄為不需要高程。
+這個方法會啟用任何可用的按鈕， `CTaskDialog` 但不在 *nDisabledButtonMask*中，即使先前已停用也一樣。 此方法會以類似的方式來處理提高許可權：如果一般按鈕可用但未包含在 *nElevationButtonMask*中，則會將一般按鈕記錄為不需要提高許可權。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#6](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]
 
-## <a name="ctaskdialogsetcommonbuttons"></a><a name="setcommonbuttons"></a>CTask對話::設定公共按鈕
+## <a name="ctaskdialogsetcommonbuttons"></a><a name="setcommonbuttons"></a> CTaskDialog：： SetCommonButtons
 
-將一般按鈕加入`CTaskDialog`。
+將一般按鈕新增至 `CTaskDialog` 。
 
 ```cpp
 void SetCommonButtons(
@@ -1023,32 +1023,32 @@ void SetCommonButtons(
 
 ### <a name="parameters"></a>參數
 
-*nButton 遮罩*<br/>
-[在]要添加到`CTaskDialog`的 按鈕的掩碼。
+*nButtonMask*<br/>
+在要加入之按鈕的遮罩 `CTaskDialog` 。
 
-*n 關閉按鈕的遮罩*<br/>
-[在]要禁用的按鈕的掩碼。
+*nDisabledButtonMask*<br/>
+在要停用之按鈕的遮罩。
 
-*n 海拔按鈕的遮罩*<br/>
-[在]需要高程的按鈕的蒙版。
+*nElevationButtonMask*<br/>
+在需要提高許可權之按鈕的遮罩。
 
 ### <a name="remarks"></a>備註
 
-建立類別的此實體的顯示視窗後,`CTaskDialog`無法呼叫此方法。 如果這樣做,此方法將引發異常。
+建立這個類別實例的顯示視窗之後，您就無法呼叫這個方法 `CTaskDialog` 。 如果您這樣做，這個方法會擲回例外狀況。
 
-*nButtonMask*指示的按鈕將覆蓋以前添加到`CTaskDialog`的任何 常見按鈕。 只有*nButton Mask*中指示的按鈕可用。
+*NButtonMask*所指出的按鈕會覆寫先前新增至的任何一般按鈕 `CTaskDialog` 。 只有 *nButtonMask* 中指出的按鈕可供使用。
 
-如果*n 停用 Button Mask*或*nElevationButton Mask*包含的按鈕不在*nButton Mask*中,則此方法透過使用["確保"](diagnostic-services.md#ensure)巨集引發異常。
+如果 *nDisabledButtonMask* 或 *nElevationButtonMask* 包含不在 *nButtonMask*中的按鈕，這個方法會使用「 [確定](diagnostic-services.md#ensure) 」宏擲回例外狀況。
 
-默認情況下,所有常見按鈕都已啟用,不需要提升。
+依預設，所有一般按鈕都會啟用，而且不需要提高許可權。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#6](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]
 
-## <a name="ctaskdialogsetcontent"></a><a name="setcontent"></a>C任務對話::設定內容
+## <a name="ctaskdialogsetcontent"></a><a name="setcontent"></a> CTaskDialog：： SetContent
 
-更新`CTaskDialog`的內容 。
+更新的內容 `CTaskDialog` 。
 
 ```cpp
 void SetContent(const CString& strContent);
@@ -1056,20 +1056,20 @@ void SetContent(const CString& strContent);
 
 ### <a name="parameters"></a>參數
 
-*str 內容*<br/>
-[在]要向使用者顯示的字串。
+*strContent*<br/>
+在要對使用者顯示的字串。
 
 ### <a name="remarks"></a>備註
 
-`CTaskDialog`類的內容是在對話框的主部分向用戶顯示的文本。
+類別的內容 `CTaskDialog` 是在對話方塊的主要區段中，向使用者顯示的文字。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogsetdefaultcommandcontrol"></a><a name="setdefaultcommandcontrol"></a>CTask對話::設定預設命令控制
+## <a name="ctaskdialogsetdefaultcommandcontrol"></a><a name="setdefaultcommandcontrol"></a> CTaskDialog：： SetDefaultCommandControl
 
-指定預設命令按鈕控制件。
+指定預設的命令按鈕控制項。
 
 ```cpp
 void SetDefaultCommandControl(int nCommandControlID);
@@ -1077,22 +1077,22 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 ### <a name="parameters"></a>參數
 
-*n命令控制ID*<br/>
-[在]命令按鈕控制項的 ID 為預設值。
+*nCommandControlID*<br/>
+在要做為預設值之命令按鈕控制項的識別碼。
 
 ### <a name="remarks"></a>備註
 
-預設命令按鈕控制項是首次向使用者顯示`CTaskDialog`時 選擇的控制項。
+預設的命令按鈕控制項是在 `CTaskDialog` 第一次向使用者顯示時選取的控制項。
 
-如果找不到*nCommandControlID*指定的命令按鈕控制項,此方法將引發異常。
+如果這個方法找不到 *nCommandControlID*所指定的命令按鈕控制項，則會擲回例外狀況。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-## <a name="ctaskdialogsetdefaultradiobutton"></a><a name="setdefaultradiobutton"></a>CTask對話::設定預設的無線電按鈕
+## <a name="ctaskdialogsetdefaultradiobutton"></a><a name="setdefaultradiobutton"></a> CTaskDialog：： SetDefaultRadioButton
 
-指定預設單選按鈕。
+指定預設選項按鈕。
 
 ```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
@@ -1101,21 +1101,21 @@ void SetDefaultRadioButton(int nRadioButtonID);
 ### <a name="parameters"></a>參數
 
 *nRadioButtonID*<br/>
-[在]作為預設值的單選按鈕的 ID。
+在要做為預設值之選項按鈕的識別碼。
 
 ### <a name="remarks"></a>備註
 
-默認單選按鈕是首次向使用者顯示`CTaskDialog`時 選擇的按鈕。
+預設選項按鈕是在 `CTaskDialog` 第一次向使用者顯示時選取的按鈕。
 
-如果找不到*nRadioButtonID*指定的單選按鈕,此方法將引發異常。
+如果找不到 *nRadioButtonID*所指定的選項按鈕，這個方法會擲回例外狀況。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-## <a name="ctaskdialogsetdialogwidth"></a><a name="setdialogwidth"></a>C任務對話::設定對話寬度
+## <a name="ctaskdialogsetdialogwidth"></a><a name="setdialogwidth"></a> CTaskDialog：： SetDialogWidth
 
-調整的`CTaskDialog`寬度。
+調整的寬度 `CTaskDialog` 。
 
 ```cpp
 void SetDialogWidth(int nWidth = 0);
@@ -1123,22 +1123,22 @@ void SetDialogWidth(int nWidth = 0);
 
 ### <a name="parameters"></a>參數
 
-*n 寬度*<br/>
-[在]對話框的寬度(以像素為單位)。
+*nWidth*<br/>
+在對話方塊的寬度（以圖元為單位）。
 
 ### <a name="remarks"></a>備註
 
-參數*nWidth*必須大於或等於 0。 否則,此方法將引發異常。
+參數 *nWidth* 必須大於或等於0。 否則，這個方法會擲回例外狀況。
 
-如果*nWidth*設置為 0,則此方法將對話方塊設置為預設大小。
+如果 *nWidth* 設為0，則這個方法會將對話方塊設定為預設大小。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogsetexpansionarea"></a><a name="setexpansionarea"></a>C 任務對話::設定擴充區域
+## <a name="ctaskdialogsetexpansionarea"></a><a name="setexpansionarea"></a> CTaskDialog：： SetExpansionArea
 
-更新的`CTaskDialog`擴展區域。
+更新的展開區域 `CTaskDialog` 。
 
 ```cpp
 void SetExpansionArea(
@@ -1149,28 +1149,28 @@ void SetExpansionArea(
 
 ### <a name="parameters"></a>參數
 
-*放大縮小字型功能 放大縮小字型功能*<br/>
-[在]當使用者按一下擴展`CTaskDialog`按鈕 時,對話框正文中顯示的字串。
+*strExpandedInformation*<br/>
+在 `CTaskDialog` 當使用者按一下展開按鈕時，顯示在對話方塊的主要主體中的字串。
 
-*str 折疊標籤*<br/>
-[在]擴展區域摺疊時`CTaskDialog`顯示在擴展按鈕旁邊的字串。
+*strCollapsedLabel*<br/>
+在折迭 `CTaskDialog` 展開區域時，顯示在展開按鈕旁的字串。
 
-*str 延伸標籤*<br/>
-[在]顯示展開區域時`CTaskDialog`,在擴展按鈕旁邊顯示的字串。
+*strExpandedLabel*<br/>
+在 `CTaskDialog` 顯示展開區域時，展開按鈕旁邊顯示的字串。
 
 ### <a name="remarks"></a>備註
 
-類的`CTaskDialog`擴展區域使您能夠向使用者提供其他資訊。 擴展區域位於的`CTaskDialog`,位於標題和內容字串的正下方。
+類別的展開區域可 `CTaskDialog` 讓您提供其他資訊給使用者。 展開區域位於的主要部分 `CTaskDialog` ，位於標題和內容字串的正下方。
 
-首次顯示`CTaskDialog`時,它不顯示展開的資訊,`strCollapsedLabel`並放在擴展按鈕旁邊。 當使用者按一下延伸按鈕時`CTaskDialog`, 將顯示*str"擴展資訊*「並將標籤更改為*str」擴展標籤*。
+當 `CTaskDialog` 第一次顯示時，不會顯示展開的資訊並放在 `strCollapsedLabel` 展開按鈕的旁邊。 當使用者按一下 [展開] 按鈕時，會 `CTaskDialog` 顯示 [ *strExpandedInformation* ]，並將標籤變更為 [ *strExpandedLabel*]。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogsetfootericon"></a><a name="setfootericon"></a>CTask對話::SetFooterIcon
+## <a name="ctaskdialogsetfootericon"></a><a name="setfootericon"></a> CTaskDialog：： SetFooterIcon
 
-更新`CTaskDialog`頁 腳圖示。
+更新的頁尾圖示 `CTaskDialog` 。
 
 ```cpp
 void SetFooterIcon(HICON hFooterIcon);
@@ -1180,26 +1180,26 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ### <a name="parameters"></a>參數
 
 *hFooterIcon*<br/>
-[在]的新圖示`CTaskDialog`。
+在的新圖示 `CTaskDialog` 。
 
 *lpszFooterIcon*<br/>
-[在]的新圖示`CTaskDialog`。
+在的新圖示 `CTaskDialog` 。
 
 ### <a name="remarks"></a>備註
 
-頁腳圖示顯示在[CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)的底部。 它可以具有關聯的註腳文本。 您可以使用[CTaskDialog 更改註腳文字:setFooterText](#setfootertext)。
+頁尾圖示會顯示在 [CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)的底部。 它可以有相關聯的頁尾文字。 您可以使用 [CTaskDialog：： SetFooterText](#setfootertext)來變更頁尾文字。
 
-如果顯示 或輸入參數為 NULL,`CTaskDialog`則此方法會向[「確保」](diagnostic-services.md#ensure)宏引發異常。
+如果[ENSURE](diagnostic-services.md#ensure) `CTaskDialog` 顯示或輸入參數為 Null，這個方法會擲回具有確定宏的例外狀況。
 
-只能`CTaskDialog`接受`HICON``LPCWSTR`或 作為頁腳圖示。 這是透過在建構函數或 CTaskDialog 中設定選項[TDF_USE_HICON_FOOTER::setOption](#setoptions)進行配置的。 預設情況下,`CTaskDialog`配置為用`LPCWSTR`作 頁腳圖示的輸入類型。 如果嘗試使用不適當的類型設置圖示,此方法將生成異常。
+只能 `CTaskDialog` 接受 `HICON` 或 `LPCWSTR` 作為頁尾圖示。 這是藉由在函式或 [CTaskDialog：： >setoptions](#setoptions)中設定選項 TDF_USE_HICON_FOOTER 來設定。 根據預設， `CTaskDialog` 會設定為使用做為頁尾 `LPCWSTR` 圖示的輸入類型。 如果您嘗試使用不適當的類型來設定圖示，這個方法會產生例外狀況。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogsetfootertext"></a><a name="setfootertext"></a>CTask對話::設定文字
+## <a name="ctaskdialogsetfootertext"></a><a name="setfootertext"></a> CTaskDialog：： SetFooterText
 
-更新 文上的`CTaskDialog`文字 。
+更新頁尾的文字 `CTaskDialog` 。
 
 ```cpp
 void SetFooterText(const CString& strFooterText);
@@ -1207,20 +1207,20 @@ void SetFooterText(const CString& strFooterText);
 
 ### <a name="parameters"></a>參數
 
-*斯特福特文字*<br/>
-[在]頁腳的新文字。
+*strFooterText*<br/>
+在頁尾的新文字。
 
 ### <a name="remarks"></a>備註
 
-頁文圖示顯示在 的頁腳文字`CTaskDialog`旁邊 。 您可以使用[CTaskDialog 更改頁面文圖示::SetFooterIcon](#setfootericon)。
+頁尾圖示會出現在底部頁尾文字的旁邊 `CTaskDialog` 。 您可以使用 [CTaskDialog：： SetFooterIcon](#setfootericon)來變更頁尾圖示。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogsetmainicon"></a><a name="setmainicon"></a>CTask對話::設定主圖示
+## <a name="ctaskdialogsetmainicon"></a><a name="setmainicon"></a> CTaskDialog：： SetMainIcon
 
-更新的主`CTaskDialog`圖示。
+更新的主要圖示 `CTaskDialog` 。
 
 ```cpp
 void SetMainIcon(HICON hMainIcon);
@@ -1230,24 +1230,24 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 ### <a name="parameters"></a>參數
 
 *hMainIcon*<br/>
-[在]新圖示。
+在新圖示。
 
 *lpszMainIcon*<br/>
-[在]新圖示。
+在新圖示。
 
 ### <a name="remarks"></a>備註
 
-如果顯示 或輸入參數為 NULL,`CTaskDialog`則此方法會向[「確保」](diagnostic-services.md#ensure)宏引發異常。
+如果[ENSURE](diagnostic-services.md#ensure) `CTaskDialog` 顯示或輸入參數為 Null，這個方法會擲回具有確定宏的例外狀況。
 
-只能`CTaskDialog`接受`HICON``LPCWSTR`或作為主圖示。 您可以通過在建構函數中或[CTaskDialog:setOption](#setoptions)方法中設置TDF_USE_HICON_MAIN選項來設定此選項。 預設情況下,`CTaskDialog`配置為用`LPCWSTR`作 主圖示的輸入類型。 如果嘗試使用不適當的類型設置圖示,此方法將生成異常。
+只能 `CTaskDialog` 接受 `HICON` 或 `LPCWSTR` 作為主要圖示。 您可以藉由在函式或 [CTaskDialog：： >setoptions](#setoptions) 方法中設定 TDF_USE_HICON_MAIN 選項來進行設定。 根據預設， `CTaskDialog` 會設定為使用 `LPCWSTR` 做為主要圖示的輸入類型。 如果您嘗試使用不適當的類型來設定圖示，這個方法會產生例外狀況。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogsetmaininstruction"></a><a name="setmaininstruction"></a>CTask對話::設定主指令
+## <a name="ctaskdialogsetmaininstruction"></a><a name="setmaininstruction"></a> CTaskDialog：： SetMainInstruction
 
-更新的主要`CTaskDialog`指令。
+更新的主要指令 `CTaskDialog` 。
 
 ```cpp
 void SetMainInstruction(const CString& strInstructions);
@@ -1255,20 +1255,20 @@ void SetMainInstruction(const CString& strInstructions);
 
 ### <a name="parameters"></a>參數
 
-*序列指令*<br/>
-[在]新的主指令。
+*strInstructions*<br/>
+在新的主要指令。
 
 ### <a name="remarks"></a>備註
 
-`CTaskDialog`類的主要指令是以大粗體顯示給使用者的文本。 它位於標題列下方的對話框中。
+類別的主要指示 `CTaskDialog` 是以大型粗體字型顯示給使用者的文字。 它位於標題列下方的對話方塊中。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogsetoptions"></a><a name="setoptions"></a>C 任務對話::設定選項
+## <a name="ctaskdialogsetoptions"></a><a name="setoptions"></a> CTaskDialog：： >setoptions
 
-設定的選項`CTaskDialog`。
+設定的選項 `CTaskDialog` 。
 
 ```cpp
 void SetOptions(int nOptionFlag);
@@ -1277,40 +1277,40 @@ void SetOptions(int nOptionFlag);
 ### <a name="parameters"></a>參數
 
 *nOptionFlag*<br/>
-[在]以的標籤集`CTaskDialog`。
+在要用於的旗標集合 `CTaskDialog` 。
 
 ### <a name="remarks"></a>備註
 
-此方法清除所有目前選項`CTaskDialog`。 若要保留當前選項,必須先使用[CTaskDialog::GetOptions](#getoptions)檢索它們,並將它們與要設置的選項合併。
+這個方法會清除的所有目前選項 `CTaskDialog` 。 若要保留目前的選項，您必須先使用 [CTaskDialog：： GetOptions](#getoptions) 取出它們，並將它們與您要設定的選項結合。
 
-下表列出了所有有效的選項。
+下表列出所有有效的選項。
 
-|||
+|名稱|描述|
 |-|-|
-|TDF_ENABLE_HYPERLINKS|啟用`CTaskDialog`中的超連結。|
-|TDF_USE_HICON_MAIN|設定為`CTaskDialog`對主`HICON`圖示使用 。 另一種方法是使用`LPCWSTR`。|
-|TDF_USE_HICON_FOOTER|設定為`CTaskDialog`使用`HICON`註腳圖示的 。 另一種方法是使用`LPCWSTR`。|
-|TDF_ALLOW_DIALOG_CANCELLATION|允許使用者`CTaskDialog`使用鍵盤或使用對話框右上角的圖示關閉 ,即使未啟用 **「取消」** 按鈕也是如此。 如果未設定此標誌,並且未啟用 **「取消」** 按鈕,則使用者無法使用 Alt_F4、Escape 鍵或標題列的關閉按鈕關閉對話方塊。|
-|TDF_USE_COMMAND_LINKS|配置`CTaskDialog`要使用的命令按鈕控制項。|
-|TDF_USE_COMMAND_LINKS_NO_ICON|配置`CTaskDialog`要使用的命令按鈕控件,而不顯示控件旁邊的圖示。 TDF_USE_COMMAND_LINKS覆蓋TDF_USE_COMMAND_LINKS_NO_ICON。|
-|TDF_EXPAND_FOOTER_AREA|指示擴展區域當前已展開。|
-|TDF_EXPANDED_BY_DEFAULT|確定預設情況下是否擴展擴展區域。|
-|TDF_VERIFICATION_FLAG_CHECKED|指示當前已選擇驗證複選框。|
-|TDF_SHOW_PROGRESS_BAR|配置為`CTaskDialog`顯示進度條。|
-|TDF_SHOW_MARQUEE_PROGRESS_BAR|將進度列配置為選框進度條。 如果啟用此選項,則必須將TDF_SHOW_PROGRESS_BAR設置為具有預期行為。|
-|TDF_CALLBACK_TIMER|指示`CTaskDialog`回調間隔設置為大約 200 毫秒。|
-|TDF_POSITION_RELATIVE_TO_WINDOW|配置`CTaskDialog`相對於父視窗要居中。 如果未啟用此標誌,則`CTaskDialog`相對於監視器,居中。|
-|TDF_RTL_LAYOUT|設定`CTaskDialog`從右至左讀取佈局的 。|
-|TDF_NO_DEFAULT_RADIO_BUTTON|指示`CTaskDialog`出現時未選擇單選按鈕。|
-|TDF_CAN_BE_MINIMIZED|使用使用者能夠最小化`CTaskDialog`。 要支援此選項,`CTaskDialog`不能是模態的。 MFC 不支援這個選項,因為 MFC`CTaskDialog`不支援無 模式 。|
+|TDF_ENABLE_HYPERLINKS|啟用中的超連結 `CTaskDialog` 。|
+|TDF_USE_HICON_MAIN|將設定 `CTaskDialog` 為 `HICON` 針對主要圖示使用。 替代方法是使用 `LPCWSTR` 。|
+|TDF_USE_HICON_FOOTER|將設定 `CTaskDialog` 為使用頁尾 `HICON` 圖示的。 替代方法是使用 `LPCWSTR` 。|
+|TDF_ALLOW_DIALOG_CANCELLATION|可讓使用者 `CTaskDialog` 使用鍵盤或使用對話方塊右上角的圖示來關閉，即使未啟用 [ **取消** ] 按鈕也一樣。 如果未設定此旗標，而且未啟用 [ **取消** ] 按鈕，則使用者無法使用 Alt + F4、Escape 鍵或標題列的 [關閉] 按鈕來關閉對話方塊。|
+|TDF_USE_COMMAND_LINKS|將設定 `CTaskDialog` 為使用命令按鈕控制項。|
+|TDF_USE_COMMAND_LINKS_NO_ICON|將設定 `CTaskDialog` 為使用命令按鈕控制項，而不在控制項旁邊顯示圖示。 TDF_USE_COMMAND_LINKS 覆寫 TDF_USE_COMMAND_LINKS_NO_ICON。|
+|TDF_EXPAND_FOOTER_AREA|表示擴充區域目前已展開。|
+|TDF_EXPANDED_BY_DEFAULT|判斷展開區域是否預設為展開。|
+|TDF_VERIFICATION_FLAG_CHECKED|指出目前已選取 [驗證] 核取方塊。|
+|TDF_SHOW_PROGRESS_BAR|將設定 `CTaskDialog` 為顯示進度列。|
+|TDF_SHOW_MARQUEE_PROGRESS_BAR|將進度列設定為字幕進度列。 如果您啟用此選項，則必須將 TDF_SHOW_PROGRESS_BAR 設定為具有預期的行為。|
+|TDF_CALLBACK_TIMER|指出 `CTaskDialog` 回呼間隔設定為大約200毫秒。|
+|TDF_POSITION_RELATIVE_TO_WINDOW|將設定 `CTaskDialog` 為相對於父視窗的中心。 如果未啟用此旗標，則 `CTaskDialog` 會相對於監視器的中央。|
+|TDF_RTL_LAYOUT|將設定 `CTaskDialog` 為從右至左的閱讀版面配置。|
+|TDF_NO_DEFAULT_RADIO_BUTTON|指出當出現時，不會選取任何選項按鈕 `CTaskDialog` 。|
+|TDF_CAN_BE_MINIMIZED|讓使用者可以最小化 `CTaskDialog` 。 若要支援這個選項，則 `CTaskDialog` 不能是強制回應。 MFC 不支援這個選項，因為 MFC 不支援非模式 `CTaskDialog` 。|
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogsetprogressbarmarquee"></a><a name="setprogressbarmarquee"></a>CTask對話::設定進度列
+## <a name="ctaskdialogsetprogressbarmarquee"></a><a name="setprogressbarmarquee"></a> CTaskDialog：： SetProgressBarMarquee
 
-為 配置`CTaskDialog`選框列並將其添加到對話方塊中。
+設定的滾動 `CTaskDialog` 盒列，並將它加入至對話方塊。
 
 ```cpp
 void SetProgressBarMarquee(
@@ -1320,27 +1320,27 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>參數
 
-*b 啟用*<br/>
-[在]TRUE 啟用選取框列;FALSE 以禁用選取框列並從 中`CTaskDialog`刪除 它。
+*bEnabled*<br/>
+在TRUE 表示啟用字幕列;FALSE 表示停用字幕列，並將它從移除 `CTaskDialog` 。
 
 *nMarqueeSpeed*<br/>
-[在]指示選框條速度的整數。
+在整數，表示捲軸的速度。
 
 ### <a name="remarks"></a>備註
 
-選框欄顯示在`CTaskDialog`類的主文本下方。
+捲軸列會出現在類別的主要文字下方 `CTaskDialog` 。
 
-使用*nMarqueeSpeed*設置選框欄的速度;值越大表示速度較慢。 *nMarqueeSpeed*的值為 0 使選取框條以 Windows 的預設速度移動。
+使用 *nMarqueeSpeed* 設定捲軸列的速度;較大的值表示速度較慢。 *NMarqueeSpeed*的值為0時，會以 Windows 的預設速度移動捲軸。
 
-如果*nMarqueeSpeed*小於 0,此方法會向[「確保」](diagnostic-services.md#ensure)宏引發異常。
+如果*nMarqueeSpeed*小於0，則這個方法會擲回具有[確定](diagnostic-services.md#ensure)宏的例外狀況。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-## <a name="ctaskdialogsetprogressbarposition"></a><a name="setprogressbarposition"></a>C任務對話::設定進度列位置
+## <a name="ctaskdialogsetprogressbarposition"></a><a name="setprogressbarposition"></a> CTaskDialog：： SetProgressBarPosition
 
-調整進度條的位置。
+調整進度列的位置。
 
 ```cpp
 void SetProgressBarPosition(int nProgressPos);
@@ -1348,20 +1348,20 @@ void SetProgressBarPosition(int nProgressPos);
 
 ### <a name="parameters"></a>參數
 
-*n 進步Pos*<br/>
-[在]進度條的位置。
+*nProgressPos*<br/>
+在進度列的位置。
 
 ### <a name="remarks"></a>備註
 
-如果*nProgressPos*不在進度欄範圍內,則此方法會向[「確保」](diagnostic-services.md#ensure)宏引發異常。 您可以使用[CTaskDialog 更改進度列範圍::設定進度列範圍](#setprogressbarrange)。
+如果*nProgressPos*不在進度列範圍內，這個方法會擲回例外狀況，並[確保](diagnostic-services.md#ensure)宏。 您可以使用 [CTaskDialog：： SetProgressBarRange](#setprogressbarrange)來變更進度列範圍。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-## <a name="ctaskdialogsetprogressbarrange"></a><a name="setprogressbarrange"></a>CTask對話::設定進度列範圍
+## <a name="ctaskdialogsetprogressbarrange"></a><a name="setprogressbarrange"></a> CTaskDialog：： SetProgressBarRange
 
-調整進度條的範圍。
+調整進度列的範圍。
 
 ```cpp
 void SetProgressBarRange(
@@ -1371,27 +1371,27 @@ void SetProgressBarRange(
 
 ### <a name="parameters"></a>參數
 
-*恩朗明*<br/>
-[在]進度條的下限。
+*nRangeMin*<br/>
+在進度列的下限。
 
 *nRangeMax*<br/>
-[在]進度條的上限。
+在進度列的上限。
 
 ### <a name="remarks"></a>備註
 
-進度列的位置相對於*nRangeMin*和*nRangeMax*。 例如,如果*nRangeMin*為*50,nRangeMax*為 100,則位置為 75 的位置位於進度條的一半。 使用[CTaskDialog:設定進度列位置](#setprogressbarposition)以設定進度列的位置。
+進度列的位置是相對於 *nRangeMin* 和 *nRangeMax*。 例如，如果 *nRangeMin* 是50，而 *nRangeMax* 是100，則75的位置會是進度列的中間。 使用 [CTaskDialog：： SetProgressBarPosition](#setprogressbarposition) 來設定進度列的位置。
 
-要顯示進度條,必須啟用選項TDF_SHOW_PROGRESS_BAR,並且不能啟用TDF_SHOW_MARQUEE_PROGRESS_BAR。 此方法會自動設置TDF_SHOW_PROGRESS_BAR並清除TDF_SHOW_MARQUEE_PROGRESS_BAR。 使用[CTaskDialog::設定選項](#setoptions)以手動更改[CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)的此實例的選項。
+若要顯示進度列，必須啟用選項 TDF_SHOW_PROGRESS_BAR，而且 TDF_SHOW_MARQUEE_PROGRESS_BAR 不能啟用。 這個方法會自動設定 TDF_SHOW_PROGRESS_BAR，並清除 TDF_SHOW_MARQUEE_PROGRESS_BAR。 使用 [CTaskDialog：： >setoptions](#setoptions) 手動變更 [CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)實例的選項。
 
-如果*nRangeMin*不小於*nRangeMax,* 則此方法會向["確保"](diagnostic-services.md#ensure)宏引發異常。 如果已顯示 ,並且具有`CTaskDialog`選 框進度列,則此方法還會引發異常。
+如果*nRangeMin*不小於*nRangeMax*，這個方法會擲回具有[確定](diagnostic-services.md#ensure)宏的例外狀況。 如果 `CTaskDialog` 已顯示，而且有一個「天棚」進度列，則這個方法也會擲回例外狀況（exception）。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-## <a name="ctaskdialogsetprogressbarstate"></a><a name="setprogressbarstate"></a>C任務對話::設定進度列
+## <a name="ctaskdialogsetprogressbarstate"></a><a name="setprogressbarstate"></a> CTaskDialog：： SetProgressBarState
 
-設定進度列號的狀態並將顯示在上`CTaskDialog`。
+設定進度列的狀態，並將其顯示在上 `CTaskDialog` 。
 
 ```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
@@ -1399,30 +1399,30 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>參數
 
-*n州*<br/>
-[在]進度條的狀態。 有關可能的值,請參閱備註部分。
+*nState*<br/>
+在進度列的狀態。 如需可能的值，請參閱「備註」一節。
 
 ### <a name="remarks"></a>備註
 
-如果已顯示 ,並且具有選框進度`CTaskDialog`列 ,則此方法會向[「確保」](diagnostic-services.md#ensure)宏引發異常。
+如果已[ENSURE](diagnostic-services.md#ensure) `CTaskDialog` 顯示並有一個「天棚」進度列，這個方法會擲回包含「確定」宏的例外狀況。
 
-下表列出了*nState*的可能值。 在所有這些情況下,進度條將填充常規顏色,直到它到達指定的停止位置。 此時,它將根據狀態更改顏色。
+下表列出 *nState*的可能值。 在這些情況下，進度列會填滿一般色彩，直到到達指定的停止位置為止。 屆時，它會根據狀態變更色彩。
 
-|||
+|名稱|描述|
 |-|-|
-|PBST_NORMAL|進度條填充後,`CTaskDialog`不會更改條形的顏色。 默認情況下,常規顏色為綠色。|
-|PBST_ERROR|進度條填充後,`CTaskDialog`將條形的顏色更改為錯誤顏色。 默認情況下,這是紅色的。|
-|PBST_PAUSED|進度條填充後,`CTaskDialog`將條形的顏色更改為已暫停的顏色。 默認情況下,這是黃色的。|
+|PBST_NORMAL|在進度列填滿之後，不 `CTaskDialog` 會變更橫條的色彩。 依預設，一般色彩為綠色。|
+|PBST_ERROR|在進度列填滿之後，會將 `CTaskDialog` 橫條的色彩變更為錯誤色彩。 根據預設，這是紅色。|
+|PBST_PAUSED|在進度列填滿之後，會將 `CTaskDialog` 橫條的色彩變更為暫停的色彩。 根據預設，這是黃色。|
 
-您可以使用 CTaskDialog 設定進度列停止的位置[::設定進度列位置](#setprogressbarposition)。
+您可以使用 [CTaskDialog：： SetProgressBarPosition](#setprogressbarposition)來設定進度列停止的位置。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-## <a name="ctaskdialogsetradiobuttonoptions"></a><a name="setradiobuttonoptions"></a>CTask對話::設定無線按鈕選項
+## <a name="ctaskdialogsetradiobuttonoptions"></a><a name="setradiobuttonoptions"></a> CTaskDialog：： SetRadioButtonOptions
 
-啟用或禁用單選按鈕。
+啟用或停用選項按鈕。
 
 ```cpp
 void SetRadioButtonOptions(
@@ -1433,22 +1433,22 @@ void SetRadioButtonOptions(
 ### <a name="parameters"></a>參數
 
 *nRadioButtonID*<br/>
-[在]單選按鈕控制件的識別碼。
+在選項按鈕控制項的識別碼。
 
-*b 啟用*<br/>
-[在]TRUE 啟用單選按鈕;FALSE 以禁用單選按鈕。
+*bEnabled*<br/>
+在TRUE 表示啟用選項按鈕;FALSE 表示停用選項按鈕。
 
 ### <a name="remarks"></a>備註
 
-如果*nRadioButtonID*不是單選按鈕的有效 ID,則此方法會向["確保"](diagnostic-services.md#ensure)宏引發異常。
+如果*nRadioButtonID*不是選項按鈕的有效識別碼，這個方法會擲回具有[確定](diagnostic-services.md#ensure)宏的例外狀況。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-## <a name="ctaskdialogsetverificationcheckbox"></a><a name="setverificationcheckbox"></a>C任務對話::設定驗證複選框
+## <a name="ctaskdialogsetverificationcheckbox"></a><a name="setverificationcheckbox"></a> CTaskDialog：： SetVerificationCheckbox
 
-設置驗證複選框的選中狀態。
+設定驗證核取方塊的核取狀態。
 
 ```cpp
 void SetVerificationCheckbox(BOOL bChecked);
@@ -1457,15 +1457,15 @@ void SetVerificationCheckbox(BOOL bChecked);
 ### <a name="parameters"></a>參數
 
 *bChecked*<br/>
-[在]TRUE 以在 顯示`CTaskDialog`時選擇 驗證選選框;FALSE 在 顯示 時`CTaskDialog`未選擇驗證選擇的框。
+在TRUE 表示在顯示時選取 [驗證] 核取方塊 `CTaskDialog` ;FALSE 表示在顯示時，取消選取 [驗證] 核取方塊 `CTaskDialog` 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-## <a name="ctaskdialogsetverificationcheckboxtext"></a><a name="setverificationcheckboxtext"></a>CTask對話::設定驗證複選框文字
+## <a name="ctaskdialogsetverificationcheckboxtext"></a><a name="setverificationcheckboxtext"></a> CTaskDialog：： SetVerificationCheckboxText
 
-設置顯示在驗證複選框右側的文本。
+設定在 [驗證] 核取方塊右邊顯示的文字。
 
 ```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
@@ -1473,20 +1473,20 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 ### <a name="parameters"></a>參數
 
-*str 驗證文字*<br/>
-[在]此方法顯示在驗證複選框旁邊的文本。
+*strVerificationText*<br/>
+在此方法在 [驗證] 核取方塊旁邊顯示的文字。
 
 ### <a name="remarks"></a>備註
 
-如果已顯示類的此實例,`CTaskDialog`此方法會向[「確保」](diagnostic-services.md#ensure)宏引發異常。
+如果已顯示此類別的實例，這個方法會擲回例外狀況，並 [確保](diagnostic-services.md#ensure) 宏 `CTaskDialog` 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-## <a name="ctaskdialogsetwindowtitle"></a><a name="setwindowtitle"></a>C 任務對話::設定視窗標題
+## <a name="ctaskdialogsetwindowtitle"></a><a name="setwindowtitle"></a> CTaskDialog：： SetWindowTitle
 
-設定的標題`CTaskDialog`。
+設定的標題 `CTaskDialog` 。
 
 ```cpp
 void SetWindowTitle(CString& strWindowTitle);
@@ -1494,8 +1494,8 @@ void SetWindowTitle(CString& strWindowTitle);
 
 ### <a name="parameters"></a>參數
 
-*strWindow 標題*<br/>
-[在]的新標題`CTaskDialog`。
+*strWindowTitle*<br/>
+在的新標題 `CTaskDialog` 。
 
 ### <a name="remarks"></a>備註
 
@@ -1503,9 +1503,9 @@ void SetWindowTitle(CString& strWindowTitle);
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-## <a name="ctaskdialogshowdialog"></a><a name="showdialog"></a>C 任務對話::顯示對話
+## <a name="ctaskdialogshowdialog"></a><a name="showdialog"></a> CTaskDialog：： ShowDialog
 
-建立並顯示`CTaskDialog`。
+建立並顯示 `CTaskDialog` 。
 
 ```
 static INT_PTR ShowDialog(
@@ -1521,51 +1521,51 @@ static INT_PTR ShowDialog(
 
 ### <a name="parameters"></a>參數
 
-*str 內容*<br/>
-[在]用於的內容`CTaskDialog`的字串。
+*strContent*<br/>
+在要用於內容的字串 `CTaskDialog` 。
 
-*斯特曼指令*<br/>
-[在]的主要指令`CTaskDialog`。
+*strMainInstruction*<br/>
+在的主要指示 `CTaskDialog` 。
 
-*斯特標題*<br/>
-[在]的標題`CTaskDialog`。
+*strTitle*<br/>
+在的標題 `CTaskDialog` 。
 
-*nID 命令控制優先*<br/>
-[在]第一個命令的字串 ID。
+*nIDCommandControlsFirst*<br/>
+在第一個命令的字串識別碼。
 
-*nID 命令控制上次*<br/>
-[在]最後一個命令的字串 ID。
+*nIDCommandControlsLast*<br/>
+在最後一個命令的字串識別碼。
 
-*n 通用按鈕*<br/>
-[在]要添加到`CTaskDialog`的 按鈕的掩碼。
+*nCommonButtons*<br/>
+在要加入之按鈕的遮罩 `CTaskDialog` 。
 
-*n 工作對話選項*<br/>
-[在]用於的選項`CTaskDialog`集。
+*nTaskDialogOptions*<br/>
+在要用於的選項組 `CTaskDialog` 。
 
-*斯特福特*<br/>
-[在]要用作頁腳的字串。
+*strFooter*<br/>
+在要作為頁尾使用的字串。
 
 ### <a name="return-value"></a>傳回值
 
-與使用者所做的選擇對應的整數。
+對應到使用者所做選擇的整數。
 
 ### <a name="remarks"></a>備註
 
-此靜態方法使您能夠建立類的實體,`CTaskDialog`而無需在程式碼中顯式`CTaskDialog`創建 物件。 由於沒有`CTaskDialog`物件`CTaskDialog`, 因此,如果使用此方法向使用者`CTaskDialog`顯示 , 則無法呼叫的任何其他方法。
+這個靜態方法可讓您建立類別的實例， `CTaskDialog` 而不需要 `CTaskDialog` 在程式碼中明確建立物件。 因為沒有 `CTaskDialog` 物件，所以 `CTaskDialog` 如果您使用這個方法向使用者顯示，就無法呼叫的任何其他方法 `CTaskDialog` 。
 
-此方法透過使用來自應用程式的資源檔的資料建立命令按鈕控制項。 資源檔中的字串表具有多個字串與關聯的字串指示。 此方法為*nIDCommandControlsFirst*和*nCommandControlsLast*之間的字串表中的每個有效項目添加命令按鈕控制項,包括。 對於這些命令按鈕控制項,字串表中的字串是控制項的標題,字串 ID 是控制項的識別碼。
+這個方法會使用來自您應用程式資源檔的資料，建立命令按鈕控制項。 資源檔中的字串資料表有數個具有相關聯字串識別碼的字串。 這個方法會在 *nIDCommandControlsFirst* 和 *nCommandControlsLast*（含）之間的字串資料表中，為每個有效的專案新增一個命令按鈕控制項。 針對這些命令按鈕控制項，字串資料表中的字串是控制項的標題，而字串識別碼是控制項的識別碼。
 
-關於有效選項的清單,請參閱[CTaskDialog:設定選項](#setoptions)。
+如需有效選項的清單，請參閱 [CTaskDialog：： >setoptions](#setoptions) 。
 
-當使用者`CTaskDialog`選擇公共按鈕、指令連結控制項或關閉`CTaskDialog`時 關閉 。 返回值是指示使用者如何關閉對話框的標識符。
+`CTaskDialog`當使用者選取通用按鈕、命令連結控制項或關閉時，就會關閉 `CTaskDialog` 。 傳回值是指出使用者關閉對話方塊之方式的識別碼。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTaskDialog#1](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]
 
-## <a name="ctaskdialogtaskdialogcallback"></a><a name="taskdialogcallback"></a>C任務對話::工作對話回調
+## <a name="ctaskdialogtaskdialogcallback"></a><a name="taskdialogcallback"></a> CTaskDialog：： TaskDialogCallback
 
-框架調用此方法以回應各種 Windows 消息。
+架構會呼叫這個方法來回應各種 Windows 訊息。
 
 ```
 friend:
@@ -1579,44 +1579,44 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>參數
 
-*霍恩德*<br/>
-[在]對的結構`m_hWnd``CTaskDialog`的句柄。
+*hwnd*<br/>
+在結構的控制碼 `m_hWnd` `CTaskDialog` 。
 
-*u 通知*<br/>
-[在]指定生成的消息的通知代碼。
+*uNotification*<br/>
+在指定所產生之訊息的通知碼。
 
 *wParam*<br/>
-[在]有關該消息的詳細資訊。
+在訊息的詳細資訊。
 
 *lParam*<br/>
-[在]有關該消息的詳細資訊。
+在訊息的詳細資訊。
 
 *dwRefData*<br/>
-[在]指向回調消息應用於`CTaskDialog`的物件的指標。
+在要 `CTaskDialog` 套用回呼訊息之物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-取決於特定的通知代碼。 如需詳細資訊，請參閱「備註」一節。
+取決於特定的通知碼。 如需詳細資訊，請參閱＜備註＞一節。
 
 ### <a name="remarks"></a>備註
 
-的`TaskDialogCallback`預設實現處理特定消息,然後調用[CTaskDialog 類](../../mfc/reference/ctaskdialog-class.md)的適當的 On 方法。 例如,為了回應TDN_BUTTON_CLICKED消息,`TaskDialogCallback`呼叫[CTaskDialog::OnCommandControl 按一下](#oncommandcontrolclick)。
+的預設執行會 `TaskDialogCallback` 處理特定訊息，然後呼叫 [CTaskDialog 類別](../../mfc/reference/ctaskdialog-class.md)的適當 On 方法。 例如，為了回應 TDN_BUTTON_CLICKED 訊息，會 `TaskDialogCallback` 呼叫 [CTaskDialog：： OnCommandControlClick](#oncommandcontrolclick)。
 
-*wParam*和*lParam*的值取決於特定生成的消息。 這些值或兩個值都可能是空的。 下表列出了支援的預設通知以及*wParam*和*lParam*的值表示的內容。 如果在派生類中重寫此方法,則應為下表中的每條消息實現回調代碼。
+*WParam*和*lParam*的值取決於特定產生的訊息。 這兩個值的其中之一或兩者都可能是空的。 下表列出支援的預設通知，以及 *wParam* 和 *lParam* 的值代表哪些值。 如果您在衍生類別中覆寫這個方法，您應該針對下表中的每個訊息執行回呼程式碼。
 
-|通知訊息|*wParam*價值|*lParam*價值|
+|通知訊息|*wParam* 價值|*lParam* 價值|
 |--------------------------|--------------------|--------------------|
 |TDN_CREATED|未使用。|未使用。|
 |TDN_NAVIGATED|未使用。|未使用。|
-|TDN_BUTTON_CLICKED|命令按鈕控制 ID。|未使用。|
-|TDN_HYPERLINK_CLICKED|未使用。|包含連結的[LPCWSTR](/windows/win32/WinProg/windows-data-types)結構。|
-|TDN_TIMER|創建 或重置計時器`CTaskDialog`以來的時間(以毫秒為單位)。|未使用。|
+|TDN_BUTTON_CLICKED|命令按鈕控制項識別碼。|未使用。|
+|TDN_HYPERLINK_CLICKED|未使用。|包含連結的 [LPCWSTR](/windows/win32/WinProg/windows-data-types) 結構。|
+|TDN_TIMER|自 `CTaskDialog` 建立或重設計時器之後的時間（以毫秒為單位）。|未使用。|
 |TDN_DESTROYED|未使用。|未使用。|
-|TDN_RADIO_BUTTON_CLICKED|單選按鈕 ID。|未使用。|
+|TDN_RADIO_BUTTON_CLICKED|選項按鈕的識別碼。|未使用。|
 |TDN_DIALOG_CONSTRUCTED|未使用。|未使用。|
-|TDN_VERIFICATION_CLICKED|如果選中該複選框,為 1,則為 0(如果不是)。|未使用。|
+|TDN_VERIFICATION_CLICKED|如果勾選核取方塊，則為1，否則為0。|未使用。|
 |TDN_HELP|未使用。|未使用。|
-|TDN_EXPANDO_BUTTON_CLICKED|如果擴展區域摺疊,0;如果顯示擴展文本,則非零。|未使用。|
+|TDN_EXPANDO_BUTTON_CLICKED|如果展開區域已折迭，則為0。如果顯示展開文字，則為非零。|未使用。|
 
 ## <a name="see-also"></a>另請參閱
 

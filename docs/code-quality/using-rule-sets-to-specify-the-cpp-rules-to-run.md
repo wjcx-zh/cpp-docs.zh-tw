@@ -4,103 +4,103 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389814"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845155"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>使用規則集來指定要執行的 C++ 規則
 
-在 Visual Studio 中，您可以建立和修改自訂*規則集*，以符合與程式碼分析相關聯的特定專案需求。 預設的規則集會儲存在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* 。
+在 Visual Studio 中，您可以建立和修改自訂 *規則集* ，以符合與程式碼分析相關聯的特定專案需求。 預設規則集會儲存在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* 。
 
-**Visual Studio 2017 15.7 版和更新版本：** 您可以使用任何文字編輯器來建立自訂規則集，並將其套用在命令列組建中，不論您使用的組建系統為何。 如需詳細資訊，請參閱 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis)。
+**Visual Studio 2017 15.7 版和更新版本：** 您可以使用任何文字編輯器來建立自訂規則集，並在命令列組建中套用它們，無論您使用的是哪一個組建系統都一樣。 如需詳細資訊，請參閱 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis)。
 
-若要在 Visual Studio 中建立自訂 c + + 規則集，必須在 Visual Studio IDE 中開啟 C/c + + 專案。 接著，您可以在 [規則集編輯器] 中開啟標準規則集，然後新增或移除特定規則，並選擇性地變更程式碼分析判斷違反規則時所發生的動作。
+若要在 Visual Studio 中建立自訂 c + + 規則集，必須在 Visual Studio IDE 中開啟 C/c + + 專案。 然後，您可以在規則集編輯器中開啟標準規則集，然後新增或移除特定規則，並選擇性地變更程式碼分析判斷違反規則時所發生的動作。
 
-若要建立新的自訂規則集，請使用新的檔案名加以儲存。 自訂規則集會自動指派給專案。
+若要建立新的自訂規則集，請使用新的檔案名進行儲存。 自訂規則集會自動指派給專案。
 
-## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>從單一現有規則集建立自訂規則
+## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>從單一現有的規則集建立自訂規則
 
 ::: moniker range="<=vs-2017"
 
-1. 在方案總管中，開啟專案的快捷方式功能表，然後選擇 [**屬性**]。
+1. 在方案總管中，開啟專案的快捷方式功能表，然後選擇 [ **屬性**]。
 
-1. 在 [**屬性頁**] 對話方塊中，選取 [設定**屬性**程式 > **代碼分析** > **一般**] 屬性頁。
+1. 在 [ **屬性頁** ] 對話方塊中，選取 [設定 **屬性**程式 > **代碼分析** > **一般** ] 屬性頁。
 
-1. 在 [**規則集**] 下拉式清單中，執行下列其中一項動作：
+1. 在 [ **規則集** ] 下拉式清單中，執行下列其中一項：
 
-   - 選擇您想要自訂的規則集。
+   - 選擇您要自訂的規則集。
 
      \- 或 -
 
    - 選擇 **\<Browse...>** 指定不在清單中的現有規則集。
 
-1. 選擇 [**開啟**] 以顯示規則集編輯器中的規則。
+1. 選擇 [ **開啟** ]，在規則集編輯器中顯示規則。
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-1. 在方案總管中，開啟專案的快捷方式功能表，然後選擇 [**屬性**]。
+1. 在方案總管中，開啟專案的快捷方式功能表，然後選擇 [ **屬性**]。
 
-1. 在 [**屬性頁**] 對話方塊中，選取 [設定**屬性**] [程式 > **代碼分析**] [ > **Microsoft** ] 屬性頁。
+1. 在 [ **屬性頁** ] 對話方塊中，選取 [設定 **屬性**程式 > **代碼分析** > **Microsoft** ] 屬性頁。
 
-1. 在 [作用中**規則**] 下拉式清單中，執行下列其中一項：
+1. 在 [作用中 **規則** ] 下拉式清單中，執行下列其中一項：
 
-   - 選擇您想要自訂的規則集。
+   - 選擇您要自訂的規則集。
 
      \- 或 -
 
    - 選擇 **\<Browse...>** 指定不在清單中的現有規則集。
 
-1. 選擇 [**開啟**] 以顯示規則集編輯器中的規則。
+1. 選擇 [ **開啟** ]，在規則集編輯器中顯示規則。
 
 ::: moniker-end
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>若要在規則集編輯器中修改規則集
 
-- 若要變更規則集的顯示名稱，請在 [ **View** ] 功能表上選擇 [**屬性視窗]**。 在 [**名稱**] 方塊中輸入顯示名稱。 請注意，顯示名稱可能與檔案名不同。
+- 若要變更規則集的顯示名稱，請在 [ **View** ] 功能表上選擇 [ **屬性視窗]**。 在 [ **名稱** ] 方塊中輸入顯示名稱。 請注意，顯示名稱可能與檔案名不同。
 
-- 若要將群組的所有規則新增至自訂規則集，請選取群組的核取方塊。 若要移除群組的所有規則，請清除此核取方塊。
+- 若要將群組的所有規則新增至自訂規則集，請選取群組的核取方塊。 若要移除群組的所有規則，請清除該核取方塊。
 
-- 若要將特定規則新增至自訂規則集，請選取規則的核取方塊。 若要從規則集移除規則，請清除此核取方塊。
+- 若要將特定規則新增至自訂規則集，請選取規則的核取方塊。 若要從規則集中移除規則，請清除該核取方塊。
 
-- 若要變更程式碼分析中違反規則時所採取的動作，請選擇規則的 [**動作**] 欄位，然後選擇下列其中一個值：
+- 若要變更程式碼分析違反規則時所採取的動作，請選擇規則的 [ **動作** ] 欄位，然後選擇下列其中一個值：
 
-     **警告**-產生警告。
+     **警告** -會產生警告。
 
-     **錯誤**-產生錯誤。
+     **錯誤** -產生錯誤。
 
      **Info** -產生訊息。
 
-     **無**-停用規則。 此動作與從規則集移除規則相同。
+     **無** -停用規則。 此動作與從規則集移除規則相同。
 
-## <a name="to-group-filter-or-change-the-fields-in-the-rule-set-editor-by-using-the-rule-set-editor-toolbar"></a>若要使用 [規則集編輯器] 工具列來分組、篩選或變更 [規則集編輯器] 中的欄位
+## <a name="to-group-filter-or-change-the-fields-in-the-rule-set-editor-by-using-the-rule-set-editor-toolbar"></a>使用規則集編輯器工具列來群組、篩選或變更規則集編輯器中的欄位
 
-- 若要展開所有群組中的規則，請選擇 [全部**展開**]。
+- 若要展開所有群組中的規則，請選擇 [ **全部展開**]。
 
-- 若要折迭所有群組中的規則，**請選擇 [全部折**迭]。
+- 若要折迭所有群組中的規則，請選擇 [ **全部**折迭]。
 
-- 若要變更規則分組依據的欄位，請從 [**分組方式**] 清單中選擇欄位。 若要顯示未分組的規則，請選擇 **\<None>** 。
+- 若要變更規則分組依據的欄位，請從 [ **群組依據** ] 清單中選擇欄位。 若要顯示已取消分組的規則，請選擇 **\<None>** 。
 
-- 若要在規則資料行中新增或移除欄位，請選擇 [**資料行選項**]。
+- 若要在規則資料行中新增或移除欄位，請選擇 [ **資料行選項**]。
 
-- 若要隱藏不適用於目前解決方案的規則，請選擇 [**隱藏不適用於目前解決方案的規則**]。
+- 若要隱藏未套用至目前方案的規則，請選擇 [ **隱藏未套用至目前解決方案的規則**]。
 
-- 若要在顯示和隱藏已指派錯誤動作的規則之間進行切換，請選擇 [**顯示可以產生程式碼分析錯誤的規則**]。
+- 若要在顯示和隱藏指派錯誤動作的規則之間切換，請選擇 [ **顯示可產生程式碼分析錯誤的規則**]。
 
-- 若要在顯示和隱藏已指派警告動作的規則之間進行切換，請選擇 [**顯示可以產生程式碼分析警告的規則**]。
+- 若要在顯示和隱藏指派警告動作的規則之間切換，請選擇 [ **顯示可產生程式碼分析警告的規則**]。
 
-- 若要在顯示和隱藏已指派 [**無**] 動作的規則之間進行切換，請選擇 [**顯示未啟用的規則**]。
+- 若要在顯示和隱藏指派 [ **無** ] 動作的規則之間切換，請選擇 [ **顯示未啟用的規則**]。
 
-- 若要新增或移除目前規則集的 Microsoft 預設規則集，請選擇 [**新增或移除子規則集**]。
+- 若要新增或移除目前規則集的 Microsoft 預設規則集，請選擇 [ **新增或移除子規則集**]。
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>在文字編輯器中建立規則集
 
-您可以在文字編輯器中建立自訂規則集，並將它儲存在具有副檔名的任何位置， *`.ruleset`* 然後使用 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) 編譯器選項來套用。
+您可以在文字編輯器中建立自訂規則集，並將它儲存在任何副檔名的位置， *`.ruleset`* 然後使用 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) 編譯器選項來套用。
 
-下列範例顯示基本的規則集檔案，可供您做為起點：
+下列範例顯示一個基本規則集檔案，您可以將其作為起點：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -114,7 +114,7 @@ ms.locfileid: "87389814"
 
 ## <a name="ruleset-schema"></a>規則集架構
 
-下列規則集架構描述規則集檔案的 XML 架構。 規則集架構會儲存在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* 。 您可以用程式設計的方式撰寫自己的規則集，或驗證您的自訂規則集是否遵守正確的格式。 如需詳細資訊，請參閱[如何：根據 XSD 架構建立 XML 檔](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)。
+下列規則集架構描述規則集檔案的 XML 架構。 規則集架構會儲存在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* 。 您可以使用它，以程式設計方式撰寫您自己的規則集，或驗證您的自訂規則集是否遵守正確的格式。 如需詳細資訊，請參閱 how [to：根據 XSD 架構建立 XML 檔](/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema)。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -241,17 +241,17 @@ ms.locfileid: "87389814"
 
 | Schema 元素 | 描述 |
 |--------------------|--------------|
-| `TLocalization` | 當地語系化資訊包括規則集檔案的名稱、規則集檔案的描述、包含當地語系化資源的資源元件名稱，以及當地語系化資源的基底名稱 |
-| `TRuleHintPaths` | 用來作為提示以搜尋規則集檔案的檔案路徑 |
+| `TLocalization` | 當地語系化資訊，包括規則集檔案的名稱、規則集檔案的描述、包含當地語系化資源的資源元件名稱，以及當地語系化資源的基底名稱 |
+| `TRuleHintPaths` | 用來當做提示以搜尋規則集檔案的檔案路徑 |
 | `TName` | 目前規則集檔案的名稱 |
 | `TDescription` | 目前規則集檔案的描述 |
 | `TInclude` | 包含規則動作之內含規則集的路徑 |
 | `TIncludeAll` | 所有規則的規則動作 |
 | `TRule` | 具有規則動作的規則識別碼 |
 | `TRules` | 一或多個規則的集合 |
-| `TRuleSet` | 規則集檔案格式包含當地語系化資訊、規則提示路徑、包含所有資訊，包括資訊、規則資訊、名稱、描述和工具版本資訊 |
-| `TRuleAction` | 描述規則動作（例如錯誤、警告、資訊、隱藏或無）的列舉型別（Enumeration） |
+| `TRuleSet` | 包含當地語系化資訊的規則集檔案格式、規則提示路徑、包含所有資訊、包含資訊、規則資訊、名稱、描述和工具版本資訊 |
+| `TRuleAction` | 描述規則動作的列舉，例如錯誤、警告、資訊、隱藏或無 |
 | `TIncludeAction` | 描述規則動作的列舉，例如錯誤、警告、資訊、隱藏、無或預設值 |
 | `TIncludeAllAction` | 描述規則動作（例如錯誤、警告、資訊或隱藏）的列舉 |
 
-若要查看規則集的範例，請參閱[在文字編輯器中建立規則集](#to-create-a-rule-set-in-a-text-editor)，或在中儲存的任何預設規則集 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` 。
+若要查看規則集的範例，請參閱， [在文字編輯器中建立規則集](#to-create-a-rule-set-in-a-text-editor)，或儲存在中的任何預設規則集 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` 。

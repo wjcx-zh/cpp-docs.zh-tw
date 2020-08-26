@@ -14,21 +14,22 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232855"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845038"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函式
 
-||||
-|-|-|-|
-|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[調換](#swap)|[yield](#yield)|
+[get_id](#get_id)\
+[sleep_for](#sleep_for)\
+[sleep_until](#sleep_until)\
+[交換](#swap)\
+[yield](#yield)
 
-## <a name="get_id"></a><a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a> get_id
 
 可唯一識別執行目前的執行緒。
 
@@ -40,7 +41,7 @@ thread::id this_thread::get_id() noexcept;
 
 [thread:: id](../standard-library/thread-class.md) 類型的物件，可唯一識別執行目前的執行緒。
 
-## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a> sleep_for
 
 封鎖呼叫執行緒。
 
@@ -57,9 +58,9 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="remarks"></a>備註
 
-函式至少會封鎖呼叫的執行緒， *Rel_time*所指定的時間。 這個函式不會擲回任何例外狀況。
+函式至少會封鎖呼叫執行緒的 *Rel_time*所指定的時間。 這個函式不會擲回任何例外狀況。
 
-## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
 封鎖呼叫執行緒，至少直到指定的時間。
 
@@ -79,7 +80,7 @@ void sleep_until(const xtime *Abs_time);
 
 這個函式不會擲回任何例外狀況。
 
-## <a name="swap"></a><a name="swap"></a>調換
+## <a name="swap"></a><a name="swap"></a> 交換
 
 交換兩個 `thread` 物件的狀態。
 
@@ -89,17 +90,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*離開*\
 左 `thread` 物件。
 
-*再*\
+*對*\
 右 `thread` 物件。
 
 ### <a name="remarks"></a>備註
 
 此函式會呼叫 `Left.swap(Right)`。
 
-## <a name="yield"></a><a name="yield"></a>看出
+## <a name="yield"></a><a name="yield"></a> 產量
 
 向作業系統表示執行其他執行緒，即使目前的執行緒通常會繼續執行。
 

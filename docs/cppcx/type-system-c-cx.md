@@ -2,68 +2,67 @@
 title: 類型系統 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221545"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845142"
 ---
 # <a name="type-system-ccx"></a>類型系統 (C++/CX)
 
-藉由使用 Windows 執行階段架構，您可以使用 c + +/CX、Visual Basic、Visual c # 和 JavaScript 來撰寫應用程式和元件，以直接存取 Windows API 並與其他 Windows 執行階段應用程式和元件相交互操作。 以 c + + 撰寫的通用 Windows 平臺應用程式會編譯為直接在 CPU 中執行的機器碼。 通用 Windows 平臺以 c # 撰寫的應用程式，或 Visual Basic 編譯成 Microsoft 中繼語言（MSIL），並在 common language runtime （CLR）中執行。 通用 Windows 平臺以 JavaScript 撰寫的應用程式會在執行時間環境中執行。 Windows 執行階段作業系統元件本身是以 c + + 撰寫，並以機器碼的形式執行。 所有這些元件和通用 Windows 平臺應用程式都會直接透過 Windows 執行階段應用程式二進位介面（ABI）進行通訊。
+藉由使用 Windows 執行階段架構，您可以使用 c + +/CX、Visual Basic、Visual c # 和 JavaScript 來撰寫應用程式和元件，以直接存取 Windows API 並與其他 Windows 執行階段應用程式和元件相交互操作。 以 c + + 撰寫的通用 Windows 平臺應用程式會編譯為直接在 CPU 中執行的機器碼。 以 c # 撰寫的通用 Windows 平臺應用程式，或 Visual Basic 編譯成 Microsoft 中繼語言 (MSIL) 並在 common language runtime (CLR) 中執行。 以 JavaScript 撰寫的通用 Windows 平臺應用程式會在執行時間環境中執行。 Windows 執行階段作業系統元件本身是以 c + + 撰寫，並以機器碼的形式執行。 所有這些元件和通用 Windows 平臺 apps 都會直接透過 Windows 執行階段應用程式二進位介面， (ABI) 進行通訊。
 
-為了在現代 c + + 程式用法中啟用 Windows 執行階段支援，Microsoft 建立了 c + +/CX。 C + +/CX 提供內建的基底類型和基本 Windows 執行階段類型的實現，可讓 c + + 應用程式和元件透過 ABI 與以其他語言撰寫的應用程式進行通訊。 您可以使用任何 Windows 執行階段類型，或建立可供其他通用 Windows 平臺應用程式和元件使用的類別、結構、介面和其他使用者定義類型。 以 c + +/CX 撰寫的通用 Windows 平臺應用程式也可以使用一般 c + + 類別和結構，前提是它們不具有公用存取範圍。
+為了在新式 c + + 程式中啟用 Windows 執行階段支援，Microsoft 建立了 c + +/CX。 C + +/CX 提供內建的基底類型和基礎 Windows 執行階段類型的實作為基礎，可讓 c + + 應用程式和元件透過 ABI 與以其他語言撰寫的應用程式進行通訊。 您可以取用任何 Windows 執行階段類型，或建立類別、結構、介面，以及其他可供其他通用 Windows 平臺應用程式和元件使用的使用者定義類型。 以 c + +/CX 撰寫的通用 Windows 平臺應用程式也可以使用一般 c + + 類別和結構，只要它們沒有公用存取範圍。
 
 如需 C++/CX 語言投影和其運作方式的深入討論，請參閱部落格文章：
 
-- [C + +/CX 第0部分 \[ n \] ：簡介](https://devblogs.microsoft.com/cppblog/ccx-part-0-of-n-an-introduction/)
+- [C + +/CX 第0部分 \[ \] ：簡介](https://devblogs.microsoft.com/cppblog/ccx-part-0-of-n-an-introduction/)
 
-- [C + +/CX 第1部分，共 \[ n 個 \] ：簡單類別](https://devblogs.microsoft.com/cppblog/ccx-part-1-of-n-a-simple-class/)
+- [C + +/CX 第1部分 \[ \] ：簡單類別](https://devblogs.microsoft.com/cppblog/ccx-part-1-of-n-a-simple-class/)
 
-- [C + +/CX 第二部分，共 \[ n 個 \] ：磨損的類型](https://devblogs.microsoft.com/cppblog/ccx-part-2-of-n-types-that-wear-hats/)
+- [C + +/CX 第2部分 \[ \] ：磨損頭銜的類型](https://devblogs.microsoft.com/cppblog/ccx-part-2-of-n-types-that-wear-hats/)
 
-- [C + +/CX 第3部，共 \[ n 個 \] ：建築之下](https://devblogs.microsoft.com/cppblog/ccx-part-3-of-n-under-construction/)
+- [C + +/CX 第3部分 \[ \] ：在結構下](https://devblogs.microsoft.com/cppblog/ccx-part-3-of-n-under-construction/)
 
-- [C + +/CX 第4部分，共 \[ n 個 \] ：靜態成員函式](https://devblogs.microsoft.com/cppblog/ccx-part-4-of-n-static-member-functions/)
+- [C + +/CX 第4部，共 \[ n 個 \] ：靜態成員函式](https://devblogs.microsoft.com/cppblog/ccx-part-4-of-n-static-member-functions/)
 
 ## <a name="windows-metadata-winmd-files"></a>Windows 中繼資料 (.winmd) 檔案
 
-當您編譯以 c + + 撰寫的通用 Windows 平臺應用程式時，編譯器會以原生機器碼產生可執行檔，也會產生包含公用 Windows 執行階段類型描述的個別 Windows 中繼資料（winmd）檔案，其中包括類別、結構、列舉、介面、參數化介面和委派。 中繼資料的格式類似 .NET Framework 組件中使用的格式。  在 C++ 元件中，.winmd 檔案只包含中繼資料，可執行程式碼位於另一個檔案中。 這是 Windows 隨附之 Windows 執行階段元件的情況。 WinMD 檔案名稱必須符合原始程式碼中的根命名空間或為根命名空間的首碼。 (對於 .NET Framework 語言，.winmd 檔案包含程式碼和中繼資料，如同 .NET Framework 組件一樣)。
+當您編譯以 c + + 撰寫的通用 Windows 平臺應用程式時，編譯器會以原生機器碼產生可執行檔，也會產生個別的 Windows 中繼資料 ( winmd) 檔案，其中包含公用 Windows 執行階段類型的描述，包括類別、結構、列舉、介面、參數化介面和委派。 中繼資料的格式類似 .NET Framework 組件中使用的格式。  在 C++ 元件中，.winmd 檔案只包含中繼資料，可執行程式碼位於另一個檔案中。 這是 Windows 隨附的 Windows 執行階段元件的情況。 WinMD 檔案名稱必須符合原始程式碼中的根命名空間或為根命名空間的首碼。 (對於 .NET Framework 語言，.winmd 檔案包含程式碼和中繼資料，如同 .NET Framework 組件一樣)。
 
-.winmd 檔案的中繼資料代表程式碼的發行介面。 無論其他通用 Windows 平臺如何撰寫這些應用程式的語言，都可以看到已發行的類型。 因此，中繼資料或您已發行的程式碼只能包含 Windows 執行階段類型系統所指定的類型。 C++ 特有的語言建構無法在中繼資料中發行，例如標準類別、陣列、樣板或 STL 容器，因為 JavaScript 或 C# 用戶端應用程式無法處理它們。
+.winmd 檔案的中繼資料代表程式碼的發行介面。 無論其他的應用程式撰寫何種語言，其他通用 Windows 平臺都可以看到已發佈的類型。 因此，中繼資料或您發行的程式碼只能包含 Windows 執行階段類型系統所指定的類型。 C++ 特有的語言建構無法在中繼資料中發行，例如標準類別、陣列、樣板或 STL 容器，因為 JavaScript 或 C# 用戶端應用程式無法處理它們。
 
-類型或方法是否出現在中繼資料中，取決於套用哪些存取範圍修飾詞。 必須在命名空間中宣告類型，且必須宣告為公用，類型才能為可見。 您的程式碼中，允許非公用 ref 類別做為內部協助程式類型，只是在中繼資料中不可見。 即使在公用 ref 類別中，所有成員也不一定都可見。 下表列出公用 ref 類別中 c + + 存取規範之間的關聯性，以及 Windows 執行階段中繼資料可見度：
+類型或方法是否出現在中繼資料中，取決於套用哪些存取範圍修飾詞。 必須在命名空間中宣告類型，且必須宣告為公用，類型才能為可見。 您的程式碼中，允許非公用 ref 類別做為內部協助程式類型，只是在中繼資料中不可見。 即使在公用 ref 類別中，所有成員也不一定都可見。 下表列出公用 ref 類別中的 c + + 存取規範之間的關聯性，以及 Windows 執行階段中繼資料可見度：
 
-|||
-|-|-|
-|**在中繼資料中發行**|**未在中繼資料中發行**|
-|公開|private|
-|protected|內部|
-|public protected|private protected|
+| 在中繼資料中發行 | 未在中繼資料中發行 |
+|--|--|
+| 公開 | private |
+| protected | internal |
+| public protected | private protected |
 
-您可以使用 [ **物件瀏覽器** ] 來檢視 .winmd 檔案的內容。 Windows 隨附的 Windows 執行階段元件位於 Windows winmd 檔案中。 預設的 winmd 檔案包含 c + +/CX 中使用的基本類型，而 platform. winmd 包含來自 Platform 命名空間的其他類型。 根據預設，這三個 winmd 檔案會包含在通用 Windows 平臺應用程式的每個 c + + 專案中。
+您可以使用 [ **物件瀏覽器** ] 來檢視 .winmd 檔案的內容。 Windows 隨附的 Windows 執行階段元件是在 Windows 的 winmd 檔案中。 預設的 winmd 檔案包含 c + +/CX 中使用的基本類型，而 platform. winmd 則包含來自 Platform 命名空間的其他類型。 根據預設，通用 Windows 平臺應用程式的每個 c + + 專案都包含這三個 winmd 檔案。
 
 > [!TIP]
-> 因為 [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 中的類型不是公用的，所以不會出現在 .winmd 檔案中。 它們是 `Windows::Foundation::Collections`中定義的介面的私用 C++ 專屬實作。 以 JavaScript 或 c # 撰寫的 Windows 執行階段應用程式不知道[Platform：： collection：： Vector 類別](../cppcx/platform-collections-vector-class.md)是什麼，但它可以使用 `Windows::Foundation::Collections::IVector` 。 `Platform::Collections` 類型在 collection.h 中定義。
+> 因為 [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 中的類型不是公用的，所以不會出現在 .winmd 檔案中。 它們是 `Windows::Foundation::Collections`中定義的介面的私用 C++ 專屬實作。 以 JavaScript 或 c # 撰寫的 Windows 執行階段應用程式不知道 [Platform：： collection：： Vector 類別](../cppcx/platform-collections-vector-class.md) 是什麼，但它可以使用 `Windows::Foundation::Collections::IVector` 。 `Platform::Collections` 類型在 collection.h 中定義。
 
 ## <a name="windows-runtime-type-system-in-ccx"></a>C + +/CX 中的 Windows 執行階段類型系統
 
-下列各節說明 Windows 執行階段類型系統的主要功能，以及如何在 c + +/CX。中支援它們
+下列各節說明 Windows 執行階段類型系統的主要功能，以及如何在 c + + 中受到支援/CX。
 
 ### <a name="namespaces"></a>命名空間
 
-所有 Windows 執行階段類型都必須在命名空間內宣告;Windows API 本身是依命名空間來組織。 .winmd 檔案必須具有根命名空間的相同名稱。 例如，名為 A.B.C.MyClass 的類別必須在名為 A.winmd、A.B.winmd 或 A.B.C.winmd 的中繼資料檔案中定義，才能執行個體化。 DLL 的名稱不需符合 .winmd 檔案名稱。
+所有 Windows 執行階段類型都必須在命名空間中宣告;Windows API 本身會依命名空間進行組織。 .winmd 檔案必須具有根命名空間的相同名稱。 例如，名為 A.B.C.MyClass 的類別必須在名為 A.winmd、A.B.winmd 或 A.B.C.winmd 的中繼資料檔案中定義，才能執行個體化。 DLL 的名稱不需符合 .winmd 檔案名稱。
 
 Windows API 本身已改造成一套以命名空間組織的構造良好類別庫。  所有 Windows 執行階段元件都是在 Windows. * 命名空間中宣告。
 
-如需詳細資訊，請參閱[命名空間和類型可見度](../cppcx/namespaces-and-type-visibility-c-cx.md)。
+如需詳細資訊，請參閱 [命名空間和類型可見度](../cppcx/namespaces-and-type-visibility-c-cx.md)。
 
 ### <a name="fundamental-types"></a>基本類型
 
-Windows 執行階段定義下列基本類型： UInt8、Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Double、Char16、Boolean 和 String。 C + +/CX 支援其預設命名空間中的基本數數值型別為 uint16、uint32、uint64、int16、int32、int64、float32、float64 和 char16。 Boolean 和 String 也在 Platform 命名空間中定義。
+Windows 執行階段定義下列基本類型： UInt8、Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Double、Char16、Boolean 和 String。 C + +/CX 支援其預設命名空間中的基本數數值型別，例如 uint16、uint32、uint64、int16、int32、int64、float32、float64 和 char16。 Boolean 和 String 也在 Platform 命名空間中定義。
 
-C + +/CX 也會定義 uint8，相當於 **`unsigned char`** ，這在 Windows 執行階段中不受支援，而且不能用在公用 api 中。
+C + +/CX 也會定義 uint8，相當於 **`unsigned char`** Windows 執行階段不受支援，而且不能在公用 api 中使用。
 
 透過將基本型別包裝在 [Platform::IBox 介面](../cppcx/platform-ibox-interface.md) 中，它就能成為可為 Null 的型別。 如需詳細資訊，請參閱 [實值類別與結構](../cppcx/value-classes-and-structs-c-cx.md)中定義的介面的私用 C++ 專屬實作。
 
@@ -71,19 +70,19 @@ C + +/CX 也會定義 uint8，相當於 **`unsigned char`** ，這在 Windows �
 
 ### <a name="strings"></a>字串
 
-Windows 執行階段字串是16位 UNICODE 字元的不可變序列。 Windows 執行階段字串會投射為 `Platform::String^` 。 這個類別提供了字串結構、操作和轉換的方法 **`wchar_t`** 。
+Windows 執行階段字串是16位 UNICODE 字元的不可變序列。 Windows 執行階段的字串會投射為 `Platform::String^` 。 這個類別提供字串結構、操作和轉換的方法 **`wchar_t`** 。
 
 如需詳細資訊，請參閱 [字串](../cppcx/strings-c-cx.md)中定義的介面的私用 C++ 專屬實作。
 
 ### <a name="arrays"></a>陣列
 
-Windows 執行階段支援任何類型的一維陣列。 不支援巢狀陣列。  在 c + +/CX 中，Windows 執行階段陣列會投射為[Platform：： Array 類別](../cppcx/platform-array-class.md)。
+Windows 執行階段支援任何類型的一維陣列。 不支援巢狀陣列。  在 c + +/CX 中，Windows 執行階段陣列投射為 [Platform：： Array 類別](../cppcx/platform-array-class.md)。
 
-如需詳細資訊，請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+如需詳細資訊，請參閱 [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
 
 ### <a name="ref-classes-and-structs"></a>Ref 類別與結構
 
-Windows 執行階段類別會在 c + +/CX 中投射為 ref 類別或 ref 結構，因為它們是以傳址方式複製。 ref 類別和 ref 結構的記憶體管理是由參考計數自動處理。 當物件的最後一個參考超出範圍時，就會終結物件。 ref 類別或 ref 結構可以：
+Windows 執行階段的類別會在 c + +/CX 中投射為 ref 類別或 ref 結構，因為它們是以傳址方式複製。 ref 類別和 ref 結構的記憶體管理是由參考計數自動處理。 當物件的最後一個參考超出範圍時，就會終結物件。 ref 類別或 ref 結構可以：
 
 - 包含成員建構函式、方法、屬性和事件。 這些成員可以有 public、private、protected 或 internal 存取範圍。
 
@@ -93,7 +92,7 @@ Windows 執行階段類別會在 c + +/CX 中投射為 ref 類別或 ref 結構�
 
 具有公用建構函式的 ref 類別必須宣告為密封，以避免進一步衍生。
 
-如需詳細資訊，請參閱[Ref 類別和結構](../cppcx/ref-classes-and-structs-c-cx.md)
+如需詳細資訊，請參閱 [Ref 類別和結構](../cppcx/ref-classes-and-structs-c-cx.md)
 
 ### <a name="value-classes-and-structs"></a>實值類別與結構
 
@@ -111,15 +110,15 @@ Windows 執行階段類別會在 c + +/CX 中投射為 ref 類別或 ref 結構�
 
 ### <a name="properties"></a>屬性
 
-屬性是任何 Windows 執行階段類型的公用資料成員，並實作為 get/set 方法配對。 用戶端程式碼將屬性視為公用欄位來存取。 不需要自訂 get 或 set 程式碼的屬性稱為 *trivial 屬性* ，可宣告為不具有明確的 get 或 set 方法。
+屬性是任何 Windows 執行階段類型的公用資料成員，並且會實作為 get/set 方法組。 用戶端程式碼將屬性視為公用欄位來存取。 不需要自訂 get 或 set 程式碼的屬性稱為 *trivial 屬性* ，可宣告為不具有明確的 get 或 set 方法。
 
 如需詳細資訊，請參閱 [屬性](../cppcx/properties-c-cx.md)中定義的介面的私用 C++ 專屬實作。
 
 ### <a name="windows-runtime-collections-in-ccx"></a>C + +/CX 中的 Windows 執行階段集合
 
-Windows 執行階段會針對每個語言以自己的方式執行的集合類型，定義一組介面。 C + +/CX 在[Platform：： collection：： Vector 類別](../cppcx/platform-collections-vector-class.md)、 [Platform：： Collection：： Map 類別](../cppcx/platform-collections-map-class.md)和其他相關的具象集合類型中提供了實作為，其與標準範本庫（STL）對應專案相容。
+Windows 執行階段會針對每個語言以自己的方式執行的集合類型，定義一組介面。 C + +/CX 提供 [Platform：： collection：： Vector 類別](../cppcx/platform-collections-vector-class.md)、 [Platform：： Collection：： Map 類別](../cppcx/platform-collections-map-class.md)和其他相關的具象集合類型中的實作為， (STL) 對應項的標準樣板程式庫相容。
 
-如需詳細資訊，請參閱[集合](../cppcx/collections-c-cx.md)。
+如需詳細資訊，請參閱 [集合](../cppcx/collections-c-cx.md)。
 
 ### <a name="template-ref-classes"></a>樣板 ref 類別
 
@@ -129,19 +128,19 @@ Windows 執行階段會針對每個語言以自己的方式執行的集合類型
 
 ### <a name="interfaces"></a>介面
 
-Windows 執行階段介面會定義一組公用屬性、方法和事件，如果 ref 類別或 ref 結構繼承自介面，就必須加以執行。
+Windows 執行階段介面會定義一組公用屬性、方法和事件，如果 ref 類別或 ref 結構繼承自介面，就必須執行這些屬性、方法和事件。
 
 如需詳細資訊，請參閱[介面](../cppcx/interfaces-c-cx.md)。
 
 ### <a name="enums"></a>列舉
 
-Windows 執行階段中的 enum 類別類似于 c + + 中的範圍列舉。 基礎類型是 int32，但如果套用 [Flags] 屬性，則基礎類型是 uint32。
+Windows 執行階段中的列舉類別與 c + + 中的範圍列舉相似。 基礎類型是 int32，但如果套用 [Flags] 屬性，則基礎類型是 uint32。
 
 如需詳細資訊，請參閱 [列舉](../cppcx/enums-c-cx.md)中定義的介面的私用 C++ 專屬實作。
 
 ### <a name="delegates"></a>委派
 
-Windows 執行階段中的委派類似 c + + 中的 std：： function 物件。 這是特殊類型的 ref 類別，用來叫用用戶端提供的函式 (具有相容簽章)。  委派最常在 Windows 執行階段中用來當做事件的類型。
+Windows 執行階段中的委派類似于 c + + 中的 std：： function 物件。 這是特殊類型的 ref 類別，用來叫用用戶端提供的函式 (具有相容簽章)。  在 Windows 執行階段中，最常使用委派做為事件的型別。
 
 如需詳細資訊，請參閱 [委派](../cppcx/delegates-c-cx.md)中定義的介面的私用 C++ 專屬實作。
 
@@ -171,13 +170,13 @@ Boxed 變數是在必須有參考語意的情況下，包裝在參考類型中�
 
 ### <a name="attributes"></a>屬性
 
-屬性是可套用至任何 Windows 執行階段類型或類型成員的中繼資料值，而且可以在執行時間進行檢查。 Windows 執行階段會在命名空間中定義一組通用屬性 `Windows::Foundation::Metadata` 。 此版本中的 Windows 執行階段不支援公用介面上的使用者定義屬性。
+屬性是可套用至任何 Windows 執行階段類型或類型成員的中繼資料值，而且可以在執行時間進行檢查。 Windows 執行階段會在命名空間中定義一組通用屬性 `Windows::Foundation::Metadata` 。 此版本的 Windows 執行階段不支援公用介面上的使用者定義屬性。
 
 ## <a name="api-deprecation"></a>API 取代
 
-描述如何使用 Windows 執行階段系統類型所使用的相同屬性，將公用 Api 標記為已被取代。
+描述如何使用 Windows 執行階段系統類型所用的相同屬性，將公用 Api 標記為已被取代。
 
-如需詳細資訊，請參閱[淘汰類型和成員](../cppcx/deprecating-types-and-members-c-cx.md)。
+如需詳細資訊，請參閱 [淘汰類型和成員](../cppcx/deprecating-types-and-members-c-cx.md)。
 
 ## <a name="see-also"></a>另請參閱
 

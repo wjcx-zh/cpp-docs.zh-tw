@@ -1,27 +1,28 @@
 ---
-title: 如何：攔截 MSIL 擲回之機器碼的例外狀況
+title: 作法：攔截 MSIL 所擲回機器碼的例外狀況
+description: 如何在 MSIL 擲回之機器碼中攔截例外狀況的範例。
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68a771d27e091f86331703b55bc2eb52dfbb41b
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221350"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898582"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：攔截 MSIL 擲回之機器碼的例外狀況
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>作法：攔截 MSIL 所擲回機器碼的例外狀況
 
-在機器碼中，您可以從 MSIL 攔截原生 c + + 例外狀況。  您可以使用和來攔截 CLR 例外狀況 `__try` **`__except`** 。
+在機器碼中，您可以從 MSIL 攔截原生 c + + 例外狀況。  您可以使用和來捕捉 CLR 例外狀況 **`__try`** **`__except`** 。
 
-如需詳細資訊，請參閱[結構化例外狀況處理（C/c + +）](../cpp/structured-exception-handling-c-cpp.md)和[例外狀況和錯誤處理的新式 c + + 最佳作法](../cpp/errors-and-exception-handling-modern-cpp.md)。
+如需詳細資訊，請參閱 [結構化例外狀況處理 (C/c + +) ](../cpp/structured-exception-handling-c-cpp.md) 和 [新式 c + + 的例外狀況和錯誤處理最佳做法](../cpp/errors-and-exception-handling-modern-cpp.md)。
 
-## <a name="example"></a>範例
+## <a name="example-1"></a>範例 1
 
-下列範例會定義具有兩個函式的模組，其中一個會擲回原生例外狀況，另一個則擲回 MSIL 例外狀況。
+下列範例會定義具有兩個函式的模組，一個會擲回原生例外狀況，另一個則擲回 MSIL 例外狀況。
 
 ```cpp
 // catch_MSIL_in_native.cpp
@@ -35,9 +36,9 @@ void Test2() {
 }
 ```
 
-## <a name="example"></a>範例
+## <a name="example-2"></a>範例 2
 
-下列範例會定義可攔截原生和 MSIL 例外狀況的模組。
+下列範例會定義攔截原生和 MSIL 例外狀況的模組。
 
 ```cpp
 // catch_MSIL_in_native_2.cpp
@@ -77,6 +78,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)

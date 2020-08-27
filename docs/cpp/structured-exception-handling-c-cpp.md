@@ -1,6 +1,7 @@
 ---
 title: Structured Exception Handling (C/C++)
-ms.date: 08/14/2018
+description: Microsoft C/c + + 中結構化例外狀況處理的總覽。
+ms.date: 08/24/2020
 helpviewer_keywords:
 - termination handlers [C++], handling exceptions in C++
 - structured exception handling [C++]
@@ -9,42 +10,42 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 01eaeaa57ee4d09452f37a7241f89e75fdca843e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 142e89bc82adbe7938e8825029908e814df6055c
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231100"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898626"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-結構化例外狀況處理（SEH）是 C 的 Microsoft 擴充功能，可正常處理特定的異常程式碼情況，例如硬體錯誤。 雖然 Windows 和 Microsoft c + + 支援 SEH，但建議您使用 ISO 標準 c + + 例外狀況處理，因為它可讓您的程式碼更具可攜性和彈性。 不過，若要維護現有的程式碼或特定類型的程式，您仍然可能必須使用 SEH。
+結構化例外狀況處理 (SEH) 是 Microsoft 的 C 延伸模組，可正常地處理特定的異常程式碼情況，例如硬體錯誤。 雖然 Windows 和 Microsoft c + + 支援 SEH，但是建議您使用 ISO 標準 c + + 例外狀況處理。 它讓您的程式碼更具可攜性和彈性。 不過，若要維護現有的程式碼或特定種類的程式，您仍然必須使用 SEH。
 
-**Microsoft 特定：**
+**Microsoft 專用：**
 
 ## <a name="grammar"></a>文法
 
-*try-except-語句*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *複合陳述式* **`__except`** **（** *expression* **）** *複合陳述式*
-
-*try-catch-finally 語句*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *複合陳述式* **`__finally`** *複合陳述式*
+> *`try-except-statement`* :<br/>
+> &emsp;**`__try`** *`compound-statement`* **`__except`** **`(`** *`expression`* **`)`** *`compound-statement`*
+>
+> *`try-finally-statement`* :<br/>
+> &emsp;**`__try`** *`compound-statement`* **`__finally`** *`compound-statement`*
 
 ## <a name="remarks"></a>備註
 
-使用 SEH，您可以確保在執行意外終止時，會正確地釋放記憶體區塊和檔案之類的資源。 您也可以使用不依賴語句的簡潔結構化程式碼，或針對傳回碼進行的測試，來處理特定問題（例如，記憶體不足） **`goto`** 。
+使用 SEH，您可以確保資源（例如記憶體區塊和檔案）會在執行意外終止時正確釋放。 您也可以使用不依賴語句的簡潔結構化程式碼 **`goto`** 或更精細的傳回碼測試，來處理特定問題（例如，記憶體不足）。
 
-本文中參照的 try-except 和 try-finally 陳述式是 C 語言的 Microsoft 擴充功能。 它們支援 SEH，讓應用程式在終止執行的事件之後取得程式的控制權。 雖然 SEH 與 C++ 原始程式檔搭配運作，但它不是專為 C++ 所設計。 如果您在使用[/eha 或/ehsc](../build/reference/eh-exception-handling-model.md)選項編譯的 c + + 程式中使用 SEH，則會呼叫本機物件的析構函數，但其他執行行為可能不是您預期的結果。 如需說明，請參閱本文稍後的範例。 在大部分情況下，建議您不要使用 SEH，而是使用 Microsoft c + + 編譯器也支援的 ISO 標準[c + + 例外狀況處理](../cpp/try-throw-and-catch-statements-cpp.md)。 使用 C++ 例外狀況處理，確保您的程式碼更具可攜性，而且您可以處理任何類型的例外狀況。
+本文 `try-except` `try-finally` 中參考的和語句是 C 語言的 Microsoft 擴充功能。 它們支援 SEH，讓應用程式在終止執行的事件之後取得程式的控制權。 雖然 SEH 與 C++ 原始程式檔搭配運作，但它不是專為 C++ 所設計。 如果您在使用[ `/EHa` 或 `/EHsc` ](../build/reference/eh-exception-handling-model.md)選項編譯的 c + + 程式中使用 SEH，則會呼叫本機物件的析構程式，但其他執行行為可能不是您預期的行為。 如需圖例，請參閱本文稍後的範例。 在大部分的情況下，我們建議您不要使用 Microsoft c + + 編譯器也支援的 ISO 標準 [c + + 例外狀況處理](../cpp/try-throw-and-catch-statements-cpp.md)，而不是 SEH。 使用 C++ 例外狀況處理，確保您的程式碼更具可攜性，而且您可以處理任何類型的例外狀況。
 
-如果您有使用 SEH 的 C 程式碼，您可以將它與使用 c + + 例外狀況處理的 c + + 程式碼混合使用。 如需資訊，請參閱[在 c + + 中處理結構化例外](../cpp/exception-handling-differences.md)狀況。
+如果您有使用 SEH 的 C 程式碼，您可以將它與使用 c + + 例外狀況處理的 c + + 程式碼混合使用。 如需詳細資訊，請參閱 [在 c + + 處理結構化例外](../cpp/exception-handling-differences.md)狀況。
 
 有兩種 SEH 機制：
 
-- [例外狀況處理常式](../cpp/writing-an-exception-handler.md)或 **`__except`** 區塊，可以回應或關閉例外狀況。
+- [例外狀況處理常式](../cpp/writing-an-exception-handler.md)或 **`__except`** 區塊，可回應或關閉例外狀況。
 
-- [終止處理常式](../cpp/writing-a-termination-handler.md)或 **`__finally`** 一律會呼叫的區塊，不論例外狀況是否導致終止。
+- [終止處理常式](../cpp/writing-a-termination-handler.md)或 **`__finally`** 一律會呼叫的區塊，不論例外狀況是否會導致終止。
 
-這兩種處理常式不同，但透過稱為「回溯堆疊」的處理序密切相關。 當發生結構化例外狀況時，Windows 會尋找最近安裝的例外處理常式（目前為作用中）。 處理常式可以執行下列三項事項的其中一項：
+這兩種處理常式不同，但會透過稱為回溯 *堆疊*的進程密切相關。 當結構化例外狀況發生時，Windows 會尋找目前作用中的最近安裝的例外狀況處理常式。 處理常式可以執行下列三項事項的其中一項：
 
 - 無法辨識例外狀況，並將控制權傳給其他處理常式。
 
@@ -52,9 +53,9 @@ ms.locfileid: "87231100"
 
 - 辨識例外狀況，並處理它。
 
-可辨識例外狀況的例外狀況處理常式可能不在例外狀況發生時正在執行的函式中。 在某些情況下，它可能在堆疊上更高的函式中。 目前執行中函式和堆疊框架上的所有其他函式都會終止。 在此過程中，堆疊會「展開」，也就是說，已終止函式的本機非靜態變數會從堆疊中清除。
+可辨識例外狀況的例外狀況處理常式可能不在例外狀況發生時正在執行的函式中。 它可能在堆疊上的函式中更高。 目前執行中函式和堆疊框架上的所有其他函式都會終止。 在此程式期間，會將堆疊 *展開*。 也就是說，已終止函式的區域非靜態變數會從堆疊中清除。
 
-回溯堆疊時，作業系統會呼叫您為每個函式所撰寫的任何終止處理常式。 透過使用終止處理常式，您可以清除因異常終止而仍然保持開啟的資源。 如果您已輸入重要區段，您可以在終止處理常式中結束它。 如果程式即將關閉，您可以執行其他環境維護工作 (例如關閉和移除暫存檔案)。
+回溯堆疊時，作業系統會呼叫您為每個函式所撰寫的任何終止處理常式。 藉由使用終止處理常式，您可以清除資源，否則會因為異常終止而維持開啟。 如果您已輸入重要區段，您可以在終止處理常式中結束它。 當程式即將關閉時，您可以進行其他的維護工作，例如關閉和移除暫存檔案。
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -66,7 +67,7 @@ ms.locfileid: "87231100"
 
 ## <a name="example"></a>範例
 
-如先前所述，如果您在 c + + 程式中使用 SEH，並使用 **/eha**或 **/ehsc**選項進行編譯，則會呼叫本機物件的析構函數。 不過，如果您同時使用 C++ 例外狀況，則在執行期間的行為可能會不如預期。 這個範例會示範這些行為差異。
+如先前所述，如果您在 c + + 程式中使用 SEH 並使用或選項進行編譯，則會呼叫本機物件的析構函數 **`/EHa`** **`/EHsc`** 。 但是，如果您也使用 c + + 例外狀況，執行期間的行為可能不是您預期的行為。 此範例示範這些行為差異。
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +116,14 @@ int main()
 }
 ```
 
-如果您使用 **/ehsc**來編譯此程式碼，但未定義本機測試控制項宏，則不 `CPPEX` 會執行 `TestClass` 此析構函式，而且輸出看起來會像這樣：
+如果您使用 **`/EHsc`** 來編譯此程式碼，但未定義本機測試控制程式宏 `CPPEX` ，則 `TestClass` 不會執行此函式。 輸出如下所示：
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-如果您使用 **/ehsc**來編譯器代碼，並 `CPPEX` 使用定義（因此會擲回 `/DCPPEX` c + + 例外狀況），則會 `TestClass` 執行析構函式，而且輸出看起來會像這樣：
+如果您使用 **`/EHsc`** 來編譯器代碼，並 `CPPEX` 使用 (來定義，以便擲回 `/DCPPEX` c + + 例外狀況) ，則會 `TestClass` 執行此函式，而且輸出看起來像這樣：
 
 ```Output
 Throwing C++ exception
@@ -130,7 +131,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-如果您使用 **/eha**來編譯器代碼，則不論是否使用來擲回例外狀況， `TestClass` `std::throw` 或使用 SEH 來觸發例外狀況（也就是是否已定義），都會執行此析構函式 `CPPEX` 。 輸出如下所示：
+如果您使用 **`/EHa`** 來編譯器代碼，則會使用 `TestClass` `std::throw` 或使用 SEH 來觸發例外狀況，來執行此函式的擲回例外狀況。 亦即，是否已 `CPPEX` 定義。 輸出如下所示：
 
 ```Output
 Throwing C++ exception
@@ -138,14 +139,14 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md)。
+如需詳細資訊，請參閱[ `/EH` (例外狀況處理模型) ](../build/reference/eh-exception-handling-model.md)。
 
-**結束 Microsoft 專有**
+**結束 Microsoft 專用**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
-[\<exception>](../standard-library/exception.md)<br/>
+[`<exception>`](../standard-library/exception.md)<br/>
 [錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[結構化例外狀況處理（Windows）](/windows/win32/debug/structured-exception-handling)
+[ (Windows) 的結構化例外狀況處理 ](/windows/win32/debug/structured-exception-handling)

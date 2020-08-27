@@ -1,16 +1,17 @@
 ---
 title: x64 例外狀況處理
+description: X64 上的 Microsoft c + + 例外狀況處理慣例總覽。
 ms.date: 10/14/2019
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1c55ecf8755e208b2f47acdfda185123ee0255e2
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835047"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898570"
 ---
 # <a name="x64-exception-handling"></a>x64 例外狀況處理
 
@@ -305,7 +306,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** 是此函數內的 RIP 值。 這個值可以是例外狀況位址或控制項離開建立函式的位址。 此 RIP 用來判斷控制項是否在此函式內的某個受防護結構內，例如， `__try` 或的區塊 `__try` / **`__except`** `__try` / **`__finally`** 。
+**ControlPc** 是此函數內的 RIP 值。 這個值可以是例外狀況位址或控制項離開建立函式的位址。 此 RIP 用來判斷控制項是否在此函式內的某個受防護結構內，例如， **`__try`** 或的區塊 **`__try`** / **`__except`** **`__try`** / **`__finally`** 。
 
 **Imagebase 設定** 是映射基底 (載入位址) 包含此函式的模組），以新增至函式專案中所使用的32位位移，以及用來記錄相對位址的回溯資訊。
 
@@ -498,6 +499,6 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [x64 軟體慣例](../build/x64-software-conventions.md)

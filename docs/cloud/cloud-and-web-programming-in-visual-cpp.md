@@ -3,12 +3,12 @@ title: 以 Visual C++ 進行雲端和 Web 程式設計
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274636"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898675"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 
@@ -16,7 +16,7 @@ ms.locfileid: "71274636"
 
 ## <a name="microsoft-azure-sdks-and-rest-services"></a>Microsoft Azure SDK 與 REST 服務
 
-- [適用於 C++ 的 Microsoft Azure 儲存體用戶端程式庫](https://azure.github.io/azure-storage-cpp/) \(英文\)
+- [Microsoft Azure Storage Client Library for C++](https://azure.github.io/azure-storage-cpp/) \(英文\)
 
   「適用於 C++ 的 Azure 儲存體用戶端程式庫」提供一個可搭配 Azure 儲存體運作的全方位的 API，其中包括但不限於下列功能：
 
@@ -30,7 +30,7 @@ ms.locfileid: "71274636"
 
 - [Microsoft Graph 中的 OneDrive 與 SharePoint](https://dev.onedrive.com/README.htm)
 
-  OneDrive API 提供一組 HTTP 服務，可將您的應用程式連線至 Office 365 及 SharePoint Server 2016 中的檔案和資料夾。
+  OneDrive API 提供一組 HTTP 服務，可將您的應用程式連接到 Microsoft 365 和 SharePoint Server 2016 中的檔案和資料夾。
 
 ## <a name="windows-and-cross-platform-networking-apis"></a>Windows 與跨平台網路 API
 
@@ -51,13 +51,13 @@ ms.locfileid: "71274636"
 
 - [IXMLHTTPRequest2 介面](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  提供一個原生 COM 介面，可供您在「Windows 執行階段」應用程式或 Windows 傳統型應用程式中使用，以透過 HTTP 連線至網際網路及發出 GET、PUT 和其他 HTTP 命令。 如需詳細資訊，請參閱[逐步解說：使用工作和 XML HTTP 要求來進行連線](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
+  提供一個原生 COM 介面，可供您在「Windows 執行階段」應用程式或 Windows 傳統型應用程式中使用，以透過 HTTP 連線至網際網路及發出 GET、PUT 和其他 HTTP 命令。 如需詳細資訊，請參閱 [逐步解說：使用工作和 XML HTTP 要求進行連接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
 - [Windows 網際網路 (WinInet)](/windows/win32/WinInet/portal)
 
   您可以在 Windows 桌面應用程式中使用，以便連接到網際網路的 Windows 應用程式開發介面。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md) <br/>
 [Microsoft Azure C 和 C++ 開發人員中心](https://azure.microsoft.com/develop/cpp/) <br/>

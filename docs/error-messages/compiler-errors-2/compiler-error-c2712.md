@@ -1,25 +1,26 @@
 ---
 title: 編譯器錯誤 C2712
-ms.date: 11/04/2016
+description: 描述 Microsoft C/c + + 編譯器錯誤 C2712。
+ms.date: 08/25/2020
 f1_keywords:
 - C2712
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-ms.openlocfilehash: a25c59fa5c9ba0102666f6c8922a61b063e7627a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2f0b883607241473a429919e06de9e975fa2e3c1
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202302"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898701"
 ---
 # <a name="compiler-error-c2712"></a>編譯器錯誤 C2712
 
-> 無法在需要物件回溯 (Object Unwinding) 的函式中使用 __try
+> `__try`在需要物件回溯的函式中無法使用
 
 ## <a name="remarks"></a>備註
 
-如果您使用[/ehsc](../../build/reference/eh-exception-handling-model.md)，而且具有結構化例外狀況處理的函式也有需要回溯（銷毀）的物件，就會發生錯誤 C2712。
+如果您使用，就可能會發生錯誤 C2712 [`/EHsc`](../../build/reference/eh-exception-handling-model.md) ，而且具有結構化例外狀況處理的函式也有需要回溯 (終結) 的物件。
 
 可能的解決方案：
 
@@ -29,11 +30,11 @@ ms.locfileid: "80202302"
 
 - 編譯時不要使用 /EHsc
 
-如果您呼叫使用[__event](../../cpp/event.md)關鍵字所宣告的方法，也可能會發生錯誤 C2712。 由於事件可能會用於多執行緒環境中，因此編譯器會產生程式碼以防止基礎事件物件的操作，然後將產生的程式碼封裝在 SEH [try-finally 語句](../../cpp/try-finally-statement.md)中。 因此，如果您呼叫事件方法，並以類型具有解構函式的引數傳值，就會發生錯誤 C2712。 此情況下的解決方案之一，是傳遞引數做為常數參考。
+如果您呼叫使用關鍵字所宣告的方法，也可能會發生錯誤 C2712 [`__event`](../../cpp/event.md) 。 由於事件可能會用在多執行緒環境中，因此編譯器會產生程式碼以防止基礎事件物件的操作，然後將產生的程式碼括在 SEH [ `try-finally` 語句](../../cpp/try-finally-statement.md)中。 因此，如果您呼叫事件方法，並以類型具有解構函式的引數傳值，就會發生錯誤 C2712。 此情況下的解決方案之一，是傳遞引數做為常數參考。
 
-如果您使用 **/clr： pure**進行編譯，並在 `__try` 區塊中宣告指標對函式的靜態陣列，也可能會發生 C2712。 靜態成員需要編譯器在 **/clr： pure**下使用動態初始化，這表示C++例外狀況處理。 然而，在 `__try` 區塊中不允許執行 C++ 例外狀況處理。
+如果您使用進行編譯 **`/clr:pure`** ，並在區塊中宣告指向函式的靜態陣列，也可能會發生 C2712 **`__try`** 。 靜態成員需要編譯器在下使用動態初始化 **`/clr:pure`** ，這表示 c + + 例外狀況處理。 不過，區塊中不允許 c + + 例外狀況處理 **`__try`** 。
 
-**/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
+**`/clr:pure`** 和 **`/clr:safe`** 編譯器選項在 Visual Studio 2015 中已被取代，Visual Studio 2017 中不支援。
 
 ## <a name="example"></a>範例
 

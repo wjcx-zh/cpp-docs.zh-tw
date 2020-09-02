@@ -94,6 +94,15 @@
           href: ../standard-library/atomic-functions.md
         - name: <atomic> 列舉
           href: ../standard-library/atomic-enums.md
+    - name: <bit>
+      expanded: false
+      items:
+        - name: <bit>
+          href: ../standard-library/bit.md
+        - name: <bit> 函式
+          href: ../standard-library/bit-functions.md
+        - name: 位元組順序列舉
+          href: ../standard-library/bit-enum.md
     - name: <bitset>
       expanded: false
       items:

@@ -1,6 +1,7 @@
 ---
 title: asinh、asinhf、asinhl
-ms.date: 4/2/2020
+description: Asinh、asinhf 和 asinhl 的 API 參考;這會計算浮點值的反雙曲正弦。
+ms.date: 08/31/2020
 api_name:
 - asinh
 - asinhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232647"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556784"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -51,9 +52,8 @@ ms.locfileid: "87232647"
 double asinh( double x );
 float asinhf( float x );
 long double asinhl( long double x );
-```
+#define asinh(X) // Requires C11 or higher
 
-```cpp
 float asinh( float x );  // C++ only
 long double asinh( long double x );  // C++ only
 ```
@@ -65,23 +65,27 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Asinh**函數會傳回*x*的反雙曲正弦（arc 雙曲正弦）。 此函式在浮點網域中有效。 如果*x*是無訊息的 NaN、不定或無限大，則會傳回相同的值。
+**Asinh**函式會傳回*x*的反向雙曲正弦 (弧形雙曲正弦) 。 此函式在浮點網域中有效。 如果 *x* 是無訊息的 NaN、不定或無限大，則會傳回相同的值。
 
-|輸入|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr** 例外|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|無|無|
 
 ## <a name="remarks"></a>備註
 
-當您使用 c + + 時，可以呼叫採用並傳回或值之**asinh**的多載 **`float`** **`long double`** 。 在 C 程式中， **asinh**一律會採用並傳回 **`double`** 。
+當您使用 c + + 時，可以呼叫採用和傳回或值的 **asinh** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **asinh** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `asinh()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |函式|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|--------------|------------------|
-|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<cmath>或 \< math<|
+|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**asinh ( # B1 ** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

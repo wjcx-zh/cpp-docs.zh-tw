@@ -1,5 +1,6 @@
 ---
 title: modf、modff、modfl
+description: Modf、modff 和 modfl 的 API 參考;這會將浮點值分割成小數和整數部分。
 ms.date: 4/2/2020
 api_name:
 - modff
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216865"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556758"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -74,19 +75,19 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-**Modf**函數會將浮點值*x*細分成小數和整數部分，其中每一個都具有與*x*相同的正負號。 會傳回*x*的帶正負號小數部分。 整數部分會儲存為*intptr*的浮點值。
+**Modf**函式會將浮點值*x*細分成小數和整數部分，每個部分都具有與*x*相同的正負號。 會傳回 *x* 的帶正負號小數部分。 整數部分會儲存為 *intptr*的浮點值。
 
-**modf**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**modf** 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作為。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-C + + 允許多載，因此您可以呼叫採用並傳回或參數之**modf**的多載 **`float`** **`long double`** 。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數，並傳回雙精度值。
+C + + 允許多載，所以您可以呼叫採用和傳回或參數的 **modf** 多載 **`float`** **`long double`** 。 在 C 程式中， **modf** 一律採用兩個雙精度值，並傳回雙精度浮點數。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**modf**、 **modff**、 **modfl**|C\<math.h><br /><br /> C + +：、 \<cmath> 或\<math.h>|
+|**modf**、 **modff**、 **modfl**|C： \<math.h><br /><br /> C + +： \<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

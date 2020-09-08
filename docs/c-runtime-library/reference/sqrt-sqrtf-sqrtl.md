@@ -1,6 +1,7 @@
 ---
 title: sqrt、sqrtf、sqrtl
-ms.date: 6/5/2020
+description: Sqrt、sqrtf 和 sqrtl 的 API 參考;這會計算浮點數的平方根。
+ms.date: 08/31/2020
 api_name:
 - sqrtl
 - sqrtf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17526b4e4a7eca5d36c01069dbe975bb035d1f58
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229359"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556771"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -66,34 +67,38 @@ float sqrtf(
 long double sqrtl(
    long double x
 );
+#define sqrt(x) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 非負值浮點值
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用或類型之**sqrt**的多載 **`float`** **`long double`** 。 在 C 程式中， **sqrt**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用或類型之 **sqrt** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **sqrt** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `sqrt()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
+
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="return-value"></a>傳回值
 
-**Sqrt**函數會傳回*x*的平方根。 根據預設，如果*x*是負數， **sqrt**會傳回不限的 NaN。
+**Sqrt**函數會傳回*x*的平方根。 依預設，如果 *x* 是負數， **sqrt** 會傳回不定的 NaN。
 
-|輸入|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr** 例外|
 |-----------|-------------------|--------------------------|
-|± QNAN，IND|無|_DOMAIN|
+|± QNAN、IND|無|_DOMAIN|
 |- ∞|無|_DOMAIN|
 |x<0|無|_DOMAIN|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**sqrt**、 **sqrtf**、 **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt ( # B1 ** 宏 | \<tgmath.h> ||
 
 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 

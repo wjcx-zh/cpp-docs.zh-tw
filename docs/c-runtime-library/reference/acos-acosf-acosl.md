@@ -1,6 +1,7 @@
 ---
 title: acos、acosf、acosl
-ms.date: 4/2/2020
+description: 、和的 API 參考 `acos` ， `acosf` 其會 `acosl` 計算浮點值的反余弦值。
+ms.date: 08/31/2020
 api_name:
 - acosf
 - acos
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220765"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555094"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -53,41 +54,43 @@ ms.locfileid: "87220765"
 double acos( double x );
 float acosf( float x );
 long double acosl( long double x );
-```
+#define acos(X) // Requires C11 or higher
 
-```cpp
 float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
-介於-1 和1之間的值，用於計算反余弦函數（反余弦值）。
+*X*\
+介於-1 和1之間的值，用來計算反余弦)  (反余弦值。
 
 ## <a name="return-value"></a>傳回值
 
-**Acos**函式會傳回0到π弧度之間*x*的反余弦函數。
+**Acos**函式會傳回範圍0到π弧度之間*x*的反余弦函數。
 
-根據預設，如果*x*小於-1 或大於1，則**acos**會傳回不定的。
+依預設，如果 *x* 小於-1 或大於1， **acos** 會傳回不定。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± ∞|無效|_DOMAIN|
-|± QNAN，IND|無|_DOMAIN|
+|± QNAN、IND|無|_DOMAIN|
 |&#124;x&#124;>1|無效|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**acos**的多載 **`float`** **`long double`** 。 在 C 程式中， **acos**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回和類型的 **acos** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **acos** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `acos()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
+|**acos ( # B1 ** 宏 | \<tgmath.h> ||
 
 ## <a name="example"></a>範例
 

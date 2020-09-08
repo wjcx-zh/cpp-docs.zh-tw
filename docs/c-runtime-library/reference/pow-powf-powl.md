@@ -1,6 +1,7 @@
 ---
 title: pow、powf、powl
-ms.date: 4/2/2020
+description: Pow、powf 和 powl 的 API 參考;計算乘冪的。
+ms.date: 08/31/2020
 api_name:
 - powl
 - pow
@@ -39,16 +40,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 58d23f53de8dc5323fe0818611bccb647984fd9b
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232439"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555757"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
-計算*x*到*y*的乘冪。
+計算以*y*乘冪的*x* 。
 
 ## <a name="syntax"></a>語法
 
@@ -56,9 +57,8 @@ ms.locfileid: "87232439"
 double pow( double x, double y );
 float powf( float x, float y );
 long double powl( long double x, long double y );
-```
+define pow(X, Y) // Requires C11 or higher 
 
-```cpp
 double pow( double x, int y );  // C++ only
 float pow( float x, float y );  // C++ only
 float pow( float x, int y );  // C++ only
@@ -68,39 +68,42 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 Base：
 
-*y*<br/>
+*Y*\
 指數。
 
 ## <a name="return-value"></a>傳回值
 
-傳回*x*<sup>*y*</sup>的值。 溢位或反向溢位時不會列印錯誤訊息。
+傳回 *x*<sup>*y*</sup>的值。 溢位或反向溢位時不會列印錯誤訊息。
 
 |x 和 y 的值|pow 的傳回值|
 |-----------------------|-------------------------|
-|*x* ！ = 0.0 和*y* = = 0。0|1|
-|*x* = = 0.0 和*y* = = 0。0|1|
-|*x* = = 0.0 和*y* < 0|INF|
+|*x* ！ = 0.0 且 *y* = = 0。0|1|
+|*x* = = 0.0 且 *y* = = 0。0|1|
+|*x* = = 0.0 和 *y* < 0|INF|
 
 ## <a name="remarks"></a>備註
 
-**pow**無法辨識大於 2<sup>64</sup>的整數浮點值（例如，1.0 e100）。
+**pow** 無法辨識大於 2<sup>64</sup> 的整數浮點值 (例如 1.0 e100) 。
 
-**pow**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**pow** 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作為。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-因為 c + + 允許多載，所以您可以呼叫**pow**的任何不同多載。 在 C 程式中， **pow**一律會接受兩個 **`double`** 值並傳回 **`double`** 值。
+因為 c + + 允許多載，所以您可以呼叫 **pow**的各種多載。 在 C 程式中，除非您使用 \<tgmath.h> 宏來呼叫這個函式，否則 **pow** 一律會採用兩個 **`double`** 值並傳回 **`double`** 值。
 
-`pow(int, int)` 已無法使用。 如果您使用這個多載，編譯器可能會發出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免這個問題，請將第一個參數轉換為 **`double`** 、 **`float`** 或 **`long double`** 。
+如果您使用 \<tgmath.h> `pow()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+`pow(int, int)` 已無法使用。 如果您使用此多載，編譯器可能會發出 [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免這個問題，請將第一個參數轉換為 **`double`** 、 **`float`** 或 **`long double`** 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-|-|-|
 |**pow**、 **powf**、 **powl**|\<math.h>|\<math.h> 或 \<cmath>|
+|**pow** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

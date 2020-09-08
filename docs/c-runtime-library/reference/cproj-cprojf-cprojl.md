@@ -1,6 +1,7 @@
 ---
 title: cproj、cprojf、cprojl
-ms.date: 11/04/2016
+description: Cproj、cprojf 和 cprojl 的 API 參考;它會在黎曼球面球體上取出複數的投射。
+ms.date: 9/2/2020
 api_name:
 - cproj
 - cprojf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-ms.openlocfilehash: fdeefe10814b887af04d6f4adbb01300785e8b46
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fcc3c0a42c8c6392130ad58ed12c4985e7ad4907
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938957"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555939"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj、cprojf、cprojl
 
@@ -62,32 +63,36 @@ _Fcomplex cprojf(
 _Lcomplex cprojl(
    _Lcomplex z
 );
+#define cproj(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*z*<br/>
+*Z*\
 複數。
 
 ## <a name="return-value"></a>傳回值
 
-黎曼球面球體上的*z*投影。
+黎曼球面球體上 *z* 的投射。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**cproj**的多載。 在 C 程式中， **cproj**一律會接受並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值的**cproj**多載。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **cproj** 一律會採用並傳回 **_Dcomplex** 值。
 
-## <a name="requirements"></a>需求
+如果您使用 \<tgmath.h> `cproj()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**cproj**、 **cprojf**、 **cprojl**|\<complex.h>|\<ccomplex>|
+|**cproj** 宏 | \<tgmath.h> ||
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [norm、normf、norml](norm-normf-norml1.md)<br/>
 [creal、crealf、creall](creal-crealf-creall.md)<br/>
 [conj、conjf、conjl](conj-conjf-conjl.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: tgamma、tgammaf、tgammal
-ms.date: 4/2/2020
+description: Tgamma、tgammaf 和 tgammal 的 API 參考;判斷指定值的 gamma 函數。
+ms.date: 9/1/2020
 api_name:
 - tgamma
 - tgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49020ca0697e920dccf188df4ad024820966571
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218516"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555172"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -55,14 +56,6 @@ double tgamma(
    double x
 );
 
-float tgamma(
-   float x
-); //C++ only
-
-long double tgamma(
-   long double x
-); //C++ only
-
 float tgammaf(
    float x
 );
@@ -70,18 +63,28 @@ float tgammaf(
 long double tgammal(
    long double x
 );
+
+#define tgamma(X) // Requires C11 or higher
+
+float tgamma(
+   float x
+); //C++ only
+
+long double tgamma(
+   long double x
+); //C++ only
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 要尋找其 gamma 的值。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回*x*的 gamma。
+如果成功，則傳回 *x*的 gamma。
 
-如果*x*的大小對資料類型而言太大或太小，則可能會發生範圍錯誤。 如果*x* <= 0，可能會發生網域錯誤或範圍錯誤。
+如果 *x* 的大小對資料類型而言太大或太小，則可能會發生範圍錯誤。 如果 *x* <= 0，則可能會發生網域錯誤或範圍錯誤。
 
 |問題|傳回|
 |-----------|------------|
@@ -99,17 +102,20 @@ long double tgammal(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**tgamma**的多載 **`float`** **`long double`** 。 在 C 程式中， **tgamma**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回和類型的 **tgamma** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **tgamma** 一律會採用並傳回 **`double`** 。
+
+如果您使用 \<tgmath.h> `tgamma()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
 如果 x 為自然數，此函式會傳回 (x-1) 階乘。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**tgamma**、 **tgammaf**、 **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**、 **tgammaf**、  **tgammal**|\<math.h>|\<cmath>|
+|**tgamma** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

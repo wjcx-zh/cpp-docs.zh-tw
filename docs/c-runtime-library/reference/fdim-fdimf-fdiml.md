@@ -1,6 +1,7 @@
 ---
 title: fdim、fdimf、fdiml
-ms.date: 04/05/2018
+description: Fdim、fdimf 和 fdiml 的 API 參考;這會決定兩個值之間的正差。
+ms.date: 9/1/2020
 api_name:
 - fdim
 - fdimf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 406fc5cfe543aa0865760df9ff780c62e78510fc
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221909"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554782"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -71,19 +72,21 @@ long double fdiml(
    long double x,
    long double y
 );
+
+#define fdim(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 第一個值。
 
-*y*<br/>
+*Y*\
 第二個值。
 
 ## <a name="return-value"></a>傳回值
 
-傳回*x*和*y*之間的正差：
+傳回 *x* 和 *y*之間的正差：
 
 |傳回值|案例|
 |------------------|--------------|
@@ -96,21 +99,24 @@ long double fdiml(
 |-----------|------------|
 |溢位範圍錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|
 |反向溢位範圍錯誤|正確的值 (四捨五入後)|
-|*x*或*y*是 NaN|NaN|
+|*x* 或 *y* 是 NaN|NaN|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**fdim**的多載 **`float`** **`long double`** 。 在 C 程式中， **fdim**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回和類型的 **fdim** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **fdim** 一律會採用並傳回 **`double`** 。
 
-除了 NaN 處理之外，此函式相當於 `fmax(x - y, 0)` 。
+如果您使用 \<tgmath.h> `fdim()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+除了 NaN 處理之外，此函數相當於 `fmax(x - y, 0)` 。
+
+## <a name="requirements"></a>規格需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**fdim**、 **fdimf**、 **fdiml**|\<math.h>|\<cmath>|
+|**fdim** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

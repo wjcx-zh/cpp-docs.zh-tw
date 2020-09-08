@@ -1,6 +1,7 @@
 ---
 title: frexp、frexpf、frexpl
-ms.date: 4/2/2020
+description: Frexp、frexpf 和 frexpl 的 API 參考;，可取得浮點數的尾數和指數。
+ms.date: 9/1/2020
 api_name:
 - frexp
 - _o_frexp
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a23de4160abcfab2518125bfa0fd35a389901674
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220700"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555744"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
@@ -58,6 +59,10 @@ long double frexpl(
    long double x,
    int * expptr
 );
+#define frexpl(X, INT_PTR) // Requires C11 or higher
+```
+
+```cpp
 float frexp(
    float x,
    int * expptr
@@ -70,29 +75,32 @@ long double frexp(
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 浮點值。
 
-*expptr*<br/>
+*expptr*\
 預存整數指數的指標。
 
 ## <a name="return-value"></a>傳回值
 
-**frexp**會傳回尾數。 如果*x*為0，則函數會針對尾數和指數傳回0。 如果*expptr*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回0。
+**frexp** 會傳回尾數。 如果 *x* 是0，則函數會針對尾數和指數傳回0。 如果 *expptr* 為 **Null**，則會叫用不正確參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將 **errno** 設定為 **EINVAL** ，並傳回0。
 
 ## <a name="remarks"></a>備註
 
-**Frexp**函式會將浮點值（*x*）細分為尾數（*m*）和指數（*n*），讓*m*的絕對值大於或等於0.5 且小於1.0，以及*x*  =  *m* * 2<sup>*n*</sup>。 整數指數*n*會儲存在*expptr*所指向的位置。
+**Frexp**函式會將浮點值 (*x*) 細分為尾數 (*m*) 和指數 (*n*) ，使*m*的絕對值大於或等於0.5 且小於1.0，以及*x*  =  *m* * 2<sup>*n*</sup>。 整數指數 *n* 會儲存在 *expptr*所指向的位置。
 
-C + + 允許多載，因此您可以呼叫**frexp**的多載。 在 C 程式中， **frexp**一律會採用 **`double`** 和 **`int`** 指標，並傳回 **`double`** 。
+C + + 允許多載，所以您可以呼叫 **frexp**的多載。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **frexp** 一律會採用 **`double`** 和 **`int`** 指標，並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `frexp()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |函式|必要的標頭|
 |--------------|---------------------|
 |**frexp**、 **frexpf**、 **frexpl**|\<math.h>|
+|**frexp** 宏 | \<tgmath.h> |
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

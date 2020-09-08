@@ -1,5 +1,6 @@
 ---
 title: ctanh、ctanhf、ctanhl
+description: Ctanh、ctanhf、ctanhl 的 API 參考;這會計算複數的複數雙曲正切值。
 ms.date: 11/04/2016
 api_name:
 - ctanh
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 959d48853e3edac707a7daea615270b20dad37e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941958"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555862"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -66,33 +67,33 @@ _Lcomplex ctanhl(
 
 ### <a name="parameters"></a>參數
 
-*z*<br/>
+*Z*\
 代表角度的複數 (弧度)。
 
 ## <a name="return-value"></a>傳回值
 
-*Z*的複雜雙曲正切函數。
+*Z*的複數雙曲正切值。
 
-|Input|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr** 例外|
 |-----------|-------------------|--------------------------|
-|±∞、QNAN、IND|none|_DOMAIN|
-|±∞（tan，tanf）|無效|_DOMAIN|
+|±∞、QNAN、IND|無|_DOMAIN|
+|±∞ (tan，tanf) |無效|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**ctanh**的多載。 在 C 程式中， **ctanh**一律會接受並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值的**ctanh**多載。 在 C 程式中， **ctanh** 一律會採用並傳回 **_Dcomplex** 值。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**ctanh**、 **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
+|**ctanh**、               **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
 
-如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>
 [csinh、csinhf、csinhl](csinh-csinhf-csinhl.md)<br/>

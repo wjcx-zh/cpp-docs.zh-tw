@@ -1,5 +1,6 @@
 ---
 title: _lrotl、_lrotr
+description: '_Lrotl 和 _lrotr 的 API 參考;這會將位向左旋轉 (_lrotl) 或)  (_lrotr。 '
 ms.date: 04/04/2018
 api_name:
 - _lrotl
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ccd14f7aa6ba3c1278063593aecee20c6789110d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953036"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555003"
 ---
 # <a name="_lrotl-_lrotr"></a>_lrotl、_lrotr
 
-將位向左（ **_lrotl**）或右方（ **_lrotr**）旋轉。
+將位旋轉至左方 (**_lrotl**) 或右 (**_lrotr**) 。
 
 ## <a name="syntax"></a>語法
 
@@ -54,7 +55,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 要旋轉的值。
 
 *shift*<br/>
@@ -66,15 +67,15 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ## <a name="remarks"></a>備註
 
-**_Lrotl**和 **_lrotr**函式會以*shift*位旋轉*值*。 **_lrotl**會將值向左旋轉，朝著更高的位。 **_lrotr**會將值向右旋轉，直到較不重要的位。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
+**_Lrotl**和 **_lrotr**函數會以*shift*位旋轉*值*。 **_lrotl** 將值向左旋轉，以取得更高的位。 **_lrotr** 將值向右旋轉，較不重要的位。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_lrotl**、 **_lrotr**|\<stdlib.h>|
+|**_lrotl**， **_lrotr**|\<stdlib.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

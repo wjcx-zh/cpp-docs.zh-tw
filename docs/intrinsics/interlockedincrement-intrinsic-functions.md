@@ -1,6 +1,7 @@
 ---
 title: _InterlockedIncrement 內建函式
-ms.date: 09/02/2019
+description: 連鎖增量的 Microsoft C/c + + 編譯器內建函式。
+ms.date: 09/03/2020
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,76 +45,74 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2148ae31f3eb03e398372db3bf15fc64e4857dd1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221980"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556317"
 ---
-# <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 內建函式
+# <a name="_interlockedincrement-intrinsic-functions"></a>`_InterlockedIncrement` 內建函式
 
-**Microsoft 專屬**
-
-提供 Win32 Windows SDK [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement)函數的編譯器內建支援。
+提供 Win32 Windows SDK [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement) 函數的編譯器內建支援。 `_InterlockedIncrement`內建函式是**Microsoft 特有**的。
 
 ## <a name="syntax"></a>語法
 
 ```C
 long _InterlockedIncrement(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_acq(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_rel(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_nf(
-   long * lpAddend
+   long volatile * lpAddend
 );
 short _InterlockedIncrement16(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_acq(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_rel(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_nf (
-   short * lpAddend
+   short volatile * lpAddend
 );
 __int64 _InterlockedIncrement64(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_acq(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_rel(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_nf(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 ```
 
 ### <a name="parameters"></a>參數
 
 *lpAddend*\
-[in、out]要遞增之變數的指標。
+[in，out]要遞增之變數的指標。
 
 ## <a name="return-value"></a>傳回值
 
 傳回值是所產生的遞增值。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`、 `_InterlockedIncrement16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedIncrement64`|ARM、x64、ARM64|\<intrin.h>|
-|+`_InterlockedIncrement_acq`、`_InterlockedIncrement_rel`、`_InterlockedIncrement_nf`、`_InterlockedIncrement16_acq`、`_InterlockedIncrement16_rel`、`_InterlockedIncrement16_nf`、`_InterlockedIncrement64_acq`、`_InterlockedIncrement64_rel`、`_InterlockedIncrement64_nf`|ARM、ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM、ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -121,9 +120,9 @@ __int64 _InterlockedIncrement64_nf(
 
 `_InterlockedIncrement` 函式在 32 位元整數值上操作，而 `_InterlockedIncrement16` 是在 16 位元整數值上操作，`_InterlockedIncrement64` 在 64 位元整數值上操作。
 
-在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有`_nf` (「無範圍」) 尾碼的內建函式不會做為記憶體屏障。
+在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有 ( 「沒有範圍」 ) 尾碼的內建 `_nf` 不會作為記憶體屏障。
 
-`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊, 請參閱[align](../cpp/align-cpp.md)。
+`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱 [align](../cpp/align-cpp.md)。
 
 Win32 函式在 `Wdm.h` 或 `Ntddk.h` 中宣告。
 
@@ -131,12 +130,10 @@ Win32 函式在 `Wdm.h` 或 `Ntddk.h` 中宣告。
 
 ## <a name="example"></a>範例
 
-如需如何使用`_InterlockedIncrement`的範例, 請參閱[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
-
-**結束 Microsoft 專屬**
+如需如何使用的範例 `_InterlockedIncrement` ，請參閱 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
-[關鍵字](../cpp/keywords-cpp.md)\
+[關鍵 字](../cpp/keywords-cpp.md)\
 [與 x86 編譯器衝突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

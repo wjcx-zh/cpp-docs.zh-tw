@@ -1,6 +1,7 @@
 ---
 title: ldexp、ldexpf、ldexpl
-ms.date: 4/2/2020
+description: Ldexp、ldexpf 和 ldexpl 的 API 參考;這會將浮點數乘以二的整數乘冪。
+ms.date: 9/1/2020
 api_name:
 - ldexp
 - ldexpf
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: bbd1742cdace30d5bc3bd5e9d592bb24a86f917f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6ce6bcbc8adbc62e8d8598b97a6f77e04fee1511
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216917"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555445"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
 
@@ -57,14 +58,6 @@ double ldexp(
    double x,
    int exp
 );
-float ldexp(
-   float x,
-   int exp
-);  // C++ only
-long double ldexp(
-   long double x,
-   int exp
-);  // C++ only
 float ldexpf(
    float x,
    int exp
@@ -73,33 +66,46 @@ long double ldexpl(
    long double x,
    int exp
 );
+#define ldexp(X, INT) // Requires C11 or higher
+
+float ldexp(
+   float x,
+   int exp
+);  // C++ only
+long double ldexp(
+   long double x,
+   int exp
+);  // C++ only
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 浮點值。
 
-*exp*<br/>
+*exp*\
 整數指數。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **ldexp**函數會傳回*x* \* 2<sup>*exp*</sup>的值。 在溢位時，根據*x*的正負號， **ldexp**會傳回 +/- **HUGE_VAL**;**errno**值會設定為**ERANGE**。
+如果成功， **ldexp** 函數會傳回 *x* \* 2<sup>*exp*</sup> 的值。 當溢位時， **ldexp**會傳回 +/- **HUGE_VAL**; 這取決於*x*的正負號。**errno**值會設定為**ERANGE**。
 
-如需**errno**和可能的錯誤傳回值的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需 **errno** 和可能的錯誤傳回值的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用或類型之**ldexp**的多載 **`float`** **`long double`** 。 在 C 程式中， **ldexp**一律會採用 **`double`** 和， **`int`** 並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用或類型之 **ldexp** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **ldexp** 一律會採用和， **`double`** 並傳回 **`int`** **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `ldexp()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**ldexp**、 **ldexpf**、 **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp** 宏 | \<tgmath.h> ||
 
 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 

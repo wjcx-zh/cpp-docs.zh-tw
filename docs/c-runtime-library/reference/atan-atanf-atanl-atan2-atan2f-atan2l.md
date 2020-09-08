@@ -1,6 +1,7 @@
 ---
 title: atan、atanf、atanl、atan2、atan2f、atan2l
-ms.date: 6/5/2020
+description: Atan、atanf、atanl、atan2、atan2f 和 atan2l 的 API 參考;這會計算浮點值的反正切值。
+ms.date: 08/31/2020
 api_name:
 - atan2f
 - atan2l
@@ -45,16 +46,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f1d33aac86d94ab3731dd5cf5b124af99ccb3f2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232608"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555627"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
-計算**x** （**atan**、 **atanf**和**atanl**）的反正切值，或**y**x 的反正切值 / **x** （**atan2**、 **atan2f**和**atan2l**）。
+計算**x** (**atan**、 **atanf**和**atanl**) 的反正切值，或是**y** / **x** (**atan2**、 **atan2f**和**atan2l**) 的反正切值。
 
 ## <a name="syntax"></a>語法
 
@@ -62,15 +63,15 @@ ms.locfileid: "87232608"
 double atan( double x );
 float atanf( float x );
 long double atanl( long double x );
+#define atan(X) // Requires C11 or higher
+
+float atan( float x );  // C++ only
+long double atan( long double x );  // C++ only
 
 double atan2( double y, double x );
 float atan2f( float y, float x );
 long double atan2l( long double y, long double x );
-```
-
-```cpp
-float atan( float x );  // C++ only
-long double atan( long double x );  // C++ only
+#define atan2(Y, X) // Requires C11 or higher
 
 float atan2( float y, float x );  // C++ only
 long double atan2( long double y, long double x );  // C++ only
@@ -78,34 +79,37 @@ long double atan2( long double y, long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*、 *y*<br/>
+*x*、 *y*\
 任何數字。
 
 ## <a name="return-value"></a>傳回值
 
-**atan**會以-π/2 到π/2 弧度的範圍傳回*x*的反正切值。 **atan2**會傳回*y* / 介於-π到π弧度之間的 y*x*反正切值。 如果*x*為0，則**atan**會傳回0。 如果**atan2**的兩個參數都是0，則函數會傳回0。 所有結果都以弧度為單位。
+**atan** 會傳回範圍-π/2 到π/2 弧度之間 *x* 的反正切值。 **atan2**會傳回*y* / 範圍-π到π弧度的 y*x*反正切值。 如果 *x* 是0，則 **atan** 會傳回0。 如果兩個 **atan2** 參數都是0，則函數會傳回0。 所有結果都以弧度為單位。
 
-**atan2**會使用這兩個參數的符號來判斷傳回值的象限。
+**atan2** 會使用這兩個參數的正負號來判斷傳回值的象限。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|無|**_DOMAIN**|
+|± **QNAN**、 **IND**|無|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-**Atan**函數會計算*x*的反正切值（反正切函數）。 **atan2**會計算*y*x 的反正切值 / *x* （如果*x*等於0， **atan2**會在*y*為正數時傳回π/2; 如果*y*是負值，則為-π/2;*如果 y 為*0，則為0）。
+**Atan**函數會計算反正切函數) *x*的反正切 (。 如果 x 等於0， **atan2**會計算*y* / *x* (的反正切值; 如果*y*是正數，則**atan2**會傳回π/2 *; 如果 y*是負值，則為-π/2; 如果 y 是0，則為0。 ) *x* *y*
 
-**atan**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+如果您使用 \<tgmath.h> `atan()` 或 `atan2()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-因為 c + + 允許多載，所以您**atan**可以呼叫**atan2**採用 **`float`** 或引數之 atan 和 atan2 的多載 **`long double`** 。 在 C 程式中， **atan**和**atan2**一律接受 **`double`** 引數，並傳回 **`double`** 。
+**atan** 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作為。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+因為 c + + 允許多載，所以您**atan**可以呼叫**atan2**採用 **`float`** 或引數的 atan 和 atan2 的多載 **`long double`** 。 在 C 程式中，除非您使用 \<tgmath.h> 宏來呼叫這個函式，否則 **atan** 和 **atan2** 一律會採用 **`double`** 引數，並傳回 **`double`** 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
 |**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> 或 \<math.h>|
+|**atan ( # B1 **， **atan2** 宏 | \<tgmath.h> ||
 
 ## <a name="example"></a>範例
 

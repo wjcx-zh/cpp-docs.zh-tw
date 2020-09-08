@@ -1,6 +1,7 @@
 ---
 title: copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
-ms.date: 04/05/2018
+description: '適用于傳回值的 API 參考，其大小為一個引數，另一個使用 copysign 的正負號 ( # A1'
+ms.date: 9/1/2020
 api_name:
 - copysignf
 - copysignl
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f9ffe56e82f6a82da15fde3f8efea60fc1c0f9f
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221935"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554860"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 
@@ -81,32 +82,36 @@ long double _copysignl(
    long double x,
    long double y
 );
+#define copysign(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 傳回為結果大小的浮點值。
 
-*y*<br/>
+*Y*\
 傳回為結果正負號的浮點值。
 
 [浮點支援常式](../../c-runtime-library/floating-point-support.md)
 
 ## <a name="return-value"></a>傳回值
 
-**Copysign**函數會傳回浮點值，其結合*x*的大小和*y*的正負號。 不會傳回錯誤。
+**Copysign**函式會傳回浮點值，此值會結合*x*的大小和*y*的正負號。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回或值之**copysign**的多載 **`float`** **`long double`** 。 在 C 程式中， **copysign**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回或值的 **copysign** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **copysign** 一律會採用並傳回 **`double`** 。
 
-## <a name="requirements"></a>需求
+如果您使用 \<tgmath.h> `copysign()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_copysign**|\<float.h>|
 |**copysign**、 **copysignf**、 **copysignl**、 **_copysignf**、 **_copysignl**|\<math.h>|
+|**copysign** 宏 | \<tgmath.h> |
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 

@@ -1,6 +1,7 @@
 ---
 title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
-ms.date: 4/2/2020
+description: Hypot、hypotf、hypotl、_hypot、_hypotf 和 _hypotl 的 API 參考;計算斜邊的。
+ms.date: 9/1/2020
 api_name:
 - _hypotf
 - hypot
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 199e330dcd78c372a0279cac9f0e96cb47c561e8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919836"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556446"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -82,32 +83,36 @@ long double _hypotl(
    long double x,
    long double y
 );
+#define hypotf(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*、 *y*<br/>
+*x*、 *y*\
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **hypot**會傳回斜邊的長度;溢位時， **hypot**會傳回 INF （無限大），而**errno**變數會設定為**ERANGE**。 您可以使用 **_matherr**來修改錯誤處理。
+如果成功， **hypot** 會傳回斜邊的長度;溢位時， **hypot** 會將 INF (無限大) ，而且 **errno** 變數會設定為 **ERANGE**。 您可以使用 **_matherr** 修改錯誤處理。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Hypot**函數會計算直角三角形的斜邊長度，指定兩端*x*和*y*的長度（換言之， *x*<sup>2</sup> + *y*<sup>2</sup>的平方根）。
+**Hypot**函式會計算直角三角形的斜邊長度，指定兩側*x*和*y*的長度 (換句話說，也就是*x*<sup>2</sup>  +  *y*<sup>2</sup>) 的平方根。
 
 具有前置底線的函式版本提供舊版標準的相容性。 其行為與不具有前置底線的版本完全相同。 建議針對新程式碼使用不具有前置底線的版本。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `hypot()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf**、 **_hypotl**|\<math.h>|
+|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf** **_hypotl**|\<math.h>|
+|**hypot** 宏 | \<tgmath.h> |
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 

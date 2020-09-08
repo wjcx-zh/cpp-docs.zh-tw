@@ -1,5 +1,6 @@
 ---
 title: _chgsign、_chgsignf、_chgsignl
+description: _Chgsign、_chgsignf 和 _chgsignl 的 API 參考;這會反轉浮點數引數的正負號。
 ms.date: 04/05/2018
 api_name:
 - _chgsignl
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc934f3c2d22cc36abe5f31f7d64e0674ccdd3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943130"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555198"
 ---
 # <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign、_chgsignf、_chgsignl
 
@@ -64,16 +65,16 @@ long double _chgsignl(
 
 ## <a name="return-value"></a>傳回值
 
-**_Chgsign**函數會傳回等於浮點引數*x*的值，但其正負號相反。 不會傳回錯誤。
+**_Chgsign**函式會傳回等於浮點數引數*x*的值，但其正負號反轉。 不會傳回錯誤。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_chgsign**|\<float.h>|
-|**_chgsignf**、 **_chgsignl**|\<math.h>|
+|**_chgsignf**， **_chgsignl**|\<math.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

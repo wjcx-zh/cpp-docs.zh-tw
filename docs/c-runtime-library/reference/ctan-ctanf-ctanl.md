@@ -1,5 +1,6 @@
 ---
 title: ctan、ctanf、ctanl
+description: Ctan、ctanf 和 ctanl 的 API 參考;它會取出複數的正切函數。
 ms.date: 11/04/2016
 api_name:
 - ctan
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74fa33a6bf6b99e8606094aff3845fdfd79d48a2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938451"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555900"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan、ctanf、ctanl
 
@@ -66,33 +67,33 @@ _Lcomplex ctanl(
 
 ### <a name="parameters"></a>參數
 
-*z*<br/>
+*Z*\
 代表角度的複數 (弧度)。
 
 ## <a name="return-value"></a>傳回值
 
 *Z*的正切函數。
 
-|Input|SEH 例外狀況|**_matherr**異常|
+|輸入|SEH 例外狀況|**_matherr** 例外|
 |-----------|-------------------|--------------------------|
-|±∞、QNAN、IND|none|_DOMAIN|
-|±∞（**tan**， **tanf**）|INVALID|_DOMAIN|
+|±∞、QNAN、IND|無|_DOMAIN|
+|±∞ (**tan**， **tanf**) |無效|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**ctan**的多載。 在 C 程式中， **ctan**一律會接受並傳回 **_Dcomplex**值。
+因為 c + + 允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值的**ctan**多載。 在 C 程式中， **ctan** 一律會採用並傳回 **_Dcomplex** 值。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**ctan**、 **ctanf**、 **ctanl**|\<complex.h>|\<ccomplex>|
+|**ctan**、  **ctanf**、 **ctanl**|\<complex.h>|\<ccomplex>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>

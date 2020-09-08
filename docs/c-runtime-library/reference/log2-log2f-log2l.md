@@ -1,6 +1,7 @@
 ---
 title: log2、log2f、log2l
-ms.date: 4/2/2020
+description: Log2、log2f 和 log2l 的 API 參考;這會決定二進位 (底數 2) 指定值的對數。
+ms.date: 9/1/2020
 api_name:
 - log2
 - log2l
@@ -26,12 +27,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 37319560891dbd64030495750aaf347d9dedd7e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911408"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555354"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -59,11 +60,13 @@ float log2f(
 long double log2l(
    long double x
 );
+
+#define log2(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 要用來判斷以 2 為底數之對數的值。
 
 ## <a name="return-value"></a>傳回值
@@ -86,20 +89,21 @@ long double log2l(
 
 ## <a name="remarks"></a>備註
 
-如果 x 是整數，則此函式基本上會傳回最具重大1位*x*的以零為基底的索引。
+如果 *x* 是整數，此函式基本上會傳回最顯著1位 *x*的以零為基底的索引。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**log2**、 **log2f**、 **log2l**|\<math.h>|\<cmath>|
+|**log2** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[依字母順序排列的函數參考](crt-alphabetical-function-reference.md)<br/>
 [exp2、exp2f、exp2l](exp2-exp2f-exp2l.md)<br/>
 [log、logf、log10、log10f](log-logf-log10-log10f.md)<br/>

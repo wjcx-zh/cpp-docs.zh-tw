@@ -1,6 +1,7 @@
 ---
 title: log、logf、logl、log10、log10f、log10l
-ms.date: 6/5/2020
+description: Log、logf、記錄、log10、log10f 和 log10l 的 API 參考;計算對數的。
+ms.date: 9/1/2020
 api_name:
 - log10f
 - logf
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f308281705170308ec83e4a5efd9c7825ba47591
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218594"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556278"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -62,49 +63,52 @@ ms.locfileid: "87218594"
 ## <a name="syntax"></a>語法
 
 ```C
-double log( double x );
-float logf( float x );
-long double logl( double x );
-double log10( double x );
-float log10f ( float x );
-long double log10l( double x );
-```
+double log(double x);
+float logf(float x);
+long double logl(double x);
+double log10(double x);
+float log10f (float x);
+long double log10l(double x);
+#define log(X) // Requires C11 or higher
+#define log10(X) // Requires C11 or higher
 
-```cpp
-float log( float x );  // C++ only
-long double log( long double x );  // C++ only
-float log10( float x );  // C++ only
-long double log10( long double x );  // C++ only
+float log(float x);  // C++ only
+long double log(long double x);  // C++ only
+float log10(float x);  // C++ only
+long double log10(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 要求得其對數的值。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則**記錄**函數會傳回*x*的自然對數（底數*e*）。 **Log10**函數會傳回以10為底數的對數。 如果*x*是負數，這些函式預設會傳回無限（IND）。 如果*x*為0，則會傳回無限大（INF）。
+如果成功，則 **記錄** 函式會傳回 x 的自然對數 (底數 *e*) *x* 。 **Log10**函數會傳回以10為底數的對數。 如果 *x* 是負數，則根據預設，這些函式會傳回不定的 (IND) 。 如果 *x* 為0，則會傳回無限大 (INF) 。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|無|_DOMAIN|
+|± QNAN、IND|無|_DOMAIN|
 |±0|ZERODIVIDE|_SING|
 |*x* < 0|無效|_DOMAIN|
 
-**記錄**和**log10**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**記錄** 和 **log10** 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作為。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此您可以呼叫採用並傳回或值之**log**和**log10**的多載 **`float`** **`long double`** 。 在 C 程式中， **log**和**log10**一律會採用並傳回 **`double`** 。
+C + + 允許多載，所以您可以呼叫採用和傳回值之 **記錄** 檔和 **log10** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **log** 和 **log10** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `log()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**log**、 **logf**、**記錄**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
+|**log**、 **logf**、 **記錄**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
+|**記錄** 宏 | \<tgmath.h> |
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

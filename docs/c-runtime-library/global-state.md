@@ -1,14 +1,15 @@
 ---
 title: CRT 中的全域狀態
+description: 描述通用 C 執行時間中共用全域狀態的處理方式。
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: a794f201184c10c11611138d30d14b36b00405a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d1c787147ea3df36ce120837ef5b2c68b1bf58b1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845181"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554665"
 ---
 # <a name="global-state-in-the-crt"></a>CRT 中的全域狀態
 
@@ -53,6 +54,6 @@ ms.locfileid: "88845181"
 - [fmode] (text-and-binary-mode-file-i-o.md) 
 - [時區資訊](time-management.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C 執行時間程式庫參考](c-run-time-library-reference.md)

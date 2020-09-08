@@ -1,6 +1,7 @@
 ---
 title: sinh、sinhf、sinhl
-ms.date: 4/2/2020
+description: 用於計算浮點值之雙曲正弦值的 API 參考。
+ms.date: 08/31/2020
 api_name:
 - sinh
 - sinhl
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: ea7051fc086a254dabcf7fcd59f6a70e8fa0c0cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a8c9c4195eab66a46230e7a3baf6194e17c4519
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229411"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556173"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
@@ -54,40 +55,42 @@ ms.locfileid: "87229411"
 double sinh(double x);
 float sinhf(float x);
 long double sinhl(long double x);
-```
+#define sinh(x) // Requires C11 or higher
 
-```cpp
 float sinh(float x);  // C++ only
 long double sinh(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 角度 (弧度)。
 
 ## <a name="return-value"></a>傳回值
 
-**Sinh**函數會傳回*x*的雙曲正弦值。 根據預設，如果結果太大， **sinh**會將**Errno**設定為**ERANGE** ，並傳回±**HUGE_VAL**。
+**Sinh**函式會傳回*x*的雙曲正弦函數。 根據預設，如果結果太大， **sinh** 會將 **Errno** 設定為 **ERANGE** ，並傳回±**HUGE_VAL**。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|無|_DOMAIN|
+|± QNAN、IND|無|_DOMAIN|
 |&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回或值之**sinh**的多載 **`float`** **`long double`** 。 在 C 程式中， **sinh**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回或值的 **sinh** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **sinh** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `sinh()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-|-|-|
 |**sinh**、 **sinhf**、 **sinhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**sinh ( # B1 ** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

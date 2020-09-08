@@ -1,6 +1,7 @@
 ---
 title: lround、lroundf、lroundl、llround、llroundf、llroundl
-ms.date: 4/2/2020
+description: Lround、lroundf、lroundl、llround、llroundf 和 llroundl 的 API 參考;這會將浮點值四捨五入為最接近的整數。
+ms.date: 9/1/2020
 api_name:
 - llround
 - llroundf
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c5db62da7cdba58fdc58e8acbfe3aff0e2c386d6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216891"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555315"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -90,32 +91,36 @@ long long llroundf(
 long long llroundl(
    long double x
 );
+#define lround(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 要四捨五入的浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**Lround**和**llround**函數會將最接近 **`long`** 或 **`long long`** 整數傳回*x*。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
+**Lround**和**llround**函數會傳回最接近 **`long`** 或 **`long long`** 整數至*x*。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|無|**_DOMAIN**|
+|± **QNAN**、 **IND**|無|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回和值之**lround**或**llround**的多載 **`float`** **`long double`** 。 在 C 程式中， **lround**和**llround**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回值之 **lround** 或 **llround** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **lround** 和 **llround** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `lround()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
+|**lround** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

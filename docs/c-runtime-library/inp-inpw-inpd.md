@@ -1,6 +1,6 @@
 ---
-title: sct.inp、_inp、inpw、_inpw、_inpd
-description: 描述 Microsoft C 執行時間程式庫（CRT）的已淘汰和已移除 sct.inp、_inp、inpw、_inpw 和 _inpd 功能。
+title: sct.inp、_inp、inpw、_inpw _inpd
+description: 描述 Microsoft C 執行時間程式庫 (CRT) 已淘汰和移除的 sct.inp、_inp、inpw、_inpw 和 _inpd 函式。
 ms.date: 12/09/2019
 api_name:
 - inp
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: aafcd633b2ee04c9ced1520d4ecd1520475d0fea
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825825"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556472"
 ---
-# <a name="inp-_inp-inpw-_inpw-_inpd"></a>sct.inp、_inp、inpw、_inpw、_inpd
+# <a name="inp-_inp-inpw-_inpw-_inpd"></a>sct.inp、_inp、inpw、_inpw _inpd
 
-輸入，從埠，`inp`位元組（， `_inp`），單字（`inpw`， `_inpw`）或雙字組（`_inpd`）。
+輸入、埠、位元組 (`inp` 、 `_inp`) 、單字 (`inpw` 、 `_inpw`) 或 double word `_inpd` () 。
 
 > [!IMPORTANT]
 > 這些函式已被取代。 從 Visual Studio 2015 開始，它們無法在 CRT 中使用。
@@ -67,7 +67,7 @@ unsigned long _inpd(
 
 ### <a name="parameters"></a>參數
 
-*移植*\
+*港口*\
 I/O 連接埠號碼。
 
 ## <a name="return-value"></a>傳回值
@@ -80,9 +80,9 @@ I/O 連接埠號碼。
 
 由於這些函式直接從 I/O 連接埠讀取，因此無法用於使用者程式碼。
 
-`inp`和`inpw`名稱是`_inp`和`_inpw`函式的舊版、已被取代的名稱。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+`inp`和 `inpw` 名稱是和函式的較舊、已被取代的名稱 `_inp` `_inpw` 。 如需詳細資訊，請參閱 [POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
@@ -96,7 +96,7 @@ I/O 連接埠號碼。
 
 所有版本的 [C 執行階段程式庫](../c-runtime-library/crt-library-features.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [主控台和埠 i/o](../c-runtime-library/console-and-port-i-o.md)\
-[outp、outpw、_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)
+[outp、outpw、_outp、_outpw _outpd](../c-runtime-library/outp-outpw-outpd.md)

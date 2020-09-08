@@ -1,5 +1,6 @@
 ---
 title: _fileno
+description: _Fileno 的 API 參考;，可取得與資料流程相關聯的檔案描述項。
 ms.date: 4/2/2020
 api_name:
 - _fileno
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c07f446cc3c5c29fb102a74b2b095957589eab46
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919468"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554847"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -50,25 +51,25 @@ int _fileno(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*流*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
 
-**_fileno**會傳回檔案描述項。 不會傳回錯誤。 如果*資料流程*未指定開啟的檔案，則會產生未定義的結果。 如果 stream 為**Null**， **_fileno**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會傳回 -1，並將 **errno** 設為 **EINVAL**。
+**_fileno** 會傳回檔案描述項。 不會傳回錯誤。 如果 *資料流程* 未指定開啟的檔案，則結果為未定義。 如果資料流程為 **Null**， **_fileno** 會叫用不正確參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會傳回 -1，並將 **errno** 設為 **EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 > [!NOTE]
-> 如果**stdout**或**stderr**未與輸出資料流程相關聯（例如，在沒有主控台視窗的 Windows 應用程式中），則傳回的檔案描述元為-2。 在舊版本中，傳回的檔案描述元是 -1。 此變更可讓應用程式區分這個條件與錯誤。
+> 如果 **stdout** 或 **stderr** 沒有與輸出資料流程相關聯 (例如，在沒有主控台視窗的 Windows 應用程式中) ，傳回的檔案描述元是-2。 在舊版本中，傳回的檔案描述元是 -1。 此變更可讓應用程式區分這個條件與錯誤。
 
 ## <a name="remarks"></a>備註
 
 **_Fileno**常式會傳回目前與*資料流程*相關聯的檔案描述項。 此常式可當作函式和巨集來實作。 如需選擇其中一個實作的資訊，請參閱[選擇函式與巨集](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |函式|必要的標頭|
 |--------------|---------------------|

@@ -1,5 +1,6 @@
 ---
 title: _getpid
+description: _Getpid 的 API 參考，可取得進程識別。
 ms.date: 11/04/2016
 api_name:
 - _getpid
@@ -26,19 +27,19 @@ helpviewer_keywords:
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-ms.openlocfilehash: b0848e5eb01f39c009fcdc650ea551f18e23c6fb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc2de8e0b6e87d04bd9ae29ce3a945c048af00e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954992"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556485"
 ---
 # <a name="_getpid"></a>_getpid
 
 取得處理序識別碼。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -52,15 +53,15 @@ int _getpid( void );
 
 ## <a name="remarks"></a>備註
 
-**_Getpid**函數會從系統取得處理序識別碼。 處理序 ID 可唯一識別呼叫處理序。
+**_Getpid**函式會從系統取得處理序識別碼。 處理序 ID 可唯一識別呼叫處理序。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_getpid**|\<process.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -87,5 +88,5 @@ Process id: 3584
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[流程式控制制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_mktemp、_wmktemp](mktemp-wmktemp.md)<br/>

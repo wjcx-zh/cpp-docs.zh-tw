@@ -1,5 +1,6 @@
 ---
 title: _getche、_getwche
+description: _Getche 和 _getwche 的 API 參考;使用 echo 從主控台取得字元。
 ms.date: 4/2/2020
 api_name:
 - _getwche
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: dd8c72d4c8d6eedb2485fc23e09e9118ab6d45ac
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 228251a34c3f9829f2ef7c39561af4118649e158
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910826"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556063"
 ---
 # <a name="_getche-_getwche"></a>_getche、_getwche
 
@@ -62,11 +63,11 @@ wint_t _getwche( void );
 
 ## <a name="remarks"></a>備註
 
-**_Getche**和 **_getwche**函式會使用 echo 從主控台讀取單一字元，這表示該字元會顯示在主控台上。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。
+**_Getche**和 **_getwche**函式會使用 echo 從主控台讀取單一字元，這表示該字元會顯示在主控台中。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。
 
 這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getche_nolock、_getwche_nolock](getche-nolock-getwche-nolock.md)。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -74,7 +75,7 @@ wint_t _getwche( void );
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_getche**|**_getche**|**_getch**|**_getwche**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

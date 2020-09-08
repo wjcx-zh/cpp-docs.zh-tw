@@ -1,6 +1,7 @@
 ---
 title: asin、asinf、asinl
-ms.date: 4/2/2020
+description: Asin、asinf 和 asinl 的 API 參考;計算浮點值的反正弦值。
+ms.date: 08/31/2020
 api_name:
 - asinf
 - asinl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7167debcfb605ab05720d9441943439ea9982324
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189437"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556654"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -51,41 +52,43 @@ ms.locfileid: "87189437"
 double asin( double x );
 float asinf ( float x );
 long double asinl( long double x );
-```
+#define asin(X) // Requires C11 or higher
 
-```cpp
 float asin( float x );  // C++ only
 long double asin( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 要計算的反正弦值。
 
 ## <a name="return-value"></a>傳回值
 
-**Asin**函數會傳回介於-π/2 到π/2 弧度之間的*x*反正弦值（反正弦函數）。
+**Asin**函式會傳回反正弦函數 (反正弦函數) *x* ，範圍介於-π/2 到π/2 弧度之間。
 
-根據預設，如果*x*小於-1 或大於1，則**asin**會傳回不定的。
+依預設，如果 *x* 小於-1 或大於1， **asin** 會傳回不定。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± ∞|**無效**|**_DOMAIN**|
-|± **QNAN**， **IND**|無|**_DOMAIN**|
+|± **QNAN**、 **IND**|無|**_DOMAIN**|
 |&#124;x&#124;>1|**無效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以使用和值呼叫**asin**的多載 **`float`** **`long double`** 。 在 C 程式中， **asin**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以使用和值來呼叫 **asin** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **asin** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `asin()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
 |**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**asin ( # B1 ** 宏 | \<tgmath.h> ||
 
 ## <a name="example"></a>範例
 

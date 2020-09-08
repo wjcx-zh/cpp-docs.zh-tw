@@ -1,5 +1,6 @@
 ---
 title: _getch、_getwch
+description: _Getch 和 _getwch 的 API 參考;從主控台取得不含 echo 的字元。
 ms.date: 4/2/2020
 api_name:
 - _getch
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 39954cdbe507baad05055770df5db8859737b9d1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919635"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555849"
 ---
 # <a name="_getch-_getwch"></a>_getch、_getwch
 
@@ -62,11 +63,11 @@ wint_t _getwch( void );
 
 ## <a name="remarks"></a>備註
 
-**_Getch**和 **_getwch**函式會從主控台讀取單一字元，而不會回顯該字元。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。
+**_Getch**和 **_getwch**函數會從主控台讀取單一字元，而不會回顯字元。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。
 
 這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getch_nolock、_getwch_nolock](getch-nolock-getwch-nolock.md)。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -74,7 +75,7 @@ wint_t _getwch( void );
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettch**|**_getch**|**_getch**|**_getwch**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

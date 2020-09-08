@@ -1,6 +1,7 @@
 ---
 title: round、roundf、roundl
-ms.date: 4/2/2020
+description: Round、roundf 和 roundl 的 API 參考;這會將浮點值四捨五入為最接近的整數。
+ms.date: 9/1/2020
 api_name:
 - round
 - roundl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a7e47dd3a528e45abc8247a64bf5c4d81164e95
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226173"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556641"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -63,32 +64,36 @@ float roundf(
 long double roundl(
    long double x
 );
+#define round(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 要四捨五入的浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**Round**函數會傳回浮點值，表示最接近*x*的整數。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
+**Round**函式會傳回浮點值，表示最接近*x*的整數。 不論浮點進位模式設定為何，中間值都會背離零四捨五入。 不會傳回錯誤。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|無|**_DOMAIN**|
+|± **QNAN**、 **IND**|無|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回和值之**round**的多載 **`float`** **`long double`** 。 在 C 程式中， **round**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫 take 和 return 和值的 **round** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您使用 \<tgmath.h> 宏來呼叫這個函式，否則 **round** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `round()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**round**、 **roundf**、 **roundl**|\<math.h>|
+|**round** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

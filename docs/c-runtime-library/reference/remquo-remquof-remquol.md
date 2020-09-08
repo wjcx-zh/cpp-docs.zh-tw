@@ -1,6 +1,7 @@
 ---
 title: remquo、remquof、remquol
-ms.date: 4/2/2020
+description: Remquo、remquof 和 remquol 的 API 參考;這會計算兩個整數值的餘數，並將具有正負號和大約量值的整數值儲存在參數中所指定的位置。
+ms.date: 9/1/2020
 api_name:
 - remquof
 - remquo
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d99204ad9a80c6320869cbb72aee905981a5224d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216787"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554964"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -51,41 +52,43 @@ ms.locfileid: "87216787"
 double remquo( double numer, double denom, int* quo );
 float remquof( float numer, float denom, int* quo );
 long double remquol( long double numer, long double denom, int* quo );
-```
+#define remquo(X, Y, INT_PTR) // Requires C11 or higher
 
-```cpp
 float remquo( float numer, float denom, int* quo ); /* C++ only */
 long double remquo( long double numer, long double denom, int* quo ); /* C++ only */
 ```
 
 ### <a name="parameters"></a>參數
 
-*推*<br/>
+*推*\
 分子。
 
-*denom*<br/>
+*denom*\
 分母。
 
-*現狀*<br/>
+*現狀*\
 用來儲存具有正負號和商數近似大小的整數的指標。
 
 ## <a name="return-value"></a>傳回值
 
-**remquo**會傳回*x*  /  *y*的浮點餘數。 如果*y*的值是0.0，則**remquo**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**會傳回*x*  /  *y*的浮點餘數。 如果 *y* 的值為0.0， **remquo** 會傳回無訊息 NaN。 如需 **printf** 系列表示無訊息 NaN 的詳細資訊，請參閱 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**Remquo**函數會計算*x*y 的浮點餘數*f*  /  *y* ，例如*x*  =  *i* \* *y*  +  *f*，其中*i*是整數， *f*具有與*x*相同的正負號，而*f*的絕對值小於*y*的絕對值。
+**Remquo**函式會計算*x*y 的浮點餘數*f*  /  *y* ，例如*x*  =  *i* \* *y*  +  *f*，其中*i*是整數， *f*的正負號等於*x*， *f*的絕對值小於*y*的絕對值。
 
-C + + 允許多載，因此您可以呼叫採用並傳回或值之**remquo**的多載 **`float`** **`long double`** 。 在 C 程式中， **remquo**一律會接受兩個 **`double`** 引數，並傳回 **`double`** 。
+C + + 允許多載，所以您可以呼叫採用和傳回或值的 **remquo** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **remquo** 一律會採用兩個 **`double`** 引數，並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `remquo()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------|-|
 |**remquo**、 **remquof**、 **remquol**|\<math.h>|\<cmath> 或 \<math.h>|
+|**remquo** 宏 | \<tgmath.h> ||
 
 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 

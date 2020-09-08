@@ -1,6 +1,7 @@
 ---
 title: erf、erff、erfl、erfc、erfcf、erfcl
-ms.date: 4/2/2020
+description: Erf、erff、erfl、erfc、erfcf 和 erfcl 的 API 參考;它會計算值的錯誤函式或互補誤差函數。
+ms.date: 9/1/2020
 api_name:
 - erff
 - erfl
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 5511e7a7d17c47deaaaf61eedf3c00eec12db119
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef83275515c66341798395bbfc2bb5b088e6cfb7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234181"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555640"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -90,11 +91,13 @@ float erfcf(
 long double erfcl(
    long double x
 );
+#define erf(X) // Requires C11 or higher
+#define erfc(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 浮點值。
 
 ## <a name="return-value"></a>傳回值
@@ -103,21 +106,24 @@ long double erfcl(
 
 ## <a name="remarks"></a>備註
 
-**Erf**函數會計算*x*的高斯錯誤函式，其定義為：
+**Erf**函式會計算*x*的高斯誤差函數，其定義為：
 
 ![x 的誤差函式值](media/crt_erf_formula.PNG "x 的誤差函式值")
 
-互補高斯 error 函式定義為 erf （x）。 **Erf**函數會傳回範圍-1.0 到1.0 的值。 不會傳回錯誤。 **Erfc**函數會傳回0到2範圍內的值。 如果*x*對**erfc**而言太大， **Errno**變數會設定為**ERANGE**。
+互補高斯 error 函式定義為 1-erf (x) 。 **Erf**函式會傳回範圍-1.0 到1.0 之間的值。 不會傳回錯誤。 **Erfc**函數會傳回範圍0到2的值。 如果 *x* 對 **erfc**而言太大，則 **Errno** 變數會設定為 **ERANGE**。
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型的**erf**和**erfc**多載 **`float`** **`long double`** 。 在 C 程式中， **erf**和**erfc**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回和類型的 **erf** 和 **erfc** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **erf** 和 **erfc** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `erf()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |函式|必要的標頭|
 |--------------|---------------------|
 |**erf**、 **erff**、 **erfl**、 **erfc**、 **erfcf**、 **erfcl**|\<math.h>|
+|**erf** 宏 | \<tgmath.h> |
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

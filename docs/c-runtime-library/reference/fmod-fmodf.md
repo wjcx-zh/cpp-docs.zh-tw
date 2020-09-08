@@ -1,6 +1,7 @@
 ---
 title: fmod、fmodf、fmodl
-ms.date: 4/2/2020
+description: Fmod、fmodf 和 fmodl 的 API 參考;計算浮點餘數的。
+ms.date: 9/1/2020
 api_name:
 - fmod
 - fmodf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216969"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556082"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -68,30 +69,35 @@ long double fmodl(
    long double x,
    long double y
 );
+
+#define fmod(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*、 *y*<br/>
+*x*、 *y*\
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**fmod**會傳回*x*  /  *y*的浮點餘數。 如果*y*的值是0.0，則**fmod**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
+**fmod**會傳回*x*  /  *y*的浮點餘數。 如果 *y* 的值為0.0， **fmod** 會傳回無訊息 NaN。 如需 **printf** 系列表示無訊息 NaN 的詳細資訊，請參閱 [printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fmod**函數會計算*x*y 的浮點餘數*f*  /  *y* ，例如*x*  =  *i* \* *y*  +  *f*，其中*i*是整數， *f*具有與*x*相同的正負號，而*f*的絕對值小於*y*的絕對值。
+**Fmod**函式會計算*x*y 的浮點餘數*f*  /  *y* ，例如*x*  =  *i* \* *y*  +  *f*，其中*i*是整數， *f*的正負號等於*x*， *f*的絕對值小於*y*的絕對值。
 
-C + + 允許多載，因此您可以呼叫採用並傳回和值之**fmod**的多載 **`float`** **`long double`** 。 在 C 程式中， **fmod**一律會接受兩個 **`double`** 引數，並傳回 **`double`** 。
+C + + 允許多載，所以您可以呼叫採用和傳回值的 **fmod** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **fmod** 一律會採用兩個 **`double`** 引數，並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `fmod()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |函式|必要的標頭|
 |--------------|---------------------|
 |**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
+|**fmod** 宏 | \<tgmath.h> |
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

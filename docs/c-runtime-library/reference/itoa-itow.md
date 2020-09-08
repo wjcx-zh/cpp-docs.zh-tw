@@ -1,5 +1,6 @@
 ---
 title: _itoa，_itow 函數
+description: _Itoa 和 _itow 的 API 參考;這會將整數轉換成字串。
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +114,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c8d64dcc1efdb9371feb98d8674a7a2c41c7ab3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843491"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555459"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
-將整數轉換成字串。 這些函式有更安全的版本可供使用;請參閱 [_itoa_s，_itow_s 函數](itoa-s-itow-s.md)。
+將整數轉換成字串。 這些函式已有更安全的版本可供使用，請參閱 [_itoa_s _itow_s](itoa-s-itow-s.md)函式。
 
 ## <a name="syntax"></a>語法
 
@@ -231,7 +232,7 @@ POSIX 名稱 **itoa**、 **ltoa**和 **ultoa** 會以別名的形式存在於 **
 
 若要在字串轉換函式中使用這些宏的其中一個，請宣告適當的字元類型的轉換緩衝區，並使用整數型別和 base 做為緩衝區維度的宏值。 下表列出適用于每個函式的宏，適用于列出的基底：
 
-|Functions|radix|巨集|
+|函數|radix|巨集|
 |-|-|-|
 |**_itoa**， **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**， **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|

@@ -1,5 +1,6 @@
 ---
 title: _rotl、_rotl64、_rotr、_rotr64
+description: _Rotl、_rotl64、_rotr 和 _rotr64 的 API 參考;這會將位向左旋轉 (_rotl) 或)  (_rotr。
 ms.date: 04/05/2018
 api_name:
 - _rotr64
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2fb6b2674ed7d50cff63ae45f22af63b0120597
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949141"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556589"
 ---
 # <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
 
-將位向左（ **_rotl**）或右方（ **_rotr**）旋轉。
+將位旋轉至左方 (**_rotl**) 或右 (**_rotr**) 。
 
 ## <a name="syntax"></a>語法
 
@@ -78,7 +79,7 @@ unsigned __int64 _rotr64(
 
 ### <a name="parameters"></a>參數
 
-*值*<br/>
+*value*<br/>
 要旋轉的值。
 
 *shift*<br/>
@@ -90,16 +91,16 @@ unsigned __int64 _rotr64(
 
 ## <a name="remarks"></a>備註
 
-**_Rotl**和 **_rotr**函式會以*shift*位旋轉不帶正負號的*值*。 **_rotl**會將值向左旋轉。 **_rotr**會將值向右旋轉。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
+**_Rotl**和 **_rotr**函式會依*shift*位旋轉不帶正負號的*值*。 **_rotl** 將值向左旋轉。 **_rotr** 將值向右旋轉。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_rotl**、 **_rotl64**|\<stdlib.h>|
-|**_rotr**、 **_rotr64**|\<stdlib.h>|
+|**_rotl**， **_rotl64**|\<stdlib.h>|
+|**_rotr**， **_rotr64**|\<stdlib.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -132,7 +133,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
 0xfd93 rotated left three times is 0x7ec98

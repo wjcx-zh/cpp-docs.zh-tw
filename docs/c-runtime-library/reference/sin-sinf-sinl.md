@@ -1,6 +1,7 @@
 ---
 title: sin、sinf、sinl
-ms.date: 6/5/2020
+description: Sin、sinf 和 sinl 的 API 參考;計算浮點值正弦值的。
+ms.date: 08/31/2020
 api_name:
 - sinl
 - sinf
@@ -37,16 +38,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d1921dd4537c9dcc955c264a36992d86defada8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216722"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556187"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
-計算浮點值的正弦函數。
+計算浮點值的正弦。
 
 ## <a name="syntax"></a>語法
 
@@ -54,6 +55,7 @@ ms.locfileid: "87216722"
 double sin(double x);
 float sinf(float x);
 long double sinl(long double x);
+#define sin(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,31 +65,34 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 角度 (弧度)。
 
 ## <a name="return-value"></a>傳回值
 
-**Sin**函式會傳回*x*的正弦函數。 如果*x*大於或等於263，或小於或等於-263，則會在結果中失去重要性。
+**Sin**函數會傳回*x*的正弦。 如果 *x* 大於或等於263，或小於或等於-263，則結果中會遺失精確度。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|無|_DOMAIN|
-|±∞（sin，sinf，sinl）|無效|_DOMAIN|
+|± QNAN、IND|無|_DOMAIN|
+|±∞ (sin、sinf、sinl) |無效|_DOMAIN|
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回或值之**sin**的多載 **`float`** **`long double`** 。 在 C 程式中， **sin**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回值之 **sin** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **sin** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `sin()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-|-|-|
 |**sin**、 **sinf**、 **sinl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**sin ( # B1 ** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

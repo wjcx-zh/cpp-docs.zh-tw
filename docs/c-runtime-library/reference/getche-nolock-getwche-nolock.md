@@ -1,5 +1,6 @@
 ---
 title: _getche_nolock、_getwche_nolock
+description: _Getche_nolock 和 _getwche_nolock 的 API 參考;這會從主控台取得字元，其中包含 echo 和無鎖定執行緒。
 ms.date: 4/2/2020
 api_name:
 - _getche_nolock
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: 901c823d2e6539d7c07e3521c5d372b7816eb9b8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: faee0ea1e104367a113b5462cb8aa7541646976d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910766"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556057"
 ---
 # <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock、_getwche_nolock
 
@@ -67,9 +68,9 @@ wint_t _getwche_nolock( void );
 
 ## <a name="remarks"></a>備註
 
-**_getche_nolock**和 **_getwche_nolock**與 **_getche**和 **_getwche**相同，不同之處在于它們不受保護，不會受到其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+**_getche_nolock** 和 **_getwche_nolock** 與 **_getche** 和 **_getwche** 相同，不同之處在于它們不受保護，不會受到其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -77,7 +78,7 @@ wint_t _getwche_nolock( void );
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettche_nolock**|**_getche_nolock**|**_getch_nolock**|**_getwche_nolock**|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

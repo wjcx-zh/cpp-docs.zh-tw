@@ -1,5 +1,6 @@
 ---
 title: imaxabs
+description: Imaxabs 的 API 參考，其會計算任何大小之整數的絕對值。
 ms.date: 04/05/2018
 api_name:
 - imaxabs
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 599e8a0cb20f24bda24201be40fa1acc0ade993c
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954683"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555497"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -53,9 +54,9 @@ intmax_t imaxabs(
 **Imaxabs**函數會傳回引數的絕對值。 不會傳回錯誤。
 
 > [!NOTE]
-> 因為可以使用**intmax_t**表示的負整數範圍大於可以表示的正整數範圍，所以可以將引數提供給無法轉換的**imaxabs** 。 如果引數的絕對值無法以傳回型別表示，則**imaxabs**的行為是未定義的。
+> 因為可以使用 **intmax_t** 來表示的負整數範圍大於可以表示的正整數範圍，所以可以將引數提供給無法轉換的 **imaxabs** 。 如果引數的絕對值無法以傳回類型表示，則 **imaxabs** 的行為未定義。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

@@ -1,6 +1,7 @@
 ---
 title: tan、tanf、tanl
-ms.date: 4/2/2020
+description: Tan、tanf 和 tanl 的 API 參考;計算浮點值的正切值。
+ms.date: 08/31/2020
 api_name:
 - tan
 - tanf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8137bf4cbce59083e8e7c09557400fbff4f6b1df
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215123"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556537"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
@@ -54,6 +55,7 @@ ms.locfileid: "87215123"
 double tan( double x );
 float tanf( float x );
 long double tanl( long double x );
+#define tan(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,29 +65,32 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 角度 (弧度)。
 
 ## <a name="return-value"></a>傳回值
 
-**Tan**函式會傳回*x*的正切函數。 如果*x*大於或等於263，或小於或等於-263，則會在結果中失去重要性。
+**Tan**函式會傳回*x*的正切函數。 如果 *x* 大於或等於263，或小於或等於-263，則結果中會遺失精確度。
 
-|輸入|SEH 例外狀況|**Matherr**異常|
+|輸入|SEH 例外狀況|**Matherr** 例外|
 |-----------|-------------------|-------------------------|
-|± QNAN，IND|無|_DOMAIN|
+|± QNAN、IND|無|_DOMAIN|
 |± INF|**無效**|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回或值之**tan**的多載 **`float`** **`long double`** 。 在 C 程式中， **tan**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回或值的 **tan** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **tan** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `tan()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
 |**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**tan ( # B1 ** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,6 +1,7 @@
 ---
 title: acosh、acoshf、acoshl
-ms.date: 4/2/2020
+description: Acosh、acoshf 和 acoshl 的 API 參考;計算浮點值之反雙曲余弦值的。
+ms.date: 08/31/2020
 api_name:
 - acoshf
 - acosh
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef6d47ca07f96be84962303c13162b154086e5f2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220752"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555107"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -54,21 +55,20 @@ ms.locfileid: "87220752"
 double acosh( double x );
 float acoshf( float x );
 long double acoshl( long double x );
-```
+#define acosh(X) // Requires C11 or higher
 
-```cpp
 float acosh( float x );  // C++ only
 long double acosh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**Acosh**函數會傳回*x*的反雙曲余弦（arc 雙曲余弦）。 這些函式在網域*x* ≥1中是有效的。 如果*x*小於1， `errno` 會設為 `EDOM` ，且結果為無訊息 NaN。 如果*x*是無訊息的 NaN、不定或無限大，則會傳回相同的值。
+**Acosh**函式會傳回*x*的反向雙曲余弦 (反正雙曲余弦) 。 這些函數在網域 *x* ≥1上是有效的。 如果 *x* 小於1， `errno` 則會設定為， `EDOM` 且結果為無訊息 NaN。 如果 *x* 是無訊息的 NaN、不定或無限大，則會傳回相同的值。
 
 |輸入|SEH 例外狀況|`_matherr` 例外狀況|
 |-----------|-------------------|--------------------------|
@@ -77,15 +77,18 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-當您使用 c + + 時，可以呼叫採用並傳回或值之**acosh**的多載 **`float`** **`long double`** 。 在 C 程式中， **acosh**一律會採用並傳回 **`double`** 。
+當您使用 c + + 時，可以呼叫採用和傳回或值的 **acosh** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **acosh** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `acosh()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
+|**acosh ( # B1 ** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

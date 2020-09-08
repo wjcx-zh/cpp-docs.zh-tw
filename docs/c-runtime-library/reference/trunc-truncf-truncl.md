@@ -1,6 +1,7 @@
 ---
 title: trunc、truncf、truncl
-ms.date: 04/05/2018
+description: Trunc、truncf、truncl 的 API 參考;，決定最接近或等於指定之浮點值的最接近整數。
+ms.date: 9/1/2020
 api_name:
 - trunc
 - truncf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1f2fde95bb944aa461bb95a9ad30fac204552b9
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232387"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556628"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -48,23 +49,21 @@ ms.locfileid: "87232387"
 
 ```C
 double trunc( double x );
-float trunc( float x ); //C++ only
 long double truncl( long double x );
-```
+#define trunc(X) // Requires C11 or higher
 
-```cpp
 long double trunc( long double x ); //C++ only
 float trunc( float x ); //C++ only
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 要截斷的值。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回*x*的整數值，舍入為零。
+如果成功，則傳回 *x*的整數值，舍入為零。
 
 否則，可能會傳回下列其中一項：
 
@@ -78,17 +77,20 @@ float trunc( float x ); //C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫採用並傳回和類型之**trunc**的多載 **`float`** **`long double`** 。 在 C 程式中， **trunc**一律會採用並傳回 **`double`** 。
+因為 c + + 允許多載，所以您可以呼叫採用和傳回和類型的 **trunc** 多載 **`float`** **`long double`** 。 在 C 程式中，除非您要使用 \<tgmath.h> 宏來呼叫這個函式，否則 **trunc** 一律會採用並傳回 **`double`** 。
+
+如果您使用 \<tgmath.h> `trunc()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
 因為浮點數的最大值是確切的整數，這個函式本身不會溢位。 不過，您可能會因為將值傳回到整數類型而造成函式溢位。
 
 您也可以透過隱含地從浮點數轉換為整數進行無條件捨去。不過，這麼做受限於可以用目標類型儲存的值。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |函式|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**trunc**、 **truncf**、 **truncl**|\<math.h>|\<cmath>|
+|**trunc** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

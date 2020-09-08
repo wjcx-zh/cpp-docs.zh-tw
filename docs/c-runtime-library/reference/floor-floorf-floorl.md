@@ -1,6 +1,7 @@
 ---
 title: floor、floorf、floorl
-ms.date: 6/5/2020
+description: Floor、floorf 和 floorl 的 API 參考;這會計算值的樓層。
+ms.date: 9/1/2020
 api_name:
 - floorf
 - floorl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218674"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556732"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -64,11 +65,12 @@ float floorf(
 long double floorl(
    long double x
 );
+#define floor(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
+*X*\
 浮點值。
 
 ## <a name="return-value"></a>傳回值
@@ -77,21 +79,24 @@ long double floorl(
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN，IND|無|_DOMAIN|
+|± QNAN、IND|無|_DOMAIN|
 
-**floor**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**樓層** 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作為。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此您可以呼叫採用並傳回和值之**樓層**的多載 **`float`** **`long double`** 。 在 C 程式中， **floor**一律會採用並傳回 **`double`** 。
+C + + 允許多載，所以您可以呼叫採用和傳回值之 **樓層** 的多載 **`float`** **`long double`** 。 在 C 程式中，除非您使用 \<tgmath.h> 宏來呼叫這個函式，否則 **floor** 一律會採用並傳回 **`double`** 。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+如果您使用 \<tgmath.h> `floor()` 宏，則引數的類型會決定所選取的函式版本。 如需詳細資料，請參閱 [類型-泛型數學](../../c-runtime-library/tgmath.md) 。
 
-## <a name="requirements"></a>需求
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
+
+## <a name="requirements"></a>規格需求
 
 |函式|必要的標頭|
 |--------------|---------------------|
 |**floor**、 **floorf**、 **floorl**|\<math.h>|
+|**floor** 宏 | \<tgmath.h> ||
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

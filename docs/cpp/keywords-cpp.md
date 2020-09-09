@@ -6,12 +6,12 @@ ms.date: 07/25/2020
 helpviewer_keywords:
 - keywords [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-ms.openlocfilehash: 13b174a40621b8aeeae58d4ccae8e4e51c8fdd44
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 96fb4e6a51630f3b5297c6428297980b5c51ca36
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843322"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609146"
 ---
 # <a name="keywords-c"></a>關鍵字 (C++)
 
@@ -288,7 +288,7 @@ Microsoft 擴充功能預設為啟用。 為了確保您的程式可完整移植
 
 <sup>f</sup> 僅適用于 Managed Extensions for C++。 這個語法現在不建議使用。 如需詳細資訊，請參閱[執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)。
 
-<sup>f</sup> 適用于 c + +/cli
+<sup>g</sup> 適用于 c + +/cli
 
 ## <a name="see-also"></a>另請參閱
 

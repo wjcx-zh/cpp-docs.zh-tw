@@ -1,41 +1,42 @@
 ---
 title: 部分類別 (C++/CX)
+description: 如何在 c + +/CX。中宣告和使用部分類別
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70225069c948a50b38ac3642113cf940c86cf8da
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185459"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609060"
 ---
 # <a name="partial-classes-ccx"></a>部分類別 (C++/CX)
 
-部分類別是支援下列案例的建構：您要修改一部分的類別定義，而自動產生程式碼軟體 (例如 XAML 設計工具) 也在相同的類別中修改程式碼。 使用部分類別可防止設計工具覆寫您的程式碼。 在 Visual Studio 專案中，會對產生的檔案自動套用 `partial` 修飾詞。
+部分類別是支援下列案例的建構：您要修改一部分的類別定義，而自動產生程式碼軟體 (例如 XAML 設計工具) 也在相同的類別中修改程式碼。 使用部分類別可防止設計工具覆寫您的程式碼。 在 Visual Studio 專案中，會 **`partial`** 自動將修飾詞套用至產生的檔案。
 
 ## <a name="syntax"></a>語法
 
-若要定義部分類別，請在原本是一般類別定義之項目的類別識別碼之前使用 `partial` 關鍵字。 `partial ref class` 之類的關鍵字是包含空白字元的內容關鍵字。 支援部分定義的建構如下。
+若要定義部分類別，請在 **`partial`** 其他是一般類別定義的類別索引鍵之前，立即使用關鍵字。 關鍵字（例如） **`partial ref class`** 是包含空白字元的內容關鍵字。 支援部分定義的建構如下。
 
-- **`class`** 或**`struct`**
+- **`class`** 或 **`struct`**
 
-- **`ref class`** 或**`ref struct`**
+- **`ref class`** 或 **`ref struct`**
 
-- **`value class`** 或**`value struct`**
+- **`value class`** 或 **`value struct`**
 
-- **`enum`** 或**`enum class`**
+- **`enum`** 或 **`enum class`**
 
-- `ref interface`、 **`interface class`** 、 **`interface struct`** 或 **' __interface**
+- **`ref interface`**、 **`interface class`** 、 **`interface struct`** 或 **`__interface`**
 
 - **`union`**
 
-這個範例會示範部分 **`ref class`** ：
+此範例將示範部分 **`ref class`** ：
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
 ## <a name="contents"></a>目錄
 
-如果省略 `partial` 關鍵字，部分類別定義即可包含完整類別定義所能包含的任何項目。 除了一項例外狀況，這包括任何有效的建構，例如基底類別、資料成員、成員函式、列舉、friend 宣告和屬性。 此外也允許靜態資料成員的內嵌定義。
+如果已省略關鍵字，部分類別定義可以包含完整類別定義所能包含的任何事物 **`partial`** 。 除了一項例外狀況，這包括任何有效的建構，例如基底類別、資料成員、成員函式、列舉、friend 宣告和屬性。 此外也允許靜態資料成員的內嵌定義。
 
 這項例外狀況是類別存取範圍。 例如，陳述式 `public partial class MyInvalidClass {/* ... */};` 是錯誤。 MyInvalidClass 的部分類別定義中所使用的任何存取規範，對於 MyInvalidClass 後續的部分或完整類別定義中的預設存取範圍都不會有影響。
 
@@ -45,13 +46,13 @@ ms.locfileid: "87185459"
 
 ## <a name="declaration"></a>宣告
 
-*MyClass* 之類的部分類別定義，只是 MyClass 的宣告。 也就是說，它只是導入 *MyClass*這個名稱而已。 *MyClass* 無法用於需要類別定義的用途中，例如了解 *MyClass* 的大小，或使用 *MyClass*的基底或成員。 只有在編譯器找到*MyClass* 的非部分定義時，才會認定 *MyClass*已完成定義。
+類別的部分定義 `MyClass` ，例如，只是 MyClass 的宣告。 也就是說，它只會引入名稱 `MyClass` 。 `MyClass` 無法以需要類別定義的方式使用，例如，知道的大小 `MyClass` 或使用的基底或成員 `MyClass` 。 `MyClass` 只有在編譯器遇到的非部分定義時，才會被視為已定義 `MyClass` 。
 
-下列範例示範部分類別的宣告行為。 在宣告 #1 後面，可將 *MyClass* 視為已撰寫成向前宣告 `ref class MyClass;`來加以使用。 宣告 #2 等同於宣告 #1。宣告 #3 有效，因為它是類別的向前宣告。 然而，宣告 #4 則無效，因為
+下列範例示範部分類別的宣告行為。 在宣告 #1 之後，就 `MyClass` 可以像是撰寫成向前宣告一樣使用 `ref class MyClass;` 。 宣告 #2 等同於宣告 #1。宣告 #3 有效，因為它是類別的向前宣告。 然而，宣告 #4 則無效，因為
 
-*MyClass* 並未經過完整定義。
+`MyClass` 並未經過完整定義。
 
-宣告 #5 未使用 `partial` 關鍵字，且此宣告已完整定義 *MyClass*。 最後，宣告 #6 是有效的。
+宣告 #5 不會使用 **`partial`** 關鍵字，且宣告會完整定義 `MyClass` 。 最後，宣告 #6 是有效的。
 
 [!code-cpp[Cx_partial#03](../cppcx/codesnippet/CPP/partialclassexample/class1.h#03)]
 
@@ -59,9 +60,9 @@ ms.locfileid: "87185459"
 
 類別的每個完整定義都可以有零個或多個部分類別定義。
 
-類別的每個部分類別定義在語彙上皆必須位於該類別的一個完整定義之前，但不一定要位於該類別的向前宣告之前。 如果類別沒有完整定義，部分類別宣告就只能是向前宣告。
+類別的每個部分類別定義都必須在該類別的一個完整定義之前，在該類別的一個完整定義之前，但不一定要在類別的向前宣告之前。 如果類別沒有完整定義，部分類別宣告就只能是向前宣告。
 
-所有的類別索引鍵（例如 **`class`** 和） **`struct`** 都必須相符。 例如，下列程式碼是錯誤的： `partial class X {}; struct X {};`這個名稱而已。
+所有類別鍵（例如和）都 **`class`** **`struct`** 必須相符。 例如，下列程式碼是錯誤的： `partial class X {}; struct X {};`這個名稱而已。
 
 下列範例示範數目與順序。 最後一個部分宣告會失敗，因為類別已定義。
 
@@ -85,11 +86,11 @@ ms.locfileid: "87185459"
 
 部分類別不可延伸到其他轉譯單位。
 
-`partial`關鍵字僅支援與 **`ref class`** 關鍵字或關鍵字一起使用 **`value class`** 。
+**`partial`** 關鍵字只支援搭配 **`ref class`** 關鍵字或關鍵字一起使用 **`value class`** 。
 
 ### <a name="examples"></a>範例
 
-下列範例會定義跨兩個程式碼檔案的 `Address` 類別。 設計工具可修改 `Address.details.h` ，而您可以修改 `Address.h`。 只有第一個檔案中的類別定義會使用 `partial` 關鍵字。
+下列範例會定義跨兩個程式碼檔案的 `Address` 類別。 設計工具可修改 `Address.details.h` ，而您可以修改 `Address.h`。 只有第一個檔案中的類別定義會使用 **`partial`** 關鍵字。
 
 [!code-cpp[cx_partial#07](../cppcx/codesnippet/CPP/partialclassexample/address.details.h#07)]
 

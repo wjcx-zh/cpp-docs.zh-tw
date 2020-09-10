@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: aa6f40c91f9be906e3f51df5788483410f6077a3
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
+ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554951"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89933823"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -120,7 +120,7 @@ double wcstod_l(
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-目前地區設定的 **LC_NUMERIC** 類別設定會決定 *strSource*中的基本點字元辨識。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 沒有 **_l** 尾碼的函式會使用目前的地區設定; **_strtod_l** 與 **_strtod_l** 相同，只不過它們會改用傳入的 *地區* 設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+目前地區設定的 **LC_NUMERIC** 類別設定會決定 *strSource*中的基本點字元辨識。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 沒有 **_l** 尾碼的函式會使用目前的地區設定; **_strtod_l** 與 **_strtod** 完全相同，但前者會改為使用傳入的 *地區* 設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 如果 *endptr* 不是 **Null**，則停止掃描的字元指標會儲存在 *endptr*所指向的位置。 如果無法執行轉換 (找不到有效的數位或指定了不正確基底) ， *strSource* 的值會儲存在 *endptr*所指向的位置。
 

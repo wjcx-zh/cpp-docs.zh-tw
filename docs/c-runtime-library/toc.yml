@@ -64,6 +64,8 @@
       href: ../c-runtime-library/crt-initialization.md
     - name: CRT 中的全域狀態
       href: ../c-runtime-library/global-state.md
+    - name: 泛型數學
+      href: ../c-runtime-library/tgmath.md
 - name: 依分類排序的通用 C 執行階段常式
   expanded: false
   items:

@@ -2,19 +2,19 @@
 title: 將類型和成員設為已被取代 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 6d61b00690cc087c3baced6d96d0b6c8d73b5850
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740505"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040323"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>將類型和成員設為已被取代 (C++/CX)
 
-在C++/cx 中，支援使用已被取代的屬性來[取代](/uwp/api/windows.foundation.metadata.deprecatedattribute)Windows 執行階段類型和生產者和取用者的成員。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。
+在 c + +/CX 中，支援使用已被取代的屬性 [取代](/uwp/api/windows.foundation.metadata.deprecatedattribute) 生產者和取用者的 Windows 執行階段類型和成員。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。
 
 > [!CAUTION]
-> 已[取代](/uwp/api/windows.foundation.metadata.deprecatedattribute)的屬性僅供 Windows 執行階段類型使用。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
+> 已被 [取代](/uwp/api/windows.foundation.metadata.deprecatedattribute) 的屬性只能搭配 Windows 執行階段類型使用。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
 
 ### <a name="example"></a>範例
 
@@ -39,23 +39,27 @@ public:
 
 下表列出可套用 Deprecated 屬性的建構：
 
-| |
-|-|
-|XAML 控制項|
-|Delegate - 委派|
-|Event - 事件|
-|列舉欄位|
-|enum|
-|struct|
-|方法|
-|Class - 類別|
-|interface|
-|屬性|
-|結構欄位|
-|參數化建構函式|
+:::row:::
+   :::column span="":::
+      類別
+      授權
+      列舉
+      列舉欄位 \
+      事件類
+      interface
+   :::column-end:::
+   :::column span="":::
+      法
+      參數化的函式 \
+      屬性\
+      結構
+      結構欄位 \
+      XAML 控制項
+   :::column-end:::
+:::row-end:::
 
 ## <a name="see-also"></a>另請參閱
 
-[類型系統](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[型別系統](../cppcx/type-system-c-cx.md)<br/>
+[C + +/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

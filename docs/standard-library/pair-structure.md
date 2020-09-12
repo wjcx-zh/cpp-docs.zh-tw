@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520923"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042052"
 ---
 # <a name="pair-structure"></a>pair 結構
 
@@ -65,22 +65,23 @@ template<class T1, class T2>
 *Val2*\
 值，初始化 `pair` 第二個項目。
 
-*再*\
+*對*\
 配對，其值要用來初始化另一個配對的項目。
 
 ## <a name="return-value"></a>傳回值
 
-第一個（預設）的函式會將該配對的第一個專案初始化為類型的預設值 `T1` ，並將第二個元素設為預設值 `T2` 。
+第一個 (預設) 的函式會將該配對的第一個元素初始化為類型的預設值 `T1` ，並將第二個專案初始化為類型的預設值 `T2` 。  如果這兩種類型都是預設值，就會定義它可建構。
 
-第二個函式會將該配對的第一個專案初始化為*Val1* ，而第二個為*Val2。*
+第二個函式會將配對的第一個元素初始化為 *Val1* ，而第二個則初始化為 *Val2。*  如果這兩種類型都是複製可建構，則會定義它。
 
-第三個 (範本) 建構函式會初始化該配對的第一個項目為 `Right`. **first** 和第二個項目為 `Right`. **第二個**。
+第三個 (範本) 的函式會將該配對的第一個專案初始化為 `Right` 。 **第一個** 和第二個至 `Right` 。 **第二個**。  如果這兩個配對類型都是從提供的實值型別可建構，則會定義它。
 
-第四個函式會使用右值參考宣告子，將配對的第一個元素初始化為*Val1* ，第二個為*Val2* [：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+
+第四個函式會將該配對的第一個專案初始化為 *Val1* ，而第二個則是使用右值參考宣告子來 *Val2* [：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。  如果這兩個配對類型都是從提供的實值型別可建構，則會定義它。
 
 ## <a name="remarks"></a>備註
 
-樣板結構會分別儲存一對類型的物件 `T1` 和 `T2` 。 此類型與樣板 `first_type` 參數相同 `T1` ，而且類型與樣板 `second_type` 參數相同 `T2` 。 `T1`而且 `T2` 每個都只需要提供一個預設的函式、單一引數的函數和一個析構函數。 類型的所有成員 `pair` 都是公用的，因為該類型宣告為， **`struct`** 而不是 **`class`** 。 配對最常見的兩種用途是當作函式的傳回類型，這些函式會傳回兩個值，以及當作關聯容器類別 [map 類別](../standard-library/map-class.md)和 [multimap 類別](../standard-library/multimap-class.md)的項目，這些類別都具有與每個項目相關聯的索引鍵和實值類型。 後者滿足成對關聯容器的需求，而且具有形式的實數值型別 `pair< const key_type, mapped_type >` 。
+範本結構會分別儲存一組類型的物件 `T1` 和 `T2` 。 此類型與樣板 `first_type` 參數相同 `T1` ，且類型與 `second_type` 範本參數相同 `T2` 。 `T1` 而且 `T2` 每個都只需要提供預設的函式、單一引數的函式，以及一個函式。 型別的所有成員 `pair` 都是公用的，因為型別是宣告為， **`struct`** 而不是 **`class`** 。 配對最常見的兩種用途是當作函式的傳回類型，這些函式會傳回兩個值，以及當作關聯容器類別 [map 類別](../standard-library/map-class.md)和 [multimap 類別](../standard-library/multimap-class.md)的項目，這些類別都具有與每個項目相關聯的索引鍵和實值類型。 後者滿足成對關聯容器的需求，而且具有表單的實數值型別 `pair< const key_type, mapped_type >` 。
 
 ## <a name="example"></a>範例
 

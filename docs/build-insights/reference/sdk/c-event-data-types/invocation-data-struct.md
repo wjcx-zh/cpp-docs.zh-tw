@@ -1,6 +1,6 @@
 ---
-title: INVOCATION_DATA結構
-description: C++生成見解 SDK INVOCATION_DATA結構參考。
+title: INVOCATION_DATA 結構
+description: C + + Build Insights SDK INVOCATION_DATA 結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4e1f428facac413d7a4a5c059452dd8cdb07be4c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48b4c28d3c01d61a31343894312a54ba2ab17a70
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325479"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041636"
 ---
-# <a name="invocation_data-structure"></a>INVOCATION_DATA結構
+# <a name="invocation_data-structure"></a>INVOCATION_DATA 結構
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 符合 Visual Studio 2017 和更新版本的相容性。 若要查看這些版本的檔，請將此文章的 Visual Studio **版本** 選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到此檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-結構`INVOCATION_DATA`描述編譯器或連結器呼叫。
+`INVOCATION_DATA`結構描述編譯器或連結器調用。
 
 ## <a name="syntax"></a>語法
 
@@ -45,12 +45,12 @@ typedef struct INVOCATION_DATA_TAG
 
 ## <a name="members"></a>成員
 
-|  |  |
+| Name | 描述 |
 |--|--|
-| `MSVCToolCode` | 標識調用類型的代碼。 有關詳細資訊,請參閱[MSVC_TOOL_CODE](msvc-tool-code-enum.md)。 |
-| `ToolVersion` | 將被調用的工具版本存儲為一組積分值的物件。 |
-| `ToolVersionString` | 以文本形式描述被調用的工具版本。 |
-| `WorkingDirectory` | 調用的目錄。 |
-| `ToolPath` | 被調用的工具的絕對路徑。 |
+| `MSVCToolCode` | 識別調用型別的程式碼。 如需詳細資訊，請參閱 [MSVC_TOOL_CODE](msvc-tool-code-enum.md)。 |
+| `ToolVersion` | 物件，將叫用的工具版本儲存為整數值的群組。 |
+| `ToolVersionString` | 描述以文字形式叫用的工具版本。 |
+| `WorkingDirectory` | 從中進行調用的目錄。 |
+| `ToolPath` | 叫用的工具絕對路徑。 |
 
 ::: moniker-end

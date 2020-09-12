@@ -1,16 +1,17 @@
 ---
 title: '&lt;跨度&gt;'
+description: 標準範本庫 (STL) span 命名空間的 API 參考，可讓您在連續的物件序列上提供輕量的觀點。
 ms.date: 05/28/2020
 f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f4c6b141dfea6464e58d06e221a39a693469d31c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846182"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039868"
 ---
 # <a name="ltspangt"></a>&lt;跨度&gt;
 
@@ -44,39 +45,39 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<span>
 
 **命名空間：** std
 
-**編譯器選項：** /std： c + + 最新
+**編譯器選項：** [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="members"></a>成員
 
 ### <a name="classes"></a>類別
 
-|名稱|描述|
+|Name|描述|
 |-|:-|
 |[跨度](span-class.md)| 提供一系列連續物件的觀點。 |
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
-|名稱|描述|
+|Name|描述|
 |-|:-|
 |[運算子 =](span-class.md#op_eq)| 範圍指派 |
 |[運算元\[\]](span-class.md#op_at)| 項目存取 |
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函數
 
-|名稱|描述|
+|Name|描述|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| 取得範圍的基礎唯讀位元組。 |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | 取得範圍的基礎位元組。 |
 
 ### <a name="constants"></a>常數
 
-|名稱|描述|
+|Name|描述|
 |-|:-|
 | **dynamic_extent** | 表示在執行時間（而不是編譯時期）決定範圍大小。 當範圍中的專案數在編譯時期為已知時，會指定為 `Extent` 範本參數。 如果在執行時間之前不知道數位，請改為指定 `dynamic_extent` 。 |
 

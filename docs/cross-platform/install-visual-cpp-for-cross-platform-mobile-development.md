@@ -2,12 +2,12 @@
 title: 安裝 C++ 的跨平台行動裝置應用程式開發
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: 935e427710d55120055be476a5cfb5fbcf73641b
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 6a573b0f7ba261b97af9de24e67f733acac0532f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609182"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041948"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>安裝 C++ 的跨平台行動裝置應用程式開發
 
@@ -60,7 +60,7 @@ Visual Studio 安裝程式包含 **使用 c + +** 工作負載的行動裝置開
 - 需要 c + + iOS 開發工具，才能建立以 iOS 平臺為目標的 c + + 程式碼。
 
 > [!NOTE]
-> 如果您使用 Visual Studio 2015，請參閱[安裝適用於跨平台行動裝置應用程式開發的 Visual C++ (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015)
+> 如果您使用 Visual Studio 2015，請參閱[安裝適用於跨平台行動裝置應用程式開發的 Visual C++ (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015&preserve-view=true)
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>安裝「使用 C++ 進行行動開發」工作負載
 

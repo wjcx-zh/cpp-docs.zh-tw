@@ -1,6 +1,6 @@
 ---
-title: INVOCATION_VERSION_DATA結構
-description: C++生成見解 SDK INVOCATION_VERSION_DATA結構參考。
+title: INVOCATION_VERSION_DATA 結構
+description: C + + Build Insights SDK INVOCATION_VERSION_DATA 結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1211b4eb999fd63767af71c6884d7d20d6920df0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ec54c560dd408dc3beecbc20eaac69d389c7ec37
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325476"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041555"
 ---
-# <a name="invocation_version_data-structure"></a>INVOCATION_VERSION_DATA結構
+# <a name="invocation_version_data-structure"></a>INVOCATION_VERSION_DATA 結構
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 符合 Visual Studio 2017 和更新版本的相容性。 若要查看這些版本的檔，請將此文章的 Visual Studio **版本** 選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到此檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-結構`INVOCATION_VERSION_DATA`將版本號描述為一組積分值。
+結構會將 `INVOCATION_VERSION_DATA` 版本號碼描述為整數值的群組。
 
 ## <a name="syntax"></a>語法
 
@@ -42,11 +42,11 @@ typedef struct INVOCATION_VERSION_DATA_TAG
 
 ## <a name="members"></a>成員
 
-|  |  |
+| Name | 描述 |
 |--|--|
-| `VersionMajor` | 版本的主要編號。 |
-| `VersionMinor` | 版本的次要編號。 |
-| `BuildNumberMajor` | 生成的主要編號。 |
-| `BuildNumberMinor` | 生成的小數。 |
+| `VersionMajor` | 版本的主要號碼。 |
+| `VersionMinor` | 版本的次要號碼。 |
+| `BuildNumberMajor` | 組建的主要數位。 |
+| `BuildNumberMinor` | 組建的次要號碼。 |
 
 ::: moniker-end

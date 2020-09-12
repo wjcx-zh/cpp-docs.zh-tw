@@ -1,5 +1,6 @@
 ---
 title: span 類別 (c + + 標準程式庫) |Microsoft Docs
+description: 標準範本庫 (STL) span 類別的 API 參考，可讓您在連續的物件序列上提供輕量的觀點。
 ms.date: 05/28/2020
 f1_keywords:
 - span/std::span
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 297104820f5498e59397db9025aed1675984a060
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560448"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039960"
 ---
 # <a name="span-class-c-standard-library"></a>span 類別 (c + + 標準程式庫) 
 
@@ -127,13 +128,13 @@ class span;
 
 `array`和或不同的 `vector` 是，範圍不會「擁有」它內的元素。 範圍不會為其中的專案釋放任何儲存空間，因為它不會擁有這些物件的儲存體。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<span>
 
 **命名空間：** std
 
-**編譯器選項：** /std： c + + 最新
+**編譯器選項：** [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="spanback"></a><a name="back"></a> `span::back`
 

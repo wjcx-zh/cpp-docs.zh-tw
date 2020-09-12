@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 3772033df59e065cedca61012cd479c812cf5b66
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a25823982b9276309e99a2a26cef8d6fe2e764bd
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367432"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040661"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 類別
 
@@ -35,43 +35,43 @@ class CWinFormsDialog :
 
 #### <a name="parameters"></a>參數
 
-*T託管控制*<br/>
-要在 MFC 應用程式中顯示的 .NET 框架使用者控制項。
+*TManagedControl*<br/>
+要在 MFC 應用程式中顯示的 .NET Framework 使用者控制項。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CWinForms對話::CwinForms對話](#cwinformsdialog)|建構 `CWinFormsDialog` 物件。|
+|[CWinFormsDialog::CWinFormsDialog](#cwinformsdialog)|建構 `CWinFormsDialog` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CWinForms對話:取得控制](#getcontrol)|檢索對 Windows 表單使用者控制件的引用。|
-|[CWinForms對話::取得控制句柄](#getcontrolhandle)|檢索 Windows 窗體使用者控件的視窗句柄。|
-|[CwinForms對話::OnInitDialog](#oninitdialog)|通過在 MFC 對話方塊上創建和託管 Windows 窗體使用者控制件來初始化 MFC 對話框。|
+|[CWinFormsDialog::GetControl](#getcontrol)|抓取 Windows Forms 使用者控制項的參考。|
+|[CWinFormsDialog::GetControlHandle](#getcontrolhandle)|抓取 Windows Forms 使用者控制項的視窗控制碼。|
+|[CWinFormsDialog：： OnInitDialog](#oninitdialog)|藉由在其上建立並裝載 Windows Forms 的使用者控制項，初始化 MFC 對話方塊。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱||
+|Name|描述|
 |----------|-|
-|[CWinForms對話::運算符 -&gt;](#operator_-_gt)|替換[CWinFormsDialog::獲取](#getcontrol)運算式中的控制。|
-|[CWinForms對話::操作員 T 託管控制*](#operator-tmanagedcontrol-hat)|將類型強制轉換為對 Windows 表單使用者控制的參考。|
+|[CWinFormsDialog：： operator-&gt;](#operator_-_gt)|取代運算式中的 [CWinFormsDialog：： GetControl](#getcontrol) 。|
+|[CWinFormsDialog：： operator TManagedControl ^](#operator-tmanagedcontrol-hat)|將型別轉換為 Windows Forms 使用者控制項的參考。|
 
 ## <a name="remarks"></a>備註
 
-`CWinFormsDialog`是承載 Windows 窗體使用者控制件的 MFC 對話方塊類[( CDialog](../../mfc/reference/cdialog-class.md)) 的包裝器。 這允許在模態或無模式 MFC 對話框上顯示 .NET 框架控制項。
+`CWinFormsDialog` 是 MFC 對話方塊類別的包裝函式， ( 裝載 Windows Forms 使用者控制項的 [CDialog](../../mfc/reference/cdialog-class.md)) 。 這可讓您在強制回應或非模式 MFC 對話方塊上顯示 .NET Framework 控制項。
 
-有關使用 Windows 窗體的詳細資訊,請參閱[在 MFC 中使用 Windows 窗體使用者控制件](../../dotnet/using-a-windows-form-user-control-in-mfc.md),並將[Windows 元件使用者控制元件託管為 MFC 對話框](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)。
+如需使用 Windows Forms 的詳細資訊，請參閱 [在 mfc 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md) ，以及將 [Windows Form 使用者控制項裝載為 mfc 對話方塊](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)。
 
 ## <a name="requirements"></a>需求
 
-**標題:** afxwinforms.h
+**標頭：** afxwinforms。h
 
-## <a name="cwinformsdialogcwinformsdialog"></a><a name="cwinformsdialog"></a>CWinForms對話::CwinForms對話
+## <a name="cwinformsdialogcwinformsdialog"></a><a name="cwinformsdialog"></a> CWinFormsDialog::CWinFormsDialog
 
 建構 `CWinFormsDialog` 物件。
 
@@ -82,11 +82,11 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ### <a name="parameters"></a>參數
 
 *nIDTemplate*<br/>
-包含對話方塊樣本資源的 ID。 使用對話框編輯器創建對話方塊樣本並將其存儲在應用程式的資源腳本檔中。 有關對話框樣本的詳細資訊,請參閱[CDialog 類別](../../mfc/reference/cdialog-class.md)。
+包含對話方塊範本資源的識別碼。 使用對話方塊編輯器建立對話方塊範本，並將它儲存在應用程式的資源腳本檔案中。 如需對話方塊範本的詳細資訊，請參閱 [CDialog 類別](../../mfc/reference/cdialog-class.md)。
 
-## <a name="cwinformsdialoggetcontrol"></a><a name="getcontrol"></a>CWinForms對話:取得控制
+## <a name="cwinformsdialoggetcontrol"></a><a name="getcontrol"></a> CWinFormsDialog::GetControl
 
-檢索對 Windows 表單使用者控制件的引用。
+抓取 Windows Forms 使用者控制項的參考。
 
 ```
 inline TManagedControl^ GetControl() const;
@@ -94,11 +94,11 @@ inline TManagedControl^ GetControl() const;
 
 ### <a name="return-value"></a>傳回值
 
-在 MFC 對話方塊中傳回對 Windows 窗體控制的參考。
+傳回 MFC 對話方塊中 Windows Forms 控制項的參考。
 
-## <a name="cwinformsdialoggetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinForms對話::取得控制句柄
+## <a name="cwinformsdialoggetcontrolhandle"></a><a name="getcontrolhandle"></a> CWinFormsDialog::GetControlHandle
 
-檢索 Windows 窗體使用者控件的視窗句柄。
+抓取 Windows Forms 使用者控制項的視窗控制碼。
 
 ```
 inline HWND GetControlHandle() const throw();
@@ -106,11 +106,11 @@ inline HWND GetControlHandle() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-將視窗句柄返回到 Windows 表單使用者控制件。
+傳回 Windows Forms 使用者控制項的視窗控制碼。
 
-## <a name="cwinformsdialogoninitdialog"></a><a name="oninitdialog"></a>CwinForms對話::OnInitDialog
+## <a name="cwinformsdialogoninitdialog"></a><a name="oninitdialog"></a> CWinFormsDialog：： OnInitDialog
 
-通過在 MFC 對話方塊上創建和託管 Windows 窗體使用者控制件來初始化 MFC 對話框。
+藉由在其上建立並裝載 Windows Forms 的使用者控制項，初始化 MFC 對話方塊。
 
 ```
 virtual BOOL OnInitDialog();
@@ -118,17 +118,17 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>傳回值
 
-Boolean 值,用於指定應用程式是否已將輸入焦點設置為對話方塊中的一個控制項。 如果`OnInitDialog`返回非零,Windows 會將輸入焦點設置到對話方塊中的第一個控制項。 僅當應用程式已顯式將輸入焦點設置為對話方塊中的一個控制項時,此方法才能返回 0。
+布林值，指定應用程式是否已將輸入焦點設定為對話方塊中的其中一個控制項。 如果傳回 `OnInitDialog` 非零值，Windows 會將輸入焦點設定至對話方塊中的第一個控制項。 只有當應用程式已將輸入焦點明確設定至對話方塊中的其中一個控制項時，此方法才會傳回0。
 
 ### <a name="remarks"></a>備註
 
-建立 MFC 對話方塊(使用從[CDialog](../../mfc/reference/cdialog-class.md)繼承的[建立](../../mfc/reference/cdialog-class.md#create)、[建立間接](../../mfc/reference/cdialog-class.md#createindirect)或[DoModal](../../mfc/reference/cdialog-class.md#domodal)方法)時,將發送WM_INITDIALOG訊息並調用此方法。 它在對話框上創建 Windows 表單控制項的實體,並調整對話框的大小以適應使用者控制件的大小。 然後,它將在 MFC 對話框中承載新控制項。
+使用繼承自[CDialog](../../mfc/reference/cdialog-class.md)) 的[Create](../../mfc/reference/cdialog-class.md#create)、 [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)或[DoModal](../../mfc/reference/cdialog-class.md#domodal)方法 (建立 MFC 對話方塊時，會傳送 WM_INITDIALOG 訊息，並呼叫這個方法。 它會在對話方塊上建立 Windows Forms 控制項的實例，並調整對話方塊的大小以容納使用者控制項的大小。 然後，它會在 MFC 對話方塊中裝載新的控制項。
 
-如果在初始化對話方塊時需要執行特殊處理,則重寫此成員函數。 有關使用此方法的詳細資訊,請參閱[CDialog:onInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。
+如果您需要在初始化對話方塊時執行特殊處理，請覆寫這個成員函式。 如需使用此方法的詳細資訊，請參閱 [CDialog：： OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。
 
-## <a name="cwinformsdialogoperator--gt"></a><a name="operator_-_gt"></a>CWinForms對話::運算符 -&gt;
+## <a name="cwinformsdialogoperator--gt"></a><a name="operator_-_gt"></a> CWinFormsDialog：： operator-&gt;
 
-替換[CWinFormsDialog::獲取](#getcontrol)運算式中的控制。
+取代運算式中的 [CWinFormsDialog：： GetControl](#getcontrol) 。
 
 ```
 inline TManagedControl^  operator->() const throw();
@@ -136,13 +136,13 @@ inline TManagedControl^  operator->() const throw();
 
 ### <a name="remarks"></a>備註
 
-此運算元提供了一個方便的語法,`GetControl`在運算式中替換。
+這個運算子提供可在運算式中取代的便利語法 `GetControl` 。
 
-有關使用 Windows 表單的資訊,請參閱[在 MFC 中使用 Windows 元件使用者控制件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+如需使用 Windows Forms 的詳細資訊，請參閱 [在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-## <a name="cwinformsdialogoperator-tmanagedcontrol"></a><a name="operator-tmanagedcontrol-hat"></a>CWinForms對話::操作員 T 託管控制*
+## <a name="cwinformsdialogoperator-tmanagedcontrol"></a><a name="operator-tmanagedcontrol-hat"></a> CWinFormsDialog：： operator TManagedControl ^
 
-將類型強制轉換為對 Windows 表單使用者控制的參考。
+將型別轉換為 Windows Forms 使用者控制項的參考。
 
 ```
 inline operator TManagedControl^() const throw();
@@ -150,7 +150,7 @@ inline operator TManagedControl^() const throw();
 
 ### <a name="remarks"></a>備註
 
-此運算符強制轉換類型作為對 Windows 窗體控制件的引用。 它用於將`CWinFormsDialog<TManagedControl>`對話框傳遞給接受指向 Windows 窗體使用者控件物件的指標的函數。
+這個運算子會將型別轉換為 Windows Forms 控制項的參考。 它是用來將 `CWinFormsDialog<TManagedControl>` 對話方塊傳遞至接受 Windows Forms 使用者控制項物件之指標的函式。
 
 ## <a name="see-also"></a>另請參閱
 

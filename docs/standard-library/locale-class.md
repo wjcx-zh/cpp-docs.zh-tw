@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833253"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040597"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -159,12 +159,12 @@ cout.imbue(loc);
 
 ### <a name="static-functions"></a>靜態函式
 
-|名稱|描述|
+|Name|描述|
 |-|-|
 |[經典](#classic)|此靜態成員函式傳回表示傳統 C 地區設定的地區設定物件。|
 |[全球](#global)|重設程式的預設地區設定。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
 |運算子|描述|
 |-|-|
@@ -180,7 +180,7 @@ cout.imbue(loc);
 |[方面](#facet_class)|做為所有地區設定 facet 之基底類別的類別。|
 |[`id`](#id_class)|此成員類別提供唯一 facet 項目識別，做為用於地區設定中查詢 facet 的索引鍵。|
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<locale>
 
@@ -622,7 +622,7 @@ loc3 (English_United States.1252) are not equal.
 
 ## <a name="localeoperator"></a><a name="op_call"></a> locale：： operator ( # A1
 
-`basic_string`根據此地區設定之 std：： collate facet 所定義的詞典編纂比較規則，比較兩個物件 <charT> 。
+`basic_string`根據此地區設定 facet 所定義的詞典編纂比較規則，比較兩個物件 `std::collate<charT>` 。
 
 ```cpp
 template <class CharType, class Traits, class Allocator>

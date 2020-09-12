@@ -1,6 +1,7 @@
 ---
 title: unordered_set 類別
-ms.date: 11/04/2016
+description: C + + 標準程式庫容器類別的 API 參考 `unordered_set` ，可用來儲存和取出未排序集合中的資料。
+ms.date: 9/9/2020
 f1_keywords:
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
@@ -26,6 +27,7 @@ f1_keywords:
 - unordered_set/std::unordered_set::cend
 - unordered_set/std::unordered_set::clear
 - unordered_set/std::unordered_set::count
+- unordered_set/std::unordered_set::contains
 - unordered_set/std::unordered_set::emplace
 - unordered_set/std::unordered_set::emplace_hint
 - unordered_set/std::unordered_set::empty
@@ -71,6 +73,7 @@ helpviewer_keywords:
 - std::unordered_set::cbegin
 - std::unordered_set::cend
 - std::unordered_set::clear
+- std::unordered_set::contains
 - std::unordered_set::count
 - std::unordered_set::emplace
 - std::unordered_set::emplace_hint
@@ -134,16 +137,16 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 5eb8a6902324ee069ff275e77b97703ba6ba3356
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 396465b24e9d7cf0facbe324c7b01479fe8e9b6b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839513"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040037"
 ---
 # <a name="unordered_set-class"></a>unordered_set 類別
 
-類別樣板描述的物件可控制型別專案的不同長度序列 `const Key` 。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目同時做為排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
+類別樣板描述的物件可控制型別專案的不同長度序列 `const Key` 。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個值區中，比較函式會判斷是否有任何一對專案具有對等順序。 每個項目同時做為排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 插入專案不會使任何反覆運算器無效，移除專案則僅會使這些反覆運算器失效，指向已移除的元素。
 
 ## <a name="syntax"></a>語法
 
@@ -174,7 +177,7 @@ class unordered_set;
 
 ### <a name="typedefs"></a>Typedefs
 
-|名稱|描述|
+|Name|描述|
 |-|-|
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|
@@ -192,9 +195,9 @@ class unordered_set;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|項目的類型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>函數
 
-|名稱|描述|
+|Name|描述|
 |-|-|
 |[開始](#begin)|指定受控制序列的開頭。|
 |[桶](#bucket)|取得索引鍵值的值區數目。|
@@ -203,6 +206,7 @@ class unordered_set;
 |[cbegin](#cbegin)|指定受控制序列的開頭。|
 |[cend](#cend)|指定受控制序列的結尾。|
 |[清楚](#clear)|移除所有項目。|
+|[包含](#contains)<sup>c + + 20</sup>|檢查中是否有具有指定索引鍵的元素 `unordered_set` 。|
 |[計數](#count)|尋找符合指定索引鍵的項目數目。|
 |[emplace](#emplace)|加入就地建構的項目。|
 |[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|
@@ -224,9 +228,9 @@ class unordered_set;
 |[交換](#swap)|交換兩個容器的內容。|
 |[unordered_set](#unordered_set)|建構容器物件。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
-|名稱|描述|
+|Name|描述|
 |-|-|
 |[unordered_set：： operator =](#op_eq)|複製雜湊資料表。|
 
@@ -236,9 +240,9 @@ class unordered_set;
 
 物件也會儲存最大載入因數，指定每個 Bucket 所需的項目平均數目上限。 如果插入元素會使[unordered_set：： load_factor](#load_factor) `()` 超過最大的載入因數，容器會增加值區的數目並視需要重建雜湊資料表。
 
-受控制序列中實際的項目順序取決於雜湊函式、比較函式、插入順序、最大載入因數和 Bucket 目前數目。 一般來說，您無法預測受控制序列中的項目順序。 不過，您永遠可以確保，有對等順序的任何項目子集在受控制序列中為相鄰。
+受控制序列中實際的項目順序取決於雜湊函式、比較函式、插入順序、最大載入因數和 Bucket 目前數目。 一般來說，您無法預測受控制序列中元素的順序。 不過，您永遠可以確保，有對等順序的任何項目子集在受控制序列中為相鄰。
 
-物件會透過 [unordered_set：： allocator_type](#allocator_type)類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須與類型的物件具有相同的外部介面 `allocator` 。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。
+物件會透過 [unordered_set：： allocator_type](#allocator_type)類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須與類型的物件具有相同的外部介面 `allocator` 。 指派容器物件時，不會複製預存配置器物件。
 
 ## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a> unordered_set：： allocator_type
 
@@ -566,7 +570,7 @@ const_iterator cbegin() const;
 
 ### <a name="remarks"></a>備註
 
-傳回值為 `cbegin` 時，無法修改範圍中的項目。
+如果傳回的值為 `cbegin` ，則無法修改範圍中的元素。
 
 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮 `Container` 將任何支援和的非) 容器 (不是可修改的 **`const`** `begin()` `cbegin()` 。
 
@@ -604,7 +608,7 @@ auto i2 = Container.cend();
 // i2 isContainer<T>::const_iterator
 ```
 
-`cend` 所傳回的值不應該取值。
+傳回的值不應取值 `cend` 。
 
 ## <a name="clear"></a><a name="clear"></a> 清楚
 
@@ -680,7 +684,7 @@ typedef T1 const_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T1`的同義字。
+此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其描述為實作為實定義型別的同義字 `T1` 。
 
 ### <a name="example"></a>範例
 
@@ -722,7 +726,7 @@ typedef T5 const_local_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型說明可作為值區之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T5`的同義字。
+此類型說明可作為值區之常數正向迭代器的物件。 在此將其描述為實作為實定義型別的同義字 `T5` 。
 
 ### <a name="example"></a>範例
 
@@ -849,6 +853,57 @@ int main()
 [c] [b] [a]
 ```
 
+## <a name="contains"></a><a name="contains"></a> 包含
+
+檢查中是否有具有指定索引鍵的元素 `unordered_set` 。
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>參數
+
+*K*\
+索引鍵的類型。
+
+*關鍵*\
+要尋找之元素的索引鍵值。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果在容器中找到元素，則為， `false` 否則為。
+
+### <a name="remarks"></a>備註
+
+`contains()` 是 c + + 20 的新功能。 若要使用它，請指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 的編譯器選項。
+
+`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。
+
+### <a name="example"></a>範例
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_set>
+#include <iostream>
+
+int main()
+{
+    std::unordered_set<int> theUnorderedSet = { 1, 2 };
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedSet.contains(2) << '\n';
+    std::cout << theUnorderedSet.contains(3) << '\n';
+    
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
+
 ## <a name="count"></a><a name="count"></a> 計數
 
 尋找符合指定索引鍵的項目數目。
@@ -913,7 +968,7 @@ typedef T3 difference_type;
 
 ### <a name="remarks"></a>備註
 
-此帶正負號的整數類型所描述的物件可代表受控制序列中任何兩個項目位址之間的差距。 在此將其說明為實作定義類型 `T3`的同義字。
+此帶正負號的整數類型所描述的物件可代表受控制序列中任何兩個項目位址之間的差距。 在此將其描述為實作為實定義型別的同義字 `T3` 。
 
 ### <a name="example"></a>範例
 
@@ -985,7 +1040,7 @@ Args&&... args);
 
 此函式不會使任何迭代器或參考無效。
 
-在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。
+在插入期間，如果擲回例外狀況，但未在容器的雜湊函式中發生例外狀況，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。
 
 如需程式碼範例，請參閱 [set：： emplace](../standard-library/set-class.md#emplace)。
 
@@ -1006,7 +1061,7 @@ Args&&... args);
 轉送以建構插入 unordered_set 之元素的引數，除非該 unordered_set 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。
 
 *：*\
-一個有關要從哪裡開始搜尋正確插入點的提示。
+關於開始搜尋正確插入點之位置的提示。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1018,7 +1073,7 @@ Args&&... args);
 
 此函式不會使任何迭代器或參考無效。
 
-在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。
+在插入期間，如果擲回例外狀況，但未在容器的雜湊函式中發生例外狀況，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。
 
 如需程式碼範例，請參閱 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)。
 
@@ -1491,13 +1546,13 @@ void insert(initializer_list<value_type> IList);
 
 此函式不會使任何迭代器、指標或參考無效。
 
-在只插入一個項目的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
+在只插入一個元素的期間，如果擲回例外狀況，但未在容器的雜湊函式中發生例外狀況，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
 
 若要存取單一元素成員函式所傳回之的 iterator 元件 `pair` `pr` ，請使用 `pr.first` ; 若要對傳回的配對內的 iterator 進行取值，請使用 `*pr.first` ，為您提供元素。 若要存取 **`bool`** 元件，請使用 `pr.second` 。 例如，請參閱本文中稍後的範例程式碼。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而針對 set，`unordered_set<V>::value_type` 是 `const V` 類型。
 
-範圍成員函式 (5) 將專案值的序列插入到對應至範圍內反覆運算器定址之每個元素的 unordered_set 中 `[First, Last)` ，因此不會插入 *最後一個* 專案。 容器成員函式 `end()` 是指容器中最後一個項元素後方的位置；例如，陳述式 `s.insert(v.begin(), v.end());` 嘗試將 `v` 的所有元素插入 `s` 中。 只會插入具有範圍中唯一值的元素；若重複則會忽略。 若要觀察哪些元素會遭到拒絕，請使用單一元素版本的 `insert`。
+範圍成員函式 (5) 將專案值的序列插入到對應至範圍內反覆運算器所定址之每個專案的 unordered_set 中 `[First, Last)` ，因此不會插入 *最後一個* 元素。 容器成員函式 `end()` 是指容器中最後一個項元素後方的位置；例如，陳述式 `s.insert(v.begin(), v.end());` 嘗試將 `v` 的所有元素插入 `s` 中。 只會插入具有範圍中唯一值的元素；若重複則會忽略。 若要觀察哪些元素會遭到拒絕，請使用單一元素版本的 `insert`。
 
 初始化運算式清單成員函式 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 將元素複製到 unordered_set。
 
@@ -1744,7 +1799,7 @@ typedef T4 local_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型說明可做為值區之正向迭代器的物件。 在此將其說明為實作定義類型 `T4`的同義字。
+此類型說明可做為值區之正向迭代器的物件。 在此將其描述為實作為實定義型別的同義字 `T4` 。
 
 ### <a name="example"></a>範例
 
@@ -2293,7 +2348,7 @@ typedef T2 size_type;
 
 ### <a name="remarks"></a>備註
 
-此不帶正負號的整數類型所描述的物件可代表任何受控制序列的長度。 在此將其說明為實作定義類型 `T2`的同義字。
+此不帶正負號的整數類型所描述的物件可代表任何受控制序列的長度。 在此將其描述為實作為實定義型別的同義字 `T2` 。
 
 ### <a name="example"></a>範例
 

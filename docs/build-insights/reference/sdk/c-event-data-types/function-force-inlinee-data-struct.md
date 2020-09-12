@@ -1,6 +1,6 @@
 ---
-title: FUNCTION_FORCE_INLINEE_DATA結構
-description: C++生成見解 SDK FUNCTION_FORCE_INLINEE_DATA結構參考。
+title: FUNCTION_FORCE_INLINEE_DATA 結構
+description: C + + Build Insights SDK FUNCTION_FORCE_INLINEE_DATA 結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a4781c9157130cb46e92906017af98710f5637b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d64a23c603d1f30726f30ffc91c1889c51138ef6
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325499"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041701"
 ---
-# <a name="function_force_inlinee_data-structure"></a>FUNCTION_FORCE_INLINEE_DATA結構
+# <a name="function_force_inlinee_data-structure"></a>FUNCTION_FORCE_INLINEE_DATA 結構
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 符合 Visual Studio 2017 和更新版本的相容性。 若要查看這些版本的檔，請將此文章的 Visual Studio **版本** 選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到此檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-該`FUNCTION_FORCE_INLINEE_DATA`結構描述了一個力內聯函數。
+`FUNCTION_FORCE_INLINEE_DATA`結構描述強制內嵌函數。
 
 ## <a name="syntax"></a>語法
 
@@ -40,9 +40,9 @@ typedef struct FUNCTION_FORCE_INLINEE_DATA_TAG
 
 ## <a name="members"></a>成員
 
-|  |  |
+| Name | 描述 |
 |--|--|
-| `Name` | 函數的名稱,在UTF-8中編碼。 |
-| `Size` | 函數的大小,作為一些中間指令。 |
+| `Name` | 函數的名稱，以 UTF-8 編碼。 |
+| `Size` | 函式的大小，以中繼指示數為限。 |
 
 ::: moniker-end

@@ -1,20 +1,20 @@
 ---
-title: boyer_moore_searcher類
+title: boyer_moore_searcher 類別
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_searcher
 helpviewer_keywords:
 - std::boyer_moore_searcher [C++]
-ms.openlocfilehash: 54e5c4b7c9fe27d6df32f56d57eb1207fa09332c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d6fa4dd203336107614ca3431f38846f0c3c89af
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366763"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039807"
 ---
-# <a name="boyer_moore_searcher-class"></a>boyer_moore_searcher類
+# <a name="boyer_moore_searcher-class"></a>boyer_moore_searcher 類別
 
-類`boyer_moore_searcher`是一種函數物件類型,它使用 Boyer-Moore 演演演算法來搜索物件構造函數中指定的序列。 搜索在提供給物件的函數調用運算符的另一個序列中完成。 類作為參數傳遞給[std::search](algorithm-functions.md#search)的重載之一。
+`boyer_moore_searcher`類別是一種函式物件類型，會使用 Boyer-堯演算法來搜尋物件的函式中所指定的序列。 搜尋是在另一個提供給物件函式呼叫運算子的序列中完成。 此類別會以參數形式傳遞至 [std：： search](algorithm-functions.md#search)的其中一個多載。
 
 ## <a name="syntax"></a>語法
 
@@ -40,16 +40,16 @@ class boyer_moore_searcher
 
 ## <a name="members"></a>成員
 
-| | |
+| member | 描述 |
 | - | - |
-| **建構函式** | |
-|[boyer_moore_searcher](#boyer-moore-searcher-constructor)||
-| **操作員** | |
-| [運算子()](#operator-call) | |
+| **構造 函數** | |
+| [boyer_moore_searcher](#boyer-moore-searcher-constructor) | 建立搜尋的實例。 |
+| **運算子** | |
+| [運算子 ( # B1 ](#operator-call) | 叫用序列上的作業。 |
 
-## <a name="boyer_moore_searcher-constructor"></a><a name="boyer-moore-searcher-constructor"></a>boyer_moore_searcher建構函數
+## <a name="boyer_moore_searcher-constructor"></a><a name="boyer-moore-searcher-constructor"></a> boyer_moore_searcher 的函式
 
-通過使用序列搜索`boyer_moore_searcher`、哈希函數物件和相等謂詞來構造函數物件。
+`boyer_moore_searcher`使用序列來搜尋、雜湊函式物件和等號比較述詞，以建立函式物件。
 
 ```cpp
 boyer_moore_searcher(
@@ -62,26 +62,26 @@ boyer_moore_searcher(
 ### <a name="parameters"></a>參數
 
 *pat_first*\
-要搜尋的序列的初始元素。
+要搜尋之序列的初始元素。
 
 *pat_last*\
-要搜索的序列的末尾。
+要搜尋的序列結尾。
 
 *高頻*\
-用於哈希序列元素的可調用物件。
+可呼叫的物件，用來雜湊順序元素。
 
 *Pred*\
-序列元素的可選相等比較謂詞。 如果未指定相等比較類型,則預設值為`std::equal_to`。
+Sequence 元素的選擇性相等比較述詞。 如果未指定相等比較型別，則預設值為 `std::equal_to` 。
 
 ### <a name="remarks"></a>備註
 
-引發*BinaryPredicate、**哈希*或*隨機存取反覆運算器*類型的複製建構函數或*BinaryPredicate*或*哈希*的調用運算符引發的任何異常。
+擲回 *BinaryPredicate*、 *Hash*或 *RandomAccessIterator* 類型的複製方法所擲回的任何例外狀況，或 *BinaryPredicate* 或 *Hash*的呼叫運算子所擲回的任何例外狀況。
 
-此類在 C++17 中是新的。
+這個類別是 c + + 17 的新類別。
 
-## <a name="operator"></a><a name="operator-call"></a>運算子()
+## <a name="operator"></a><a name="operator-call"></a> 運算子 ( # A1
 
-函數物件的調用運算符。 在參數序列`[first, last)`中搜尋指定給建構函數的序列。
+函數物件的呼叫運算子。 在引數序列內搜尋指定給函式的 `[first, last)` 順序。
 
 ```cpp
 template <class ForwardIterator2>
@@ -93,20 +93,20 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 ### <a name="parameters"></a>參數
 
 *第一*\
-要在其中搜索的序列的初始元素。
+要在其中搜尋之序列的初始元素。
 
 *最後*\
-要在其中搜索的序列的末尾。
+要在其中搜尋的序列結尾。
 
 ### <a name="remarks"></a>備註
 
-如果搜尋模式`[pat_first, pat_last)`為空,則`make_pair(first, first)`傳回 。 找不到搜尋模式,則傳回`make_pair(last, last)`。 否則,將一對反覆運算器傳回到序列的開始和`[first, last)`結束 ,該序列`[pat_first, pat_last)`等於 謂詞 *。*
+如果搜尋模式 `[pat_first, pat_last)` 是空的，則會傳回 `make_pair(first, first)` 。 如果找不到搜尋模式，則會傳回 `make_pair(last, last)` 。 否則，會傳回一組反覆運算器到序列中的開頭和結尾，而 `[first, last)` 該值等於根據述詞 `[pat_first, pat_last)` *pred*。
 
-此類在 C++17 中是新的。
+這個類別是 c + + 17 的新類別。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<功能>](functional.md)\
-[演演算法函數](algorithm-functions.md)\
-[boyer_moore_horspool_searcher類](boyer-moore-horspool-searcher-class.md)\
-[分::搜尋](algorithm-functions.md#search)
+[\<functional>](functional.md)\
+[演算法函數](algorithm-functions.md)\
+[boyer_moore_horspool_searcher 類別](boyer-moore-horspool-searcher-class.md)\
+[std：： search](algorithm-functions.md#search)

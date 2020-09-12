@@ -1,25 +1,25 @@
 ---
-title: 編譯器警告 (層級 1) C4052
+title: 編譯器警告 (層級 1) C4055
 ms.date: 11/04/2016
 f1_keywords:
 - C4055
 helpviewer_keywords:
 - C4055
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
-ms.openlocfilehash: e9fcb4356d993d86b622fd49c4a75d587554f7c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47883f60c3205125a8ee88b804c1d622b3ba0b41
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388601"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041025"
 ---
 # <a name="compiler-warning-level-1-c4055"></a>編譯器警告 (層級 1) C4055
 
-> '*轉換*': 從資料指標'*type1*'到函式指標'*type2*'
+> '*轉換*'：從資料指標 '*type1*' 到函式指標 '*type2*'
 
 ## <a name="remarks"></a>備註
 
-**已淘汰：** 藉由 Visual Studio 2017 和更新版本，不會產生這個警告。
+已**淘汰：** Visual Studio 2017 和更新版本不會產生此警告。
 
 資料指標轉型 (可能不正確) 成函式指標。 這在 /Za 下是層級 1 警告，在 /Ze 下是層級 4 警告。
 

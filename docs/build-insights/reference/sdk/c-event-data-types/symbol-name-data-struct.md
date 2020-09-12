@@ -1,6 +1,6 @@
 ---
-title: SYMBOL_NAME_DATA結構
-description: C++生成見解 SDK SYMBOL_NAME_DATA結構參考。
+title: SYMBOL_NAME_DATA 結構
+description: C + + Build Insights SDK SYMBOL_NAME_DATA 結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1217572f20a772fde629533d6ab170c14dc5b5e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d234c6c225eff87a0eecd98fa5ff60bf92db97f5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325343"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041909"
 ---
-# <a name="symbol_name_data-structure"></a>SYMBOL_NAME_DATA結構
+# <a name="symbol_name_data-structure"></a>SYMBOL_NAME_DATA 結構
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 符合 Visual Studio 2017 和更新版本的相容性。 若要查看這些版本的檔，請將此文章的 Visual Studio **版本** 選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到此檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-結構`SYMBOL_NAME_DATA`描述編譯器前端符號。
+`SYMBOL_NAME_DATA`結構描述編譯器前端符號。
 
 ## <a name="syntax"></a>語法
 
@@ -40,13 +40,13 @@ typedef struct SYMBOL_NAME_DATA_TAG
 
 ## <a name="members"></a>成員
 
-|  |  |
+| Name | 描述 |
 |--|--|
-| `Key` | 符號的鍵。 此值在要分析的跟蹤中是唯一的。 |
+| `Key` | 符號的索引鍵。 這個值在要分析的追蹤內是唯一的。 |
 | `Name` | 符號的名稱。 |
 
 ## <a name="remarks"></a>備註
 
-來自兩個不同的編譯器前端傳遞的符號可能具有相同的名稱,但密鑰不同。 在這種情況下,使用符號名稱確定兩種類型是否相同。
+來自兩個不同編譯器前端傳遞的符號，可能會有相同的名稱，但不同的索引鍵。 在此情況下，請使用符號名稱來判斷兩個類型是否相同。
 
 ::: moniker-end

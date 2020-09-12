@@ -1,6 +1,6 @@
 ---
 title: float_control pragma
-description: 描述 float_control pragma 指示詞的用法和效果。 Float_control 指示詞會在執行時間控制浮點精確的語義和例外狀況語義的狀態。
+description: 描述 float_control pragma 指示詞的使用方式和效果。 Float_control 指示詞會在執行時間控制浮點精確語義和例外狀況語義的狀態。
 ms.date: 11/18/2019
 f1_keywords:
 - vc-pragma.float_control
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 02a8e8d80616623693fff04aca02355c505b4c3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166780"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041922"
 ---
 # <a name="float_control-pragma"></a>float_control pragma
 
@@ -23,49 +23,49 @@ ms.locfileid: "78166780"
 ## <a name="syntax"></a>語法
 
 > **#pragma float_control**\
-> **#pragma float_control （精確，** { **on** | **off** } [ **，push** ] **）** \
-> **#pragma float_control （除外，** { **on** | **off** } [ **，push** ] **）** \
-> **#pragma float_control （** { **push** | **pop** } **）**
+> **#pragma float_control ( 精確、** { **on**  |  **off** } [ **、push** ] **) **\
+> **#pragma float_control ( 例外，** { **on**  |  **off** } [ **，push** ] **) **\
+> **#pragma float_control (** { **push**  |  **pop** } **) **
 
 ## <a name="options"></a>選項
 
-**精確**、**在** | **off**、 **push**\
-指定是否啟用（**開啟**）或停用（**關閉**）精確的浮點語義。 如需與 **/fp：精確**編譯器選項差異的詳細資訊，請參閱備註一節。 選擇性的**推送**權杖會將目前的設定推送至內部編譯器堆疊上的**float_control** 。
+**精確**、 **on**  |  **關閉**、**推**播\
+指定是否要 **啟用) 的** (，或停用 (**off**) 精確的浮點語義。 如需有關與 **/fp：精確** 編譯器選項之差異的詳細資訊，請參閱「備註」一節。 選擇性的**推**播 token 會將 float_control 的目前設定推送至內部編譯器堆疊上的**float_control** 。
 
-**除了**，**在** | **關閉** 上，**推送**\
-指定是否啟用（**開啟**）或停用（**關閉**）浮點例外狀況的語義。 選擇性的**推送**權杖會將目前的設定推送至內部編譯器堆疊上的**float_control** 。
+**except**、 **on**  |  ** **、 **push**\
+指定是否要啟用) 的 (，**或停用) 浮點**例外狀況**語義的 (** 。 選擇性的**推**播 token 會將 float_control 的目前設定推送至內部編譯器堆疊上的**float_control** 。
 
-**除了**[**精確**] 也設定為 [**開啟**] 時，[只能] 設定為 [**開啟**]。
+**只有當****精確**的也設為**on**時，才能設定為**on** 。
 
-**推送**\
-將目前的**float_control**設定推送至內部編譯器堆疊。
+**推**\
+將目前的 **float_control** 設定推入至內部編譯器堆疊。
 
-**pop**\
-從內部編譯器堆疊頂端移除**float_control**設定，並讓新的**float_control**設定。
+**流行**\
+從內部編譯器堆疊的頂端移除 **float_control** 設定，並使新的 **float_control** 設定。
 
 ## <a name="remarks"></a>備註
 
-**Float_control** pragma 與[/fp](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項的行為不同。 **Float_control** pragma 只會控制浮點行為的一部分。 它必須與[fp_contract](../preprocessor/fp-contract.md)和[fenv_access](../preprocessor/fenv-access.md) pragma 結合，才能重新建立 **/fp**編譯器選項。 下表顯示每個編譯器選項的對等 pragma 設定：
+**Float_control** pragma 與[/fp](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項的行為不同。 **Float_control** pragma 只會控制浮點行為的一部分。 它必須與 [fp_contract](../preprocessor/fp-contract.md) 和 [fenv_access](../preprocessor/fenv-access.md) pragma 結合，才能重新建立 **/fp** 編譯器選項。 下表顯示每個編譯器選項的對等 pragma 設定：
 
-| | float_control （精確，\*） | float_control （除外，\*） | fp_contract （\*） | fenv_access （\*） |
+| 選項 | float_control (精確、 \*)  | float_control (除了、 \*)  | fp_contract (\*)  | fenv_access (\*)  |
 |-|-|-|-|-|
-| /fp： strict             | 於  | 於  | 關 | 於  |
-| /fp：精確            | 於  | 關 | 於  | 關 |
-| /fp： fast               | 關 | 關 | 於  | 關 |
+| /fp： strict             | on  | on  | 關 | on  |
+| /fp：精確            | on  | 關 | on  | 關 |
+| /fp： fast               | 關 | 關 | on  | 關 |
 
-換句話說，您可能需要使用數個 pragma 組合來模擬 **/fp： fast**、 **/fp：精確**和 **/fp： strict**命令列選項。
+換句話說，您可能需要使用數個 pragma 組合來模擬 **/fp： fast**、 **/fp：精確**和 **/fp： strict** 命令列選項。
 
-您可以使用**float_control**和**fenv_access**浮點 pragma 的方式有一些限制：
+您可以使用 **float_control** 和 **fenv_access** 浮點數 pragma 組合的方式有一些限制：
 
-- 只有在已啟用精確的語義時，才可以使用**float_control**來設定 on**以外** **的**。 您可以透過**float_control** pragma 或使用 **/fp：精確**或 **/fp： strict**編譯器選項來啟用精確的語義。
+- 如果已啟用精確的**語法，您**只能使用**float_control**設定為**on** 。 您可以使用 **float_control** pragma 或 **/fp：精確** 或 **/fp： strict** 編譯器選項來啟用精確的語義。
 
-- 當例外狀況的語義啟用時，您無法使用**float_control**來進行**精確**關閉，不論是由**float_control** pragma 或 **/fp： except**編譯器選項。
+- 啟用例外狀況的語法時，您不能使用 **float_control** 來關閉 **精確** 的，無論是透過 **float_control** pragma 或 **/fp： except** 編譯器選項。
 
-- 除非啟用了精確的語義，否則您無法啟用**fenv_access** ，不論是透過**float_control** pragma 或編譯器選項。
+- 除非透過**float_control** pragma 或編譯器選項啟用精確的語義，否則您無法啟用**fenv_access** 。
 
-- 啟用**fenv_access**時，您無法使用**float_control**來關閉**精確**的功能。
+- 啟用**fenv_access**時，您無法使用**float_control**來關閉**精確度**。
 
-這些限制表示某些浮點 pragma 的順序很重要。 若要使用 pragma 從快速模型移至 strict 模型，請使用下列程式碼：
+這些限制表示某些浮點 pragma 的順序很重要。 若要使用 pragma 從 fast 模型移至 strict 模型，請使用下列程式碼：
 
 ```cpp
 #pragma float_control(precise, on)  // enable precise semantics
@@ -74,7 +74,7 @@ ms.locfileid: "78166780"
 #pragma fp_contract(off)            // disable contractions
 ```
 
-若要使用**float_control** pragma 從 strict 模型移至快速模型，請使用下列程式碼：
+若要使用 **float_control** pragma 從 strict 模型移至快速模型，請使用下列程式碼：
 
 ```cpp
 #pragma float_control(except, off)  // disable exception semantics
@@ -83,11 +83,11 @@ ms.locfileid: "78166780"
 #pragma fp_contract(on)             // enable contractions
 ```
 
-如果未指定任何選項， **float_control**不會有任何作用。
+如果未指定任何選項， **float_control** 不會有任何作用。
 
 ## <a name="example"></a>範例
 
-下列範例顯示如何使用 pragma **float_control**攔截溢位的浮點例外狀況。
+下列範例顯示如何使用 pragma **float_control**攔截溢位浮點例外狀況。
 
 ```cpp
 // pragma_directive_float_control.cpp

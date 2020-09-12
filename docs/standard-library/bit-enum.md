@@ -1,23 +1,23 @@
 ---
-title: endian 列舉
+title: 位元組順序列舉
 description: 列舉，用來指定純量類型的位元組型別
 ms.date: 08/27/2020
 f1_keywords:
 - bit/std::endian
 helpviewer_keywords:
 - std::endian
-ms.openlocfilehash: 78df181e20d0e5d72508bd0fc86118528a312d6b
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: b535bc009fbdc0b047444a6bc2ca36eed7a6d1cb
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194536"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040076"
 ---
-# <a name="endian-enum"></a>endian 列舉
+# <a name="endian-enum"></a>位元組順序列舉
 
 表示所有純量類型的位元組順序。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>語法
 
 ```cpp
 enum class endian {
@@ -38,13 +38,13 @@ enum class endian {
 
 以 x86、x64、ARM、ARM64) 為 (目標的平臺 Microsoft Visual C++，所有原生純量類型都是位元組由小到大。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<bit>
 
 **命名空間：** std
 
-`/std:c++latest` 是必要項
+[/std：需要最新的 c + +](../build/reference/std-specify-language-standard-version.md) 。
 
 ## <a name="see-also"></a>另請參閱
 

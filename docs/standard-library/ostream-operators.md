@@ -4,20 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: 3851003500d37a11a88736cf611b69a2d6b1813c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4dfee6c70f068e5a61294e6b2863a8a12a9c378
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228150"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039764"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 運算子
 
-||
-|-|
-|[操作&lt;&lt;](#op_lt_lt)|
+[運算元&lt;&lt;](#op_lt_lt)
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 運算元&lt;&lt;
 
 將各種類型寫入資料流。
 
@@ -89,13 +87,13 @@ basic_ostream <_Elem, _Tr>& operator<<(
 *_Ostr*\
 `basic_ostream` 物件。
 
-*str*\
+*Str*\
 字元字串。
 
 *_Tr*\
 字元特性。
 
-*初始值*\
+*瓦爾*\
 類型
 
 ### <a name="return-value"></a>傳回值
@@ -115,7 +113,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-判斷 `traits_type::` 從 str 開始之序列的長度 N =[長度](../standard-library/char-traits-struct.md#length)（ `str` ） * *，並插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，則函式會另外插入重複的 `_Ostr.width` - N 填滿字元。 如果為，則重複的順序會在序列的前面（ `_Ostr` 。 [旗標](../standard-library/ios-base-class.md#flags)  &  `adjustfield`！ = [left](../standard-library/ios-functions.md#left)。 否則，重複項目會接在序列後面。 函數會傳回 *_Ostr*。
+判斷 `traits_type::` [length](../standard-library/char-traits-struct.md#length) `str` 從*str*開始之序列 () 長度 N = 長度，並插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，則函式會另外插入重複的 `_Ostr.width` - N 填滿字元。 如果 (，則會在序列之前重複 `_Ostr` 。 [旗標](../standard-library/ios-base-class.md#flags)  &  `adjustfield`！ = [left](../standard-library/ios-functions.md#left)。 否則，重複項目會接在序列後面。 函數會傳回 *_Ostr*。
 
 樣板函式
 
@@ -146,7 +144,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-除了從*str*開始之序列的每個元素 *_Ch*都會藉 `Elem` 由呼叫 `_Ostr.` [put](../standard-library/basic-ostream-class.md#put)（ `_Ostr.` [加寬](../standard-library/basic-ios-class.md#widen)（ `_Ch` ））來轉換為類型的物件。
+除了從*str*開始的序列 *_Ch*的每個元素都會藉 `Elem` 由呼叫 `_Ostr.` [put](../standard-library/basic-ostream-class.md#put) (`_Ostr.` [加寬](../standard-library/basic-ios-class.md#widen) (`_Ch`) # A3 來轉換成類型的物件。
 
 樣板函式
 
@@ -166,7 +164,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-除了 *_Ch*會藉由呼叫，轉換成類型的物件 `Elem` `_Ostr.put( _Ostr.widen( _Ch ))` 。
+但 *_Ch* 會藉由呼叫來轉換為類型的物件 `Elem` `_Ostr.put( _Ostr.widen( _Ch ))` 。
 
 樣板函式
 
@@ -206,7 +204,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-（在插入之前，不需要將 *_Ch*擴大。）
+ (在插入 *_Ch* 之前，不需要先將它加寬。 ) 
 
 樣板函式
 

@@ -6,12 +6,12 @@ f1_keywords:
 - <bit>
 helpviewer_keywords:
 - bit header
-ms.openlocfilehash: 7a87071d30756714e19c971281f642ce16f09d61
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: 5652d0af767520710ee08b1827e0df27c477ee6d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194539"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040050"
 ---
 # <a name="ltbitgt"></a>&lt;bit&gt;
 
@@ -19,25 +19,25 @@ ms.locfileid: "89194539"
 
 例如，有一些函數可以旋轉位、找出連續的設定或清除的位數、查看數位是否為二的整數乘冪、找出代表數位的最小位數，依此類推。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<bit>
 
 **命名空間：** std
 
-`/std:c++latest` 是必要項
+[/std：需要最新的 c + +](../build/reference/std-specify-language-standard-version.md) 。
 
 ## <a name="members"></a>成員
 
 ### <a name="types"></a>類型
 
-| 類型 | 說明 |
+| 類型 | 描述 |
 |--------|----------|
 | [endian](bit-enum.md) | 指定純量類型的位元組順序。 |
 
 ### <a name="functions"></a>函式
 
-| 函式 | 說明 |
+| 函式 | 描述 |
 |-----|-----|
 |[bit_cast](bit-functions.md#bit_cast) | 將物件表示從某個類型重新解譯至另一個類型。 |
 |[bit_ceil](bit-functions.md#bit_ceil) | 找出兩個大於或等於某個值的最小乘冪。 |

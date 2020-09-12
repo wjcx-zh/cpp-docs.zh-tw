@@ -1,6 +1,6 @@
 ---
-title: TRACE_INFO_DATA結構
-description: C++生成見解 SDK TRACE_INFO_DATA結構參考。
+title: TRACE_INFO_DATA 結構
+description: C + + Build Insights SDK TRACE_INFO_DATA 結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 70ae17a376f79cad7a669d81e482f551afd0ec62
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38683ff2c5c5165b5fe2a1969ccf80fbfca3693f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325270"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040453"
 ---
-# <a name="trace_info_data-structure"></a>TRACE_INFO_DATA結構
+# <a name="trace_info_data-structure"></a>TRACE_INFO_DATA 結構
 
 ::: moniker range="<=vs-2015"
 
-C++構建見解 SDK 與 Visual Studio 2017 及以上版本相容。 要查看這些版本的文件,請將本文的 Visual Studio**版本**選擇器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 它位於此頁面的目錄頂部。
+C + + Build Insights SDK 符合 Visual Studio 2017 和更新版本的相容性。 若要查看這些版本的檔，請將此文章的 Visual Studio **版本** 選取器控制項設定為 Visual Studio 2017 或 Visual Studio 2019。 您可在此頁面的目錄頂端找到此檔案。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-結構`TRACE_INFO_DATA`描述要分析或重新記錄的跟蹤。
+`TRACE_INFO_DATA`結構描述要分析或 relogged 的追蹤。
 
 ## <a name="syntax"></a>語法
 
@@ -42,15 +42,15 @@ typedef struct TRACE_INFO_DATA_TAG
 
 ## <a name="members"></a>成員
 
-|  |  |
+| Name | 描述 |
 |--|--|
-| `LogicalProcessorCount` | 收集跟蹤的計算機上的邏輯處理器數。 |
-| `TickFrequency` | 評估以刻度為單位測量的持續時間時每秒使用的刻度數。 |
-| `StartTimestamp` | 此欄位設置為在開始跟蹤時捕獲的刻度值。 |
-| `StopTimestamp` | 此欄位設定為停止追蹤時捕獲的刻度值。 |
+| `LogicalProcessorCount` | 收集追蹤之機器上的邏輯處理器數目。 |
+| `TickFrequency` | 評估以刻度測量的持續時間時，每秒所使用的刻度數目。 |
+| `StartTimestamp` | 此欄位會設定為啟動追蹤時所捕捉的刻度值。 |
+| `StopTimestamp` | 此欄位會設定為停止追蹤時所捕捉的刻度值。 |
 
 ## <a name="remarks"></a>備註
 
-從`StartTimestamp``StopTimestamp`中 減去以獲取整個跟蹤期間經過的刻度數。 用於`TickFrequency`將生成的值轉換為時間單位。 有關將刻度轉換為時間單位的範例,請參閱[EVENT_DATA](event-data-struct.md)。
+`StartTimestamp`從減去 `StopTimestamp` 以取得整個追蹤期間所經過的滴答數。 用 `TickFrequency` 來將產生的值轉換成時間單位。 如需將刻度轉換成時間單位的範例，請參閱 [EVENT_DATA](event-data-struct.md)。
 
 ::: moniker-end

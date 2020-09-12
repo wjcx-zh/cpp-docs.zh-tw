@@ -3,12 +3,12 @@ title: 通用 Windows 平台應用程式不支援 CRT 函式
 description: 通用 Windows 平臺 apps 中不支援 CRT 函式的參考指南。
 ms.date: 04/16/2020
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: cfe5fbc1ce505c255e074dda2c3a240b46754eee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 793283a5c20f04e58de22fcfca5ede1926de369c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845714"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041831"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>通用 Windows 平台應用程式不支援 CRT 函式
 
@@ -18,7 +18,7 @@ ms.locfileid: "88845714"
 
 ## <a name="unsupported-crt-functions"></a>不支援的 CRT 函式
 
-|函式|描述|因應措施|
+| 函式 | 描述 | 因應措施 |
 |-|-|-|
 |`_beep` `_sleep` `_seterrormode`|這些函式在舊版 CRT 中已過時。 此外，UWP 應用程式沒有對應的 Win32 API。|沒有因應措施。|
 |`chdir` `_chdrive` `getcwd`|這些函式已過時或不是安全執行緒。|使用 `_chdir` `_getcwd` 和相關函數。|
@@ -33,12 +33,12 @@ ms.locfileid: "88845714"
 |`_getsystime` `_setsystime`|這些是舊版 CRT 中已過時的 API。 此外，使用者因為缺少權限，所以無法在 UWP 應用程式中設定系統時間。|若只要取得系統時間，請使用 Win32 API `GetSystemTime`。 無法設定系統時間。|
 |`_environ``_putenv` `_putenv_s` `_searchenv``_searchenv_s` `_dupenv_s` `_wputenv``_wputenv_s` `_wsearchenv` getenv `_wdupenv_s` `_wenviron` getenv_s `_wgetenv` putenv `_wgetenv_s` `_wsearchenv_s``tzset`|UWP 應用程式無法使用環境變數。|沒有因應措施。 若要設定時區，請使用 `_tzset` 。|
 |`_loaddll` `_getdllprocaddr` `_unloaddll`|這些是舊版 CRT 中已過時的函式。 此外，使用者也無法載入相同應用程式封裝中的 Dll。|請使用 Win32 API `LoadPackagedLibrary`、 `GetProcAddress`和 `FreeLibrary` 來載入及使用封裝的 DLL。|
-|`_wexecl``_wexecle` `_wexeclp` `_wexeclpe``_wexecv` `_wexecve` `_wexecvp``_wexecvpe` `_execl` `_execle``_execlp` `_execlpe` `_execv``_execve` `_execvp` `_execvpe``_spawnl` `_spawnle` `_spawnlp``_spawnlpe` `_spawnv` `_spawnve``_spawnvp` `_spawnvpe` `_wspawnl``_wspawnle` `_wspawnlp` `_wspawnlpe``_wspawnv` `_wspawnve` `_wspawnvp``_wspawnvpe` `_wsystem` `execl``execle` `execlp` `execlpe``execv` `execve` `execvp``execvpe`' ' spawnl ` ` spawnle ` ` spawnlp ` ` spawnlpe ` ` spawnv ` ` spawnve ` ` spawnvp ` ` spawnvpe ` ` system '|UWP 應用程式中無法使用此功能。 UWP 應用程式無法叫用另一個 UWP 應用程式或傳統型應用程式。|沒有因應措施。|
+|`_wexecl` `_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe` `spawnl` `spawnle` `spawnlp` `spawnlpe` `spawnv` `spawnve` `spawnvp` `spawnvpe` `system`|UWP 應用程式中無法使用此功能。 UWP 應用程式無法叫用另一個 UWP 應用程式或傳統型應用程式。|沒有因應措施。|
 |`_heapwalk` `_heapadd` `_heapchk` `_heapset` `_heapused`|這些函式通常可用來處理堆積。 不過，UWP 應用程式不支援對應的 Win32 API。 此外，應用程式無法再建立或使用私用堆積。|沒有因應措施。 不過，DEBUG CRT 中可以使用 `_heapwalk` ，但僅限偵錯使用。 這些函數無法用於上傳至 Microsoft Store 的應用程式。|
 
 下列函式可在適用于 UWP 應用程式的 CRT 中使用。 不過，只有在您無法使用對應的 Win32 或 Windows 執行階段 Api （例如移植大型程式碼基底）時，才使用它們：
 
-|Functions|因應措施|
+| 函數 | 因應措施 |
 |-|-|
 |單一位元組字串函式，例如 `strcat`、 `strcpy`、 `strlwr`等。|將您的 UWP 應用程式設為嚴格的 Unicode，因為所有公開的 Win32 Api 和 Windows 執行階段 Api 都只使用 Unicode 字元集。  單一位元組函式是為了移植大型程式碼基底而保留的，但應該避免此情況。 如果可能的話，應該改用對應的寬字元函數。|
 |資料流 IO 和低階檔案 IO 函式，例如 `fopen`、 `open`等。|這些函式是同步的，不建議用於 UWP 應用程式。 在 UWP 應用程式中，請使用非同步 API 開啟、讀取和寫入檔案，以避免鎖定 UI 執行緒。 `Windows::Storage::FileIO` 類別中的 API 即為這類 API 範例。|
@@ -47,7 +47,7 @@ ms.locfileid: "88845714"
 
 上述的 Api 和下列 Api 都無法在 Windows 8. x 存放區應用程式和 Windows Phone 8.x 應用程式中使用。
 
-|Functions|描述|因應措施|
+| 函數 | 描述 | 因應措施 |
 |-|-|-|
 |`_beginthread` `_beginthreadex` `_endthread` `_endthreadex`|Windows 8.x 市集應用程式中無法使用執行緒 Win32 API。|請改用 `Windows Runtime Windows::System::Threading::ThreadPool` 或 `concurrency::task` 。|
 |`_chdir` `_wchdir` `_getcwd` `_getdcwd` `_wgetcwd` `_wgetdcwd`|工作目錄的概念不適用於 Windows 8.x 市集應用程式。|請改用完整路徑。|

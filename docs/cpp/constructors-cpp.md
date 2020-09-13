@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: f5340f2e56a367734293d661d9d89eb0db522fd2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3694dc72860892d778533de2e40898faf9cc287d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842048"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042156"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -643,7 +643,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 和更新版本**： **`using`** **/std： c + + 17** 模式中的語句會從基類將所有的函式納入範圍中，除了對衍生類別中的函式具有相同簽章的函式。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱 [Visual Studio 2017 15.7 版中的增強功能](../overview/cpp-conformance-improvements.md?view=vs-2017#improvements_157)。
+**Visual Studio 2017 和更新版本**： **`using`** **/std： c + + 17** 模式中的語句會從基類將所有的函式納入範圍中，除了對衍生類別中的函式具有相同簽章的函式。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。
 
 ::: moniker-end
 

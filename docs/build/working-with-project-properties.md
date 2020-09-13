@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 6c05dd00324113819dd145e46bf10dfeb96a66a3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 17b54311670f78cda78403c273cfbf57d43e84da
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078241"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042182"
 ---
 # <a name="set-compiler-and-build-properties"></a>Set compiler and build properties (設定編譯器及組建屬性)
 
-在 IDE 中，建置專案所需的所有資訊都會公開為「屬性」**。 此資訊包含應用程式名稱、副檔名 (例如 DLL、LIB、EXE)、編譯器選項、連結器選項、偵錯工具設定、自訂建置步驟，以及許多其他項目。 通常，您會使用*屬性頁*來查看和修改這些屬性。 若要存取屬性頁，請從主功能表中選擇 [ **project 專案** > **_名稱_屬性**]，或以滑鼠右鍵按一下**方案總管**中的專案節點，然後選擇 [**屬性**]。
+在 IDE 中，建置專案所需的所有資訊都會公開為「屬性」**。 此資訊包含應用程式名稱、副檔名 (例如 DLL、LIB、EXE)、編譯器選項、連結器選項、偵錯工具設定、自訂建置步驟，以及許多其他項目。 一般而言，您可以使用 *屬性頁* 來查看和修改這些屬性。 若要存取屬性頁，請從主功能表選擇 [**專案**  >  **_專案名稱_屬性**]，或以滑鼠右鍵按一下**方案總管**中的專案節點，然後選擇 [**屬性**]。
 
 ## <a name="default-properties"></a>預設屬性
 
@@ -31,11 +31,11 @@ ms.locfileid: "80078241"
 
 屬性頁的設計可讓您隨時查看，以及在需要時修改應該會套用屬性值的組態與平台。 下圖顯示在頂端的清單方塊中包含組態與平台資訊的屬性頁。 如果在此處設定 [最佳化]**** 屬性，它只會套用到偵錯 Win32 組建，這正好是使用中的組態，如紅色箭頭所示。
 
-![顯示現用設定的 Visual C&#43;&#43; 屬性頁](media/visual-c---property-pages-showing-active-configuration.png "顯示現用設定的 Visual C++ 屬性頁")
+![顯示現用設定的 Visual C&#43;&#43; 屬性頁面](media/visual-c---property-pages-showing-active-configuration.png "顯示作用中設定的 Visual C++ 屬性頁面")
 
 下圖顯示相同的專案屬性頁，但組態已變更為 [發行]。 請注意 [最佳化] 屬性的不同值。 另外請注意，使用中的組態仍然是 [偵錯]。 您可以在此處設定任何組態的屬性；它不一定是使用中的組態。
 
-![顯示 release config 的 Visual C&#43;&#43; 屬性頁](media/visual-c---property-pages-showing-release-config.png "顯示 release config 的 Visual C++ 屬性頁")
+![顯示發行設定的 Visual C&#43;&#43; 屬性頁面](media/visual-c---property-pages-showing-release-config.png "顯示發行設定的 Visual C++ 屬性頁面")
 
 ## <a name="target-platforms"></a>目標平台
 
@@ -45,22 +45,22 @@ ms.locfileid: "80078241"
 
 如需設定 Debug 組建屬性的詳細資訊，請參閱：
 
-- [C++ 偵錯組態的專案設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
-- [偵錯工具設定和準備](/visualstudio/debugger/debugger-settings-and-preparation)
+- [C + + 偵錯工具設定的專案設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
+- [偵錯設定及準備](/visualstudio/debugger/debugger-settings-and-preparation)
 - [調試準備： Visual C++ 專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [在 Visual Studio 偵錯工具中指定符號 (.pdb) 和原始程式檔](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
 ## <a name="c-compiler-and-linker-options"></a>C + + 編譯器和連結器選項
 
-C + + 編譯器和連結器選項位於左窗格的 [設定**屬性**] 下的 [ **c/c + +** ] 和 [**連結器**] 節點底下。 這些會直接轉譯為將傳遞給編譯器的命令列選項。 若要閱讀特定選項的相關檔，請選取中央窗格中的選項，然後按**F1**。 或者，您可以在[MSVC 編譯器選項](reference/compiler-options.md)和[MSVC 連結器選項](reference/linker-options.md)中流覽所有選項的檔。
+C + + 編譯器和連結器選項位於左窗格中的 [ **c/c + +** ] 和 [ **連結器** ] 節點底下的 [設定 **屬性**] 下 這些會直接轉譯為將傳遞給編譯器的命令列選項。 若要閱讀特定選項的相關檔，請選取中央窗格中的選項，然後按 **F1**。 或者，您可以在 [MSVC 編譯器選項](reference/compiler-options.md) 和 [MSVC 連結器選項](reference/linker-options.md)流覽所有選項的檔。
 
-[**屬性頁**] 對話方塊只會顯示與目前專案相關的屬性頁。 例如，如果專案沒有 .idl 檔案，就不會顯示 MIDL 屬性頁。 如需有關每個屬性頁上設定的詳細資訊，請參閱[屬性頁（c + +）](reference/property-pages-visual-cpp.md)。
+[ **屬性頁** ] 對話方塊只會顯示與目前專案相關的屬性頁。 例如，如果專案沒有 .idl 檔案，就不會顯示 MIDL 屬性頁。 如需有關每個屬性頁設定的詳細資訊，請參閱 [ (c + +) 的屬性頁 ](reference/property-pages-visual-cpp.md)。
 
 ## <a name="directory-and-path-values"></a>目錄和路徑值
 
-MSBuild 支援針對特定字串值（包括目錄和路徑）使用稱為「宏」的編譯時間常數。 這些會在屬性頁中公開，您可以在其中參考並使用[屬性編輯器](#property_editor)來修改它們。
+MSBuild 支援針對某些字串值使用稱為「宏」的編譯時期常數，包括目錄和路徑。 這些會在屬性頁中公開，您可以在其中使用 [屬性編輯器](#property_editor)來參考和修改它們。
 
-下圖顯示 Visual Studio c + + 專案的屬性頁。 在左窗格中，已選取 [ **VC + + 目錄**]*規則*，而右窗格會列出與該規則相關聯的屬性。 這些`$(...)`值稱為「*宏*」。 「巨集」** 是一個編譯時間常數，可以參考由 Visual Studio 或 MSBuild 系統所定義的值或使用者定義的值。 藉由使用宏而非硬式編碼的值（例如目錄路徑），您可以更輕鬆地在電腦之間和 Visual Studio 版本之間共用屬性設定，而且您可以更妥善地確保專案設定會在[屬性繼承](project-property-inheritance.md)中正確參與。
+下圖顯示 Visual Studio c + + 專案的屬性頁。 在左窗格中，已選取 [ **VC + + 目錄**] *規則* ，右窗格會列出與該規則相關聯的屬性。 這些 `$(...)` 值稱為「 *宏*」。 「巨集」** 是一個編譯時間常數，可以參考由 Visual Studio 或 MSBuild 系統所定義的值或使用者定義的值。 藉由使用宏而不是硬式編碼的值（例如目錄路徑），您可以更輕鬆地在電腦之間和 Visual Studio 的版本之間共用屬性設定，並且可以更妥善地確保專案設定在 [屬性繼承](project-property-inheritance.md)中正確地參與。
 
 ![專案屬性頁](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
@@ -72,35 +72,35 @@ MSBuild 支援針對特定字串值（包括目錄和路徑）使用稱為「宏
 套用至專案組態中的所有項目。 具有語法 `$(name)`。 例如，`$(VCInstallDir)` 即是全域巨集，這會儲存 Visual Studio 安裝根目錄。 全域巨集對應於 MSBuild 中的 `PropertyGroup`。
 
 項目巨集**<br/>
-具有語法 `%(name)`。 對於檔案，項目巨集只套用至該檔案。例如，您可以使用 `%(AdditionalIncludeDirectories)` 來指定只套用至特定檔案的 Include 目錄。 這類型的項目巨集對應於 MSBuild 中的 `ItemGroup` 中繼資料。 在專案組態的內容中使用時，項目巨集會套用至特定類型的所有檔案。 例如，C/c + +**預處理器定義**設定屬性可以接受`%(PreprocessorDefinitions)`套用至專案中所有 .cpp 檔案的專案宏。 這類型的項目巨集對應於 MSBuild 中的 `ItemDefinitionGroup` 中繼資料。 如需詳細資訊，請參閱[專案定義](/visualstudio/msbuild/item-definitions)。
+具有語法 `%(name)`。 對於檔案，項目巨集只套用至該檔案。例如，您可以使用 `%(AdditionalIncludeDirectories)` 來指定只套用至特定檔案的 Include 目錄。 這類型的項目巨集對應於 MSBuild 中的 `ItemGroup` 中繼資料。 在專案組態的內容中使用時，項目巨集會套用至特定類型的所有檔案。 例如，C/c + + **預處理器定義** 設定屬性可以採用 `%(PreprocessorDefinitions)` 套用至專案中所有 .cpp 檔案的專案宏。 這類型的項目巨集對應於 MSBuild 中的 `ItemDefinitionGroup` 中繼資料。 如需詳細資訊，請參閱 [專案定義](/visualstudio/msbuild/item-definitions)。
 
 ### <a name="user-defined-macros"></a>使用者定義巨集
 
-您可以建立*使用者自訂宏*，做為專案組建中的變數使用。 例如，您可以建立使用者定義巨集，提供自訂建置步驟或自訂建置工具的值。 使用者定義巨集是名稱/值組。 在專案檔中，使用 **$(**<em>name</em>**)** 標記法來存取值。
+您可以建立 *使用者定義的宏* ，以做為專案組建中的變數使用。 例如，您可以建立使用者定義巨集，提供自訂建置步驟或自訂建置工具的值。 使用者定義巨集是名稱/值組。 在專案檔中，使用 **$(**<em>name</em>**)** 標記法來存取值。
 
-使用者定義巨集會儲存在屬性工作表中。 如果您的專案尚未包含屬性工作表，您可以遵循 [[共用] 或 [重複使用 Visual Studio 專案設定](create-reusable-property-configurations.md)] 底下的步驟建立一個。
+使用者定義巨集會儲存在屬性工作表中。 如果您的專案還沒有包含屬性工作表，您可以遵循 [ [共用或重複使用 Visual Studio 專案設定](create-reusable-property-configurations.md)] 下的步驟來建立一個屬性工作表。
 
 #### <a name="to-create-a-user-defined-macro"></a>建立使用者定義巨集
 
-1. 開啟 [**屬性管理員**] 視窗。 （在功能表列上，選擇 [ **view** > **屬性管理員**] 或 [ **view** > **Other Windows** > **屬性管理員**]）。開啟屬性工作表（其名稱結尾為. user）的快捷方式功能表，然後選擇 [**屬性**]。 該屬性工作表的 [**屬性頁**] 對話方塊隨即開啟。
+1. 開啟 **屬性管理員** 視窗。  (在功能表列上，選擇 [ **view**  >  **屬性管理員**] 或 [ **view**  >  **Other Windows**  >  **屬性管理員**]。 ) 開啟內容工作表的快捷方式功能表， (其名稱結尾為 [使用者) ]，然後選擇 [**屬性**]。 該屬性工作表的 [ **屬性頁** ] 對話方塊隨即開啟。
 
-1. 在對話方塊的左窗格中，選取 [**使用者宏**]。 在右窗格中，選擇 [**加入宏**] 按鈕以開啟 [**加入使用者宏**] 對話方塊。
+1. 在對話方塊的左窗格中，選取 [ **使用者宏**]。 在右窗格中，選擇 [ **加入宏** ] 按鈕以開啟 [ **加入使用者宏** ] 對話方塊。
 
-1. 在對話方塊中，指定巨集的名稱和值。 （選擇性）選取 [**將此宏設定為組建環境中的環境變數**] 核取方塊。
+1. 在對話方塊中，指定巨集的名稱和值。 （選擇性）選取 [ **將這個宏設定為組建環境中的環境變數** ] 核取方塊。
 
 ## <a name=""></a><a name="property_editor">屬性編輯器</a>
 
-您可以使用屬性編輯器，修改特定字串屬性和選擇巨集做為值。 若要存取屬性編輯器，請選取屬性頁上的屬性，然後選擇右邊的向下箭號按鈕。 如果下拉式清單包含** \<[編輯>**]，則您可以選擇它來顯示該屬性的屬性編輯器。
+您可以使用屬性編輯器，修改特定字串屬性和選擇巨集做為值。 若要存取屬性編輯器，請選取屬性頁上的屬性，然後選擇右邊的向下箭號按鈕。 如果下拉式清單包含 **\<Edit>** ，您可以選擇它來顯示該屬性的屬性編輯器。
 
-![屬性&#95;編輯器&#95;下拉式清單](media/property_editor_dropdown.png "屬性編輯器下拉式清單")
+![屬性下拉式控制項可用來存取屬性編輯器](media/property_editor_dropdown.png "屬性編輯器下拉式清單")
 
-在屬性編輯器中，您可以選擇 [**宏**] 按鈕來查看可用的宏及其目前的值。 下圖顯示選擇 [**宏**] 按鈕之後，[**其他 Include 目錄**] 屬性的屬性編輯器。 當 [**繼承自父代或專案預設值**] 核取方塊已選取，而且您加入新的值時，它會附加至目前繼承的任何值。 如果您清除此核取方塊，則新值會取代繼承的值。 在大部分情況下，讓核取方塊保持已選取狀態。
+在屬性編輯器中，您可以選擇 [ **宏** ] 按鈕來查看可用的宏與其目前的值。 下圖顯示選擇 [**宏**] 按鈕之後，[**其他 Include 目錄**] 屬性的屬性編輯器。 當您選取 [ **從父代或專案預設值繼承** ] 核取方塊，並加入新值時，它會附加至目前繼承的任何值。 如果您清除此核取方塊，則新值會取代繼承的值。 在大部分情況下，讓核取方塊保持已選取狀態。
 
-![屬性編輯器，Visual C&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
+![[Include 目錄] 屬性的 [屬性編輯器] 對話方塊](media/propertyeditorvc.png "PropertyEditorVC")
 
-## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>將 include 目錄新增至預設目錄集合
+## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>將 include 目錄新增至一組預設目錄
 
-當您將 Include 目錄加入至專案時，注意不要覆寫所有的預設目錄。 新增目錄的正確方式是附加新路徑（例如 "C:\MyNewIncludeDir\""），然後將 **$ （IncludePath）** 宏附加至屬性值。
+當您將 Include 目錄加入至專案時，注意不要覆寫所有的預設目錄。 新增目錄的正確方式是附加新路徑（例如 "C:\MyNewIncludeDir"），然後將 \" **$ (IncludePath) ** 宏附加至屬性值。
 
 ## <a name="quickly-browse-and-search-all-properties"></a>快速流覽和搜尋所有屬性
 
@@ -117,27 +117,27 @@ v:<br/>
 
 ## <a name="set-environment-variables-for-a-build"></a>設定組建的環境變數
 
-MSVC 編譯器（cl）會辨識特定的環境變數，特別是 LIB、LIBPATH、PATH 和 INCLUDE。 當您使用 IDE 建立時，在 [ [VC + + 目錄](reference/vcpp-directories-property-page.md)] 屬性頁中設定的屬性會用來設定這些環境變數。 如果已經設定 LIB、LIBPATH 和 INCLUDE 值 (例如，透過開發人員命令提示字元)，這些值會取代為對應 MSBuild 屬性的值。 組建接著會在 PATH 之前加上 [VC++ 目錄] 可執行檔目錄屬性的值。 您可以設定使用者定義的環境變數，方法是建立使用者定義宏，然後核取顯示 [**設定此宏做為組建環境中的環境變數**] 的方塊。
+MSVC 編譯器 ( # A0) 會辨識特定的環境變數，特別是 LIB、LIBPATH、PATH 和 INCLUDE。 當您使用 IDE 建立時，[ [VC + + 目錄](reference/vcpp-directories-property-page.md) ] 屬性頁中設定的屬性會用來設定這些環境變數。 如果已經設定 LIB、LIBPATH 和 INCLUDE 值 (例如，透過開發人員命令提示字元)，這些值會取代為對應 MSBuild 屬性的值。 組建接著會在 PATH 之前加上 [VC++ 目錄] 可執行檔目錄屬性的值。 您可以設定使用者定義的環境變數，方法是建立使用者定義宏，然後核取 [ **將這個宏設定為組建環境中的環境變數**] 方塊。
 
 ## <a name="set-environment-variables-for-a-debugging-session"></a>設定偵錯工具會話的環境變數
 
-在專案 [**屬性頁**] 對話方塊的左窗格中，展開 [設定**屬性**]，然後選取 [**調試**程式]。
+在專案 [ **屬性頁** ] 對話方塊的左窗格中，展開 [設定 **屬性** ]，然後選取 [ **調試**程式]。
 
-在右窗格中，修改 [**環境**] 或 [**合併環境**] 專案設定，然後選擇 [**確定]** 按鈕。
+在右窗格中，修改 [ **環境** ] 或 [ **合併環境** ] 專案設定，然後選擇 [ **確定]** 按鈕。
 
 ## <a name="in-this-section"></a>本節內容
 
 [共用或重複使用 Visual Studio 專案設定](create-reusable-property-configurations.md)<br/>
-如何使用可共用或重複使用的自訂群組建設定來建立 .props 檔案。
+如何使用可共用或重複使用的自訂群組建設定來建立 .props 檔。
 
 [專案屬性繼承](project-property-inheritance.md)<br/>
-描述 .props、.targets、.vcxproj 檔案和組建進程中環境變數的評估順序。
+描述組建進程中 .props、.targets、.vcxproj 檔案和環境變數的評估順序。
 
 [修改屬性和目標而不變更專案檔](modify-project-properties-without-changing-project-file.md)<br/>
 如何建立暫存組建設定，而不需要修改專案檔。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Visual Studio 專案 - C++](creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual Studio 專案-c + +](creating-and-managing-visual-cpp-projects.md)<br/>
 [.vcxproj 和.props 檔案結構](reference/vcxproj-file-structure.md)<br/>
 [屬性頁面 XML 檔案](reference/property-page-xml-files.md)<br/>

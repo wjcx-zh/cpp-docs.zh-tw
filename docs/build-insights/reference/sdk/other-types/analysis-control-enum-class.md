@@ -29,7 +29,7 @@ C + + Build Insights SDK 符合 Visual Studio 2017 和更新版本的相容性�
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `BLOCK` | 防止目前的事件進一步傳播至分析器或 relogger 群組。 |
 | `CANCEL` | 取消目前的分析或 relogging 會話。 |

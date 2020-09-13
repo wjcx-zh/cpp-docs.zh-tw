@@ -3,12 +3,12 @@ title: C++ 一致性改善
 ms.date: 08/04/2020
 description: Visual Studio 的 Microsoft C++ 正在向完全符合 C++20 語言標準邁進。
 ms.technology: cpp-language
-ms.openlocfilehash: a28281eb7b47dcfc633467c96e520c7e97e26777
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841385"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042117"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 一致性改善
 
@@ -744,7 +744,7 @@ int main() {
 
 ### <a name="preprocessor-output-preserves-newlines"></a>預處理器輸出會保留分行符號
 
-實驗性預處理器現在會在使用或時保留分行符號和空白 **`/P`** **`/E`** **`/experimental:preprocessor`** 。 您可以使用來停用這項變更 **`/d1experimental:preprocessor:oldWhitespace`** 。
+實驗性預處理器現在會在使用或時保留分行符號和空白 **`/P`** **`/E`** **`/experimental:preprocessor`** 。
 
 假設有這個範例來源，
 
@@ -1566,7 +1566,7 @@ int main()
 
 在 c + + 20 之前的 c + + 標準中，從衍生類別到基類的轉換不需要衍生類別是完整類別類型。 C + + 標準委員會已核准追溯瑕疵報表變更，適用于所有版本的 c + + 語言。 這項變更會將轉換程式與類型特性（例如 `std::is_base_of` ）一致，這需要衍生類別是完整的類別型別。
 
-以下為範例：
+以下是範例：
 
 ```cpp
 template<typename A, typename B>

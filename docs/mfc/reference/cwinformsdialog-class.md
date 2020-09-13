@@ -42,13 +42,13 @@ class CWinFormsDialog :
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CWinFormsDialog::CWinFormsDialog](#cwinformsdialog)|建構 `CWinFormsDialog` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CWinFormsDialog::GetControl](#getcontrol)|抓取 Windows Forms 使用者控制項的參考。|
 |[CWinFormsDialog::GetControlHandle](#getcontrolhandle)|抓取 Windows Forms 使用者控制項的視窗控制碼。|
@@ -56,7 +56,7 @@ class CWinFormsDialog :
 
 ### <a name="public-operators"></a>公用運算子
 
-|Name|描述|
+|名稱|描述|
 |----------|-|
 |[CWinFormsDialog：： operator-&gt;](#operator_-_gt)|取代運算式中的 [CWinFormsDialog：： GetControl](#getcontrol) 。|
 |[CWinFormsDialog：： operator TManagedControl ^](#operator-tmanagedcontrol-hat)|將型別轉換為 Windows Forms 使用者控制項的參考。|

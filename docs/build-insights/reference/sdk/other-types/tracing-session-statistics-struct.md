@@ -42,7 +42,7 @@ typedef struct TRACING_SESSION_STATISTICS_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `MSVCEventsLost` | 已捨棄的 MSVC 事件數目。 |
 | `MSVCBuffersLost` | 已卸載的 MSVC 事件緩衝區數目。 |

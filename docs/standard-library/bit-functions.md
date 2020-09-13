@@ -28,18 +28,18 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: f06e181a4fe6683adb0cc63c016cbd879f2fc574
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281805"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039804"
 ---
 # <a name="ltbitgt-functions"></a>&lt;位 &gt; 函數
 
 \<bit>標頭包含下列非成員範本函數：
 
-| **非成員函式** | **描述** |
+| **非成員函式** | **說明** |
 |--------|---------|
 |[bit_cast](#bit_cast) | 將物件表示從某個類型重新解譯至另一個類型。 |
 |[bit_ceil](#bit_ceil) | 找出兩個大於或等於某個值的最小乘冪。 |
@@ -111,7 +111,7 @@ std::bit_cat<int>(f) = 7f800000
 
 如果有下列情況，這個多載只會參與多載解析：
 -  `sizeof(To) == sizeof(From)`
-- `To` 和 `From` 都 [is_trivially_copyable](https://docs.microsoft.com/cpp/standard-library/is-trivially-copyable-class?view=vs-2019`)。
+- `To` 和 `From` 都 [is_trivially_copyable](is-trivially-copyable-class.md)。
 
 只有在、和其子類別的類型為時，這個函式範本才是 `constexpr` `To` `From` ：
 - 不是等位或指標類型
@@ -724,13 +724,13 @@ rotr(0b10000000,-1) = 0b00000001
 
 如果 `T` 是不帶正負號的整數類型，則這個範本函式只會參與多載解析。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等等 `unsigned char` 。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<bit>
 
 **命名空間：** std
 
-`/std:c++latest` 是必要項
+[/std：需要最新的 c + +](../build/reference/std-specify-language-standard-version.md) 。
 
 ## <a name="see-also"></a>另請參閱
 

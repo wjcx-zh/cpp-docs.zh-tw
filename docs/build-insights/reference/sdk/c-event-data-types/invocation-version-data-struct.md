@@ -42,7 +42,7 @@ typedef struct INVOCATION_VERSION_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `VersionMajor` | 版本的主要號碼。 |
 | `VersionMinor` | 版本的次要號碼。 |

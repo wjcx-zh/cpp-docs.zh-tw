@@ -33,7 +33,7 @@ class high_resolution_clock
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |`duration`|`nanoseconds`中定義的同義字 \<chrono> 。|
 |`period`|`nano`中定義的同義字 \<ratio> 。|
@@ -42,12 +42,12 @@ class high_resolution_clock
 
 ## <a name="functions"></a>函數
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |`now`|以值形式傳回目前的時間 `time_point` 。|
 
 ## <a name="constants"></a>常數
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |`is_steady`|保存 **`true`** 。 `high_resolution_clock` 為 steady**。|

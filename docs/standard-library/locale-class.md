@@ -159,7 +159,7 @@ cout.imbue(loc);
 
 ### <a name="static-functions"></a>靜態函式
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[經典](#classic)|此靜態成員函式傳回表示傳統 C 地區設定的地區設定物件。|
 |[全球](#global)|重設程式的預設地區設定。|

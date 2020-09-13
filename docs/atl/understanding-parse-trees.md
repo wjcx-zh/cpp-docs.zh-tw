@@ -1,50 +1,50 @@
 ---
-title: ATL 註冊機構和剖析樹狀結構
+title: ATL 註冊機構和剖析樹
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: de2cea9b0e7b7c62236f708f9aa8217eaa5df51d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: ff74ff879e757a569232ff19244d3f7598063465
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168692"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040284"
 ---
 # <a name="understanding-parse-trees"></a>瞭解剖析樹狀結構
 
-您可以在註冊機構腳本中定義一或多個剖析樹，其中每個剖析樹狀結構的格式如下：
+您可以在註冊機構腳本中定義一個或多個剖析樹狀結構，其中每個剖析樹狀結構的格式如下：
 
-> \<根機碼>\<{登錄運算式>} +
+> \<root key>{\<registry expression>}+
 
 其中：
 
-> \<根機碼>：： = HKEY_CLASSES_ROOT |HKEY_CURRENT_USER | \
-> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_LOCAL_MACHINE |HKEY_USERS | \
-> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_PERFORMANCE_DATA |HKEY_DYN_DATA | \
-> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_CURRENT_CONFIG |HKCR |HKCU | \
-> &nbsp;&nbsp;&nbsp;&nbsp;HKLM |HKU |HKPD |HKDD |HKCC
+> \<root key> ：： = HKEY_CLASSES_ROOT \| HKEY_CURRENT_USER \|\
+> &emsp;HKEY_LOCAL_MACHINE \| HKEY_USERS \|\
+> &emsp;HKEY_PERFORMANCE_DATA \| HKEY_DYN_DATA \|\
+> &emsp;HKEY_CURRENT_CONFIG \| HKCR \| HKCU \|\
+> &emsp;HKLM \| HKU \| HKPD \| HKDD \| HKCC
 
-> \<登錄運算式>：： = \<新增金鑰> |\<刪除金鑰>
+> \<registry expression>::= \<Add Key> \|\<Delete Key>
 
-> \<Add key>：： = [**ForceRemove** | **NoRemove** | **val**]\<機碼名稱>\<[索引鍵值>] [\<{Add Key>}]
+> \<Add Key>：： = \[ **ForceRemove** \| **NoRemove** \| **val**] \<Key Name> [ \<Key Value> ] [{ \<Add Key> }]
 
-> \<刪除金鑰>：： =**刪除**\<索引鍵名稱>
+> \<Delete Key> ：： = **刪除**\<Key Name>
 
-> \<索引鍵名稱>：： = **'**\<英數位元>+**'**
+> \<Key Name> ::= **'**\<AlphaNumeric>+**'**
 
-> \<英數位元>：： =*任何字元 NOT Null，亦即 ASCII 0*
+> \<AlphaNumeric> ：： = *任何不是 Null 的字元，亦即 ASCII 0*
 
-> \<金鑰值>：： = \<金鑰類型>\<索引鍵名稱>
+> \<Key Value> ::= \<Key Type>\<Key Name>
 
-> \<金鑰類型>：： = **s** | **d**
+> \<Key Type> ：： = **s** \| **d**
 
-> \<金鑰值>：： = **'**\<英數位元>**'**
+> \<Key Value> ::= **'**\<AlphaNumeric>**'**
 
 > [!NOTE]
-> `HKEY_CLASSES_ROOT`和`HKCR`相等;`HKEY_CURRENT_USER`和`HKCU`相等;以此類推。
+> `HKEY_CLASSES_ROOT` 和相等，而且相等， `HKCR` `HKEY_CURRENT_USER` `HKCU` 以此類推。
 
-剖析樹狀結構可以將多個索引鍵和子\<機碼新增至> 的根金鑰。 在此情況下，它會將子機碼的控制碼保持開啟，直到剖析器完成其所有子機碼的剖析為止。 這個方法比一次操作單一索引鍵更有效率，如下列範例所示：
+剖析樹狀結構可以將多個索引鍵和子機碼加入至 \<root key> 。 如此一來，它會讓子機碼的控制碼保持開啟，直到剖析器完成其所有子機碼剖析為止。 這種方法比單一索引鍵一次運作更有效率，如下列範例所示：
 
 ```rgs
 HKEY_CLASSES_ROOT
@@ -59,7 +59,7 @@ HKEY_CLASSES_ROOT
 }
 ```
 
-在這裡，註冊機構一開始會開啟`HKEY_CLASSES_ROOT\MyVeryOwnKey`（建立）。 接著會看到具有`MyVeryOwnKey`子機碼的。 註冊機構會保留控制碼`MyVeryOwnKey`，並使用此父控制碼開啟（建立） `HasASubKey` ，而不是關閉的金鑰。 （當沒有任何父控制碼開啟時，系統登錄可能會變慢）。因此，以`HKEY_CLASSES_ROOT\MyVeryOwnKey`作為父系開啟`HasASubKey`和`MyVeryOwnKey`開啟的速度會比開啟`MyVeryOwnKey`、關閉`MyVeryOwnKey`和開啟`MyVeryOwnKey\HasASubKey`更快。
+在這裡，註冊機構一開始會開啟 (建立) `HKEY_CLASSES_ROOT\MyVeryOwnKey` 。 然後，它會看到 `MyVeryOwnKey` 有子機碼。 `MyVeryOwnKey`註冊機構會保留控制碼，而不是關閉金鑰，而是 `HasASubKey` 使用此父控制碼 (建立) 。  (當沒有任何父控制碼開啟時，系統登錄可能會變慢 ) 。如此一來， `HKEY_CLASSES_ROOT\MyVeryOwnKey` `HasASubKey` `MyVeryOwnKey` 以父系的形式開啟然後開啟，會比開啟、關閉和開啟的速度還要快 `MyVeryOwnKey` `MyVeryOwnKey` `MyVeryOwnKey\HasASubKey` 。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -40,7 +40,7 @@ typedef struct ANALYSIS_DESCRIPTOR_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `NumberOfPasses` | 應透過 ETW 追蹤完成的分析傳遞數目。 |
 | `Callbacks` | [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)物件，指定要在分析會話期間呼叫的函式。 |

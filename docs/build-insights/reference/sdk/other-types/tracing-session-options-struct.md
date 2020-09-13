@@ -40,7 +40,7 @@ typedef struct TRACING_SESSION_OPTIONS_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `SystemEventFlags` | 用來描述要捕捉的系統事件的位元遮罩。 如需詳細資訊，請參閱 [TRACING_SESSION_SYSTEM_EVENT_FLAGS](tracing-session-system-event-flags-constants.md)。 |
 | `MsvcEventFlags` | 用來描述要捕捉之 MSVC 事件的位元遮罩。 如需詳細資訊，請參閱 [TRACING_SESSION_MSVC_EVENT_FLAGS](tracing-session-msvc-event-flags-constants.md)。 |

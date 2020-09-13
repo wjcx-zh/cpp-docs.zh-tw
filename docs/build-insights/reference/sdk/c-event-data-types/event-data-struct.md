@@ -58,7 +58,7 @@ typedef struct EVENT_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `EventId` | 識別事件的數位。 如需事件識別碼的清單，請參閱 [EVENT_ID](event-id-enum.md)。 |
 | `EventInstanceId` | 可唯一識別追蹤內目前事件的數位。 分析或 relogging 相同的追蹤多次時，不會變更此值。 您可以使用此欄位來識別多個分析或 relogging 通過相同追蹤的相同事件。 |

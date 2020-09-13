@@ -1,6 +1,7 @@
 ---
 title: basic_string 類別
-ms.date: 11/12/2019
+description: 類別的 API 參考 `basic_string` ，也就是標準 c + + 字串類別。
+ms.date: 9/10/2020
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -57,6 +58,8 @@ f1_keywords:
 - xstring/std::basic_string::shrink_to_fit
 - xstring/std::basic_string::size
 - xstring/std::basic_string::substr
+- xstring/std::basic_string::ends_with
+- xstring/std::basic_string::starts_with
 - xstring/std::basic_string::swap
 helpviewer_keywords:
 - std::basic_string [C++]
@@ -113,19 +116,21 @@ helpviewer_keywords:
 - std::basic_string [C++], rfind
 - std::basic_string [C++], shrink_to_fit
 - std::basic_string [C++], size
+- std::basic_string [C++], starts_with
+- std::basic_string [C++], ends_with
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 519d95d82e239084871489cfe8a825752cf6d9f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9012fc8203bf8b54e87e2c21f47f2ef6ef764c2d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219192"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040305"
 ---
 # <a name="basic_string-class"></a>basic_string 類別
 
-由類型的物件所控制的序列 `basic_string` 是標準 c + + 字串類別，通常稱為字串，但不應該與整個 c + + 標準程式庫中使用之以 null 結束的 c 樣式字串混淆。 標準 C++ 字串是一個容器，讓字串用作標準類型，例如比較和串連運算、迭代器、C++ 標準程式庫演算法，以及使用類別配置器 Managed 記憶體進行複製和指派。 如果您需要將標準 C++ 字串轉換為以 Null 結束的 C 樣式字串，請使用 [basic_string::c_str](#c_str) 成員。
+由類型的物件所控制的序列 `basic_string` 是標準 c + + 字串類別，且通常稱為字串，但不應該與整個 c + + 標準程式庫中所使用之以 null 結束的 c 樣式字串混淆。 標準 C++ 字串是一個容器，讓字串用作標準類型，例如比較和串連運算、迭代器、C++ 標準程式庫演算法，以及使用類別配置器 Managed 記憶體進行複製和指派。 如果您需要將標準 C++ 字串轉換為以 Null 結束的 C 樣式字串，請使用 [basic_string::c_str](#c_str) 成員。
 
 ## <a name="syntax"></a>語法
 
@@ -136,34 +141,34 @@ class basic_string;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
-若要儲存在字串中之單一字元的資料類型。 C + + 標準程式庫提供此類別樣板的特製化，其中包含類型專案的類型定義[字串](../standard-library/string-typedefs.md#string)、 **`char`** [wstring](../standard-library/string-typedefs.md#wstring)、for **`wchar_t`** 、 [u16string](../standard-library/string-typedefs.md#u16string)的專案， **`char16_t`** 以及的[u32string](../standard-library/string-typedefs.md#u32string) **`char32_t`** 。
+*>chartype*\
+若要儲存在字串中之單一字元的資料類型。 C + + 標準程式庫提供這個類別樣板的特製化，並[string](../standard-library/string-typedefs.md#string)提供類型為 **`char`** 、 [wstring](../standard-library/string-typedefs.md#wstring)、for **`wchar_t`** 、 [u16string](../standard-library/string-typedefs.md#u16string) for **`char16_t`** 和[u32string](../standard-library/string-typedefs.md#u32string)的型別定義字串 **`char32_t`** 。
 
-*共同*\
+*性狀*\
 `CharType`類別會描述 basic_string 特製化中元素的各種重要屬性 `Traits` 。 預設值是 `char_traits`< `CharType`>。
 
-*配置器*\
+*分配器*\
 代表預存配置器物件的類型，封裝有關字串之記憶體配置和解除配置的詳細資訊。 預設值是 `allocator<CharType>`。
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[basic_string](#basic_string)|建構空的或由特定字元初始化的字串，或為其他字串物件的所有或部分複本的字串，或 C 字串。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示字串物件的 `allocator` 類別。|
-|[const_iterator](#const_iterator)|一種類型，提供可存取和讀取字串中元素的隨機存取反覆運算器 **`const`** 。|
+|[const_iterator](#const_iterator)|一種類型，提供可以存取和讀取字串中專案的隨機存取反覆運算器 **`const`** 。|
 |[const_pointer](#const_pointer)|一種類型，提供 **`const`** 字串中元素的指標。|
-|[const_reference](#const_reference)|一種類型，提供 **`const`** 儲存在字串中以供讀取和執行作業之元素的參考 **`const`** 。|
-|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取字串中任何元素的隨機存取反覆運算器 **`const`** 。|
+|[const_reference](#const_reference)|一種類型，提供 **`const`** 儲存在字串中以讀取和執行作業之元素的參考 **`const`** 。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可以讀取字串中任何元素的隨機存取反覆運算器 **`const`** 。|
 |[difference_type](#difference_type)|類型，提供兩個指出相同字串內之元素的迭代器間的差異。|
-|[定位](#iterator)|類型，提供可以讀取或修改字串中之任何元素的隨機存取迭代器。|
-|[npos](#npos)|當搜尋函式失敗時，初始化為-1 的不帶正負號的整數值，指出「找不到」或「所有剩餘字元」。|
-|[滑鼠](#pointer)|類型，提供字串或字元陣列中之字元元素的指標。|
+|[迭 代](#iterator)|類型，提供可以讀取或修改字串中之任何元素的隨機存取迭代器。|
+|[npos](#npos)|不帶正負號的整數值，在搜尋函式失敗時，表示「找不到」或「所有剩餘字元」。|
+|[指標](#pointer)|類型，提供字串或字元陣列中之字元元素的指標。|
 |[reference](#reference)|類型，提供儲存在字串中之元素的參考。|
 |[reverse_iterator](#reverse_iterator)|類型，提供可以讀取或修改反轉字串中的元素的隨機存取迭代器。|
 |[size_type](#size_type)|字串中元素數的不帶正負號整數類型。|
@@ -178,27 +183,28 @@ class basic_string;
 |[assign](#assign)|將新的字元值指派給字串的內容。|
 |[at](#at)|傳回位於字串中指定位置的元素參考。|
 |[返回](#back)||
-|[起點](#begin)|傳回定址字串中第一個元素的迭代器。|
+|[開始](#begin)|傳回定址字串中第一個元素的迭代器。|
 |[c_str](#c_str)|將字串的內容轉換為 C 樣式且以 Null 結尾的字串。|
-|[存儲](#capacity)|傳回可儲存在字串中且不增加字串的記憶體配置的最大元素數目。|
+|[能力](#capacity)|傳回可儲存在字串中且不增加字串的記憶體配置的最大元素數目。|
 |[cbegin](#cbegin)|傳回定址字串中的第一個元素的 const 迭代器。|
 |[cend](#cend)|傳回定址字串中最後一個元素的下一個位置的 const 迭代器。|
-|[明確](#clear)|清除字串的所有元素。|
-|[何](#compare)|將某個字串與指定的字串比較，以判斷兩個字串是否相等，或其中一個字串的字數小於另一個字串。|
+|[清楚](#clear)|清除字串的所有元素。|
+|[比較](#compare)|將某個字串與指定的字串比較，以判斷兩個字串是否相等，或其中一個字串的字數小於另一個字串。|
 |[copy](#copy)|從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。 已取代。 請改用 [basic_string::_Copy_s](#copy_s)。|
 |[crbegin](#crbegin)|傳回定址反轉字串中的第一個元素的 const 迭代器。|
 |[crend](#crend)|傳回定址反轉字串中最後一個元素的下一個位置的 const 迭代器。|
 |[_Copy_s](#copy_s)|從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。|
 |[data](#data)|將字串的內容轉換成字元的陣列。|
 |[empty](#empty)|測試字串是否包含字元。|
-|[成品](#end)|傳回定址字串中最後一個元素的下一個位置的迭代器。|
+|[結束](#end)|傳回定址字串中最後一個元素的下一個位置的迭代器。|
+|[ends_with](#ends_with)<sup>c + + 20</sup>|檢查字串是否以指定的尾碼結尾。|
 |[erase](#erase)|從指定位置移除字串中的某個元素或某個元素範圍。|
 |[find](#find)|以正向方向搜尋字串中，第一個符合指定之字元序列的子字串。|
 |[find_first_not_of](#find_first_not_of)|搜尋字串中，不是指定字串之任何元素的第一個字元。|
 |[find_first_of](#find_first_of)|搜尋字串中，符合指定字串之任何元素的第一個字元。|
 |[find_last_not_of](#find_last_not_of)|搜尋字串中，不是指定字串之任何元素的最後一個字元。|
 |[find_last_of](#find_last_of)|搜尋字串中，是指定字串之元素的最後一個字元。|
-|[前端](#front)|傳回字串中第一個元素的參考。|
+|[前面](#front)|傳回字串中第一個元素的參考。|
 |[get_allocator](#get_allocator)|傳回用來建構字串的 `allocator` 物件複本。|
 |[insert](#insert)|將某個元素或一些元素或某個元素範圍，插入字串的指定位置。|
 |[length](#length)|傳回字串中目前的元素數目。|
@@ -208,27 +214,28 @@ class basic_string;
 |[rbegin](#rbegin)|傳回指向反轉字串中第一個元素的迭代器。|
 |[rend](#rend)|傳回指向反轉字串中最後一個元素後方的迭代器。|
 |[replace](#replace)|使用指定的字元，或從其他範圍或字串或 C 字串複製的字元，取代位於字串中指定位置的元素。|
-|[留成](#reserve)|將字串的容量數字，設定為至少和指定的數字一樣大。|
+|[儲備](#reserve)|將字串的容量數字，設定為至少和指定的數字一樣大。|
 |[調整](#resize)|指定字串的新大小，視需要附加或清除元素。|
 |[rfind](#rfind)|以向後方向搜尋字串中，第一個符合指定之字元序列的子字串。|
 |[shrink_to_fit](#shrink_to_fit)|丟棄多餘的字串容量。|
 |[size](#size)|傳回字串中目前的元素數目。|
+|[starts_with](#starts_with)<sup>c + + 20</sup>|檢查字串是否以指定的前置詞開頭。|
 |[substr](#substr)|從開始於指定位置的字串，複製最多一定字元數量的子字串。|
-|[調換](#swap)|交換兩個字串的內容。|
+|[交換](#swap)|交換兩個字串的內容。|
 
-### <a name="operators"></a>運算子
+### <a name="operators"></a>操作員
 
-|運算子|說明|
+|運算子|描述|
 |-|-|
 |[運算子 + =](#op_add_eq)|將字元附加至字串。|
-|[operator =](#op_eq)|將新的字元值指派給字串的內容。|
+|[運算子 =](#op_eq)|將新的字元值指派給字串的內容。|
 |[operator&#91;&#93;](#op_at)|使用字串中的指定索引，提供字元的參考。|
 
 ## <a name="remarks"></a>備註
 
 如果要求函式產生超過 [max_size](#max_size) 個元素的序列長度，則此函式會藉由擲回 [length_error](../standard-library/length-error-class.md) 類型的物件，報告長度錯誤。
 
-指定受控制序列之元素的參考、指標和反覆運算器，在任何會改變受控制序列的函式呼叫之後，或第一次呼叫非成員函式之後，可能會變成無效 **`const`** 。
+在任何改變受控制序列的函式呼叫，或在第一次呼叫非成員函式之後，指定受控制序列之元素的參考、指標和反覆運算器可能會變成無效 **`const`** 。
 
 ## <a name="requirements"></a>需求
 
@@ -236,7 +243,7 @@ class basic_string;
 
 **命名空間：** std
 
-## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a>basic_string：： allocator_type
+## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a> basic_string：： allocator_type
 
 類型，表示字串物件的配置器類別。
 
@@ -267,7 +274,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringappend"></a><a name="append"></a>basic_string：： append
+## <a name="basic_stringappend"></a><a name="append"></a> basic_string：： append
 
 將字元加入至字串的結尾。
 
@@ -307,13 +314,13 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*Ptr*\
 要附加的 C 字串。
 
-*str*\
+*Str*\
 要附加其字元的字串。
 
-*投影*\
+*抵消*\
 提供要附加之字元的部分來源字串組件的索引。
 
 *計數*\
@@ -322,10 +329,10 @@ basic_string<CharType, Traits, Allocator>& append(
 *char_value*\
 要附加的字元值。
 
-*頭*\
+*第一*\
 輸入迭代器，為範圍中要附加的第一個元素定址。
 
-*次*\
+*最後*\
 輸入迭代器 const_pointer 或 const_iterator，為範圍中要附加的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
@@ -334,7 +341,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="remarks"></a>備註
 
-您可以使用[運算子 + =](#op_add_eq)或成員函式或 push_back，將字元附加至字串 `append` [ ](#push_back)。 `operator+=`會附加單一引數值，而多引數成員函式則 `append` 允許指定字串的特定部分來進行新增。
+您可以使用 [operator + =](#op_add_eq) 或成員函式或 push_back，將字元附加至字串 `append` [ ](#push_back)。 `operator+=` 附加單一引數值，而多重引數成員函式則 `append` 允許指定字串的特定部分以供加入。
 
 ### <a name="example"></a>範例
 
@@ -428,7 +435,7 @@ The string str2f is: Wide World
 The appended string str1 is: Hello World.
 ```
 
-## <a name="basic_stringassign"></a><a name="assign"></a>basic_string：： assign
+## <a name="basic_stringassign"></a><a name="assign"></a> basic_string：： assign
 
 將新的字元值指派給字串的內容。
 
@@ -468,25 +475,25 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*Ptr*\
 要指派給目標字串之 C 字串的字元指標。
 
 *計數*\
-要從來源字串中指派的字元數。
+要從來源字串指派的字元數。
 
-*str*\
+*Str*\
 其字元要指派給目標字串的來源字串。
 
 *char_value*\
 要指派的字元值。
 
-*頭*\
+*第一*\
 輸入迭代器 const_pointer 或 const_iterator，為來源字串範圍中要指派給目標範圍的第一個字元定址。
 
-*次*\
+*最後*\
 輸入迭代器 const_pointer 或 const_iterator，為來源字串範圍中要指派給目標範圍的最後一個字元以外的字元定址。
 
-*停止*\
+*偏離*\
 即將開始指派新字元的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -495,7 +502,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="remarks"></a>備註
 
-字串可以指派新的字元值。 新的值可以是字串和 C 字串，或是單一字元。 如果單一參數可以描述新的值，則可以使用[operator =](#op_eq) 。否則， `assign` 具有多個參數的成員函式可以用來指定要將字串的哪個部分指派給目標字串。
+字串可以指派新的字元值。 新的值可以是字串和 C 字串，或是單一字元。 如果單一參數可以描述新的值，則可以使用 [operator =](#op_eq) ;否則， `assign` 具有多個參數的成員函式可以用來指定要將字串的哪個部分指派給目標字串。
 
 ### <a name="example"></a>範例
 
@@ -589,7 +596,7 @@ The string str2f is: Wide World
 The string str1 assigned a range of string str2f is: World.
 ```
 
-## <a name="basic_stringat"></a><a name="at"></a>basic_string：： at
+## <a name="basic_stringat"></a><a name="at"></a> basic_string：： at
 
 使用字串中的指定索引，提供字元的參考。
 
@@ -601,7 +608,7 @@ reference at(size_type offset);
 
 ### <a name="parameters"></a>參數
 
-*投影*\
+*抵消*\
 要參考之元素的位置索引。
 
 ### <a name="return-value"></a>傳回值
@@ -610,11 +617,11 @@ reference at(size_type offset);
 
 ### <a name="remarks"></a>備註
 
-字串的第一個元素的索引為零，且下列專案會連續加上正整數的索引，因此長度為*n*的字串會有第*n*個元素，以數位*n-* 1 來編制索引。
+字串的第一個元素的索引為零，且下列元素會以正整數連續編制索引，因此長度為 *n* 的字串會有 n 個第 *n*個元素，並以數位 *n-1* 來編制索引。
 
-成員[運算子&#91;&#93;](#op_at)比 `at` 提供字串專案之讀取和寫入權限的成員函式更快。
+成員 [運算子&#91;&#93;](#op_at) 比成員函式更快， `at` 可提供字串專案的讀取和寫入存取權。
 
-成員不會 `operator[]` 檢查當做參數傳遞的索引是否有效，但成員函式 `at` 會執行，因此如果有效性不一定，就應該使用。 傳遞至成員函式的索引若小於零或大於或等於字串大小，則會擲回 `at` [out_of_range 類別](../standard-library/out-of-range-class.md)例外狀況，這是不正確索引。 傳遞給 `operator[]` 的索引若無效會導致未定義的行為，但等於字串長度的索引是 const 字串的有效索引，而且當傳遞此索引時，運算子會傳回 Null 字元。
+此成員不 `operator[]` 會檢查當做參數傳遞的索引是否有效，但成員函式是否有效 `at` ，而且如果有效性不確定，則應該使用。 傳遞給成員函式的索引無效（索引小於零或大於或等於字串的大小）會擲回 `at` [out_of_range 類別](../standard-library/out-of-range-class.md) 例外狀況。 傳遞給 `operator[]` 的索引若無效會導致未定義的行為，但等於字串長度的索引是 const 字串的有效索引，而且當傳遞此索引時，運算子會傳回 Null 字元。
 
 傳回的參考可能會因為字串重新分配或非字串的修改而失效 **`const`** 。
 
@@ -657,7 +664,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringback"></a><a name="back"></a>basic_string：： back
+## <a name="basic_stringback"></a><a name="back"></a> basic_string：： back
 
 傳回字串的最後一個項目參考。
 
@@ -673,7 +680,7 @@ reference back();
 
 ### <a name="remarks"></a>備註
 
-## <a name="basic_stringbasic_string"></a><a name="basic_string"></a>basic_string：： basic_string
+## <a name="basic_stringbasic_string"></a><a name="basic_string"></a> basic_string：： basic_string
 
 建構空的或由特定字元初始化的字串，或為其他字串物件的所有或部分複本的字串，或 C 樣式 (以 Null 結束的) 字串。
 
@@ -747,7 +754,7 @@ basic_string(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*Ptr*\
 所含字元用來初始化所建構之 `string` 的 C 字串。 此值不可以是 Null 指標。
 
 *alloc_type*\
@@ -756,7 +763,7 @@ basic_string(
 *計數*\
 要初始化的字元數。
 
-*再*\
+*對*\
 要初始化所建構之字串的字串。
 
 *right_offset*\
@@ -765,10 +772,10 @@ basic_string(
 *char_value*\
 要複製到所建構之字串中的字元值。
 
-*頭*\
+*第一*\
 輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的第一個元素定址。
 
-*次*\
+*最後*\
 輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
@@ -777,9 +784,9 @@ basic_string(
 
 ### <a name="remarks"></a>備註
 
-所有建構函式都會儲存 [basic_string::allocator_type](#allocator_type)，並初始化受控制的序列。 配置器物件是引數 `al` (如果存在)。 若為複製的函式，則為 `right.` [basic_string：： get_allocator](#get_allocator) `()` 。 否則，配置器為 `Alloc()` 。
+所有建構函式都會儲存 [basic_string::allocator_type](#allocator_type)，並初始化受控制的序列。 配置器物件是引數 `al` (如果存在)。 若為複製的函式，則為 `right.` [basic_string：： get_allocator](#get_allocator) `()` 。 否則配置器為 `Alloc()` 。
 
-受控制的序列會初始化為其餘運算元所指定之運算元序列的複本。 沒有運算元序列的建構函式會指定空的初始受控制序列。 如果 `InputIterator` 是樣板函數中的整數類型，則運算元序列 `first,  last` 的行為會與相同 `(size_type) first, (value_type) last` 。
+受控制的序列會初始化為其餘運算元所指定之運算元序列的複本。 沒有運算元序列的建構函式會指定空的初始受控制序列。 如果 `InputIterator` 是範本函式中的整數類型，則運算元序列 `first,  last` 的行為會與相同 `(size_type) first, (value_type) last` 。
 
 ### <a name="example"></a>範例
 
@@ -830,7 +837,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringbegin"></a><a name="begin"></a>basic_string：： begin
+## <a name="basic_stringbegin"></a><a name="begin"></a> basic_string：： begin
 
 傳回定址字串中第一個元素的迭代器。
 
@@ -880,7 +887,7 @@ int main( ) {
 }
 ```
 
-## <a name="basic_stringc_str"></a><a name="c_str"></a>basic_string：： c_str
+## <a name="basic_stringc_str"></a><a name="c_str"></a> basic_string：： c_str
 
 將字串的內容轉換為 C 樣式且以 Null 結束的字串。
 
@@ -890,13 +897,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>傳回值
 
-叫用字串的 C 樣式版本指標。  在物件的 basic_string 類別中呼叫非 const 函數（包括析構函式）之後，指標值無效。
+叫用字串的 C 樣式版本指標。  在物件的 basic_string 類別中呼叫非 const 函式（包括析構函數）之後，指標值無效。
 
 ### <a name="remarks"></a>備註
 
-屬於類別樣板 basic_string 的類型字串物件 \<char> 不一定是 null 終止。 Null 字元 ' \0 ' 會用作 C 字串中的特殊字元來標記字串結尾，但在字串類型的物件中則沒有任何特殊意義，而且可與任何其他字元一樣當做字串的一部分。 從**const char**自動轉換 <strong>\*</strong> 成字串，但是 string 類別不提供從 C 樣式字串自動轉換成**basic_string \<char> **類型的物件。
+屬於類別樣板 basic_string 的字串類型物件 \<char> 不一定是以 null 結束。 Null 字元 ' \0 ' 會用作 C 字串中的特殊字元來標記字串結尾，但在字串類型的物件中則沒有任何特殊意義，而且可與任何其他字元一樣當做字串的一部分。 從**const char**自動轉換 <strong>\*</strong> 成字串，但字串類別不提供從 C 樣式字串自動轉換成**basic_string \<char> **類型的物件。
 
-傳回的 C 樣式字串不應該修改，因為這可能會使字串的指標失效，或被刪除，因為字串具有有限的存留期，而且是由類別字串所擁有。
+不應修改傳回的 C 樣式字串，因為這可能會使字串的指標無效或已刪除，因為字串具有有限的存留期，且是由類別字串所擁有。
 
 ### <a name="example"></a>範例
 
@@ -944,7 +951,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringcapacity"></a><a name="capacity"></a>basic_string：：容量
+## <a name="basic_stringcapacity"></a><a name="capacity"></a> basic_string：：容量
 
 傳回可儲存在字串中且不增加字串的記憶體配置的最大元素數目。
 
@@ -1014,9 +1021,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringcbegin"></a><a name="cbegin"></a>basic_string：： cbegin
+## <a name="basic_stringcbegin"></a><a name="cbegin"></a> basic_string：： cbegin
 
-傳回 **`const`** 反覆運算器，其定址範圍中的第一個元素。
+傳回 **`const`** 反覆運算器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -1024,13 +1031,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-**`const`** 隨機存取反覆運算器，指向範圍的第一個元素，或指向空白範圍結尾（空白範圍）之外的位置 `cbegin() == cend()` 。
+**`const`** 隨機存取反覆運算器，指向範圍的第一個元素，或指向空白範圍結尾以外的位置 (空白範圍， `cbegin() == cend()`) 。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請 `Container` 將視為支援和的任何種類的可修改（非 **`const`** ） `begin()` 容器 `cbegin()` 。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮 `Container` 將任何支援和的非) 容器 (不是可修改的 **`const`** `begin()` `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -1040,9 +1047,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="basic_stringcend"></a><a name="cend"></a>basic_string：： cend
+## <a name="basic_stringcend"></a><a name="cend"></a> basic_string：： cend
 
-傳回 **`const`** 反覆運算器，其定址範圍中最後一個元素之後的位置。
+傳回 **`const`** 反覆運算器，定址範圍中最後一個元素之外的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -1050,13 +1057,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-**`const`** 隨機存取反覆運算器，指向超出範圍的結尾。
+**`const`** 指向範圍結尾之外的隨機存取反覆運算器。
 
 ### <a name="remarks"></a>備註
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請 `Container` 將視為支援和的任何種類的可修改（非 **`const`** ） `end()` 容器 `cend()` 。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮 `Container` 將任何支援和的非) 容器 (不是可修改的 **`const`** `end()` `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -1066,9 +1073,9 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-傳回的值 `cend` 不應該取值。
+傳回的值不應取值 `cend` 。
 
-## <a name="basic_stringclear"></a><a name="clear"></a>basic_string：： clear
+## <a name="basic_stringclear"></a><a name="clear"></a> basic_string：： clear
 
 清除字串的所有元素。
 
@@ -1119,7 +1126,7 @@ The modified string str1 is:
 Nothing printed above because the string str1 is empty.
 ```
 
-## <a name="basic_stringcompare"></a><a name="compare"></a>basic_string：： compare
+## <a name="basic_stringcompare"></a><a name="compare"></a> basic_string：： compare
 
 與指定的字串進行大小寫區分的比較，以判斷兩個字串是否相等，或其中一個字串在詞典編纂順序方面是否小於另一個字串。
 
@@ -1156,7 +1163,7 @@ int compare(
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 要與運算元字串比較的字串。
 
 *position_1*\
@@ -1168,13 +1175,13 @@ int compare(
 *number_2*\
 要比較之參數字串的字元數上限。
 
-*投影*\
+*抵消*\
 比較開始處的參數字串索引。
 
 *計數*\
 要比較之參數字串的字元數上限。
 
-*指標*\
+*Ptr*\
 要與運算元字串比較的 C 字串。
 
 ### <a name="return-value"></a>傳回值
@@ -1183,7 +1190,7 @@ int compare(
 
 ### <a name="remarks"></a>備註
 
-成員函式會 `compare` 比較參數和運算元字串的全部或部分，視所使用的是哪一個。
+成員函式會 `compare` 比較參數和運算元字串的全部或部分，視使用的而定。
 
 執行比較時會區分大小寫。
 
@@ -1380,9 +1387,9 @@ The 3 characters from position 2 of the operand string are equal to
 the first 3 characters of the parameter C-string.
 ```
 
-## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a>basic_string：： const_iterator
+## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a> basic_string：： const_iterator
 
-一種類型，提供可存取和讀取字串中元素的隨機存取反覆運算器 **`const`** 。
+一種類型，提供可以存取和讀取字串中專案的隨機存取反覆運算器 **`const`** 。
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -1396,7 +1403,7 @@ typedef implementation-defined const_iterator;
 
 如需如何宣告及使用 `const_iterator` 的範例，請參閱 [begin](#begin) 的範例。
 
-## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a>basic_string：： const_pointer
+## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a> basic_string：： const_pointer
 
 一種類型，提供 **`const`** 字串中元素的指標。
 
@@ -1436,9 +1443,9 @@ The string pstr1a is: In Here.
 The C-string cstr1c is: Out There.
 ```
 
-## <a name="basic_stringconst_reference"></a><a name="const_reference"></a>basic_string：： const_reference
+## <a name="basic_stringconst_reference"></a><a name="const_reference"></a> basic_string：： const_reference
 
-一種類型，提供 **`const`** 儲存在字串中以供讀取和執行作業之元素的參考 **`const`** 。
+一種類型，提供 **`const`** 儲存在字串中以讀取和執行作業之元素的參考 **`const`** 。
 
 ```cpp
 typedef typename allocator_type::const_reference const_reference;
@@ -1454,9 +1461,9 @@ typedef typename allocator_type::const_reference const_reference;
 
 如需如何宣告及使用 `const_reference` 的範例，請參閱 [at](#at) 的範例。
 
-## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>basic_string：： const_reverse_iterator
+## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> basic_string：： const_reverse_iterator
 
-一種類型，提供可讀取字串中任何元素的隨機存取反覆運算器 **`const`** 。
+一種類型，提供可以讀取字串中任何元素的隨機存取反覆運算器 **`const`** 。
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -1470,7 +1477,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 如需如何宣告及使用 `const_reverse_iterator` 的範例，請參閱 [rbegin](#rbegin) 的範例。
 
-## <a name="basic_stringcopy"></a><a name="copy"></a>basic_string：： copy
+## <a name="basic_stringcopy"></a><a name="copy"></a> basic_string：： copy
 
 從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。
 
@@ -1485,12 +1492,12 @@ size_type copy(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*Ptr*\
 要複製元素的目標字元陣列。
 
-*計數*要從來源字串最多複製的字元數。
+*計數* 要從來源字串複製的字元數上限。
 
-*投影*\
+*抵消*\
 來源字串中要建立複本的開始位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1550,7 +1557,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringcrbegin"></a><a name="crbegin"></a>basic_string：： crbegin
+## <a name="basic_stringcrbegin"></a><a name="crbegin"></a> basic_string：： crbegin
 
 傳回定址反轉字串中的第一個元素的 const 迭代器。
 
@@ -1562,7 +1569,7 @@ const_reverse_iterator crbegin() const;
 
 指向字串結尾之外的反向迭代器。 此位置會指定反向字串的開頭。
 
-## <a name="basic_stringcrend"></a><a name="crend"></a>basic_string：： crend
+## <a name="basic_stringcrend"></a><a name="crend"></a> basic_string：： crend
 
 傳回定址反轉字串中最後一個元素的下一個位置的 const 迭代器。
 
@@ -1576,7 +1583,7 @@ Const 反轉迭代器，其定址反轉的字串中最後一個項目的下一�
 
 ### <a name="remarks"></a>備註
 
-## <a name="basic_string_copy_s"></a><a name="copy_s"></a>basic_string：： _Copy_s
+## <a name="basic_string_copy_s"></a><a name="copy_s"></a> basic_string：： _Copy_s
 
 從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。
 
@@ -1590,15 +1597,15 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>參數
 
-*dest*\
+*目標*\
 要複製元素的目標字元陣列。
 
 *dest_size*\
-*目標*的大小。
+*目的地*的大小。
 
-*計數*要從來源字串最多複製的字元數。
+*計數* 要從來源字串複製的字元數上限。
 
-*投影*\
+*抵消*\
 來源字串中要建立複本的開始位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1656,9 +1663,9 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringdata"></a><a name="data"></a>basic_string：:d ata
+## <a name="basic_stringdata"></a><a name="data"></a> basic_string：:d ata
 
-將字串的內容轉換成以 null 結束的字元陣列。
+將字串的內容轉換為以 null 結束的字元陣列。
 
 ```cpp
 const value_type *data() const noexcept;
@@ -1667,17 +1674,17 @@ value_type *data() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-包含字串內容之以 null 結束之陣列的第一個元素的指標。 若為空字串，指標會指向等於的單一 null 字元 `value_type()` 。
+以 null 結束之陣列的第一個元素的指標，其中包含字串的內容。 若為空字串，指標會指向等於的單一 null 字元 `value_type()` 。
 
 ### <a name="remarks"></a>備註
 
-`data`點在有效範圍傳回的指標 `[data(), data() + size()]` 。 範圍中的每個元素都會對應至字串中的目前資料。 亦即，針對範圍中的每個有效位移*n* ， `data() + n == addressof(operator[](n))` 。
+指向有效範圍的點所傳回的指標 `data` `[data(), data() + size()]` 。 範圍中的每個元素會對應至字串中的目前資料。 也就是範圍中的每個有效位移 *n* `data() + n == addressof(operator[](n))` 。
 
-如果您修改多載所傳回之字串的內容 **`const`** ，則 `data` 行為是未定義的。 如果終端機 null 字元變更為任何其他值，您也會取得未定義的行為。 如果將字串的非 const 參考傳遞給標準程式庫函式，傳回的指標可能會無效。 呼叫非 const 成員函式也可以使其失效。 對成員 `at` 、、、、、、 `back` `begin` `end` `front` `rbegin` `rend` 和的呼叫 `operator[]` 不會使指標失效。
+如果您修改多載所傳回之字串的內容 **`const`** `data` ，則行為會是未定義的。 如果終端機 null 字元變更為任何其他值，您也會得到未定義的行為。 如果將字串的非 const 參考傳遞給標準程式庫函數，則傳回的指標可能會失效。 它也可以透過呼叫非 const 成員函式來使其失效。 對成員 `at` 、、、、、、 `back` `begin` 和的呼叫不會讓 `end` `front` `rbegin` `rend` `operator[]` 指標失效。
 
-在 c + + 11 之前， `data` 不保證傳回的字串是以 null 結束。 自 c + + 11 起， `data` 和 `c_str` 都會傳回以 null 結束的字串，而且實際上是相同的。
+在 c + + 11 之前， `data` 不保證傳回的字串是以 null 結束。 自 c + + 11 起， `data` `c_str` 兩者都會傳回以 null 終止的字串，而且實際上是相同的。
 
-非 const 多載是 c + + 17 的新功能。 若要使用它，請指定 **/std： c + + 17**或 **/std： c + + 最新**的編譯器選項。
+在 c + + 17 中，非 const 多載是新的。 若要使用它，請指定 **/std： c + + 17** 或 **/std： c + + 最新** 的編譯器選項。
 
 ### <a name="example"></a>範例
 
@@ -1725,7 +1732,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringdifference_type"></a><a name="difference_type"></a>basic_string：:d ifference_type
+## <a name="basic_stringdifference_type"></a><a name="difference_type"></a> basic_string：:d ifference_type
 
 類型，提供兩個指出相同字串內之元素的迭代器間的差異。
 
@@ -1773,7 +1780,7 @@ The last character i is at position: 8.
 The difference is: 6.
 ```
 
-## <a name="basic_stringempty"></a><a name="empty"></a>basic_string：： empty
+## <a name="basic_stringempty"></a><a name="empty"></a> basic_string：： empty
 
 測試字串是否包含字元。
 
@@ -1783,7 +1790,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-**`true`** 如果字串物件未包含任何字元，則為，**`false`** 如果至少有一個字元，則為。
+**`true`** 如果字串物件不包含任何字元，則為， **`false`** 如果至少有一個字元。
 
 ### <a name="remarks"></a>備註
 
@@ -1821,7 +1828,7 @@ int main() {
 }
 ```
 
-## <a name="basic_stringend"></a><a name="end"></a>basic_string：： end
+## <a name="basic_stringend"></a><a name="end"></a> basic_string：： end
 
 傳回定址字串中最後一個元素的下一個位置的迭代器。
 
@@ -1837,9 +1844,9 @@ iterator end();
 
 ### <a name="remarks"></a>備註
 
-`end`通常用來測試反覆運算器是否已到達其字串的結尾。 傳回的值 `end` 不應該取值。
+`end` 通常用來測試反覆運算器是否已到達其字串的結尾。 傳回的值不應取值 `end` 。
 
-如果 `end` 的傳回值已指派給 `const_iterator`，則無法修改字串物件。 如果將的傳回值 `end` 指派給 `iterator` ，則可以修改字串物件。
+如果 `end` 的傳回值已指派給 `const_iterator`，則無法修改字串物件。 如果的傳回值已 `end` 指派給 `iterator` ，則可以修改字串物件。
 
 ### <a name="example"></a>範例
 
@@ -1869,7 +1876,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
-*str1_Iter = 'T';
+   *str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1894,7 +1901,67 @@ The modified string str1 is now: No way ouT.
 The string str2 is empty.
 ```
 
-## <a name="basic_stringerase"></a><a name="erase"></a>basic_string：： erase
+## <a name="basic_stringends_with"></a><a name="ends_with"></a> basic_string：： ends_with
+
+檢查字串是否以指定的尾碼結尾。
+
+```cpp
+bool ends_with(const CharType c) const noexcept;
+bool ends_with(const CharType* const x) const noexcept;
+bool ends_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>參數
+
+*C*\
+要尋找的單一字元尾碼。
+
+*Sv*\
+包含要尋找之後綴的字串視圖。 \
+您可以傳遞 `std::basic_string` ，以轉換成字串的視圖。
+
+*X*\
+以 Null 結束的字元字串，其中包含要尋找的尾碼。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果字串的結尾是指定的尾碼， `false` 否則為。
+
+### <a name="remarks"></a>備註
+
+`ends_with()` 是 c + + 20 的新功能。 若要使用它，請指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 的編譯器選項。
+
+請參閱 [starts_with](#starts_with) 檢查字串是否以指定的前置詞開頭。
+
+### <a name="example"></a>範例
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::basic_string<char> str = "abcdefg";
+
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'
+    std::cout << str.ends_with('g') << '\n';
+    std::cout << str.ends_with("eFg") << '\n';
+
+    std::basic_string<char> str2 = "efg";
+    std::cout << str.ends_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+true
+false
+true
+```
+
+## <a name="basic_stringerase"></a><a name="erase"></a> basic_string：： erase
 
 從指定位置移除字串中的某個元素或某個元素範圍。
 
@@ -1913,20 +1980,20 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一*\
 迭代器，為範圍中要清除之第一個元素的位置定址。
 
-*次*\
+*最後*\
 迭代器，為範圍中要清除之最後一個元素之後的位置定址。
 
-*iter*\
+*Iter*\
 迭代器，為字串中要清除之元素的位置定址。
 
-*投影*\
+*抵消*\
 字串中要移除之第一個字元的索引。
 
 *計數*\
-如果開頭為*offset*的字串範圍內有多個專案，將會移除的元素數目。
+如果開頭為 *offset*的字串範圍中有多個，則會移除的元素數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1934,7 +2001,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="remarks"></a>備註
 
-第三個成員函式會傳回** \* this**。
+第三個成員函式會傳回** \* 這個**。
 
 ### <a name="example"></a>範例
 
@@ -1997,7 +2064,7 @@ The original string object str3 is: Hello computer.
 The modified string object str3m is: Hello .
 ```
 
-## <a name="basic_stringfind"></a><a name="find"></a>basic_string：： find
+## <a name="basic_stringfind"></a><a name="find"></a> basic_string：： find
 
 以正向方向搜尋字串中，第一個符合指定之字元序列的子字串。
 
@@ -2025,16 +2092,16 @@ size_type find(
 *char_value*\
 要搜尋之成員函式的字元值。
 
-*投影*\
+*抵消*\
 開始搜尋位置的索引。
 
-*指標*\
+*Ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*\
+*Str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2172,7 +2239,7 @@ the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
-## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a>basic_string：： find_first_not_of
+## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a> basic_string：： find_first_not_of
 
 搜尋字串中，不是指定字串之元素的第一個字元。
 
@@ -2200,16 +2267,16 @@ size_type find_first_not_of(
 *char_value*\
 要搜尋之成員函式的字元值。
 
-*投影*\
+*抵消*\
 開始搜尋位置的索引。
 
-*指標*\
+*Ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*\
+*Str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2360,7 +2427,7 @@ The index of the 1st non occurrence of an element of '12' in str4 after
 the 0th position is: 2
 ```
 
-## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a>basic_string：： find_first_of
+## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a> basic_string：： find_first_of
 
 搜尋字串中，符合指定字串之任何元素的第一個字元。
 
@@ -2388,16 +2455,16 @@ size_type find_first_of(
 *char_value*\
 要搜尋之成員函式的字元值。
 
-*投影*\
+*抵消*\
 開始搜尋位置的索引。
 
-*指標*\
+*Ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*\
+*Str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2547,7 +2614,7 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
 the 0th position is: 1
 ```
 
-## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a>basic_string：： find_last_not_of
+## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a> basic_string：： find_last_not_of
 
 搜尋字串中，不是指定字串之任何元素的最後一個字元。
 
@@ -2575,16 +2642,16 @@ size_type find_last_not_of(
 *char_value*\
 要搜尋之成員函式的字元值。
 
-*投影*\
+*抵消*\
 完成搜尋位置的索引。
 
-*指標*\
+*Ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*\
+*Str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2736,7 +2803,7 @@ The index of the last occurrence of an element not in '12'
 in str4 before the end position is: 10
 ```
 
-## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a>basic_string：： find_last_of
+## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a> basic_string：： find_last_of
 
 搜尋字串中，符合指定字串之任何元素的最後一個字元。
 
@@ -2764,16 +2831,16 @@ size_type find_last_of(
 *char_value*\
 要搜尋之成員函式的字元值。
 
-*投影*\
+*抵消*\
 完成搜尋位置的索引。
 
-*指標*\
+*Ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*\
+*Str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2910,7 +2977,7 @@ The index of the last occurrence of an element of 'a2' in str4 before
 the 0th position is: 9
 ```
 
-## <a name="basic_stringfront"></a><a name="front"></a>basic_string：： front
+## <a name="basic_stringfront"></a><a name="front"></a> basic_string：： front
 
 傳回字串中第一個元素的參考。
 
@@ -2926,7 +2993,7 @@ reference front();
 
 ### <a name="remarks"></a>備註
 
-## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a>basic_string：： get_allocator
+## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a> basic_string：： get_allocator
 
 傳回用來建構字串的配置器物件複本。
 
@@ -2969,7 +3036,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringinsert"></a><a name="insert"></a>basic_string：： insert
+## <a name="basic_stringinsert"></a><a name="insert"></a> basic_string：： insert
 
 將某個元素或一些元素或某個元素範圍，插入字串的指定位置。
 
@@ -3028,31 +3095,31 @@ void insert(
 
 ### <a name="parameters"></a>參數
 
-*移動*\
+*位置*\
 新字元插入點後面位置的索引。
 
-*指標*\
+*Ptr*\
 要全部或部分插入字串的 C 字串。
 
 *計數*\
 要插入的字元數。
 
-*str*\
+*Str*\
 要全部或部分插入目標字串的字串。
 
-*投影*\
+*抵消*\
 提供要附加之字元的部分來源字串組件的索引。
 
 *char_value*\
 要插入之項目的字元值。
 
-*iter*\
+*Iter*\
 迭代器，為要在其後插入字元的位置定址。
 
-*頭*\
+*第一*\
 輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的第一個元素定址。
 
-*次*\
+*最後*\
 輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
@@ -3148,9 +3215,9 @@ The string with a character inserted from a range is: ABCDefgHIJ
 The string with a character inserted from a range is: ABCDeeeHIJ
 ```
 
-## <a name="basic_stringiterator"></a><a name="iterator"></a>basic_string：： iterator
+## <a name="basic_stringiterator"></a><a name="iterator"></a> basic_string：： iterator
 
-一種類型，提供可存取和讀取字串中元素的隨機存取反覆運算器 **`const`** 。
+一種類型，提供可以存取和讀取字串中專案的隨機存取反覆運算器 **`const`** 。
 
 ```cpp
 typedef implementation-defined iterator;
@@ -3158,13 +3225,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>備註
 
-型別 `iterator` 可以用來修改字元的值，並且用來以正向方向逐一查看字串。
+類型 `iterator` 可以用來修改字元的值，並且用來逐一查看字串的正向方向。
 
 ### <a name="example"></a>範例
 
 如需如何宣告及使用 `iterator` 的範例，請參閱 [begin](#begin) 的範例。
 
-## <a name="basic_stringlength"></a><a name="length"></a>basic_string：： length
+## <a name="basic_stringlength"></a><a name="length"></a> basic_string：： length
 
 傳回字串中目前的元素數目。
 
@@ -3230,7 +3297,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringmax_size"></a><a name="max_size"></a>basic_string：： max_size
+## <a name="basic_stringmax_size"></a><a name="max_size"></a> basic_string：： max_size
 
 傳回字串中可能包含的字元數上限。
 
@@ -3300,9 +3367,9 @@ int main( )
 }
 ```
 
-## <a name="basic_stringnpos"></a><a name="npos"></a>basic_string：： npos
+## <a name="basic_stringnpos"></a><a name="npos"></a> basic_string：： npos
 
-當搜尋函式失敗時，初始化為-1 的不帶正負號的整數值，指出「找不到」或「所有剩餘字元」。
+不帶正負號的整數值，在搜尋函式失敗時，表示「找不到」或「所有剩餘字元」。
 
 ```cpp
 static const size_type npos = -1;
@@ -3310,13 +3377,13 @@ static const size_type npos = -1;
 
 ### <a name="remarks"></a>備註
 
-若要檢查傳回值的 `npos` 值，除非傳回值的類型[size_type](#size_type) ，而不是或，否則可能無法使用 **`int`** **`unsigned`** 。
+如果要檢查傳回值的 `npos` 值，除非傳回值的類型是 [size_type](#size_type) 而不是或，否則它可能無法運作 **`int`** **`unsigned`** 。
 
 ### <a name="example"></a>範例
 
 如需如何宣告及使用 `npos` 的範例，請參閱 [find](#find) 的範例。
 
-## <a name="basic_stringoperator"></a><a name="op_add_eq"></a>basic_string：： operator + =
+## <a name="basic_stringoperator"></a><a name="op_add_eq"></a> basic_string：： operator + =
 
 將字元附加至字串。
 
@@ -3336,10 +3403,10 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 *char_value*\
 要附加的字元。
 
-*指標*\
+*Ptr*\
 要附加之 C 字串的字元。
 
-*再*\
+*對*\
 要附加之字串的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -3405,7 +3472,7 @@ The appended string str1d is: Hello Wide .
 The doubly appended strig str1 is: Hello Wide World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_eq"></a>basic_string：： operator =
+## <a name="basic_stringoperator"></a><a name="op_eq"></a> basic_string：： operator =
 
 將新的字元值指派給字串的內容。
 
@@ -3428,10 +3495,10 @@ basic_string<CharType, Traits, Allocator>& operator=(
 *char_value*\
 要指派的字元值。
 
-*指標*\
+*Ptr*\
 要指派給目標字串之 C 字串的字元指標。
 
-*再*\
+*對*\
 其字元要指派給目標字串的來源字串。
 
 ### <a name="return-value"></a>傳回值
@@ -3499,7 +3566,7 @@ The string str3c is: World.
 The string str1 reassigned with string str3c is: World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_at"></a>basic_string：： operator []
+## <a name="basic_stringoperator"></a><a name="op_at"></a> basic_string：： operator []
 
 使用字串中的指定索引，提供字元的參考。
 
@@ -3510,7 +3577,7 @@ reference operator[](size_type offset);
 
 ### <a name="parameters"></a>參數
 
-*投影*\
+*抵消*\
 要參考之元素的位置索引。
 
 ### <a name="return-value"></a>傳回值
@@ -3523,11 +3590,11 @@ reference operator[](size_type offset);
 
 `operator[]` 會比成員函式 [at](#at) 更快提供字串元素的讀取和寫入權限。
 
-`operator[]`不會檢查當做參數傳遞的索引是否有效，但成員函式 `at` 會執行，因此不一定要在有效性中使用。 傳遞至成員函式的無效索引（索引小於零或大於或等於字串大小）會擲回 `at` [out_of_range 類別](../standard-library/out-of-range-class.md)例外狀況。 傳遞給 `operator[]` 的索引若無效會導致未定義的行為，但等於字串長度的索引是 const 字串的有效索引，而且當傳遞此索引時，運算子會傳回 Null 字元。
+`operator[]` 不會檢查當做參數傳遞的索引是否有效，但成員函式是否有效，但不 `at` 一定要在有效性中使用。  (索引小於零或大於或等於傳遞給成員函式的字串大小) ，則會擲回 `at` [out_of_range 類別](../standard-library/out-of-range-class.md) 例外狀況。 傳遞給 `operator[]` 的索引若無效會導致未定義的行為，但等於字串長度的索引是 const 字串的有效索引，而且當傳遞此索引時，運算子會傳回 Null 字元。
 
 傳回的參考可能會因為字串重新分配或非字串的修改而失效 **`const`** 。
 
-當使用設為1或2的[ \_ 反覆運算器 \_ DEBUG \_ LEVEL](../standard-library/iterator-debug-level.md)進行編譯時，如果您嘗試存取字串界限以外的專案，就會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+當您將[ \_ 反覆運算器的 \_ 調試 \_ 層級](../standard-library/iterator-debug-level.md)設定為1或2時，如果您嘗試存取超出字串界限的專案，就會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -3568,7 +3635,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringpointer"></a><a name="pointer"></a>basic_string：:p ointer
+## <a name="basic_stringpointer"></a><a name="pointer"></a> basic_string：:p ointer
 
 類型，提供字串或字元陣列中之字元元素的指標。
 
@@ -3605,7 +3672,7 @@ The string pstr1a is: In Here.
 The C-string cstr1b is: Out There.
 ```
 
-## <a name="basic_stringpop_back"></a><a name="pop_back"></a>basic_string：:p op_back
+## <a name="basic_stringpop_back"></a><a name="pop_back"></a> basic_string：:p op_back
 
 清除字串的最後一個元素。
 
@@ -3617,7 +3684,7 @@ void pop_back();
 
 這個成員函式可有效地呼叫 `erase(size() - 1)` 來清除序列的最後一個項目，其必須是非空白。
 
-## <a name="basic_stringpush_back"></a><a name="push_back"></a>basic_string：:p ush_back
+## <a name="basic_stringpush_back"></a><a name="push_back"></a> basic_string：:p ush_back
 
 將元素加入至字串結尾。
 
@@ -3632,7 +3699,7 @@ void push_back(value_type char_value);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會有效地呼叫[insert](#insert)（ [end](#end)， *char_value* ）。
+成員函式會有效地呼叫 [insert](#insert) ( [end](#end)， *char_value* ) 。
 
 ### <a name="example"></a>範例
 
@@ -3672,7 +3739,7 @@ The last character-letter of the modified str1 is now: c
 The modified string str1 is: abc
 ```
 
-## <a name="basic_stringrbegin"></a><a name="rbegin"></a>basic_string：： rbegin
+## <a name="basic_stringrbegin"></a><a name="rbegin"></a> basic_string：： rbegin
 
 傳回指向反轉字串中第一個元素的迭代器。
 
@@ -3748,7 +3815,7 @@ AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreference"></a><a name="reference"></a>basic_string：： reference
+## <a name="basic_stringreference"></a><a name="reference"></a> basic_string：： reference
 
 類型，提供儲存在字串中之元素的參考。
 
@@ -3758,7 +3825,7 @@ typedef typename allocator_type::reference reference;
 
 ### <a name="remarks"></a>備註
 
-類型 `reference` 可用於修改元素的值。
+類型 `reference` 可以用來修改元素的值。
 
 這個類型與 `allocator_type::reference`同義。
 
@@ -3768,7 +3835,7 @@ typedef typename allocator_type::reference reference;
 
 如需如何宣告及使用 `reference` 的範例，請參閱 [at](#at) 的範例。
 
-## <a name="basic_stringrend"></a><a name="rend"></a>basic_string：： rend
+## <a name="basic_stringrend"></a><a name="rend"></a> basic_string：： rend
 
 傳回迭代器，為反向字串中最後一個元素的下一個位置定址。
 
@@ -3790,7 +3857,7 @@ reverse_iterator rend();
 
 `rend` 可以用來測試反向迭代器是否已到達其字串的結尾。
 
-傳回的值 `rend` 不應該取值。
+傳回的值不應取值 `rend` 。
 
 ### <a name="example"></a>範例
 
@@ -3846,7 +3913,7 @@ ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreplace"></a><a name="replace"></a>basic_string：： replace
+## <a name="basic_stringreplace"></a><a name="replace"></a> basic_string：： replace
 
 使用指定的字元，或從其他範圍或字串或 C 字串複製的字元，取代位於字串中指定位置的元素。
 
@@ -3924,7 +3991,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 作為運算元字串之字元來源的字串。
 
 *position_1*\
@@ -3939,7 +4006,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 *number_2*\
 要從參數 C 字串使用的字元數上限。
 
-*指標*\
+*Ptr*\
 作為運算元字串之字元來源的 C 字串。
 
 *char_value*\
@@ -3951,10 +4018,10 @@ basic_string<CharType, Traits, Allocator>& replace(
 *last0*\
 迭代器，為運算元字串中要移除的最後一個字元定址。
 
-*頭*\
+*第一*\
 迭代器 const_pointer 或 const_iterator，為參數字串中要複製的第一個字元定址。
 
-*次*\
+*最後*\
 迭代器 const_pointer 或 const_iterator，為參數字串中要複製的最後一個字元定址。
 
 *計數*\
@@ -4143,7 +4210,7 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
 is the string: OPPOOOO.
 ```
 
-## <a name="basic_stringreserve"></a><a name="reserve"></a>basic_string：： reserve
+## <a name="basic_stringreserve"></a><a name="reserve"></a> basic_string：： reserve
 
 將字串的容量數字，設定為至少和指定的數字一樣大。
 
@@ -4160,7 +4227,7 @@ void reserve(size_type count = 0);
 
 具有足夠的容量非常重要，因為重新配置是耗時的程序，而且會使參考字串字元的所有參考、指標和迭代器失效。
 
-字串類型物件的容量概念與向量類型物件的容量概念相同。 不同于 vector，可以呼叫成員函 `reserve` 式來壓縮物件的容量。 此要求是非繫結要求，而且不一定會發生。 由於參數的預設值為零，因此的呼叫 `reserve` 會是非系結要求，以縮小字串的容量，以符合字串中目前的字元數。 此容量永遠不會縮減到低於目前的字元數。
+字串類型物件的容量概念與向量類型物件的容量概念相同。 與 vector 不同的是，可以呼叫成員函 `reserve` 式來壓縮物件的容量。 此要求是非繫結要求，而且不一定會發生。 由於參數的預設值為零，因此的呼叫是非系結 `reserve` 要求，可壓縮字串的容量以符合字串中目前的字元數。 此容量永遠不會縮減到低於目前的字元數。
 
 呼叫 `reserve` 是壓縮字串容量的唯一方法。 不過，如前所述，此要求是非繫結要求，而且可能不會發生。
 
@@ -4233,7 +4300,7 @@ The current size of string str1 is: 11.
 The reduced capacity of string str1 is: 47.
 ```
 
-## <a name="basic_stringresize"></a><a name="resize"></a>basic_string：： resize
+## <a name="basic_stringresize"></a><a name="resize"></a> basic_string：： resize
 
 指定字串的新大小，視需要附加或清除元素。
 
@@ -4343,7 +4410,7 @@ The current size of downsized string str1 is: 5.
 The capacity of downsized string str1 is: 47.
 ```
 
-## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a>basic_string：： reverse_iterator
+## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a> basic_string：： reverse_iterator
 
 類型，提供儲存在字串中之元素的參考。
 
@@ -4359,7 +4426,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 如需如何宣告及使用 `reverse_iterator` 的範例，請參閱 [rbegin](#rbegin) 的範例。
 
-## <a name="basic_stringrfind"></a><a name="rfind"></a>basic_string：： rfind
+## <a name="basic_stringrfind"></a><a name="rfind"></a> basic_string：： rfind
 
 以向後方向搜尋字串中，第一個符合指定之字元序列的子字串。
 
@@ -4387,16 +4454,16 @@ size_type rfind(
 *char_value*\
 要搜尋之成員函式的字元值。
 
-*投影*\
+*抵消*\
 開始搜尋位置的索引。
 
-*指標*\
+*Ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*\
+*Str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -4534,7 +4601,7 @@ The substring 'clear' was not found in str4 before the 15th position.
 The index of the 1st element of 'clear' in str4 is: 17
 ```
 
-## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a>basic_string：： shrink_to_fit
+## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a> basic_string：： shrink_to_fit
 
 丟棄多餘的字串容量。
 
@@ -4546,7 +4613,7 @@ void shrink_to_fit();
 
 此成員函式會排除容器中任何非必要的儲存體。
 
-## <a name="basic_stringsize"></a><a name="size"></a>basic_string：： size
+## <a name="basic_stringsize"></a><a name="size"></a> basic_string：： size
 
 傳回字串中目前的元素數目。
 
@@ -4612,7 +4679,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringsize_type"></a><a name="size_type"></a>basic_string：： size_type
+## <a name="basic_stringsize_type"></a><a name="size_type"></a> basic_string：： size_type
 
 不帶正負號的整數類型，可以表示字串中的元素和索引數目。
 
@@ -4655,7 +4722,67 @@ The current size of string str1 is: 11.
 The capacity of string str1 is: 15.
 ```
 
-## <a name="basic_stringsubstr"></a><a name="substr"></a>basic_string：： substr
+## <a name="basic_stringstarts_with"></a><a name="starts_with"></a> basic_string：： starts_with
+
+檢查字串是否以指定的前置詞開頭。
+
+```cpp
+bool starts_with(const CharType c) const noexcept;
+bool starts_with(const CharType* const x) const noexcept;
+bool starts_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>參數
+
+*C*\
+要尋找的單一字元前置詞。
+
+*Sv*\
+字串視圖，包含要尋找的前置詞。 \
+您可以傳遞 `std::basic_string` ，以轉換成字串的視圖。
+
+*X*\
+以 Null 結束的字元字串，其中包含要尋找的前置詞。
+
+### <a name="return-value"></a>傳回值
+
+`true` 如果字串開頭為指定的前置詞，則為， `false` 否則為。
+
+### <a name="remarks"></a>備註
+
+`starts_with()` 是 c + + 20 的新功能。 若要使用它，請指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 的編譯器選項。
+
+請參閱 [ends_with](#ends_with) ，以查看字串是否以指定的尾碼結尾。
+
+### <a name="example"></a>範例
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::basic_string<char> str = "abcdefg";
+
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'     
+    std::cout << str.starts_with('b') << '\n';
+    std::cout << str.starts_with("aBc") << '\n';
+
+    std::basic_string<char> str2 = "abc";
+    std::cout << str.starts_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+false
+false
+true
+```
+
+## <a name="basic_stringsubstr"></a><a name="substr"></a> basic_string：： substr
 
 從開始於指定位置的字串，複製最多一定字元數量的子字串。
 
@@ -4667,7 +4794,7 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>參數
 
-*投影*\
+*抵消*\
 索引，用於將元素定位在建立字串複本的來源位置，預設值為 0。
 
 *計數*\
@@ -4714,7 +4841,7 @@ Heterological paradoxes are persistent.
 which is the entire original string.
 ```
 
-## <a name="basic_stringswap"></a><a name="swap"></a>basic_string：： swap
+## <a name="basic_stringswap"></a><a name="swap"></a> basic_string：： swap
 
 交換兩個字串的內容。
 
@@ -4725,7 +4852,7 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*Str*\
 要與目的字串交換其元素的來源字串。
 
 ### <a name="remarks"></a>備註
@@ -4775,7 +4902,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="basic_stringtraits_type"></a><a name="traits_type"></a>basic_string：： traits_type
+## <a name="basic_stringtraits_type"></a><a name="traits_type"></a> basic_string：： traits_type
 
 儲存在字串中之元素的字元特性的類型。
 
@@ -4785,7 +4912,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是第二個樣板參數的同義字 `Traits` 。
+此類型是第二個範本參數的同義字 `Traits` 。
 
 針對類型 `string` ，它相當於**char_traits \<char> **。
 
@@ -4793,7 +4920,7 @@ typedef Traits traits_type;
 
 如需如何宣告及使用 `traits_type` 的範例，請參閱 [copy](../standard-library/char-traits-struct.md#copy) 的範例。
 
-## <a name="basic_stringvalue_type"></a><a name="value_type"></a>basic_string：： value_type
+## <a name="basic_stringvalue_type"></a><a name="value_type"></a> basic_string：： value_type
 
 類型，代表儲存在字串中的字元類型。
 
@@ -4803,7 +4930,7 @@ typedef typename allocator_type::value_type value_type;
 
 ### <a name="remarks"></a>備註
 
-它相當於 `traits_type::char_type` ，而對於類型的物件而言，相當於 **`char`** `string` 。
+它相當於 `traits_type::char_type` ，且相當於 **`char`** 型別的物件 `string` 。
 
 ### <a name="example"></a>範例
 

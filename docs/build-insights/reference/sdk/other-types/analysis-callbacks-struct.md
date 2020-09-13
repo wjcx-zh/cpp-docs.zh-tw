@@ -45,7 +45,7 @@ typedef struct ANALYSIS_CALLBACKS_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `OnStartActivity` | 呼叫以處理活動開始事件。 |
 | `OnStopActivity` | 呼叫以處理活動停止事件。 |

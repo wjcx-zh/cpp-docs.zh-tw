@@ -39,7 +39,7 @@ typedef struct NAME_VALUE_PAIR_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `Name` | 名稱。 |
 | `Value` | 數值。 |

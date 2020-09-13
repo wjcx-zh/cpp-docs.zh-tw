@@ -40,7 +40,7 @@ typedef struct EVENT_COLLECTION_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `Count` | `EVENT_DATA`陣列中的元素數目。 |
 | `Elements` | 陣列中第一個 `EVENT_DATA` 元素的指標。 |

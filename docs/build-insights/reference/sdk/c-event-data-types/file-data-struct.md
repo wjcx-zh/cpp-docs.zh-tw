@@ -40,7 +40,7 @@ typedef struct FILE_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `Path` | 檔案的絕對路徑 |
 | `TypeCode` | 描述檔案類型的程式碼。 如需詳細資訊，請參閱 [FILE_TYPE_CODE](file-type-code-enum.md)。 |

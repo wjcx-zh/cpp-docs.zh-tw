@@ -42,7 +42,7 @@ typedef struct TRACE_INFO_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `LogicalProcessorCount` | 收集追蹤之機器上的邏輯處理器數目。 |
 | `TickFrequency` | 評估以刻度測量的持續時間時，每秒所使用的刻度數目。 |

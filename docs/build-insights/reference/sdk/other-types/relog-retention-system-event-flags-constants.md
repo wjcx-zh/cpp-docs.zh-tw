@@ -39,7 +39,7 @@ static const unsigned long long
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | 將 CPU 範例系統事件保留在 relogged 追蹤中。 |
 | `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | 將所有系統事件保留在 relogged 追蹤中。 |

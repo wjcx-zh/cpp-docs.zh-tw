@@ -154,7 +154,7 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 set 物件的 `allocator` 類別。|
 |[const_iterator](#const_iterator)|一種類型，提供可以讀取集合中元素的雙向反覆運算器 **`const`** 。|
@@ -174,7 +174,7 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 
 ### <a name="functions"></a>函數
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[開始](#begin)|傳回迭代器，會定址到`set` 中的第一個項目。|
 |[cbegin](#cbegin)|傳回常數迭代器，為 `set` 中的第一個項目定址。|
@@ -205,7 +205,7 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 
 ### <a name="operators"></a>操作員
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[運算子 =](#op_eq)|用另一個集合複本取代集合的項目。|
 

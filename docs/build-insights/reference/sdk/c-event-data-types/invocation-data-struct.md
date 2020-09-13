@@ -45,7 +45,7 @@ typedef struct INVOCATION_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `MSVCToolCode` | 識別調用型別的程式碼。 如需詳細資訊，請參閱 [MSVC_TOOL_CODE](msvc-tool-code-enum.md)。 |
 | `ToolVersion` | 物件，將叫用的工具版本儲存為整數值的群組。 |

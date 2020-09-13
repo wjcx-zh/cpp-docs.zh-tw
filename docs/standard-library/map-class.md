@@ -169,7 +169,7 @@ map 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件，�
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|對應物件之 `allocator` 類別的 typedef。|
 |[const_iterator](#const_iterator)|雙向反覆運算器的 typedef，可以讀取中的 **`const`** 元素 `map` 。|
@@ -221,7 +221,7 @@ map 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件，�
 
 ### <a name="operators"></a>操作員
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[operator&#91;&#93;](#op_at)|將具有特定索引鍵值的項目插入對應中。|
 |[運算子 =](#op_eq)|用另一個對應複本取代對應的項目。|

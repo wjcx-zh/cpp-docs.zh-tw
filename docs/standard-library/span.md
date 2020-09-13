@@ -57,27 +57,27 @@ int main()
 
 ### <a name="classes"></a>類別
 
-|Name|描述|
+|名稱|描述|
 |-|:-|
 |[跨度](span-class.md)| 提供一系列連續物件的觀點。 |
 
 ### <a name="operators"></a>操作員
 
-|Name|描述|
+|名稱|描述|
 |-|:-|
 |[運算子 =](span-class.md#op_eq)| 範圍指派 |
 |[運算元\[\]](span-class.md#op_at)| 項目存取 |
 
 ### <a name="functions"></a>函數
 
-|Name|描述|
+|名稱|描述|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| 取得範圍的基礎唯讀位元組。 |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | 取得範圍的基礎位元組。 |
 
 ### <a name="constants"></a>常數
 
-|Name|描述|
+|名稱|描述|
 |-|:-|
 | **dynamic_extent** | 表示在執行時間（而不是編譯時期）決定範圍大小。 當範圍中的專案數在編譯時期為已知時，會指定為 `Extent` 範本參數。 如果在執行時間之前不知道數位，請改為指定 `dynamic_extent` 。 |
 

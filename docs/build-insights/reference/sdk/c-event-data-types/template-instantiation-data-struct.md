@@ -41,7 +41,7 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `SpecializationSymbolKey` | 範本特製化類型的索引鍵。 這個值在要分析的追蹤內是唯一的。 |
 | `PrimaryTemplateSymbolKey` | 特製化之主要範本類型的索引鍵。 這個值在要分析的追蹤內是唯一的。 |

@@ -39,7 +39,7 @@ typedef struct FUNCTION_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `Name` | 函數的名稱，以 UTF-8 編碼。 |
 

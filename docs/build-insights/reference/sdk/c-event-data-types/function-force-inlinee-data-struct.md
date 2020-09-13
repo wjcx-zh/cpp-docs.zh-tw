@@ -40,7 +40,7 @@ typedef struct FUNCTION_FORCE_INLINEE_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `Name` | 函數的名稱，以 UTF-8 編碼。 |
 | `Size` | 函式的大小，以中繼指示數為限。 |

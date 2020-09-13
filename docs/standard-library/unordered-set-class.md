@@ -177,7 +177,7 @@ class unordered_set;
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|
@@ -197,7 +197,7 @@ class unordered_set;
 
 ### <a name="functions"></a>函數
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[開始](#begin)|指定受控制序列的開頭。|
 |[桶](#bucket)|取得索引鍵值的值區數目。|
@@ -230,7 +230,7 @@ class unordered_set;
 
 ### <a name="operators"></a>操作員
 
-|Name|描述|
+|名稱|描述|
 |-|-|
 |[unordered_set：： operator =](#op_eq)|複製雜湊資料表。|
 

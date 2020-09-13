@@ -41,7 +41,7 @@ typedef struct CL_PASS_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `TranslationUnitPassCode` | 識別正在執行之編譯階段的程式碼。 如需詳細資訊，請參閱 [TRANSLATION_UNIT_PASS_CODE](translation-unit-pass-code-enum.md)。 |
 | `InputSourcePath` | 正在執行此編譯階段的 C 或 c + + 原始程式檔。 |

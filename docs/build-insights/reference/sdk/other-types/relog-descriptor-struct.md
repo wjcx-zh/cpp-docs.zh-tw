@@ -43,7 +43,7 @@ typedef struct RELOG_DESCRIPTOR_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `NumberOfAnalysisPasses` | 在 relogging 會話的分析階段期間，應該針對 ETW 追蹤進行的分析傳遞數目。 |
 | `AnalysisCallbacks` | [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)物件，指定要在 relogging 會話的分析階段中呼叫哪些函數。 |

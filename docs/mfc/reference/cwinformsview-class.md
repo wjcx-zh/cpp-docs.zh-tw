@@ -31,19 +31,19 @@ class CWinFormsView : public CView;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CWinFormsView::CWinFormsView](#cwinformsview)|建構 `CWinFormsView` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CWinFormsView::GetControl](#getcontrol)|抓取 Windows Forms 控制項的指標。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|Name|描述|
+|名稱|描述|
 |----------|-|
 |[CWinFormsView：： operator Control ^](#operator_control)|將型別轉換為 Windows Forms 控制項的指標。|
 

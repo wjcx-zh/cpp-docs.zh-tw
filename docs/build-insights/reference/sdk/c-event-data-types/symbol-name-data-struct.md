@@ -40,7 +40,7 @@ typedef struct SYMBOL_NAME_DATA_TAG
 
 ## <a name="members"></a>成員
 
-| Name | 描述 |
+| 名稱 | 描述 |
 |--|--|
 | `Key` | 符號的索引鍵。 這個值在要分析的追蹤內是唯一的。 |
 | `Name` | 符號的名稱。 |

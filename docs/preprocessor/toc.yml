@@ -5,7 +5,7 @@
   items:
     - name: 前置處理器
       href: ../preprocessor/preprocessor.md
-    - name: 實驗性前置處理器概觀
+    - name: 新的前置處理器概觀
       href: ../preprocessor/preprocessor-experimental-overview.md
     - name: 轉譯階段
       href: ../preprocessor/phases-of-translation.md
@@ -35,7 +35,7 @@
               href: ../preprocessor/auto-search.md
             - name: embedded_idl
               href: ../preprocessor/embedded-idl.md
-            - name: 'exclude (#import)'
+            - name: exclude (#import)
               href: ../preprocessor/exclude-hash-import.md
             - name: high_method_prefix
               href: ../preprocessor/high-method-prefix.md
@@ -73,7 +73,7 @@
               href: ../preprocessor/raw-native-types.md
             - name: raw_property_prefixes
               href: ../preprocessor/raw-property-prefixes.md
-            - name: 'rename (#import)'
+            - name: rename (#import)
               href: ../preprocessor/rename-hash-import.md
             - name: rename_namespace
               href: ../preprocessor/rename-namespace.md
@@ -96,11 +96,11 @@
       items:
         - name: 前置處理器運算子
           href: ../preprocessor/preprocessor-operators.md
-        - name: '字串化運算子 (#)'
+        - name: 字串化運算子 (#)
           href: ../preprocessor/stringizing-operator-hash.md
-        - name: '字元化運算子 (#@)'
+        - name: 字元化運算子 (#@)
           href: ../preprocessor/charizing-operator-hash-at.md
-        - name: '語彙基元帶入運算子 (##)'
+        - name: 語彙基元帶入運算子 (##)
           href: ../preprocessor/token-pasting-operator-hash-hash.md
     - name: 前置處理器巨集 (C/C++)
       expanded: false

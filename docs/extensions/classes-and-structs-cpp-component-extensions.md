@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807767"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075799"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref 類別和 ref 結構 (C++/CLI 和 C++/CX)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87807767"
 ### <a name="syntax"></a>語法
 
 ```cpp
-class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref class name modifier : inherit_access base_type {};
 class_access ref struct name modifier : inherit_access base_type {};
 class_access value class name modifier : inherit_access base_type {};
 class_access value struct name modifier : inherit_access base_type {};
@@ -38,16 +38,16 @@ class_access value struct name modifier : inherit_access base_type {};
 ### <a name="parameters"></a>參數
 
 *class_access*<br/>
-(選擇性) 組件外部的類別或結構的存取範圍。 可能的值為 **`public`** ，而 **`private`** (**`private`** 為預設) 。 巢狀類別或結構不可以有*class_access* 指定名稱。
+(選擇性) 組件外部的類別或結構的存取範圍。 可能的值為 **`public`** ，而 **`private`** (**`private`** 是預設) 。 巢狀類別或結構不可以有*class_access* 指定名稱。
 
 *name*<br/>
 類別或結構的名稱。
 
-*者*<br/>
+*改 性 劑*<br/>
 (選擇性) [abstract](abstract-cpp-component-extensions.md) 和 [sealed](sealed-cpp-component-extensions.md) 為有效的修飾詞。
 
 *inherit_access*<br/>
-(選擇性) *base_interface* 的存取範圍。 唯一允許的協助工具 **`public`** 是 **`public`** 預設)  (。
+(選擇性) *base_interface* 的存取範圍。 唯一允許的存取範圍 **`public`** (**`public`** 是預設) 。
 
 *base_type*<br/>
 (選擇性) 基底類型。 不過，值類型無法做為基底類型。
@@ -56,9 +56,9 @@ class_access value struct name modifier : inherit_access base_type {};
 
 ### <a name="remarks"></a>備註
 
-以**ref 類別**或實**值類別**宣告之物件的預設成員存取範圍是 **`private`** 。 而以**ref 結構**或實**值結構**宣告之物件的預設成員存取範圍是 **`public`** 。
+以 **ref 類別** 或實 **值類別** 宣告之物件的預設成員存取範圍是 **`private`** 。 而以 **ref 結構** 或實 **值結構** 宣告之物件的預設成員存取範圍是 **`public`** 。
 
-當參考類型繼承自另一個參考類型時，必須以 [override](override-cpp-component-extensions.md) 明確覆寫，或以 [new (vtable 中的新位置)](new-new-slot-in-vtable-cpp-component-extensions.md) 隱藏基底類別中的虛擬函式。 衍生的類別函式也必須明確標示為 **`virtual`** 。
+當參考類型繼承自另一個參考類型時，必須以 [override](override-cpp-component-extensions.md) 明確覆寫，或以 [new (vtable 中的新位置)](new-new-slot-in-vtable-cpp-component-extensions.md) 隱藏基底類別中的虛擬函式。 衍生類別函數也必須明確標示為 **`virtual`** 。
 
 若要在編譯時間偵測某個類型為 **ref 類別**或 **ref 結構**，或是**實值類別**或**實值結構**，請使用 `__is_ref_class (type)`、`__is_value_class (type)` 或 `__is_simple_value_class (type)`。 如需詳細資訊，請參閱[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
@@ -70,11 +70,11 @@ class_access value struct name modifier : inherit_access base_type {};
 
 - [類別、結構和等位](../cpp/classes-and-structs-cpp.md)
 
-- [如何：定義和使用類別和結構中的析構函數和完成項 (c + +/CLI) ](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [How to：定義和使用類別和結構 (c + +/CLI) 的析構函數和完成項 ](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [使用者定義的運算子 (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
-- [ (c + +/CLI) 的使用者定義轉換](../dotnet/user-defined-conversions-cpp-cli.md)
+- [ (c + +/CLI) 的使用者定義轉換 ](../dotnet/user-defined-conversions-cpp-cli.md)
 
 - [如何：包裝原生類別以供 C 使用#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
@@ -120,4 +120,4 @@ class_access value struct name modifier : inherit_access base_type {};
 
 ## <a name="see-also"></a>另請參閱
 
-[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)

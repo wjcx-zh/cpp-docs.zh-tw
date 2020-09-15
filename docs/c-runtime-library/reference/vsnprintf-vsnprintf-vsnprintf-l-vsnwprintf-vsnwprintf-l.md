@@ -1,5 +1,6 @@
 ---
 title: vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
+description: Vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf 和 _vsnwprintf_l 的 API 參考;使用引數清單的指標撰寫格式化的輸出。
 ms.date: 06/24/2020
 api_name:
 - _vsnprintf
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737586"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075760"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
@@ -161,31 +162,31 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-**Vsnprintf**函數會傳回寫入的字元數，而不會計算終止的 null 字元。 如果*count*指定的緩衝區大小不夠大，而無法包含*format*和*argptr*所指定的輸出，則**vsnprintf**的傳回值就是要寫入的字元數，而不會計算 null 字元（如果*計數*夠大）。 如果傳回值大於*計數*-1，輸出就會被截斷。 傳回值 -1 表示發生編碼錯誤。
+**Vsnprintf**函式會傳回寫入的字元數，而不會計算終止的 null 字元。 如果 *count* 所指定的緩衝區大小不夠大，無法包含 *格式* 和 *argptr*指定的輸出，則 **vsnprintf** 的傳回值會是寫入的字元數，不計入 null 字元（如果 *count* 夠大）。 如果傳回值大於 *計數* -1，則輸出已被截斷。 傳回值 -1 表示發生編碼錯誤。
 
-如果要寫入的字元數小於或等於*count*， **_vsnprintf**和 **_vsnwprintf**函數都會傳回寫入的字元數。 如果要寫入的字元數大於*計數*，這些函式會傳回-1，表示輸出已被截斷。
+如果要寫入的字元數小於或等於*count*， **_vsnprintf**和 **_vsnwprintf**函數都會傳回寫入的字元數。 如果要寫入的字元數大於 *count*，則這些函式會傳回-1，表示輸出已被截斷。
 
-所有這些函式傳回的值不包含結束的 null （不論是否有寫入）。
+所有這些函式所傳回的值不包含終止的 null （不論是否有寫入）。
 
-- 如果*count*為零，而*buffer*是**Null**，則傳回的值是函式所要寫入的字元數。 此值不會將終止的**Null**納入考慮。 您可以使用此結果為字串及其終止的 Null 配置足夠的緩衝區空間，然後再次呼叫函式，以填滿緩衝區。
-- 如果*count*為零，但*Buffer*不是**Null**，則不會寫入任何內容，且函式會傳回 `-1` 。
-- 如果*format*是**null**，或者*buffer*是**null** ，而*count*不等於零，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
+- 如果 *count* 為零，而 *緩衝區* 為 **Null**，則傳回的值為函式所要寫入的字元數。 此值不會將終止的 **Null**列入考慮。 您可以使用此結果為字串及其終止的 Null 配置足夠的緩衝區空間，然後再次呼叫函式，以填滿緩衝區。
+- 如果 *count* 為零，但 *緩衝區* 不是 **Null**，則不會寫入任何內容，而且函數會傳回 `-1` 。
+- 如果 *格式* 為 **null**，或如果 *緩衝區* 為 **null** 且 *計數* 不等於零，則這些函式會叫用不正確參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將 **errno** 設定為 **EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化資料，*並將最多個字元*寫入*緩衝區*所指向的記憶體。 **Vsnprintf**函式一律會寫入 null 結束字元，即使它截斷輸出也一樣。 當使用 **_vsnprintf**和 **_vsnwprintf**時，只有在結尾有空間時，緩衝區才會以 null 終止（也就是，如果要寫入的字元數小於*計數*）。
+這些函式中的每一個都會接受引數清單的指標，然後將資料格式化，並將多*個字元寫入至**緩衝區*所指向的記憶體。 **Vsnprintf**函式一律會寫入 null 結束字元，即使它截斷輸出也是一樣。 使用 **_vsnprintf** 和 **_vsnwprintf**時，只有在尾端有空間時，緩衝區才會以 null 終止 (也就是，如果要寫入的字元數小於 *計數*) 。
 
 > [!IMPORTANT]
-> 若要避免特定類型的安全性風險，請確定該*格式*不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 若要避免特定種類的安全性風險，請確定 *格式* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!NOTE]
-> 若要確保在呼叫 **_vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**和 **_vsnwprintf_l**時，終止 null 有足夠的空間，請確定*計數*嚴格小於緩衝區長度，並在呼叫函式之前將緩衝區初始化為 null。
+> 為了確保在呼叫 **_vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf** 和 **_vsnwprintf_l**時，終止的 null 有空間，請確定 *計數* 是嚴格小於緩衝區長度，並在呼叫函式之前將緩衝區初始化為 null。
 >
-> 由於**vsnprintf**一律會寫入終止的 null，因此*count*參數可能會等於緩衝區的大小。
+> 因為 **vsnprintf** 一律會寫入終止的 null，所以 *count* 參數可能等於緩衝區的大小。
 
-從 Visual Studio 2015 和 Windows 10 的 UCRT 開始， **vsnprintf**不再與 **_vsnprintf**相同。 **Vsnprintf**函數符合 C99 標準;保留 **_vnsprintf**以提供舊版 Visual Studio 程式碼的回溯相容性。
+從 Visual Studio 2015 和 Windows 10 的 UCRT 開始， **vsnprintf** 不再等同于 **_vsnprintf**。 **Vsnprintf**函數符合 C99 標準;保留 **_vnsprintf**的目的，是為了與舊版的 Visual Studio 程式碼相容。
 
-這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
+這些具有 **_l** 尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -203,7 +204,7 @@ int _vsnwprintf_l(
 |**vsnprintf**、 **_vsnprintf**、 **_vsnprintf_l**|\<stdio.h>|\<stdio.h> 或 \<cstdio>|
 |**_vsnwprintf**， **_vsnwprintf_l**|\<stdio.h> 或 \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio> 或 \<cwchar>|
 
-**_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**和 **_vsnwprintf_l**函式為 Microsoft 特有的功能。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**和 **_vsnwprintf_l**函數都是 Microsoft 專屬的。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -245,7 +246,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-如果您改用 vsnprintf 加上窄字串參數，行為就會變更。 *Count*參數可以是緩衝區的整個大小，而傳回值則是當*計數*夠大時，會寫入的字元數：
+如果您改用 vsnprintf 加上窄字串參數，行為就會變更。 *Count*參數可以是緩衝區的整個大小，而傳回值則是當*計數*夠大時，所寫入的字元數：
 
 ## <a name="example"></a>範例
 
@@ -290,5 +291,5 @@ nSize: 10, buff: Hi there!
 [格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>

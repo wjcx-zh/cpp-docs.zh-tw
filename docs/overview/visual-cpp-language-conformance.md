@@ -6,21 +6,21 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 84572d44cd994da07d44e736983270a1e7acd1ec
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: d9fbbc4f0eddba0ae6a7dbc3250a26d36155506e
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88086977"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075786"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
-Visual Studio (MSVC) 中 Microsoft c + + 編譯器的標準一致性是進行中的工作。 以下是依 Visual Studio 版本的 ISO Standard c + + 語言和程式庫一致性的摘要。 每個編譯器和標準程式庫功能名稱都會連結到描述功能的 ISO Standard c + + 提案檔（如果發行時有提供的話）。 [**支援**的資料行] 會列出首次出現功能支援的 Visual Studio 版本。
+Microsoft c + + 編譯器在 Visual Studio (MSVC) 的標準一致性是進行中的工作。 以下是 Visual Studio 版本的 ISO 標準 c + + 語言和程式庫一致性摘要。 每個編譯器和標準程式庫功能名稱都會連結到描述此功能的 ISO 標準 c + + 提案檔（如果在發行時有提供的話）。 **支援**的資料行會列出先出現功能支援的 Visual Studio 版本。
 
-如需 Visual Studio 2017 或 Visual Studio 2019 MSVC 一致性改進的詳細資訊，請參閱[Visual Studio 中的 c + + 一致性改善](cpp-conformance-improvements.md)。 如需其他變更的清單，請參閱[Visual Studio 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 如需舊版的一致性變更，請參閱 [Visual C++ 變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)和[從 2003 到 2015 的 Visual C++ 新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)。 如需 C++ 小組發出的最新消息，請瀏覽 [小組部落格](https://devblogs.microsoft.com/cppblog/) \(英文\)。
+如需 Visual Studio 2017 或 Visual Studio 2019 MSVC 一致性改善的詳細資訊，請參閱 [Visual Studio 中的 c + + 一致性改善](cpp-conformance-improvements.md)。 如需其他變更的清單，請參閱 [Visual Studio 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 如需舊版的一致性變更，請參閱 [Visual C++ 變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)和[從 2003 到 2015 的 Visual C++ 新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)。 如需 C++ 小組發出的最新消息，請瀏覽 [小組部落格](https://devblogs.microsoft.com/cppblog/) \(英文\)。
 
 > [!NOTE]
-> Visual Studio 2015、Visual Studio 2017 與 Visual Studio 2019 之間沒有二進位檔重大變更。 如需詳細資訊，請參閱[Visual Studio 2015、2017和2019之間的 c + + 二進位相容性](../porting/binary-compat-2015-2017.md)
+> Visual Studio 2015、Visual Studio 2017 與 Visual Studio 2019 之間沒有二進位檔重大變更。 如需詳細資訊，請參閱 [Visual Studio 2015、2017和2019之間的 c + + 二進位相容性](../porting/binary-compat-2015-2017.md)
 
 ## <a name="compiler-features"></a>編譯器功能
 
@@ -85,7 +85,7 @@ Visual Studio (MSVC) 中 Microsoft c + + 編譯器的標準一致性是進行中
 | &nbsp;&nbsp;[`P0145R3 Refining expression evaluation order`](https://wg21.link/p0145r3)<br/>&nbsp;&nbsp;[`P0400R0 Order of evaluation of function arguments`](https://wg21.link/p0400r0) | VS 2017 15.7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0195R2 Pack expansions in using-declarations`](https://wg21.link/p0195r2) | VS 2017 15.7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0283R2 Ignoring unrecognized attributes`](https://wg21.link/p0283r2) | VS 2015 <sup>[14](#note_14)</sup> |
-| __C + + 17 核心語言功能 (缺失報表) __ | __支援__ |
+| __C + + 17 核心語言功能 (瑕疵報表) __ | __支援__ |
 | &nbsp;&nbsp;[`P0702R1 Fixing class template argument deduction for initializer-list ctors`](https://wg21.link/p0702r1) | VS 2017 15.7 <sup> [17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0961R1 Relaxing the structured bindings customization point finding rules`](https://wg21.link/p0961r1) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0969R0 Allowing structured bindings to accessible members`](https://wg21.link/p0969r0) | VS 2019 16.0 <sup>[17](#note_17)</sup> |
@@ -185,7 +185,7 @@ Visual Studio (MSVC) 中 Microsoft c + + 編譯器的標準一致性是進行中
 
 ## <a name="standard-library-features"></a>標準程式庫功能
 
-如需更詳細的標準程式庫功能清單和依產品版本的錯誤修正，請見[GitHub MICROSOFT STL Wiki 變更記錄](https://github.com/microsoft/STL/wiki/Changelog)頁面。
+[GitHub MICROSOFT STL Wiki 變更記錄](https://github.com/microsoft/STL/wiki/Changelog)頁面提供更詳細的標準程式庫功能和依產品版本修正的錯誤清單。
 
 | 功能 | 支援 |
 |--|--|
@@ -273,9 +273,9 @@ Visual Studio (MSVC) 中 Microsoft c + + 編譯器的標準一致性是進行中
 | &nbsp;&nbsp;[`P0608R3 Improving variant's Converting Constructor/Assignment`](https://wg21.link/P0608R3) | 否 |
 | &nbsp;&nbsp;[`P0645R10 <format> Text Formatting`](https://wg21.link/p0645r10) | 否 |
 | &nbsp;&nbsp;[`P0660R10 <stop_token> and jthread`](https://wg21.link/p0660r10) | 否 |
-| &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | VS 2019 16.0 <sup> [20](#note_20)的部分</sup> |
+| &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | 部分在 VS 2019 16.0 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0784R7 Library support for more constexpr containers`](https://wg21.link/P0784R7) | 否 |
-| &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | VS 2019 16.3 <sup> [20](#note_20)的部分</sup> |
+| &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | 部分在 VS 2019 16.3 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0896R4 <ranges>`](https://wg21.link/P0896R4) | 否 |
 | &nbsp;&nbsp;[`P0912R5 Library Support For Coroutines`](https://wg21.link/P0912R5) | 否 |
 | &nbsp;&nbsp;[`P0980R1 constexpr std::string`](https://wg21.link/P0980R1) | 否 |
@@ -401,77 +401,77 @@ Visual Studio (MSVC) 中 Microsoft c + + 編譯器的標準一致性是進行中
 | &nbsp;&nbsp;[`N3655 Alias Templates For <type_traits> (decay_t, etc.)`](https://wg21.link/n3655) | VS 2013 |
 | &nbsp;&nbsp;[`N3656 make_unique()`](https://wg21.link/n3656) | VS 2013 |
 
-列出的一組論文會指出標準功能，以及一或多個已核准的改進或擴充。 這些功能皆會一起實作。
+一組列出的白皮書，表示一項標準功能，以及一或多個已核准的改進或擴充。 這些功能皆會一起實作。
 
 ### <a name="supported-values"></a>支援的值
 
-[__否__] 表示尚未實行。 \
+尚未實行__任何__方法。
 「部分」____ 表示實作不完整。 如需詳細資訊，請參閱附注一節。
-__VS 2010__表示 Visual Studio 2010 中支援的功能。
-__VS 2013__表示 Visual Studio 2013 支援的功能。
-__VS 2015__表示 Visual Studio 2015 (RTW) 支援的功能。
-__Vs 2015.2__和__vs 2015.3__分別指出 Visual Studio 2015 update 2 和 Visual Studio 2015 update 3 中支援的功能。
-__VS 2017 15.0__指出 Visual Studio 2017 版本 15.0 (RTW) 支援的功能。
-__VS 2017 15.3__表示 Visual Studio 2017 版本15.3 中支援的功能。
-__VS 2017 15.5__表示 Visual Studio 2017 版本15.5 中支援的功能。
-__VS 2017 15.7__表示 Visual Studio 2017 版本15.7 中支援的功能。
-__VS 2019 16.0__指出 Visual Studio 2019 版本 16.0 (RTW) 支援的功能。
-__VS 2019 16.1__表示 Visual Studio 2019 版本16.1 中支援的功能。
-__VS 2019 16.2__表示 Visual Studio 2019 版本16.2 中支援的功能。
-__VS 2019 16.3__表示 Visual Studio 2019 版本16.3 中支援的功能。
-__VS 2019 16.4__表示 Visual Studio 2019 版本16.4 中支援的功能。
-__VS 2019 16.5__表示 Visual Studio 2019 版本16.5 中支援的功能。
-__VS 2019 16.6__表示 Visual Studio 2019 版本16.6 中支援的功能。
-__VS 2019 16.7__表示 Visual Studio 2019 版本16.7 中支援的功能。
+__VS 2010__ 指出 Visual Studio 2010 支援的功能。
+__VS 2013__ 指出 Visual Studio 2013 所支援的功能。
+__VS 2015__ 指出 Visual Studio 2015 (RTW) 支援的功能。
+__Vs 2015.2__ 和 __vs 2015.3__ 分別指出 Visual Studio 2015 update 2 和 Visual Studio 2015 update 3 中支援的功能。
+__VS 2017 15.0__ 指出 Visual Studio 2017 15.0 版 (RTW) 支援的功能。
+__VS 2017 15.3__ 指出 Visual Studio 2017 15.3 版中支援的功能。
+__VS 2017 15.5__ 指出 Visual Studio 2017 15.5 版中支援的功能。
+__VS 2017 15.7__ 指出 Visual Studio 2017 15.7 版中支援的功能。
+__VS 2019 16.0__ 指出 Visual Studio 2019 16.0 版 (RTW) 支援的功能。
+__VS 2019 16.1__ 指出 Visual Studio 2019 16.1 版中支援的功能。
+__VS 2019 16.2__ 指出 Visual Studio 2019 16.2 版中支援的功能。
+__VS 2019 16.3__ 指出 Visual Studio 2019 16.3 版中支援的功能。
+__VS 2019 16.4__ 指出 Visual Studio 2019 16.4 版中支援的功能。
+__VS 2019 16.5__ 指出 Visual Studio 2019 16.5 版中支援的功能。
+__VS 2019 16.6__ 指出 Visual Studio 2019 16.6 版中支援的功能。
+__VS 2019 16.7__ 指出 Visual Studio 2019 16.7 版所支援的功能。
 
 ### <a name="notes"></a>備註
 
-<a name="note_A"></a>__在__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 模式中，動態例外狀況規格會維持不變，而且 `throw()` 仍會視為的同義字 `__declspec(nothrow)` 。 在 c + + 17 中，動態例外狀況規格大多是由 P0003R5 所移除，讓一個 vestige： `throw()` 已被取代，且其行為必須與的同義字相同 **`noexcept`** 。 在 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 模式中，MSVC 現在會藉由提供與 `throw()` 相同的行為 **`noexcept`** （也就是透過終止強制執行），來符合標準。
+<a name="note_A"></a>__在__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 模式中，動態例外狀況規格仍會保持未實現狀態，而且 `throw()` 仍會被視為的同義字 `__declspec(nothrow)` 。 在 c + + 17 中，動態例外狀況規格大多是由 P0003R5 所移除，讓一個殘留專案： `throw()` 已被取代，而且需要做為的同義字 **`noexcept`** 。 在 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 模式中，MSVC 現在會提供與相同的 `throw()` 行為 **`noexcept`** （也就是透過終止強制執行）來符合標準。
 
-編譯器選項會 [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) 要求的舊行為 `__declspec(nothrow)` 。 這很可能 `throw()` 會在 c + + 20 中移除。 為了協助遷移程式碼以回應標準和我們的實作為中的這些變更，已在和下新增例外狀況規格問題的新編譯器警告 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) [`/permissive-`](../build/reference/permissive-standards-conformance.md) 。
+編譯器選項會 [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) 要求的舊行為 `__declspec(nothrow)` 。 這很可能 `throw()` 會在 c + + 20 中移除。 為了協助您遷移程式碼以回應標準和我們的實作為這些變更，已在和中新增例外狀況規格問題的新編譯器警告 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) [`/permissive-`](../build/reference/permissive-standards-conformance.md) 。
 
-<a name="note_B"></a>__B__ [`/permissive-`](../build/reference/permissive-standards-conformance.md) Visual Studio 2017 15.7 版中的模式支援。 如需詳細資訊，請參閱[MSVC 的兩階段名稱查閱支援](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)。
+<a name="note_B"></a>__B__ [`/permissive-`](../build/reference/permissive-standards-conformance.md) Visual Studio 2017 15.7 版中的模式支援。 如需詳細資訊，請參閱 [MSVC 的兩階段名稱查閱支援](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)。
 
-<a name="note_C"></a>__C__編譯器在 Visual Studio 2017 中的 C99 預處理器規則支援不完整。 我們會檢修預處理器，並開始使用[/experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數，在 Visual Studio 2017 版本15.8 中傳送這些變更。
+<a name="note_C"></a>__C__從 Visual Studio 2017 15.8 版開始，編譯器會透過[/experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數提供 C99 預處理器的支援。 從 Visual Studio 2019 16.6 版開始，編譯器會透過參數完全執行 C99 預處理器 [`/Zc:preprocessor`](../build/reference/zc-conformance.md) 。 當編譯器切換或指定時，預設為 `/std:c11` 開啟 `/std:c17` 。
 
-<a name="note_D"></a>__D__在底下支援 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) suppressible 警告， [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) 。
+<a name="note_D"></a>在下支援的 __D__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) suppressible 警告 [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) 。
 
-<a name="note_E"></a>__E__這是一項全新的執行，與舊版不相容，這是 `std::experimental` 因應符號支援、錯誤修正和標準必要行為變更所需。 目前，包括 \<filesystem> 提供新的 `std::filesystem` 和上一個 `std::experimental::filesystem` ，而且包含 \<experimental/filesystem> 只提供舊的實驗性執行。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
+<a name="note_E"></a>__E__這是全新的執行，與先前的版本不相容 `std::experimental` ，因為符號支援、bug 修正，以及標準的必要行為變更所需。 目前，包括 \<filesystem> 提供新的 `std::filesystem` 和上一個 `std::experimental::filesystem` ，而且包括 \<experimental/filesystem> 只提供舊的實驗性執行。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
 
 <a name="note_G"></a> __G__ 由編譯器內建支援。
 
-<a name="note_14"></a>__14__這些 c + + 17/20 功能一律會啟用，即使 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) (指定預設) 也一樣。 原因可能是因為功能是在引進 **/std**選項之前執行，或是因為條件式實過於複雜。
+<a name="note_14"></a>__14__這些 c + + 17/20 功能一律會啟用，即使在 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) (指定預設) 時也一樣。 原因是，此功能是在引進 **/std** 選項之前完成的，或是因為條件式實過於複雜而執行。
 
 <a name="note_17"></a>__17__這些功能是由 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) 編譯器選項啟用。
 
-<a name="note_20"></a>__20__這些功能是由 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) 編譯器選項啟用。 當 c + + 20 執行完成時，將會加入新的 **`/std:c++20`** 編譯器選項，而且這些功能也會提供給您。
+<a name="note_20"></a>__20__這些功能是由 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) 編譯器選項啟用。 當 c + + 20 的執行完成時， **`/std:c++20`** 將會加入新的編譯器選項，也會提供這些功能。
 
-<a name="note_DR"></a>__DR__所有編譯器選項模式都會啟用這些功能 [`/std`](../build/reference/std-specify-language-standard-version.md) 。 C + + 標準委員會採用這種方式做為 c + + 11 和所有更新版本的追溯瑕疵報告。
+<a name="note_DR"></a>__DR__所有編譯器選項模式都會啟用這些功能 [`/std`](../build/reference/std-specify-language-standard-version.md) 。 C + + 標準委員會將此視為追溯瑕疵報告給 c + + 11 和所有更新版本。
 
-<a name="note_byte"></a>__byte__ `std::byte`是由 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) 啟用，但因為它可能會在某些情況下與 Windows SDK 標頭髮生衝突，所以它有更細緻的退出宣告宏。 可以透過將 `_HAS_STD_BYTE` 定義為 `0`來停用它。
+<a name="note_byte"></a>__位元組__ `std::byte`[`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) 啟用，但因為在某些情況下，它可能會與 Windows SDK 標頭髮生衝突，所以它有更精細的退出宣告宏。 可以透過將 `_HAS_STD_BYTE` 定義為 `0`來停用它。
 
-<a name="note_C11"></a> __C11__ 通用 CRT 已實作 C++17 所需的 C11 標準程式庫組件，除了 C99 `strftime()` E/O 替代轉換規範、C11 `fopen()` 獨佔模式，以及 C11 `aligned_alloc()`之外。 後者不太可能實行，因為 C11 的指定 `aligned_alloc()` 方式與 Microsoft 的實作為不相容 `free()` ：也就是說， `free()` 必須能夠處理高度對齊的配置。
+<a name="note_C11"></a>__C11__C11 的編譯器支援需要 Visual Studio 版本16.8 或更高版本。 C11 程式庫支援需要 Windows SDK 版本20211或更高版本。 通用 CRT 會執行 c + + 17 所需的 C11 Standard 程式庫部分，除了 C99 `strftime()` E/O 替代轉換規範和 C11 `aligned_alloc()` 。 不太可能會執行後者，因為 Windows 作業系統不支援對齊的配置。
 
-<a name="note_rem"></a>__rem__[`/std:c++17`](../build/reference/std-specify-language-standard-version.md)指定 (或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) 編譯器選項時，所移除的功能。 您可以使用下列巨集重新啟用這些功能以清除轉換到新語言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 與 `_HAS_UNEXPECTED`。
+<a name="note_rem"></a>__rem__當 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 指定 (或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) 編譯器選項時，就會移除功能。 您可以使用下列巨集重新啟用這些功能以清除轉換到新語言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 與 `_HAS_UNEXPECTED`。
 
 <a name="note_charconv"></a> __charconv__ `from_chars()` 與 `to_chars()` 可用於整數。 浮點數 `from_chars()` 與浮點數 `to_chars()` 的時間表如下所示：
 
 - VS 2017 15.7：整數 `from_chars()` 和 `to_chars()` 。
-- VS 2017 15.8：浮點 `from_chars()` 。
-- VS 2017 15.9： `to_chars()` 最短十進位數的浮點多載。
-- VS 2019 16.0：浮點多載 `to_chars()` ，適用于最短的十六進位和有效位數十六進位。
+- VS 2017 15.8：浮點數 `from_chars()` 。
+- VS 2017 15.9： `to_chars()` 最短 decimal 的浮點多載。
+- VS 2019 16.0： `to_chars()` 最短十六進位和精確度十六進位的浮點多載。
 - VS 2019 16.2： `to_chars()` 精確度固定和精確度科學的浮點多載。
-- VS 2019 16.4：有效位數一般的浮點多載 `to_chars()` 。
+- VS 2019 16.4：精確度一般的浮點多載 `to_chars()` 。
 
-<a name ="note_parallel"></a>__平行__C + + 17 的平行演算法程式庫已完成。 [完成] 並不表示每個案例中的每個演算法都會平行處理。 最重要的演算法已平行處理，而且即使不平行處理演算法，也會提供執行原則簽章。 我們的實作為中央內部標頭（yvals_core .h）包含下列「平行演算法附注」： c + + 允許執行實作為呼叫序列演算法的平行演算法。 這項實作會平行處理數個常見的演算法呼叫，但並非全部。
+<a name ="note_parallel"></a>__平行__C + + 17 的平行演算法程式庫已完成。 Complete 並不表示每個演算法都會平行處理每種演算法。 最重要的演算法已進行平行處理，即使不平行處理演算法，也會提供執行原則簽章。 我們的實作為中央內部標頭 yvals_core .h 包含下列「平行演算法附注」： c + + 可讓實作為呼叫序列演算法的實作為平行演算法。 這項實作會平行處理數個常見的演算法呼叫，但並非全部。
 
 下列演算法已平行處理：
 
 - `adjacent_difference`, `adjacent_find`, `all_of`, `any_of`, `count`, `count_if`, `equal`, `exclusive_scan`, `find`, `find_end`, `find_first_of`, `find_if`, `find_if_not`, `for_each`, `for_each_n`, `inclusive_scan`, `is_heap`, `is_heap_until`, `is_partitioned`, `is_sorted`, `is_sorted_until`, `mismatch`, `none_of`, `partition`, `reduce`, `remove`, `remove_if`, `replace`, `replace_if`, `search`, `search_n`, `set_difference`, `set_intersection`, `sort`, `stable_sort`, `transform`, `transform_exclusive_scan`, `transform_inclusive_scan`, `transform_reduce`
 
-目前並未平行處理下列各項：
+下列目前尚未平行處理：
 
-- 目標硬體上沒有明顯的平行處理原則效能改進;只複製或置換沒有分支之元素的所有演算法，通常會受到記憶體頻寬限制：
+- 目標硬體沒有明顯的平行處理原則效能改進;只複製或置換沒有分支之元素的所有演算法，通常都有記憶體頻寬限制：
   - `copy`, `copy_n`, `fill`, `fill_n`, `move`, `reverse`, `reverse_copy`, `rotate`, `rotate_copy`, `shift_left`, `shift_right`, `swap_ranges`
 - 使用者平行處理原則的需求存在混淆。仍可能在上述類別目錄中：
   - `generate`, `generate_n`
@@ -486,6 +486,6 @@ __VS 2019 16.7__表示 Visual Studio 2019 版本16.7 中支援的功能。
 [C + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)\
 [Visual Studio 中的 c + + 一致性改善](cpp-conformance-improvements.md)\
 [Visual Studio 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)\
-[Visual C++ 變更歷程記錄2003到2015](../porting/visual-cpp-change-history-2003-2015.md)\
-[Visual C++ 2003 到2015的新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)\
+[Visual C++ 變更歷程記錄2003至2015](../porting/visual-cpp-change-history-2003-2015.md)\
+[Visual C++ 2003 至2015的新功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)\
 [C++ 小組部落格](https://devblogs.microsoft.com/cppblog/)

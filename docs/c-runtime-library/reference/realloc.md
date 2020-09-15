@@ -1,6 +1,7 @@
 ---
 title: realloc
-ms.date: 4/2/2020
+description: 'Realloc ( # A1; 的 API 參考這會重新配置記憶體區塊。'
+ms.date: 9/11/2020
 api_name:
 - realloc
 - _o_realloc
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 72c38021452940553bad770160ecc5db7ea546d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c68909b2f5d73959465d63af522ceeb00c8ce23e
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216813"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075812"
 ---
 # <a name="realloc"></a>realloc
 
@@ -59,31 +60,34 @@ void *realloc(
 
 ### <a name="parameters"></a>參數
 
-*memblock*<br/>
+*`memblock`*\
 先前配置之記憶體區塊的指標。
 
-*size*<br/>
+*`size`*\
 新的大小 (以位元組計)。
 
 ## <a name="return-value"></a>傳回值
 
-**realloc**會傳回重新配置 **`void`** （且可能已移動）記憶體區塊的指標。
+**`realloc`** 傳回重新配置之 **`void`** (的指標，可能會移動) 記憶體區塊。
 
-如果沒有足夠的可用記憶體可將區塊展開為指定的大小，原始區塊會保留不變，而且會傳回**Null** 。
+如果沒有足夠的可用記憶體將區塊展開為指定大小，則原始區塊會保持不變，並 **`NULL`** 傳回。
 
-如果*size*為零，則會釋放*memblock*所指向的區塊;傳回值為**Null**，而*memblock*是指向釋放的區塊。
+如果 *`size`* 是零，則會釋放所指向的區塊 *`memblock`* ; 傳回值是 **`NULL`** ，而且 *`memblock`* 會保持指向已釋放的區塊。
 
-儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要取得以外類型的指標 **`void`** ，請對傳回值使用類型轉換。
+傳回值指向針對任何物件類型的儲存適當對齊的儲存空間。 若要取得其他類型的指標 **`void`** ，請對傳回值使用類型轉換。
 
 ## <a name="remarks"></a>備註
 
-**Realloc**函數會變更已配置記憶體區塊的大小。 *Memblock*引數會指向記憶體區塊的開頭。 如果*memblock*為**Null**， **realloc**的行為會與**malloc**相同，並會配置新的*大小*位元組區塊。 如果*memblock*不是**Null**，它應該是先前對**calloc**、 **malloc**或**realloc**的呼叫所傳回的指標。
+> [!NOTE]
+> **`realloc`** 尚未更新來執行 C17 行為，因為新的行為與 Windows 作業系統不相容。
 
-*Size*引數會提供新的區塊大小（以位元組為單位）。 區塊的內容維持為新舊大小的較短者，不過新區塊可能在不同的位置。 由於新的區塊可以在新的記憶體位置中，因此**realloc**所傳回的指標不一定是透過*memblock*引數傳遞的指標。 在緩衝區成長的情況下， **realloc**不會有任何新配置的記憶體。
+函數會變更配置的 **`realloc`** 記憶體區塊大小。 *`memblock`* 引數會指向記憶體區塊的開頭。 如果 *`memblock`* 為 **`NULL`** ，則 **`realloc`** 的行為會與相同，並配置 **`malloc`** 新的 *`size`* 位元組區塊。 如果 *`memblock`* 不是 **`NULL`** ，則它應該是由先前的、或呼叫所傳回的指標 **`calloc`** **`malloc`** **`realloc`** 。
 
-如果記憶體配置失敗，或所要求的記憶體數量超過 **_HEAP_MAXREQ**，則**realloc**會將**errno**設定為**ENOMEM** 。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+*`size`* 引數會提供區塊的新大小（以位元組為單位）。 區塊的內容維持為新舊大小的較短者，不過新區塊可能在不同的位置。 因為新的區塊可以在新的記憶體位置，所以不保證傳回的指標 **`realloc`** 是透過引數傳遞的指標 *`memblock`* 。 **`realloc`** 在緩衝區成長時，不會以新配置的記憶體為零。
 
-**realloc**會呼叫**malloc** ，以便使用 c + + [_set_new_mode](set-new-mode.md)函數來設定新的處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**realloc**無法配置記憶體時， **malloc**會呼叫新的處理常式常式， **`new`** 其方式與運算子因相同原因而失敗時所執行的相同。 若要覆寫預設值，請及早在程式中呼叫
+**`realloc`****`errno`** **`ENOMEM`** 如果記憶體配置失敗，或所要求的記憶體數量超過，則設定為 **`_HEAP_MAXREQ`** 。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+**`realloc`** 呼叫，以便 **`malloc`** 使用 c + + [_set_new_mode](set-new-mode.md) 函式來設定新的處理常式模式。 新的處理常式模式會指出失敗時是否 **`malloc`** 要呼叫 [_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設，不 **`malloc`** 會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫這個預設行為，如此一來，當 **`realloc`** 無法配置記憶體時，就會 **`malloc`** 呼叫新的處理常式常式，其方式與 **`new`** 運算子因相同原因而失敗時所執行的方式相同。 若要覆寫預設值，請及早在程式中呼叫
 
 ```C
 _set_new_mode(1);
@@ -91,17 +95,17 @@ _set_new_mode(1);
 
 ，或使用 NEWMODE.OBJ 連結 (請參閱[連結選項](../../c-runtime-library/link-options.md))。
 
-當應用程式與 C 執行時間程式庫的 debug 版本連結時， **realloc**會解析為[_realloc_dbg](realloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式與 C 執行時間程式庫的 debug 版本連結時，會 **`realloc`** 解析成 [_realloc_dbg](realloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-**realloc**標示為 `__declspec(noalias)` 和 `__declspec(restrict)` ，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
+**`realloc`** 標示為 `__declspec(noalias)` ，表示函式不 `__declspec(restrict)` 會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**realloc**|\<stdlib.h> 和 \<malloc.h>|
+|**`realloc`**|\<stdlib.h> 和 \<malloc.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -154,7 +158,7 @@ Size of block after realloc of 1000 more longs: 8000
 
 ## <a name="see-also"></a>另請參閱
 
-[記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
-[calloc](calloc.md)<br/>
-[受](free.md)<br/>
-[malloc](malloc.md)<br/>
+[記憶體配置](../../c-runtime-library/memory-allocation.md)\
+[calloc](calloc.md)\
+[自由](free.md)\
+[malloc](malloc.md)

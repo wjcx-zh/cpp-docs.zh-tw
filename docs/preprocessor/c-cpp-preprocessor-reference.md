@@ -6,18 +6,18 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: e53f7270a71e5e7c3f456be7d55d49eaf352aecb
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e72146d8b88f5a4bffcaaa121f6851d740ec948b
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040739"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075630"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 前置處理器參考
 
 *C/c + + 預處理器參考*會說明在 Microsoft C/c + + 中執行預處理器的程式。 前置處理器會先對 C 和 C++ 檔案執行初步作業，再將檔案傳遞至編譯器。 您可以使用前置處理器，有條件地編譯程式碼、插入檔案、指定編譯時間錯誤訊息，以及將電腦特定規則加入至程式碼區段。
 
-在 Visual Studio 2019 中， [/experimental：預處理器](../build/reference/experimental-preprocessor.md) 編譯器選項會啟用預處理器的新執行。 新的執行仍在進行中，因此會被視為實驗性。 它的目的是要最終符合 C99、C11 和 c + + 20。 如需詳細資訊，請參閱 [MSVC 新的預處理器總覽](preprocessor-experimental-overview.md)。
+在 Visual Studio 2019 中， [/zc：預處理器](../build/reference/zc-preprocessor.md) 編譯器選項提供完全一致的 C11 和 C17 預處理器。 這是使用編譯器旗標或時的預設 `/std:c11` 值 `/std:c17` 。
 
 ## <a name="in-this-section"></a>本節內容
 

@@ -1,5 +1,6 @@
 ---
 title: 在函式和巨集之間選擇的建議
+description: '說明在 Microsoft C 執行時間程式庫中使用宏與函式 (CRT 之間的差異) '
 ms.date: 11/04/2016
 f1_keywords:
 - c.functions
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-ms.openlocfilehash: 234fcd8a0439240bc7585414254c5687dcb8f21b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8c47bf1924aeb94e2e4c9ee9358627cafcf90cba
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749304"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569530"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>在函式和巨集之間選擇的建議
 
@@ -44,4 +45,5 @@ ms.locfileid: "57749304"
 
 ## <a name="see-also"></a>另請參閱
 
+[類型-泛型數學](tgmath.md)\
 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

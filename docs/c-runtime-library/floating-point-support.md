@@ -1,6 +1,7 @@
 ---
 title: 數學與浮點支援
-ms.date: 01/31/2019
+description: '描述 Microsoft 通用 C 執行時間程式庫中的浮點支援 (UCRT) '
+ms.date: 9/14/2020
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,20 +9,22 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226225"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569602"
 ---
 # <a name="math-and-floating-point-support"></a>數學與浮點支援
 
 通用 C 執行階段程式庫 (UCRT) 提供許多整數和浮點數學程式庫函式，包括 ISO C99 需要的所有項目。 實作這些浮點函式可以平衡效能與正確性。 因為產生正確的四捨五入結果可能極為昂貴，所以這些函式會設計成有效率產生最接近正確四捨五入結果的近似值。 在大部分情況下，產生的結果是在正確四捨五入結果的 +/-1 ulp 內，但也可能出現較大的誤差。
 
+針對 ISO C Standard 11 (C11) 和更新版本， \<tgmath.h> 除了包含和以外，標頭 \<math.h> 也 \<complex.h> 提供可根據參數類型叫用對應數學函數的宏。 如需詳細資料，請參閱 [類型-泛型數學](tgmath.md) 。
+
 許多浮點數學程式庫函式對不同的 CPU 架構會有不同的實作。 例如，32 位元 x86 CRT 的實作可能和 64 位元 x64 CRT 的實作不同。 此外，某些函式對指定的 CPU 架構可能有多種實作。 在執行階段，會根據 CPU 支援的指令集動態選取最有效率的實作。 例如，在 32 位元 x86 CRT，有些函式同時有 x87 實作和 SSE2 實作。 在支援 SSE2 的 CPU 上執行時，會使用較快的 SSE2 實作。 在不支援 SSE2 的 CPU 上執行時，會使用較慢的 x87 實作。 因為數學程式庫函式的不同實作可能會使用不同的 CPU 指令和不同的演算法來產生結果，所以函式在不同的 CPU 中可能會產生不同的結果。 在大部分情況下，結果是在正確四捨五入結果的 +/-1 ulp 內，但實際的結果可能因 CPU 而異。
 
-先前的16位版本的 Microsoft C/c + + 和 Microsoft Visual C++ 支援 **`long double`** 類型為80位精確度浮點資料類型。 在 Visual C++ 的較新版本中， **`long double`** 資料類型是64位有效位數浮點資料類型，與 **`double`** 類型相同。 編譯器會將 **`long double`** 和視為 **`double`** 相異類型，但函式 **`long double`** 與其對應專案相同 **`double`** 。 CRT 提供數學函式的 **`long double`** 版本以進行 ISO C99 原始程式碼相容性，但請注意，二進位標記法可能與其他編譯器不同。
+先前的16位版本的 Microsoft C/c + + 和 Microsoft Visual C++ 支援 **`long double`** 以80位精確度浮點數資料類型做為類型。 在 Visual C++ 的較新版本中， **`long double`** 資料類型是與類型相同的64位有效位數浮點數資料類型 **`double`** 。 編譯器會將 **`long double`** 和視為 **`double`** 相異類型，但函式 **`long double`** 與其對應專案相同 **`double`** 。 CRT 提供 **`long double`** ISO C99 原始程式碼相容性的數學函式版本，但請注意，二進位標記法可能與其他編譯器不同。
 
 ## <a name="supported-math-and-floating-point-routines"></a>支援的數學與浮點常式
 
@@ -34,9 +37,9 @@ ms.locfileid: "87226225"
 [asinh、asinhf、asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|計算雙曲反正弦值
 [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|計算反正切值
 [atanh、atanhf、atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|計算雙曲反正切值
-[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|將地區設定特定字串轉換成**`double`**
-[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將字串轉換成**`double`**
-[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|將地區設定特定字串轉換為 **`float`** 或**`long double`**
+[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|將地區設定特定字串轉換成 **`double`**
+[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將字串轉換為 **`double`**
+[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|將地區設定特定字串轉換成 **`float`** 或 **`long double`**
 [cbrt、cbrtf、cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|計算立方根
 [ceil、ceilf、ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|計算 ceiling
 [_chgsign、_chgsignf、_chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|計算加法反元素
@@ -91,7 +94,7 @@ ms.locfileid: "87226225"
 [isinf](../c-runtime-library/reference/isinf.md)|判斷指定的浮點值是否無限
 [isnan、_isnan、_isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|測試 NaN 的浮點值
 [isnormal](../c-runtime-library/reference/isnormal.md)|測試浮點值是否為有限且為次正規數
-[_j0、_j1、_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式
+[_j0、_j1 _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式
 [ldexp、ldexpf、ldexpl](../c-runtime-library/reference/ldexp.md)|計算 x*2<sup>n</sup>
 [lgamma、lgammaf、lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|計算 gamma 函式絕對值的自然對數
 [llrint、llrintf、llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|將浮點值四捨五入為最接近的 **`long long`** 值
@@ -126,16 +129,16 @@ ms.locfileid: "87226225"
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|計算雙曲正弦值
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|計算平方根
 [_status87、_statusfp、_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|取得浮點狀態字組
-[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|將字串轉換成**`float`**
-[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|將字串轉換成**`long double`**
+[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|將字串轉換為 **`float`**
+[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|將字串轉換為 **`long double`**
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|計算正切值
 [tanh、tanhf、tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|計算雙曲正切值
 [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|計算 gamma 函式
 [trunc、truncf、truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|截斷小數部分
-[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將寬字元串轉換為**`double`**
-[_y0、_y1、_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式
+[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將寬字元串轉換為 **`double`**
+[_y0、_y1 _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式
 
 ## <a name="see-also"></a>另請參閱
 
-[依分類排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[浮點數基本類型](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[依類別分類的通用 C 執行時間常式](../c-runtime-library/run-time-routines-by-category.md)\
+[浮點數基本類型](../c-runtime-library/reference/floating-point-primitives.md)

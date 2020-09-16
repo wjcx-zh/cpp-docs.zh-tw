@@ -583,6 +583,8 @@
                   href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
                 - name: /H (限制外部名稱的長度)
                   href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /headerUnit (使用標頭單位 IFC)
+                  href: ../build/reference/headerunit.md
                 - name: /HELP (編譯器命令列說明)
                   href: ../build/reference/help-compiler-command-line-help.md
                 - name: /homeparams (將暫存器參數複製到堆疊)
@@ -603,6 +605,10 @@
                   href: ../build/reference/ln-create-msil-module.md
                 - name: /MD、/MT、/LD (使用執行階段程式庫)
                   href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: '/module:exportHeader (建立標頭單位)'
+                  href: ../build/reference/module-exportheader.md
+                - name: '/module:reference (使用具名模組 IFC)'
+                  href: ../build/reference/module-reference.md
                 - name: /MP (使用多處理序建置)
                   href: ../build/reference/mp-build-with-multiple-processes.md
                 - name: /nologo (隱藏程式啟始資訊) (C/C++)
@@ -675,6 +681,8 @@
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: /Tc、/Tp、/TC、/TP (指定原始程式檔類型)
                   href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: /translateInclude (將 include 指示詞轉譯為 import 指示詞)
+                  href: ../build/reference/translateinclude.md
                 - name: /U、/u (取消定義符號)
                   href: ../build/reference/u-u-undefine-symbols.md
                 - name: /utf-8 (將來源和可執行檔字元集設定為 UTF-8)

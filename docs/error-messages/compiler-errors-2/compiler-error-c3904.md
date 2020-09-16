@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b2c5737a4442761cbaa84b532907e579eddb423d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749044"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686061"
 ---
 # <a name="compiler-error-c3904"></a>編譯器錯誤 C3904
 
-' property_accessor '：必須指定數位參數
+' property_accessor '：必須指定數位參數 (s) 
 
-檢查 `get` 中的參數數目，並針對屬性維度 `set` 方法。
+`get`針對屬性維度檢查和方法中的參數數目 `set` 。
 
-- `get` 方法的參數數目必須等於屬性的維度數目，而非索引屬性則為零。
+- 方法的參數數目 `get` 必須等於屬性的維度數目，或為非索引屬性的值為零。
 
-- `set` 方法的參數數目，必須大於屬性維度的數目。
+- 方法的參數數目 `set` 必須比屬性的維度數目還要多。
 
 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C3904。
 
@@ -46,8 +46,6 @@ ref class X {
    };
 };
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3904。
 

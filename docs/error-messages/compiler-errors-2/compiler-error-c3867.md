@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 40825bf92a892917f815c955ee4ba1fb6fa906c3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756847"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686414"
 ---
 # <a name="compiler-error-c3867"></a>編譯器錯誤 C3867
 
-' func '：函式呼叫遺漏引數清單;使用 ' & func ' 建立成員的指標
+' func '：函式呼叫遺漏引數清單;使用 ' &func ' 來建立成員的指標
 
 您嘗試取得成員函式的位址，而未使用其類別名稱和傳址運算子來限定成員函式。
 
-這項錯誤也會因為針對 Visual Studio 2005 而完成的編譯器一致性工作所產生：增強的成員一致性。 在 Visual Studio 2005 之前編譯的程式碼現在會產生 C3867。
+這項錯誤也可能是因為針對 Visual Studio 2005：增強的成員指標一致性所進行的編譯器一致性工作所產生。 在 Visual Studio 2005 之前編譯的程式碼現在會產生 C3867。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 使用誤導的建議解決方法，即可從編譯器發出 C3867。 若可能，請使用最新衍生的類別。
 
@@ -44,8 +44,6 @@ void Derived::Bar() {
    &Derived::Test;   // OK
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3867，並示範如何修正此問題。
 
@@ -77,8 +75,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
 下列範例會產生 C3867，並示範如何修正此問題。
 
 ```cpp
@@ -95,8 +91,6 @@ int main() {
    void (X::*pmf2)() = &X::mf;
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3867。
 
@@ -119,8 +113,6 @@ public:
    }
 };
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3867。
 

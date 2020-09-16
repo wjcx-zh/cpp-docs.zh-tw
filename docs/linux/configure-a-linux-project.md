@@ -1,14 +1,14 @@
 ---
 title: 在 Visual Studio 中設定 Linux MSBuild c + + 專案
 ms.date: 08/06/2020
-description: 在 Visual Studio 中設定以 MSBuild 為基礎的 Linux 專案，讓您可以建立它。
+description: 在 Visual Studio 中設定以 MSBuild 為基礎的 Linux 專案，讓您可以進行建立。
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043859"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685952"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中設定 Linux MSBuild c + + 專案
 
@@ -18,13 +18,13 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker-end
 
-本主題描述如何設定以 MSBuild 為基礎的 Linux 專案，如[在 Visual Studio 中建立 Linux MSBuild c + + 專案](create-a-new-linux-project.md)中所述。 針對 Linux CMake 專案，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
+本主題說明如何設定以 MSBuild 為基礎的 Linux 專案，如在 [Visual Studio 中建立 Linux MSBuild c + + 專案](create-a-new-linux-project.md)中所述。 針對 Linux CMake 專案，請參閱 [設定 Linux CMake 專案](cmake-linux-project.md)。
 
 您可以設定 Linux 專案，以實體 Linux 機器、虛擬機器，或[適用於 Linux 的 Windows 子系統](/windows/wsl/about) (WSL) 為目標。
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 版本 16.1**：
+**Visual Studio 2019 16.1 版**：
 
 - 以 WSL 為目標時，可避免以遠端 Linux 系統為目標時，建置和 IntelliSense 所需的複製作業。
 
@@ -34,7 +34,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ## <a name="general-settings"></a>一般設定
 
-若要查看設定選項，請選取 [**專案 > 屬性**] 功能表，或以滑鼠右鍵按一下**方案總管**中的專案，然後從內容功能表中選取 [**屬性**]。 [一般]**** 設定隨即出現。
+若要查看設定選項，請選取 **專案 > 屬性** ] 功能表，或以滑鼠右鍵按一下 **方案總管** 中的專案，然後從內容功能表中選取 [ **屬性** ]。 [一般]**** 設定隨即出現。
 
 ![一般設定](media/settings_general.png)
 
@@ -44,7 +44,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ## <a name="remote-settings"></a>遠端設定
 
-若要變更與遠端 Linux 電腦相關的設定，請設定 [[一般](prop-pages/general-linux.md)] 底下顯示的遠端設定。
+若要變更與遠端 Linux 電腦有關的設定，請設定 [ [一般](prop-pages/general-linux.md)] 底下顯示的 [遠端設定]。
 
 - 若要指定遠端目標 Linux 電腦，請使用 [遠端組建電腦]**** 項目。 這可讓您選取其中一個先前建立的連線。 若要建立新的項目，請參閱[連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)一節。
 
@@ -52,7 +52,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 16.1 版**：目標為適用于 Linux 的 Windows 子系統，按一下**平臺工具**組的向下箭號，然後選擇 [ **WSL_1_0**]。 其他遠端選項會消失，預設 WSL 殼層的路徑便會出現在其位置：
+   **Visual Studio 2019 16.1 版**：若要以 Windows 子系統 Linux 版為目標，請按一下 **平臺工具** 組的向下箭號，然後選擇 [ **WSL_1_0**]。 其他遠端選項會消失，預設 WSL 殼層的路徑便會出現在其位置：
 
    ![WSL 組建電腦](media/wsl-remote-vs2019.png)
 
@@ -73,17 +73,17 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker range="vs-2019"
 
-以 WSL 為目標時，不適用此章節。
+以 WSL 為目標時，不適用此區段。
 
 ::: moniker-end
 
 在遠端系統上建置時，會將開發電腦上的來源檔案複製到 Linux 電腦，並在該處進行編譯。 根據預設，Visual Studio 專案中的所有來源都會複製到上方設定中所設定的位置。 不過，也可以在清單中新增其他來源，或者完全關閉複製來源，後者是 Makefile 專案的預設值。
 
-- [要複製的來源]**** 決定將哪些來源複製到遠端電腦。 根據預設， ** \@ (SourcesToCopyRemotely) **會預設為專案中的所有原始程式碼檔案，但不包括任何資產/資源檔，例如影像。
+- [要複製的來源]**** 決定將哪些來源複製到遠端電腦。 根據預設， ** \@ (SourcesToCopyRemotely) **預設為專案中所有的原始程式碼檔案，但不包含任何資產/資源檔，例如影像。
 
 - [複製來源]**** 可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
 
-- **其他要複製的來源**可讓您新增其他來源檔案，而該檔案將會複製到遠端系統。 您可以指定分號分隔清單，也可以使用 **:=** 語法來指定要使用的本機和遠端名稱︰
+- **要複製的其他來源** 可讓您新增其他來源檔案，而這些檔案將會複製到遠端系統。 您可以指定分號分隔清單，也可以使用 **:=** 語法來指定要使用的本機和遠端名稱︰
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
@@ -98,7 +98,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 當您在 [連線管理員]**** 中新增連線時，Visual Studio 會自動偵測遠端系統上編譯器的 Include 目錄。 Visual Studio 接著會壓縮這些檔案，並將其複製到本機 Windows 電腦上的目錄中。 之後，每當您在 Visual Studio 或 CMake 專案中使用該連線時，這些目錄中的標頭就會用來提供 IntelliSense。
 
 > [!NOTE]
-> 在 Visual Studio 2019 16.5 版和更新版本中，遠端標頭複本已經過優化。 在開啟 Linux 專案或為 Linux 目標設定 CMake 時，現在會視需要複製標頭。 複製會根據專案的指定編譯器，以每個專案為基礎發生在背景中。 如需詳細資訊，請參閱[Linux IntelliSense 的正確性和效能改進](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)。
+> 在 Visual Studio 2019 16.5 版和更新版本中，遠端標頭複製已經過優化。 開啟 Linux 專案或為 Linux 目標設定 CMake 時，現在會依需求複製標頭。 複製會根據專案的指定編譯器，以每個專案為基礎在背景中發生。 如需詳細資訊，請參閱 [Linux IntelliSense 的精確度和效能改善](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)。
 
 這項功能取決於已安裝 ZIP 的 Linux 電腦。 您可以使用這個 apt-get 命令來安裝 ZIP：
 
@@ -110,13 +110,13 @@ sudo apt install zip
 
 ::: moniker range="vs-2017"
 
-![遠端標頭 IntelliSense](media/remote-header-intellisense.png)
+![顯示 [選項] 對話方塊的螢幕擷取畫面，其中已選取 [跨平臺] > 連線管理員 > 遠端標頭 IntelliSense 管理員。](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-![遠端標頭 IntelliSense](media/connection-manager-vs2019.png)
+![顯示 [選項] 對話方塊的螢幕擷取畫面，其中已選取 [跨平臺 >] 連線管理員。](media/connection-manager-vs2019.png)
 
 您可以啟用記錄來協助針對問題進行疑難排解：
 
@@ -124,9 +124,9 @@ sudo apt install zip
 
 ::: moniker-end
 
-## <a name="linux-target-locale"></a><a name="locale"></a>Linux 目標地區設定
+## <a name="linux-target-locale"></a><a name="locale"></a> Linux 目標地區設定
 
-Visual Studio 語言設定不會傳播到 Linux 目標，因為 Visual Studio 不會管理或設定已安裝的套件。 顯示在 [**輸出**] 視窗中的訊息，例如組建錯誤，會使用 Linux 目標的語言和地區設定來顯示。 您必須針對所需的地區設定，設定您的 Linux 目標。
+Visual Studio 語言設定不會傳播至 Linux 目標，因為 Visual Studio 不會管理或設定已安裝的套件。 **輸出**視窗中顯示的訊息（例如組建錯誤），會使用 Linux 目標的語言和地區設定來顯示。 您必須為所需的地區設定設定您的 Linux 目標。
 
 ## <a name="see-also"></a>另請參閱
 

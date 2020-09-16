@@ -6,22 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10064784e1124ac365475f00b3577d22f5e7f3f1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162032"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686518"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>編譯器警告 (層級 2) C4250
 
 ' class1 '：透過支配繼承 ' class2：： member '
 
-有兩個或多個成員具有相同的名稱。 `class2` 中的會被繼承，因為它是包含這個成員之其他類別的基類。
+有兩個以上的成員具有相同的名稱。 中的一個 `class2` 是繼承的，因為它是其他包含這個成員之類別的基類。
 
-若要隱藏 C4250，請使用[warning](../../preprocessor/warning.md) pragma。
+若要隱藏 C4250，請使用 [warning](../../preprocessor/warning.md) pragma。
 
-由於虛擬基類是在多個衍生類別之間共用，因此衍生類別中的名稱會主導基類中的名稱。 例如，假設有下列類別階層架構，則在菱形中會繼承兩個 func 的定義：使用弱式類別的 vbc：： func （）實例，以及透過主要類別的主要：： func （）。 透過菱形類別物件的 func （）不合格呼叫，一律會呼叫「中」：： func （）實例。  如果弱式類別要引進 func （）的實例，則兩種定義都不會被佔據，而且呼叫會標示為不明確。
+由於虛擬基類是在多個衍生類別之間共用，因此衍生類別中的名稱會主導基類中的名稱。 例如，假設有下列類別階層架構，則在鑽石內會繼承兩個 func 定義： vbc：： func ( # A1 實例透過弱式類別，以及主要：： func ( # A3 透過主要類別。 不合格的 func 呼叫 ( # A1 透過鑽石類別物件，一律會呼叫「中」：： func ( # A3 實例。  如果弱式類別要引入 func 的實例 ( # A1，則這兩個定義都不會成為主導的，且呼叫會標示為不明確。
+
+## <a name="examples"></a>範例
 
 ```cpp
 // C4250.cpp
@@ -44,8 +46,6 @@ int main() {
    d.func();   // C4250
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C4250。
 
@@ -77,8 +77,6 @@ int main() {
    cout << eObject.operator int() << endl;
 }
 ```
-
-## <a name="example"></a>範例
 
 這個範例會顯示更複雜的情況。 下列範例會產生 C4250。
 

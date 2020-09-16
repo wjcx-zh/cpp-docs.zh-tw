@@ -2,12 +2,12 @@
 title: 將 Linux 專案設定為使用 Address Sanitizer
 description: 描述如何將 Visual Studio 中的 C++ Linux 專案設定為使用 Address Sanitizer。
 ms.date: 06/07/2019
-ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364316"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686661"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>將 Linux 專案設定為使用 Address Sanitizer
 
@@ -33,13 +33,13 @@ ASan 是 C/C++ 的執行階段記憶體錯誤偵測器，可捕捉下列錯誤�
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>針對以 MSBuild 為基礎的 Linux 專案啟用 ASan
 
 > [!NOTE]
-> 從 Visual Studio 2019 版本 16.4 開始,Linux 專案的位址可視化器透過**配置屬性** > **C/C++** > **啟用位址消毒器**啟用。
+> 從 Visual Studio 2019 16.4 版開始，可透過設定**屬性**  >  **C/c + +**  >  **啟用 Address Sanitizer**來啟用 AddressSanitizer for Linux 專案。
 
-若要針對以 MSBuild 為基礎的 Linux 專案啟用 ASan，請以滑鼠右鍵按一下 [方案總管]**** 中的專案，然後選取 [屬性]****。 接下來,瀏覽到**設定屬性** > **C/C++** > **消毒器**。 ASan 會透過編譯器和連結器旗標來啟用，且需要重新編譯您的專案才能運作。
+若要針對以 MSBuild 為基礎的 Linux 專案啟用 ASan，請以滑鼠右鍵按一下 [方案總管]**** 中的專案，然後選取 [屬性]****。 接下來，流覽至設定**屬性**  >  **C/c + +**  >  **Sanitizers**。 ASan 會透過編譯器和連結器旗標來啟用，且需要重新編譯您的專案才能運作。
 
 ![針對 MSBuild 專案啟用 ASan](media/msbuild-asan-prop-page.png)
 
-您可以通過瀏覽到**設定屬性** > **除錯** > **位址 Sanitizer 執行時標誌**傳遞可選的 ASan 執行時標誌。 請按一下向下箭號來新增或移除旗標。
+您可以藉由流覽至設定**屬性**  >  **調試**程式  >  **AddressSanitizer 執行時間旗標**，傳遞選擇性的 ASan 執行時間旗標。 請按一下向下箭號來新增或移除旗標。
 
 ![設定 ASan 執行階段旗標](media/msbuild-asan-runtime-flags.png)
 
@@ -49,11 +49,11 @@ ASan 是 C/C++ 的執行階段記憶體錯誤偵測器，可捕捉下列錯誤�
 
 請確定您已在該對話方塊的左窗格中選取了 Linux 組態 (例如 **Linux-Debug**)：
 
-![Linux 偵錯組態](media/linux-debug-configuration.png)
+![將 Linux Debug 列為其中一個設定選項的左窗格螢幕擷取畫面。](media/linux-debug-configuration.png)
 
 ASan 選項位於 [一般]**** 下方。 請以分號分隔的 "flag=value" 格式輸入 ASan 執行階段旗標。
 
-![Linux 偵錯組態](media/cmake-settings-asan-options.png)
+![[啟用位址 Sanitizer] 選項的螢幕擷取畫面，其中顯示某些位址 Sanitizer 執行時間旗標。](media/cmake-settings-asan-options.png)
 
 ## <a name="install-the-asan-debug-symbols"></a>安裝 ASan 偵錯符號
 

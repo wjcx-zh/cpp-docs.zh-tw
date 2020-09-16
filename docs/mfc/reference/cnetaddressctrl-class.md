@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 30fc510272afc90ae37b583e807d10c3374df052
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562125"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686583"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 
@@ -66,13 +66,11 @@ class CNetAddressCtrl : public CEdit
 
 ![具有網路位址控制項和資訊提示的對話方塊](../../mfc/reference/media/cnetaddctrl.png "具有網路位址控制項和資訊提示的對話方塊")
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列程式碼範例是驗證網路位址之對話方塊的一部分。 三個選項按鈕的事件處理常式會指定網路位址可以是三種地址類型的其中一種。 使用者在網路控制項的文字方塊中輸入位址，然後按下按鈕以驗證位址。 如果位址有效，則會顯示成功訊息;否則，會顯示預先定義的資訊提示錯誤訊息。
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
-
-## <a name="example"></a>範例
 
 對話方塊標頭檔中的下列程式碼範例會定義[CNetAddressCtrl：： GetAddress](#getaddress)方法所需的[NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address)和[NET_ADDRESS_INFO](/windows/win32/shell/hkey-type)變數。
 
@@ -90,7 +88,7 @@ class CNetAddressCtrl : public CEdit
 
 `CNetAddressCtrl`
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：** afxcmn.h
 

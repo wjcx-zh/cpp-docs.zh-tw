@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd9c40ef90715e9beca43a114dba475ab29b5e78
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758485"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686034"
 ---
 # <a name="compiler-error-c3918"></a>編譯器錯誤 C3918
 
-使用方式要求 ' member ' 必須是資料成員
+使用方式需要 ' member ' 為資料成員
 
-C3918 可能發生的原因有數種與事件相關。
+有幾個與事件相關的原因可能會發生 C3918。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
-C3918 可能發生，因為目前的內容中需要類別成員。 下列範例會產生 C3918。
+可能會發生 C3918，因為在目前的內容中需要類別成員。 下列範例會產生 C3918。
 
 ```cpp
 // C3918.cpp
@@ -41,9 +41,7 @@ public:
 };
 ```
 
-## <a name="example"></a>範例
-
-如果您嘗試檢查 null 的簡單事件（事件名稱將不再提供事件的備份存放區委派的直接存取權），也會導致 C3918。
+如果您嘗試檢查 (的簡單事件，事件名稱將無法再直接存取事件) 的備份存儲委派，因此也會造成 C3918。
 
 下列範例會產生 C3918。
 
@@ -65,8 +63,6 @@ ref struct EventSource : public IEFace {
    }
 };
 ```
-
-## <a name="example"></a>範例
 
 如果您不正確地訂閱事件，也可能會發生 C3918。 下列範例會產生 C3918。
 

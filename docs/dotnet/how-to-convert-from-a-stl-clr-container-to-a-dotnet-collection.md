@@ -5,28 +5,28 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: f7539b10ca6c503aede61d19de3d14fb9dcee8be
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f5e289c330c83ac0c630a5b1f8f97b8c65fc7efb
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988520"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686440"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>如何：從 STL/CLR 容器轉換為 .NET 集合
 
-本主題說明如何將 STL/CLR 容器轉換為其對等的 .NET 集合。 例如，我們會示範如何將 STL/CLR[向量](../dotnet/vector-stl-clr.md)轉換成 .net <xref:System.Collections.Generic.ICollection%601>，以及如何將 STL/clr[對應](../dotnet/map-stl-clr.md)轉換成 .net <xref:System.Collections.Generic.IDictionary%602>，但此程式對所有集合和容器而言都很類似。
+本主題說明如何將 STL/CLR 容器轉換成其對等的 .NET 集合。 舉例而言，我們會示範如何將 STL/CLR [向量](../dotnet/vector-stl-clr.md) 轉換成 .net， <xref:System.Collections.Generic.ICollection%601> 以及如何將 stl/clr [對應](../dotnet/map-stl-clr.md) 轉換成 .net <xref:System.Collections.Generic.IDictionary%602> ，但是所有集合和容器的程式都很類似。
 
-### <a name="to-create-a-collection-from-a-container"></a>若要從容器建立集合
+### <a name="to-create-a-collection-from-a-container"></a>從容器建立集合
 
 1. 請使用下列其中一個方法：
 
-   - 若要轉換容器的一部分，請呼叫[make_collection](../dotnet/make-collection-stl-clr.md)函式，並傳遞 STL/CLR 容器的開始反覆運算器和結束反覆運算器，以複製到 .net 集合。 此範本函式會採用 STL/CLR 反覆運算器做為樣板引數。 第一個範例會示範這個方法。
+   - 若要轉換容器的部分，請呼叫 [make_collection](../dotnet/make-collection-stl-clr.md) 函式，並傳遞 STL/CLR 容器的 begin iterator 和 end 反覆運算器，以複製到 .net 集合中。 此範本函式會採用 STL/CLR iterator 作為樣板引數。 第一個範例會示範這個方法。
 
-   - 若要轉換整個容器，請將容器轉換為適當的 .NET 集合介面或介面集合。 第二個範例會示範這個方法。
+   - 若要轉換整個容器，請將容器轉換成適當的 .NET 集合介面或介面集合。 第二個範例會示範這個方法。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
-在此範例中，我們會建立 STL/CLR `vector` 並在其中新增5個元素。 然後，我們會藉由呼叫 `make_collection` 函式來建立 .NET 集合。 最後，我們會顯示新建立之集合的內容。
+在此範例中，我們會建立 STL/CLR `vector` ，並在其中加入5個元素。 然後，我們會藉由呼叫函數來建立 .NET 集合 `make_collection` 。 最後，我們會顯示新建立之集合的內容。
 
 ```cpp
 // cliext_convert_vector_to_icollection.cpp
@@ -68,9 +68,7 @@ The contents of the System::Collections::Generic::ICollection are:
 7
 ```
 
-## <a name="example"></a>範例
-
-在此範例中，我們會建立 STL/CLR `map` 並在其中新增5個元素。 然後，我們會建立 .NET <xref:System.Collections.Generic.IDictionary%602> 並直接將 `map` 指派給它。 最後，我們會顯示新建立之集合的內容。
+在此範例中，我們會建立 STL/CLR `map` ，並在其中加入5個元素。 接著，我們會建立 .NET <xref:System.Collections.Generic.IDictionary%602> 並直接指派給 `map` 它。 最後，我們會顯示新建立之集合的內容。
 
 ```cpp
 // cliext_convert_map_to_idictionary.cpp
@@ -111,7 +109,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)<br/>
 [如何：從 .NET 集合轉換為 STL/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>

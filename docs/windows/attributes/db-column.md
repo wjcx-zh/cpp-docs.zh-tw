@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 98f546a243016fa85f6d71159ab2fc0a7963bae3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833111"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686479"
 ---
 # <a name="db_column"></a>db_column
 
@@ -25,7 +25,7 @@ ms.locfileid: "88833111"
 
 ### <a name="parameters"></a>參數
 
-*序數*<br/>
+*序*<br/>
 序數資料行編號 (`DBCOLUMNINFO` 序數) 或資料行名稱 (ANSI 或 Unicode 字串) 對應到要系結資料之資料列集中的欄位。 如果您使用數位，可以略過連續的序數 (例如：1、2、3、5) 。 如果您使用的 OLE DB 提供者支援，則名稱可能包含空格。 例如，您可以使用下列其中一種格式：
 
 ```cpp
@@ -45,7 +45,7 @@ ms.locfileid: "88833111"
 *status*<br/>
  (選擇性) 用來保存此資料行狀態的成員變數。 狀態會指出資料行值是否為數據值或其他值，例如 Null。 如需可能的值，請參閱*OLE DB 程式設計人員參考*中的[狀態](/previous-versions/windows/desktop/ms722617(v=vs.85))。
 
-*length*<br/>
+*length* (長度)<br/>
  (選擇性) 用來保存資料行大小（以位元組為單位）的成員變數。
 
 ## <a name="remarks"></a>備註
@@ -58,7 +58,7 @@ ms.locfileid: "88833111"
 
 如需在應用程式中使用這個屬性的範例，請參閱 [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 此範例會將資料表中的資料行系結至 **`long`** 資料成員，並指定狀態和長度欄位。
 
@@ -78,8 +78,6 @@ class CProducts {
 };
 ```
 
-## <a name="example"></a>範例
-
 此範例會依序將四個數據行系結至 a **`long`** 、字元字串、時間戳記和 `DB_NUMERIC` 整數。
 
 ```cpp
@@ -98,7 +96,7 @@ class CProducts {
 };
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 | 屬性內容 | 值 |
 |-|-|

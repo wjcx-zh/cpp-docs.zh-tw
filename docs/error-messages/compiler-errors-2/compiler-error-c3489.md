@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3b192a14a39b7c0c9d264bda8073c54f0f395924
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738410"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685762"
 ---
 # <a name="compiler-error-c3489"></a>編譯器錯誤 C3489
 
@@ -19,7 +19,7 @@ ms.locfileid: "74738410"
 
 當您指定 Lambda 運算式的預設擷取模式是透過傳值方式時，無法透過傳值方式將變數傳遞給該運算式的 Capture 子句。
 
-### <a name="to-correct-this-error"></a>若要改正這項錯誤
+### <a name="to-correct-this-error"></a>更正這個錯誤
 
 - 不要將變數明確地傳遞給 Capture 子句，或
 
@@ -29,7 +29,7 @@ ms.locfileid: "74738410"
 
 - 透過傳址方式將變數傳遞給 Capture 子句 (這可能會變更 Lambda 運算式的行為)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C3489，因為變數 `n` 是透過傳值方式出現在其預設模式為透過傳值方式之 Lambda 運算式的 Capture 子句中：
 
@@ -42,8 +42,6 @@ int main()
    [=, n]() { return n; } (); // C3489
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例顯示 C3489 的四種可能解決方式：
 
@@ -72,6 +70,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

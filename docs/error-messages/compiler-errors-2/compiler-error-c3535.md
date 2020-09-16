@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 60ffd5d8decd5c9065ca55cfed34383278359f3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 673fe6a8b5eb6dfcd9caa841b18d5b47fb7858bf
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228787"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686086"
 ---
 # <a name="compiler-error-c3535"></a>編譯器錯誤 C3535
 
 無法從 ' type2 ' 推算 ' type1 ' 的類型
 
-**`auto`** 無法從初始化運算式的類型推算關鍵字所宣告的變數類型。 例如，如果初始化運算式評估為，而這不是型別，就會發生這個錯誤 **`void`** 。
+**`auto`** 無法從初始化運算式的類型推算關鍵字所宣告的變數類型。 例如，如果初始化運算式評估為 **`void`** （不是型別），就會發生這個錯誤。
 
 ### <a name="to-correct-this-error"></a>更正這個錯誤
 
-1. 請確定初始化運算式的類型不是 **`void`** 。
+1. 確定初始化運算式的類型不是 **`void`** 。
 
-1. 請確定宣告不是基本類型的指標。 如需詳細資訊，請參閱[基本類型](../../cpp/fundamental-types-cpp.md)。
+1. 確定宣告不是基本類型的指標。 如需詳細資訊，請參閱 [基本類型](../../cpp/fundamental-types-cpp.md)。
 
-1. 請確定如果宣告是類型的指標，初始化運算式就是指標類型。
+1. 確定宣告為類型的指標時，初始化運算式是指標類型。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C3535，因為初始化運算式會評估為 **`void`** 。
 
@@ -42,9 +42,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>範例
-
-下列範例會產生 C3535，因為語句將變數宣告 `x` 為推算類型的指標，但初始化運算式運算式的類型為 double。 因此，編譯器無法推算變數的類型。
+下列範例會產生 C3535，因為語句會將變數宣告 `x` 為推算型別的指標，但初始化運算式運算式的類型為 double。 因此，編譯器無法推算變數的類型。
 
 ```cpp
 // C3535b.cpp
@@ -56,9 +54,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>範例
-
-下列範例會產生 C3535，因為變數會宣告推算 `p` 類型的指標，但初始化運算式不是指標類型。
+下列範例會產生 C3535，因為變數會宣告推算 `p` 型別的指標，但初始化運算式不是指標類型。
 
 ```cpp
 // C3535c.cpp

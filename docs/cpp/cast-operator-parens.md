@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b1abfc4e2798f973951a24ea27f35b2dcf6cca7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190153"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686315"
 ---
 # <a name="cast-operator-"></a>轉型運算子：()
 
@@ -28,7 +28,7 @@ unary-expression ( type-name ) cast-expression
 
 在類型轉換完成後，編譯器會將 *cast-expression* 視為 *type-name* 類型。 轉型可用來將任何純量類型的物件與任何其他純量類型的物件來回轉換。 明確類型轉換受到與判斷隱含轉換效果的相同規則所限制。 對轉型的其他限制可能來自特定類型的實際大小或表示。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 ```cpp
 // expre_CastOperator.cpp
@@ -47,8 +47,6 @@ int main()
     cout << "i = " << i << endl;
 }
 ```
-
-## <a name="example"></a>範例
 
 ```cpp
 // expre_CastOperator2.cpp
@@ -122,6 +120,6 @@ Raw Bytes after cast:   Exciting
 
 [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)<br/>
 [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[明確類型轉換運算子：()](../cpp/explicit-type-conversion-operator-parens.md)<br/>
-[轉型運算子](../cpp/casting-operators.md)<br/>
-[轉型運算子](../c-language/cast-operators.md)
+[明確類型轉換運算子： ( # B1 ](../cpp/explicit-type-conversion-operator-parens.md)<br/>
+[轉換運算子](../cpp/casting-operators.md)<br/>
+[Cast 運算子](../c-language/cast-operators.md)

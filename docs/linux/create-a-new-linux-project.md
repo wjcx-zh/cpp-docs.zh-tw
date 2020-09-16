@@ -1,14 +1,14 @@
 ---
 title: 在 Visual Studio 中建立 Linux MSBuild c + + 專案
 ms.date: 08/04/2020
-description: 在 Visual Studio 中建立以 MSBuild 為基礎的新 Linux 專案。
+description: 在 Visual Studio 中建立新的 MSBuild 型 Linux 專案。
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 86d8b8fd2abe8970b5146d4ab08dc4251b5562d5
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 559a868ebdea7e3b835a82c31849d0e2fdeaa6c9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043846"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686687"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中建立 Linux MSBuild c + + 專案
 
@@ -22,7 +22,7 @@ Visual Studio 2017 及更新版本有提供 Linux 專案。
 
 首先，請確定您已安裝適用於 Visual Studio 的 **Linux 開發工作負載**。 如需詳細資訊，請參閱[下載、安裝及設定 Linux 工作負載](download-install-and-setup-the-linux-development-workload.md)。
 
-針對跨平臺編譯，建議使用 CMake。 Visual Studio 2019 中的 CMake 支援更完整。 如果 CMake 不是選項，而且您有想要擴充以針對 Linux 編譯的現有 Windows Visual Studio 解決方案，您可以將 Visual Studio Linux 專案新增至 Windows 解決方案，以及**共用專案**專案。 將兩個平臺之間共用的程式碼放在共用專案專案中，並從 Windows 和 Linux 專案加入該專案的參考。
+針對跨平臺編譯，我們建議使用 CMake。 Visual Studio 2019 提供更完整的 CMake 支援。 如果 CMake 不是一個選項，而且您有現有的 Windows Visual Studio 解決方案，您想要擴充以針對 Linux 進行編譯，您可以將 Visual Studio 的 Linux 專案連同 **共用專案** 專案新增至 windows 方案。 將兩個平臺之間共用的程式碼放在 [共用專案] 專案中，然後從 Windows 和 Linux 專案加入該專案的參考。
 
 ## <a name="to-create-a-new-linux-project"></a>建立新的 Linux 專案
 
@@ -31,7 +31,7 @@ Visual Studio 2017 及更新版本有提供 Linux 專案。
 1. 在 Visual Studio 中選取 [檔案] > [新增專案]****，或按 **Ctrl+Shift+N**。
 1. 選取 [Visual C++] > [跨平台] > [Linux]**** 節點，然後選取您要建立的專案類型。 輸入**名稱**和**位置**，然後選擇 [確定]****。
 
-   ![新的 Linux 專案](media/newproject.png)
+   ![顯示 [新增專案] 對話方塊的螢幕擷取畫面，其中包含選取的 Visual C + + > 跨平臺 > Linux、已呼叫的所有專案類型，以及名稱和位置文字方塊也稱為 out。](media/newproject.png)
 
    | 專案類型 | 描述 |
    | ------------ | --- |
@@ -48,11 +48,11 @@ Visual Studio 2017 及更新版本有提供 Linux 專案。
 
 ::: moniker range="vs-2019"
 
-首先，請確定您已安裝適用於 Visual Studio 的 **Linux 開發工作負載**。 如需詳細資訊，請參閱[下載、安裝和設定 Linux 工作負載](download-install-and-setup-the-linux-development-workload.md)。
+首先，請確定您已安裝適用於 Visual Studio 的 **Linux 開發工作負載**。 如需詳細資訊，請參閱 [下載、安裝及設定 Linux 工作負載](download-install-and-setup-the-linux-development-workload.md)。
 
-當您在 Visual Studio 中建立適用於 Linux 的新 C++ 專案時，可以選擇建立 Visual Studio 專案或 CMake 專案。 本文描述如何建立 Visual Studio 專案。 一般來說，對於可能包含開放原始碼或您想要針對跨平臺開發進行編譯的新專案，我們建議您將 CMake 與 Visual Studio 搭配使用。 有了 CMake 專案，您就可以在 Windows 和 Linux 上建立和調試同一個專案。 如需詳細資訊，請參閱[建立和設定 Linux CMake 專案](cmake-linux-project.md)。
+當您在 Visual Studio 中建立適用於 Linux 的新 C++ 專案時，可以選擇建立 Visual Studio 專案或 CMake 專案。 本文描述如何建立 Visual Studio 專案。 一般來說，對於可能包含開放原始碼的程式碼，或您想要針對跨平臺開發進行編譯的新專案，我們建議您搭配 Visual Studio 使用 CMake。 您可以使用 CMake 專案，在 Windows 和 Linux 上建立和偵測相同的專案。 如需詳細資訊，請參閱 [建立及設定 Linux CMake 專案](cmake-linux-project.md)。
 
-如果您有現有的 Windows Visual Studio 解決方案，而您想要擴充以針對 Linux 進行編譯，而 CMake 不是選項，則您可以將 Visual Studio Linux 專案新增至 Windows 解決方案，以及**共用專案**專案。 將兩個平臺之間共用的程式碼放在共用專案專案中，並從 Windows 和 Linux 專案加入該專案的參考。
+如果您有現有的 Windows Visual Studio 解決方案，您想要擴充以針對 Linux 進行編譯，而 CMake 不是一個選項，則您可以將 Visual Studio 的 Linux 專案和 **共用專案** 專案新增至 Windows 方案。 將兩個平臺之間共用的程式碼放在 [共用專案] 專案中，然後從 Windows 和 Linux 專案加入該專案的參考。
 
 ## <a name="to-create-a-new-linux-project"></a>建立新的 Linux 專案
 
@@ -61,7 +61,7 @@ Visual Studio 2017 及更新版本有提供 Linux 專案。
 1. 在 Visual Studio 中選取 [檔案] > [新增專案]****，或按 **Ctrl+Shift+N**。
 1. 將 [語言]**** 設定為 [C++]****，並搜尋 "Linux"。 選取要建立的專案類型，然後選擇 [下一步]****。 輸入**名稱**和**位置**，然後選擇 [建立]****。
 
-   ![新的 Linux 專案](media/newproject-vs2019.png)
+   ![[新增專案] 對話方塊的螢幕擷取畫面，其中包含在 [搜尋] 文字方塊中輸入的 Linux。](media/newproject-vs2019.png)
 
    | 專案類型 | 描述 |
    | ------------ | --- |

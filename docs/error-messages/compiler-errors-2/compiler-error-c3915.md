@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d83a837a24fe36b61d3f0fccae4dbe4e93cd3261
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756275"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686047"
 ---
 # <a name="compiler-error-c3915"></a>編譯器錯誤 C3915
 
-' type ' 沒有預設的索引屬性（類別索引子）
+' type ' 沒有 (類別索引子的預設索引屬性) 
 
-型別沒有預設的索引屬性。
+類型沒有預設的索引屬性。
 
 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C3915。
 
@@ -46,9 +46,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-如果您嘗試在以 <xref:System.Reflection.DefaultMemberAttribute>定義的相同編譯模組中使用預設索引子，也可能會發生 C3915。
+如果您嘗試在以定義的相同編譯單位中使用預設索引子，也可能會發生 C3915 <xref:System.Reflection.DefaultMemberAttribute> 。
 
 下列範例會產生 C3915。
 

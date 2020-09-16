@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: e2329111e916df9eac99d156bcf58a58e148cb08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9339797f42967ef1de0253b1e51092e6d98df5d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228813"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686778"
 ---
 # <a name="compiler-error-c3532"></a>編譯器錯誤 C3532
 
 ' type '： ' auto ' 的使用不正確
 
-指定的類型不能使用關鍵字來宣告 **`auto`** 。 例如，您不能使用 **`auto`** 關鍵字來宣告陣列或方法傳回型別。
+無法使用關鍵字宣告指定的型別 **`auto`** 。 例如，您不能使用 **`auto`** 關鍵字來宣告陣列或方法傳回型別。
 
 ### <a name="to-correct-this-error"></a>更正這個錯誤
 
-1. 請確定初始化運算式會產生有效的型別。
+1. 確定初始化運算式會產生有效的型別。
 
-1. 請確定您未宣告陣列或方法傳回型別。
+1. 確定您未宣告陣列或方法傳回型別。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C3532，因為 **`auto`** 關鍵字無法宣告方法傳回型別。
 
@@ -34,8 +34,6 @@ ms.locfileid: "87228813"
 // Compile with /Zc:auto
 auto f(){}   // C3532
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3532，因為 **`auto`** 關鍵字無法宣告陣列。
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214252"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686726"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI 和 C++/CX)
 
@@ -49,9 +49,9 @@ ms.locfileid: "87214252"
 
 **literal** 是即時線上關鍵字。 如需詳細資訊，請參閱[即時線上關鍵字](context-sensitive-keywords-cpp-component-extensions.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
-這個範例會顯示**常**值變數表示 **`static`** 。
+此範例顯示 **常** 值變數表示 **`static`** 。
 
 ```cpp
 // mcppv2_literal.cpp
@@ -64,8 +64,6 @@ int main() {
    int value = X::i;
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例將示範中繼資料內常值的影響：
 
@@ -87,8 +85,6 @@ public ref struct A {
 ```
 .field public static literal int32 lit = int32(0x0000000A)
 ```
-
-## <a name="example"></a>範例
 
 下列範例是以 C# 撰寫，會參考先前範例中建立的中繼資料，並顯示 **literal** 和 **static const** 變數的影響：
 
@@ -127,4 +123,4 @@ class B {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用于 .NET 和 UWP 的元件擴充功能](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)

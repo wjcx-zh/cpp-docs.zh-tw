@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d313168e8033395da1749e000e52421939f77af4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758030"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686648"
 ---
 # <a name="compiler-error-c3699"></a>編譯器錯誤 C3699
 
-' operator '：無法在類型 ' type ' 上使用這個間接取值
+' operator '：不能在類型 ' type ' 上使用這個間接取值
 
-嘗試使用 `type`上不允許的間接取值。
+嘗試使用不允許的間接取值 `type` 。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C3699。
 
@@ -34,9 +34,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-一般屬性不能有參考型別。 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md) 。 下列範例會產生 C3699。
+簡單的屬性不能有參考型別。 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md) 。 下列範例會產生 C3699。
 
 ```cpp
 // C3699_b.cpp
@@ -47,9 +45,7 @@ ref struct C {
 };
 ```
 
-## <a name="example"></a>範例
-
-「指標」語法的對等項是追蹤參考的控制碼。 下列範例會產生 C3699。
+「指標指標」語法相當於追蹤參考的控制碼。 下列範例會產生 C3699。
 
 ```cpp
 // C3699_c.cpp

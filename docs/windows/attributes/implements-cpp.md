@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842347"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686739"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "88842347"
 
 依預設，只有屬於基類的 COM 介面 `coclass` 會加入至 IDL coclass。 **implements** 可讓您強制其他介面成為 IDL `coclass` 成員。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 | 屬性內容 | 值 |
 |-|-|
@@ -47,7 +47,7 @@ ms.locfileid: "88842347"
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例分為三個部分： .idl 檔和其相關聯的 .h 檔案，以及 c + + 檔案。
 
@@ -96,8 +96,6 @@ library odod
    };
 }
 ```
-
-## <a name="example"></a>範例
 
 和下列 .h 檔案，也必須可供編譯器使用。
 
@@ -376,8 +374,6 @@ CBar;
 #endif
 #endif
 ```
-
-## <a name="example"></a>範例
 
 在下列程式中，如果沒有 implements、 `IBar1` 、 `IBar2` 和， `ISna` 將不會在 `coclass` 產生的 IDL 中。
 

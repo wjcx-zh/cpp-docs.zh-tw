@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 980beb21325e78baa9c6f3691f7b814c5266b79a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228709"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686609"
 ---
 # <a name="generic-delegates-ccli"></a>泛型委派 (C++/CLI)
 
@@ -39,18 +39,18 @@ generic < [class | typename] type-parameter-identifiers>
 採用[泛型型別參數的條件約束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的格式
 
 *accessibility-modifiers*<br/>
-選擇性協助工具修飾詞（ **`public`** 例如 **`private`** ）。
+ (選擇性的) 存取範圍修飾詞 (例如 **`public`** **`private`**) 。
 
 *結果類型*<br/>
 委派的傳回類型。
 
-*標識*<br/>
+*識別碼*<br/>
 委派的名稱。
 
 *formal-parameters*<br/>
 (選擇性) 委派的參數清單。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 委派型別參數是在委派物件建立時指定。 委派以及與其相關聯的方法必須擁有相同的簽章。 以下為泛型委派宣告的範例。
 
@@ -60,8 +60,6 @@ generic < [class | typename] type-parameter-identifiers>
 generic <class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```
-
-## <a name="example"></a>範例
 
 以下範例將示範
 
@@ -104,8 +102,6 @@ int main() {
       gcnew GenDelegate<int>(&MyClass::MyStaticMethod<int>);
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例會宣告泛型委派 `GenDelegate<ItemType>`，接著將它與使用類型參數 `MyMethod` 的方法 `ItemType` 產生關聯，藉此將它具現化。 將會建立並叫用委派的兩個執行個體 (一個整數和一個雙精度浮點數)。
 

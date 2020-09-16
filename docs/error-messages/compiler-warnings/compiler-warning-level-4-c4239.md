@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: a882fa7f78f68cb2400e4924a9ba2f17e6ee7003
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 25b97cfb50847a0929f3d3a97b822209e6a11900
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991453"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686674"
 ---
 # <a name="compiler-warning-level-4-c4239"></a>編譯器警告 (層級 4) C4239
 
 使用非標準的擴充： ' token '：從 ' type ' 轉換成 ' type '
 
-C++標準不允許這種類型轉換，但在這裡允許它做為擴充功能。 這個警告後面一律至少有一行說明，描述違反的語言規則。
+C + + 標準不允許此類型轉換，但在此允許為延伸模組。 這個警告後面一律會接著至少一行說明，描述違反的語言規則。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C4239。
 
@@ -36,8 +36,6 @@ void func(void) {
    rC2;
 }
 ```
-
-## <a name="example"></a>範例
 
 不允許從整數類資料類型轉換為列舉類型。
 

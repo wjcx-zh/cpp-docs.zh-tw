@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219750"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686752"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型類型參數的條件約束 (C++/CLI)
 
@@ -37,7 +37,7 @@ where type-parameter: constraint list
 
 清單也可以包括類別。 為了讓類型引數符合基底類別條件約束，它必須與條件約束的類別相同，或是衍生自條件約束。
 
-您也可以指定 **gcnew()**，以指出型別引數必須具有公用的無參數建構函式；或指定 **ref class**，以指出型別引數必須是參考型別，包括任何類別、介面、委派或陣列型別；或指定 **value class**，以指出型別引數必須是實值型別。 可以指定 Nullable 以外的任何實數值型別 \<T> 。
+您也可以指定 **gcnew()**，以指出型別引數必須具有公用的無參數建構函式；或指定 **ref class**，以指出型別引數必須是參考型別，包括任何類別、介面、委派或陣列型別；或指定 **value class**，以指出型別引數必須是實值型別。 您可以指定任何實值型別（可為 Null） \<T> 。
 
 您也可以指定泛型參數做為條件約束。 針對您要限制的類型提供的型別引數必須是或衍生自條件約束的類型。 這稱為巢狀類型條件約束。
 
@@ -113,7 +113,7 @@ ref class Dictionary {};
     ref class G2{};
     ```
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例將示範在類型參數上使用條件約束呼叫執行個體方法。
 
@@ -174,8 +174,6 @@ int main() {
 "parent" is not a senior
 "grandfather" is a senior
 ```
-
-## <a name="example"></a>範例
 
 當泛型型別參數做為條件約束使用時，它稱為巢狀類型條件約束。 當具有自己的型別參數之成員函式需要將該參數限制為包含類型的型別參數時，巢狀類型條件約束就很有用。
 

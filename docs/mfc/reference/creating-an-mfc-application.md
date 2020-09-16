@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 115ca6b4ab32482707cffd08ef575c93b2f3bfa9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e7435a8538c04867a810e525e053109a7abc04d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040089"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683451"
 ---
 # <a name="creating-an-mfc-application"></a>建立 MFC 應用程式
 
@@ -42,7 +42,7 @@ MFC 應用程式精靈可根據您在精靈中選取的選項，為任意類型�
 
 如需詳細資訊，請參閱 [建立以表單為基礎的 MFC 應用程式](creating-a-forms-based-mfc-application.md)。
 
-![Visual Studio 2019 MFC 應用程式精靈](media/mfc-app-wizard.png)
+![Visual studio 2019 中 [MFC 應用程式] 的螢幕擷取畫面。](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>若要建立 MFC 主控台應用程式
 
@@ -53,7 +53,7 @@ MFC 主控台應用程式是一個命令列程式，它會使用 MFC 程式庫�
 1. 視需要修改專案名稱，然後按 **[下一步** ] 以開啟 **Windows Desktop Wizard**。
 1. 選取 [ **MFC 標頭** ] 方塊，並視需要設定其他值，然後按 **[完成]**。
 
-![Visual Studio 2019 Windows 桌面專案對話方塊](media/windows-desktop-wizard.png)
+![Visual studio 2019 中 Windows Desktop wizard 的螢幕擷取畫面。](media/windows-desktop-wizard.png)
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ MFC 主控台應用程式是一個命令列程式，它會使用 MFC 程式庫�
 
 如需詳細資訊，請參閱 [建立以表單為基礎的 MFC 應用程式](creating-a-forms-based-mfc-application.md)。
 
-![Visual Studio 2017 MFC 應用程式精靈](media/mfc-app-wizard.png)
+![Visual studio 2017 中 [MFC 應用程式] 的螢幕擷取畫面。](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>若要建立 MFC 主控台應用程式
 
@@ -80,7 +80,7 @@ MFC 主控台應用程式是一個命令列程式，它會使用 MFC 程式庫�
 1. 視需要修改專案名稱，然後按 **[確定]** 以開啟 **Windows Desktop Wizard**。
 1. 選取 [ **MFC 標頭** ] 方塊，並視需要設定其他值，然後按 **[完成]**。
 
-![Visual Studio 2017 Windows 桌面專案對話方塊](media/windows-desktop-wizard-2017.png)
+![Visual studio 2017 中 Windows Desktop wizard 的螢幕擷取畫面。](media/windows-desktop-wizard-2017.png)
 
 ::: moniker-end
 
@@ -95,7 +95,7 @@ MFC 主控台應用程式是一個命令列程式，它會使用 MFC 程式庫�
 
 如需詳細資訊，請參閱 [建立以表單為基礎的 MFC 應用程式](creating-a-forms-based-mfc-application.md)。
 
-![Visual Studio 2015 MFC 應用程式精靈](media/mfc-app-wizard-2015.png)
+![Visual studio 2015 中 [MFC 應用程式] 的螢幕擷取畫面。](media/mfc-app-wizard-2015.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>若要建立 MFC 主控台應用程式
 

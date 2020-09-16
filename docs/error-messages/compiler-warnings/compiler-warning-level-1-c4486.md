@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: 0ba3a8f9e60ab0b84266dd25b6b9ccfe10f75561
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 893dd9241f83895d253fc8b5513f56cab272e31c
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186708"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684673"
 ---
 # <a name="compiler-warning-level-1-c4486"></a>編譯器警告 (層級 1) C4486
 
-' function '： ref 類別或實值類別的私用虛擬方法應該標記為 ' sealed '
+' function '： ref 類別或實值類別的私用虛擬方法應標記為 ' sealed '
 
-由於 managed 類別或結構的私用虛擬成員函式無法存取或覆寫，因此它應該標記為[sealed](../../extensions/sealed-cpp-component-extensions.md)。
+由於無法存取或覆寫 managed 類別或結構的私用虛擬成員函式，因此它應該標示為 [sealed](../../extensions/sealed-cpp-component-extensions.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C4486。
 
@@ -33,9 +33,7 @@ private:
 };
 ```
 
-## <a name="example"></a>範例
-
-下列範例顯示私用密封的虛擬函式的其中一種可能用法。
+下列範例會示範私用密封虛擬函式的一種可能用途。
 
 ```cpp
 // C4486_b.cpp

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02364f778cdab3416cbac7cc1462ce79287b1ad9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "77415716"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684361"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>在 Visual Studio 中進行 C++ 開發的概觀
 
@@ -25,23 +25,23 @@ Microsoft C++ (MSVC) 是 Visual Studio 整合式開發環境 (IDE) 的一部分�
 
 Visual Studio 支援任何專案系統或是您想要使用的自訂建置工具，同時完整支援 IntelliSense、巡覽與偵錯功能：
 
-- **MSBuild** 是 Visual Studio 的原生專案系統。 當您**從主**選單中選擇 **「檔案** > **新專案** > 」時,您將看到許多類型的 MSBuild*專案樣本*,這些範本可説明您快速開始開發不同類型的C++應用程式。
+- **MSBuild** 是 Visual Studio 的原生專案系統。 當您**File**  >  **New**  >  從主功能表選取 [檔案新**專案**] 時，會看到許多類型的 MSBuild*專案範本*，可讓您快速開始開發不同類型的 c + + 應用程式。
 
    ::: moniker range="vs-2019"
 
-   ![新項目範本](../build/media/mathclient-project-name-2019.png "視覺化工作室 2019 新項目對話框")
+   ![新增專案範本](../build/media/mathclient-project-name-2019.png "Visual Studio 2019 新增專案] 對話方塊")
 
    ::: moniker-end
 
    ::: moniker range="<=vs-2017"
 
-   ![專案範本](media/vs2017-new-project.png "視覺化工作室 2017 新項目對話框")
+   ![專案範本](media/vs2017-new-project.png "Visual Studio 2017 新增專案] 對話方塊")
 
    ::: moniker-end
 
    一般情況下，您應該針對新專案使用這些範本，除非您使用現有 CMake 專案，或是使用其他專案系統。 如需詳細資訊，請參閱[建立和管理 MSBuild 專案](../build/creating-and-managing-visual-cpp-projects.md)。
 
-- **CMake**是一個跨平台構建系統,當您安裝具有C++工作負載的桌面開發時,該系統集成到 Visual Studio IDE 中。 您可以針對新的專案使用 CMake 專案範本，或是只開啟具有 CMakeLists.txt 檔案的資料夾。 如需詳細資訊，請參閱 [Visual Studio 中的 CMake 專案](../build/cmake-projects-in-visual-studio.md)。
+- **CMake** 是一種跨平臺組建系統，可在您安裝使用 c + + 的桌面開發工作負載時整合到 Visual Studio IDE 中。 您可以針對新的專案使用 CMake 專案範本，或是只開啟具有 CMakeLists.txt 檔案的資料夾。 如需詳細資訊，請參閱 [Visual Studio 中的 CMake 專案](../build/cmake-projects-in-visual-studio.md)。
 
 - 任何其他 C++ 建置系統 (包括鬆散的檔案集合) 則會透過**開啟資料夾**功能提供支援。 您可以建立簡單的 JSON 檔案，來叫用您的建置程式並設定偵錯工作階段。 如需詳細資訊，請參閱 [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
 
@@ -51,13 +51,13 @@ Visual Studio 支援任何專案系統或是您想要使用的自訂建置工具
 
 ::: moniker range="vs-2019"
 
-![Team Explorer](media/vs2019-team-explorer.png "視覺工作室 2017 團隊資源管理員")
+![Visual Studio 2019 中 Team Explorer 視窗的螢幕擷取畫面。](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![Team Explorer](media/vs2017-team-explorer.png "視覺工作室 2017 團隊資源管理員")
+![Visual Studio 2017 中 Team Explorer 視窗的螢幕擷取畫面。](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
 
 ::: moniker-end
 
@@ -71,29 +71,29 @@ Visual Studio 支援任何專案系統或是您想要使用的自訂建置工具
 
 如果您的程式具有使用者介面，您可以使用設計工具將按鈕、清單方塊等控制項快速填入其中。 當您將控制項從 [工具箱] 視窗拖曳至設計介面時，Visual Studio 會產生正常運作所需的資源和程式碼。 接著，您即可撰寫程式碼來自訂外觀和行為。
 
-![設計師和工具箱](media/vs2017-toolbox-designer.png "視覺工作室 2017 工具箱和設計師")
+![設計工具和工具箱](media/vs2017-toolbox-designer.png "Visual Studio 2017 工具箱和設計工具")
 
-有關為通用 Windows 平台應用設計使用者介面的詳細資訊,請參閱[設計和 UI](https://developer.microsoft.com/windows/design)。
+如需設計通用 Windows 平臺應用程式之使用者介面的詳細資訊，請參閱 [設計和 UI](https://developer.microsoft.com/windows/design)。
 
 如需建立 MFC 應用程式之使用者介面的詳細資訊，請參閱 [MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)。 如需 Win32 Windows 程式的資訊，請參閱 [Windows 傳統型應用程式](../windows/windows-desktop-applications-cpp.md)。
 
 ## <a name="write-code"></a>撰寫程式碼
 
-建立專案之後，所有專案檔會都會顯示在 [方案總管]**** 視窗中。 (*解決方案*是一個或多個相關項目的邏輯容器。當您按一下**解決方案資源管理員**中的 .h 或 .cpp 檔時,該檔將在代碼編輯器中打開。
+建立專案之後，所有專案檔會都會顯示在 [方案總管]**** 視窗中。  (*方案* 是一或多個相關專案的邏輯容器 ) 。當您在 **方案總管**中按一下 .H 或 .cpp 檔案時，就會在 [程式碼編輯器] 中開啟該檔案。
 
-![解決方案資源管理員與程式碼編輯器](media/vs2017-solution-explorer-code-editor.png "視覺化工作室 2017 解決方案資源管理員和代碼編輯器")
+![方案總管和程式碼編輯器](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 方案總管和程式碼編輯器")
 
 程式碼編輯器是 C++ 原始程式碼特有的文書處理器。 它以顏色標示語言關鍵字、方法和變數名稱，以及程式碼的其他項目，以便您更容易閱讀和了解程式碼。 它也會提供工具來重構程式碼、在不同檔案之間巡覽，以及了解如何建構程式碼。 如需詳細資訊，請參閱[撰寫及重構程式碼](../ide/writing-and-refactoring-code-cpp.md)。
 
 ## <a name="add-and-edit-resources"></a>新增和編輯資源
 
-Windows 程式或 DLL 通常包括一些*資源*,如對話方塊、圖示、圖像、可本地化字串、初始螢幕、資料庫連接字串或任何任意資料。 Visual Studio 包括用於添加和編輯資源的工具。 關於詳細資訊,請參考[資源檔](../windows/working-with-resource-files.md)。
+Windows 程式或 DLL 通常包含一些 *資源*，例如對話方塊、圖示、影像、可當地語系化的字串、啟動顯示畫面、資料庫連接字串，或任何任意資料。 Visual Studio 包含新增和編輯資源的工具。 如需詳細資訊，請參閱 [使用資源檔](../windows/working-with-resource-files.md)。
 
 ## <a name="build-compile-and-link"></a>建置 (編譯和連結)
 
-在功能表列上選擇 > **「構建解決方案**」,或輸入**Ctrl_Shift_B**鍵組合以編譯**Build**和連結專案。 生成錯誤和警告在錯誤清單 **(Ctrl+\\, E**) 中報告。 **輸出**視窗 **(Alt+2**) 顯示有關生成過程的資訊。
+選擇功能表列上的 [**組建**  >  **組建方案**]，或輸入**Ctrl + Shift + B**按鍵組合來編譯和連結專案。 錯誤清單中會報告組建錯誤和警告 (**Ctrl + \\ 、E**) 。 [ **輸出** ] 視窗 (**Alt + 2**) 顯示組建程式的相關資訊。
 
-![輸出視窗與錯誤清單](media/vs2017-output-error-list.png "視覺化工作室 2017 輸出視窗和錯誤清單")
+![輸出視窗和錯誤清單](media/vs2017-output-error-list.png "Visual Studio 2017 輸出視窗和錯誤清單")
 
 如需設定組建的詳細資訊，請參閱[使用專案屬性](../build/working-with-project-properties.md)和[專案與建置系統](../build/projects-and-build-systems-cpp.md)。
 
@@ -101,9 +101,9 @@ Windows 程式或 DLL 通常包括一些*資源*,如對話方塊、圖示、圖�
 
 ## <a name="debug"></a>偵錯
 
-您可以按 **F5** 開始偵錯。 執行暫停您設置的任何斷點(通過按**F9**)。 您還可以一次單行代碼 **(F10),** 查看變數或寄存器的值,甚至在某些情況下對代碼進行更改並繼續調試而不重新編譯。 下圖顯示在中斷點上停止執行的偵錯工作階段。 資料結構成員的值會顯示在**監看式視窗**中。
+您可以按 **F5** 開始偵錯。 您可以按 **F9**) ，在 (設定的中斷點上暫停執行。 您也可以一次逐步執行一行程式碼 (**F10**) 、查看變數或暫存器的值，甚至在某些情況下，會在程式碼中進行變更並繼續進行偵錯工具，而不需重新編譯。 下圖顯示在中斷點上停止執行的偵錯工作階段。 資料結構成員的值會顯示在**監看式視窗**中。
 
-![除錯工作階段](media/vs2017-debug-watch.png "視覺化工作室 2017 調試會話")
+![調試會話](media/vs2017-debug-watch.png "Visual Studio 2017 調試進程")
 
 如需詳細資訊，請參閱 [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)。
 
@@ -111,7 +111,7 @@ Windows 程式或 DLL 通常包括一些*資源*,如對話方塊、圖示、圖�
 
 Visual Studio 包含適用於 C++ 的 Microsoft 單元測試架構，以及 Boost.Test、Google Test 和 CTest 的支援。 從 [測試總管]**** 執行測試：
 
-![測試總管](media/cpp-test-explorer-passed.png "視覺化工作室 2017 測試資源管理員")
+![測試總管](media/cpp-test-explorer-passed.png "Visual Studio 2017 測試瀏覽器")
 
 如需詳細資訊，請參閱[使用單元測試驗證程式碼](/visualstudio/test/unit-test-your-code)及[在 Visual Studio 中撰寫 C/C++ 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp)。
 
@@ -123,7 +123,7 @@ Visual Studio 包含的靜態程式碼分析工具，可在原始程式碼中偵
 
 您可以透過 Microsoft Store 將傳統桌面應用程式和 UWP 應用程式部署給客戶。 CRT 的部署會在背景自動處理。 如需詳細資訊，請參閱[發行 Windows 應用程式與遊戲](/windows/uwp/publish/)。
 
-您還可以將本機C++桌面部署到另一台電腦。 如需詳細資訊，請參閱[部署傳統型應用程式](../windows/deploying-native-desktop-applications-visual-cpp.md)。
+您也可以將原生 c + + 桌面部署到另一部電腦。 如需詳細資訊，請參閱[部署傳統型應用程式](../windows/deploying-native-desktop-applications-visual-cpp.md)。
 
 如需部署 C++/CLI 程式的詳細資訊，請參閱[開發人員部署指南](/dotnet/framework/deployment/deployment-guide-for-developers)。
 

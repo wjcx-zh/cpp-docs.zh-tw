@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561384"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683477"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -56,7 +56,7 @@ const A* a = new A();
 
 接下來，請檢查下表中四個語句所傳回的類型 **`decltype`** 。
 
-|引數|類型|注意|
+|陳述式|類型|注意|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|的 [右值參考](../cpp/rvalue-reference-declarator-amp-amp.md) **`const int`** 。|
 |`decltype(var);`|**`int`**|變數 `var` 的類型。|
@@ -100,7 +100,7 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 在此案例中，您無法在沒有類型規範的情況下寫入適當的類型運算式 **`decltype`** 。 **`decltype`** 類型規範會啟用泛型轉送函式，因為它不會遺失有關函數是否傳回參考型別的必要資訊。 如需轉送函式的程式碼範例，請參閱先前的 `myFunc` 樣板函式範例。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列程式碼範例會宣告樣板函式 `Plus()` 的晚期指定傳回型別。 函數會使用多載來 `Plus` 處理其兩個運算元 **`operator+`** 。 因此，加號運算子的解讀 () ，而函式的傳回型別取決於函式 **`+`** `Plus` 引數的類型。
 
@@ -174,8 +174,6 @@ Hello, world!
 x3.Dump() = 42
 ```
 
-## <a name="example"></a>範例
-
 **Visual Studio 2017 和更新版本：** 編譯器會在宣告 **`decltype`** 範本時剖析引數，而非具現化。 因此，如果在引數中找到非相依特製化 **`decltype`** ，則不會延後到具現化時間，而且會立即處理，而且會在該時間診斷任何產生的錯誤。
 
 下列範例顯示在宣告時引發的這類編譯器錯誤︰
@@ -199,7 +197,7 @@ constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 Visual Studio 2010 或更新版本。
 

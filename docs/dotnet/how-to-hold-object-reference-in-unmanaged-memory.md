@@ -8,18 +8,18 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 13d5bd37a0f5e0b065aecb8c5b264fb70685363f
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988206"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684504"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>如何：在 Unmanaged 記憶體中存放物件參考
 
-您可以使用可包裝 <xref:System.Runtime.InteropServices.GCHandle>的 gcroot .h，將 CLR 物件參考保存在非受控記憶體中。 或者，您也可以直接使用 `GCHandle`。
+您可以使用 gcroot <xref:System.Runtime.InteropServices.GCHandle> 來將 CLR 物件參考保存在非受控記憶體中。 或者，您也可以 `GCHandle` 直接使用。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 ```cpp
 // hold_object_reference.cpp
@@ -55,9 +55,7 @@ int main() {
 StringWrapper::x == ManagedString
 ```
 
-## <a name="example"></a>範例
-
-`GCHandle` 提供您在非受控記憶體中保存 managed 物件參考的方法。  您可以使用 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> 方法來建立 managed 物件的不透明控制碼，並 <xref:System.Runtime.InteropServices.GCHandle.Free%2A> 釋放它。 此外，<xref:System.Runtime.InteropServices.GCHandle.Target%2A> 方法也可讓您從 managed 程式碼中的控制碼取得物件參考。
+`GCHandle` 提供在非受控記憶體中保存受管理物件參考的方法。  您可以使用 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> 方法來建立受管理物件的不透明控制碼，並 <xref:System.Runtime.InteropServices.GCHandle.Free%2A> 加以釋放。 此外，此 <xref:System.Runtime.InteropServices.GCHandle.Target%2A> 方法可讓您從 managed 程式碼中的控制碼取得物件參考。
 
 ```cpp
 // hold_object_reference_2.cpp
@@ -94,6 +92,6 @@ int main() {
 StringWrapper::m_handle == ManagedString
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + Interop (隱含 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

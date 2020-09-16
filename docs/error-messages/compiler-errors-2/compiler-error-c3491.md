@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: f6f20d9af424fdd4254fc15e0580d62b9dfba144
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8e59dd44b81846d48dc5bf7172ce17444f75e6ef
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184471"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685706"
 ---
 # <a name="compiler-error-c3491"></a>編譯器錯誤 C3491
 
@@ -25,7 +25,7 @@ ms.locfileid: "87184471"
 
 - 以傳址方式將變數傳遞到 Lambda 運算式的擷取清單。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C3491，因為不可變的 Lambda 運算式主體修改了擷取變數 `m`：
 
@@ -39,9 +39,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>範例
-
-下列範例會藉由使用關鍵字宣告 lambda 運算式來解析 C3491 **`mutable`** ：
+下列範例會使用關鍵字宣告 lambda 運算式來解析 C3491 **`mutable`** ：
 
 ```cpp
 // C3491b.cpp

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845688"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684899"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -73,7 +73,7 @@ ms.locfileid: "88845688"
 
 支援已檢查迭代器的迭代器配接器是 [checked_array_iterator 類別](../standard-library/checked-array-iterator-class.md)和 [unchecked_array_iterator 類別](../standard-library/unchecked-array-iterator-class.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 當您使用 _ITERATOR_DEBUG_LEVEL 設定為1或2的編譯時，如果您嘗試使用特定類別的索引運算子來存取容器界限之外的專案，就會發生執行階段錯誤。
 
@@ -102,8 +102,6 @@ int main()
 
 這個程式會列印 "67"，然後快顯具有其他失敗資訊的判斷提示失敗對話方塊。
 
-## <a name="example"></a>範例
-
 同樣地，當您使用 _ITERATOR_DEBUG_LEVEL 設定為1或2時，如果您嘗試在 `front` `back` 容器為空白時使用或在容器類別中存取專案，則會發生執行階段錯誤。
 
 ```cpp
@@ -125,8 +123,6 @@ int main()
 ```
 
 這個程式會快顯具有其他失敗資訊的判斷提示失敗對話方塊。
-
-## <a name="example"></a>範例
 
 下列程式碼示範各種迭代器使用案例，附帶每個使用案例的註解。 根據預設，在偵錯工具組建中，_ITERATOR_DEBUG_LEVEL 設定為2，在零售組建中設定為0。
 

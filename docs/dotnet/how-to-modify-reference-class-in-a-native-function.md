@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a9ff21390f8a5d7b20c8c36e596f80140ccb9a39
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988228"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683945"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改原生函式中的參考類別
 
-您可以使用 PInvoke 服務，將含有 CLR 陣列的參考類別傳遞至原生函式，以及修改類別。
+您可以將含有 CLR 陣列的參考類別傳遞給原生函式，並使用 PInvoke 服務修改類別。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 編譯下列原生程式庫。
 
@@ -46,8 +46,6 @@ extern "C"  {
     }
 };
 ```
-
-## <a name="example"></a>範例
 
 編譯下列元件。
 
@@ -89,6 +87,6 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + Interop (隱含 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -2,18 +2,18 @@
 title: 在 Visual Studio 中使用 Live Share for C++ 進行共同作業
 description: 在 Visual Studio 中使用 Live Share for C++ 可即時對程式碼進行共同作業並予以共用。
 ms.date: 05/24/2019
-ms.openlocfilehash: 0ebdd77d0e277778b48cf69024b24841f775d968
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60830ad6c6b98f644e1c3ddb2e78fbf7397ae919
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377278"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684517"
 ---
 # <a name="collaborate-using-live-share-for-c"></a>使用適用於 C++ 的 Live Share 共同作業
 
 在 Visual Studio 2019 和 Visual Studio Code 中，您可以使用 **Live Share** 對 C++ 專案進行即時共同作業。 有了 **Live Share**，其他人可以編輯程式碼並對其進行偵錯，而不需要安裝您的專案或其任何相依性。 您會看到彼此的編輯內容，且每項編輯內容都會以進行編輯的人員名稱加以標記。
 
-![C&#43;&#43; 实时共享编辑](../ide/media/live-share-edit-cpp.png "即時共用編輯(C++")
+![C&#43;&#43; Live Share 編輯](../ide/media/live-share-edit-cpp.png "C + + 中的 Live Share 編輯")
 
 ## <a name="live-share-host-and-guests"></a>Live Share 主持人和來賓
 
@@ -33,17 +33,17 @@ ms.locfileid: "81377278"
 - 反白顯示參考
 - 診斷/錯誤/波浪線
 
-![C&#43;&#43; 实时共享调试](../ide/media/live-share-debug-cpp.png "即時共用除錯(C++")
+![C&#43;&#43; Live Share 調試](../ide/media/live-share-debug-cpp.png "在 c + + 中 Live Share 的調試")
 
 ## <a name="start-and-end-a-live-share-session"></a>開始及結束 Live Share 工作階段
 
-要在可視化工作室中啟動即時共用會話,請單擊右上角的"共用"按鈕,或轉到 **"文件** > **開始協作會話**"。 這會產生一個您可以與共同作業者共用的連結。
+若要在 Visual Studio 中啟動 Live Share 會話，請按一下右上方的 [共用] 按鈕，或**移至 [** 檔案  >  **啟動共同作業會話**]。 這會產生一個您可以與共同作業者共用的連結。
 
-![C&#43;&#43; 实时共享按钮](../ide/media/live-share-button-cpp.png "即時共用按鈕")
+![Live Share 按鈕的小螢幕擷取畫面。](../ide/media/live-share-button-cpp.png "Live Share 按鈕")
 
 若要結束工作階段，請從 [共用]**** 下拉式清單中選取 [結束共同作業工作階段]****。
 
-![C&#43;&#43; 实时共享按钮](../ide/media/live-share-end-session-cpp.png "即時共用按鈕")
+![醒目提示 [結束共同作業會話] 選項的 [共用] 下拉式清單螢幕擷取畫面。](../ide/media/live-share-end-session-cpp.png "Live Share 按鈕")
 
 ## <a name="for-more-information"></a>取得詳細資訊
 

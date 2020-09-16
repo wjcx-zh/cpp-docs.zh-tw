@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: adca441a1b1b4e5e7b7efa44c4a292a8f1ddec35
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6639165856f09db25a2b96c41db2bb94ab93aa99
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042195"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683620"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立和使用您自己的動態連結程式庫 (c + +) 
 
@@ -40,7 +40,7 @@ ms.locfileid: "90042195"
 
 如需 DLL 的詳細資訊連結，請參閱[在 Visual Studio 中建立 C/C++ DLL](dlls-in-visual-cpp.md)。 如需隱含連結和明確連結的詳細資訊，請參閱 [判斷要使用哪一個連結方法](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 如需有關建立 c + + Dll 以搭配使用 C 語言連結慣例之程式設計語言的詳細資訊，請參閱 [匯出 c + + 函式以用於 c 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)。 如需如何建立 DLL 以與 .NET 語言搭配使用的資訊，請參閱[從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - 執行 Microsoft Windows 7 或更新版本的電腦。 建議使用 Windows 10 以獲得最佳開發體驗。
 
@@ -91,7 +91,7 @@ ms.locfileid: "90042195"
 
 建立方案時，您可以在 Visual Studio 的 [ **方案總管** ] 視窗中看到產生的專案和原始程式檔。
 
-![Visual Studio 中產生的解決方案](media/mathlibrary-solution-explorer-162.png "Visual Studio 中產生的解決方案")
+![已反白顯示數學程式庫 Visual Studio 2019 方案總管視窗的螢幕擷取畫面。](media/mathlibrary-solution-explorer-162.png "Visual Studio 中產生的解決方案")
 
 ::: moniker-end
 
@@ -103,13 +103,13 @@ ms.locfileid: "90042195"
 
 1. 在 [**新增專案**] 對話方塊的左窗格中，選取 [**已安裝**  >  **Visual C++**  >  **Windows 桌面**]。 在中央窗格中，選取 [ **動態連結程式庫] (DLL) **。 在 [**名稱**] 方塊中輸入*MathLibrary* ，以指定專案的名稱。 保留預設 **位置** 和 **方案名稱** 值。 設定 **解決方案** 以 **建立新的解決方案**。 如果未核取 [ **為方案建立目錄** ]，請檢查它。
 
-   ![命名 MathLibrary 專案](media/mathlibrary-new-project-name-159.png "命名 MathLibrary 專案")
+   ![2017 Visual Studio [新增專案] 對話方塊的螢幕擷取畫面，其中顯示 [名稱] 文字方塊中的 Math Library。](media/mathlibrary-new-project-name-159.png "命名 MathLibrary 專案")
 
 1. 選擇 [確定]**** 按鈕以建立專案。
 
 建立方案時，您可以在 Visual Studio 的 [ **方案總管** ] 視窗中看到產生的專案和原始程式檔。
 
-![Visual Studio 中產生的解決方案](media/mathlibrary-solution-explorer-159.png "Visual Studio 中產生的解決方案")
+![已反白顯示數學程式庫 Visual Studio 2017 方案總管視窗的螢幕擷取畫面。](media/mathlibrary-solution-explorer-159.png "Visual Studio 中產生的解決方案")
 
 ::: moniker-end
 
@@ -121,7 +121,7 @@ ms.locfileid: "90042195"
 
 1. 在 [新增專案]**** 對話方塊的左窗格中，展開 [已安裝]**** > [範本]**** 並選取 [Visual C++]****，然後在中央窗格中選取 [Win32 主控台應用程式]****。 在 [**名稱**] 編輯方塊中輸入*MathLibrary* ，以指定專案的名稱。 保留預設 **位置** 和 **方案名稱** 值。 設定 **解決方案** 以 **建立新的解決方案**。 如果未核取 [ **為方案建立目錄** ]，請檢查它。
 
-   ![命名 MathLibrary 專案](media/mathlibrary-project-name.png "命名 MathLibrary 專案")
+   ![2015 Visual Studio [新增專案] 對話方塊的螢幕擷取畫面，其中顯示 [名稱] 文字方塊中的 Math Library。](media/mathlibrary-project-name.png "命名 MathLibrary 專案")
 
 1. 選擇 [確定]**** 按鈕以關閉 [新增專案]**** 對話方塊，並啟動 [Win32 應用程式精靈]****。
 
@@ -135,7 +135,7 @@ ms.locfileid: "90042195"
 
 精靈完成方案後，您可以在 Visual Studio 的 [方案總管]**** 視窗中，看到產生的專案和來源檔案。
 
-![Visual Studio 中產生的解決方案](media/mathlibrary-solution-explorer-153.png "Visual Studio 中產生的解決方案")
+![已反白顯示數學程式庫 Visual Studio 2015 方案總管視窗的螢幕擷取畫面。](media/mathlibrary-solution-explorer-153.png "Visual Studio 中產生的解決方案")
 
 ::: moniker-end
 
@@ -405,7 +405,7 @@ ms.locfileid: "90042195"
 
 1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中輸入 *>mathclient.cpp* ，以指定專案的名稱。 保留預設 **位置** 和 **方案名稱** 值。 設定 **解決方案** 以 **建立新的解決方案**。 取消核取 **[將方案和專案放置在相同的目錄中** （如果已核取）]。
 
-   ![命名用戶端專案](media/mathclient-project-name-2019.png "命名用戶端專案")
+   ![[建立新專案] 對話方塊的螢幕擷取畫面，其中已醒目提示主控台應用程式選項。](media/mathclient-project-name-2019.png "命名用戶端專案")
 
 1. 選擇 [建立]**** 按鈕以建立用戶端專案。
 
@@ -421,7 +421,7 @@ ms.locfileid: "90042195"
 
 1. 在 [新增專案]**** 對話方塊左窗格中的 [已安裝]**** > [Visual C++]**** 下方，選取 [Windows 傳統型]****。 在中央窗格中，選取 [ **Windows 主控台應用程式**]。 在 [**名稱**] 編輯方塊中指定專案的名稱 *>mathclient.cpp*。  保留預設 **位置** 和 **方案名稱** 值。 設定 **解決方案** 以 **建立新的解決方案**。 如果未核取 [ **為方案建立目錄** ]，請檢查它。
 
-   ![命名用戶端專案](media/mathclient-new-project-name-159.png "命名用戶端專案")
+   ![[新增專案] 對話方塊的螢幕擷取畫面，其中已安裝 > Visual C + + > 選取 [windows 桌面]，並醒目提示 [Windows 主控台應用程式]，並在 [名稱] 文字方塊中輸入數學用戶端。](media/mathclient-new-project-name-159.png "命名用戶端專案")
 
 1. 選擇 **[確定]** 以建立用戶端應用程式專案。
 
@@ -437,7 +437,7 @@ ms.locfileid: "90042195"
 
 1. 在 [新增專案]**** 對話方塊左窗格中的 [已安裝]**** > [範本]**** > [Visual C++]**** 下方，選取 **Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] ****。 在 [**名稱**] 編輯方塊中指定專案的名稱 *>mathclient.cpp*。 保留預設 **位置** 和 **方案名稱** 值。 設定 **解決方案** 以 **建立新的解決方案**。 如果未核取 [ **為方案建立目錄** ]，請檢查它。
 
-   ![命名用戶端專案](media/mathclient-project-name.png "命名用戶端專案")
+   ![[新增專案] 對話方塊的螢幕擷取畫面，其中包含已安裝的 > 範本 > Visual C + + 選取的 > Win32、Win32 主控台應用程式 Visual C 加上反白顯示，以及 [名稱] 文字方塊中輸入的數學用戶端。](media/mathclient-project-name.png "命名用戶端專案")
 
 1. 選擇 [確定]**** 按鈕以關閉 [新增專案]**** 對話方塊，並啟動 [Win32 應用程式精靈]****。 在 [Win32 應用程式精靈] **** 對話方塊的 [概觀] **** 頁面上，選擇 [下一步] **** 按鈕。
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 657cb6598eedf8abd050b47c124c78c3a028509f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d8cfcae544d0948c21e093ba6457159b0214a583
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214499"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685615"
 ---
 # <a name="compiler-error-c3764"></a>編譯器錯誤 C3764
 
 ' override_function '：無法覆寫基類方法 ' base_class_function '
 
-編譯器偵測到格式不正確的覆寫。 例如，基類函數不是 **`virtual`** 。 如需詳細資訊，請參閱[override](../../extensions/override-cpp-component-extensions.md)。
+編譯器偵測到格式不正確的覆寫。 例如，基類函數不是 **`virtual`** 。 如需詳細資訊，請參閱覆 [寫](../../extensions/override-cpp-component-extensions.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C3764。
 
@@ -37,9 +37,7 @@ public ref struct B : A {
 };
 ```
 
-## <a name="example"></a>範例
-
-當基類方法明確且名為覆寫時，也可能會發生 C3764。 下列範例會產生 C3764。
+當基類方法同時明確且命名為覆寫時，也可能會發生 C3764。 下列範例會產生 C3764。
 
 ```cpp
 // C3764_b.cpp

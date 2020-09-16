@@ -4,12 +4,12 @@ description: Microsoft C/c + + 編譯器中的新功能和修正程式，以及 
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 1a0fc228b6c91b1e529db6676c1a1193f5db99e1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041675"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684741"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
@@ -649,7 +649,7 @@ Visual Studio 2017 隨附的 Clang/C2 工具組現在支援 **`/bigobj`** 參數
 
 用於強制 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) 的 C++ Core Checkers 現已隨 Visual Studio 散發。 在專案屬性頁的 [程式 **代碼分析延伸** 模組] 頁面中啟用檢查器。 然後，當您執行程式碼分析時，就會包含這些擴充功能。 如需詳細資訊，請參閱[使用 C++ 核心指南檢查工具](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
 
-![顯示如何使用 [程式碼分析] 屬性頁選取 C++ Core Check 的規則集。](media/CppCoreCheck.png "CppCoreCheck 屬性頁面")
+![[屬性頁] 對話方塊的螢幕擷取畫面，其中顯示已選取 [一般] > [程式碼分析] > 的設定屬性，以及一些在 [執行此規則集] 區段中列出的核心檢查。](media/CppCoreCheck.png "CppCoreCheck 屬性頁面")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
@@ -697,7 +697,7 @@ Visual Studio 圖形診斷工具：您可以使用它們來記錄並分析 Direc
 
 - **在物件表格中搜尋和篩選︰** 提供快速且輕鬆的方式來尋找所尋找的資源。
 
-  ![在 [物件資料表] 視窗中顯示篩選準則和搜尋控制項的位置。](media/search.png)
+  ![已呼叫 [類型] 下拉式清單和 [搜尋] 文字方塊的 [物件資料表] 區段螢幕擷取畫面。](media/search.png)
 
 - **資源歷程記錄：** 這個新檢視提供簡化的方式，來查看在轉譯所擷取畫面格期間使用之資源的整個修改歷程記錄。 若要叫用任何資源的歷程記錄，請按一下任何資源超連結旁的時鐘圖示。
 

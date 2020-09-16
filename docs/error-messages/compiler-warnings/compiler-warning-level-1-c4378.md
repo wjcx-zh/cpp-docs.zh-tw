@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: be3cdaac79c60143648985c1782df76422a1fc98
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 20897ba27350835b4b896c5afd89790331c59220
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162825"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685602"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>編譯器警告 (層級 1) C4378
 
 必須取得函式指標以執行初始化運算式;請考慮 System：： ModuleHandle：： ResolveMethodHandle
 
-在 **/clr**底下，初始化運算式符號會包含函式 token，而不是函式指標。  您必須使用 <xref:System.ModuleHandle.ResolveMethodHandle%2A>將權杖轉換成指標。
+在 **/clr**下，初始化運算式符號包含函式標記，而不包含函式指標。  您必須使用將權杖轉換成指標 <xref:System.ModuleHandle.ResolveMethodHandle%2A> 。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C4378。
 
@@ -62,8 +62,6 @@ int main () {
    InitializeObjects();
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例顯示如何解決 C4378。
 

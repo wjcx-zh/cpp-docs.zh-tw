@@ -26,18 +26,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: efe1444273f17c8f0544d2c51b98923169032e61
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217733"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683893"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>_InterlockedAdd 內建函式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-這些函式會執行不可部分完成的加法, 這可確保當有一個以上的執行緒具有共用變數的存取權時, 作業會順利完成。
+這些函式會執行不可部分完成的加法，如此可確保當多個執行緒有共用變數的存取權時，作業就能順利完成。
 
 ## <a name="syntax"></a>語法
 
@@ -79,7 +79,7 @@ __int64 _InterlockedAdd64_rel(
 ### <a name="parameters"></a>參數
 
 *加數*\
-[in、out]要加入至之整數的指標;已由加法的結果取代。
+[in，out]要加入之整數的指標;取代為加法的結果。
 
 *Value*\
 在要加入的值。
@@ -101,15 +101,15 @@ __int64 _InterlockedAdd64_rel(
 |`_InterlockedAdd64_nf`|ARM、ARM64|
 |`_InterlockedAdd64_rel`|ARM、ARM64|
 
-**標頭檔**\<intrin.h. h >
+**標頭檔** \<intrin.h>
 
 ## <a name="remarks"></a>備註
 
-這些函式的 `_acq` 或 `_rel` 版本後置字元在取得或發行語意之後執行連鎖相加。 *取得語義*表示在任何後續的記憶體讀取和寫入之前, 所有線程和處理器都會看到作業的結果。 在進入關鍵區段時，取得非常有用。 *發行語義*表示所有的記憶體讀取和寫入都強制在作業的結果變成可見之前, 讓所有線程和處理器都可以看見。 離開關鍵區段時，發行非常有用。 具有`_nf` (「無範圍」) 尾碼的內建函式不會做為記憶體屏障。
+這些函式的 `_acq` 或 `_rel` 版本後置字元在取得或發行語意之後執行連鎖相加。 *取得語義* 表示作業的結果會在任何較晚的記憶體讀取和寫入之前，對所有線程和處理器都可見。 在進入關鍵區段時，取得非常有用。 *發行語義* 表示所有的執行緒和處理器都必須顯示所有的記憶體讀取和寫入，才能讓作業的結果成為可見的。 離開關鍵區段時，發行非常有用。 具有 ( 「沒有範圍」 ) 尾碼的內建函式 `_nf` 不做為記憶體屏障。
 
 這些常式僅以內建函式的形式供您使用。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 ```cpp
 // interlockedadd.cpp
@@ -130,13 +130,11 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 0xffffff00 0xff0000 0xffffff00
 ```
-
-## <a name="example"></a>範例
 
 ```cpp
 // interlockedadd64.cpp
@@ -160,14 +158,14 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**結束 Microsoft 專屬**
+**結束 Microsoft 專有**
 
 ## <a name="see-also"></a>另請參閱
 

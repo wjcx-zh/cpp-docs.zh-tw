@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2036
 ms.assetid: 895821a9-65d1-44b5-bde1-dae827f3e486
-ms.openlocfilehash: df36dc5d6e399a0fc35b71e6d3a82ea77aeb5105
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 06d292224108434065dfdca2a75d38fd3bb0243c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302077"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742693"
 ---
 # <a name="compiler-error-c2036"></a>編譯器錯誤 C2036
 
 ' identifier '：未知的大小
 
-`identifier` 上的作業需要資料物件的大小，但無法判斷。
+上的作業 `identifier` 需要資料物件的大小（無法判斷）。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C2036。
 
@@ -35,8 +35,6 @@ int main() {
    pB++;   // OK
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C2036。
 

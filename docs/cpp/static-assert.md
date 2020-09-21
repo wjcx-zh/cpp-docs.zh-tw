@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560630"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742966"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -44,21 +44,21 @@ static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 
 您可以 **`static_assert`** 在命名空間、類別或區塊範圍中使用關鍵字。  (**`static_assert`** 關鍵字在技術上是宣告，雖然它不會在您的程式中引入新的名稱，因為它可以在命名空間範圍中使用。 ) 
 
-## <a name="description"></a>描述
+## <a name="description-of-static_assert-with-namespace-scope"></a>具有命名空間範圍的 static_assert 描述
 
 在下列範例中，宣告 **`static_assert`** 具有命名空間範圍。 由於編譯器已知 `void *` 類型的大小，因此會立即計算運算式的值。
 
-## <a name="example"></a>範例
+## <a name="example-of-static_assert-with-namespace-scope"></a>具有命名空間範圍的 static_assert 範例
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description"></a>描述
+## <a name="description-of-static_assert-with-class-scope"></a>具有類別範圍 static_assert 的描述
 
 在下列範例中，宣告 **`static_assert`** 具有類別範圍。 **`static_assert`** 會確認範本參數是*純舊的資料* (POD) 類型。 編譯器會檢查宣告的宣告 **`static_assert`** ，但在中具現化類別樣板之前，不會評估 *常數運算式* 參數 `basic_string` `main()` 。
 
-## <a name="example"></a>範例
+## <a name="example-of-static_assert-with-class-scope"></a>類別範圍 static_assert 的範例
 
 ```cpp
 #include <type_traits>

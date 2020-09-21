@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d9fbbc4f0eddba0ae6a7dbc3250a26d36155506e
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: c046bec3f1ebad4441e3ec51a123bd8c28a4d871
+ms.sourcegitcommit: f656092eebbcb148ca4d3b7a6a8508eff8f7e85f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075786"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90836611"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
@@ -154,6 +154,7 @@ Microsoft c + + 編譯器在 Visual Studio (MSVC) 的標準一致性是進行中
 | &nbsp;&nbsp;[`P1969R0 CWG 2382: Array allocation overhead for non-allocating placement new`](https://wg21.link/p1969r0#2382) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1969R0 CWG 2441: Inline function parameters`](https://wg21.link/p1969r0#2441) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US052: Non-executed return statements in coroutines`](https://wg21.link/P1971R0) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P2082R1 Fixing CTAD for aggregates`](https://wg21.link/P2082R1) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P2085R0 Consistent defaulted comparisons`](https://wg21.link/P2085R0) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P2103R0 US033: Allow "import" inside linkage-specifications`](https://wg21.link/P2103R0) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P2107R0 US064: Copy semantics of coroutine parameters`](https://wg21.link/P2107R0) | VS 2019 16.7 <sup> [20](#note_20)</sup> |
@@ -424,7 +425,7 @@ __VS 2019 16.5__ 指出 Visual Studio 2019 16.5 版中支援的功能。
 __VS 2019 16.6__ 指出 Visual Studio 2019 16.6 版中支援的功能。
 __VS 2019 16.7__ 指出 Visual Studio 2019 16.7 版所支援的功能。
 
-### <a name="notes"></a>備註
+### <a name="notes"></a>注意
 
 <a name="note_A"></a>__在__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 模式中，動態例外狀況規格仍會保持未實現狀態，而且 `throw()` 仍會被視為的同義字 `__declspec(nothrow)` 。 在 c + + 17 中，動態例外狀況規格大多是由 P0003R5 所移除，讓一個殘留專案： `throw()` 已被取代，而且需要做為的同義字 **`noexcept`** 。 在 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 模式中，MSVC 現在會提供與相同的 `throw()` 行為 **`noexcept`** （也就是透過終止強制執行）來符合標準。
 

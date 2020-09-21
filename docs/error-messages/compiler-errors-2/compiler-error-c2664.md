@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: 8bb9ecef2e08e1f65a817e1a6496a421e727eb13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4368358b88e5334a4aa70d1dd51450ce3dbb27e
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221116"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743226"
 ---
 # <a name="compiler-error-c2664"></a>編譯器錯誤 C2664
 
 'function': 無法將引數 n 從 'type1' 轉換成 'type2'
 
-如果建立了類別的實例，並嘗試在以關鍵字標記的函式上進行隱含轉換，則可能會發生這個參數轉換問題 **`explicit`** 。 如需明確轉換的詳細資訊，請參閱[使用者定義型別轉換](../../cpp/user-defined-type-conversions-cpp.md)。
+如果建立了類別的實例，並嘗試在以關鍵字標記的函式上進行隱含轉換，則可能會發生這個參數轉換問題 **`explicit`** 。 如需明確轉換的詳細資訊，請參閱 [使用者定義型別轉換](../../cpp/user-defined-type-conversions-cpp.md)。
 
-如果將暫存物件傳遞至取得物件參考的函式做為參數，該參考就必須是 **`const`** 參考。
+如果暫存物件傳遞至接受物件參考做為參數的函式，則該參考必須是 **`const`** 參考。
 
 如果函式收到的參數不屬於函式預期的類型，則會使用適當的建構函式建立暫存物件。 之後，會將此暫存物件傳遞至函式上。 在這種情形，此暫存物件被用來初始化參考。 在舊版的語言中，所有參考都可以由暫存物件進行初始化。
 
@@ -31,9 +31,9 @@ ms.locfileid: "87221116"
 
 如果類別將成員隱藏在它的基底類別其中一個之內，也可能會產生 C2664。
 
-如需詳細資訊，請參閱[如何：將 System：： String 轉換成 wchar_t * \* 或 char](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
+如需詳細資訊，請參閱[如何：將 System：： String 轉換為 wchar_t * \* 或 char](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C2664，並示範如何修正此問題。
 
@@ -57,8 +57,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
 此範例也會產生 C2664，並示範如何修正此問題。
 
 ```cpp
@@ -75,8 +73,6 @@ int main() {
    func( 1, 1 );   // No conversion from int to A.
 }
 ```
-
-## <a name="example"></a>範例
 
 下一個範例將使用字串常值呼叫 `Test` 來示範 C2664，並示範如何修正此問題。 因為參數是 `szString` 參考，所以必須經由適當的建構函式來建立物件。 產生的結果是一個無法被用來初始化參考的暫存物件。
 
@@ -117,9 +113,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-編譯器會強制套用的 c + + 標準需求 **`const`** 。 此範例會產生 C2664：
+編譯器會強制執行 c + + 標準需求以進行套用 **`const`** 。 此範例會產生 C2664：
 
 ```cpp
 // C2664d.cpp
@@ -141,8 +135,6 @@ int main()
    return 0;
 }
 ```
-
-## <a name="example"></a>範例
 
 以下是一個會產生 C2664 的比較複雜狀況，包含其修正指示：
 
@@ -187,9 +179,7 @@ int main( ) {
 }
 ```
 
-## <a name="example"></a>範例
-
-列舉變數未轉換為其基礎類型，而得以滿足函式呼叫。 如需詳細資訊，請參閱[enum class](../../extensions/enum-class-cpp-component-extensions.md)。 下列範例會產生 C2664，並示範如何修正此問題。
+列舉變數未轉換為其基礎類型，而得以滿足函式呼叫。 如需詳細資訊，請參閱 [列舉類別](../../extensions/enum-class-cpp-component-extensions.md)。 下列範例會產生 C2664，並示範如何修正此問題。
 
 ```cpp
 // C2664f.cpp
@@ -208,8 +198,6 @@ int main() {
    Test(Char(aa));   // OK - fix by using a conversion cast
 }
 ```
-
-## <a name="example"></a>範例
 
 midl 編譯器中的 Bug 會造成將 wchar_t 類型做為類型程式庫中不帶正負號的短整數發出。 若要解決這項錯誤，請轉換 C++ 原始程式碼中的類型，或是將類型定義為 idl 檔中的字串。
 
@@ -232,9 +220,7 @@ library myproj1 {
 }
 ```
 
-將程式 **`wchar_t`** 代碼從 Visual C++ 6.0 移植到較新版本時，也會使用來引發 C2664。 在 Visual C++ 6.0 和更早版本中， **`wchar_t`** 是 **`typedef`** 的， **`unsigned short`** 因此會隱含轉換成該類型。 在 Visual C++ 6.0 之後， **`wchar_t`** 是它自己的內建型別（如 c + + 標準中所指定），而且不會再隱含地轉換成 **`unsigned short`** 。 請參閱[/zc： wchar_t （Wchar_t 是原生類型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
-
-## <a name="example"></a>範例
+將程式 **`wchar_t`** 代碼從 Visual C++ 6.0 移植到較新版本時，也會引發 C2664。 在 Visual C++ 6.0 及更早版本中， **`wchar_t`** 是 **`typedef`** 的， **`unsigned short`** 因此可以隱含地轉換成該類型。 在 Visual C++ 6.0 之後， **`wchar_t`** 是它自己的內建類型（如 c + + 標準中所指定），而且不再隱含地轉換成 **`unsigned short`** 。 請參閱 [/zc： wchar_t (Wchar_t 是原生類型) ](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 下列範例會產生 C2664，並示範如何修正此問題。
 
@@ -255,8 +241,6 @@ int main() {
    ptr->testarr((unsigned short *)mybuff, len);   // OK - Fix by using a cast
 }
 ```
-
-## <a name="example"></a>範例
 
 如果編譯器無法減少樣板引數，也會造成 C2664。
 

@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ebe41a4c4aa090e609d3352635d4e1fc06e22454
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755989"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743213"
 ---
 # <a name="compiler-error-c2666"></a>編譯器錯誤 C2666
 
 ' identifier '：數位多載具有類似的轉換
 
-多載函數或運算子不明確。   型式參數清單可能太類似，編譯器無法解決不明確的問題。  若要解決這個錯誤，請明確地轉換一或多個實際參數。
+多載函數或運算子不明確。   型式參數清單可能太類似，無法讓編譯器解決不明確的問題。  若要解決這個錯誤，請明確地轉換一或多個實際參數。
+
+## <a name="examples"></a>範例
 
 下列範例會產生 C2666：
 
@@ -35,17 +37,15 @@ int main() {
 }
 ```
 
-針對 Visual Studio .NET 2003 進行的編譯器一致性工作，也可能產生此錯誤：
+這項錯誤也可能是因為針對 Visual Studio .NET 2003 所進行的編譯器一致性工作所產生：
 
 - 二元運算子和使用者定義的指標類型轉換
 
 - 限定性轉換與身分識別轉換不同
 
-針對二元運算子 \<、>、\<= 和 > =，如果參數的型別定義使用者定義的轉換運算子來轉換成運算元的型別，則傳遞的參數現在會隱含地轉換成運算元的型別。 現在有可能發生不明確的情況。
+針對二元運算子 \<, > （ \<=, and > =），如果參數的型別定義使用者定義的轉換運算子來轉換成運算元的型別，則傳遞的參數現在會隱含地轉換成運算元的型別。 現在有可能會有混淆。
 
-對於在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++中都有效的程式碼，請使用函式語法明確呼叫類別運算子。
-
-## <a name="example"></a>範例
+對於在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++ 中都有效的程式碼，請使用函式語法明確地呼叫 class 運算子。
 
 ```cpp
 // C2666b.cpp
@@ -101,8 +101,6 @@ int main()
         printf_s("str1.operator char*() < str2\n");
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C2666
 

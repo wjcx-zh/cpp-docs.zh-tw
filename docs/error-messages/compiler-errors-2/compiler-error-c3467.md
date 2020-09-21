@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
-ms.openlocfilehash: bba505b01df8eb1b253fbecb0db93d94ae62d5ac
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: dd7046fcf87a6b8f095092ef0de4b94326151e87
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756366"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742823"
 ---
 # <a name="compiler-error-c3467"></a>編譯器錯誤 C3467
 
@@ -19,9 +19,9 @@ ms.locfileid: "74756366"
 
 編譯器發現相同類型的多個轉送類型宣告。 每種類型只允許一個宣告。
 
-如需詳細資訊，請參閱[類型C++轉送（/cli）](../../extensions/type-forwarding-cpp-cli.md)。
+如需詳細資訊，請參閱 [類型轉送 (c + +/cli) ](../../extensions/type-forwarding-cpp-cli.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會建立元件。
 
@@ -30,8 +30,6 @@ ms.locfileid: "74756366"
 // compile with: /LD /clr
 public ref class R {};
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3467。
 

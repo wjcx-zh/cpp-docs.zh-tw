@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: 6f60a9abbc5702c1a0d14d0f894c9b1684378c3f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1f238a3be27023c755544438166aae1b2b2967d3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759356"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741979"
 ---
 # <a name="compiler-error-c3238"></a>編譯器錯誤 C3238
 
@@ -19,9 +19,9 @@ ms.locfileid: "74759356"
 
 在用戶端應用程式定義的類型，也透過類型轉送語法定義在參考的組件中。 在應用程式範圍內，無法定義這兩種類型。
 
-如需詳細資訊，請參閱[類型轉送（C++/cli）](../../extensions/type-forwarding-cpp-cli.md) 。
+如需詳細資訊，請參閱 [ (c + +/cli 的型別轉送) ](../../extensions/type-forwarding-cpp-cli.md) 。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會建立組件，其中所包含的類型是從另一個組件轉送過來。
 
@@ -31,8 +31,6 @@ ms.locfileid: "74759356"
 public ref class R {};
 ```
 
-## <a name="example"></a>範例
-
 下列範例會建立包含類型定義的組件，而不只是包含類型轉送語法。
 
 ```cpp
@@ -41,8 +39,6 @@ public ref class R {};
 #using "C3238.dll"
 [ assembly:TypeForwardedTo(R::typeid) ];
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3238：
 

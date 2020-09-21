@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-ms.openlocfilehash: 67c64de676c624369fb5a8bc07b9b5de4833fe7f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6dc79db11f08ce00cdb86e930173c052cd5187ed
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757679"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742680"
 ---
 # <a name="compiler-error-c2039"></a>編譯器錯誤 C2039
 
@@ -19,7 +19,7 @@ ms.locfileid: "74757679"
 
 程式碼不正確地呼叫或參考結構、類別或等位的成員。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C2039。
 
@@ -35,8 +35,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
 下列範例會產生 C2039。
 
 ```cpp
@@ -49,8 +47,6 @@ int main() {
    Console::WriteLine( "{0}", DateTime::Now::get());   // OK
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C2039。
 
@@ -68,9 +64,7 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK
 ```
 
-## <a name="example"></a>範例
-
-如果您嘗試不正確地存取預設索引子，也可能會發生 C2039。 下列範例會定義在中C#撰寫的元件。
+如果您嘗試以不正確的方式存取預設索引子，也可能會發生 C2039。 下列範例會定義以 c # 撰寫的元件。
 
 ```
 // C2039_d.cs
@@ -84,8 +78,6 @@ public class B {
    }
 };
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C2039。
 
@@ -103,8 +95,6 @@ int main() {
    Console::WriteLine(n);
 }
 ```
-
-## <a name="example"></a>範例
 
 如果您使用泛型，也可能會發生 C2039。 下列範例會產生 C2039。
 
@@ -129,9 +119,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-當您嘗試釋放受控或非受控資源時，可能會發生 C2039。 如需詳細資訊，請參閱[析構函數和](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)完成項。
+當您嘗試發行受控或非受控資源時，可能會發生 C2039。 如需詳細資訊，請參閱「 [析構函數」和](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)「完成項」。
 
 下列範例會產生 C2039。
 

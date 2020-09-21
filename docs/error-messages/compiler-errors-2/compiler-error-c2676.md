@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1b999875aa1c7ef34065c0a36046c634308075f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94e56581f6583fa69e46d4deb3d82663a65cd1d1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218191"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743187"
 ---
 # <a name="compiler-error-c2676"></a>編譯器錯誤 C2676
 
-二元 ' operator '： ' type ' 未定義此運算子或預先定義運算子可接受的類型轉換
+二元運算子 ' operator '： ' type ' 未定義這個運算子或轉換成預先定義的運算子可接受的類型
 
 若要使用運算子，您必須針對指定類型進行多載，或針對已定義運算子的類型定義轉換。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C2676。
 
@@ -51,11 +51,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
+如果您嘗試在 **`this`** 參考型別的指標上執行指標算術，也可能會發生 C2676。
 
-如果您嘗試在參考型別的指標上執行指標算術，也可能會發生 C2676 **`this`** 。
-
-**`this`** 指標屬於參考型別中的類型控制碼。 如需詳細資訊，請參閱[this 指標的語義](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。
+**`this`** 指標屬於參考型別中的型別控制碼。 如需詳細資訊，請參閱 [this 指標的語法](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。
 
 下列範例會產生 C2676。
 

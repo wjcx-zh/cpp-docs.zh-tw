@@ -1,6 +1,6 @@
 ---
 title: TRACING_SESSION_STATISTICS 結構
-description: C + + Build Insights SDK TRACING_SESSION_OPTIONS 結構參考。
+description: 深入瞭解 c + + Build Insights SDK TRACING_SESSION_STATISTICS 結構參考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5f6126fb469dc13b814b91942fe9f7bc480ba3f1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c1db302d9e816591624f0fc63633351d32684097
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041181"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742758"
 ---
 # <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS 結構
 

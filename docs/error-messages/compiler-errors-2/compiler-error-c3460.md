@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3460
 ms.assetid: adbf8775-10ca-4654-acdf-58dd765351cd
-ms.openlocfilehash: 9dc30eea73140ea6f0f436339de249bb714a46c2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cb1dc84ea7b6666368708e9493349d9c7a9a0571
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756613"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743070"
 ---
 # <a name="compiler-error-c3460"></a>編譯器錯誤 C3460
 
 'type': 只能轉送使用者定義的類型
 
-如需詳細資訊，請參閱[類型C++轉送（/cli）](../../extensions/type-forwarding-cpp-cli.md)。
+如需詳細資訊，請參閱 [類型轉送 (c + +/cli) ](../../extensions/type-forwarding-cpp-cli.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會建立元件。
 
@@ -28,8 +28,6 @@ ms.locfileid: "74756613"
 // compile with: /LD /clr
 public ref class R {};
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3460。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2804
 ms.assetid: b066e563-cca4-450c-8ba7-3b0d7a89f3ea
-ms.openlocfilehash: 62af8cca5131a5cb21df45f09c55ee5beb3fc718
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdd1b4155d30dd2513d87ac217ca20ca7baabd8a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760643"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743161"
 ---
 # <a name="compiler-error-c2804"></a>編譯器錯誤 C2804
 
@@ -19,7 +19,7 @@ ms.locfileid: "74760643"
 
 多載的二元運算子成員函式會使用多個參數宣告。 二元運算子成員函式的第一個運算元參數 (其類型是運算子的封閉式類型) 為隱含。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C2804，並示範如何修正此問題。
 
@@ -37,8 +37,6 @@ int main() {
    x += y;   // equivalent to x.operator+=(y)
 }
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C2804，並示範如何修正此問題。
 

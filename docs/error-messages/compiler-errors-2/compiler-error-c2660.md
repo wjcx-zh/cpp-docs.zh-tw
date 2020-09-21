@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 179cdc6379fd26f5acd436d5ca6cacc08df8dce3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756054"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743239"
 ---
 # <a name="compiler-error-c2660"></a>編譯器錯誤 C2660
 
-' function '：函數不接受數位參數
+' function '：函數不採用數位參數
 
-呼叫函式時所使用的參數數目不正確。
+使用不正確的參數數目來呼叫函數。
 
-如果您不小心呼叫 Windows API 函式，而不是使用相同名稱的 MFC 成員函式，則會發生 C2660。 若要解決此問題：
+如果您不小心呼叫 Windows API 函式，而不是相同名稱的 MFC 成員函式，就會發生 C2660。 若要解決此問題：
 
 - 調整函式呼叫，以符合成員函式呼叫的格式。
 
-- 使用範圍解析運算子（`::`）來指示編譯器在全域命名空間中搜尋函數名稱。
+- 使用範圍解析運算子 (`::`) ，告訴編譯器在全域命名空間中搜尋函式名稱。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C2660。
 
@@ -39,9 +39,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-如果您嘗試直接呼叫 managed 類型的 Dispose 方法，也可能會發生 C2660。 如需詳細資訊，請參閱[析構函數和](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)完成項。 下列範例會產生 C2660。
+如果您嘗試直接呼叫 managed 類型的 Dispose 方法，也可能會發生 C2660。 如需詳細資訊，請參閱「 [析構函數」和](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)「完成項」。 下列範例會產生 C2660。
 
 ```cpp
 // C2660_a.cpp
@@ -60,8 +58,6 @@ int main() {
    stateTimer->~Timer();   // OK
 }
 ```
-
-## <a name="example"></a>範例
 
 如果衍生類別隱藏函式，就會發生 C2660。
 
@@ -92,9 +88,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-如果您不正確地叫用索引屬性，可能會發生 C2660。
+如果您不正確地叫用索引屬性，則可能會發生 C2660。
 
 ```cpp
 // C2660c.cpp
@@ -117,9 +111,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-如果您不正確地叫用索引屬性，可能會發生 C2660。
+如果您不正確地叫用索引屬性，則可能會發生 C2660。
 
 ```cpp
 // C2660d.cpp
@@ -140,9 +132,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-如果您在樣板類別中定義新的運算子，但新運算子所建立的物件類型不是封入類型，則可能會發生 C2660。
+如果您在樣板類別中定義 new 運算子，但 new 運算子會建立其型別不是封入類型的物件，就會發生 C2660。
 
 ```cpp
 // C2660e.cpp

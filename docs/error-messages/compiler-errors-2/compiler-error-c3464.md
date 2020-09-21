@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3464
 ms.assetid: 0ede05dc-4486-4921-8e8c-78ab5a2e09c5
-ms.openlocfilehash: bcbacf6ad3f3eda1b1f7448f60278bddfc30f4e6
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ddfd795465af559885ad05775d87d6188f2f13a8
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756574"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742849"
 ---
 # <a name="compiler-error-c3464"></a>編譯器錯誤 C3464
 
@@ -19,9 +19,9 @@ ms.locfileid: "74756574"
 
 類型轉送未作用於巢狀類型上。
 
-如需詳細資訊，請參閱[類型C++轉送（/cli）](../../extensions/type-forwarding-cpp-cli.md)。
+如需詳細資訊，請參閱 [類型轉送 (c + +/cli) ](../../extensions/type-forwarding-cpp-cli.md)。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會建立元件。
 
@@ -33,8 +33,6 @@ public:
    ref class N {};
 };
 ```
-
-## <a name="example"></a>範例
 
 下列範例會產生 C3464。
 

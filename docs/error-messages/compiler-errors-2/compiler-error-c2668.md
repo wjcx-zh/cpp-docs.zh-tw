@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6b0539e7c794852f7e4b28d60f4b402a020bed1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177153"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743200"
 ---
 # <a name="compiler-error-c2668"></a>編譯器錯誤 C2668
 
-' function '：不明確地呼叫多載函式
+' function '：對多載函式的呼叫不明確
 
-無法解析指定的多載函式呼叫。 您可能想要明確轉換一或多個實際參數。
+無法解析指定的多載函式呼叫。 您可能會想要明確地轉換一或多個實際參數。
 
-您也可以透過範本使用來取得這個錯誤。 如果在相同的類別中，您有一般成員函式和具有相同簽章的樣板化成員函式，則必須先產生樣板化函數。 這是目前的視覺效果C++執行限制。
+您也可以透過範本使用來取得此錯誤。 如果在相同的類別中，您擁有具有相同簽章的一般成員函式和樣板化成員函式，則必須先取得樣板化的成員函式。 這是目前的 Visual C++ 執行的限制。
 
-## <a name="example"></a>範例
+## <a name="examples"></a>範例
 
 下列範例會產生 C2668：
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-解決這個錯誤的另一種方法是[使用 using](../../cpp/using-declaration.md)宣告：
+解決這個錯誤的另一個方法是 [使用](../../cpp/using-declaration.md)宣告：
 
 ```cpp
 // C2668b.cpp
@@ -84,11 +82,9 @@ class MyTestCase : public AppTestCase {
 };
 ```
 
-## <a name="example"></a>範例
+這項錯誤也可能是因為編譯器一致性工作所做的結果，而這項工作是針對 Visual Studio .NET 2003：常數0的 cast 轉換不明確的轉換所產生。
 
-針對 Visual Studio .NET 2003 進行的編譯器一致性工作，也可能會產生此錯誤：常數0的轉換發生不明確的轉換。
-
-使用常數0的轉換轉換是不明確的，因為 int 需要轉換成 long 和 void *。 若要解決這個錯誤，請將0轉型為所使用之函式參數的確切類型，因此不需要進行任何轉換（此程式碼將在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++）中生效。
+使用常數0的轉換轉換是不明確的，因為 int 需要將轉換為 long 和 void *。 若要解決這個錯誤，請將0轉換成它所用的函式參數的確切型別，如此一來，就不需要進行任何轉換 (此程式碼在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++) 中是有效的。
 
 ```cpp
 // C2668c.cpp
@@ -108,9 +104,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-之所以會發生這個錯誤，是因為 CRT 現在具有所有數學函數的 float 和 double 形式。
+發生此錯誤的原因可能是 CRT 現在具有所有數學函式的 float 和雙重形式。
 
 ```cpp
 // C2668d.cpp
@@ -123,9 +117,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-之所以會發生這個錯誤，是因為 pow （int，int）已從 CRT 中的 math 移除。
+發生此錯誤的原因可能是 pow (int，int) 已從 CRT 中的 math 移除。
 
 ```cpp
 // C2668e.cpp
@@ -136,9 +128,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
-
-此程式碼會在 Visual Studio 2015 中成功，但在 Visual Studio 2017 及更新版本中使用 C2668 失敗。 在 Visual Studio 2015 中，編譯器會使用與一般 copy-initialization 相同的方式錯誤地處理 copy-list-initialization；它只會考慮轉換建構函式來進行多載解析。
+這段程式碼會在 Visual Studio 2015 中成功，但在 Visual Studio 2017 和更新版本中，C2668 會失敗。 在 Visual Studio 2015 中，編譯器會使用與一般 copy-initialization 相同的方式錯誤地處理 copy-list-initialization；它只會考慮轉換建構函式來進行多載解析。
 
 ```cpp
 struct A {

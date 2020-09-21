@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: b75509beb7287fad5e51dc9d15fc3e47cacf6854
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0c185e873f526403e86cb5a80f6e0631f8654284
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751317"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743434"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 介面
 
-管理用戶介面命令。
+管理使用者介面命令。
 
 ## <a name="syntax"></a>語法
 
@@ -37,117 +37,117 @@ interface class ICommandUI
 
 |名稱|描述|
 |----------|-----------------|
-|[icommandui__Check](#check)|將此命令的用戶介面項設置為相應的檢查狀態。|
-|[ICommandUI::繼續路由](#continuerouting)|告訴命令路由機制繼續將當前消息路由到處理程序鏈中。|
-|[ICommandUI:已啟用](#enabled)|啟用或禁用此命令的用戶介面項。|
-|[ICommandUI:ID](#id)|獲取由物件表示的`ICommandUI`使用者介面對象的 ID。|
-|[ICommandUI:索引](#index)|獲取由物件表示的`ICommandUI`用戶介面物件的索引。|
-|[ICommandUI::收音機](#radio)|將此命令的用戶介面項設置為相應的檢查狀態。|
-|[ICommandUI:文字](#text)|設定此指令的用戶介面項的文本。|
+|[icommandui__Check](#check)|將此命令的使用者介面專案設定為適當的檢查狀態。|
+|[ICommandUI：： ContinueRouting](#continuerouting)|告訴命令路由機制繼續將目前的訊息路由傳送至處理常式的鏈。|
+|[ICommandUI：： Enabled](#enabled)|啟用或停用此命令的使用者介面專案。|
+|[ICommandUI：： ID](#id)|取得物件所表示之使用者介面物件的識別碼 `ICommandUI` 。|
+|[ICommandUI：： Index](#index)|取得物件所表示之使用者介面物件的索引 `ICommandUI` 。|
+|[ICommandUI：：選項按鈕](#radio)|將此命令的使用者介面專案設定為適當的檢查狀態。|
+|[ICommandUI：： Text](#text)|設定此命令的使用者介面專案文字。|
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
-此介面提供管理用戶介面命令的方法和屬性。 `ICommandUI`與[CmCmdUI 類](../../mfc/reference/ccmdui-class.md)`ICommandUI`類似,只 不過用於與 .NET 元件互通的 MFC 應用程式。
+這個介面會提供管理使用者介面命令的方法和屬性。 `ICommandUI` 與 [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)類似，不同之處在于它 `ICommandUI` 會用於與 .net 元件互通的 MFC 應用程式。
 
-`ICommandUI`在[iCommandTarget](../../mfc/reference/icommandtarget-interface.md)派生類中ON_UPDATE_COMMAND_UI處理程式中使用。 當應用程式的使用者啟動(選擇或按一下)功能表時,每個功能表項將顯示為已啟用或禁用。 每個功能表命令的目標通過實現ON_UPDATE_COMMAND_UI處理程式來提供此資訊。 對於應用程式中的每個命令使用者介面物件,使用[類嚮導](mfc-class-wizard.md)為每個處理程式創建消息映射條目和函數原型。
+`ICommandUI` 在 [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)衍生類別的 ON_UPDATE_COMMAND_UI 處理常式中使用。 當應用程式的使用者啟動時 (選取或按一下功能表) ，每個功能表項目會顯示為 [已啟用] 或 [已停用]。 每個功能表命令的目標都會藉由執行 ON_UPDATE_COMMAND_UI 處理常式來提供這項資訊。 針對應用程式中的每個命令使用者介面物件，使用 [ [類別] Wizard](mfc-class-wizard.md) 建立每個處理常式的訊息對應專案和函式原型。
 
-有關介面在命令路由中的`ICommandUI`使用方式的詳細資訊,請參閱[如何:將命令路由添加到 Windows 窗體控制件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+如需有關如何 `ICommandUI` 在命令路由中使用介面的詳細資訊，請參閱 [如何：將命令路由加入至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
-有關使用 Windows 表單的詳細資訊,請參閱[在 MFC 中使用 Windows 元件使用者控制件](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
+如需使用 Windows Forms 的詳細資訊，請參閱 [在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
-有關如何在 MFC 中管理使用者介面命令的詳細資訊,請參閱[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)。
+如需如何在 MFC 中管理使用者介面命令的詳細資訊，請參閱 [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)。
 
-## <a name="icommanduicheck"></a><a name="check"></a>ICommandUI:檢查
+## <a name="icommanduicheck"></a><a name="check"></a> ICommandUI：： Check
 
-將此命令的用戶介面項設置為相應的檢查狀態。
+將此命令的使用者介面專案設定為適當的檢查狀態。
 
 ```
 property UICheckState Check;
 ```
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
-此屬性將此命令的用戶介面項設置為相應的檢查狀態。 將「檢查」設定為以下值:
+這個屬性會將此命令的使用者介面專案設定為適當的檢查狀態。 將檢查設定為下列值：
 
-- 0 取消選取
-- 1 檢查
-- 2 設定不確定
+- 0取消核取
+- 1個檢查
+- 2設定不定
 
-## <a name="icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::繼續路由
+## <a name="icommanduicontinuerouting"></a><a name="continuerouting"></a> ICommandUI：： ContinueRouting
 
-告訴命令路由機制繼續將當前消息路由到處理程序鏈中。
+告訴命令路由機制繼續將目前的訊息路由傳送至處理常式的鏈。
 
 ```cpp
 void ContinueRouting();
 ```
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
-這是一個高級成員函數,應與返回 FALSE 的ON_COMMAND_EX處理程式結合使用。 有關詳細資訊,請參閱技術說明 TN006:消息映射。
+這是要與傳回 FALSE 的 ON_COMMAND_EX 處理常式搭配使用的 advanced 成員函式。 如需詳細資訊，請參閱 Technical Note TN006： Message Map。
 
-## <a name="icommanduienabled"></a><a name="enabled"></a>ICommandUI:已啟用
+## <a name="icommanduienabled"></a><a name="enabled"></a> ICommandUI：： Enabled
 
-啟用或禁用此命令的用戶介面項。
+啟用或停用此命令的使用者介面專案。
 
 ```
 property bool Enabled;
 ```
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
-此屬性啟用或禁用此命令的用戶介面項。 設置為 TRUE 以啟用專案,FALSE 將其禁用。
+這個屬性會啟用或停用此命令的使用者介面專案。 將 [已啟用] 設定為 [TRUE] 以啟用專案，FALSE 則停用。
 
-## <a name="icommanduiid"></a><a name="id"></a>ICommandUI:ID
+## <a name="icommanduiid"></a><a name="id"></a> ICommandUI：： ID
 
-獲取 ICommandUI 物件表示的使用者介面物件的 ID。
+取得 ICommandUI 物件所代表的使用者介面物件識別碼。
 
 ```
 property unsigned int ID;
 ```
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
-此屬性獲取功能表項、工具列按鈕或 ICommandUI 物件表示的其他使用者介面物件的 ID(句柄)。
+這個屬性會取得識別碼， (功能表項目、工具列按鈕或 ICommandUI 物件所代表之其他使用者介面物件的控制碼) 。
 
-## <a name="icommanduiindex"></a><a name="index"></a>ICommandUI:索引
+## <a name="icommanduiindex"></a><a name="index"></a> ICommandUI：： Index
 
-獲取由 ICommandUI 物件表示的使用者介面物件的索引。
+取得 ICommandUI 物件所代表的使用者介面物件的索引。
 
 ```
 property unsigned int Index;
 ```
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
-此屬性獲取功能表項、工具列按鈕或 ICommandUI 物件表示的其他使用者介面物件的索引(句柄)。
+這個屬性會取得索引， (功能表項目、工具列按鈕或 ICommandUI 物件所代表之其他使用者介面物件的控制碼) 。
 
-## <a name="icommanduiradio"></a><a name="radio"></a>ICommandUI::收音機
+## <a name="icommanduiradio"></a><a name="radio"></a> ICommandUI：：選項按鈕
 
-將此命令的用戶介面項設置為相應的檢查狀態。
+將此命令的使用者介面專案設定為適當的檢查狀態。
 
 ```
 property bool Radio;
 ```
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
-此屬性將此命令的用戶介面項設置為相應的檢查狀態。 將「無線電」設置為 TRUE 以啟用該專案;將「無線電」設置為 TRUE,以啟用該專案。否則 FALSE。
+這個屬性會將此命令的使用者介面專案設定為適當的檢查狀態。 將 [無線電] 設定為 [TRUE] 以啟用專案;否則為 FALSE。
 
-## <a name="icommanduitext"></a><a name="text"></a>ICommandUI:文字
+## <a name="icommanduitext"></a><a name="text"></a> ICommandUI：： Text
 
-設定此指令的用戶介面項的文本。
+設定此命令的使用者介面專案文字。
 
 ```
 property String^ Text;
 ```
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
-此屬性設定此命令的使用者介面項的文本。 將文字設定為文字字串句柄。
+這個屬性會設定此命令之使用者介面專案的文字。 將文字設定為文字字串控制碼。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**標題**:afxwinforms.h(在程式集 atlmfc_lib_mfcmc80.dll 中定義)
+**標頭：** afxwinforms (定義于元件 atlmfc\lib\mfcmifc80.dll) 
 
 ## <a name="see-also"></a>另請參閱
 

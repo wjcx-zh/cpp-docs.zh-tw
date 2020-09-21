@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: 6158bffceda7ac83b79b6ff8bd7fce0378759819
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eeea85872422edcf421ba2fe254c8f03c093fe3c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837459"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743447"
 ---
 # <a name="ddx_dhtml-helper-macros"></a>DDX_DHtml Helper 宏
 
@@ -67,7 +67,7 @@ DDX_DHtml_Anchor_Href(
 *無 功*<br/>
 正在交換的值。
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 此宏會使用 DISPID_IHTMLANCHORELEMENT_HREF 分派識別碼來呼叫 [CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 函數。
 
@@ -93,7 +93,7 @@ DDX_DHtml_Anchor_Target(
 *無 功*<br/>
 正在交換的值。
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 此宏會使用 DISPID_IHTMLANCHORELEMENT_TARGET 分派識別碼來呼叫 [CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 函數。
 
@@ -119,7 +119,7 @@ DDX_DHtml_ElementInnerHtml(
 *無 功*<br/>
 正在交換的值。
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 此宏會使用 DISPID_IHTMLELEMENT_INNERHTML 分派識別碼來呼叫 [CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 函數。
 
@@ -145,7 +145,7 @@ DDX_DHtml_ElementInnerText(
 *無 功*<br/>
 正在交換的值。
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 此宏會使用 DISPID_IHTMLELEMENT_INNERTEXT 分派識別碼來呼叫 [CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 函數。
 
@@ -171,7 +171,7 @@ DDX_DHtml_ElementValue(
 *無 功*<br/>
 正在交換的值。 請參閱[CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)中的*值*。
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 只有在具有 Value 屬性的控制項上執行時，這個宏才會成功。 具有值屬性的控制項包括編輯方塊、清單方塊和下拉式方塊。
 
@@ -199,7 +199,7 @@ DDX_DHtml_Frame_Src(
 *無 功*<br/>
 正在交換的值。
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 此宏會使用 DISPID_IHTMLFRAMEBASE_SRC 分派識別碼來呼叫 [CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 函數。
 
@@ -225,7 +225,7 @@ DDX_DHtml_IFrame_Src(
 *無 功*<br/>
 正在交換的值。
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 此宏會使用 DISPID_IHTMLFRAMEBASE_SRC 分派識別碼來呼叫 [CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 函數。
 
@@ -251,7 +251,7 @@ DDX_DHtml_Img_Src(
 *無 功*<br/>
 正在交換的值。
 
-## <a name="remarks"></a>備註
+### <a name="remarks"></a>備註
 
 使用 DDX_DHtml_Img_Src 宏來抓取影像元素的 Src 屬性時，Internet Explorer 影像物件將會傳回影像來源的完整轉義 URL。 例如，如果您使用 DDX_DHtml_Img_Src 宏將影像元素的 Src 屬性設定為字串「一些有趣的圖片」，則在您抓取該屬性時，Internet Explorer 會傳回字串 "res://d:\myapplication\myapp.exe/some%20interesting%20picture."
 

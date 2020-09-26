@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831680"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352748"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>如何：在 c + +) 中加入、編輯或刪除控制項 (
 
@@ -201,13 +201,13 @@ ms.locfileid: "88831680"
 >
 > 您可以使用目前的 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) 類別搭配舊版 RichEdit 1.0 控制項，但其 `CRichEditCtrl` 設計目的是為了支援 RichEdit 2.0 控制項。 由於 RichEdit 1.0 和 RichEdit 2.0 很類似，因此大部分的方法都可以運作。 不過，1.0 和2.0 控制項之間有一些差異，因此某些方法可能無法正常運作或無法正常運作。
 
-### <a name="activex-controls"></a>ActiveX 控制項
+## <a name="insert-activex-controls"></a>插入 ActiveX 控制項
 
 Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如需詳細資訊，請參閱 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md) 和 [ActiveX 控制項容器](../mfc/activex-control-containers.md)。
 
 [ **插入 Activex 控制項** ] 對話方塊可讓您在使用 [對話方塊編輯器](dialog-editor.md)時，將 ActiveX 控制項插入對話方塊中。 此對話方塊包含下列屬性：
 
-|屬性|描述|
+|屬性|說明|
 |---|---|
 |**ActiveX 控制項**|顯示 ActiveX 控制項的清單。<br/><br/>從這個對話方塊插入控制項不會產生包裝函式類別。 如果您需要包裝函式類別，請使用 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code) 建立一個包裝函式類別，請參閱 [加入類別](../ide/adding-a-class-visual-cpp.md)。<br/><br/>如果 ActiveX 控制項未出現在此對話方塊中，請嘗試根據廠商的指示來安裝控制項。|
 |**路徑**|顯示找到 ActiveX 控制項的檔案。|
@@ -215,7 +215,7 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 > [!CAUTION]
 > 在您的系統上散發所有的 ActiveX 控制項可能不合法。 請參閱已安裝控制項或與軟體公司聯繫之軟體的授權合約。
 
-#### <a name="to-add-an-activex-control"></a>加入 ActiveX 控制項
+### <a name="to-add-an-activex-control"></a>加入 ActiveX 控制項
 
 1. 在 **對話方塊編輯器**中開啟對話方塊。
 
@@ -230,7 +230,7 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 > [!TIP]
 > 您可以使用 **對話方塊編輯器** 中的快捷方式功能表，將已註冊的 activex 控制項快速加入至對話方塊，或嘗試將 activex 控制項加入 [ **工具箱** ] 視窗中，以方便存取。
 
-#### <a name="to-edit-properties-for-an-activex-control"></a>編輯 ActiveX 控制項的屬性
+### <a name="to-edit-properties-for-an-activex-control"></a>編輯 ActiveX 控制項的屬性
 
 獨立廠商提供的 ActiveX 控制項可能會有自己的屬性和特性。 這些屬性會顯示在 [ **屬性** ] 視窗中。 ActiveX 控制項的寫入器所建立的任何屬性頁面都會顯示在 [ **屬性頁** ] 對話方塊中。  (若要查看特定 ActiveX 控制項的**屬性頁**，請在[屬性視窗](/visualstudio/ide/reference/properties-window)) 中選取 [**屬性頁**] 按鈕。
 
@@ -241,7 +241,7 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 > [!NOTE]
 > 此程式適用于使用 [屬性] 頁面來編輯 ActiveX 控制項。 您也可以在 [新增 **屬性** ] 視窗中流覽和編輯 ActiveX 屬性。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 Win32
 

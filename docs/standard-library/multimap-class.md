@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: e2d0236a0e643ac92bb771b90a1f021807f03fda
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 446c1af793b885646dbb5658242e75482ebb92de
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040674"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353190"
 ---
 # <a name="multimap-class"></a>multimap 類別
 
@@ -162,7 +162,7 @@ multimap 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `multimap` 類別。|
 |[const_iterator](#const_iterator)|一種類型，提供可讀取中專案的雙向反覆運算器 **`const`** `multimap` 。|
@@ -187,7 +187,7 @@ multimap 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件
 |[開始](#begin)|傳回迭代器，為 `multimap` 中的第一個項目定址。|
 |[cbegin](#cbegin)|傳回常數迭代器，為 `multimap` 中的第一個項目定址。|
 |[cend](#cend)|傳回常數迭代器，為 `multimap` 中最後一個項目的下一個位置定址。|
-|[清楚](#clear)|清除 `multimap` 的所有項目。|
+|[清除](#clear)|清除 `multimap` 的所有項目。|
 |[包含](#contains)<sup>c + + 20</sup>|檢查中是否有具有指定索引鍵的元素 `multimap` 。|
 |[計數](#count)|傳回 `multimap` 中索引鍵符合參數指定之索引鍵的項目數目。|
 |[crbegin](#crbegin)|傳回常數迭代器，為反轉 `multimap` 中的第一個項目定址。|
@@ -195,7 +195,7 @@ multimap 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件
 |[emplace](#emplace)|將就地建構的項目插入 `multimap` 中。|
 |[emplace_hint](#emplace_hint)|將就地建構的項目 (含位置提示) 插入 `multimap` 中。|
 |[empty](#empty)|測試 `multimap` 是否為空白。|
-|[結束](#end)|傳回迭代器，為 `multimap` 中最後一個項目的下一個位置定址。|
+|[end](#end)|傳回迭代器，為 `multimap` 中最後一個項目的下一個位置定址。|
 |[equal_range](#equal_range)|尋找項目索引鍵符合指定值的項目範圍。|
 |[erase](#erase)|從指定的位置移除 `multimap` 中的項目或項目範圍，或移除符合指定之索引鍵的項目。|
 |[find](#find)|傳回迭代器，定址 `multimap` 中索引鍵等於指定索引鍵之項目的第一個位置。|
@@ -211,7 +211,7 @@ multimap 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件
 |[upper_bound](#upper_bound)|傳回迭代器，指向 `multimap` 中索引鍵大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|成員函式傳回函式物件，可藉由比較其索引鍵值判斷 `multimap` 中項目的順序。|
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[運算子 =](#op_eq)|用另一個 `multimap` 的複本取代 `multimap` 的項目。|
 
@@ -2517,6 +2517,6 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>另請參閱
 
-[容器](../cpp/containers-modern-cpp.md)\
+[容器](./stl-containers.md)\
 [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

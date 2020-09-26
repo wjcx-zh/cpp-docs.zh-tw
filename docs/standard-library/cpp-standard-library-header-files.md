@@ -6,12 +6,12 @@ helpviewer_keywords:
 - header files, C++ Standard Library
 - C++ Standard Library, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-ms.openlocfilehash: 0bbd67468c1df8b9e7c078f498d19f01f848149c
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: dfadfb99e10fdb916b3fb4dc515f89e6f9252fde
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281844"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352878"
 ---
 # <a name="c-standard-library-header-files"></a>C + + 標準程式庫標頭檔
 
@@ -23,11 +23,11 @@ C + + 標準程式庫和擴充功能的標頭檔（依類別）。
 
 | 類別 | 標題 |
 | - | - |
-| [演算法](../cpp/algorithms-modern-cpp.md) | [\<algorithm>](algorithm.md), [\<cstdlib>](cstdlib.md), [\<numeric>](numeric.md) |
+| [演算法](./algorithms.md) | [\<algorithm>](algorithm.md), [\<cstdlib>](cstdlib.md), [\<numeric>](numeric.md) |
 | 不可部分完成的作業 |  [\<atomic>](atomic.md)<sup>rj-11</sup> |
 | C 程式庫包裝函式 | [\<cassert>](cassert.md)、 [\<ccomplex>](ccomplex.md) <sup>11 a b</sup>、 [\<cctype>](cctype.md) 、 [\<cerrno>](cerrno.md) 、 [\<cfenv>](cfenv.md) <sup>11</sup>、 [\<cfloat>](cfloat.md) 、 [\<cinttypes>](cinttypes.md) <sup>11</sup>、 [\<ciso646>](ciso646.md) <sup>b</sup>、、、、、 [\<climits>](climits.md) [\<clocale>](clocale.md) [\<cmath>](cmath.md) [\<csetjmp>](csetjmp.md) [\<csignal>](csignal.md) [\<cstdalign>](cstdalign.md) <sup>11 a b</sup>、 [\<cstdarg>](cstdarg.md) 、 [\<cstdbool>](cstdbool.md) <sup>11 a</sup>b、 [\<cstddef>](cstddef.md) 、 [\<cstdint>](cstdint.md) <sup>11</sup>、 [\<cstdio>](cstdio.md) 、、、 [\<cstdlib>](cstdlib.md) [\<cstring>](cstring.md) [\<ctgmath>](ctgmath.md) <sup>11 a b</sup>、 [\<ctime>](ctime.md) 、 [\<cuchar>](cuchar.md) <sup>11</sup> [\<cwchar>](cwchar.md) 11、、[\<cwctype>](cwctype.md) |
 | 概念 | \<concepts><sup>名</sup> |
-| [容器](../cpp/containers-modern-cpp.md) | |
+| [容器](./stl-containers.md) | |
 | 順序容器 | [\<array>](array.md)<sup>11</sup>、 [\<deque>](deque.md) 、 [\<forward_list>](forward-list.md) <sup>11</sup>、 [\<list>](list.md) 、[\<vector>](vector.md) |
 | 已排序的關聯容器| [\<map>](map.md), [\<set>](set.md) |
 | 未排序的關聯容器 | [\<unordered_map>](unordered-map.md)<sup>11</sup>、 [\<unordered_set>](unordered-set.md) <sup>11</sup> |
@@ -45,7 +45,7 @@ C + + 標準程式庫和擴充功能的標頭檔（依類別）。
 | 範圍 | \<ranges><sup>名</sup> |
 | 規則運算式 | [\<regex>](regex.md)<sup>rj-11</sup> |
 | 字串和字元資料 | [\<charconv>](charconv.md)<sup>17</sup>、 [\<cctype>](cctype.md) 、 [\<cstdlib>](cstdlib.md) 、 [\<cstring>](cstring.md) 、 [\<cuchar>](cuchar.md) <sup>11</sup>、 [\<cwchar>](cwchar.md) 、 [\<cwctype>](cwctype.md) 、 [\<regex>](regex.md) <sup>11</sup>、 [\<string>](string.md) 、 [\<string_view>](string-view.md) <sup>17</sup> |
-| 時間 | [\<chrono>](chrono.md)<sup>11</sup>、 [\<ctime>](ctime.md) |
+| Time | [\<chrono>](chrono.md)<sup>11</sup>、 [\<ctime>](ctime.md) |
 
 c + + 11 標準中新增了<sup>11</sup> 。
 c + + 14 標準中新增了<sup>14</sup>項。
@@ -61,9 +61,9 @@ c + + 14 標準中新增了<sup>14</sup>項。
 
 |類別|標題|
 |-|-|
-|[演算法](../cpp/algorithms-modern-cpp.md)|[\<algorithm>](algorithm.md)|
+|[演算法](./algorithms.md)|[\<algorithm>](algorithm.md)|
 |C 程式庫包裝函式|[\<cassert>](cassert.md), [\<cctype>](cctype.md), [\<cerrno>](cerrno.md), [\<cfenv>](cfenv.md), [\<cfloat>](cfloat.md), [\<cinttypes>](cinttypes.md), [\<ciso646>](ciso646.md), [\<climits>](climits.md), [\<clocale>](clocale.md), [\<cmath>](cmath.md), [\<csetjmp>](csetjmp.md), [\<csignal>](csignal.md), [\<cstdarg>](cstdarg.md), [\<cstdbool>](cstdbool.md), [\<cstddef>](cstddef.md), [\<cstdint>](cstdint.md), [\<cstdio>](cstdio.md), [\<cstdlib>](cstdlib.md), [\<cstring>](cstring.md), [\<ctgmath>](ctgmath.md), [\<ctime>](ctime.md), [\<cwchar>](cwchar.md), [\<cwctype>](cwctype.md)|
-|[容器](../cpp/containers-modern-cpp.md)||
+|[容器](./stl-containers.md)||
 |順序容器|[\<array>](array.md), [\<deque>](deque.md), [\<forward_list>](forward-list.md), [\<list>](list.md), [\<vector>](vector.md)|
 |已排序的關聯容器| [\<map>](map.md), [\<set>](set.md)|
 |未排序的關聯容器|[\<unordered_map>](unordered-map.md), [\<unordered_set>](unordered-set.md)|

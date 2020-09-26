@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 1301baef874ac4e482a1b2a7f0a2ee6b1b63396f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833825"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353073"
 ---
 # <a name="caxwindow-class"></a>CAxWindow 類別
 
@@ -40,7 +40,7 @@ class CAxWindow : public CWindow
 
 ### <a name="methods"></a>方法
 
-|函式|描述|
+|函式|說明|
 |-|-|
 |[AttachControl](#attachcontrol)|將現有的 ActiveX 控制項附加至 `CAxWindow` 物件。|
 |[CAxWindow](#caxwindow)|建構 `CAxWindow` 物件。|
@@ -54,7 +54,7 @@ class CAxWindow : public CWindow
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[運算子 =](#operator_eq)|將 HWND 指派給現有的 `CAxWindow` 物件。|
 
@@ -68,7 +68,7 @@ class CAxWindow : public CWindow
 
 如果您需要變更基類，則可以使用 `CAxWindowT` ，並將新的基類指定為範本引數。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：** atlwin。h
 
@@ -170,7 +170,7 @@ HTML 資源的資源識別碼。 將會使用指定的資源來建立及載入 W
 
 ### <a name="example"></a>範例
 
-如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) `CreateControl` 。
+如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CreateControl` 。
 
 ## <a name="caxwindowcreatecontrolex"></a><a name="createcontrolex"></a> CAxWindow：： CreateControlEx
 
@@ -242,7 +242,7 @@ HRESULT CreateControlEx(
 
 ### <a name="example"></a>範例
 
-如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) `CreateControlEx` 。
+如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CreateControlEx` 。
 
 ## <a name="caxwindowgetwndclassname"></a><a name="getwndclassname"></a> CAxWindow：： GetWndClassName
 

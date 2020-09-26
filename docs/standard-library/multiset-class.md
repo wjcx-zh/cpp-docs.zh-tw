@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: e857a4f6369b9aa939b5dcba17e02efaf81600b0
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cb28b0b31188fcf7fefef95ddb44c9aab813e6ac
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040947"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353177"
 ---
 # <a name="multiset-class"></a>multiset 類別
 
@@ -154,7 +154,7 @@ C + + 標準程式庫 `multiset` 類別為：
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 物件之 `multiset` 類別的 typedef。|
 |[const_iterator](#const_iterator)|雙向反覆運算器的 typedef，可以讀取中的 **`const`** 元素 `multiset` 。|
@@ -179,7 +179,7 @@ C + + 標準程式庫 `multiset` 類別為：
 |[開始](#begin)|傳回指向 `multiset` 中的第一個項目的迭代器。|
 |[cbegin](#cbegin)|傳回常數迭代器，為 `multiset` 中的第一個項目定址。|
 |[cend](#cend)|傳回常數迭代器，為 `multiset` 中最後一個項目的下一個位置定址。|
-|[清楚](#clear)|清除 `multiset` 的所有項目。|
+|[清除](#clear)|清除 `multiset` 的所有項目。|
 |[包含](#contains)<sup>c + + 20</sup>|檢查中是否有具有指定索引鍵的元素 `multiset` 。|
 |[計數](#count)|傳回 `multiset` 中索引鍵符合指定為參數之索引鍵的項目數目。|
 |[crbegin](#crbegin)|傳回常數迭代器，為反轉 `multiset` 中的第一個項目定址。|
@@ -187,7 +187,7 @@ C + + 標準程式庫 `multiset` 類別為：
 |[emplace](#emplace)|將就地建構的項目插入 `multiset` 中。|
 |[emplace_hint](#emplace_hint)|將就地建構的項目 (含位置提示) 插入 `multiset` 中。|
 |[empty](#empty)|測試 `multiset` 是否為空白。|
-|[結束](#end)|傳回 `multiset` 中，指向最後一個項目後面的位置之迭代器。|
+|[end](#end)|傳回 `multiset` 中，指向最後一個項目後面的位置之迭代器。|
 |[equal_range](#equal_range)|傳回一對迭代器。 配對中第一個迭代器指向 `multiset` 中索引鍵大於指定索引鍵的第一個項目。 配對中第二個迭代器指向 `multiset` 中索引鍵等於或大於指定索引鍵的第一個項目。|
 |[erase](#erase)|從指定的位置移除 `multiset` 中的項目或項目範圍，或移除符合指定之索引鍵的項目。|
 |[find](#find)|傳回迭代器，指向 `multiset` 中索引鍵等於指定索引鍵的第一個項目的位置。|
@@ -203,9 +203,9 @@ C + + 標準程式庫 `multiset` 類別為：
 |[upper_bound](#upper_bound)|傳回迭代器，指向 `multiset` 中索引鍵大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|擷取 `multiset` 中用於排序項目值的比較物件之複本。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[運算子 =](#op_eq)|用另一個 `multiset` 的複本取代 `multiset` 的項目。|
 
@@ -2374,6 +2374,6 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>另請參閱
 
-[容器](../cpp/containers-modern-cpp.md)\
+[容器](./stl-containers.md)\
 [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 8fe2e153e3a7483d9c4698ef4a87e281ace653fc
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2f30b5683d8487830d596fc8185430c8a4c4c7b0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042131"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352403"
 ---
 # <a name="unordered_map-class"></a>unordered_map 類別
 
@@ -201,7 +201,7 @@ class unordered_map;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|項目的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[at](#at)|尋找具有指定之索引鍵的項目。|
 |[開始](#begin)|指定受控制序列的開頭。|
@@ -210,13 +210,13 @@ class unordered_map;
 |[bucket_size](#bucket_size)|取得 Bucket 大小。|
 |[cbegin](#cbegin)|指定受控制序列的開頭。|
 |[cend](#cend)|指定受控制序列的結尾。|
-|[清楚](#clear)|移除所有項目。|
+|[清除](#clear)|移除所有項目。|
 |[計數](#count)|尋找符合指定索引鍵的項目數目。|
 |[包含](#contains)<sup>c + + 20</sup>|檢查中是否有具有指定索引鍵的元素 `unordered_map` 。|
 |[emplace](#emplace)|加入就地建構的項目。|
 |[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|
 |[empty](#empty)|測試項目是否不存在。|
-|[結束](#end)|指定受控制序列的結尾。|
+|[end](#end)|指定受控制序列的結尾。|
 |[equal_range](#equal_range)|尋找符合指定之索引鍵的範圍。|
 |[erase](#erase)|移除位於指定位置的項目。|
 |[find](#find)|尋找符合指定之索引鍵的元素。|
@@ -233,7 +233,7 @@ class unordered_map;
 |[交換](#swap)|交換兩個容器的內容。|
 |[unordered_map](#unordered_map)|建構容器物件。|
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[unordered_map：： operator []](#op_at)|尋找或插入具有指定索引鍵的項目。|
 |[unordered_map：： operator =](#op_eq)|複製雜湊資料表。|
@@ -2924,6 +2924,6 @@ int main()
 ## <a name="see-also"></a>另請參閱
 
 [<unordered_map>](../standard-library/unordered-map.md)\
-[容器](../cpp/containers-modern-cpp.md)\
+[容器](./stl-containers.md)\
 [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

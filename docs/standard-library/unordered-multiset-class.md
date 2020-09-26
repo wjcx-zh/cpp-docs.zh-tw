@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 8252ecc7051c1bad2ca1e7683ea32206dd0f10f4
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0730f4eb6ba8e625c2c40cecddc4f689ec775d17
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042026"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352774"
 ---
 # <a name="unordered_multiset-class"></a>unordered_multiset 類別
 
@@ -192,7 +192,7 @@ class unordered_multiset;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|項目的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[開始](#begin)|指定受控制序列的開頭。|
 |[桶](#bucket)|取得索引鍵值的值區數目。|
@@ -200,13 +200,13 @@ class unordered_multiset;
 |[bucket_size](#bucket_size)|取得 Bucket 大小。|
 |[cbegin](#cbegin)|指定受控制序列的開頭。|
 |[cend](#cend)|指定受控制序列的結尾。|
-|[清楚](#clear)|移除所有項目。|
+|[清除](#clear)|移除所有項目。|
 |[包含](#contains)<sup>c + + 20</sup>|檢查是否有具有指定索引鍵的元素。|
 |[計數](#count)|尋找符合指定索引鍵的項目數目。|
 |[emplace](#emplace)|加入就地建構的項目。|
 |[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|
 |[empty](#empty)|測試項目是否不存在。|
-|[結束](#end)|指定受控制序列的結尾。|
+|[end](#end)|指定受控制序列的結尾。|
 |[equal_range](#equal_range)|尋找符合指定之索引鍵的範圍。|
 |[erase](#erase)|移除位於指定位置的項目。|
 |[find](#find)|尋找符合指定之索引鍵的元素。|
@@ -223,7 +223,7 @@ class unordered_multiset;
 |[交換](#swap)|交換兩個容器的內容。|
 |[unordered_multiset](#unordered_multiset)|建構容器物件。|
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[unordered_multiset::operator=](#op_eq)|複製雜湊資料表。|
 
@@ -2595,6 +2595,6 @@ int main()
 ## <a name="see-also"></a>另請參閱
 
 [<unordered_set>](../standard-library/unordered-set.md)\
-[容器](../cpp/containers-modern-cpp.md)\
+[容器](./stl-containers.md)\
 [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

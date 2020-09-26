@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 467925baf59598d743650d4f98d210f789f2b179
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833552"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353112"
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 
@@ -32,7 +32,7 @@ ms.locfileid: "88833552"
 > [!IMPORTANT]
 > 下表所列的函數不能用於在 Windows 執行階段中執行的應用程式。
 
-|函式|描述|
+|函式|說明|
 |-|-|
 |[AtlAxDialogBox](#atlaxdialogbox)|從使用者提供的對話方塊範本中建立強制回應對話方塊。 產生的對話方塊可以包含 ActiveX 控制項。|
 |[AtlAxCreateDialog](#atlaxcreatedialog)|從使用者提供的對話方塊範本中建立非強制回應對話方塊。 產生的對話方塊可以包含 ActiveX 控制項。|
@@ -48,7 +48,7 @@ ms.locfileid: "88833552"
 |[AtlAxWinTerm](#atlaxwinterm)|取消初始化 AxWin 物件的裝載程式碼。|
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|傳回物件之預設來源介面的相關資訊。|
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：** atlhost。h
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-如需有關編輯資源腳本的詳細資訊，請參閱 [如何：以文字格式開啟資源腳本](../../windows/how-to-open-a-resource-script-file-in-text-format.md)檔。 如需控制資源定義語句的詳細資訊，請參閱 Windows SDK： SDK Tools 下的 [通用控制項參數](/windows/win32/menurc/common-control-parameters) 。
+如需有關編輯資源腳本的詳細資訊，請參閱 [如何：建立資源](../../windows/how-to-create-a-resource-script-file.md)。 如需控制資源定義語句的詳細資訊，請參閱 Windows SDK： SDK Tools 下的 [通用控制項參數](/windows/win32/menurc/common-control-parameters) 。
 
 如需有關一般對話方塊的詳細資訊，請參閱 Windows SDK 中的 [對話方塊](/windows/win32/api/winuser/nf-winuser-dialogboxw) 和 [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) 。
 
@@ -298,7 +298,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="example"></a>範例
 
-如需如何使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) `AtlAxCreateControlLic` 。
+如需如何使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `AtlAxCreateControlLic` 。
 
 ## <a name="atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a> AtlAxCreateControlLicEx
 
@@ -365,7 +365,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="example"></a>範例
 
-如需如何使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) `AtlAxCreateControlLicEx` 。
+如需如何使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `AtlAxCreateControlLicEx` 。
 
 ## <a name="atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a> AtlAxAttachControl
 

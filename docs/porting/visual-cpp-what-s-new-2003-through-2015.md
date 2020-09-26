@@ -2,12 +2,12 @@
 title: 從 2003 到 2015 的 Visual C++ 新功能
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 8c73cf5fbd35c747f648ad2475a9ad49162a58d9
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: eb76e5455f053717859d0ac571b9d1110d11c33b
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389931"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352631"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -32,7 +32,7 @@ ms.locfileid: "87389931"
 
 - [Visual Studio 2015 Update 3 的一致性改進](#VS_Update3)
 
-### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Visual Studio 2015 中的一致性改善
+### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Visual Studio 2015 中的一致性改善
 
 - **/Zc:forScope- 選項**
 
@@ -65,7 +65,7 @@ ms.locfileid: "87389931"
 
 - **可變動的關鍵字。**
 
-   在 **`mutable`** 先前編譯的位置中，已不再有儲存類別規範，而不會發生錯誤。 現在，此編譯器會發生錯誤 C2071 (不合法的儲存類別)。 根據該標準，可變動的規範只可以套用至類別資料成員的名稱，而不能套用至宣告為常數或靜態的名稱，也不能套用至參考的成員。
+   **`mutable`** 儲存類別規範在先前編譯時不會發生錯誤的位置中不再允許。 現在，此編譯器會發生錯誤 C2071 (不合法的儲存類別)。 根據該標準，可變動的規範只可以套用至類別資料成員的名稱，而不能套用至宣告為常數或靜態的名稱，也不能套用至參考的成員。
 
    例如，請參考下列程式碼：
 
@@ -81,11 +81,11 @@ ms.locfileid: "87389931"
     error C2071: 'S::r': illegal storage class
    ```
 
-   若要修正此錯誤，只要移除多餘的 **`mutable`** 關鍵字即可。
+   若要修正此錯誤，只需移除多餘的 **`mutable`** 關鍵字。
 
 - **char_16_t 與 char32_t**
 
-   您不能再使用 **`char16_t`** 或 **`char32_t`** 做為 typedef 的別名，因為現在會將這些類型視為內建。 使用者和程式庫作者通常會 **`char16_t`** 分別定義和 **`char32_t`** 作為和的別名 `uint16_t` `uint32_t` 。
+   您無法再使用 **`char16_t`** 或 **`char32_t`** 作為 typedef 中的別名，因為現在會將這些類型視為內建。 使用者和程式庫作者通常會 **`char16_t`** 分別定義和 **`char32_t`** 作為和別名 `uint16_t` `uint32_t` 。
 
    ```cpp
     #include <cstdint>
@@ -102,7 +102,7 @@ ms.locfileid: "87389931"
     }
    ```
 
-   若要更新您的程式碼，請移除宣告， **`typedef`** 並將任何與這些名稱衝突的其他識別碼重新命名。
+   若要更新您的程式碼，請移除宣告 **`typedef`** 並重新命名與這些名稱衝突的任何其他識別碼。
 
 - **非類型範本參數**
 
@@ -177,7 +177,7 @@ ms.locfileid: "87389931"
     }
    ```
 
-   若要更新您的程式碼，請確定例外狀況物件的複製函式是公用的，而且未標記 **`explicit`** 。
+   若要更新您的程式碼，請確定例外狀況物件的複製函式為公用且未標記 **`explicit`** 。
 
    以傳值方式攔截例外狀況也需要可複製的例外狀況物件。 下列程式碼在 Visual Studio 2013 中可成功編譯，但無法在 Visual Studio 2015 中編譯：
 
@@ -203,7 +203,7 @@ ms.locfileid: "87389931"
     }
    ```
 
-   您可以藉由將的參數類型變更為參考來修正此問題 **`catch`** 。
+   您可以將的參數類型變更為參考，以修正此問題 **`catch`** 。
 
    ```cpp
     catch(D& d)
@@ -253,9 +253,9 @@ ms.locfileid: "87389931"
 
 - **placement new 與 delete**
 
-   已對操作員進行變更 **`delete`** ，使其符合 c + + 14 標準的一致性。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](https://isocpp.org/files/papers/n3778.html)。 這些變更 **`delete`** 會加入採用大小參數的全域運算子形式。 中斷性變更是，如果您先前使用具有相同簽章的運算子 **`delete`** （要與**placement new**運算子對應），您將會收到編譯器錯誤（C2956，這會發生在使用**放置 new**的位置），因為這是程式碼中的編譯器嘗試識別適當的相符運算子之處 **`delete`** 。
+   已對操作員進行了變更， **`delete`** 使其符合 c + + 14 標準。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](https://isocpp.org/files/papers/n3778.html)。 這些變更會新增一個 **`delete`** 採用 size 參數的 global 運算子形式。 中斷性變更是，如果您先前使用的運算子 **`delete`** 具有相同的簽章 (對應至 **放置新** 的運算子) ，您將會收到編譯器錯誤 (C2956，這是在使用 **放置新** 的位置時，因為這是程式碼中的位置，而編譯器會嘗試識別適當的相符 **`delete`** 運算子) 。
 
-   函式 `void operator delete(void *, size_t)` 曾是 **placement delete** 運算子，對應至 C++ 11 中的 **placement new** 函式 `void * operator new(size_t, size_t)`。 使用 c + + 14 調整大小的解除配置，此 **`delete`** 函式現在是*一般的解除配置函數*（全域 **`delete`** 運算子）。 標準：如果使用**放置 new** ，會查閱對應的函 **`delete`** 式，並尋找一般的解除配置函數，則程式的格式不正確。
+   函式 `void operator delete(void *, size_t)` 曾是 **placement delete** 運算子，對應至 C++ 11 中的 **placement new** 函式 `void * operator new(size_t, size_t)`。 使用 c + + 14 大小的解除配置，此 **`delete`** 函式現在是 (全域運算子) 的 *一般解除配置* **`delete`** 函式。 標準的要求是，如果使用 **new new** 來查閱對應的函式 **`delete`** ，並找到一般解除配置函式，則程式的格式不正確。
 
    例如，假設您的程式碼同時定義 **placement new** 和 **placement delete**：
 
@@ -264,17 +264,17 @@ ms.locfileid: "87389931"
     void operator delete(void*, std::size_t) noexcept;
    ```
 
-   發生此問題的原因是您定義的**放置 delete**運算子和新的全域大小運算子之間，函式簽章中的相符 **`delete`** 。 請考慮您是否可以 `size_t` 針對任何**放置 new**和運算子使用不同的類型 **`delete`** 。  請注意，的類型與 `size_t` **`typedef`** 編譯器有關; **`typedef`** 在 Visual C++ 中，它是的 **`unsigned int`** 。 較佳的解決方案是使用這類列舉類型：
+   發生此問題的原因是，您定義的 **放置刪除** 運算子與新的全域大小運算子之間的函式簽章相符 **`delete`** 。 請考慮您是否可以使用不同的類型，而不是 `size_t` 任何 **位置的 new** 和 **`delete`** 運算子。  請注意，的型別 `size_t` **`typedef`** 是編譯器相依的，它是 **`typedef`** **`unsigned int`** Visual C++ 中的。 較佳的解決方案是使用這類列舉類型：
 
    ```cpp
     enum class my_type : size_t {};
    ```
 
-   然後，變更放置的定義 **`new`** ，並 **`delete`** 使用此類型做為第二個引數，而不是 `size_t` 。 您也需要更新對**placement new**的呼叫，以傳遞新的類型（例如，使用 `static_cast<my_type>` 從整數值轉換），並更新和的定義， **`new`** **`delete`** 以轉換回整數類型。 您不需要使用來 **`enum`** 進行此作業; 具有成員的類別類型 `size_t` 也可以執行。
+   然後，變更放置的定義 **`new`** ，並 **`delete`** 使用此類型做為第二個引數，而不是 `size_t` 。 您也需要更新 **放置 new** 的呼叫，以傳遞新的類型 (例如，藉由使用 `static_cast<my_type>` 從整數值進行轉換) 並更新和的定義， **`new`** **`delete`** 以轉換回整數類型。 您不需要使用 **`enum`** 來進行這項作業; 具有成員的類別類型 `size_t` 也可以運作。
 
-   另一個解決方案是，您或許可以完全排除 **placement new**。 如果您的程式碼使用**placement new**來執行記憶體集區，其中 placement 引數是要配置或刪除之物件的大小，則調整大小的解除配置功能可能適合用來取代您自己的自訂記憶體集區程式碼，而且您可以清除放置函式，並只使用您自己的雙引數 **`delete`** 運算子，而不是放置函數。
+   另一個解決方案是，您或許可以完全排除 **placement new**。 如果您的程式碼使用 **placement new** 來實行記憶體集區，其中位置引數是要配置或刪除之物件的大小，則調整大小的解除配置功能可能適合用來取代您自己的自訂記憶體集區程式碼，而您可以移除放置函式，並只使用您自己的雙引數 **`delete`** 運算子，而不是放置函數。
 
-   如果您不想立即更新您的程式碼，則可以使用編譯器選項 `/Zc:sizedDealloc-` 來還原舊版的行為。 如果您使用此選項，則兩個引數 **`delete`** 函式不存在，也不會與您的**placement delete**運算子發生衝突。
+   如果您不想立即更新您的程式碼，則可以使用編譯器選項 `/Zc:sizedDealloc-` 來還原舊版的行為。 如果您使用此選項，則兩個引數 **`delete`** 函數不存在，也不會與您的 **放置刪除** 運算子產生衝突。
 
 - **等位資料成員**
 
@@ -510,7 +510,7 @@ ms.locfileid: "87389931"
 
    在 Visual Studio 2013 和 Visual Studio 2015 中，如果類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-1"></a><a name="VS_Update1"></a>Visual Studio 2015 Update 1 的一致性改善
+### <a name="conformance-improvements-in-visual-studio-2015-update-1"></a><a name="VS_Update1"></a> Visual Studio 2015 Update 1 的一致性改善
 
 - **私用的虛擬基底類別與間接繼承**
 
@@ -568,7 +568,7 @@ ms.locfileid: "87389931"
 
 - **多載的運算子 new 和運算子 delete**
 
-   編譯器先前版本允許非成員 **operator new** 和非成員 **operator delete** 宣告為 static，以及在全域命名空間以外的命名空間中宣告。  這種舊行為造成的風險是，程式不會呼叫程式設計人員所 **`new`** 預期的或 **`delete`** 運算子實作為，因而導致無訊息的錯誤執行時間行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2323。
+   編譯器先前版本允許非成員 **operator new** 和非成員 **operator delete** 宣告為 static，以及在全域命名空間以外的命名空間中宣告。  這種舊行為造成的風險是，程式不會呼叫程式設計人員想要的 **`new`** 或 **`delete`** 運算子執行，因而導致無訊息的錯誤執行時間行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2323。
 
    ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -620,7 +620,7 @@ ms.locfileid: "87389931"
     }
    ```
 
-- 複雜**的類型規範中有重複的 typename** 舊版編譯器允許複雜的 **`typename`** 類型規範中，以這種方式撰寫的程式碼在語義上不正確。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C3406。
+- 複雜**的類型規範中有重複的類型名稱** 舊版編譯器允許複雜的 **`typename`** 類型規範中，以這種方式撰寫的程式碼在語義上是不正確的。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C3406。
 
    ```Output
     error C3406: 'typename' cannot be used in an elaborated type specifier
@@ -726,7 +726,7 @@ ms.locfileid: "87389931"
 
 - **還原 switch 陳述式警告**
 
-   舊版編譯器已移除與語句相關的先前現有警告 **`switch`** ，現在已還原這些警告。 編譯器現在會發出還原的警告，而與特定情況相關的警告 (包括預設的情況) 都會在包含違規情況的程式行發出，而不是在 switch 陳述式的最後一行發出。 現在，在和過去不一樣的程式行中發出警告的結果是，以前使用 `#pragma warning(disable:####)` 隱藏的警告，可能不會如預期隱藏起來。 若想要如預期隱藏這些警告，就必須將 `#pragma warning(disable:####)` 指示詞移至第一個可能違規情況的上一行。 以下是還原的警告。
+   舊版編譯器已移除先前存在的與語句相關的警告 **`switch`** ，現在已還原這些警告。 編譯器現在會發出還原的警告，而與特定情況相關的警告 (包括預設的情況) 都會在包含違規情況的程式行發出，而不是在 switch 陳述式的最後一行發出。 現在，在和過去不一樣的程式行中發出警告的結果是，以前使用 `#pragma warning(disable:####)` 隱藏的警告，可能不會如預期隱藏起來。 若想要如預期隱藏這些警告，就必須將 `#pragma warning(disable:####)` 指示詞移至第一個可能違規情況的上一行。 以下是還原的警告。
 
    ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -1013,13 +1013,13 @@ ms.locfileid: "87389931"
     }
    ```
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-2"></a><a name="VS_Update2"></a>Visual Studio 2015 Update 2 中的一致性改進
+### <a name="conformance-improvements-in-visual-studio-2015-update-2"></a><a name="VS_Update2"></a> Visual Studio 2015 Update 2 的一致性改善
 
 - **運算式 SFINAE 的部分支援也可能會發出其他警告與錯誤**
 
-   舊版編譯器不會剖析指定名稱內的特定類型運算式 **`decltype`** ，因為不支援運算式 SFINAE。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會剖析這些運算式，並隨著一致性逐漸改進來提供運算式 SFINAE 的部分支援。 如此一來，編譯器現在就會發出在舊版編譯器未剖析的運算式中找到的警告與錯誤。
+   **`decltype`** 由於缺少運算式 SFINAE 的支援，舊版編譯器不會剖析規範內的特定種類的運算式。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會剖析這些運算式，並隨著一致性逐漸改進來提供運算式 SFINAE 的部分支援。 如此一來，編譯器現在就會發出在舊版編譯器未剖析的運算式中找到的警告與錯誤。
 
-   當這個新行為剖析的運算式包含尚未宣告的型別時 **`decltype`** ，編譯器會發出編譯器錯誤 C2039。
+   當這個新行為剖析的運算式包含尚未宣告的型別時 **`decltype`** ，編譯器會發出編譯器錯誤 C2039 結果。
 
    ```Output
     error C2039: 'type': is not a member of '`global namespace''
@@ -1053,7 +1053,7 @@ ms.locfileid: "87389931"
     }
    ```
 
-   當這個新行為剖析 **`decltype`** 缺少必要使用關鍵字的運算式 **`typename`** 來指定相依名稱是類型時，編譯器會發出編譯器警告 C4346 與編譯器錯誤 C2923。
+   當這個新行為剖析 **`decltype`** 缺少必要關鍵字的運算式 **`typename`** 來指定相依名稱為型別時，編譯器會發出編譯器警告 C4346 以及編譯器錯誤 C2923。
 
    ```Output
     warning C4346: 'S2<T>::Type': dependent name is not a type
@@ -1104,7 +1104,7 @@ ms.locfileid: "87389931"
     };
    ```
 
-- **`volatile`****成員變數會禁止隱含定義的函數和指派運算子**舊版編譯器允許具有成員變數的類別， **`volatile`** 自動產生預設的複製/移動函式和預設複製/移動指派運算子。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會考慮讓具有揮發性成員變數的類別擁有非 trivial 建構和指派運算子，這樣可防止自動產生這些運算子的預設實作。 當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含 Unonymous 等位之類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。
+- **`volatile`****成員變數會禁止隱含定義的函式和指派運算子**舊版編譯器允許具有 **`volatile`** 成員變數的類別自動產生預設的複製/移動函式和預設的複製/移動指派運算子。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會考慮讓具有揮發性成員變數的類別擁有非 trivial 建構和指派運算子，這樣可防止自動產生這些運算子的預設實作。 當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含 Unonymous 等位之類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1190,7 +1190,7 @@ ms.locfileid: "87389931"
 
 - **WinRT 程式碼不允許列舉的向前宣告** (僅會影響 `/ZW`)
 
-   針對 Windows 執行階段（WinRT）編譯的程式碼不允許 **`enum`** 向前宣告類型，類似于使用編譯器參數為 .Net Framework 編譯受控 c + + 程式碼的情況 `/clr` 。 此行為可確保一律得知列舉的大小，並能正確將其投影至 WinRT 型別系統。 編譯器拒絕以此方式撰寫的程式碼，且會發出編譯器錯誤 C2599 以及編譯器錯誤 C3197。
+   針對 Windows 執行階段 (WinRT) 編譯的程式碼不允許 **`enum`** 向前宣告類型，類似于使用編譯器參數為 .Net Framework 編譯受控 c + + 程式碼時 `/clr` 。 此行為可確保一律得知列舉的大小，並能正確將其投影至 WinRT 型別系統。 編譯器拒絕以此方式撰寫的程式碼，且會發出編譯器錯誤 C2599 以及編譯器錯誤 C3197。
 
    ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -1273,9 +1273,9 @@ ms.locfileid: "87389931"
 
    可能需要先將運算子定義從標頭檔移出，再將其移入對應的原始程式檔，才能修正以此方式撰寫的程式碼。
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-3"></a><a name="VS_Update3"></a>Visual Studio 2015 Update 3 中的一致性改進
+### <a name="conformance-improvements-in-visual-studio-2015-update-3"></a><a name="VS_Update3"></a> Visual Studio 2015 Update 3 的一致性改善
 
-- **std::is_convertable 現在已可偵測自我指派** (標準程式庫)：當舊版 `std::is_convertable` 類型特性的複製建構函式遭刪除或為私用時，其無法正確地偵測類別類型的自我指派。 現在， `std::is_convertable<>::value` **`false`** 當套用至具有已刪除或私用複製函式的類別類型時，會正確地設定為。
+- **std::is_convertable 現在已可偵測自我指派** (標準程式庫)：當舊版 `std::is_convertable` 類型特性的複製建構函式遭刪除或為私用時，其無法正確地偵測類別類型的自我指派。 現在， `std::is_convertable<>::value` **`false`** 當套用至具有已刪除或私用複製函式的類別型別時，會正確地設定為。
 
    此變更沒有相關聯的編譯器診斷。
 
@@ -1299,7 +1299,7 @@ ms.locfileid: "87389931"
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
    ```
 
-   在舊版的 Visual C++ 中，此範例底部的靜態判斷提示會通過，因為不 `std::is_convertable<>::value` 正確地設定為 **`true`** 。 現在， `std::is_convertable<>::value` 已正確地設定為 **`false`** ，導致靜態判斷提示失敗。
+   在舊版 Visual C++ 中，此範例底部的靜態判斷提示會通過，因為不 `std::is_convertable<>::value` 正確地設定為 **`true`** 。 現在， `std::is_convertable<>::value` 已正確設定為 **`false`** ，導致靜態判斷提示失敗。
 
 - **預設或已刪除的 trivial 複製及移動建構函式會採用存取指定名稱**
 
@@ -1533,7 +1533,7 @@ MSVC 支援下列 ISO C++11 語言功能：
 - 複合常值。
 - 指定的初始設定式。
 - 程式碼的混合宣告。
-- 可以使用新的編譯器選項 `/Zc:strictStrings`，來禁止字串常值轉換為可修改的值。 在 c + + 98 中，從字串常值轉換成 **`char*`** （以及寬字元串常值 `wchar_t*` ）已被取代。 在 C++11 中，轉換已完全移除。 雖然編譯器可以嚴格遵守這個標準，但可提供 `/Zc:strictStrings` 選項，讓您可以控制轉換。 選項預設為關閉。 請注意，當您在偵錯模式中使用這個選項時，無法編譯 STL。
+- 可以使用新的編譯器選項 `/Zc:strictStrings`，來禁止字串常值轉換為可修改的值。 在 c + + 98 中，從字串常值轉換為 **`char*`** (和寬字元串常值轉換為 `wchar_t*`) 已被取代。 在 C++11 中，轉換已完全移除。 雖然編譯器可以嚴格遵守這個標準，但可提供 `/Zc:strictStrings` 選項，讓您可以控制轉換。 選項預設為關閉。 請注意，當您在偵錯模式中使用這個選項時，無法編譯 STL。
 - 左/右值參考轉換。 使用右值參考，C++11 可以清楚區別左值和右值。 在過去，編譯器在特定轉換情節中不提供此功能。 已新增編譯器選項 `/Zc:rvalueCast`，使編譯器符合 C++ 語言工作文件 (請參閱第 5.4 節 [expr.cast]/1)。 當這個選項未指定時的預設行為，與 Visual Studio 2012 中的預設行為相同。
 
 > [!NOTE]
@@ -1552,8 +1552,8 @@ MSVC 支援下列 ISO C++11 語言功能：
 - "透明運算子函式" less<>、greater<>、plus<>、multiplies<> 等等。
 - make_unique\<T>(args...) 和 make_unique<T[]>(n)
 - cbegin()/cend()、rbegin()/rend() 和 crbegin()/crend() 非成員函式。
-- \<atomic>已收到許多效能增強功能。
-- \<type_traits>已收到主要穩定和程式碼修正。
+- \<atomic> 已獲得許多效能增強功能。
+- \<type_traits> 收到主要穩定和程式碼修正。
 
 ### <a name="breaking-changes"></a>重大變更
 
@@ -1582,7 +1582,7 @@ MSVC 支援下列 ISO C++11 語言功能：
 
 - **支援值結構中的 Boxed 類型。**
 
-   您現在可以使用可為 null 的欄位（例如，而不是）來定義實數值型別 `IBox<int>^` **`int`** 。 這表示欄位可以有值或等於 **`nullptr`** 。
+   您現在可以使用可為 null 的欄位來定義實數值型別，例如， `IBox<int>^` 而不是 **`int`** 。 這表示欄位可以有值或等於 **`nullptr`** 。
 
 - **更豐富的例外狀況資訊。**
 
@@ -1636,11 +1636,11 @@ MSVC 支援下列 ISO C++11 語言功能：
 
 - 加入類別類型的分號。
 - 完成原始字串常值的括號。
-- 完成多行批註（/ \* \* /）
+- 完成多行批註 (/ \* \* /) 
 
 在顯示文字比對清單後，[尋找所有參考]**** 現在會自動解析並在背景中篩選參考。
 
-**以內容為依據的成員清單篩選。** 無法存取的成員會從 IntelliSense 成員清單中篩選掉。 例如，私用成員在成員清單中不會顯示，除非您修改實作類型的程式碼。 當成員清單開啟時，您可以按**Ctrl** + **J**來移除一個篩選層級（僅適用于目前成員清單視窗）。 您可以**Ctrl** + 再按一次 Ctrl**J** ，移除文字篩選並顯示每個成員。
+**以內容為依據的成員清單篩選。** 無法存取的成員會從 IntelliSense 成員清單中篩選掉。 例如，私用成員在成員清單中不會顯示，除非您修改實作類型的程式碼。 當成員清單開啟時，您可以按下**Ctrl** + **J**來移除一個篩選層級 (只適用于目前成員清單視窗) 。 您可以再按一次**Ctrl** + **J**來移除文字篩選，並顯示每個成員。
 
 **參數說明捲動。** 在參數說明工具提示中顯示的函式簽章現在會根據您實際輸入參數的數目變更，而不是根據目前內容顯示任意簽章並且不加以更新。 當它顯示在巢狀函式上時，參數說明也會正常運作。
 
@@ -1662,7 +1662,7 @@ MSVC 支援下列 ISO C++11 語言功能：
 
 #### <a name="standard-template-library"></a>標準樣板程式庫
 
-- 新 STL 標頭的支援： \<atomic> 、 \<chrono> 、 \<condition_variable> 、 \<filesystem> 、、、 \<future> \<mutex> \<ratio> 和 \<thread> 。
+- 新 STL 標頭的支援： \<atomic> 、 \<chrono> 、 \<condition_variable> 、、、 \<filesystem> \<future> \<mutex> 、 \<ratio> 和 \<thread> 。
 - 為了最佳化記憶體資源使用量，現在的容器會較小。 例如，在具有預設設定的 x86 發行模式中、`std::vector` 已從 Visual Studio 2010 中的 16 個位元組壓縮為 Visual Studio 2012 中的 12 個位元組，而 `std::map` 已從 Visual Studio 2010 中的 16 個位元組壓縮為 Visual Studio 2012 中的 8 個位元組。
 - 已實作 SCARY 迭代器，這對 C++11 標準而言允許但不需要。
 
@@ -1704,9 +1704,9 @@ MSVC 支援下列 ISO C++11 語言功能：
 
 C++ AMP 善用在獨立圖形顯示卡上通常呈現為 GPU 的資料平行硬體，來加速 C++ 程式碼的執行。 C++ AMP 程式設計模型包含多維陣列、索引、記憶體傳輸、並排顯示和數學函式庫。 使用 C++ AMP 語言延伸模組和編譯器限制，即可控制如何將資料從 CPU 移至 GPU 並移回。
 
-**調試.** 使用 C++ AMP 以 GPU 為目標之應用程式的偵錯體驗，就像其他 C++ 應用程式的偵錯一樣。 這包含先前提到的新平行偵錯新增項目。
+**調試。** 使用 C++ AMP 以 GPU 為目標之應用程式的偵錯體驗，就像其他 C++ 應用程式的偵錯一樣。 這包含先前提到的新平行偵錯新增項目。
 
-**探測.** 現在有根據 C++ AMP 和其他 Direct3D 程式設計模型之 GPU 活動的分析支援。
+**分析。** 現在有根據 C++ AMP 和其他 Direct3D 程式設計模型之 GPU 活動的分析支援。
 
 #### <a name="general-parallel-programming-enhancements"></a>一般平行程式設計加強功能
 
@@ -1741,7 +1741,7 @@ C++ AMP 善用在獨立圖形顯示卡上通常呈現為 GPU 的資料平行硬�
 
 **語意顏色標示。** 類型、列舉、巨集和其他 C++ 權杖現在預設有顏色標示。
 
-**參考的醒目提示。** 選取符號現在會反白顯示目前檔案中符號的所有執行個體。 按**ctrl** + **shift** + **向上鍵**或**ctrl** + **shift** + **向下**鍵，在反白顯示的參考之間移動。 您可以在 [選項]**** 對話方塊的 [文字編輯器]**** > [C/C++]**** > [進階]**** 下關閉此功能。
+**參考的醒目提示。** 選取符號現在會反白顯示目前檔案中符號的所有執行個體。 按**ctrl** + **shift** + **向上箭**號或**ctrl** + **下移** + **箭**號，即可在反白顯示的參考中移動。 您可以在 [選項]**** 對話方塊的 [文字編輯器]**** > [C/C++]**** > [進階]**** 下關閉此功能。
 
 ### <a name="application-lifecycle-management-tools"></a>應用程式生命週期管理工具
 
@@ -1763,11 +1763,11 @@ C++ AMP 善用在獨立圖形顯示卡上通常呈現為 GPU 的資料平行硬�
 
 #### <a name="architecture-dependency-graphs"></a>架構相依性圖形
 
-若要深入了解程式碼，現在可以在方案中產生二進位、類別、命名空間和 Include 檔案的相依性圖形。 在功能表列上，依序選擇 [**架構**] [產生相依性  >  **圖形]**、[**針對方案**] 或 [**包含**檔案] 來產生相依性圖形。 關係圖產生完成後，即可展開每個節點進行探索、在節點之間移動來了解相依性關係，以及選擇節點捷徑功能表上的 [檢視內容]**** 來瀏覽原始程式碼。 若要產生 include 檔案的相依性圖形，請在 \* .cpp 原始程式碼檔或 .h 標頭檔的快捷方式功能表上 \* ，選擇 [**產生 Include 檔圖形]**。
+若要深入了解程式碼，現在可以在方案中產生二進位、類別、命名空間和 Include 檔案的相依性圖形。 在功能表列上，選擇 **[架構**產生相依性  >  **圖形]**，然後**針對 [方案**] 或 [**包含**檔案] 來產生相依性圖形。 關係圖產生完成後，即可展開每個節點進行探索、在節點之間移動來了解相依性關係，以及選擇節點捷徑功能表上的 [檢視內容]**** 來瀏覽原始程式碼。 若要產生 include 檔案的相依性圖形，請在 \* .cpp 原始程式碼檔或 .h 標頭檔的快捷方式功能表上 \* ，選擇 [ **產生 Include 檔圖形]**。
 
 #### <a name="architecture-explorer"></a>架構總管
 
-使用**架構總管**，即可瀏覽 C++ 解決方案、專案或檔案中的資產。 在功能表列上，選擇 [**架構**] [  >  **Windows**  >  **架構瀏覽器**]。 您可以選取感興趣的節點 (例如 [類別檢視]****)。 在此情況下，會展開含有命名空間清單的工具視窗右側。 如果您選取命名空間，則新的資料行會顯示此命名空間中的類別、結構和列舉清單。 您可以繼續瀏覽這些資產，或返回最左側的資料行來啟動另一個查詢。 請參閱**使用架構總管尋找程式碼**。
+使用**架構總管**，即可瀏覽 C++ 解決方案、專案或檔案中的資產。 在功能表列上，選擇 [**架構**  >  **Windows**  >  **架構瀏覽器**]。 您可以選取感興趣的節點 (例如 [類別檢視]****)。 在此情況下，會展開含有命名空間清單的工具視窗右側。 如果您選取命名空間，則新的資料行會顯示此命名空間中的類別、結構和列舉清單。 您可以繼續瀏覽這些資產，或返回最左側的資料行來啟動另一個查詢。 請參閱**使用架構總管尋找程式碼**。
 
 #### <a name="code-coverage"></a>程式碼涵蓋範圍
 
@@ -1777,20 +1777,20 @@ C++ AMP 善用在獨立圖形顯示卡上通常呈現為 GPU 的資料平行硬�
 
 ### <a name="c-compiler-and-linker"></a>C++ 編譯器和連結器
 
-**auto 關鍵字。** **`auto`** 關鍵字具有新的用途。 使用關鍵字的預設意義 **`auto`** 來宣告變數，其型別是從變數宣告中的初始化運算式推算而來。 編譯器選項會叫用 `/Zc:auto` 關鍵字的新舊意義 **`auto`** 。
+**auto 關鍵字。** **`auto`** 關鍵字有新的用途。 使用關鍵字的預設意義 **`auto`** 來宣告變數，該變數的類型是推算引數宣告中的初始化運算式。 編譯器選項會叫用 `/Zc:auto` 關鍵字的新舊意義 **`auto`** 。
 
-**decltype 類型指定名稱。** 型別規範會傳回 **`decltype`** 指定之運算式的型別。 搭配使用 **`decltype`** 類型規範與 **`auto`** 關鍵字，以宣告複雜或只有編譯器才知道的類型。 例如，使用這項組合來宣告其傳回類型視範本引數類型而定的範本函式。 或是，宣告可呼叫其他函式後傳回所呼叫函式之傳回類型的範本函式。
+**decltype 類型指定名稱。** **`decltype`** 類型規範會傳回指定之運算式的類型。 使用類型指定名稱 **`decltype`** 搭配 **`auto`** 關鍵字，以宣告複雜或只有編譯器才知道的類型。 例如，使用這項組合來宣告其傳回類型視範本引數類型而定的範本函式。 或是，宣告可呼叫其他函式後傳回所呼叫函式之傳回類型的範本函式。
 
-**Lambda 運算式。** Lambda 函式只有函式主體，但沒有名稱。 Lambda 函式結合函式指標與函式物件的最佳特性。 使用 lambda 函式本身做為範本函式參數，而不是函式物件，或搭配 **`auto`** 關鍵字來宣告其類型為 lambda 的變數。
+**Lambda 運算式。** Lambda 函式只有函式主體，但沒有名稱。 Lambda 函式結合函式指標與函式物件的最佳特性。 使用 lambda 函式本身、做為範本函式參數，而不是函式物件，或搭配 **`auto`** 關鍵字來宣告類型為 lambda 的變數。
 
 **右值參考。** 右值參考宣告子 (&&) 可宣告右值的參考。 右值參考可讓您使用移動語意和完整轉寄，以撰寫更有效的建構函式、函式和範本。
 
-**static_assert 宣告。** **`static_assert`** 宣告會在編譯時期測試軟體判斷提示，不同于在執行時間測試的其他判斷提示機制。 如果判斷提示失敗，則編譯會失敗，並且發出指定的錯誤訊息。
+**static_assert 宣告。** **`static_assert`** 宣告會在編譯時期測試軟體判斷提示，與在執行時間測試的其他判斷提示機制不同。 如果判斷提示失敗，則編譯會失敗，並且發出指定的錯誤訊息。
 
-**nullptr 和 __nullptr 關鍵字。** MSVC 可讓您搭配 **`nullptr`** 機器碼或 managed 程式碼使用關鍵字。 **`nullptr`** 關鍵字指出物件控制碼、內部指標或原生指標類型未指向物件。 當 **`nullptr`** 您使用編譯器選項時，編譯器會將視為 managed 程式碼 `/clr` ，而當您未使用選項時，則會解讀機器碼 `/clr` 。
-Microsoft 專有的 **__nullptr**關鍵字與具有相同的意義 **`nullptr`** ，但它只適用于機器碼。 如果您使用編譯器選項編譯原生 C/c + + 程式碼 `/clr` ，則編譯器無法判斷 **`nullptr`** 關鍵字是原生或 managed 詞彙。 為了讓編譯器清楚您的意圖，請使用 nullptr 關鍵字來指定受控字詞，並使用 **__nullptr** 指定機器字詞。
+**nullptr 和 __nullptr 關鍵字。** MSVC 可讓您使用 **`nullptr`** 關鍵字搭配機器碼或 managed 程式碼。 **`nullptr`** 關鍵字指出物件控制碼、內部指標或原生指標類型未指向物件。 **`nullptr`** 當您使用編譯器選項時，編譯器會將視為 managed 程式碼 `/clr` ，而當您未使用選項時，則會將機器碼解釋為原生程式碼 `/clr` 。
+Microsoft 特定的 **__nullptr** 關鍵字具有與相同的意義 **`nullptr`** ，但僅適用于機器碼。 如果您使用編譯器選項編譯原生 C/c + + 程式碼 `/clr` ，則編譯器無法判斷 **`nullptr`** 關鍵字是原生或 managed 詞彙。 為了讓編譯器清楚您的意圖，請使用 nullptr 關鍵字來指定受控字詞，並使用 **__nullptr** 指定機器字詞。
 
-**`/Zc:trigraphs`編譯器選項。** 預設會停用三併詞支援。 使用 **`/Zc:trigraphs`** 編譯器選項來啟用三並詞支援。
+**`/Zc:trigraphs` 編譯器選項。** 預設會停用三併詞支援。 使用 **`/Zc:trigraphs`** 編譯器選項可啟用三並詞支援。
 三併詞包含兩個連續的問號 (??)，後接唯一的第三個字元。 編譯器會以對應的標點符號字元取代三併詞。 例如，編譯器會將 ??= 三併詞取代為 # (數字記號) 字元。 若在 C 原始程式檔中使用的字元集不含特定標點符號字元，您可改用三併詞。
 
 **新的特性指引最佳化選項。** PogoSafeMode 是新的特性指引最佳化選項，可讓您指定在最佳化應用程式時是要使用安全模式還是快速模式。 安全模式是安全執行緒，但速度比快速模式慢。 快速模式是預設行為。
@@ -1803,7 +1803,7 @@ Microsoft 專有的 **__nullptr**關鍵字與具有相同的意義 **`nullptr`**
 
 ### <a name="visual-studio-c-projects-and-the-build-system"></a>Visual Studio C++ 專案和建置系統
 
-**Msbuild.exe.** Visual C++ 方案和專案現在使用 MSBuild.exe 所建置，而此檔案會取代 VCBuild.exe。 MSBuild 是相同彈性且可延伸的 XML 建置工具，供其他 Visual Studio 語言和專案類型使用。 因為這項變更，所以 Visual Studio C++ 專案檔現在使用 XML 檔案格式，且副檔名為 .vcxproj。 舊版 Visual Studio 中的 Visual Studio C++ 專案檔會自動轉換成新檔案格式。
+**Msbuild。** Visual C++ 方案和專案現在使用 MSBuild.exe 所建置，而此檔案會取代 VCBuild.exe。 MSBuild 是相同彈性且可延伸的 XML 建置工具，供其他 Visual Studio 語言和專案類型使用。 因為這項變更，所以 Visual Studio C++ 專案檔現在使用 XML 檔案格式，且副檔名為 .vcxproj。 舊版 Visual Studio 中的 Visual Studio C++ 專案檔會自動轉換成新檔案格式。
 
 **VC++ 目錄。** VC++ 目錄設定現在位於兩個地方。 使用專案屬性頁面來設定 VC++ 目錄的每一專案值。 使用**屬性管理員**和屬性工作表來設定 VC++ 目錄的全域每一組態值。
 
@@ -1819,13 +1819,13 @@ Microsoft 專有的 **__nullptr**關鍵字與具有相同的意義 **`nullptr`**
 
 - 新的右值參考 C++ 語言功能已用來實作標準範本程式庫中許多函式的移動語意和完整轉寄。 移動語意和完整轉寄可大幅改善用以配置或指派變數或參數之作業的效能。
 - 右值參考也用來實作新的 `unique_ptr` 類別，而此類別是比 `auto_ptr` 類別更安全的智慧型指標類型。 `unique_ptr` 類別是可移動但無法複製、實作不影響安全性的嚴格擁有權語意，而且適用於了解右值參考的容器。 `auto_ptr` 類別即將淘汰。
-- 有十五個新函式，例如、 `find_if_not` `copy_if` 和 `is_sorted` ，已新增至 \<algorithm> 標頭。
-- 在 \<memory> 標頭中，新的 make_shared 函式是一種方便、健全且有效率的方式，可在建立物件時，同時對物件進行共用指標。
-- 標頭支援單向連結清單 \<forward_list> 。
+- 有十五個新的函式（例如，、 `find_if_not` `copy_if` 和 `is_sorted` ）已新增至 \<algorithm> 標頭。
+- 在 \<memory> 標頭中，新的 make_shared 函式是一個方便、穩固且有效率的方式，可讓您在建立物件時，同時建立物件的共用指標。
+- 標頭支援單一連結清單 \<forward_list> 。
 - 新的 `cbegin`、`cend`、`crbegin` 和 `crend` 成員函式會提供透過容器向前或向後移動的 `const_iterator`。
-- \<system_error>標頭和相關範本支援處理低層級的系統錯誤。 `exception_ptr` 類別的成員可以用來傳輸執行緒之間的例外狀況。
-- \<codecvt>標頭支援將 Unicode 字元的各種編碼轉換成其他編碼。
-- \<allocators>標頭會定義數個範本，協助配置和釋放以節點為基礎的容器的記憶體區塊。
+- \<system_error>標頭和相關範本支援低層級系統錯誤的處理。 `exception_ptr` 類別的成員可以用來傳輸執行緒之間的例外狀況。
+- \<codecvt>標頭支援將各種 Unicode 字元編碼轉換為其他編碼。
+- \<allocators>標頭會定義數個範本，協助配置和釋放節點容器的記憶體區塊。
 - 標頭有許多更新 \<random> 。
 
 ### <a name="microsoft-foundation-class-mfc-library"></a>Microsoft Foundation Class (MFC) 程式庫
@@ -1850,7 +1850,7 @@ Microsoft 專有的 **__nullptr**關鍵字與具有相同的意義 **`nullptr`**
 
 #### <a name="analyze-warnings"></a>/analyze 警告
 
-大部分 **`/analyze`** （企業程式碼分析）警告已從 C 執行時間（CRT）、MFC 和 ATL 程式庫中移除。
+大部分 **`/analyze`** (企業程式碼分析) 警告已從 C 執行時間 (CRT) 、MFC 和 ATL 程式庫中移除。
 
 #### <a name="animation-and-d2d-support"></a>動畫和 D2D 支援
 
@@ -1878,7 +1878,7 @@ MFC 現在支援動畫和 Direct2D 圖形。 MFC 程式庫有數個新的 MFC �
 
 **MFC 類別 Wizard。** Visual C++ 2010 會帶回良好相關的 [MFC 類別精靈] 工具。 [MFC 類別精靈] 是將類別、訊息和變數新增至專案的便利方式，而不需要手動修改原始程式檔集合。
 
-**ATL 控制項 Wizard。** ATL 控制項精靈不會自動填入 `ProgID` 欄位。 如果 ATL 控制項沒有 `ProgID`，其他工具可能無法加以使用。 [插入使用中控制項]**** 對話方塊，即為工具需要控控制項擁有 `ProgID` 的其中一例。 如需對話方塊的詳細資訊，請參閱**插入 ActiveX 控制項對話方塊**。
+**ATL 控制項 Wizard。** ATL 控制項精靈不會自動填入 `ProgID` 欄位。 如果 ATL 控制項沒有 `ProgID`，其他工具可能無法加以使用。 [插入使用中控制項]**** 對話方塊，即為工具需要控控制項擁有 `ProgID` 的其中一例。 如需對話方塊的詳細資訊，請參閱 [插入 ActiveX 控制項](../windows/adding-editing-or-deleting-controls.md#insert-activex-controls)。
 
 ### <a name="microsoft-macro-assembler-reference"></a>Microsoft 巨集組合程式參考
 
@@ -1934,7 +1934,7 @@ YMMWORD 資料類型的新增可支援 Intel Advanced Vector Extensions (AVX) �
 - 內建函式支援較新的 AMD 和 Intel 處理器。 數個新的內建指令支援較新 AMD 和 Intel 處理器中的更強大功能。 如需新內建函式的詳細資訊，請參閱**補充 Streaming SIMD Extensions 3 指令**、**Streaming SIMD Extensions 4 指令**、**SSE4A 和 Advanced Bit Manipulation 內建函式**、**AES 內建函式**、**_mm_clmulepi64_si128** 和 **__rdtscp**。
 - `__cpuid` 函式已更新。 `__cpuid`、`__cpuidex` 函式現在支援 AMD 和 Intel 處理器最新修訂中的數個新功能。 `__cpuidex` 內建函式是新的，並且收集最新處理器的詳細資訊。
 - `/MP` 編譯器選項可減少總建置時間。 `/MP` 選項可以大幅降低編譯數個原始程式檔的總時間，方法是建立數個同時編譯檔案的處理序。 這個選項特別適用於支援超執行緒、多個處理器或多個核心的電腦。
-- `/Wp64`編譯器選項和 **`__w64`** 關鍵字已被取代。 偵測 `/Wp64` **`__w64`** 到64位可攜性問題的編譯器選項和關鍵字已被取代，將在未來的編譯器版本中移除。 請使用以 64 位元平台為目標的 MSVC 編譯器，而不是這個編譯器選項和關鍵字。
+- `/Wp64`編譯器選項和 **`__w64`** 關鍵字已被取代。 `/Wp64`編譯器選項和 **`__w64`** 關鍵字（偵測64位可攜性問題）已被取代，並將在未來的編譯器版本中移除。 請使用以 64 位元平台為目標的 MSVC 編譯器，而不是這個編譯器選項和關鍵字。
 - `/Qfast_transcendentals` 會為超越函式產生內嵌程式碼。
 - 當您使用 `/fp:except` 編譯器選項時，`/Qimprecise_fwaits` 會移除 try 區塊內部的 fwait 命令。
 
@@ -2005,7 +2005,7 @@ __sptr、__uptr
 - `/GS` (緩衝區安全性檢查) 現在提供易受攻擊指標參數的安全性保護。 根據預設，`/GS` 現在會開啟。 `/GS` 現在也適用於使用 `/clr` (通用語言執行平台編譯) 編譯為 MSIL 的函式。
 - 已新增 `/homeparams` (將暫存器參數複製到堆疊) 編譯器選項。
 - 已新增 `/hotpatch` (建立可線上修補的映像) 編譯器選項。
-- 內嵌函數啟發學習法已更新;**`inline`** 如需詳細資訊，請參閱、 **`__inline`** **`__forceinline`** 和**inline_depth**
+- 內嵌函式啟發學習法已更新;**`inline`** 如需詳細資訊，請參閱、 **`__inline`** **`__forceinline`** 和**inline_depth**
 - 已新增許多新的內建函式，而且現在記載許多先前未記載的內建函式。
 - 任何失敗的 new 呼叫預設會擲回例外狀況。
 - 已移除 `/ML`和 `/MLd` 編譯器選項。 Visual C++ 不再支援單一執行緒、靜態連結的 CRT 程式庫支援。
@@ -2042,17 +2042,17 @@ __sptr、__uptr
 - 已新增 `appdomain__declspec` 修飾詞。
 - 已新增 `__clrcall` 呼叫慣例。
 - 當使用者嘗試存取即將淘汰的類別或函式時，即將淘汰的 (C++) **declspec** 修飾詞現在可讓您指定要在編譯時間顯示的字串。
-- **`dynamic_cast`** 操作員有中斷性變更。
+- **`dynamic_cast`** 運算子有重大變更。
 - 原生列舉現在可讓您指定基礎類型。
 - 已新增 `jitintrinsicdeclspec` 修飾詞。
 - 已新增 `noaliasdeclspec` 修飾詞。
 - 已新增 `process__declspec` 修飾詞。
 - **抽象**、**覆寫**和**密封**適用於原生編譯。
-- **`__restrict`** 已新增關鍵字。
+- **`__restrict`** 關鍵字已加入。
 - 已新增 `restrictdeclspec` 修飾詞。
 - **`__thiscall`** 現在是關鍵字。
-- **`__unaligned`** 關鍵字現已記載。
-- **`volatile`**（C + +）有關于優化的更新行為。
+- **`__unaligned`** 關鍵字現在已記載。
+- **`volatile`** (c + +) 已更新與優化相關的行為。
 
 ### <a name="new-preprocessor-features"></a>新的前置處理器功能
 
@@ -2185,7 +2185,7 @@ __sptr、__uptr
 - 在每個函式主題中，已新增 .NET Framework 對等項目上的區段。
 - 數個字串函式現在都有選項可以截斷字串，而不是在輸出緩衝區太小時失敗。請參閱 **_TRUNCATE**。
 - `_set_se_translator` 現在需要使用 `/EHa` 編譯器選項。
-- `fpos_t`現在是 **`__int64`** `/Za` （適用于 C 程式碼），而當__STDC__是以手動方式設定時（適用于 c + + 程式碼）。 它是用來做為 **`struct`** 。
+- `fpos_t` 現在 **`__int64`** `/Za` 適用于 c 程式碼) 的 (，以及 (手動設定 c + + 程式碼) 的 __STDC__ 時。 它是用來做為 **`struct`** 。
 - _CRT_DISABLE_PERFCRIT_LOCKS 可以改善單一執行緒程式的 I/O 效能。
 - POSIX 名稱以淘汰，取代為符合 ISO C++ 的名稱 (例如，使用 `_getch` 而非 `getch`)。
 - 新的連結選項 .obj 檔案可用於 pure 模式
@@ -2204,8 +2204,8 @@ __sptr、__uptr
 - `/Gf` 即將淘汰，將在下一版的 Visual C++ 移除。
 - 已新增 `/G7` 編譯器選項。
 - 已加強 `/GS` 編譯器選項，以協助保護區域變數不發生直接緩衝區溢位。
-- 已移除 `/noBool` 編譯器選項。 編譯器現在允許 **`bool`** 在 c + + 原始程式碼檔中只顯示為關鍵字（而非識別碼）。
-- **`long long`** 類型現在可供使用， **`typedef`** **`__int64`** 請注意 CRT 中尚不支援 **`long long`** 。
+- 已移除 `/noBool` 編譯器選項。 編譯器現在只允許 **`bool`** 在 c + + 原始程式碼檔案中顯示為關鍵字 (而不是識別碼) 。
+- 此 **`long long`** 類型現在已可供使用，但 **`typedef`** **`__int64`** **`long long`** 在 CRT 中尚未支援。
 - `/Zm` 編譯器選項現在會指定先行編譯標頭記憶體配置上限。
 - 現在已記載 _InterlockedCompareExchange 內建函式。
 - 現在已記載 _InterlockedDecrement 內建函式。

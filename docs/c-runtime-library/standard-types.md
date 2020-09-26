@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 38906579a449941d6dad767afa97a32d63fe3445
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf90adbdbc739a2dd26d8e59ab38e56aef3bd312
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231269"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352930"
 ---
 # <a name="standard-types"></a>標準類型
 
@@ -199,21 +199,21 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|將在 [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 被呼叫之回呼函式的類型定義。<br /><br /> 這個函式的參數是：來自回呼函式的報告類型、輸出訊息和傳回值。|CRTDBG.H|
 |`dev_t`、`_dev_t` 短的或不帶正負號的整數。|表示裝置控制代碼。|SYS\TYPES.H|
 |`_diskfree_t` 結構|包含磁碟機的詳細資訊。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)使用。****|DOS.H 和 DIRECT.H|
-|`div_t`、`ldiv_t` 和 `lldiv_t` 結構|將 [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 和 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) 所傳回的值分別儲存。|STDLIB.H|
+|`div_t`、`ldiv_t` 和 `lldiv_t` 結構|將 [div](reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 和 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) 所傳回的值分別儲存。|STDLIB.H|
 |`errno_t` 整數|用於處理 `errno`錯誤碼的函式傳回類型或參數。|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception` 結構|儲存 [_matherr](../c-runtime-library/reference/matherr.md) 的錯誤資訊。|MATH.H|
 |`_EXCEPTION_POINTERS`|包含例外狀況記錄。 如需詳細資訊，請參閱 [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers)。|FPIEEE.H|
 |`FILE` 結構|儲存有關資料流目前狀態的資訊，用於所有資料流 I/O 作業。|STDIO.H|
 |`_finddata_t`、`_wfinddata_t`、`_finddata32_t`、`_wfinddata32_t`、`_finddatai64_t`、`_wfinddatai64_t`、`__finddata64_t`、`__wfinddata64_t`、`__finddata32i64_t`、`__wfinddata32i64_t`、`__finddata64i32_t`、`__wfinddata64i32_t` 結構|儲存 [_findfirst、_wfindfirst 以及相關函式](../c-runtime-library/reference/findfirst-functions.md)和 [_findnext、_wfindnext 以及相關函式](../c-runtime-library/reference/findnext-functions.md)傳回的檔案屬性資訊。 如需結構成員的詳細資訊，請參閱[檔案名稱搜尋函式](../c-runtime-library/filename-search-functions.md)。|IO.H, WCHAR.H|
 |`_FPIEEE_RECORD` 結構|包含有關於 IEEE 浮點例外狀況的資訊，會由 [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) 傳遞至使用者定義的設陷處理常式。|FPIEEE.H|
-|`fpos_t`（長整數、 **`__int64`** 或結構，視目標平臺而定）|由 [fgetpos](../c-runtime-library/reference/fgetpos.md) 和 [fsetpos](../c-runtime-library/reference/fsetpos.md) 使用，可記錄獨特指定檔案中每個位置的資訊。|STDIO.H|
+|`fpos_t` (長整數、 **`__int64`** 或結構，視目標平臺而定) |由 [fgetpos](../c-runtime-library/reference/fgetpos.md) 和 [fsetpos](../c-runtime-library/reference/fsetpos.md) 使用，可記錄獨特指定檔案中每個位置的資訊。|STDIO.H|
 |`_fsize_t`(不帶正負號長整數)|用來表示檔案的大小。|IO.H,<br /><br /> WCHAR.H|
 |`_HEAPINFO` 結構|包含下一個 [_heapwalk](../c-runtime-library/reference/heapwalk.md) 堆積輸入的相關資訊。|MALLOC.H|
 |`_HFILE` (void \*)|作業系統檔案控制代碼。|CRTDBG.H|
 |`imaxdiv_t`|由 [imaxdiv](../c-runtime-library/reference/imaxdiv.md) 函式傳回的值類型，包含商和餘數。|inttypes.h|
 |`ino_t`, `_ino_t` (unsigned short)|用於傳回狀態資訊。|WCHAR.H|
 |`intmax_t`|帶正負號的整數類型可以代表任何帶正負號的整數類型的任何值。|stdint.h|
-|`intptr_t`（長整數或 **`__int64`** ，視目標平臺而定）|在 Win32 和 Win64 平台儲存指標 (或 HANDLE)。|STDDEF.H 和其他 include 檔案|
+|`intptr_t` (長整數或 **`__int64`** ，視目標平臺而定) |在 Win32 和 Win64 平台儲存指標 (或 HANDLE)。|STDDEF.H 和其他 include 檔案|
 |`jmp_buf` 陣列|由 [setjmp](../c-runtime-library/reference/setjmp.md) 和 [longjmp](../c-runtime-library/reference/longjmp.md) 使用，可儲存和還原程式環境。|SETJMP.H|
 |`lconv` 結構|包含不同國家/地區的數值格式化規則。 由 [localeconv](../c-runtime-library/reference/localeconv.md) 使用。|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (長雙精度浮點數或不帶正負號的字元陣列)|用來表示長雙精度浮點數值。|STDLIB.H|
@@ -222,7 +222,7 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`off_t`, `_off_t` 長整數|表示檔案位移值。|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> `_onexit_m_t` 指標|由 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md) 傳回。|STDLIB.H|
 |指向函式的 `_PNH` 指標|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 的引數類型。|NEW.H|
-|`ptrdiff_t`（長整數或 **`__int64`** ，視目標平臺而定）|兩個指標減法運算的結果。|CRTDEFS.H|
+|`ptrdiff_t` (長整數或 **`__int64`** ，視目標平臺而定) |兩個指標減法運算的結果。|CRTDEFS.H|
 |`_purecall_handler`,<br /><br /> `_purecall_handler_m`|當呼叫純虛擬函式時所呼叫之回呼函式的類型定義。 由 [_get_purecall_handler、_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) 使用。 `_purecall_handler` 函式應該具有 void 傳回類型。|STDLIB.H|
 |`_RTC_error_fn` 類型定義|將處理執行階段錯誤檢查之函式的類型定義。 用於 [_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)。|RTCAPI.H|
 |`_RTC_error_fnW` 類型定義|將處理執行階段錯誤檢查之函式的類型定義。 用於 [_RTC_SetErrorFuncW](../c-runtime-library/reference/rtc-seterrorfuncw.md)。|RTCAPI.H|
@@ -242,7 +242,7 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`__timeb64` 結構|由 [_ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md) 和 [_ftime_s、_ftime32_s、_ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md) 使用，可儲存目前系統時間。|SYS\TIMEB.H|
 |`tm` 結構|由 [asctime、_wasctime](../c-runtime-library/reference/asctime-wasctime.md)、[asctime_s、_wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)、[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)、[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)、[mktime、_mktime32、_mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md) 和 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) 使用，可儲存和擷取時間資訊。|TIME.H|
 |`uintmax_t`|不帶正負號的整數類型，可以代表任何不帶正負號的整數類型的任何值。|stdint.h|
-|`uintptr_t`（長整數或 **`__int64`** ，視目標平臺而定）|`intptr_t`的不帶正負號的整數或 __int64 版本。|STDDEF.H 和其他 include 檔案|
+|`uintptr_t` (長整數或 **`__int64`** ，視目標平臺而定) |`intptr_t`的不帶正負號的整數或 __int64 版本。|STDDEF.H 和其他 include 檔案|
 |`unexpected_function`|當呼叫 [unexpected](../c-runtime-library/reference/unexpected-crt.md) 時，所呼叫之回呼函式的類型定義。 由 [set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md) 使用。|EH.H|
 |`_utimbuf` 結構|儲存 [_utime、_wutime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 和 [_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md) 所使用的檔案存取和修改時間，以變更檔案修改日期。|SYS\UTIME.H|
 |`_utimbuf32` 結構|儲存 [_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 和 [_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md) 所使用的檔案存取和修改時間，以變更檔案修改日期。|SYS\UTIME.H|

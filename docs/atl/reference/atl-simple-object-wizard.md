@@ -7,24 +7,24 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: bd4c9eede16ed086020dd8f12d90876e50a0a341
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8bc611442e98e467a174ebd52ea3c540cf72975f
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319207"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352683"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 簡單物件精靈
 
-此精靈將最小 COM 物件插入到專案中。 使用嚮導的此頁面指定標識物件C++類和檔的名稱及其COM功能。
+此 wizard 會將最基本的 COM 物件插入專案中。 使用 wizard 的這個頁面，即可指定用來識別 c + + 類別的名稱，以及您的物件及其 COM 功能的檔案。
 
-使用此精靈的[「選項」](../../atl/reference/options-atl-simple-object-wizard.md)頁指定物件的線程模型、聚合支援以及它是否支援雙介面和自動化。 您還可以指示對錯誤資訊介面、連接點、Internet Explorer 支援和自由線程封送的支援。
+使用這個 wizard 的 [ [選項](../../atl/reference/options-atl-simple-object-wizard.md) ] 頁面，即可指定物件的執行緒模型、其匯總支援，以及是否支援雙重介面和自動化。 您也可以指定支援錯誤資訊介面、連接點、Internet Explorer 支援和無限制執行緒封送處理。
 
 ## <a name="remarks"></a>備註
 
 從 Visual Studio 2008 開始，此精靈所產生的註冊指令碼將會在 **HKEY_CURRENT_USER** 而非 **HKEY_LOCAL_MACHINE** 下方註冊它的 COM 元件。 若要修改此行為，請設定 ATL 精靈的 [為所有使用者註冊元件]**** 選項。
 
-## <a name="names"></a>Names
+## <a name="names"></a>名稱
 
 指定要新增至專案的物件、介面和類別名稱。 除了**簡短名稱**，所有其他方塊均可單獨編輯。 如果您變更**簡短名稱**的文字，該變更即會反映於此頁面的所有其他方塊名稱中。 如果您在 [COM] 區段中變更 **Coclass** 名稱，則變更會反映於 [型別]**** 和 [ProgID]**** 方塊中，但**介面**名稱不會變更。 此命名行為旨在讓您開發控制項時，能夠輕鬆地識別所有名稱。
 
@@ -63,18 +63,18 @@ ms.locfileid: "81319207"
 
    根據預設，在您設定此選項後加入的任何物件都會指定為使用屬性 (已選取核取方塊)。 您可以清除此方塊以加入未使用屬性的物件。
 
-   如需詳細資訊，請參閱[應用程式設定，ATL 專案精靈](../../atl/reference/application-settings-atl-project-wizard.md)和[屬性的基本機制](../../windows/basic-mechanics-of-attributes.md)。
+   如需詳細資訊，請參閱 [應用程式設定、ATL 專案嚮導](../../atl/reference/application-settings-atl-project-wizard.md) 和 [屬性的基本機制](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) 。
 
 ## <a name="com"></a>COM
 
 提供物件 COM 功能的相關資訊。
 
-- **Coclass**
+- **元件類**
 
    設定元件類別的名稱，其中包含物件所支援的介面清單。
 
    > [!NOTE]
-   > 如果使用屬性創建專案,或者在此嚮導頁上指示物件使用屬性,則無法更改此選項,因為 ATL 不`coclass`包括該 屬性。
+   > 如果您使用屬性來建立專案，或如果您在此 wizard 頁面上指出物件使用屬性，您就無法變更此選項，因為 ATL 未包含 `coclass` 屬性。
 
 - **型別**
 

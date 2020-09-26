@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: 55a96e27e58d844ec6fabec689dc2aedf536a9a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d7a63fc63b8abcf8574ea9a2fed2556635dba045
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835450"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352943"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 介面
 
@@ -30,7 +30,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 ### <a name="methods"></a>方法
 
-|名稱|描述|
+|名稱|說明|
 |-|-|
 |[CreateControlLic](#createcontrollic)|建立授權的控制項，並將它附加至主機物件。|
 |[CreateControlLicEx](#createcontrollicex)|建立授權的控制項、將其附加至主機物件，並選擇性地設定事件處理常式。|
@@ -39,9 +39,9 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 `IAxWinHostWindowLic` 繼承自 [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) ，並新增支援授權控制項建立的方法。
 
-請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) ，以取得使用此介面成員的範例。
+請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) ，以取得使用此介面成員的範例。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 此介面的定義可作為 IDL 或 c + +，如下所示。
 
@@ -75,7 +75,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="example"></a>範例
 
-如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLic` 。
+如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLic` 。
 
 ## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a> IAxWinHostWindowLic：： CreateControlLicEx
 
@@ -103,4 +103,4 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="example"></a>範例
 
-如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLicEx` 。
+如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLicEx` 。

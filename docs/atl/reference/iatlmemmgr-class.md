@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: a33414ec1c1b01742382150049f8e99f4a70ae34
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833422"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353008"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr 類別
 
@@ -34,7 +34,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 ### <a name="methods"></a>方法
 
-|名稱|描述|
+|名稱|說明|
 |-|-|
 |[分配](#allocate)|呼叫這個方法來配置記憶體區塊。|
 |[免費](#free)|呼叫這個方法來釋放記憶體區塊。|
@@ -52,7 +52,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：** atlmem。h
 
@@ -937,7 +937,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="example"></a>範例
 
-如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLic` 。
+如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLic` 。
 
 ## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a> IAxWinHostWindowLic：： CreateControlLicEx
 
@@ -965,7 +965,7 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="example"></a>範例
 
-如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) `IAxWinHostWindowLic::CreateControlLicEx` 。
+如需使用的範例，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLicEx` 。
 
 ## <a name="see-also"></a>另請參閱
 

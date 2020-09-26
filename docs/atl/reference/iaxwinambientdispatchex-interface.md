@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: f052c39424fc2ee6f43f249e3034be7c464d016c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3359c17996eb78c3249abc83ff2d439381f209fe
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833383"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352982"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 介面
 
@@ -32,7 +32,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ### <a name="methods"></a>方法
 
-|名稱|描述|
+|名稱|說明|
 |-|-|
 |[SetAmbientDispatch](#setambientdispatch)|呼叫這個方法來補充具有使用者定義介面的預設環境屬性介面。|
 
@@ -46,9 +46,9 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 如果您要連結至 ATL90.dll， **AXHost** 會從 DLL 中的類型程式庫載入類型資訊。
 
-如需詳細資訊，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/hosting-activex-controls-using-atl-axhost.md) 。
+如需詳細資訊，請參閱 [使用 ATL AXHost 裝載 ActiveX 控制項](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 此介面的定義提供數種形式，如下表所示。
 

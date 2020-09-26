@@ -4,12 +4,12 @@ description: 描述新式 c + + 中的新程式設計慣用語及其基本原理
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: 05c1fe80086e5b98d3f8a9c66c6759fddab39fa0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "87232192"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353047"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>歡迎回到 C++ (現代 C++)
 
@@ -75,7 +75,7 @@ apple_color["Granny Smith"] = "Green";
 
 - 未排序的關聯容器（例如） [`unordered_map`](../standard-library/unordered-map-class.md) 。 這些專案具有較低的每個專案的額外負荷和長期查閱，但可能難以正確且有效率地使用。
 
-- 排序 `vector` 。 如需詳細資訊，請參閱[演算法](../cpp/algorithms-modern-cpp.md)。
+- 排序 `vector` 。 如需詳細資訊，請參閱[演算法](../standard-library/algorithms.md)。
 
 請勿使用 C 樣式陣列。 對於需要直接存取資料的舊版 Api，請改用存取子方法（例如） `f(vec.data(), vec.size());` 。 如需容器的詳細資訊，請參閱 [c + + 標準程式庫容器](../standard-library/stl-containers.md)。
 

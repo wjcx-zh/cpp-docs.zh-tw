@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b1fea925c5f6d657e398933b5fb26cf09c28055
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321682"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353151"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 元件精靈
 
@@ -29,7 +29,7 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 從 Visual Studio 2008 開始，此精靈所產生的註冊指令碼將會在 **HKEY_CURRENT_USER** 而非 **HKEY_LOCAL_MACHINE** 下方註冊它的 COM 元件。 若要修改此行為，請設定 ATL 精靈的 [為所有使用者註冊元件]**** 選項。
 
-## <a name="names"></a>Names
+## <a name="names"></a>名稱
 
 指定要新增至專案的物件、介面和類別名稱。 除了**簡短名稱**，所有其他方塊均可單獨編輯。 如果您變更**簡短名稱**的文字，該變更即會反映於此頁面的所有其他方塊名稱中。 如果您在 [COM] 區段中變更 **Coclass** 名稱，則變更會反映於 [型別]**** 和 [ProgID]**** 方塊中，但**介面**名稱不會變更。 此命名行為旨在讓您開發控制項時，能夠輕鬆地識別所有名稱。
 
@@ -61,13 +61,13 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
    您在設定此選項之後新增的任何物件預設都會指定為屬性化 (已選取核取方塊)。 您可以清除此方塊以加入未使用屬性的物件。
 
-   如需詳細資訊，請參閱[應用程式設定，ATL 專案精靈](../../atl/reference/application-settings-atl-project-wizard.md)和[屬性的基本機制](../../windows/basic-mechanics-of-attributes.md)。
+   如需詳細資訊，請參閱 [應用程式設定、ATL 專案嚮導](../../atl/reference/application-settings-atl-project-wizard.md) 和 [屬性的基本機制](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) 。
 
 ### <a name="com"></a>COM
 
 提供物件 COM 功能的相關資訊。
 
-- **Coclass**
+- **元件類**
 
    設定元件類別的名稱，其中包含物件所支援的介面清單。
 

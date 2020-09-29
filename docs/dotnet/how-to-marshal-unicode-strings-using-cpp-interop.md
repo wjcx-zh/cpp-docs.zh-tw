@@ -9,28 +9,28 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: da320dbd41e7158e3bc2482b96a73c1f4728a01b
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988169"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414304"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 Unicode 字串
 
-本主題示範視覺化C++互通性的一個 facet。 如需詳細資訊，請參閱[使用C++ Interop （隱含 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+本主題將示範 Visual C++ 互通性的一個 facet。 如需詳細資訊，請參閱 [使用 c + + Interop (隱含的 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
-下列程式碼範例會使用[managed、非](../preprocessor/managed-unmanaged.md)受控 #pragma 指示詞，在同一個檔案中執行 managed 和非受控函式，但如果在個別的檔案中定義，則這些函式會以相同的方式進行交互作用。 僅包含非受控函式的檔案不需要使用[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)進行編譯。
+下列程式碼範例使用 [managed、非](../preprocessor/managed-unmanaged.md) 受控 #pragma 指示詞，在相同的檔案中執行 managed 和非受控函式，但這些函式在個別檔案中定義時，會以相同的方式相交互操作。 只包含非受控函式的檔案不需要使用 [/clr (Common Language Runtime 編譯) ](../build/reference/clr-common-language-runtime-compilation.md)來進行編譯。
 
-本主題示範如何將 Unicode 字串從 managed 傳遞至非受控函式，反之亦然。 如需與其他字串類型互通，請參閱下列主題：
+本主題將示範如何將 Unicode 字串從 managed 傳遞至非受控函式，反之亦然。 如需與其他字串類型交互操作，請參閱下列主題：
 
-- [如何：使用 C++ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
+- [如何：使用 c + + Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-- [如何：使用 C++ Interop 封送處理 COM 字串](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+- [如何：使用 c + + Interop 封送處理 COM 字串](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
-## <a name="example"></a>範例
+## <a name="example-pass-unicode-string-from-managed-to-unmanaged-function"></a>範例：將 Unicode 字串從 managed 傳遞至非受控函式
 
-若要將 Unicode 字串從 managed 傳遞至非受控函式，PtrToStringChars 函數（在 Vcclr 中宣告）可以用來存取儲存 managed 字串的記憶體。 因為此位址會傳遞至原生函式，所以將記憶體釘選在[pin_ptr （C++/cli）](../extensions/pin-ptr-cpp-cli.md)以防止字串資料被重新放置時，應該會在非受控函式執行時進行垃圾收集迴圈，這是很重要的。
+若要將 Unicode 字串從 managed 傳遞至非受控函式，在) Vcclr 中宣告的 PtrToStringChars 函式 (可以用來存取儲存 managed 字串的記憶體。 因為此位址會傳遞至原生函式，所以將記憶體釘選 [pin_ptr (c + +/cli) ](../extensions/pin-ptr-cpp-cli.md) 以避免在執行非受控函式時，發生垃圾收集迴圈的情況下，將字串資料重新放置，是很重要的。
 
 ```cpp
 // MarshalUnicode1.cpp
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
+## <a name="example-data-marshaling-required-to-access-unicode-string"></a>範例：存取 Unicode 字串所需的資料封送處理
 
-下列範例示範在非受控函式所呼叫的 managed 函數中存取 Unicode 字串所需的資料封送處理。 Managed 函式在接收原生 Unicode 字串時，會使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> 方法，將它轉換成 managed 字串。
+下列範例示範在非受控函式所呼叫的 managed 函式中存取 Unicode 字串所需的資料封送處理。 Managed 函式在接收原生 Unicode 字串時，會使用方法將它轉換成 managed 字串 <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> 。
 
 ```cpp
 // MarshalUnicode2.cpp
@@ -95,6 +95,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + Interop (隱含 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

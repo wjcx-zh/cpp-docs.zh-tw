@@ -28,12 +28,12 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: e3ff243ba9a135cf660d09fc5b3690f531702aab
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1037c63af17a844959bc72e42da2c33267b43004
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912906"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414031"
 ---
 # <a name="_aligned_msize"></a>_aligned_msize
 
@@ -42,7 +42,7 @@ ms.locfileid: "82912906"
 ## <a name="syntax"></a>語法
 
 ```C
-size_t _msize(
+size_t _aligned_msize(
    void *memblock,
    size_t alignment,
    size_t offset
@@ -54,7 +54,7 @@ size_t _msize(
 *memblock*<br/>
 記憶體區塊的指標。
 
-*對齊*<br/>
+*對準*<br/>
 對齊值，必須是 2 的整數冪。
 
 *offset*<br/>
@@ -66,19 +66,19 @@ size_t _msize(
 
 ## <a name="remarks"></a>備註
 
-**_Aligned_msize**函式會傳回呼叫[_aligned_malloc](aligned-malloc.md)或[_aligned_realloc](aligned-realloc.md)所配置的記憶體區塊大小（以位元組為單位）。 *對齊*和*位移*值必須與傳遞給配置區塊之函數的值相同。
+**_Aligned_msize**函式會傳回[_aligned_malloc](aligned-malloc.md)或[_aligned_realloc](aligned-realloc.md)的呼叫所配置的記憶體區塊大小（以位元組為單位）。 *對齊*和*位移*值必須和傳遞給配置區塊的函式的值相同。
 
-當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_aligned_msize**會解析成[_aligned_msize_dbg](aligned-msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_aligned_msize** 會解析為 [_aligned_msize_dbg](aligned-msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-這個函式會驗證其參數。 如果*memblock*為 null 指標，或*對齊*不是2的乘冪， **_msize**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理錯誤，函式會將**errno**設定為**EINVAL** ，並傳回-1。
+這個函式會驗證其參數。 如果 *memblock* 為 null 指標或 *對齊* 不是2的乘冪， **_aligned_msize** 會叫用不正確參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果已處理錯誤，函數會將 **errno** 設定為 **EINVAL** ，並傳回-1。
 
-根據預設，此函式的全域狀態範圍設定為應用程式。 若要變更此項，請參閱[CRT 中的全域狀態](../global-state.md)。
+依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_msize**|\<malloc.h>|
+|**_aligned_msize**|\<malloc.h>|
 
 如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 

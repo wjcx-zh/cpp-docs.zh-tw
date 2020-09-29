@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中設定 Linux CMake 專案
 description: 如何在 Visual Studio 中設定 Linux CMake 設定
 ms.date: 08/08/2020
-ms.openlocfilehash: 4bc6d5d82a0f1cd21e8f989eb92b431d38b2bf5c
-ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
+ms.openlocfilehash: 762f135988587e777c2a33a1bd402770c297226b
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88659340"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414530"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>在 Visual Studio 中設定 Linux CMake 專案
 
@@ -102,7 +102,7 @@ Visual Studio 2019 16.1 版和更新版本中的預設 Linux-Debug 設定看起�
 
 ## <a name="choose-a-linux-target"></a>選擇 Linux 目標
 
-當您開啟 CMake 專案資料夾時，Visual Studio 會剖析 *CMakeLists.txt* 檔案，並指定 **x86-Debug**的 Windows 目標。 若要以遠端 Linux 系統為目標，請將專案設定變更為 **linux-Debug** 或 **linux 版本**。
+當您開啟 CMake 專案資料夾時，Visual Studio 會剖析 *CMakeLists.txt* 檔案，並指定 **x86-Debug**的 Windows 目標。 若要以遠端 Linux 系統為目標，您將會根據您的 Linux 編譯器來變更專案設定。 例如，如果您在 Linux 上使用 GCC 並使用 debug 資訊進行編譯，您將選擇：  **Linux-gcc-debug** 或 **Linux-gcc-Release**。
 
 如果指定遠端 Linux 目標，您的來源會複製到遠端系統。
 
@@ -117,7 +117,15 @@ Visual Studio 2019 16.1 版和更新版本中的預設 Linux-Debug 設定看起�
 
 如果您是以 Windows 子系統 Linux 版 (WSL) 為目標，則不需要新增遠端連線。
 
-若要以 WSL 為目標，請在主要工具列的 [設定] 下拉式清單中選取 [ **管理** 設定]。 然後，按 [ **新增** 設定] 按鈕，然後選擇 [ **WSL-Debug** ] 或 [ **WSL-發行** ] （如果使用 GCC）。 如果使用 Clang/LLVM 工具組，請使用 Clang 變數。
+若要以 WSL 為目標，請在主要工具列的 [設定] 下拉式清單中選取 [ **管理** 設定]：
+
+![CMake 管理設定](../build/media/vs2019-cmake-manage-configurations.png "CMake 組態下拉式清單")
+
+[ **CMakeSettings.js開啟** ] 視窗隨即出現。
+
+![新增設定](media/cmake-linux-configurations.png "將設定新增至 CMake 設定")
+
+按下 [ **新增** 設定] (綠色的 [+] 按鈕) 然後選擇 [ **linux-gcc-Debug** ] 或 [ **linux-gcc-發行** ] （如果使用 GCC）。 如果您使用 Clang/LLVM 工具組，請使用 Clang 變體。  按下 [ **選取** ]，然後按 **Ctrl + S** 以儲存設定。
 
 **Visual Studio 2019 16.1 版** 當您以 WSL 為目標時，Visual Studio 不需要複製原始程式檔並維護組建樹狀結構的兩個同步複本，因為 Linux 上的編譯器可以直接存取裝載的 Windows 檔案系統中的原始程式檔。
 ::: moniker-end
@@ -147,7 +155,7 @@ Visual Studio 語言設定不會傳播至 Linux 目標，因為 Visual Studio �
 
 [設定 CMake 偵錯工作階段](../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用專案屬性](../build/working-with-project-properties.md)<br/>
 [自訂 CMake 設定](../build/customize-cmake-settings.md)<br/>

@@ -6,26 +6,26 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393775"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414148"
 ---
 # <a name="debug-class-ccli"></a>Debug 類別 (C++/CLI)
 
-使用時<xref:System.Diagnostics.Debug>視覺效果中C++應用程式的行為不會變更偵錯和發行組建之間。
+<xref:System.Diagnostics.Debug>在 Visual C++ 應用程式中使用時，其行為不會在 debug 和發行組建之間變更。
 
 ## <a name="remarks"></a>備註
 
-行為<xref:System.Diagnostics.Trace>等同於偵錯類別的行為，但取決於追蹤所定義的符號。 這表示，您必須使用`#ifdef`任何追蹤相關的程式碼，以避免在發行組建的偵錯行為。
+的行為與 <xref:System.Diagnostics.Trace> Debug 類別的行為完全相同，但相依于所定義的符號追蹤。 這表示您必須 `#ifdef` 有任何追蹤相關的程式碼，以防止發行組建中的 debug 行為。
 
-## <a name="example"></a>範例
+## <a name="example-always-executes-output-statements"></a>範例：一律執行 output 語句
 
 ### <a name="description"></a>描述
 
-下列範例會永遠執行輸出陳述式，不論您是否使用編譯 **/DDEBUG**或是 **/DTRACE**。
+下列範例一律會執行 output 語句，無論您是使用 **/DDEBUG** 或 **/DTRACE**編譯。
 
 ### <a name="code"></a>程式碼
 
@@ -49,7 +49,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>輸出
 
 ```Output
     Entering Main
@@ -58,11 +58,11 @@ Hello World.
 test
 ```
 
-## <a name="example"></a>範例
+## <a name="example-use-ifdef-and-endif-directives"></a>範例：使用 #ifdef 和 #endif 指示詞
 
 ### <a name="description"></a>描述
 
-若要取得預期的行為 （亦即，沒有 「 測試 」 的輸出列印的發行組建），您必須使用`#ifdef`和`#endif`指示詞。 為了示範此修正，上述的程式碼範例會修改如下：
+若要取得預期的行為 (也就是，針對發行組建) 不會列印任何「測試」輸出，您必須使用和指示詞 `#ifdef` `#endif` 。 先前的程式碼範例修改如下以示範此修正：
 
 ### <a name="code"></a>程式碼
 
@@ -93,4 +93,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[使用 c + +/CLI 進行 .NET 程式設計 (Visual C++) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

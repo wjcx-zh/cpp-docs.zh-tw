@@ -1,13 +1,13 @@
 ---
 title: 將 Linux 專案設定為使用 Address Sanitizer
 description: 描述如何將 Visual Studio 中的 C++ Linux 專案設定為使用 Address Sanitizer。
-ms.date: 06/07/2019
-ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.date: 09/25/2020
+ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686661"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414190"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>將 Linux 專案設定為使用 Address Sanitizer
 
@@ -33,7 +33,7 @@ ASan 是 C/C++ 的執行階段記憶體錯誤偵測器，可捕捉下列錯誤�
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>針對以 MSBuild 為基礎的 Linux 專案啟用 ASan
 
 > [!NOTE]
-> 從 Visual Studio 2019 16.4 版開始，可透過設定**屬性**  >  **C/c + +**  >  **啟用 Address Sanitizer**來啟用 AddressSanitizer for Linux 專案。
+> 從 Visual Studio 2019 16.4 版開始，AddressSanitizer for Linux 專案可透過**專案屬性**設定  >  **屬性**  >  **C/c + +**  >  **啟用位址 Sanitizer**來啟用。
 
 若要針對以 MSBuild 為基礎的 Linux 專案啟用 ASan，請以滑鼠右鍵按一下 [方案總管]**** 中的專案，然後選取 [屬性]****。 接下來，流覽至設定**屬性**  >  **C/c + +**  >  **Sanitizers**。 ASan 會透過編譯器和連結器旗標來啟用，且需要重新編譯您的專案才能運作。
 
@@ -51,7 +51,7 @@ ASan 是 C/C++ 的執行階段記憶體錯誤偵測器，可捕捉下列錯誤�
 
 ![將 Linux Debug 列為其中一個設定選項的左窗格螢幕擷取畫面。](media/linux-debug-configuration.png)
 
-ASan 選項位於 [一般]**** 下方。 請以分號分隔的 "flag=value" 格式輸入 ASan 執行階段旗標。
+ASan 選項位於 [一般]**** 下方。 以「旗標 = 值」格式輸入 ASan 執行時間旗標，並以空格分隔。 UI 不正確地建議使用分號。 使用空格或冒號來分隔旗標。
 
 ![[啟用位址 Sanitizer] 選項的螢幕擷取畫面，其中顯示某些位址 Sanitizer 執行時間旗標。](media/cmake-settings-asan-options.png)
 

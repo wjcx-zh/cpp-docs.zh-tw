@@ -1,33 +1,34 @@
 ---
 title: 衍生訊息對應
-ms.date: 11/19/2018
+description: 描述 MFC 訊息處理。
+ms.date: 09/23/2020
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 0868b12720cfa338ab7275a358e065506adc11d1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44c2180e441c91d34350c65bc17a53d1b650607c
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615922"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414213"
 ---
 # <a name="derived-message-maps"></a>衍生訊息對應
 
-在處理訊息期間，檢查類別本身的訊息對應並不是訊息對應劇本的結束。 如果類別 `CMyView` （衍生自 `CView` ）沒有相符的訊息專案，會發生什麼事
+在處理訊息期間，檢查類別本身的訊息對應並不是訊息對應劇本的結束。 如果 `CMyView` 衍生自) 的類別 (`CView` 沒有符合訊息的專案，會發生什麼事？
 
-請記住，`CView` 的基底類別 `CMyView` 會接著從`CWnd` 衍生。 因此 `CMyView` *是* `CView` ，而*是* `CWnd` 。 這些類別的每一種都有其訊息對應。 以下為「檢視階層架構」的圖例，顯示類別的階層關聯性，但請記住，`CMyView` 物件為具有所有三個類別特性的單一物件。
+請記住，`CView` 的基底類別 `CMyView` 會接著從`CWnd` 衍生。 因此 `CMyView` *，* 是 `CView` ， *is*而且是 `CWnd` 。 這些類別的每一種都有其訊息對應。 下圖顯示類別的階層式關聯性，但請記住， `CMyView` 物件是具有這三個類別特性的單一物件。
 
 ![檢視的階層架構](../mfc/media/vc38621.gif "檢視的階層架構") <br/>
 檢視階層架構
 
-因此，如果訊息在類別 `CMyView` 的訊息對應中無法相符，架構也會搜尋其直接基底類別的訊息對應。 在訊息對應的開始 `BEGIN_MESSAGE_MAP` 巨集指定兩個類別名稱做為其引數:
+如果訊息無法在類別 `CMyView` 的訊息對應中相符，架構也會搜尋其直屬基類的訊息對應。 在訊息對應的開始 `BEGIN_MESSAGE_MAP` 巨集指定兩個類別名稱做為其引數:
 
 [!code-cpp[NVC_MFCMessageHandling#2](codesnippet/cpp/derived-message-maps_1.cpp)]
 
-第一個引數會為訊息對應所屬的類別命名。 第二個引數會提供與直接基底類別 (例如 `CView`) 的連接，因此架構也可以搜尋其訊息對應。
+第一個引數會為訊息對應所屬的類別命名。 第二個引數會提供與直屬基類的連接（在此案例中為 `CView` ），讓架構也可以搜尋其訊息對應。
 
 基底類別中所提供的訊息處理常式會由衍生類別繼承。 這和一般虛擬成員函式非常類似，而不需要讓所有的處理常式成員函式虛擬化。
 

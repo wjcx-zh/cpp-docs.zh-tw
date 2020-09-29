@@ -1,6 +1,7 @@
 ---
 title: 泛型  (C++/CLI 和 C++/CX)
-ms.date: 10/12/2018
+description: 有關 c + +/CLI 和 c + +/CX 泛型功能、類型和方法的內容連結。
+ms.date: 09/25/2020
 ms.topic: reference
 f1_keywords:
 - generic_cpp
@@ -8,23 +9,23 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d98084df876b5e68701696239a9fc8a88377fa9d
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181989"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414642"
 ---
 # <a name="generics--ccli-and-ccx"></a>泛型  (C++/CLI 和 C++/CX)
 
-泛型是參數化的類型和方法。 在這一節中，您將了解 Windows 執行階段和通用語言執行平台 (CLR) 都支援的泛型功能，以及只有通用語言執行平台 (CLR) 支援的泛型功能。 此外，您還會了解如何在 C++/CLI 中撰寫自己的泛型方法和類型，以及如何在 C++/CLI 中使用以 .NET Framework 語言撰寫的泛型類型。 最後，本節將提供泛型和 C++ 範本的比較。
+泛型是參數化的類型和方法。 在本節中，找出 Windows 執行階段和 common language runtime 支援的一般功能，以及僅限 common language runtime 支援的泛型功能。 您也會瞭解如何在 c + +/CLI 中撰寫自己的泛型方法和類型，以及如何在 c + + 中使用以 .NET Framework 語言撰寫的泛型型別/CLI 最後，本節將提供泛型和 C++ 範本的比較。
 
 ## <a name="in-this-section"></a>本節內容
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Windows 執行階段和通用語言執行平台 (CLR) 所支援
 
 [C++/CLI 中的泛型概觀](overview-of-generics-in-visual-cpp.md)<br/>
-有關泛型的資訊包括：語言功能的動機、描述泛型的詞彙定義，以及使用參考類型和實值類型做為泛型之類型參數的相關資訊。
+泛型是什麼、語言功能的動機，以及用來描述泛型之詞彙定義的相關資訊。 此外，使用參考型別和實值型別的相關資訊，做為泛型的型別參數。
 
 [泛型介面 (C++/CLI)](generic-interfaces-visual-cpp.md)<br/>
 定義及使用泛型介面的相關資訊。
@@ -51,9 +52,8 @@ ms.locfileid: "80181989"
 
 ## <a name="related-sections"></a>相關章節
 
-[如何：使用 for each 反覆查看泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 在泛型集合上使用 [for each, in](../dotnet/for-each-in.md) 關鍵字。
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)

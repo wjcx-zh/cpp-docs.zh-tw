@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195573"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414486"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>如何：使用 interior_ptr 關鍵字宣告實值類型 (C++/CLI)
 
@@ -20,7 +20,7 @@ ms.locfileid: "87195573"
 > [!IMPORTANT]
 > `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。
 
-## <a name="example"></a>範例
+## <a name="example-interior_ptr-with-value-type"></a>範例：具有實數值型別的 interior_ptr
 
 ### <a name="description"></a>描述
 
@@ -65,13 +65,13 @@ int main() {
 3
 ```
 
-## <a name="example"></a>範例
+## <a name="example-this-pointer"></a>範例： this 指標
 
 ### <a name="description"></a>描述
 
-在實數值型別中， **`this`** 指標會評估為 interior_ptr。
+在實值型別中， **`this`** 指標會評估為 interior_ptr。
 
-在實數值型別的非靜態成員函式主體中 `V` ， **`this`** 是類型的運算式， `interior_ptr<V>` 其值為呼叫函式之物件的位址。
+在實值型別的非靜態成員函式主體中 `V` ， **`this`** 是類型的運算式， `interior_ptr<V>` 其值為呼叫函式之物件的位址。
 
 ### <a name="code"></a>程式碼
 
@@ -87,7 +87,7 @@ value struct V {
 };
 ```
 
-## <a name="example"></a>範例
+## <a name="example-address-of-operator"></a>範例： address 運算子
 
 ### <a name="description"></a>描述
 

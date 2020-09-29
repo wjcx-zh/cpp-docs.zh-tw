@@ -1,25 +1,28 @@
 ---
 title: 編譯器錯誤 C3287
-ms.date: 11/04/2016
+description: 描述 Microsoft c + + 編譯器錯誤 C3287。
+ms.date: 09/25/2020
 f1_keywords:
 - C3287
 helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
-ms.openlocfilehash: f0f3441b749e3ae074e18e1132dcc4003eba3ba3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4067355ef1bc1992d0f8519656bcd1063179aef4
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749603"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414316"
 ---
 # <a name="compiler-error-c3287"></a>編譯器錯誤 C3287
 
-類型 'type' (GetEnumerator 的傳回類型) 必須有適合的公用 MoveNext 成員函式和公用 Current 屬性
+> 類型 '*type*' (GetEnumerator) 的傳回型別必須有適合的公用 MoveNext 成員函式和公用 Current 屬性
+
+## <a name="remarks"></a>備註
 
 使用者定義的集合類別必須包含 `MoveNext` 和 `Current`的定義。
 
-如需詳細資訊，請參閱 [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 。
+如需詳細資訊，請參閱 [中的](../../dotnet/for-each-in.md)。
 
 ## <a name="example"></a>範例
 

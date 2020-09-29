@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832447"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499305"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項加入至 ATL 專案
 
@@ -42,7 +42,7 @@ ms.locfileid: "88832447"
 
 1. 在 [方案總管]**** 中，以滑鼠右鍵按一下專案節點，然後從捷徑功能表中按一下 [加入]****。 按一下 [加入類別]****。
 
-   [[加入類別](../../ide/add-class-dialog-box.md)] 對話方塊隨即出現。
+   [[加入類別](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)] 對話方塊隨即出現。
 
 1. 透過在 [類別]**** 窗格中選取的 **ATL** 資料夾，從 [範本]**** 窗格中選取要插入的物件。 按一下 [開啟]。 適用於所選取物件的程式碼精靈隨即出現。
 

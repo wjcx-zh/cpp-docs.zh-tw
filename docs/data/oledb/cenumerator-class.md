@@ -22,25 +22,25 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838148"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498539"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 類別
 
 使用 OLE DB 列舉值物件，此物件會公開 [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) 介面，以傳回描述所有資料來源和列舉值的資料列集。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CEnumerator :
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -97,7 +97,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>參數
 
 *ppMoniker*<br/>
-擴展從目前資料列的顯示名稱 ([CEnumeratorAccessor：： m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 剖析的標記。
+擴展從目前資料列的顯示名稱 ([CEnumeratorAccessor：： m_szParseName](./cenumeratoraccessor-class.md#szparsename)) 剖析的標記。
 
 *lpszDisplayName*<br/>
 在要剖析的顯示名稱。

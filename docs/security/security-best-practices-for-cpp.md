@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 12b2db55a393928683e65c8faca49595fbbebc51
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 63c5567cf1b06d52aa4b458a9ca127039e5c5daf
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389957"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499593"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳作法
 
@@ -21,23 +21,23 @@ ms.locfileid: "87389957"
 
 ## <a name="visual-c-security-features"></a>Visual C++ 安全性功能
 
-這些安全性功能內建于 Microsoft c + + 編譯器和連結器：
+這些安全性功能內建于 Microsoft c + + 編譯器和連結器中：
 
-[`/guard`（啟用控制流程防護）](../build/reference/guard-enable-control-flow-guard.md)<br/>
+[`/guard` (啟用控制流程防護) ](../build/reference/guard-enable-control-flow-guard.md)<br/>
 讓編譯器在編譯階段分析間接呼叫目標的控制流程，然後插入程式碼以在執行時間確認目標。
 
-[`/GS`（緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)<br/>
+[`/GS` (緩衝區安全性檢查) ](../build/reference/gs-buffer-security-check.md)<br/>
 指示編譯器將滿溢偵測程式碼插入可能有遭利用風險的函式。 偵測到滿溢時，就會停止執行。 預設會開啟這個選項。
 
-[`/SAFESEH`（影像具有安全的例外狀況處理常式）](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
+[`/SAFESEH` (映射有安全的例外狀況處理常式) ](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
 指示連結器將包含每個例外狀況處理常式位址的資料表併入輸出映像中。 在執行階段，作業系統會使用此資料表，確定只會執行合法的例外狀況處理常式。 這有助於防止惡意攻擊在執行階段所引入的執行例外狀況處理常式。 根據預設，這個選項為關閉狀態。
 
-[`/NXCOMPAT`](../build/reference/nxcompat.md)[ `/NXCOMPAT` （與資料執行防止相容）](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)這些編譯器和連結器選項可啟用資料執行防止（DEP）相容性。 DEP 會保護 CPU 使其不執行非程式碼頁面。
+[`/NXCOMPAT`](../build/reference/nxcompat.md)， [ `/NXCOMPAT` (與資料執行防止相容) ](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)這些編譯器和連結器選項可啟用資料執行防止 (DEP) 相容性。 DEP 會保護 CPU 使其不執行非程式碼頁面。
 
-[`/analyze`（程式碼分析）](../build/reference/analyze-code-analysis.md)<br/>
-此編譯器選項會啟動報告潛在安全性問題 (例如緩衝區滿溢、未初始化的記憶體、Null 指標取值以及記憶體流失) 的程式碼分析。 根據預設，這個選項為關閉狀態。 如需詳細資訊，請參閱[C/c + + 程式碼分析總覽](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
+[`/analyze` (程式碼分析) ](../build/reference/analyze-code-analysis.md)<br/>
+此編譯器選項會啟動報告潛在安全性問題 (例如緩衝區滿溢、未初始化的記憶體、Null 指標取值以及記憶體流失) 的程式碼分析。 根據預設，這個選項為關閉狀態。 如需詳細資訊，請參閱 [C/c + + 的程式碼分析總覽](../code-quality/code-analysis-for-c-cpp-overview.md)。
 
-[`/DYNAMICBASE`（使用位址空間配置隨機載入）](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
+[`/DYNAMICBASE` (使用位址空間配置隨機載入) ](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 此連結器選項會建置可執行檔映像，以在開始執行時於記憶體不同位置載入。 此選項也會讓記憶體中的堆疊位置更難預測。
 
 ## <a name="security-enhanced-crt"></a>安全性增強 CRT
@@ -46,7 +46,7 @@ C 執行階段程式庫 (CRT) 已增強，以包括造成安全性風險之函�
 
 ## <a name="safeint-library"></a>SafeInt 程式庫
 
-[SafeInt 程式庫](../safeint/safeint-library.md)可協助防止整數溢位，以及應用程式執行數學運算時可能會發生的其他可利用的錯誤。 此連結 `SafeInt` 庫包含[SafeInt 類別](../safeint/safeint-class.md)、 [SafeIntException 類別](../safeint/safeintexception-class.md)和數個[SafeInt 函數](../safeint/safeint-functions.md)。
+[SafeInt 程式庫](../safeint/safeint-library.md) 有助於防止在應用程式執行數學運算時可能發生的整數溢位和其他可利用的錯誤。 此連結 `SafeInt` 庫包含 [SafeInt 類別](../safeint/safeint-class.md)、 [SafeIntException 類別](../safeint/safeintexception-class.md)和數個 [SafeInt](../safeint/safeint-functions.md)函式。
 
 `SafeInt` 類別可防止整數溢位和除以零惡意探索。 您可以使用它來處理不同類型之值間的比較。 它提供兩個錯誤處理原則。 預設原則可供 `SafeInt` 類別擲回 `SafeIntException` 類別例外狀況，以報告無法完成數學運算的原因。 第二個原則可供 `SafeInt` 類別停止程式執行。 您也可以定義自訂原則。
 
@@ -54,7 +54,7 @@ C 執行階段程式庫 (CRT) 已增強，以包括造成安全性風險之函�
 
 ## <a name="checked-iterators"></a>Checked Iterators
 
-已檢查的迭代器會強制執行容器界限。 根據預設，已檢查的迭代器超出範圍時，會產生例外狀況並結束程式執行。 已檢查的反覆運算器提供其他層級的回應，取決於指派給預處理器定義（例如和）的值 `_SECURE_SCL_THROWS` `_ITERATOR_DEBUG_LEVEL` 。 例如，在 `_ITERATOR_DEBUG_LEVEL=2` ，已檢查的反覆運算器會在「偵測模式」中提供完整的正確性檢查，這些是使用判斷提示所提供的。 如需詳細資訊，請參閱[已檢查的反覆運算](../standard-library/checked-iterators.md)器和 [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) 。
+已檢查的迭代器會強制執行容器界限。 根據預設，已檢查的迭代器超出範圍時，會產生例外狀況並結束程式執行。 已檢查的反覆運算器會提供其他層級的回應，這些回應取決於指派給預處理器定義的值，例如 `_SECURE_SCL_THROWS` 和 `_ITERATOR_DEBUG_LEVEL` 。 例如，在中 `_ITERATOR_DEBUG_LEVEL=2` ，已檢查的反覆運算器會在偵錯工具模式中提供完整的正確性檢查，使用判斷提示可提供這些檢查。 如需詳細資訊，請參閱 [已檢查的反覆運算](../standard-library/checked-iterators.md) 器和 [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) 。
 
 ## <a name="code-analysis-for-managed-code"></a>Managed 程式碼的程式碼分析
 
@@ -72,7 +72,7 @@ C 執行階段程式庫 (CRT) 已增強，以包括造成安全性風險之函�
 
 ## <a name="windows-application-verifier"></a>Windows 應用程式驗證器
 
-[應用程式驗證器（AppVerifier）](/windows-hardware/drivers/debugger/enable-application-verifier)可協助您找出潛在的應用程式相容性、穩定性和安全性問題。
+[應用程式驗證器 (AppVerifier) ](/windows-hardware/drivers/debugger/enable-application-verifier)可協助您找出潛在的應用程式相容性、穩定性和安全性問題。
 
 AppVerifier 會監視應用程式使用作業系統的方式。 它會在應用程式執行時監看檔案系統、登錄、記憶體和 API，並建議使用所發現之問題的原始程式碼修正。
 
@@ -86,14 +86,14 @@ AppVerifier 會監視應用程式使用作業系統的方式。 它會在應用�
 
 ## <a name="windows-user-accounts"></a>Windows 使用者帳戶
 
-使用屬於 Administrators 群組的 Windows 使用者帳戶，讓開發人員和客戶暴露在安全性風險下。 如需詳細資訊，請參閱[以使用者群組成員](running-as-a-member-of-the-users-group.md)身分執行和[使用者帳戶控制（UAC）如何影響您的應用程式](how-user-account-control-uac-affects-your-application.md)。
+使用屬於 Administrators 群組的 Windows 使用者帳戶，讓開發人員和客戶暴露在安全性風險下。 如需詳細資訊，請參閱 [以 Users 群組成員的形式](running-as-a-member-of-the-users-group.md) 執行，以及 [ (UAC 的使用者帳戶控制) 如何影響您的應用程式](how-user-account-control-uac-affects-your-application.md)。
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>推測執行端通道的指引
+## <a name="guidance-for-speculative-execution-side-channels"></a>推測性執行端通道的指引
 
-如需如何識別和緩和 c + + 軟體中的理論式執行端通道硬體弱點的詳細資訊，請參閱[適用于理論式執行端通道的 c + + 開發人員指導](developer-guidance-speculative-execution.md)方針。
+如需有關如何識別和緩和 c + + 軟體中的推測性執行端通道硬體弱點的詳細資訊，請參閱 [c + + 開發人員指導方針中的推測性執行端通道](developer-guidance-speculative-execution.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 <xref:System.Security> <br/>
 [安全性](/dotnet/standard/security/index)<br/>
-[使用者帳戶控制（UAC）如何影響您的應用程式](how-user-account-control-uac-affects-your-application.md)
+[ (UAC) 如何影響您的應用程式的使用者帳戶控制](how-user-account-control-uac-affects-your-application.md)

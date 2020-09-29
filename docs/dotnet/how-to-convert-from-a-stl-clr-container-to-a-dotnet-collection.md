@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: f5e289c330c83ac0c630a5b1f8f97b8c65fc7efb
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a4a754bbee08e93e2db9af50f98d7603fabcd8d4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686440"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498501"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>如何：從 STL/CLR 容器轉換為 .NET 集合
 
@@ -20,7 +20,7 @@ ms.locfileid: "90686440"
 
 1. 請使用下列其中一個方法：
 
-   - 若要轉換容器的部分，請呼叫 [make_collection](../dotnet/make-collection-stl-clr.md) 函式，並傳遞 STL/CLR 容器的 begin iterator 和 end 反覆運算器，以複製到 .net 集合中。 此範本函式會採用 STL/CLR iterator 作為樣板引數。 第一個範例會示範這個方法。
+   - 若要轉換容器的部分，請呼叫 [make_collection](./adapter-stl-clr.md#make_collection) 函式，並傳遞 STL/CLR 容器的 begin iterator 和 end 反覆運算器，以複製到 .net 集合中。 此範本函式會採用 STL/CLR iterator 作為樣板引數。 第一個範例會示範這個方法。
 
    - 若要轉換整個容器，請將容器轉換成適當的 .NET 集合介面或介面集合。 第二個範例會示範這個方法。
 
@@ -113,4 +113,4 @@ Key: 74.00 Value: 74
 
 [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)<br/>
 [如何：從 .NET 集合轉換為 STL/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
-[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)
+[range_adapter (STL/CLR)](./adapter-stl-clr.md#range_adapter)

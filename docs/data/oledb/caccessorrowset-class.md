@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843283"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498723"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
 
@@ -54,7 +54,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 *TRowset*<br/>
 資料列集類別。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -64,7 +64,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 | 名稱 | 描述 |
 |--|--|
-| [綁定](#bind) | 當 `bBind` 指定為 **`false`** [CCommand：： Open](../../data/oledb/ccommand-open.md)) 時，會建立 (所使用的系結。 |
+| [綁定](#bind) | 當 `bBind` 指定為 **`false`** [CCommand：： Open](./ccommand-class.md#open)) 時，會建立 (所使用的系結。 |
 | [CAccessorRowset](#caccessorrowset) | 建構函式。 |
 | [關閉](#close) | 關閉資料列集和任何存取子。 |
 | [FreeRecordMemory](#freerecordmemory) | 釋出目前記錄中需要釋放的任何資料行。 |
@@ -76,7 +76,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset：： Bind
 
-如果您 `bBind` **`false`** 在 [CCommand：： Open](../../data/oledb/ccommand-open.md)中指定為，則建立系結。
+如果您 `bBind` **`false`** 在 [CCommand：： Open](./ccommand-class.md#open)中指定為，則建立系結。
 
 ### <a name="syntax"></a>語法
 
@@ -92,7 +92,7 @@ HRESULT Bind();
 
 初始化 `CAccessorRowset` 物件。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 CAccessorRowset();
@@ -116,7 +116,7 @@ void Close();
 
 釋出目前記錄中需要釋放的任何資料行。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 void FreeRecordMemory();

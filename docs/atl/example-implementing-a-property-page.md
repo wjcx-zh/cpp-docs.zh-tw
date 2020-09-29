@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224353"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499612"
 ---
 # <a name="example-implementing-a-property-page"></a>範例：執行屬性頁
 
@@ -90,7 +90,7 @@ Visual Studio 2019 及更新版本中未提供 ATL 屬性頁精靈。
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-您也需要參考 `IPropertyPageImpl` 基類，將下列 **`typedef`** 內容新增至 `CDocProperties` 類別：
+您也必須參考 `IPropertyPageImpl` 基類，將下列 **`typedef`** 內容新增至 `CDocProperties` 類別：
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 
@@ -133,7 +133,7 @@ Visual Studio 2019 及更新版本中未提供 ATL 屬性頁精靈。
 
 若要顯示此頁面，您需要建立一個簡單的協助程式物件。 協助程式物件會提供一種簡化 `OleCreatePropertyFrame` API 的方法，以顯示連接到單一物件的單一頁面。 此協助程式將經過設計，因此可以從 Visual Basic 使用它。
 
-使用 [[加入類別對話方塊]](../ide/add-class-dialog-box.md) 和 [[ATL 簡單物件精靈]](../atl/reference/atl-simple-object-wizard.md) 產生新的類別，並使用 `Helper` 作為其簡短名稱。 建立之後，加入一個方法，如下表所示。
+使用 [[加入類別對話方塊]](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) 和 [[ATL 簡單物件精靈]](../atl/reference/atl-simple-object-wizard.md) 產生新的類別，並使用 `Helper` 作為其簡短名稱。 建立之後，加入一個方法，如下表所示。
 
 |Item|值|
 |----------|-----------|

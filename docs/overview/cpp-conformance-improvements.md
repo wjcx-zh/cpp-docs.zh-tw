@@ -3,12 +3,12 @@ title: C++ 一致性改善
 ms.date: 08/04/2020
 description: Visual Studio 的 Microsoft C++ 正在向完全符合 C++20 語言標準邁進。
 ms.technology: cpp-language
-ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042117"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500256"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 一致性改善
 
@@ -1432,7 +1432,7 @@ int main()
 
 - 新增容器合併和解壓縮成員函式的多載，以接受右值容器。 如需詳細資訊，請參閱[P0083 「接合 Maps And set](https://wg21.link/p0083r3) 」。
 
-### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` 處理 `\r\n`` => ` \n '
+### <a name="stdbasic_istreamread-processing-of-rn-n"></a>`std::basic_istream::read` 處理 `\r\n`` =>` \n '
 
 `std::basic_istream::read`已修正為不會在處理過程中暫時寫入提供的緩衝區部分 `\r\n`  =>  `\n` 。 此變更放棄 Visual Studio 2017 15.8 中大小大於 4K 之讀取的效能優勢。 不過，避免每個字元三次虛擬呼叫的效率改善仍存在。
 
@@ -1621,7 +1621,7 @@ void f(E e) {
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a> Visual Studio 2017 RTW (15.0 版中的一致性改進) 
 
-由於支援一般化 **`constexpr`** 和非靜態資料成員初始化 (NSDMI) 用於匯總，因此現在已針對 c + + 14 標準中新增的功能，完成 Visual Studio 2017 中的 Microsoft c + + 編譯器。 不過，編譯器仍缺乏一些來自 C++11 和 C++98 標準的功能。 如需顯示編譯器目前狀態的表格，請參閱 [Microsoft c + + 語言一致性表格](../visual-cpp-language-conformance.md) 。
+由於支援一般化 **`constexpr`** 和非靜態資料成員初始化 (NSDMI) 用於匯總，因此現在已針對 c + + 14 標準中新增的功能，完成 Visual Studio 2017 中的 Microsoft c + + 編譯器。 不過，編譯器仍缺乏一些來自 C++11 和 C++98 標準的功能。 如需顯示編譯器目前狀態的表格，請參閱 [Microsoft c + + 語言一致性表格](./visual-cpp-language-conformance.md) 。
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C + + 11：更多程式庫中的 Expression SFINAE 支援
 
@@ -3647,7 +3647,7 @@ note: see usage of 'g'.
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 中的 C++ 一致性改善
 
-我們已透過 Visual Studio 2015 Update 3 取得一致性改善的完整清單。 如需詳細資訊，請參閱[Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015) (Visual C++ 2003 至 2015 的新功能)。
+我們已透過 Visual Studio 2015 Update 3 取得一致性改善的完整清單。 如需詳細資訊，請參閱[Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ 2003 至 2015 的新功能)。
 
 ::: moniker-end
 

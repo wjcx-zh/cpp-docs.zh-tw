@@ -12,25 +12,25 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838161"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498666"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 類別
 
 讓您能在不知道資料庫結構描述 (資料庫的基礎結構) 的情況下，存取資料來源。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 template< typename BaseType, DBTYPEENUM OleDbType >
 class CDynamicStringAccessorT : public CDynamicAccessor
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭**： atldbcli.h。h
 
@@ -51,7 +51,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 使用 `CDynamicStringAccessor` 方法來取得資料行資訊。 您可以使用此資料行資訊，在執行時間動態建立存取子。
 
-資料行資訊會儲存在由這個類別所建立和管理的緩衝區中。 使用 [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)從緩衝區取得資料，或使用 [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)將資料儲存到緩衝區。
+資料行資訊會儲存在由這個類別所建立和管理的緩衝區中。 使用 [GetString](#getstring)從緩衝區取得資料，或使用 [SetString](#setstring)將資料儲存到緩衝區。
 
 如需使用動態存取子類別的討論和範例，請參閱 [使用動態](../../data/oledb/using-dynamic-accessors.md)存取子。
 

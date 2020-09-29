@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446869"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498576"
 ---
 # <a name="swap-function-auto_handle"></a>swap 函式 (auto_handle)
 
-在一個 `auto_handle` 和另一個之間交換物件。
+交換一個物件 `auto_handle` 與另一個物件。
 
 ## <a name="syntax"></a>語法
 
@@ -63,11 +63,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>需求
 
-**標頭檔**\<msclr \ auto_handle. h >
+**標頭檔** \<msclr\auto_handle.h>
 
-**命名空間**msclr
+**命名空間** msclr
 
 ## <a name="see-also"></a>另請參閱
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
-[auto_handle::swap](../dotnet/auto-handle-swap.md)
+[auto_handle::swap](./auto-handle-class.md#swap)

@@ -5,17 +5,17 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: cde4bf73548df2dd7f65e20aa39fa7275dd7e11b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108428"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500166"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
 > [!NOTE]
-> 此開發人員文件適用於 Visual Studio 2015 與更新版本。 若要查看您慣用版本 Visual Studio 的檔，請使用**版本**選取器控制項。 您可在此頁面的目錄頂端找到該檔案。
+> 此開發人員文件適用於 Visual Studio 2015 與更新版本。 若要查看您慣用 Visual Studio 版本的檔，請使用 **版本** 選擇器控制項。 您可在此頁面的目錄頂端找到此檔案。
 >
 > 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](https://www.microsoft.com/download/)，並在搜尋方塊中輸入 **Visual C++**。
 
@@ -79,10 +79,10 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [撰寫及重構 C++ 程式碼](../ide/writing-and-refactoring-code-cpp.md)<br/>
 如何使用 C++ 編輯器中的生產力功能，重構、巡覽、了解及撰寫程式碼。
 
-[偵錯工具機器碼](/visualstudio/debugger/debugging-native-code)<br/>
+[偵錯機器碼](/visualstudio/debugger/debugging-native-code)<br/>
 了解如何針對 C++ 專案使用 Visual Studio 偵錯工具。
 
-[C/c + + 程式碼分析總覽](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[C/C++ 程式碼分析概觀](../code-quality/code-analysis-for-c-cpp-overview.md)<br/>
 使用 SAL 註釋或 C++ Core Guidelines Checker 執行靜態分析。
 
 [在 Visual Studio 中撰寫 C/C++ 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -108,7 +108,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [平行程式設計](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 學習如何使用平行模式程式庫 (PPL)、C++ AMP、OpenMP 以及和 Windows 多執行緒相關的其他功能。
 
-[安全性最佳做法](../security/security-best-practices-for-cpp.md)<br/>
+[安全性最佳作法](../security/security-best-practices-for-cpp.md)<br/>
 學習如何保護應用程式以防止惡意程式碼並免於未經授權的使用。
 
 [雲端和 Web 程式設計](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
@@ -128,13 +128,13 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 
 [C 語言參考](../c-language/c-language-reference.md)
 
-[編譯器內建函式和元件語言](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[編譯器內建和元件語言](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio 中的 C++ 程式庫
 
 下列各節提供 Visual Studio 所包含之不同 C 與 C++ 程式庫的相關資訊。
 
-[C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[C 執行時間程式庫參考](../c-runtime-library/c-run-time-library-reference.md)<br/>
 包含已知會造成安全性問題的函式的安全性增強替代項目。
 
 [C + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -152,7 +152,7 @@ CPU 上執行的非同步和平行演算法。
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 GPU 上執行的大量平行演算法。
 
-[Windows 執行階段範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Windows 執行階段範本庫 (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)<br/>
 通用 Windows 平台 (UWP) 應用程式與元件。
 
 [使用 c + +/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
@@ -164,17 +164,17 @@ GPU 上執行的大量平行演算法。
 
 ## <a name="feedback-and-community"></a>意見與社群
 
-[如何回報 Visual C++ 工具組的問題](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
+[如何報告 Visual C++ 工具組的問題](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 了解如何針對 Visual C++ 工具組 (編譯器、連結器及其他工具) 建立有效的錯誤報表，以及提交報表的方式。
 
 Microsoft [C++ 小組部落格](https://devblogs.microsoft.com/cppblog/)<br/>
 深入了解新功能以及 Visual Studio C++ 工具開發人員提供的最新資訊。
 
-[Visual Studio 開發人員社區](https://developercommunity.visualstudio.com/)<br/>
+[Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)<br/>
 了解如何取得協助、提報 Bug，以及提供有關 Visual Studio 的建議。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C 語言參考](../c-language/c-language-reference.md)
-- [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)
-- [編譯器內建函式和元件語言](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [C 執行時間程式庫參考](../c-runtime-library/c-run-time-library-reference.md)
+- [編譯器內建和元件語言](../intrinsics/compiler-intrinsics-and-assembly-language.md)

@@ -1,5 +1,5 @@
 ---
-title: ATL 專案中加入新的介面
+title: 在 ATL 專案中新增介面
 ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.ATL.interface
@@ -9,41 +9,41 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 15283439bdcf76fea64d677ad84bee333833dc71
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8bf0138f85929e06b67e9a2e294eda8a2f385e1a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221217"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499380"
 ---
-# <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 專案中加入新的介面
+# <a name="adding-a-new-interface-in-an-atl-project"></a>在 ATL 專案中新增介面
 
-當您新增至您的物件或控制項的介面時，您會建立介面的虛設常式的函式的每個方法。 在您的物件或控制項，您可以加入目前現有的類型程式庫中找到的介面。 此外，您可以在其中加入介面的類別必須實作[BEGIN_COM_MAP](com-map-macros.md#begin_com_map)巨集或，如果專案使用屬性，您必須先`coclass`屬性。
+當您將介面加入至物件或控制項時，您會為該介面中的每個方法建立 stub 時函數。 在您的物件或控制項中，您只能新增目前在現有類型程式庫中找到的介面。 此外，您加入介面的類別必須執行 [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) 宏，或者，如果專案是屬性，則必須具有 `coclass` 屬性。
 
-您可以將新的介面加入您的控制項中有兩種： 手動或使用 類別檢視 中的 程式碼精靈。
+您可以使用下列兩種方式之一，將新介面加入至控制項：在類別檢視中手動或使用程式碼嚮導。
 
-## <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>若要使用類別檢視 中的程式碼精靈，將介面新增至現有的物件或控制項
+## <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>使用類別檢視中的程式碼嚮導，將介面新增至現有的物件或控制項
 
-1. 在 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下控制項的類別名稱。 例如，完整的控制權或複合控制項或實作 BEGIN_COM_MAP 巨集在其標頭檔中的任何其他控制項類別。
+1. 在 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code)中，以滑鼠右鍵按一下控制項的類別名稱。 例如，完整控制項或複合控制項，或任何其他在其標頭檔中執行 BEGIN_COM_MAP 宏的控制項類別。
 
-1. 在捷徑功能表，按一下 **新增**，然後按一下**實作介面**。
+1. 在快捷方式功能表上，按一下 [ **加入**]，然後按一下 [ **執行介面**]。
 
-1. 選取要在中實作的介面[實作介面精靈](../../ide/implement-interface-wizard.md)。 如果介面沒有任何可用的型別程式庫中，然後您必須將它手動加入的.idl 檔案。
+1. 在 [ [執行介面嚮導]](../../ide/implementing-an-interface-visual-cpp.md#implement-interface-wizard)中選取要執行的介面。 如果介面不存在於任何可用的 typelib 中，則您必須手動將它加入至 .idl 檔。
 
-## <a name="to-add-a-new-interface-manually"></a>若要手動新增新的介面
+## <a name="to-add-a-new-interface-manually"></a>手動新增介面
 
-1. .Idl 檔案中加入新的介面的定義。
+1. 將新介面的定義加入 .idl 檔。
 
-1. 衍生物件或從介面的控制項。
+1. 從介面衍生您的物件或控制項。
 
-1. 建立新[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)介面或，如果專案使用屬性，新增`coclass`屬性。
+1. 為介面建立新的 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ，或者，如果專案是屬性，請加入 `coclass` 屬性。
 
-1. 介面上實作方法。
+1. 在介面上執行方法。
 
 ## <a name="see-also"></a>另請參閱
 
 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)<br/>
-[C++在 Visual Studio 中的專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
-[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Visual Studio 中的 C++ 專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
+[使用 ATL 和 C 執行時間程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
+[預設 ATL 專案設定](../../atl/reference/default-atl-project-configurations.md)

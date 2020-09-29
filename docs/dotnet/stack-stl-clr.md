@@ -53,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 5f5cfbb4f6125c1c72550018735b377e1507ab08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 316899aae024fbc8d9e568d6b5684ec4cfb11558
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214879"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499650"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
-此樣板類別所描述的物件可控制具有後進先出存取權的變動長度元素序列。 您可以使用容器介面卡 `stack` ，以向下推堆疊的形式來管理基礎容器。
+此樣板類別描述一個物件，該物件可控制具有後進先出存取權之不同長度的元素序列。 您可以使用容器介面卡 `stack` ，以向下推堆疊的方式管理基礎容器。
 
-在下面的描述中，與 `GValue` *值*相同，除非後者是 ref 類型，在此情況下為 `Value^` 。 同樣地，與 `GContainer` *容器*相同，除非後者是 ref 類型，在此情況下為 `Container^` 。
+在下列描述中，與 `GValue` *值* 相同，除非後者是 ref 型別，在這種情況下就是 `Value^` 。 同樣地，與 `GContainer` *容器* 相同，除非後者是 ref 類型，在此情況下為 `Container^` 。
 
 ## <a name="syntax"></a>語法
 
@@ -80,7 +80,7 @@ template<typename Value,
 
 ### <a name="parameters"></a>參數
 
-*ReplTest1*<br/>
+*值*<br/>
 受控制序列中項目的類型。
 
 *容器*<br/>
@@ -94,18 +94,18 @@ template<typename Value,
 
 ## <a name="declarations"></a>宣告
 
-|類型定義|說明|
+|類型定義|描述|
 |---------------------|-----------------|
 |[stack::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
 |[stack::container_type (STL/CLR)](#container_type)|基礎容器的類型。|
 |[stack::difference_type (STL/CLR)](#difference_type)|兩個項目之間帶正負號距離的類型。|
-|[stack::generic_container (STL/CLR)](#generic_container)|容器介面卡的泛型介面類別型。|
-|[stack::generic_value (STL/CLR)](#generic_value)|適用于容器介面卡之泛型介面的元素類型。|
+|[stack::generic_container (STL/CLR)](#generic_container)|容器介面卡的泛型介面型別。|
+|[stack::generic_value (STL/CLR)](#generic_value)|容器介面卡泛型介面的元素類型。|
 |[stack::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[stack::size_type (STL/CLR)](#size_type)|兩個項目之間帶正負號距離的類型。|
 |[stack::value_type (STL/CLR)](#value_type)|項目的類型。|
 
-|成員函式|說明|
+|成員函式|描述|
 |---------------------|-----------------|
 |[stack::assign (STL/CLR)](#assign)|取代所有項目。|
 |[stack::empty (STL/CLR)](#empty)|測試項目是否不存在。|
@@ -117,34 +117,34 @@ template<typename Value,
 |[stack::top (STL/CLR)](#top)|存取最後一個項目。|
 |[stack::to_array (STL/CLR)](#to_array)|將受控制序列複製到新的陣列。|
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |[stack::top_item (STL/CLR)](#top_item)|存取最後一個項目。|
 
-|運算子|說明|
+|運算子|描述|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|取代受控制的序列。|
-|[operator！ = （stack）（STL/CLR）](#op_neq)|判斷物件是否 `stack` 不等於另一個 `stack` 物件。|
-|[運算子< （stack）（STL/CLR）](#op_lt)|判斷 `stack` 物件是否小於另一個 `stack` 物件。|
-|[運算子<= （stack）（STL/CLR）](#op_lteq)|判斷 `stack` 物件是否小於或等於另一個 `stack` 物件。|
+|[operator！ = (stack)  (STL/CLR) ](#op_neq)|判斷物件是否 `stack` 不等於另一個 `stack` 物件。|
+|[operator< (stack)  (STL/CLR) ](#op_lt)|判斷 `stack` 物件是否小於另一個 `stack` 物件。|
+|[operator<= (stack)  (STL/CLR) ](#op_lteq)|判斷 `stack` 物件是否小於或等於另一個 `stack` 物件。|
 |[operator== (stack) (STL/CLR)](#op_eq)|判斷 `stack` 物件是否等於另一個 `stack` 物件。|
-|[運算子> （stack）（STL/CLR）](#op_gt)|判斷 `stack` 物件是否大於另一個 `stack` 物件。|
-|[運算子>= （stack）（STL/CLR）](#op_gteq)|判斷 `stack` 物件是否大於或等於另一個 `stack` 物件。|
+|[operator> (stack)  (STL/CLR) ](#op_gt)|判斷 `stack` 物件是否大於另一個 `stack` 物件。|
+|[operator>= (stack)  (STL/CLR) ](#op_gteq)|判斷 `stack` 物件是否大於或等於另一個 `stack` 物件。|
 
 ## <a name="interfaces"></a>介面
 
-|介面|說明|
+|介面|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|複製物件。|
 |IStack\<Value, Container>|維護一般容器介面卡。|
 
 ## <a name="remarks"></a>備註
 
-物件會透過*容器*類型的基礎容器來配置和釋放其所控制之序列的儲存體，以儲存*值*元素並隨需成長。 物件會限制只能推送和彈出最後一個專案的存取，並執行後進先出的佇列（也稱為 LIFO 佇列或堆疊）。
+物件會透過儲存*值*元素並隨需成長的基礎*容器，配置*並釋放它所控制之序列的儲存體。 物件會限制只推送和取出最後一個專案的存取權，以執行後進先出佇列 (也稱為 LIFO 佇列或堆疊) 。
 
 ## <a name="members"></a>成員
 
-## <a name="stackassign-stlclr"></a><a name="assign"></a>stack：： assign （STL/CLR）
+## <a name="stackassign-stlclr"></a><a name="assign"></a> stack：： assign (STL/CLR) 
 
 取代所有項目。
 
@@ -156,12 +156,12 @@ void assign(stack<Value, Container>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要插入的容器介面卡。
 
 ### <a name="remarks"></a>備註
 
-成員函式會指派 `right.get_container()` 給基礎容器。 您可以使用它來變更堆疊的完整內容。
+成員函式會指派 `right.get_container()` 給基礎容器。 您可以使用它來變更堆疊的整個內容。
 
 ### <a name="example"></a>範例
 
@@ -198,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a>stack：： const_reference （STL/CLR）
+## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a> stack：： const_reference (STL/CLR) 
 
 項目的常數參考類型。
 
@@ -210,7 +210,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述專案的常數參考。
+型別描述元素的常數參考。
 
 ### <a name="example"></a>範例
 
@@ -242,7 +242,7 @@ int main()
 c b a
 ```
 
-## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a>stack：： container_type （STL/CLR）
+## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a> stack：： container_type (STL/CLR) 
 
 基礎容器的類型。
 
@@ -284,9 +284,9 @@ int main()
 a b c
 ```
 
-## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a>stack：:d ifference_type （STL/CLR）
+## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a> stack：:d ifference_type (STL/CLR) 
 
-兩個元素之間帶正負號距離的類型。
+兩個元素之間的帶正負號距離類型。
 
 ### <a name="syntax"></a>語法
 
@@ -296,7 +296,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述可能為負的元素計數。
+此類型描述可能的負元素計數。
 
 ### <a name="example"></a>範例
 
@@ -342,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="stackempty-stlclr"></a><a name="empty"></a>stack：： empty （STL/CLR）
+## <a name="stackempty-stlclr"></a><a name="empty"></a> stack：： empty (STL/CLR) 
 
 測試項目是否不存在。
 
@@ -354,7 +354,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[stack：： size （STL/CLR）](../dotnet/stack-size-stl-clr.md) `() == 0` 。 您可以使用它來測試堆疊是否為空的。
+成員函式會對空的受控制序列傳回 true。 它相當於[stack：： size (STL/CLR) ](#size) `() == 0` 。 您可以使用它來測試堆疊是否為空的。
 
 ### <a name="example"></a>範例
 
@@ -396,9 +396,9 @@ size() = 0
 empty() = True
 ```
 
-## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a>stack：： generic_container （STL/CLR）
+## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a> stack：： generic_container (STL/CLR) 
 
-容器介面卡的泛型介面類別型。
+容器介面卡的泛型介面型別。
 
 ### <a name="syntax"></a>語法
 
@@ -459,9 +459,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a>stack：： generic_value （STL/CLR）
+## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a> stack：： generic_value (STL/CLR) 
 
-要與容器的泛型介面搭配使用之元素的類型。
+要搭配容器的泛型介面使用的元素類型。
 
 ### <a name="syntax"></a>語法
 
@@ -471,7 +471,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型的物件 `GValue` ，其描述要與這個樣板容器類別的泛型介面搭配使用的預存元素值。 （ `GValue` `value_type` `value_type^` 如果是 ref 型別，則為或 `value_type` ）。
+型別描述型別的物件，此物件 `GValue` 描述與這個樣板容器類別的泛型介面搭配使用的預存專案值。  (`GValue` 是， `value_type` 或者 `value_type^` `value_type` 是 ref 類型。 ) 
 
 ### <a name="example"></a>範例
 
@@ -517,7 +517,7 @@ a b c
 c b a
 ```
 
-## <a name="stackget_container-stlclr"></a><a name="get_container"></a>stack：： get_container （STL/CLR）
+## <a name="stackget_container-stlclr"></a><a name="get_container"></a> stack：： get_container (STL/CLR) 
 
 存取基礎容器。
 
@@ -529,7 +529,7 @@ container_type^ get_container();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回基礎容器的控制碼。 您可以使用它來略過容器包裝函式所加諸的限制。
+成員函式會傳回基礎容器的控制碼。 您可以使用它來略過容器包裝函式所加諸的限制。
 
 ### <a name="example"></a>範例
 
@@ -559,7 +559,7 @@ int main()
 a b c
 ```
 
-## <a name="stackoperator-stlclr"></a><a name="op_as"></a>stack：： operator = （STL/CLR）
+## <a name="stackoperator-stlclr"></a><a name="op_as"></a> stack：： operator = (STL/CLR) 
 
 取代受控制的序列。
 
@@ -571,12 +571,12 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要複製的容器介面卡。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會將 *右移* 至物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為 *right*中受控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -613,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="stackpop-stlclr"></a><a name="pop"></a>stack：:p op （STL/CLR）
+## <a name="stackpop-stlclr"></a><a name="pop"></a> stack：:p op (STL/CLR) 
 
 移除最後一個元素。
 
@@ -625,7 +625,7 @@ void pop();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會移除受控制序列中的最後一個專案，此專案必須為非空白。 您可以使用它來縮短堆疊上一個元素的堆疊。
+成員函式會移除受控制序列的最後一個專案，其必須為非空白。 您可以使用它來將堆疊縮短一回一個元素。
 
 ### <a name="example"></a>範例
 
@@ -661,7 +661,7 @@ a b c
 a b
 ```
 
-## <a name="stackpush-stlclr"></a><a name="push"></a>stack：:p ush （STL/CLR）
+## <a name="stackpush-stlclr"></a><a name="push"></a> stack：:p ush (STL/CLR) 
 
 加入新的最後一個元素。
 
@@ -673,7 +673,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式會將具有值的元素插入 `val` 受控制序列的結尾。 您可以使用它將另一個元素附加至堆疊。
+成員函式會 `val` 在受控制序列的結尾插入具有值的元素。 您可以使用它將另一個元素附加至堆疊。
 
 ### <a name="example"></a>範例
 
@@ -702,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="stackreference-stlclr"></a><a name="reference"></a>stack：： reference （STL/CLR）
+## <a name="stackreference-stlclr"></a><a name="reference"></a> stack：： reference (STL/CLR) 
 
 項目的參考類型。
 
@@ -714,7 +714,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述專案的參考。
+型別描述對元素的參考。
 
 ### <a name="example"></a>範例
 
@@ -751,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="stacksize-stlclr"></a><a name="size"></a>stack：： size （STL/CLR）
+## <a name="stacksize-stlclr"></a><a name="size"></a> stack：： size (STL/CLR) 
 
 計算元素的數目。
 
@@ -763,7 +763,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[stack：： empty （STL/CLR）](../dotnet/stack-empty-stl-clr.md) `()` 。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[stack：： empty (STL/CLR) ](#empty) `()` 。
 
 ### <a name="example"></a>範例
 
@@ -805,9 +805,9 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="stacksize_type-stlclr"></a><a name="size_type"></a>stack：： size_type （STL/CLR）
+## <a name="stacksize_type-stlclr"></a><a name="size_type"></a> stack：： size_type (STL/CLR) 
 
-兩個元素之間帶正負號距離的類型。
+兩個元素之間的帶正負號距離類型。
 
 ### <a name="syntax"></a>語法
 
@@ -817,7 +817,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述非負的元素計數。
+型別描述非負的元素計數。
 
 ### <a name="example"></a>範例
 
@@ -854,9 +854,9 @@ a b c
 size difference = 2
 ```
 
-## <a name="stackstack-stlclr"></a><a name="stack"></a>stack：： stack （STL/CLR）
+## <a name="stackstack-stlclr"></a><a name="stack"></a> stack：： stack (STL/CLR) 
 
-建立容器介面卡物件。
+構造容器介面卡物件。
 
 ### <a name="syntax"></a>語法
 
@@ -869,37 +869,37 @@ explicit stack(container_type% wrapped);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要複製的物件。
 
-*換*<br/>
-要使用的已包裝容器。
+*包裹*<br/>
+要使用的包裝容器。
 
 ### <a name="remarks"></a>備註
 
-此構造函式：
+函數：
 
 `stack();`
 
 建立空的包裝容器。 您可以使用它來指定空的初始受控制序列。
 
-此構造函式：
+函數：
 
 `stack(stack<Value, Container>% right);`
 
-建立包裝的容器，其為的複本 `right.get_container()` 。 您可以使用它來指定初始受控制序列，這是堆疊物件*許可權*所控制之序列的複本。
+建立包裝的容器，該容器為的複本 `right.get_container()` 。 您可以使用它來指定初始受控制序列，這是由 stack 物件 *許可權*所控制之序列的複本。
 
-此構造函式：
+函數：
 
 `stack(stack<Value, Container>^ right);`
 
-建立包裝的容器，其為的複本 `right->get_container()` 。 您可以使用它來指定初始受控制序列，這是堆疊物件所控制之序列的複本 `*right` 。
+建立包裝的容器，該容器為的複本 `right->get_container()` 。 您可以使用它來指定初始受控制序列，其為堆疊物件所控制之序列的複本 `*right` 。
 
-此構造函式：
+函數：
 
 `explicit stack(container_type% wrapped);`
 
-使用*包裝*為包裝容器的現有容器。 您可以使用它來從現有的容器中建立堆疊。
+使用 *包裝* 為包裝容器的現有容器。 您可以使用它來從現有的容器中建立堆疊。
 
 ### <a name="example"></a>範例
 
@@ -947,7 +947,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="stackto_array-stlclr"></a><a name="to_array"></a>stack：： to_array （STL/CLR）
+## <a name="stackto_array-stlclr"></a><a name="to_array"></a> stack：： to_array (STL/CLR) 
 
 將受控制序列複製到新的陣列。
 
@@ -959,7 +959,7 @@ cli::array<Value>^ to_array();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回陣列，其中包含受控制的序列。 您可以用它來取得陣列表單中受控制序列的複本。
+成員函式會傳回陣列，其中包含受控制的序列。 您可以使用它，以陣列形式取得受控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -997,7 +997,7 @@ a b c d
 a b c
 ```
 
-## <a name="stacktop-stlclr"></a><a name="top"></a>stack：： top （STL/CLR）
+## <a name="stacktop-stlclr"></a><a name="top"></a> stack：： top (STL/CLR) 
 
 存取最後一個項目。
 
@@ -1009,7 +1009,7 @@ reference top();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回受控制序列之最後一個元素的參考，該專案必須為非空白。 當您知道它是否存在時，您可以使用它來存取最後一個元素。
+成員函式會傳回受控制序列之最後一個元素的參考，其必須為非空白。 當您知道最後一個元素存在時，您可以使用它來存取最後一個專案。
 
 ### <a name="example"></a>範例
 
@@ -1049,7 +1049,7 @@ top() = c
 a b x
 ```
 
-## <a name="stacktop_item-stlclr"></a><a name="top_item"></a>stack：： top_item （STL/CLR）
+## <a name="stacktop_item-stlclr"></a><a name="top_item"></a> stack：： top_item (STL/CLR) 
 
 存取最後一個項目。
 
@@ -1061,7 +1061,7 @@ property value_type top_item;
 
 ### <a name="remarks"></a>備註
 
-屬性會存取受控制序列中的最後一個專案，其必須為非空白。 當您知道最後一個元素存在時，就可以使用它來讀取或寫入它。
+屬性會存取受控制序列的最後一個專案，其必須為非空白。 當您知道最後一個元素存在時，您可以使用它來讀取或寫入最後一個專案。
 
 ### <a name="example"></a>範例
 
@@ -1101,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a>stack：： value_type （STL/CLR）
+## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a> stack：： value_type (STL/CLR) 
 
 項目的類型。
 
@@ -1113,7 +1113,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數*值*同義。
+此類型與範本參數 *值*同義。
 
 ### <a name="example"></a>範例
 
@@ -1146,7 +1146,7 @@ int main()
 c b a
 ```
 
-## <a name="operator-stack-stlclr"></a><a name="op_neq"></a>operator！ = （stack）（STL/CLR）
+## <a name="operator-stack-stlclr"></a><a name="op_neq"></a> operator！ = (stack)  (STL/CLR) 
 
 堆疊不等於比較。
 
@@ -1161,15 +1161,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 `!(left == right)` 。 您可以使用它來測試當兩個堆疊是以元素進行比較時，是否將*left*與*right*排序。
+Operator 函數會傳回 `!(left == right)` 。 您可以使用它來測試當兩個堆疊是依元素進行比較時， *左邊* 是否未以 *正確* 的順序排序。
 
 ### <a name="example"></a>範例
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operator &lt; （stack）（STL/CLR）
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a> operator &lt; (stack)  (STL/CLR) 
 
 堆疊小於比較。
 
@@ -1232,15 +1232,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-如果的最低位置也為 true，則運算子函數 `i` 會傳回 true `!(right[i] < left[i])` `left[i] < right[i]` 。 否則，它會傳回 `left->` [stack：： size （STL/CLR）](../dotnet/stack-size-stl-clr.md) ， `() <` `right->size()` 您可以用它*left*來測試當兩個堆疊是以元素進行比較時，是否要在*右邊*排序。
+如果是，運算子函式會傳回 true，如果是，則對 `i` `!(right[i] < left[i])` 而言也是 true `left[i] < right[i]` 。 否則，它會傳回 `left->` [stack：： size (STL/CLR) ](#size) `() <` `right->size()` 您使用它來測試當兩個堆疊是依元素進行比較時，是否要在*right*之前排序*左*。
 
 ### <a name="example"></a>範例
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator &lt; = （stack）（STL/CLR）
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a> operator &lt; = (stack)  (STL/CLR) 
 
 堆疊小於或等於比較。
 
@@ -1303,15 +1303,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 `!(right < left)` 。 您可以使用它來測試當兩個堆疊是以元素進行比較時 *，是否要*在*右*向後排序。
+Operator 函數會傳回 `!(right < left)` 。 您可以使用它來測試當兩個堆疊是依元素進行*比較時，* 是否不會將*左方*排序。
 
 ### <a name="example"></a>範例
 
@@ -1359,7 +1359,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-stack-stlclr"></a><a name="op_eq"></a>operator = = （stack）（STL/CLR）
+## <a name="operator-stack-stlclr"></a><a name="op_eq"></a> operator = = (stack)  (STL/CLR) 
 
 堆疊相等比較。
 
@@ -1374,15 +1374,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-只有當*left*和*right*所控制的序列具有相同的長度，且每個位置都有相同的時，運算子函數才會傳回 true `i` `left[i] ==` `right[i]` 。 您可以使用它來測試當兩個堆疊是以元素進行比較時，*左側*是否與*右*排序相同。
+只有在由左至右控制的*序列和每*個位置都有相同的長度和時，運算子函*式*才會傳回 true `i` `left[i] ==` `right[i]` 。 您可以使用它來測試當兩個堆疊是依元素進行比較時， *左邊* 是否 *以相同的* 順序排序。
 
 ### <a name="example"></a>範例
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operator &gt; （stack）（STL/CLR）
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a> operator &gt; (stack)  (STL/CLR) 
 
 堆疊大於比較。
 
@@ -1445,15 +1445,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 `right` `<` `left` 。 您可以使用它來測試當兩個堆疊是以元素進行比較時 *，是否要*在*右*向後排序。
+Operator 函數會傳回 `right` `<` `left` 。 您可以使用它來測試當兩個堆疊是依元素進行*比較時，* 是否要將*左方*排序。
 
 ### <a name="example"></a>範例
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator &gt; = （stack）（STL/CLR）
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a> operator &gt; = (stack)  (STL/CLR) 
 
 堆疊大於或等於比較。
 
@@ -1516,15 +1516,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 `!(left < right)` 。 您可以使用它來測試當兩個堆疊是以元素進行比較時 *，是否要*在*右方*之前排序。
+Operator 函數會傳回 `!(left < right)` 。 您可以使用它來*測試當兩*個堆疊是依專案進行比較時，*左邊*是否未排序。
 
 ### <a name="example"></a>範例
 

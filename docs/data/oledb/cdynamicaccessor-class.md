@@ -124,24 +124,24 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ecbc332fcdb7fee8f748a02b2f111d4d1abf3c0b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cc996b8beedadf9cba5a46b3b4da20e19268b0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838200"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498683"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 類別
 
 讓您能在不知道資料庫結構描述 (資料庫的基礎結構) 的情況下，存取資料來源。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CDynamicAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭**： atldbcli.h。h
 
@@ -176,7 +176,7 @@ class CDynamicAccessor : public CAccessorBase
 
 使用 `CDynamicAccessor` 方法來取得資料行資訊，例如資料行名稱、資料行計數、資料類型等等。 然後，您可以使用此資料行資訊，在執行時間動態建立存取子。
 
-資料行資訊會儲存在由這個類別所建立和管理的緩衝區中。 使用 [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)從緩衝區取得資料。
+資料行資訊會儲存在由這個類別所建立和管理的緩衝區中。 使用 [GetValue](#getvalue)從緩衝區取得資料。
 
 如需使用動態存取子類別的討論和範例，請參閱 [使用動態](../../data/oledb/using-dynamic-accessors.md)存取子。
 
@@ -217,10 +217,10 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 #### <a name="parameters"></a>參數
 
 *eBlobHandling*<br/>
-指定如何處理二進位大型物件 (BLOB) 資料。 預設值為 DBBLOBHANDLING_DEFAULT。 如需 DBBLOBHANDLINGENUM 值的描述，請參閱 [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) 。
+指定如何處理二進位大型物件 (BLOB) 資料。 預設值為 DBBLOBHANDLING_DEFAULT。 如需 DBBLOBHANDLINGENUM 值的描述，請參閱 [SetBlobHandling](#setblobhandling) 。
 
 *nBlobSize*<br/>
-最大 BLOB 的大小 (以位元組為單位)；此值的資料行資料被視為 BLOB。 預設值為8000。 如需詳細資訊，請參閱 [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 。
+最大 BLOB 的大小 (以位元組為單位)；此值的資料行資料被視為 BLOB。 預設值為8000。 如需詳細資訊，請參閱 [SetBlobSizeLimit](#setblobsizelimit) 。
 
 ### <a name="remarks"></a>備註
 
@@ -232,7 +232,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 
 將所有資料行解除系結，釋放配置的記憶體，並釋放類別中的 [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) 介面指標。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 void Close() throw();
@@ -250,7 +250,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 ### <a name="remarks"></a>備註
 
-傳回[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)所設定的 BLOB 處理值*eBlobHandling* 。
+傳回[SetBlobHandling](#setblobhandling)所設定的 BLOB 處理值*eBlobHandling* 。
 
 ## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a> CDynamicAccessor：： GetBlobSizeLimit
 
@@ -264,7 +264,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 ### <a name="remarks"></a>備註
 
-傳回[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)所設定的 BLOB 處理值*nBlobSize* 。
+傳回[SetBlobSizeLimit](#setblobsizelimit)所設定的 BLOB 處理值*nBlobSize* 。
 
 ## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a> CDynamicAccessor：： GetBookmark
 

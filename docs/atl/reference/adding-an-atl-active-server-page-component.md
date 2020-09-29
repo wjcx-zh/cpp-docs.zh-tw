@@ -2,12 +2,12 @@
 title: 新增 ATL Active Server Page 元件
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: a84eeb20f047097e3dbb3c7f3bb5f5a12b069bcb
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0180077de7ab96cb75736d34e112731e47b9589b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075290"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499359"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>新增 ATL Active Server Page 元件
 
@@ -19,7 +19,7 @@ Visual Studio 2019 及更新版本中未提供 ATL Active Server Page 元件精�
 
 ::: moniker range="<=vs-2017"
 
-若要將 Active Template Library (ATL) 物件新增至您的專案中，您的專案必須已經建立為 ATL COM 應用程式，或含有 ATL 支援的 MFC 應用程式。 您可以使用 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md) 建立 ATL 應用程式；您可以從 [加入類別對話方塊](../../ide/add-class-dialog-box.md) 對話方塊選取 [將 ATL 支援加入 MFC]；或者您可以[將 ALT 物件新增至 MFC 應用程式](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，來實作 MFC 應用程式的 ATL 支援。
+若要將 Active Template Library (ATL) 物件新增至您的專案中，您的專案必須已經建立為 ATL COM 應用程式，或含有 ATL 支援的 MFC 應用程式。 您可以使用 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md) 建立 ATL 應用程式；您可以從 [加入類別對話方塊](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) 對話方塊選取 [將 ATL 支援加入 MFC]****；或者您可以[將 ALT 物件新增至 MFC 應用程式](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，來實作 MFC 應用程式的 ATL 支援。
 
 Active Server Page 元件是 Internet Information Services 架構的一部分，可提供下列進階的 Web 程式開發功能：
 
@@ -31,11 +31,11 @@ Active Server Page 元件是 Internet Information Services 架構的一部分，
 
 ## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>若要將 ATL Active Server Page 元件新增至您的專案
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下您要在其中新增 ATL Active Server Page 元件之專案的名稱。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下您要在其中新增 ATL Active Server Page 元件之專案的名稱。
 
-1. 從捷徑功能表按一下 [新增]，然後按一下 [新增類別]。
+1. 從捷徑功能表按一下 [新增]****，然後按一下 [新增類別]****。
 
-1. 在 [加入類別](../../ide/add-class-dialog-box.md) 對話方塊的 [範本] 窗格中，按一下 [ATL Active Server Page 元件]，然後按一下 [開啟] 以顯示 [ATL Active Server Page 元件精靈](../../atl/reference/atl-active-server-page-component-wizard.md)。
+1. 在 [加入類別](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) 對話方塊的 [範本]**** 窗格中，按一下 [ATL Active Server Page 元件]****，然後按一下 [開啟]**** 以顯示 [ATL Active Server Page 元件精靈](../../atl/reference/atl-active-server-page-component-wizard.md)。
 
 ::: moniker-end
 
@@ -43,7 +43,7 @@ Active Server Page 元件是 Internet Information Services 架構的一部分，
 
 [新增類別](../../ide/adding-a-class-visual-cpp.md)<br/>
 [在 ATL 專案中新增介面](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
-[將連接點新增至物件](../../atl/adding-connection-points-to-an-object.md)<br/>
+[將連接點加入物件](../../atl/adding-connection-points-to-an-object.md)<br/>
 [新增方法](../../ide/adding-a-method-visual-cpp.md)<br/>
 [MFC 類別](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [新增泛型 C++ 類別](../../ide/adding-a-generic-cpp-class.md)

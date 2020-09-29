@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 02364f778cdab3416cbac7cc1462ce79287b1ad9
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684361"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500282"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>在 Visual Studio 中進行 C++ 開發的概觀
 
@@ -75,7 +75,7 @@ Visual Studio 支援任何專案系統或是您想要使用的自訂建置工具
 
 如需設計通用 Windows 平臺應用程式之使用者介面的詳細資訊，請參閱 [設計和 UI](https://developer.microsoft.com/windows/design)。
 
-如需建立 MFC 應用程式之使用者介面的詳細資訊，請參閱 [MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)。 如需 Win32 Windows 程式的資訊，請參閱 [Windows 傳統型應用程式](../windows/windows-desktop-applications-cpp.md)。
+如需建立 MFC 應用程式之使用者介面的詳細資訊，請參閱 [MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)。 如需 Win32 Windows 程式的資訊，請參閱 [Windows 傳統型應用程式](../windows/desktop-applications-visual-cpp.md)。
 
 ## <a name="write-code"></a>撰寫程式碼
 
@@ -117,7 +117,7 @@ Visual Studio 包含適用於 C++ 的 Microsoft 單元測試架構，以及 Boos
 
 ## <a name="analyze"></a>分析
 
-Visual Studio 包含的靜態程式碼分析工具，可在原始程式碼中偵測到潛在問題。 這些工具包括 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 規則檢查工具的實作。 如需詳細資訊，請參閱 [C/C++ 程式碼分析概觀](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
+Visual Studio 包含的靜態程式碼分析工具，可在原始程式碼中偵測到潛在問題。 這些工具包括 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 規則檢查工具的實作。 如需詳細資訊，請參閱 [C/C++ 程式碼分析概觀](../code-quality/code-analysis-for-c-cpp-overview.md)。
 
 ## <a name="deploy-completed-applications"></a>部署完成的應用程式
 

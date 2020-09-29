@@ -6,31 +6,31 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-ms.openlocfilehash: ebbb610debe5d480cd1161149f89c4d357f9cd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71290cf0763ac6594985acc4cb11562efe7028e6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261601"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499369"
 ---
 # <a name="adding-an-atl-dialog-box"></a>新增 ATL 對話方塊
 
-若要到您的專案新增 ATL 對話方塊，您的專案必須 ATL 專案或包含 ATL 支援的 MFC 專案。 您可以使用 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[將 ALT 物件新增至 MFC 應用程式](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，以實作 MFC 應用程式的 ATL 支援。
+若要將 ATL 對話方塊加入至專案，您的專案必須是 ATL 專案或包含 ATL 支援的 MFC 專案。 您可以使用 [ [ATL 專案嚮導]](../../atl/reference/atl-project-wizard.md) 來建立 atl 應用程式，或 [將 atl 物件加入至 mfc 應用](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) 程式，以執行 MFC 應用程式的 atl 支援。
 
-根據預設，ATL 對話方塊精靈會實作衍生自的對話方塊[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)。 這個類別包含用於裝載 ActiveX 和 Windows 控制項的支援。 如果精靈已產生程式碼之後，您不會想的 ActiveX 控制項支援，額外負荷，取代的所有執行個體`CAxDialogImpl`加[CSimpleDialog](../../atl/reference/csimpledialog-class.md)或[CDialogImpl](../../atl/reference/cdialogimpl-class.md)作為基底類別.
+根據預設，ATL 對話方塊 Wizard 會執行衍生自 [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)的對話方塊。 這個類別包含裝載 ActiveX 和 Windows 控制項的支援。 如果您不想要讓 ActiveX 控制項支援的額外負荷，請在嚮導產生您的程式碼後， `CAxDialogImpl` 使用 [CSimpleDialog](../../atl/reference/csimpledialog-class.md) 或 [CDialogImpl](../../atl/reference/cdialogimpl-class.md) 將的所有實例取代為您的基類。
 
 > [!NOTE]
-> `CSimpleDialog` 建立支援 Windows 通用控制項的強制回應對話方塊方塊。 `CDialogImpl` 建立其中一個強制回應或非強制回應對話方塊。
+> `CSimpleDialog` 只會建立支援 Windows 通用控制項的強制回應對話方塊。 `CDialogImpl` 建立強制回應或非強制回應對話方塊。
 
 ## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>將 ATL 對話方塊資源新增至您的專案
 
-1. 建立 ATL 專案使用[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)。
+1. 使用 [ [Atl 專案嚮導]](../../atl/reference/atl-project-wizard.md)建立 atl 專案。
 
-1. 從[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下專案名稱，然後按一下**新增**從捷徑功能表。 按一下 **加入類別**。
+1. 在 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code)中，以滑鼠右鍵按一下專案名稱，然後從快捷方式功能表按一下 [ **新增** ]。 按一下 [加入類別]****。
 
-1. 在 **範本**窗格[加入類別](../../ide/add-class-dialog-box.md)] 對話方塊中，按一下 [ **ATL 對話方塊**。 按一下 **開放**顯示[ATL 對話方塊精靈](../../atl/reference/atl-dialog-wizard.md)。
+1. 在 [[加入類別](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)] 對話方塊的 [**範本**] 窗格中，按一下 [ **ATL 對話方塊]**。 按一下 [ **開啟** ] 以顯示 [ATL 對話方塊 Wizard](../../atl/reference/atl-dialog-wizard.md)。
 
-如需詳細資訊，請參閱 <<c0> [ 實作對話方塊](../../atl/implementing-a-dialog-box.md)。
+如需詳細資訊，請參閱 [執行對話方塊](../../atl/implementing-a-dialog-box.md)。
 
 ## <a name="see-also"></a>另請參閱
 

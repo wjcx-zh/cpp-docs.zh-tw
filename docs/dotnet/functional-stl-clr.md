@@ -63,24 +63,24 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 00d719df2fdba892d1d9362da2b2172bac9ca16f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743304"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499702"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
 包含 STL/CLR 標頭 `<cliext/functional>` 來定義一些範本類別以及相關的範本委派和函式。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```
 #include <functional>
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<cliext/functional>
 
@@ -390,7 +390,7 @@ int main()
 
 產生 `binder1st` 引數和仿函數的。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 template<typename Fun,
@@ -412,12 +412,12 @@ template<typename Fun,
 *函*<br/>
 要包裝的仿函數。
 
-*left*<br/>
+*離開*<br/>
 要換行的第一個引數。
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回[binder1st (STL/CLR) ](../dotnet/binder1st-stl-clr.md) `<Fun>(functor, left)` 。 您可以使用它做為將雙引數仿函數和其第一個引數包裝在使用第二個引數呼叫它的單一引數仿函數中的便利方法。
+範本函式會傳回[binder1st (STL/CLR) ](#binder1st) `<Fun>(functor, left)` 。 您可以使用它做為將雙引數仿函數和其第一個引數包裝在使用第二個引數呼叫它的單一引數仿函數中的便利方法。
 
 ### <a name="example"></a>範例
 
@@ -471,7 +471,7 @@ int main()
 
 產生 `binder2nd` 引數和仿函數的。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 template<typename Fun,
@@ -493,12 +493,12 @@ template<typename Fun,
 *函*<br/>
 要包裝的仿函數。
 
-*向右*<br/>
+*對*<br/>
 要換行的第二個引數。
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回[binder2nd (STL/CLR) ](../dotnet/binder2nd-stl-clr.md) `<Fun>(functor, right)` 。 您可以使用它做為將雙引數仿函數和第二個引數包裝在使用第一個引數呼叫它的單一引數仿函數中的便利方法。
+範本函式會傳回[binder2nd (STL/CLR) ](#binder2nd) `<Fun>(functor, right)` 。 您可以使用它做為將雙引數仿函數和第二個引數包裝在使用第一個引數呼叫它的單一引數仿函數中的便利方法。
 
 ### <a name="example"></a>範例
 
@@ -2154,7 +2154,7 @@ int main()
 
 `unary_negate`為仿函數產生。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 template<typename Fun>
@@ -2173,7 +2173,7 @@ template<typename Fun>
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回[unary_negate (STL/CLR) ](../dotnet/unary-negate-stl-clr.md) `<Fun>(functor)` 。 您可以使用它做為將單一引數仿函數包裝在仿函數中的方法，以提供邏輯 NOT。
+範本函式會傳回[unary_negate (STL/CLR) ](#unary_negate) `<Fun>(functor)` 。 您可以使用它做為將單一引數仿函數包裝在仿函數中的方法，以提供邏輯 NOT。
 
 ### <a name="example"></a>範例
 
@@ -2226,7 +2226,7 @@ int main()
 
 `binary_negate`為仿函數產生。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 template<typename Fun>
@@ -2245,7 +2245,7 @@ template<typename Fun>
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回[binary_negate (STL/CLR) ](../dotnet/binary-negate-stl-clr.md) `<Fun>(functor)` 。 您可以使用它來將兩個引數仿函數包裝在仿函數中，以提供邏輯 NOT。
+範本函式會傳回[binary_negate (STL/CLR) ](#negate) `<Fun>(functor)` 。 您可以使用它來將兩個引數仿函數包裝在仿函數中，以提供邏輯 NOT。
 
 ### <a name="example"></a>範例
 

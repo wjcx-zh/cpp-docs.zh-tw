@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: 0d1ae94948e1143a5bac17985423c4bd1bfbaf65
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b260d3a88fc8c3f2d341005c1e47cfd9ab668e1e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374036"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500361"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 類別
 
-除了提供 Windows 清單框的功能`CDragListBox`外, 該類別還允許使用者在清單框中行動清單框項(如檔名)。
+除了提供 Windows 清單方塊的功能之外，此類別還可 `CDragListBox` 讓使用者在清單方塊內移動清單方塊專案，例如檔案名。
 
 ## <a name="syntax"></a>語法
 
@@ -43,28 +43,28 @@ class CDragListBox : public CListBox
 
 |名稱|描述|
 |----------|-----------------|
-|[CDragListBox:CDraglistBox](#cdraglistbox)|建構 `CDragListBox` 物件。|
+|[CDragListBox：： CDragListBox](#cdraglistbox)|建構 `CDragListBox` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CDragListBox::開始拖動](#begindrag)|拖動操作開始時由框架調用。|
-|[CDragListBox::取消拖動](#canceldrag)|當拖動操作被取消時由框架調用。|
-|[CDragListBox::D](#dragging)|在拖動操作期間由框架調用。|
-|[CDragListBox::D原始插入](#drawinsert)|繪製拖動清單框的插入指南。|
-|[CDragListBox::D](#dropped)|刪除項後由框架調用。|
-|[CDraglistBox::專案從Pt](#itemfrompt)|返回要拖動的項的座標。|
+|[CDragListBox：： BeginDrag](#begindrag)|當拖曳作業開始時由架構呼叫。|
+|[CDragListBox：： CancelDrag](#canceldrag)|當拖曳作業取消時，由架構呼叫。|
+|[CDragListBox：:D ragging](#dragging)|在拖曳作業期間由架構呼叫。|
+|[CDragListBox：:D rawInsert](#drawinsert)|繪製拖曳清單方塊的插入指南。|
+|[CDragListBox：:D ropped](#dropped)|在刪除專案之後，由架構呼叫。|
+|[CDragListBox：： ItemFromPt](#itemfrompt)|傳回所拖曳專案的座標。|
 
 ## <a name="remarks"></a>備註
 
-具有此功能的清單框允許使用者以對它們最有用的任何方式對清單中的專案排序。 預設情況下,清單框會將專案移動到清單中的新位置。 但是,`CDragListBox`可以自定義物件以複製專案,而不是移動它們。
+具有這項功能的清單方塊可讓使用者以最有用的方式來排序清單中的專案。 根據預設，清單方塊會將專案移到清單中的新位置。 不過，您 `CDragListBox` 可以自訂物件來複製專案，而不是移動專案。
 
-與`CDragListBox`類關聯的清單框控件不得具有LBS_SORT或LBS_MULTIPLESELECT樣式。 有關清單框樣式的說明,請參閱[清單框樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)。
+與類別相關聯的清單方塊控制項 `CDragListBox` 不能有 LBS_SORT 或 LBS_MULTIPLESELECT 的樣式。 如需清單方塊樣式的描述，請參閱 [清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)。
 
-要在應用程式的現有對話方塊中使用拖動清單框,請使用對話方塊編輯器向對話方塊樣本添加清單框控制項,然後分配與對話方塊樣本中的清單框控制項對應的成員變數(`Control`類別和變數類型)。 `CDragListBox`
+若要在應用程式的現有對話方塊中使用拖曳清單方塊，請使用對話方塊編輯器將清單方塊控制項新增至對話方塊範本，然後將類別和變數類型 (的成員變數 `Control` `CDragListBox`) 對應至對話方塊範本中的清單方塊控制項。
 
-有關將控制項分配給成員變數的詳細資訊,請參閱[為對話方塊定義成員變數的快捷方式](../../windows/defining-member-variables-for-dialog-controls.md)。
+如需將控制項指派給成員變數的詳細資訊，請參閱 [為對話方塊控制項定義成員變數的快捷方式](../../windows/adding-editing-or-deleting-controls.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層架構
 
@@ -82,9 +82,9 @@ class CDragListBox : public CListBox
 
 **標頭：** afxcmn.h
 
-## <a name="cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::開始拖動
+## <a name="cdraglistboxbegindrag"></a><a name="begindrag"></a> CDragListBox：： BeginDrag
 
-當可能發生可能開始拖動操作的事件(如按下滑鼠左鍵)時,由框架調用。
+當事件發生時，由架構呼叫，這可能會開始拖曳作業，例如按下滑鼠左鍵。
 
 ```
 virtual BOOL BeginDrag(CPoint pt);
@@ -93,19 +93,19 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-包含要拖動的項的座標的[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含所拖曳專案的座標。
 
 ### <a name="return-value"></a>傳回值
 
-如果允許拖動,則不為零,否則為 0。
+如果允許拖曳則為非零，否則為0。
 
 ### <a name="remarks"></a>備註
 
-如果要控制拖動操作開始時發生的情況,請覆蓋此函數。 默認實現捕獲滑鼠並保持拖動模式,直到用戶按一下滑鼠左鍵或右鍵或按 ESC,此時拖動操作將被取消。
+如果您想要控制在拖曳作業開始時所發生的情況，請覆寫這個函式。 預設的執行會捕捉滑鼠並保持在拖曳模式，直到使用者按下滑鼠左鍵或右鍵，或是按下 ESC 鍵，此時拖曳作業才會取消。
 
-## <a name="cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::取消拖動
+## <a name="cdraglistboxcanceldrag"></a><a name="canceldrag"></a> CDragListBox：： CancelDrag
 
-當拖動操作被取消時由框架調用。
+當拖曳作業取消時，由架構呼叫。
 
 ```
 virtual void CancelDrag(CPoint pt);
@@ -114,13 +114,13 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-包含要拖動的項的座標的[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含所拖曳專案的座標。
 
 ### <a name="remarks"></a>備註
 
-重寫此函數以處理清單框控制項的任何特殊處理。
+覆寫此函式可處理您清單方塊控制項的任何特殊處理。
 
-## <a name="cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox:CDraglistBox
+## <a name="cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a> CDragListBox：： CDragListBox
 
 建構 `CDragListBox` 物件。
 
@@ -128,9 +128,9 @@ virtual void CancelDrag(CPoint pt);
 CDragListBox();
 ```
 
-## <a name="cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::D
+## <a name="cdraglistboxdragging"></a><a name="dragging"></a> CDragListBox：:D ragging
 
-在`CDragListBox`物件內拖動清單框項時,由框架調用。
+當清單方塊專案正在拖曳至物件內時由架構呼叫 `CDragListBox` 。
 
 ```
 virtual UINT Dragging(CPoint pt);
@@ -139,25 +139,25 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-包含游標的 x 和 y 螢幕座標的[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含游標的 x 和 y 螢幕座標。
 
 ### <a name="return-value"></a>傳回值
 
-要顯示的游標的資源 ID。 可以使用以下值:
+要顯示之資料指標的資源識別碼。 可能的值如下：
 
-- DL_COPYCURSOR指示將複製該專案。
+- DL_COPYCURSOR 指出將複製專案。
 
-- DL_MOVECURSOR指示將移動該專案。
+- DL_MOVECURSOR 指出將移動專案。
 
-- DL_STOPCURSOR指示當前放置目標不可接受。
+- DL_STOPCURSOR 表示無法接受目前的放置目標。
 
 ### <a name="remarks"></a>備註
 
-默認行為返回DL_MOVECURSOR。 如果要提供其他功能,請重寫此函數。
+預設行為會傳回 DL_MOVECURSOR。 如果您想要提供額外的功能，請覆寫此函數。
 
-## <a name="cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::D原始插入
+## <a name="cdraglistboxdrawinsert"></a><a name="drawinsert"></a> CDragListBox：:D rawInsert
 
-由框架調用,以使用指示的索引在專案之前繪製插入指南。
+由架構呼叫，以在具有指定索引的專案之前繪製插入指南。
 
 ```
 virtual void DrawInsert(int nItem);
@@ -166,15 +166,15 @@ virtual void DrawInsert(int nItem);
 ### <a name="parameters"></a>參數
 
 *nItem*<br/>
-插入點的零索引。
+以零為基底的插入點索引。
 
 ### <a name="remarks"></a>備註
 
-值 - 1 清除插入參考線。 重寫此函數以修改插入參考線的外觀或行為。
+-1 的值會清除插入指南。 覆寫此函數以修改插入指南的外觀或行為。
 
-## <a name="cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::D
+## <a name="cdraglistboxdropped"></a><a name="dropped"></a> CDragListBox：:D ropped
 
-當項在`CDragListBox`物件中刪除時,由框架調用。
+當專案在物件內卸載時，由架構呼叫 `CDragListBox` 。
 
 ```
 virtual void Dropped(
@@ -184,19 +184,19 @@ virtual void Dropped(
 
 ### <a name="parameters"></a>參數
 
-*NSrcIndex*<br/>
-指定刪除字串的零基索引。
+*nSrcIndex*<br/>
+指定已卸載字串以零為起始的索引。
 
 *pt*<br/>
-包含放置網站座標的[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含放置位置的座標。
 
 ### <a name="remarks"></a>備註
 
-預設行為將清單框項目及其資料複製到新位置,然後刪除原始項。 重寫此函數以自訂預設行為,例如啟用要拖動到清單中其他位置的清單框項的副本。
+預設行為會將清單方塊專案和它的資料複製到新的位置，然後刪除原始專案。 覆寫這個函式以自訂預設行為，例如啟用清單方塊專案的複本，以拖曳至清單中的其他位置。
 
-## <a name="cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDraglistBox::專案從Pt
+## <a name="cdraglistboxitemfrompt"></a><a name="itemfrompt"></a> CDragListBox：： ItemFromPt
 
-呼叫此函式以檢索位於*pt*的清單框項目的零基索引。
+呼叫此函式可取得以零為起始的清單方塊專案索引（以 *pt*為依據）。
 
 ```
 int ItemFromPt(
@@ -207,18 +207,18 @@ int ItemFromPt(
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-包含清單框中點座標的[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含清單方塊中某個點的座標。
 
 *bAutoScroll*<br/>
-如果允許滾動,則非零,否則為 0。
+如果允許滾動則為非零，否則為0。
 
 ### <a name="return-value"></a>傳回值
 
-拖動清單框項的零基索引。
+以零為基底的拖曳清單方塊專案索引。
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 樣品 TSTCON](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox 類別](../../mfc/reference/clistbox-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CListBox 類別](../../mfc/reference/clistbox-class.md)

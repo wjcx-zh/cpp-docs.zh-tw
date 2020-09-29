@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3463
 ms.assetid: 153efcc0-085c-4615-84ea-d22942618bdf
-ms.openlocfilehash: e4aa8405d9baac61b8d3addead6ac19bbf6fd3b0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 29b30f5d518b6b6df768693666ea1af1c515c540
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756587"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500473"
 ---
 # <a name="compiler-error-c3463"></a>編譯器錯誤 C3463
 
 'type': 屬性 'implements' 中不允許有類型
 
-已傳遞無效的類型給 [implements](../../windows/implements-cpp.md) 屬性。 比方說，您可以將介面傳遞給 `implements`，但您無法將指標傳遞給介面。
+已傳遞無效的類型給 [implements](../../windows/attributes/implements-cpp.md) 屬性。 比方說，您可以將介面傳遞給 `implements`，但您無法將指標傳遞給介面。
 
 ## <a name="example"></a>範例
 

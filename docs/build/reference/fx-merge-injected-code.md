@@ -12,12 +12,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292298"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500094"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (合併插入的程式碼)
 
@@ -52,7 +52,7 @@ ms.locfileid: "62292298"
 //--- End Injected Code
 ```
 
-[no_injected_text](../../windows/no-injected-text.md) 屬性會內嵌於 .mrg 檔中，因此可直接編譯 .mrg 檔，而不需要重新插入文字。
+[no_injected_text](../../windows/attributes/no-injected-text.md) 屬性會內嵌於 .mrg 檔中，因此可直接編譯 .mrg 檔，而不需要重新插入文字。
 
 請注意，.mrg 原始程式檔是為了表示編譯器所插入的原始程式碼。 .mrg 檔的編譯和執行可能不會與原先的原始程式檔完全一樣。
 
@@ -62,13 +62,13 @@ ms.locfileid: "62292298"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 按一下 [C/C++] **** 資料夾。
 
-1. 按一下 [輸出檔]  屬性頁。
+1. 按一下 [輸出檔] **** 屬性頁。
 
-1. 修改 [展開屬性化來源]  屬性。
+1. 修改 [展開屬性化來源] **** 屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
@@ -76,6 +76,6 @@ ms.locfileid: "62292298"
 
 ## <a name="see-also"></a>另請參閱
 
-[輸出檔 (/F) 選項](output-file-f-options.md)<br/>
+[輸出檔案 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

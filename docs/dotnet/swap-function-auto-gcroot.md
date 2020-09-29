@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-ms.openlocfilehash: 271ecd26136671737a47b7adbaee273a0997102d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 10058eaa049c010c1288d03ed04cb9112fcfb7d6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988458"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498558"
 ---
 # <a name="swap-function-auto_gcroot"></a>swap 函式 (auto_gcroot)
 
-在一個 `auto_gcroot` 和另一個之間交換物件。
+交換一個物件 `auto_gcroot` 與另一個物件。
 
 ## <a name="syntax"></a>語法
 
@@ -66,11 +66,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>需求
 
-**標頭檔**\<msclr \ auto_gcroot. h >
+**標頭檔** \<msclr\auto_gcroot.h>
 
-**命名空間**msclr
+**命名空間** msclr
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [auto_gcroot](../dotnet/auto-gcroot.md)<br/>
-[auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)
+[auto_gcroot::swap](./auto-gcroot-class.md#swap)

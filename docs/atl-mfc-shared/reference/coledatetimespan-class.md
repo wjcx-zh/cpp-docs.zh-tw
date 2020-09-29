@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 746cfdce3265dff7e5b20a5135aa026aca9facdf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5934a456b519d14def14018f966c7bff8206c3c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832096"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500135"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 類別
 
@@ -93,9 +93,9 @@ class COleDateTimeSpan
 
 `COleDateTimeSpan` 搭配其附屬類別 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)使用。 `COleDateTime` 封裝 `DATE` OLE automation 的資料類型。 `COleDateTime` 表示絕對時間值。 所有 `COleDateTime` 計算都包含 `COleDateTimeSpan` 值。 這些類別之間的關聯性，類似于 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 與 [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)之間的關聯性。
 
-如需和類別的詳細資訊 `COleDateTime` `COleDateTimeSpan` ，請參閱文章 [日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
+如需和類別的詳細資訊 `COleDateTime` `COleDateTimeSpan` ，請參閱文章 [日期和時間：自動化支援](../date-and-time.md)。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：** Atlcomtime.h。h
 
@@ -162,7 +162,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 新物件的狀態 `COleDateTimeSpan` 會設定為 [有效]。
 
-如需有關值範圍的詳細資訊 `COleDateTimeSpan` ，請參閱文章 [日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
+如需有關值範圍的詳細資訊 `COleDateTimeSpan` ，請參閱文章 [日期和時間：自動化支援](../date-and-time.md)。
 
 ### <a name="example"></a>範例
 
@@ -403,7 +403,7 @@ enum DateTimeSpanStatus{
 
 如需可能將狀態設為無效之作業的詳細資訊，請參閱 [COleDateTimeSpan：： operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) 和 [COleDateTimeSpan：： operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)。
 
-如需有關值範圍的詳細資訊 `COleDateTimeSpan` ，請參閱文章 [日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
+如需有關值範圍的詳細資訊 `COleDateTimeSpan` ，請參閱文章 [日期和時間：自動化支援](../date-and-time.md)。
 
 ## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a> COleDateTimeSpan：： GetTotalDays
 
@@ -603,7 +603,7 @@ enum DateTimeSpanStatus{
 > [!CAUTION]
 > 此資料成員適用于先進的程式設計情況。 您應該使用內嵌成員函式 [GetStatus](#getstatus) 和 [SetStatus](#setstatus)。 `SetStatus`如需有關明確設定此資料成員的進一步注意事項，請參閱。
 
-如需有關值範圍的詳細資訊 `COleDateTimeSpan` ，請參閱文章 [日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
+如需有關值範圍的詳細資訊 `COleDateTimeSpan` ，請參閱文章 [日期和時間：自動化支援](../date-and-time.md)。
 
 ## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a> COleDateTimeSpan：： operator =
 

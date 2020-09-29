@@ -1,29 +1,29 @@
 ---
-title: UCRT 依字母順序排列的函式參考
+title: UCRT 字母順序函數參考
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340335"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499390"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>UCRT 依字母順序排列的函式參考
+# <a name="ucrt-alphabetical-function-reference"></a>UCRT 字母順序函數參考
 
-通用 C 執行階段 （UCRT，通常只需要 CRT） 程式庫參考文件會依字母順序排列的常式。 若要尋找 CRT 常式，根據功能，請參閱[依類別的通用 C 執行階段常式](../../c-runtime-library/run-time-routines-by-category.md)。
+通用 C 執行時間 (UCRT，通常只有 CRT) 程式庫參考檔會依常式以字母順序排列。 若要根據功能尋找 CRT 常式，請參閱 [依類別分類的通用 C 執行時間常式](../../c-runtime-library/run-time-routines-by-category.md)。
 
 ## <a name="a"></a>A
 
 [abort](abort.md)
 
-[abs](abs-labs-llabs-abs64.md)
+[Abs](abs-labs-llabs-abs64.md)
 
 [_abs64](abs-labs-llabs-abs64.md)
 
-[access](access-crt.md)
+[訪問](access-crt.md)
 
 [_access](access-waccess.md)
 
@@ -77,7 +77,7 @@ ms.locfileid: "62340335"
 
 [_amsg_exit](amsg-exit.md)
 
-[ 和 ](and.md)
+[and](and.md)
 
 [and_eq](and-eq.md)
 
@@ -97,7 +97,7 @@ ms.locfileid: "62340335"
 
 [asinl](asin-asinf-asinl.md)
 
-[assert](assert-macro-assert-wassert.md)
+[斷言](assert-macro-assert-wassert.md)
 
 [_assert](assert-macro-assert-wassert.md)
 
@@ -191,7 +191,7 @@ ms.locfileid: "62340335"
 
 [_cabs](cabs.md)
 
-[cabs](cabs-cabsf-cabsl.md)
+[計程車](cabs-cabsf-cabsl.md)
 
 [cabsf](cabs-cabsf-cabsl.md)
 
@@ -319,9 +319,9 @@ ms.locfileid: "62340335"
 
 [_clearfp](clear87-clearfp.md)
 
-[clock](clock.md)
+[時鐘](clock.md)
 
-[clog](clog-clogf-clogl.md)
+[堵塞](clog-clogf-clogl.md)
 
 [clog10](clog10-clog10f-clog10l.md)
 
@@ -369,7 +369,7 @@ ms.locfileid: "62340335"
 
 [_copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[cos](cos-cosf-cosl.md)
+[因為](cos-cosf-cosl.md)
 
 [cosf](cos-cosf-cosl.md)
 
@@ -571,7 +571,7 @@ ms.locfileid: "62340335"
 
 [_dup](dup-dup2.md)
 
-[dup](posix-dup-dup2.md)
+[多重](posix-dup-dup2.md)
 
 [_dup2](dup-dup2.md)
 
@@ -593,7 +593,7 @@ ms.locfileid: "62340335"
 
 [_endthreadex](endthread-endthreadex.md)
 
-[eof](posix-eof.md)
+[Eof](posix-eof.md)
 
 [_eof](eof.md)
 
@@ -787,7 +787,7 @@ ms.locfileid: "62340335"
 
 [_finitef](finite-finitef.md)
 
-[floor](floor-floorf-floorl.md)
+[地板](floor-floorf-floorl.md)
 
 [floorf](floor-floorf-floorl.md)
 
@@ -1463,7 +1463,7 @@ ms.locfileid: "62340335"
 
 [_jn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[jn](j0-j1-jn.md)
+[約](j0-j1-jn.md)
 
 ## <a name="k"></a>K
 
@@ -1477,7 +1477,7 @@ ms.locfileid: "62340335"
 
 [ldexp](ldexp.md)
 
-[ldiv](ldiv-lldiv.md)
+[ldiv](./div.md)
 
 [_lfind](lfind.md)
 
@@ -1493,7 +1493,7 @@ ms.locfileid: "62340335"
 
 [llabs](abs-labs-llabs-abs64.md)
 
-[lldiv](ldiv-lldiv.md)
+[lldiv](./div.md)
 
 [llrint](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
 
@@ -1523,11 +1523,11 @@ ms.locfileid: "62340335"
 
 [_lock_file](lock-file.md)
 
-[locking](posix-locking.md)
+[鎖定](posix-locking.md)
 
 [_locking](locking.md)
 
-[log](log-logf-log10-log10f.md)
+[日誌](log-logf-log10-log10f.md)
 
 [log10](log-logf-log10-log10f.md)
 
@@ -1967,7 +1967,7 @@ ms.locfileid: "62340335"
 
 ## <a name="n"></a>N
 
-[nan](nan-nanf-nanl.md)
+[南](nan-nanf-nanl.md)
 
 [nanf](nan-nanf-nanl.md)
 
@@ -2019,7 +2019,7 @@ ms.locfileid: "62340335"
 
 [_open_osfhandle](open-osfhandle.md)
 
-[或](or.md)
+[or](or.md)
 
 [or_eq](or-eq.md)
 
@@ -2033,7 +2033,7 @@ ms.locfileid: "62340335"
 
 [_popen](popen-wpopen.md)
 
-[pow](pow-powf-powl.md)
+[戰俘](pow-powf-powl.md)
 
 [powf](pow-powf-powl.md)
 
@@ -2113,7 +2113,7 @@ ms.locfileid: "62340335"
 
 [rand_s](rand-s.md)
 
-[read](posix-read.md)
+[讀](posix-read.md)
 
 [_read](read.md)
 
@@ -2125,7 +2125,7 @@ ms.locfileid: "62340335"
 
 [_recalloc_dbg](recalloc-dbg.md)
 
-[remainder](remainder-remainderf-remainderl.md)
+[剩餘](remainder-remainderf-remainderl.md)
 
 [remainderf](remainder-remainderf-remainderl.md)
 
@@ -2143,7 +2143,7 @@ ms.locfileid: "62340335"
 
 [_resetstkoflw](resetstkoflw.md)
 
-[rewind](rewind.md)
+[倒](rewind.md)
 
 [rint](rint-rintf-rintl.md)
 
@@ -2167,7 +2167,7 @@ ms.locfileid: "62340335"
 
 [_rotr64](rotl-rotl64-rotr-rotr64.md)
 
-[round](round-roundf-roundl.md)
+[輪](round-roundf-roundl.md)
 
 [roundf](round-roundf-roundl.md)
 
@@ -2295,7 +2295,7 @@ ms.locfileid: "62340335"
 
 [signbit](signbit.md)
 
-[sin](sin-sinf-sinl.md)
+[罪](sin-sinf-sinl.md)
 
 [sinf](sin-sinf-sinl.md)
 
@@ -2645,7 +2645,7 @@ ms.locfileid: "62340335"
 
 [_strxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
 
-[swab](posix-swab.md)
+[拭 子](posix-swab.md)
 
 [_swab](swab.md)
 
@@ -2671,11 +2671,11 @@ ms.locfileid: "62340335"
 
 [_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
 
-[system](system-wsystem.md)
+[系統](system-wsystem.md)
 
 ## <a name="t"></a>T
 
-[tan](tan-tanf-tanl.md)
+[潭](tan-tanf-tanl.md)
 
 [tanf](tan-tanf-tanl.md)
 
@@ -2699,7 +2699,7 @@ ms.locfileid: "62340335"
 
 [_tempnam_dbg](tempnam-dbg-wtempnam-dbg.md)
 
-[terminate](terminate-crt.md)
+[終止](terminate-crt.md)
 
 [tgamma](tgamma-tgammaf-tgammal.md)
 
@@ -2791,7 +2791,7 @@ ms.locfileid: "62340335"
 
 [__uncaught_exception](uncaught-exception.md)
 
-[unexpected](unexpected-crt.md)
+[意外](unexpected-crt.md)
 
 [ungetc](ungetc-ungetwc.md)
 
@@ -3385,7 +3385,7 @@ ms.locfileid: "62340335"
 
 [_write](write.md)
 
-[write](posix-write.md)
+[寫](posix-write.md)
 
 [_wrmdir](rmdir-wrmdir.md)
 
@@ -3507,4 +3507,4 @@ ms.locfileid: "62340335"
 
 ## <a name="see-also"></a>另請參閱
 
-[C 執行階段程式庫參考](../../c-runtime-library/c-run-time-library-reference.md)<br/>
+[C 執行時間程式庫參考](../../c-runtime-library/c-run-time-library-reference.md)<br/>

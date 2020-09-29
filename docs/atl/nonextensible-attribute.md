@@ -5,18 +5,18 @@ helpviewer_keywords:
 - nonextensible attribute
 - dual interfaces, nonextensible attribute
 ms.assetid: 02a4a18b-ffd3-4d53-8fd1-feb1c05ad5ac
-ms.openlocfilehash: cc57acb8bd7bc3e32c764606da651f57316ceabf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fda2a0d43144b6e9832e061e7198b3f3e65f8b86
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250099"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500106"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible 屬性
 
-如果將不在執行階段擴充的雙重介面 (也就是您將不會提供方法或屬性，透過`IDispatch::Invoke`不是可透過 vtable)，您應該套用**nonextensible**屬性至您的介面定義。 此屬性會提供可用來啟用完整的程式碼在編譯時期的驗證的用戶端語言 （例如 Visual Basic) 的資訊。 如果未提供這個屬性，bug 可能會維持在用戶端程式碼中隱藏執行階段。
+如果在執行時間不會延伸雙重介面 (也就是，您不會透過 `IDispatch::Invoke` vtable) 提供無法使用的方法或屬性，您應該將 **nonextensible** 屬性套用至您的介面定義。 這個屬性會將資訊提供給用戶端語言 (例如，可用來在編譯時期啟用完整程式碼驗證的 Visual Basic) 。 如果未提供此屬性，在執行時間之前，用戶端程式代碼中的 bug 可能仍會隱藏。
 
-如需詳細資訊**nonextensible**屬性和範例，請參閱[nonextensible](../windows/nonextensible.md)。
+如需 **nonextensible** 屬性和範例的詳細資訊，請參閱 [nonextensible](../windows/attributes/nonextensible.md)。
 
 ## <a name="see-also"></a>另請參閱
 

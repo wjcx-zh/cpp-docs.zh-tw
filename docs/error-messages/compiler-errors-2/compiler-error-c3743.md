@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-ms.openlocfilehash: c0e2082dc87c6236aa11dd3094d056b0024dfc2f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b4bb198ae883e53e7947ce7f123bb0d3f092aaf3
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752466"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500392"
 ---
 # <a name="compiler-error-c3743"></a>編譯器錯誤 C3743
 
-當 event_receiver 的 ' layout_dependent ' 參數為 true 時，只能對整個介面進行攔截/解除掛接
+只有當 event_receiver 的 ' layout_dependent ' 參數為 true 時，才能攔截/解除對整個介面
 
-[__Unhook](../../cpp/unhook.md)函式會根據傳遞給[event_receiver](../../windows/event-receiver.md)類別中之 `layout_dependent` 參數的值，而有所不同的參數數目。
+[__Unhook](../../cpp/unhook.md)函式會根據傳遞給 `layout_dependent` [event_receiver](../../windows/attributes/event-receiver.md)類別中參數的值，而有不同的參數數目。
 
 下列範例會產生 C3743：
 

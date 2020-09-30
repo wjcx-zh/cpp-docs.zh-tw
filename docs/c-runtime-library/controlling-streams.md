@@ -1,6 +1,8 @@
 ---
 title: 控制資料流
+description: 概述如何在 Microsoft C 執行時間程式庫中使用資料流程。
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Controlling Streams
 helpviewer_keywords:
@@ -8,12 +10,12 @@ helpviewer_keywords:
 - controlling streams
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
-ms.openlocfilehash: 85c7e1b22519287fbd03d89487d6639f197a8b63
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0caa9eca7c960acbb581358c1a92afcc6a8af066
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743321"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589714"
 ---
 # <a name="controlling-streams"></a>控制資料流
 
@@ -39,4 +41,4 @@ ms.locfileid: "57743321"
 
 ## <a name="see-also"></a>另請參閱
 
-[檔案和資料流](../c-runtime-library/files-and-streams.md)
+[檔案和資料流程](../c-runtime-library/files-and-streams.md)

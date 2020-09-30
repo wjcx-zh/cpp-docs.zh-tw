@@ -1,5 +1,7 @@
 ---
 title: 使用泛型文字對應
+description: 介紹 Microsoft 特定的資料類型、常式和其他物件在 C 執行時間中的對應。
+ms.topic: conceptual
 ms.date: 11/04/2016
 f1_keywords:
 - _UNICODE
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea3b1eef413a0d9f52e81795c04424d533b83504
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221870"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590104"
 ---
 # <a name="using-generic-text-mappings"></a>使用泛型文字對應
 
@@ -50,7 +52,7 @@ ms.locfileid: "87221870"
 
 例如，若已在您的程式中定義 `MBCS`，則在 TCHAR.H 中定義的泛型文字函式 `_tcsrev`會對應到 `mbsrev`；或者若已定義 `_UNICODE`，則會對應到 `_wcsrev`。 若兩者皆否，則 `_tcsrev` 會對應到 `strrev`。
 
-泛型文字資料類型 `_TCHAR` ，也會在 TCHAR 中定義。H，如果已定義，則會對應至類型，如果已定義，則對應至類型， **`char`** `_MBCS` **`wchar_t`** `_UNICODE` **`char`** 如果未定義任何常數，則為類型。 已在 TCHAR.H 中提供其他資料類型對應以方便您進行程式開發，但是 `_TCHAR` 是最實用的類型。
+泛型文字資料類型 `_TCHAR` ，也會在 TCHAR 中定義。H、如果已定義，則對應至類型，如果已定義，則為類型，如果未 **`char`** `_MBCS` **`wchar_t`** `_UNICODE` 定義任何常數，則為類型 **`char`** 。 已在 TCHAR.H 中提供其他資料類型對應以方便您進行程式開發，但是 `_TCHAR` 是最實用的類型。
 
 ### <a name="generic-text-data-type-mappings"></a>泛型文字資料類型對應
 

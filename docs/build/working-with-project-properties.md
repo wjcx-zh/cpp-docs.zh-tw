@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 17b54311670f78cda78403c273cfbf57d43e84da
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3ee6b21cc1bcb8e33bc76d2efab58808bfc0aa2b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042182"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589870"
 ---
 # <a name="set-compiler-and-build-properties"></a>Set compiler and build properties (設定編譯器及組建屬性)
 
@@ -117,7 +117,7 @@ v:<br/>
 
 ## <a name="set-environment-variables-for-a-build"></a>設定組建的環境變數
 
-MSVC 編譯器 ( # A0) 會辨識特定的環境變數，特別是 LIB、LIBPATH、PATH 和 INCLUDE。 當您使用 IDE 建立時，[ [VC + + 目錄](reference/vcpp-directories-property-page.md) ] 屬性頁中設定的屬性會用來設定這些環境變數。 如果已經設定 LIB、LIBPATH 和 INCLUDE 值 (例如，透過開發人員命令提示字元)，這些值會取代為對應 MSBuild 屬性的值。 組建接著會在 PATH 之前加上 [VC++ 目錄] 可執行檔目錄屬性的值。 您可以設定使用者定義的環境變數，方法是建立使用者定義宏，然後核取 [ **將這個宏設定為組建環境中的環境變數**] 方塊。
+MSVC 編譯器 ( # A0) 會辨識特定的環境變數，特別是 LIB、LIBPATH、PATH 和 INCLUDE。 當您使用 IDE 建立時，[ [VC + + 目錄](reference/vcpp-directories-property-page.md) ] 屬性頁中設定的屬性會用來設定這些環境變數。 如果已經設定 LIB、LIBPATH 和 INCLUDE 值 (例如，透過開發人員命令提示字元)，這些值會取代為對應 MSBuild 屬性的值。 組建接著會在 PATH 之前加上 [VC++ 目錄] 可執行檔目錄屬性的值。 您可以藉由建立使用者自訂宏，然後核取 [ **將這個宏設定為組建環境中的環境變數**] 核取方塊，來設定使用者定義的環境變數。
 
 ## <a name="set-environment-variables-for-a-debugging-session"></a>設定偵錯工具會話的環境變數
 

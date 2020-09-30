@@ -1,7 +1,8 @@
 ---
 title: CRT 程式庫功能
-description: 包含 Microsoft C 執行時間程式庫的檔案，以及其相關聯的編譯器選項和預處理器指示詞。
+description: 包含 Microsoft C 執行時間程式庫的檔案清單，以及其相關聯的編譯器選項和預處理器指示詞。
 ms.date: 09/03/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 2f46577ba81c57c2050f0cae4ae2af73152ba2a4
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 0e0d34c1121f0bf4e2fdfabc521e0365084761eb
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609103"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589779"
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
 

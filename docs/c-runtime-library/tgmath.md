@@ -1,17 +1,18 @@
 ---
-title: 類型-泛型數學
+title: 泛型數學
 description: 描述 <>tgmath.h> 中的宏>，可讓您更輕鬆地根據引數類型，撰寫呼叫正確數學函數的 C 程式碼。
+ms.topic: conceptual
 ms.date: 9/3/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 8994edcaa05247a16d90b47bca8ec26fca27cda7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 98c786d91963973ad9384cea2fe6563d1e3174ac
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557609"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590221"
 ---
-# <a name="type-generic-math"></a>類型-泛型數學
+# <a name="type-generic-math"></a>泛型數學
 
 針對 ISO C Standard 11 (C11) 和更新版本， \<tgmath.h> 除了包含和以外，標頭 \<math.h> 也 \<complex.h> 提供可根據參數類型叫用對應數學函數的宏。
 
@@ -88,7 +89,7 @@ C 執行時間程式庫數學函式是實作為複雜的變化。 根據引數�
 `cimag` | - | - | - | [cimagf](reference/cimag-cimagf-cimagl.md) | [cimag](reference/cimag-cimagf-cimagl.md) | [cimagl](reference/cimag-cimagf-cimagl.md) |
 `cproj` | - | - | - | [cprojf](reference/cproj-cprojf-cprojl.md) | [cproj](reference/cproj-cprojf-cprojl.md) | [cprojl](reference/cproj-cprojf-cprojl.md) |
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 [std：需要 c + + 11](../build/reference/std-specify-language-standard-version.md) 或更新版本。
 

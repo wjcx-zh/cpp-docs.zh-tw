@@ -1,15 +1,16 @@
 ---
 title: CRT 中的全域狀態
-description: 描述通用 C 執行時間中共用全域狀態的處理方式。
+description: 描述如何在 Microsoft 通用 C 執行時間中處理共用的全域狀態。
+ms.topic: conceptual
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: d1c787147ea3df36ce120837ef5b2c68b1bf58b1
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 60532fbdb905bd8ea78b4ce705ec8ecc3e374d9d
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554665"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589727"
 ---
 # <a name="global-state-in-the-crt"></a>CRT 中的全域狀態
 

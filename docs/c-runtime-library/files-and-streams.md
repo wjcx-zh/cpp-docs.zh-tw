@@ -1,16 +1,18 @@
 ---
 title: 檔案和資料流
+description: Microsoft C 執行時間程式庫中的檔案和資料流程總覽。
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-ms.openlocfilehash: ea11ea76ade8a68c2d8a92e08d3652035c996d3d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39133cfdb4784c42561a159d6d176bcbd23644af
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750789"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589961"
 ---
 # <a name="files-and-streams"></a>檔案和資料流
 
@@ -26,7 +28,7 @@ ms.locfileid: "57750789"
 
 針對檔案執行眾多作業之前，必須先開啟檔案。 開啟檔案會將檔案與資料流產生關連。資料流是標準 C 程式庫內的資料結構，可以掩蓋各種檔案之間的許多差異。 程式庫會在類型 FILE 的物件中維護每個資料流的狀態。
 
-目標環境會在程式啟動前開啟三個檔案。 您可以使用兩個引數來呼叫程式庫函式 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)，以開啟檔案。 (`fopen` 函式已淘汰，請改用 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md))。第一個引數是檔案名稱。 第二個引數是指定下列事項的 C 字串：
+目標環境會在程式啟動前開啟三個檔案。 您可以使用兩個引數來呼叫程式庫函式 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)，以開啟檔案。  (函式 `fopen` 已被取代，請改用 [fopen_s _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) 。 ) 第一個引數是檔案名。 第二個引數是指定下列事項的 C 字串：
 
 - 是否要從檔案讀取資料，或要將資料寫入檔案，或是兩者皆要。
 
@@ -42,7 +44,7 @@ ms.locfileid: "57750789"
 
 ## <a name="see-also"></a>另請參閱
 
-[文字和二進位資料流](../c-runtime-library/text-and-binary-streams.md)<br/>
-[位元組和寬資料流](../c-runtime-library/byte-and-wide-streams.md)<br/>
-[控制資料流](../c-runtime-library/controlling-streams.md)<br/>
-[資料流狀態](../c-runtime-library/stream-states.md)
+[文字和二進位資料流程](../c-runtime-library/text-and-binary-streams.md)<br/>
+[位元組和寬資料流程](../c-runtime-library/byte-and-wide-streams.md)<br/>
+[控制資料流程](../c-runtime-library/controlling-streams.md)<br/>
+[資料流程狀態](../c-runtime-library/stream-states.md)

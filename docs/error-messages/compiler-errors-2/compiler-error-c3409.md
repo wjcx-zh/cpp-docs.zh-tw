@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 360fedc6cadf275704a790c257c42ac8bde7873d
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: d3800998ded1758ab1de92af689d9d4613c2c61e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742056"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502330"
 ---
 # <a name="compiler-error-c3409"></a>編譯器錯誤 C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "90742056"
 
 ## <a name="remarks"></a>備註
 
-編譯器將方括弧解釋為 [屬性](../../windows/attributes-alphabetical-reference.md) 區塊，但找不到任何屬性。
+編譯器將方括弧解釋為 [屬性](../../windows/attributes/attributes-alphabetical-reference.md) 區塊，但找不到任何屬性。
 
 當您使用方括弧作為 lambda 運算式定義的一部分時，編譯器可能會產生此錯誤。 當編譯器無法判斷方括弧是否為 lambda 運算式或屬性區塊定義的一部分時，就會發生這個錯誤。 如需 lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
 
@@ -67,6 +67,6 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[屬性](../../windows/attributes-alphabetical-reference.md)<br/>
+[屬性](../../windows/attributes/attributes-alphabetical-reference.md)<br/>
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)

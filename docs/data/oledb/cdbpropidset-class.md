@@ -31,24 +31,24 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838291"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502506"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 類別
 
-繼承自 `DBPROPIDSET` 結構，並加入可初始化索引鍵欄位以及 [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) 存取方法的函式。
+繼承自 `DBPROPIDSET` 結構，並加入可初始化索引鍵欄位以及 [AddPropertyID](#addpropertyid) 存取方法的函式。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CDBPropIDSet : public tagDBPROPIDSET
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
 
 ### <a name="remarks"></a>備註
 
-這個 [欄位也可以](../../data/oledb/cdbpropidset-cdbpropidset.md) 由函式設定。 如果您為這個類別使用預設建構函式，則呼叫此函式。
+這個 [欄位也可以](#cdbpropidset) 由函式設定。 如果您為這個類別使用預設建構函式，則呼叫此函式。
 
 ## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet：： operator =
 

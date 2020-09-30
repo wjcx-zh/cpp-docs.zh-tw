@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211454"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500660"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>未使用精靈建立消費者
 
@@ -17,7 +17,7 @@ ms.locfileid: "80211454"
 
 若要在不使用 **ATL OLE DB 消費者精靈**的情況下新增 OLE DB 消費者支援：
 
-- 在您的*pch .h*檔案中，附加下列 `#include` 語句：
+- 在您的 *pch .h* 檔案中，附加下列 `#include` 語句：
 
     ```cpp
     #include <atlbase.h>
@@ -46,7 +46,7 @@ ms.locfileid: "80211454"
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- 呼叫 [CDataSource::Open](../../data/oledb/cdatasource-open.md) 或其中一個變化。
+- 呼叫 [CDataSource::Open](./cdatasource-class.md#open) 或其中一個變化。
 
 - 開啟資料來源的連線、開啟工作階段，以及開啟並初始化資料列集 (如果是命令，也執行它)：
 
@@ -56,7 +56,7 @@ ms.locfileid: "80211454"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- 選擇性地使用 `CDBPropSet::AddProperty` 設定資料列集屬性，並將其當作參數，傳遞到 `rs.Open`。 如需如何完成此操作的範例，請參閱`GetRowsetProperties`消費者精靈產生的方法[中的 ](../../data/oledb/consumer-wizard-generated-methods.md)。
+- 選擇性地使用 `CDBPropSet::AddProperty` 設定資料列集屬性，並將其當作參數，傳遞到 `rs.Open`。 如需如何完成此操作的範例，請參閱[消費者精靈產生的方法](../../data/oledb/consumer-wizard-generated-methods.md)中的 `GetRowsetProperties`。
 
 - 您現在可以使用資料列集擷取/操作資料。
 
@@ -68,7 +68,7 @@ ms.locfileid: "80211454"
     ds.Close();
     ```
 
-   如果您要使用命令，您可能想要在 `ReleaseCommand` 之後呼叫 `Close`。 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的程式碼範例會示範如何呼叫 `Close` 和 `ReleaseCommand`。
+   如果您要使用命令，您可能想要在 `Close` 之後呼叫 `ReleaseCommand`。 [CCommand::Close](./ccommand-class.md#close) 中的程式碼範例會示範如何呼叫 `Close` 和 `ReleaseCommand`。
 
 - 呼叫 `CoUnInitialize` 以解除初始化 COM。 這是在主要程式碼中呼叫的。
 
@@ -78,4 +78,4 @@ ms.locfileid: "80211454"
 
 ## <a name="see-also"></a>另請參閱
 
-[建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer.md)
+[建立 OLE DB 取用者](../../data/oledb/creating-an-ole-db-consumer.md)

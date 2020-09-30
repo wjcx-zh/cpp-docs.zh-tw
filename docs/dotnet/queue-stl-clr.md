@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d5c1d30704838cdb69516d68d328c90a094a08e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87210926"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502380"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
-此樣板類別所描述的物件可控制具有先進先出存取權的變動長度元素序列。 您可以使用容器介面卡 `queue` ，以佇列的形式來管理基礎容器。
+此範本類別所描述的物件，可控制具有先進先出存取權的不同長度專案序列。 您可以使用容器介面卡 `queue` ，以佇列的形式管理基礎容器。
 
-在下面的描述中，與 `GValue` *值*相同，除非後者是 ref 類型，在此情況下為 `Value^` 。 同樣地，與 `GContainer` *容器*相同，除非後者是 ref 類型，在此情況下為 `Container^` 。
+在下列描述中，與 `GValue` *值* 相同，除非後者是 ref 型別，在這種情況下就是 `Value^` 。 同樣地，與 `GContainer` *容器* 相同，除非後者是 ref 類型，在此情況下為 `Container^` 。
 
 ## <a name="syntax"></a>語法
 
@@ -84,7 +84,7 @@ template<typename Value,
 
 ### <a name="parameters"></a>參數
 
-*ReplTest1*<br/>
+*值*<br/>
 受控制序列中項目的類型。
 
 *容器*<br/>
@@ -98,18 +98,18 @@ template<typename Value,
 
 ## <a name="declarations"></a>宣告
 
-|類型定義|說明|
+|類型定義|描述|
 |---------------------|-----------------|
 |[queue::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
 |[queue::container_type (STL/CLR)](#container_type)|基礎容器的類型。|
 |[queue::difference_type (STL/CLR)](#difference_type)|兩個項目之間帶正負號距離的類型。|
-|[queue::generic_container (STL/CLR)](#generic_container)|容器介面卡的泛型介面類別型。|
-|[queue::generic_value (STL/CLR)](#generic_value)|適用于容器介面卡之泛型介面的元素類型。|
+|[queue::generic_container (STL/CLR)](#generic_container)|容器介面卡的泛型介面型別。|
+|[queue::generic_value (STL/CLR)](#generic_value)|容器介面卡泛型介面的元素類型。|
 |[queue::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[queue::size_type (STL/CLR)](#size_type)|兩個項目之間帶正負號距離的類型。|
 |[queue::value_type (STL/CLR)](#value_type)|項目的類型。|
 
-|成員函式|說明|
+|成員函式|描述|
 |---------------------|-----------------|
 |[queue::assign (STL/CLR)](#assign)|取代所有項目。|
 |[queue::back (STL/CLR)](#back)|存取最後一個項目。|
@@ -122,35 +122,35 @@ template<typename Value,
 |[queue::size (STL/CLR)](#size)|計算元素的數目。|
 |[queue::to_array (STL/CLR)](#to_array)|將受控制序列複製到新的陣列。|
 
-|屬性|說明|
+|屬性|描述|
 |--------------|-----------------|
 |[queue::back_item (STL/CLR)](#back_item)|存取最後一個項目。|
 |[queue::front_item (STL/CLR)](#front_item)|存取第一個項目。|
 
-|運算子|說明|
+|運算子|描述|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|取代受控制的序列。|
-|[operator！ = （queue）（STL/CLR）](#op_neq)|判斷物件是否 `queue` 不等於另一個 `queue` 物件。|
-|[運算子< （queue）（STL/CLR）](#op_lt)|判斷 `queue` 物件是否小於另一個 `queue` 物件。|
-|[運算子<= （queue）（STL/CLR）](#op_lteq)|判斷 `queue` 物件是否小於或等於另一個 `queue` 物件。|
-|[operator = = （queue）（STL/CLR）](#op_eq)|判斷 `queue` 物件是否等於另一個 `queue` 物件。|
-|[運算子> （queue）（STL/CLR）](#op_gt)|判斷 `queue` 物件是否大於另一個 `queue` 物件。|
+|[operator！ = (佇列)  (STL/CLR) ](#op_neq)|判斷物件是否 `queue` 不等於另一個 `queue` 物件。|
+|[operator< (佇列)  (STL/CLR) ](#op_lt)|判斷 `queue` 物件是否小於另一個 `queue` 物件。|
+|[operator<= (佇列)  (STL/CLR) ](#op_lteq)|判斷 `queue` 物件是否小於或等於另一個 `queue` 物件。|
+|[operator = = (佇列)  (STL/CLR) ](#op_eq)|判斷 `queue` 物件是否等於另一個 `queue` 物件。|
+|[operator> (佇列)  (STL/CLR) ](#op_gt)|判斷 `queue` 物件是否大於另一個 `queue` 物件。|
 |[operator>= (queue) (STL/CLR)](#op_gteq)|判斷 `queue` 物件是否大於或等於另一個 `queue` 物件。|
 
 ## <a name="interfaces"></a>介面
 
-|介面|說明|
+|介面|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|複製物件。|
 |IQueue\<Value, Container>|維護一般容器介面卡。|
 
 ## <a name="remarks"></a>備註
 
-物件會透過類型的基礎容器配置和釋放其所控制之序列的儲存體，以 `Container` 儲存 `Value` 元素並隨選成長。 物件會限制只有推送第一個專案並取出最後一個專案、執行先進先出佇列（也稱為 FIFO 佇列，或只是佇列）的存取權。
+物件會根據類型的基礎容器來配置和釋出其所控制之序列的儲存體，以 `Container` 儲存專案 `Value` 並依需求成長。 物件會限制只推送第一個專案並取出最後一個專案的存取權，以執行先進先出佇列 (也稱為 FIFO 佇列，或只是佇列) 。
 
 ## <a name="members"></a>成員
 
-## <a name="queueassign-stlclr"></a><a name="assign"></a>queue：： assign （STL/CLR）
+## <a name="queueassign-stlclr"></a><a name="assign"></a> queue：： assign (STL/CLR) 
 
 取代所有項目。
 
@@ -162,12 +162,12 @@ void assign(queue<Value, Container>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要插入的容器介面卡。
 
 ### <a name="remarks"></a>備註
 
-成員函式會指派 `right.get_container()` 給基礎容器。 您可以使用它來變更佇列的完整內容。
+成員函式會指派 `right.get_container()` 給基礎容器。 您可以使用它來變更佇列的整個內容。
 
 ### <a name="example"></a>範例
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="queueback-stlclr"></a><a name="back"></a>queue：： back （STL/CLR）
+## <a name="queueback-stlclr"></a><a name="back"></a> queue：： back (STL/CLR) 
 
 存取最後一個項目。
 
@@ -216,7 +216,7 @@ reference back();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回受控制序列之最後一個元素的參考，該專案必須為非空白。 當您知道它是否存在時，您可以使用它來存取最後一個元素。
+成員函式會傳回受控制序列之最後一個元素的參考，其必須為非空白。 當您知道最後一個元素存在時，您可以使用它來存取最後一個專案。
 
 ### <a name="example"></a>範例
 
@@ -256,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="queueback_item-stlclr"></a><a name="back_item"></a>queue：： back_item （STL/CLR）
+## <a name="queueback_item-stlclr"></a><a name="back_item"></a> queue：： back_item (STL/CLR) 
 
 存取最後一個項目。
 
@@ -268,7 +268,7 @@ property value_type back_item;
 
 ### <a name="remarks"></a>備註
 
-屬性會存取受控制序列中的最後一個專案，其必須為非空白。 當您知道最後一個元素存在時，就可以使用它來讀取或寫入它。
+屬性會存取受控制序列的最後一個專案，其必須為非空白。 當您知道最後一個元素存在時，您可以使用它來讀取或寫入最後一個專案。
 
 ### <a name="example"></a>範例
 
@@ -308,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a>queue：： const_reference （STL/CLR）
+## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a> queue：： const_reference (STL/CLR) 
 
 項目的常數參考類型。
 
@@ -320,7 +320,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述專案的常數參考。
+型別描述元素的常數參考。
 
 ### <a name="example"></a>範例
 
@@ -352,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a>queue：： container_type （STL/CLR）
+## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a> queue：： container_type (STL/CLR) 
 
 基礎容器的類型。
 
@@ -394,9 +394,9 @@ int main()
 a b c
 ```
 
-## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a>queue：:d ifference_type （STL/CLR）
+## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a> queue：:d ifference_type (STL/CLR) 
 
-兩個元素之間帶正負號距離的類型。
+兩個元素之間的帶正負號距離類型。
 
 ### <a name="syntax"></a>語法
 
@@ -406,7 +406,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述可能為負的元素計數。
+此類型描述可能的負元素計數。
 
 ### <a name="example"></a>範例
 
@@ -452,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="queueempty-stlclr"></a><a name="empty"></a>queue：： empty （STL/CLR）
+## <a name="queueempty-stlclr"></a><a name="empty"></a> queue：： empty (STL/CLR) 
 
 測試項目是否不存在。
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[queue：： size （STL/CLR）](../dotnet/queue-size-stl-clr.md) `() == 0` 。 您可以使用它來測試佇列是否為空的。
+成員函式會對空的受控制序列傳回 true。 它相當於[queue：： size (STL/CLR) ](#size) `() == 0` 。 您可以使用它來測試佇列是否為空的。
 
 ### <a name="example"></a>範例
 
@@ -506,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="queuefront-stlclr"></a><a name="front"></a>queue：： front （STL/CLR）
+## <a name="queuefront-stlclr"></a><a name="front"></a> queue：： front (STL/CLR) 
 
 存取第一個項目。
 
@@ -518,7 +518,7 @@ reference front();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回受控制序列中第一個專案的參考，該專案必須為非空白。 當您知道它是否存在時，您可以使用它來存取第一個元素。
+成員函式會傳回受控制序列的第一個元素的參考，而該專案必須為非空白。 當您知道第一個元素存在時，您可以使用它來存取第一個專案。
 
 ### <a name="example"></a>範例
 
@@ -558,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="queuefront_item-stlclr"></a><a name="front_item"></a>queue：： front_item （STL/CLR）
+## <a name="queuefront_item-stlclr"></a><a name="front_item"></a> queue：： front_item (STL/CLR) 
 
 存取第一個項目。
 
@@ -570,7 +570,7 @@ property value_type front_item;
 
 ### <a name="remarks"></a>備註
 
-屬性會存取受控制序列的第一個元素，其必須為非空白。 當您知道它是否存在時，您可以使用它來讀取或寫入第一個元素。
+屬性會存取受控制序列的第一個專案，其必須為非空白。 當您知道第一個元素存在時，您可以使用它來讀取或寫入第一個專案。
 
 ### <a name="example"></a>範例
 
@@ -610,9 +610,9 @@ front_item = a
 x b c
 ```
 
-## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a>queue：： generic_container （STL/CLR）
+## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a> queue：： generic_container (STL/CLR) 
 
-容器介面卡的泛型介面類別型。
+容器介面卡的泛型介面型別。
 
 ### <a name="syntax"></a>語法
 
@@ -673,9 +673,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a>queue：： generic_value （STL/CLR）
+## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a> queue：： generic_value (STL/CLR) 
 
-要與容器的泛型介面搭配使用之元素的類型。
+要搭配容器的泛型介面使用的元素類型。
 
 ### <a name="syntax"></a>語法
 
@@ -685,7 +685,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型的物件 `GValue` ，其描述要與這個樣板容器類別的泛型介面搭配使用的預存元素值。 （ `GValue` `value_type` `value_type^` 如果是 ref 型別，則為或 `value_type` ）。
+型別描述型別的物件，此物件 `GValue` 描述與這個樣板容器類別的泛型介面搭配使用的預存專案值。  (`GValue` 是， `value_type` 或者 `value_type^` `value_type` 是 ref 類型。 ) 
 
 ### <a name="example"></a>範例
 
@@ -731,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="queueget_container-stlclr"></a><a name="get_container"></a>queue：： get_container （STL/CLR）
+## <a name="queueget_container-stlclr"></a><a name="get_container"></a> queue：： get_container (STL/CLR) 
 
 存取基礎容器。
 
@@ -743,7 +743,7 @@ container_type^ get_container();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回基礎容器。 您可以使用它來略過容器包裝函式所加諸的限制。
+成員函式會傳回基礎容器。 您可以使用它來略過容器包裝函式所加諸的限制。
 
 ### <a name="example"></a>範例
 
@@ -772,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="queueoperator-stlclr"></a><a name="op_as"></a>queue：： operator = （STL/CLR）
+## <a name="queueoperator-stlclr"></a><a name="op_as"></a> queue：： operator = (STL/CLR) 
 
 取代受控制的序列。
 
@@ -784,12 +784,12 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要複製的容器介面卡。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會將 *右移* 至物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為 *right*中受控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -826,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="queuepop-stlclr"></a><a name="pop"></a>queue：:p op （STL/CLR）
+## <a name="queuepop-stlclr"></a><a name="pop"></a> 佇列：:p op (STL/CLR) 
 
 移除最後一個元素。
 
@@ -838,7 +838,7 @@ void pop();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會移除受控制序列中的最後一個專案，此專案必須為非空白。 您可以用它來將佇列的最後面一個元素縮短。
+成員函式會移除受控制序列的最後一個專案，其必須為非空白。 您可以使用它來將佇列縮短一回一個元素。
 
 ### <a name="example"></a>範例
 
@@ -874,7 +874,7 @@ a b c
 b c
 ```
 
-## <a name="queuepush-stlclr"></a><a name="push"></a>queue：:p ush （STL/CLR）
+## <a name="queuepush-stlclr"></a><a name="push"></a> queue：:p ush (STL/CLR) 
 
 加入新的最後一個元素。
 
@@ -886,7 +886,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>備註
 
-成員函式會在佇列結尾加入具有值的元素 `val` 。 您可以使用它將元素附加至佇列。
+成員函式會在佇列結尾新增具有值的元素 `val` 。 您可以使用它來將元素附加至佇列。
 
 ### <a name="example"></a>範例
 
@@ -915,9 +915,9 @@ int main()
 a b c
 ```
 
-## <a name="queuequeue-stlclr"></a><a name="queue"></a>queue：： queue （STL/CLR）
+## <a name="queuequeue-stlclr"></a><a name="queue"></a> queue：： queue (STL/CLR) 
 
-建立容器介面卡物件。
+構造容器介面卡物件。
 
 ### <a name="syntax"></a>語法
 
@@ -930,37 +930,37 @@ explicit queue(container_type% wrapped);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要複製的物件。
 
-*換*<br/>
-要使用的已包裝容器。
+*包裹*<br/>
+要使用的包裝容器。
 
 ### <a name="remarks"></a>備註
 
-此構造函式：
+函數：
 
 `queue();`
 
 建立空的包裝容器。 您可以使用它來指定空的初始受控制序列。
 
-此構造函式：
+函數：
 
 `queue(queue<Value, Container>% right);`
 
-建立包裝的容器，其為的複本 `right.get_container()` 。 您可以使用它來指定初始受控制序列，這是由佇列物件*許可權*所控制的序列複本。
+建立包裝的容器，該容器為的複本 `right.get_container()` 。 您可以使用它來指定初始受控制序列，這是由佇列物件 *許可權*所控制之序列的複本。
 
-此構造函式：
+函數：
 
 `queue(queue<Value, Container>^ right);`
 
-建立包裝的容器，其為的複本 `right->get_container()` 。 您可以使用它來指定初始受控制序列，這是由佇列物件所控制的序列複本 `*right` 。
+建立包裝的容器，該容器為的複本 `right->get_container()` 。 您可以使用它來指定初始受控制序列，這是由佇列物件所控制之序列的複本 `*right` 。
 
-此構造函式：
+函數：
 
 `explicit queue(container_type wrapped);`
 
-使用*包裝*為包裝容器的現有容器。 您可以使用它來從現有的容器中建立佇列。
+使用 *包裝* 為包裝容器的現有容器。 您可以使用它來從現有的容器中建立佇列。
 
 ### <a name="example"></a>範例
 
@@ -1008,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="queuereference-stlclr"></a><a name="reference"></a>queue：： reference （STL/CLR）
+## <a name="queuereference-stlclr"></a><a name="reference"></a> queue：： reference (STL/CLR) 
 
 項目的參考類型。
 
@@ -1020,7 +1020,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述專案的參考。
+型別描述對元素的參考。
 
 ### <a name="example"></a>範例
 
@@ -1057,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="queuesize-stlclr"></a><a name="size"></a>queue：： size （STL/CLR）
+## <a name="queuesize-stlclr"></a><a name="size"></a> queue：： size (STL/CLR) 
 
 計算元素的數目。
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[queue：： empty （STL/CLR）](../dotnet/queue-empty-stl-clr.md) `()` 。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[queue：： empty (STL/CLR) ](#empty) `()` 。
 
 ### <a name="example"></a>範例
 
@@ -1111,9 +1111,9 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="queuesize_type-stlclr"></a><a name="size_type"></a>queue：： size_type （STL/CLR）
+## <a name="queuesize_type-stlclr"></a><a name="size_type"></a> queue：： size_type (STL/CLR) 
 
-兩個元素之間帶正負號距離的類型。
+兩個元素之間的帶正負號距離類型。
 
 ### <a name="syntax"></a>語法
 
@@ -1123,7 +1123,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述非負的元素計數。
+型別描述非負的元素計數。
 
 ### <a name="example"></a>範例
 
@@ -1160,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="queueto_array-stlclr"></a><a name="to_array"></a>queue：： to_array （STL/CLR）
+## <a name="queueto_array-stlclr"></a><a name="to_array"></a> queue：： to_array (STL/CLR) 
 
 將受控制序列複製到新的陣列。
 
@@ -1172,7 +1172,7 @@ cli::array<Value>^ to_array();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回陣列，其中包含受控制的序列。 您可以用它來取得陣列表單中受控制序列的複本。
+成員函式會傳回陣列，其中包含受控制的序列。 您可以使用它，以陣列形式取得受控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -1210,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>queue：： value_type （STL/CLR）
+## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a> queue：： value_type (STL/CLR) 
 
 項目的類型。
 
@@ -1222,7 +1222,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數*值*同義。
+此類型與範本參數 *值*同義。
 
 ### <a name="example"></a>範例
 
@@ -1255,7 +1255,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_neq"></a>operator！ = （queue）（STL/CLR）
+## <a name="operator-queue-stlclr"></a><a name="op_neq"></a> operator！ = (佇列)  (STL/CLR) 
 
 佇列不等於比較。
 
@@ -1270,15 +1270,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 `!(left == right)` 。 當兩個佇列是以元素進行比較時，您可以使用它來測試是否將*left*與*right*排序。
+Operator 函數會傳回 `!(left == right)` 。 您可以使用它來測試當兩個佇列是依元素進行比較時， *左邊* 是否未以 *正確* 的順序排序。
 
 ### <a name="example"></a>範例
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>operator &lt; （queue）（STL/CLR）
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a> operator &lt; (queue)  (STL/CLR) 
 
 佇列小於比較。
 
@@ -1341,15 +1341,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-如果的最低位置也為 true，則運算子函數 `i` 會傳回 true `!(right[i] < left[i])` `left[i] < right[i]` 。 否則，它會傳回 `left->` [queue：： size （STL/CLR）](../dotnet/queue-size-stl-clr.md) ， `() <` `right->size()` 您可以用它*left*來測試當兩個佇列是以元素進行比較時，是否要在*右邊*排序。
+如果是，運算子函式會傳回 true，如果是，則對 `i` `!(right[i] < left[i])` 而言也是 true `left[i] < right[i]` 。 否則，它會傳回 `left->` [queue：： size (STL/CLR) ](#size) `() <` `right->size()` 您使用它來測試當兩個佇列*right*是依元素進行比較時，是否要將*left*排序。
 
 ### <a name="example"></a>範例
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator &lt; = （queue）（STL/CLR）
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a> operator &lt; = (queue)  (STL/CLR) 
 
 佇列小於或等於比較。
 
@@ -1412,15 +1412,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 `!(right < left)` 。 當兩個佇列是以元素進行比較時，您可以使用它來測試*左側*是否未在*右邊*排序。
+Operator 函數會傳回 `!(right < left)` 。 您可以使用它來測試當兩個佇列是依元素進行*比較時，* *左邊*是否未排序。
 
 ### <a name="example"></a>範例
 
@@ -1468,7 +1468,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_eq"></a>operator = = （queue）（STL/CLR）
+## <a name="operator-queue-stlclr"></a><a name="op_eq"></a> operator = = (佇列)  (STL/CLR) 
 
 佇列相等比較。
 
@@ -1483,15 +1483,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-只有當*left*和*right*所控制的序列具有相同的長度，且每個位置都有相同的時，運算子函數才會傳回 true `i` `left[i] ==` `right[i]` 。 當兩個佇列是以元素進行比較時，您可以使用它來測試是否將*left*與*right*排序。
+只有在由左至右控制的*序列和每*個位置都有相同的長度和時，運算子函*式*才會傳回 true `i` `left[i] ==` `right[i]` 。 您可以使用它來測試當兩個佇列是依元素進行比較時， *左邊* 是否 *以相同的* 順序排序。
 
 ### <a name="example"></a>範例
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>operator &gt; （queue）（STL/CLR）
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a> operator &gt; (queue)  (STL/CLR) 
 
 佇列大於比較。
 
@@ -1554,15 +1554,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 `right` `<` `left` 。 當兩個佇列是以元素進行比較時，您可以使用它來測試是否將*left*排序于*右方*。
+Operator 函數會傳回 `right` `<` `left` 。 您可以使用它來測試當兩個佇列是依元素進行*比較時，* 是否要將*左方*排序。
 
 ### <a name="example"></a>範例
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator &gt; = （queue）（STL/CLR）
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a> operator &gt; = (queue)  (STL/CLR) 
 
 佇列大於或等於比較。
 
@@ -1625,15 +1625,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>參數
 
-*左面*<br/>
+*離開*<br/>
 要比較的左容器。
 
-*再*<br/>
+*對*<br/>
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
 
-運算子函式會傳回 `!(left < right)` 。 *當兩*個佇列是以元素進行比較時，您可以使用它來測試*左側*是否未排序。
+Operator 函數會傳回 `!(left < right)` 。 您可以使用它來*測試當兩*個佇列是依元素進行比較時，*左邊*是否未排序。
 
 ### <a name="example"></a>範例
 

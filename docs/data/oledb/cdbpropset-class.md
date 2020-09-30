@@ -32,24 +32,24 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 45772896cac520eba35ec475f8b6ae7bd2993045
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838253"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502458"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
 
 繼承自 `DBPROPSET` 結構，並加入可初始化索引鍵欄位和存取方法的函式 `AddProperty` 。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CDBPropSet : public tagDBPROPSET
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -163,7 +163,7 @@ void SetGUID(const GUID& guid) throw();
 
 ### <a name="remarks"></a>備註
 
-這個 [欄位也可以](../../data/oledb/cdbpropset-cdbpropset.md) 由函式設定。
+這個 [欄位也可以](#cdbpropset) 由函式設定。
 
 ## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet：： operator =
 

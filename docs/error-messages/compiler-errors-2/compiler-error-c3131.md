@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3131
 ms.assetid: 38f20fac-83c9-4cd9-b7b5-74ca8f650ea6
-ms.openlocfilehash: 3fe217a14b75ddedec8e1c703c36a66f747f79c5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e19442e3c218ade2fc9f9b1c18bf44ade8188035
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760188"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501424"
 ---
 # <a name="compiler-error-c3131"></a>編譯器錯誤 C3131
 
-專案必須具有具有 ' name ' 屬性的 ' module ' 屬性
+專案的 ' module ' 屬性必須有 ' name ' 屬性
 
-[Module](../../windows/module-cpp.md)屬性必須有 name 參數。
+[Module](../../windows/attributes/module-cpp.md)屬性必須有 name 參數。
 
 下列範例會產生 C3131：
 

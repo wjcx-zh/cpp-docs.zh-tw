@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 2e0122dd53ba5318077dd33f22a07492c52db26b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d6a0d1234d8f25c6a55fffa7170f37aae27f5817
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756210"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501314"
 ---
 # <a name="compiler-error-c3451"></a>編譯器錯誤 C3451
 
 ' attribute '：無法將非受控屬性套用至 ' type '
 
-C++屬性無法套用至 CLR 類型。 如需詳細資訊，請參閱[ C++屬性參考](../../windows/attributes/attributes-alphabetical-reference.md)。
+C + + 屬性無法套用至 CLR 類型。 如需詳細資訊，請參閱 [c + + 屬性參考](../../windows/attributes/attributes-alphabetical-reference.md) 。
 
 如需詳細資訊，請參閱 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
-這項錯誤可能是因為針對 Visual Studio 2005 所做的編譯器一致性工作所產生：使用 CLR 程式設計時，使用者定義屬性不再允許[uuid](../../windows/uuid-cpp-attributes.md)屬性。 請改用 <xref:System.Runtime.InteropServices.GuidAttribute> 。
+這項錯誤可能是因為針對 Visual Studio 2005 所進行的編譯器一致性工作所產生：使用 CLR 程式設計時，使用者定義的屬性已不再允許 [uuid](../../windows/attributes/uuid-cpp-attributes.md) 屬性。 請改用 <xref:System.Runtime.InteropServices.GuidAttribute>。
 
 ## <a name="example"></a>範例
 

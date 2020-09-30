@@ -38,24 +38,24 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 5c26a3f1e8b5589afebd72c7b722ab9ed9e4229d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d8fa41b3a06acb8f28334658f2494295593b99be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838304"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502520"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 類別
 
 提供使用 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) 介面 OLE DB 錯誤處理的支援。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CDBErrorInfo
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -74,7 +74,7 @@ class CDBErrorInfo
 
 ## <a name="remarks"></a>備註
 
-此介面會傳回一或多個錯誤記錄給使用者。 先呼叫 [CDBErrorInfo：： GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) ，以取得錯誤記錄的計數。 然後呼叫其中一個存取函式，例如 [CDBErrorInfo：： GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)，以抓取每個記錄的錯誤資訊。
+此介面會傳回一或多個錯誤記錄給使用者。 先呼叫 [CDBErrorInfo：： GetErrorRecords](#geterrorrecords) ，以取得錯誤記錄的計數。 然後呼叫其中一個存取函式，例如 [CDBErrorInfo：： GetAllErrorInfo](#getallerrorinfo)，以抓取每個記錄的錯誤資訊。
 
 ## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a> CDBErrorInfo：： GetAllErrorInfo
 

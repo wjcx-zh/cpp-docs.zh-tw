@@ -4,18 +4,18 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f3bcc799f2a9591cfe7b2fc364b03161b5c0da33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211506"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500694"
 ---
 # <a name="consumer-wizard-generated-methods"></a>消費者精靈產生的方法
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍然可以手動加入功能。
+Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍能手動新增功能。
 
 ::: moniker-end
 
@@ -27,11 +27,11 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 - `CloseAll` 會關閉所有開啟的資料列集，並釋出所有的命令執行。
 
-- `OpenRowset` 會呼叫 `OpenAll` 來開啟消費者的一或多個資料列集。
+- `OpenAll` 會呼叫 `OpenRowset` 來開啟消費者的一或多個資料列集。
 
 - `GetRowsetProperties` 會擷取設定屬性可以使用之資料列集屬性集的指標。
 
-- `OpenDataSource` 會使用您在 [資料連結屬性] 對話方塊中指定的初始化字串，開啟資料來源。
+- `OpenDataSource` 會使用您在 [資料連結屬性]**** 對話方塊中指定的初始化字串，開啟資料來源。
 
 - `CloseDataSource` 會以適當的方式關閉資料來源。
 
@@ -43,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-下列範例示範如何在您重複執行相同的命令時，呼叫 `OpenAll` 和 `CloseAll`。 比較 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的程式碼範例，這會顯示呼叫 `Close` 和 `ReleaseCommand` 而不是 `CloseAll` 的變化。
+下列範例示範如何在您重複執行相同的命令時，呼叫 `OpenAll` 和 `CloseAll`。 比較 [CCommand::Close](./ccommand-class.md#close) 中的程式碼範例，這會顯示呼叫 `Close` 和 `ReleaseCommand` 而不是 `CloseAll` 的變化。
 
 ```cpp
 int main(int argc, char* argv[])
@@ -155,10 +155,10 @@ void CloseDataSource();
 
 ### <a name="remarks"></a>備註
 
-此精靈會定義方法 `OpenDataSource` 和 `CloseDataSource`；`OpenDataSource` 會呼叫 [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)。
+此精靈會定義方法 `OpenDataSource` 和 `CloseDataSource`；`OpenDataSource` 會呼叫 [CDataSource::OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring)。
 
 ::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 
-[使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[使用 Wizard 建立 OLE DB 的取用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

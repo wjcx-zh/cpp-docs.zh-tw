@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845116"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501717"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 類別
 
@@ -46,7 +46,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 *T*<br/>
 衍生自的命令類別 `ICommandTextImpl` 。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：** altdb。h
 
@@ -56,7 +56,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 | 名稱 | 描述 |
 |-|-|
-|[GetCommandText](#getcommandtext)|傳回最後一次呼叫 [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)所設定的文字命令。|
+|[GetCommandText](#getcommandtext)|傳回最後一次呼叫 [SetCommandText](#setcommandtext)所設定的文字命令。|
 |[SetCommandText](#setcommandtext)|設定命令文字，取代現有的命令文字。|
 
 ### <a name="data-members"></a>資料成員
@@ -71,7 +71,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl：： GetCommandText
 
-傳回最後一次呼叫 [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)所設定的文字命令。
+傳回最後一次呼叫 [SetCommandText](#setcommandtext)所設定的文字命令。
 
 ### <a name="syntax"></a>語法
 

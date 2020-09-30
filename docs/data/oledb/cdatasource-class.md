@@ -56,24 +56,24 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f94cd631f1c6febdc07d53f84803b1203f4116bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838343"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502536"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 
 對應至 OLE DB 資料來源物件，其表示透過提供者與資料來源的連線。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CDataSource
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -95,7 +95,7 @@ class CDataSource
 
 ## <a name="remarks"></a>備註
 
-可為單一連線建立一個或多個資料庫工作階段。 這些工作階段是以 `CSession` 表示。 您必須先呼叫 [CDataSource：： open](../../data/oledb/cdatasource-open.md) 來開啟連接，然後再使用建立會話 `CSession::Open` 。
+可為單一連線建立一個或多個資料庫工作階段。 這些工作階段是以 `CSession` 表示。 您必須先呼叫 [CDataSource：： open](#open) 來開啟連接，然後再使用建立會話 `CSession::Open` 。
 
 如需如何使用的範例 `CDataSource` ，請參閱 [CatDB](../../overview/visual-cpp-samples.md) 範例。
 
@@ -103,7 +103,7 @@ class CDataSource
 
 釋放指標以關閉連接 `m_spInit` 。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 void Close() throw();
@@ -159,7 +159,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 ### <a name="remarks"></a>備註
 
-若要取得單一屬性，請使用 [GetProperty](../../data/oledb/cdatasource-getproperty.md)。
+若要取得單一屬性，請使用 [GetProperty](#getproperty)。
 
 ## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource：： GetProperty
 
@@ -190,7 +190,7 @@ HRESULT GetProperty(const GUID& guid,
 
 ### <a name="remarks"></a>備註
 
-若要取得多個屬性，請使用 [GetProperties](../../data/oledb/cdatasource-getproperties.md)。
+若要取得多個屬性，請使用 [GetProperties](#getproperties)。
 
 ## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource：： Open
 

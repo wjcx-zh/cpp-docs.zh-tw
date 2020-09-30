@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182236"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500890"
 ---
 # <a name="arrays-ccli-and-ccx"></a>陣列 (C++/CLI 和 C++/CX)
 
@@ -32,7 +32,7 @@ C++/CX 中的 `Platform::Array<T>` 型別或 C++/CLI 中的 **array** 關鍵字�
 
 如需陣列的詳細資訊，請參閱：
 
-- [如何：在 C++/CLI 中使用陣列](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [如何：在 c + +/CLI 中使用陣列](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [變數引數清單 (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
@@ -40,7 +40,7 @@ C++/CX 中的 `Platform::Array<T>` 型別或 C++/CLI 中的 **array** 關鍵字�
 
 陣列是 `Platform` 命名空間的成員。 陣列可以只有一維。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 第一個語法範例會使用 **ref new** 彙總關鍵字來配置陣列。 第二個範例會宣告本機陣列。
 
@@ -52,16 +52,16 @@ C++/CX 中的 `Platform::Array<T>` 型別或 C++/CLI 中的 **array** 關鍵字�
     {initialization-list [,...]}
 ```
 
-*qualifiers*<br/>
-(選擇性) 下列一或多個儲存類別規範：[mutable](../cpp/mutable-data-members-cpp.md)、[volatile](../cpp/volatile-cpp.md)、[const](../cpp/const-cpp.md)、[extern](../cpp/using-extern-to-specify-linkage.md)、[static](../cpp/static-members-cpp.md)。
+*限定 符*<br/>
+(選擇性) 下列一或多個儲存類別規範：[mutable](../cpp/mutable-data-members-cpp.md)、[volatile](../cpp/volatile-cpp.md)、[const](../cpp/const-cpp.md)、[extern](../cpp/extern-cpp.md)、[static](../cpp/static-members-cpp.md)。
 
-*array-type*<br/>
+*陣列類型*<br/>
 陣列變數的型別。 有效型別為 Windows 執行階段類別和基本型別、ref 類別和結構、實值類別和結構，以及原生指標 (`type*`)。
 
-*rank*<br/>
+*排名*<br/>
 (選擇性) 陣列的維度數目。 必須是 1。
 
-*identifier*<br/>
+*識別碼*<br/>
 陣列變數的名稱。
 
 *initialization-type*<br/>
@@ -72,7 +72,7 @@ C++/CX 中的 `Platform::Array<T>` 型別或 C++/CLI 中的 **array** 關鍵字�
 
 ### <a name="remarks"></a>備註
 
-您可以在編譯時間使用 `__is_ref_array(type)` 來偵測型別是否為參考計數陣列。 如需詳細資訊，請參閱[型別特性的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
+您可以在編譯時間使用 `__is_ref_array(type)` 來偵測型別是否為參考計數陣列。 如需詳細資訊，請參閱[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -96,7 +96,7 @@ int main() {
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 第一個語法範例會使用 **gcnew** 關鍵字來配置陣列。 第二個範例會宣告本機陣列。
 
@@ -108,16 +108,16 @@ int main() {
     {initialization-list [,...]}
 ```
 
-*qualifiers*<br/>
-(選擇性) 下列一或多個儲存類別規範：[mutable](../cpp/mutable-data-members-cpp.md)、[volatile](../cpp/volatile-cpp.md)、[const](../cpp/const-cpp.md)、[extern](../cpp/using-extern-to-specify-linkage.md)、[static](../cpp/static-members-cpp.md)。
+*限定 符*<br/>
+(選擇性) 下列一或多個儲存類別規範：[mutable](../cpp/mutable-data-members-cpp.md)、[volatile](../cpp/volatile-cpp.md)、[const](../cpp/const-cpp.md)、[extern](../cpp/extern-cpp.md)、[static](../cpp/static-members-cpp.md)。
 
-*array-type*<br/>
+*陣列類型*<br/>
 陣列變數的型別。 有效型別為 Windows 執行階段類別和基本型別、ref 類別和結構、實值類別和結構、原生指標 (`type*`)，以及原生 POD (Plain Old Data) 型別。
 
-*rank*<br/>
+*排名*<br/>
 (選擇性) 陣列的維度數目。 預設值為 1；最大值為 32。 陣列的每個維度本身就是一個陣列。
 
-*identifier*<br/>
+*識別碼*<br/>
 陣列變數的名稱。
 
 *initialization-type*<br/>
@@ -141,9 +141,9 @@ int main() {
 
 當您配置元素型別指向受控類別的陣列時，會將元素初始化為 0。
 
-當您配置元素型別為實值型別 `V` 的陣列時，會將 `V` 的預設建構函式套用至每個陣列元素。 如需詳細資訊，請參閱 [C++ 原生型別的 .NET Framework 對應項 (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)。
+當您配置元素型別為實值型別 `V` 的陣列時，會將 `V` 的預設建構函式套用至每個陣列元素。 如需詳細資訊，請參閱 [C++ 原生型別的 .NET Framework 對應項 (C++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet)。
 
-在編譯時間，您可以使用 `__is_ref_array(type)` 來偵測型別是否為 Common Language Runtime (CLR) 陣列。 如需詳細資訊，請參閱[型別特性的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
+在編譯時間，您可以使用 `__is_ref_array(type)` 來偵測型別是否為 Common Language Runtime (CLR) 陣列。 如需詳細資訊，請參閱[類型特徵的編譯器支援](compiler-support-for-type-traits-cpp-component-extensions.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -170,4 +170,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)
+[適用于 .NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)

@@ -1,19 +1,19 @@
 ---
-title: OLE DB 範本
+title: OLE DB 樣板
 ms.date: 05/09/2019
 f1_keywords:
 - vc.templates.ole
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3b709bbebdf040ac818d2d2d44576cf49aafdd4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209868"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500898"
 ---
-# <a name="ole-db-templates"></a>OLE DB 範本
+# <a name="ole-db-templates"></a>OLE DB 樣板
 
 OLE DB 範本讓 OLE DB 資料存取更容易。 Visual C++ 提供範本類別來實作許多常用的 OLE DB 介面。 您可以使用 Visual C++ 消費者範本來撰寫 OLE DB 用戶端 (消費者) 應用程式，以及使用提供者範本來撰寫伺服器 (提供者) 應用程式。
 
@@ -27,7 +27,7 @@ OLE DB 範本讓 OLE DB 資料存取更容易。 Visual C++ 提供範本類別�
 
 ## <a name="related-sections"></a>相關章節
 
-[OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)<br/>
+[OLE DB 程式設計總覽](../../data/oledb/ole-db-programming-overview.md)<br/>
 描述何謂 OLE DB，並討論 OLE DB 中的通用資料存取。
 
 [OLE DB 設計人員參考](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
@@ -42,7 +42,7 @@ OLE DB 範本讓 OLE DB 資料存取更容易。 Visual C++ 提供範本類別�
 [OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 討論關於 OLE DB 提供者範本的概念性內容。
 
-[建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
+[建立 OLE DB 取用者](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
 描述如何建立 OLE DB 範本消費者。
 
 [建立簡單唯讀提供者](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
@@ -51,7 +51,7 @@ OLE DB 範本讓 OLE DB 資料存取更容易。 Visual C++ 提供範本類別�
 [建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)<br/>
 描述如何建立可寫入至資料存放區的提供者。
 
-[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)<br/>
+[OLE DB 取用者屬性](../../windows/attributes/ole-db-consumer-attributes.md)<br/>
 討論一個簡化的介面，可根據 OLE DB 消費者範本插入程式碼，以建立運作中的 OLE DB 消費者。
 
 [Active Template Library (ATL) 參考](../../atl/atl-com-desktop-components.md)<br/>

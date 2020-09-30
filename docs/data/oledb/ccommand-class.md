@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838434"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501013"
 ---
 # <a name="ccommand-class"></a>CCommand 類別
 
@@ -78,12 +78,12 @@ class CCommand :
 存取子類別的類型 (例如 `CDynamicParameterAccessor` ， `CDynamicStringAccessor` 或 `CEnumeratorAccessor` 您想要命令使用的) 。 預設值為 `CNoAccessor` ，指定類別不支援參數或輸出資料行。
 
 *TRowset*<br/>
-資料列集類別 (的類型， `CArrayRowset` 例如 `CNoRowset` 您想要命令使用的或) 。 預設為 `CRowset`。
+資料列集類別 (的類型， `CArrayRowset` 例如 `CNoRowset` 您想要命令使用的或) 。 預設值為 `CRowset`。
 
 *TMultiple*<br/>
 若要使用可傳回多個結果的 OLE DB 命令，請指定 [CMultipleResults](../../data/oledb/cmultipleresults-class.md)。 否則，請使用 [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)。 如需詳細資訊，請參閱 [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -131,7 +131,7 @@ void Close();
 
 命令使用資料列集、結果集存取子， (選擇性地) 參數存取子， (不同于不支援參數，且不需要參數存取子) 的資料表。
 
-當您執行命令時，您應該在 `Close` 命令之後呼叫和 [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) 。
+當您執行命令時，您應該在 `Close` 命令之後呼叫和 [ReleaseCommand](#releasecommand) 。
 
 當您想要重複執行相同的命令時，您應該在呼叫之前先呼叫來釋放每個結果集存取子 `Close` `Execute` 。 在數列的結尾，您應該呼叫來釋放參數存取子 `ReleaseCommand` 。 另一個常見的案例是呼叫具有 output 參數的預存程式。 在許多提供者 (（例如 SQL Server 的 OLE DB 提供者）) 將無法存取輸出參數值，除非您關閉結果集存取子。 呼叫 `Close` 以關閉傳回的資料列集和結果集存取子，但不是參數存取子，因此可讓您取得輸出參數值。
 
@@ -213,7 +213,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 在要在其中執行命令的會話。
 
 *wszCommand*<br/>
-在要執行的命令，以 Unicode 字串傳遞。 當使用時，可以是 Null `CAccessor` ，在此情況下，會從傳遞給 [DEFINE_COMMAND](../../data/oledb/define-command.md) 宏的值中取出命令。 如需詳細資料，請參閱*OLE DB 程式設計人員參考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
+在要執行的命令，以 Unicode 字串傳遞。 當使用時，可以是 Null `CAccessor` ，在此情況下，會從傳遞給 [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) 宏的值中取出命令。 如需詳細資料，請參閱*OLE DB 程式設計人員參考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
 *szCommand*<br/>
 在與 *wszCommand* 相同，不同之處在于此參數會採用 ANSI 命令字串。 這個方法的第四個形式可以採用 Null 值。 如需詳細資訊，請參閱本主題稍後的「備註」。
@@ -224,7 +224,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 *pRowsAffected*<br/>
 [in/out]記憶體的指標，其中會傳回受命令影響的資料列計數。 如果* \* PROWSAFFECTED*為 Null，則不會傳回任何資料列計數。 否則，會 `Open` 根據下列條件設定* \* pRowsAffected* ：
 
-|If|結果為|
+|如果|結果為|
 |--------|----------|
 |的 `cParamSets` 元素 `pParams` 大於1|* \* pRowsAffected*代表在執行中指定的所有參數集影響的資料列總數。|
 |無法使用受影響的資料列數目|* \* pRowsAffected*設定為-1。|
@@ -253,14 +253,14 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 的第三種形式 `Open` 允許命令字串是 null，因為的型別 **`int`** 預設值為 null。 它會提供給呼叫 `Open(session, NULL);` 或， `Open(session);` 因為 Null 的型別為 **`int`** 。 此版本需要和判斷提示 **`int`** 參數為 Null。
 
-`Open`當您已建立命令，而且想要執行單一[準備](../../data/oledb/ccommand-prepare.md)和多個執行時，請使用第四種形式的。
+`Open`當您已建立命令，而且想要執行單一[準備](#prepare)和多個執行時，請使用第四種形式的。
 
 > [!NOTE]
 > `Open` 呼叫 `Execute` ，然後再呼叫 `GetNextResult` 。
 
 ## <a name="ccommandcreate"></a><a name="create"></a> CCommand：： Create
 
-呼叫 [CCommand：： CreateCommand](../../data/oledb/ccommand-createcommand.md) 來建立指定之會話的命令，然後呼叫 [ICommandText：： SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) 來指定命令文字。
+呼叫 [CCommand：： CreateCommand](#createcommand) 來建立指定之會話的命令，然後呼叫 [ICommandText：： SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) 來指定命令文字。
 
 ### <a name="syntax"></a>語法
 
@@ -374,7 +374,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>備註
 
-`ReleaseCommand` 與一起使用 `Close` 。 請參閱 [關閉](../../data/oledb/ccommand-close.md) 以取得使用量詳細資料。
+`ReleaseCommand` 與一起使用 `Close` 。 請參閱 [關閉](#close) 以取得使用量詳細資料。
 
 ## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand：： SetParameterInfo
 

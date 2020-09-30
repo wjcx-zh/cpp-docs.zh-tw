@@ -48,18 +48,18 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: 7730b5a8dbb8c92d85b4c8c5732657d28bf5b229
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3278371cc7afb08f0d461c77cde9578e1f2840c6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216436"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502429"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
-STL/CLR 標頭會 `<cliext/adapter>` 指定兩個範本類別（ `collection_adapter` 和 `range_adapter` ），以及範本 `make_collection` 函式。
+STL/CLR 標頭會 `<cliext/adapter>` 指定兩個範本類別 (`collection_adapter` 和 `range_adapter`) ，以及範本 `make_collection` 函式。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 #include <cliext/adapter>
@@ -73,20 +73,20 @@ STL/CLR 標頭會 `<cliext/adapter>` 指定兩個範本類別（ `collection_ada
 
 ## <a name="declarations"></a>宣告
 
-|類別|說明|
+|類別|描述|
 |-----------|-----------------|
-|[collection_adapter (STL/CLR)](#collection_adapter)|將基類程式庫（BCL）集合包裝為範圍。|
+|[collection_adapter (STL/CLR)](#collection_adapter)|將基底類別庫 (BCL) 集合包裝為一個範圍。|
 |[range_adapter (STL/CLR)](#range_adapter)|將範圍包裝為 BCL 集合。|
 
-|函式|說明|
+|函式|描述|
 |--------------|-----------------|
 |[make_collection (STL/CLR)](#make_collection)|使用反覆運算器配對建立範圍介面卡。|
 
 ## <a name="members"></a>成員
 
-## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter （STL/CLR）
+## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a> collection_adapter (STL/CLR) 
 
-包裝 .NET 集合，以做為 STL/CLR 容器使用。 `collection_adapter`是描述簡單 STL/CLR 容器物件的範本類別。 它會包裝基類程式庫（BCL）介面，並傳回您用來操作受控制序列的反覆運算器配對。
+包裝 .NET 集合，以做為 STL/CLR 容器使用。 `collection_adapter`是描述簡單 STL/CLR 容器物件的範本類別。 它會包裝基類程式庫 (BCL) 介面，並傳回您用來操作受控制序列的反覆運算器組。
 
 ### <a name="syntax"></a>語法
 
@@ -123,52 +123,52 @@ template<typename Key,
 
 #### <a name="parameters"></a>參數
 
-*序 coll*<br/>
-已包裝之集合的型別。
+*Coll*<br/>
+已包裝集合的型別。
 
 ### <a name="specializations"></a>特製化
 
-|特製化|說明|
+|特製化|描述|
 |--------------------|-----------------|
-|IEnumerable|透過元素的序列。|
-|ICollection|維護一組元素。|
-|IList|維護元素的已排序群組。|
-|IDictionary|維護一組 {key，value} 配對。|
-|IEnumerable\<Value>|透過具類型專案的序列。|
+|IEnumerable|透過元素的順序。|
+|ICollection|維護元素群組。|
+|IList|維護已排序的元素群組。|
+|IDictionary|維護一組 {key，value} 組。|
+|IEnumerable\<Value>|透過具型別元素的順序。|
 |ICollection\<Value>|維護一組具類型的元素。|
-|IList\<Value>|維護具類型元素的已排序群組。|
-|IDictionary\<Value> |會維護一組具類型的 {key，value} 配對。|
+|IList\<Value>|維護具類型專案的已排序群組。|
+|IDictionary\<Value> |維護一組具類型的 {key，value} 配對。|
 
 ### <a name="members"></a>成員
 
-|類型定義|說明|
+|類型定義|描述|
 |---------------------|-----------------|
 |[collection_adapter::difference_type (STL/CLR)](#difference_type)|兩個項目之間帶正負號距離的類型。|
 |[collection_adapter::iterator (STL/CLR)](#iterator)|受控制序列之迭代器的類型。|
 |[collection_adapter::key_type (STL/CLR)](#key_type)|字典索引鍵的類型。|
-|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|字典值的類型。|
+|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|字典值的型別。|
 |[collection_adapter::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[collection_adapter::size_type (STL/CLR)](#size_type)|兩個項目之間帶正負號距離的類型。|
 |[collection_adapter::value_type (STL/CLR)](#value_type)|項目的類型。|
 
-|成員函式|說明|
+|成員函式|描述|
 |---------------------|-----------------|
 |[collection_adapter::base (STL/CLR)](#base)|指定包裝的 BCL 介面。|
 |[collection_adapter::begin (STL/CLR)](#begin)|指定受控制序列的開頭。|
-|[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|結構介面卡物件。|
+|[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|構造介面卡物件。|
 |[collection_adapter::end (STL/CLR)](#end)|指定受控制序列的結尾。|
 |[collection_adapter::size (STL/CLR)](#size)|計算元素的數目。|
 |[collection_adapter::swap (STL/CLR)](#swap)|交換兩個容器的內容。|
 
 |運算子|描述|
 |--------------|-----------------|
-|[collection_adapter::operator= (STL/CLR)](#op_eq)|取代預存的 BCL 控制碼。|
+|[collection_adapter::operator= (STL/CLR)](#op_eq)|取代儲存的 BCL 控制碼。|
 
 ### <a name="remarks"></a>備註
 
-您可以使用這個樣板類別，將 BCL 容器操作為 STL/CLR 容器。 會 `collection_adapter` 儲存 BCL 介面的控制碼，進而控制元素的序列。 物件會傳回 `collection_adapter` `X` 一對輸入反覆運算器 `X.begin()` ，以及 `X.end()` 您用來依序流覽元素的。 部分特製化也可讓您撰寫 `X.size()` ，以判斷受控制序列的長度。
+您可以使用此範本類別，將 BCL 容器操作為 STL/CLR 容器。 會將 `collection_adapter` 控制碼儲存至 BCL 介面，進而控制一連串的元素。 物件會傳回 `collection_adapter` `X` 一組輸入反覆運算器， `X.begin()` 而 `X.end()` 您可以使用這些反覆運算器來依序流覽元素。 某些特製化也可讓您撰寫 `X.size()` ，以決定受控制序列的長度。
 
-## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter：： base （STL/CLR）
+## <a name="collection_adapterbase-stlclr"></a><a name="base"></a> collection_adapter：： base (STL/CLR) 
 
 指定包裝的 BCL 介面。
 
@@ -180,7 +180,7 @@ Coll^ base();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回已儲存的 BCL 介面控制碼。
+成員函式會傳回儲存的 BCL 介面控制碼。
 
 ### <a name="example"></a>範例
 
@@ -212,7 +212,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a>collection_adapter：： begin （STL/CLR）
+## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a> collection_adapter：： begin (STL/CLR) 
 
 指定受控制序列的開頭。
 
@@ -224,7 +224,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回輸入反覆運算器，指定受控制序列的第一個元素，或在空序列結尾以外的專案。
+成員函式會傳回輸入反覆運算器，此反覆運算器會指定受控制序列的第一個專案，或空白序列結尾以外的第一個元素。
 
 ### <a name="example"></a>範例
 
@@ -263,9 +263,9 @@ a b c
 *++begin() = b
 ```
 
-## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a>collection_adapter：： collection_adapter （STL/CLR）
+## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a> collection_adapter：： collection_adapter (STL/CLR) 
 
-結構介面卡物件。
+構造介面卡物件。
 
 ### <a name="syntax"></a>語法
 
@@ -278,33 +278,33 @@ collection_adapter(Coll^ collection);
 
 #### <a name="parameters"></a>參數
 
-*集合*<br/>
+*收集*<br/>
 要包裝的 BCL 控制碼。
 
-*再*<br/>
+*對*<br/>
 要複製的物件。
 
 ### <a name="remarks"></a>備註
 
-此構造函式：
+函數：
 
 `collection_adapter();`
 
 使用初始化預存控制碼 **`nullptr`** 。
 
-此構造函式：
+函數：
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-使用 `right.` [collection_adapter：： BASE （STL/CLR）](../dotnet/collection-adapter-base-stl-clr.md)初始化預存控制碼 `()` 。
+使用 `right.` [collection_adapter：： BASE (STL/CLR) ](#base)，初始化預存控制碼 `()` 。
 
-此構造函式：
+函數：
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-使用 `right->` [collection_adapter：： BASE （STL/CLR）](../dotnet/collection-adapter-base-stl-clr.md)初始化預存控制碼 `()` 。
+使用 `right->` [collection_adapter：： BASE (STL/CLR) ](#base)，初始化預存控制碼 `()` 。
 
-此構造函式：
+函數：
 
 `collection_adapter(Coll^ collection);`
 
@@ -357,9 +357,9 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a>collection_adapter：:d ifference_type （STL/CLR）
+## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a> collection_adapter：:d ifference_type (STL/CLR) 
 
-兩個元素之間帶正負號距離的類型。
+兩個元素之間的帶正負號距離類型。
 
 ### <a name="syntax"></a>語法
 
@@ -369,7 +369,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述帶正負號的元素計數。
+此類型會描述已簽署的元素計數。
 
 ### <a name="example"></a>範例
 
@@ -409,7 +409,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="collection_adapterend-stlclr"></a><a name="end"></a>collection_adapter：： end （STL/CLR）
+## <a name="collection_adapterend-stlclr"></a><a name="end"></a> collection_adapter：： end (STL/CLR) 
 
 指定受控制序列的結尾。
 
@@ -421,7 +421,7 @@ iterator end();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回指向受控制序列結尾之外的輸入反覆運算器。
+成員函式會傳回指向受控制序列結尾以外的輸入反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -454,7 +454,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a>collection_adapter：： iterator （STL/CLR）
+## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a> collection_adapter：： iterator (STL/CLR) 
 
 受控制序列之迭代器的類型。
 
@@ -466,7 +466,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型的物件 `T1` ，可做為受控制序列的輸入反覆運算器。
+型別描述未指定類型的物件 `T1` ，可作為受控制序列的輸入反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -499,7 +499,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a>collection_adapter：： key_type （STL/CLR）
+## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a> collection_adapter：： key_type (STL/CLR) 
 
 字典索引鍵的類型。
 
@@ -511,7 +511,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-在或的特製化中，此類型是樣板參數的同義字 `Key` ， `IDictionary` `IDictionary<Value>` 否則不會定義。
+此類型是樣板參數的同義字 `Key` （在或的特製化中）， `IDictionary` `IDictionary<Value>` 否則不會定義。
 
 ### <a name="example"></a>範例
 
@@ -549,9 +549,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a>collection_adapter：： mapped_type （STL/CLR）
+## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a> collection_adapter：： mapped_type (STL/CLR) 
 
-字典值的類型。
+字典值的型別。
 
 ### <a name="syntax"></a>語法
 
@@ -561,7 +561,7 @@ typedef Value mapped_type;
 
 ### <a name="remarks"></a>備註
 
-在或的特製化中，此類型是樣板參數的同義字 `Value` ， `IDictionary` `IDictionary<Value>` 否則不會定義。
+此類型是樣板參數的同義字 `Value` （在或的特製化中）， `IDictionary` `IDictionary<Value>` 否則不會定義。
 
 ### <a name="example"></a>範例
 
@@ -599,9 +599,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a>collection_adapter：： operator = （STL/CLR）
+## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a> collection_adapter：： operator = (STL/CLR) 
 
-取代預存的 BCL 控制碼。
+取代儲存的 BCL 控制碼。
 
 ### <a name="syntax"></a>語法
 
@@ -611,12 +611,12 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要複製的介面卡。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它，以*右側*儲存的 bcl 控制碼複本來取代儲存的 bcl 控制碼。
+成員運算子會將 *右移* 至物件，然後傳回 **`*this`** 。 您可以使用它來取代儲存的 BCL 控制碼，以及 *右邊*儲存的 bcl 控制碼複本。
 
 ### <a name="example"></a>範例
 
@@ -656,7 +656,7 @@ a b c
 a b c
 ```
 
-## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a>collection_adapter：： reference （STL/CLR）
+## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a> collection_adapter：： reference (STL/CLR) 
 
 項目的參考類型。
 
@@ -668,7 +668,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述專案的參考。
+型別描述對元素的參考。
 
 ### <a name="example"></a>範例
 
@@ -704,7 +704,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adaptersize-stlclr"></a><a name="size"></a>collection_adapter：： size （STL/CLR）
+## <a name="collection_adaptersize-stlclr"></a><a name="size"></a> collection_adapter：： size (STL/CLR) 
 
 計算元素的數目。
 
@@ -716,7 +716,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 它不會在或的特製化中定義 `IEnumerable` `IEnumerable<Value>` 。
+成員函式會傳回受控制序列的長度。 它並未定義于或的特製化 `IEnumerable` 中 `IEnumerable<Value>` 。
 
 ### <a name="example"></a>範例
 
@@ -747,9 +747,9 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a>collection_adapter：： size_type （STL/CLR）
+## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a> collection_adapter：： size_type (STL/CLR) 
 
-兩個元素之間帶正負號距離的類型。
+兩個元素之間的帶正負號距離類型。
 
 ### <a name="syntax"></a>語法
 
@@ -759,7 +759,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述非負的元素計數。
+型別描述非負的元素計數。
 
 ### <a name="example"></a>範例
 
@@ -792,7 +792,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a>collection_adapter：： swap （STL/CLR）
+## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a> collection_adapter：： swap (STL/CLR) 
 
 交換兩個容器的內容。
 
@@ -804,12 +804,12 @@ void swap(collection_adapter<Coll>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要交換內容的容器。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會在和 right 之間交換已儲存的 BCL 控點 **`*this`** 。 *right*
+成員函式會交換和右邊儲存的 BCL 控制碼 **`*this`** 。 *right*
 
 ### <a name="example"></a>範例
 
@@ -861,7 +861,7 @@ x x x x x
 a b c
 ```
 
-## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a>collection_adapter：： value_type （STL/CLR）
+## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a> collection_adapter：： value_type (STL/CLR) 
 
 項目的類型。
 
@@ -873,7 +873,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數*值*同義，如果存在於特製化中，則為否則，它是的同義字 `System::Object^` 。
+此類型與樣板參數 *值*同義（如果存在於特製化中）;否則就是的同義字 `System::Object^` 。
 
 ### <a name="example"></a>範例
 
@@ -910,9 +910,9 @@ int main()
 a b c
 ```
 
-## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection （STL/CLR）
+## <a name="make_collection-stlclr"></a><a name="make_collection"></a> make_collection (STL/CLR) 
 
-`range_adapter`從反覆運算器配對進行。
+`range_adapter`從反覆運算器配對建立。
 
 ### <a name="syntax"></a>語法
 
@@ -934,7 +934,7 @@ template<typename Iter>
 
 ### <a name="remarks"></a>備註
 
-此範本函式會傳回 `gcnew range_adapter<Iter>(first, last)`。 您可以使用它來 `range_adapter<Iter>` 從一對反覆運算器中建立物件。
+此範本函式會傳回 `gcnew range_adapter<Iter>(first, last)`。 您可以使用它來 `range_adapter<Iter>` 從一對反覆運算器建立物件。
 
 ### <a name="example"></a>範例
 
@@ -988,9 +988,9 @@ SyncRoot not nullptr = True
 | a b c |
 ```
 
-## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a>range_adapter （STL/CLR）
+## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a> range_adapter (STL/CLR) 
 
-此樣板類別會包裝一對用來執行數個基類庫（BCL）介面的反覆運算器。 您可以使用 range_adapter 來操作 STL/CLR 範圍，如同它是 BCL 集合。
+此樣板類別會包裝一組反覆運算器，用來將數個基底類別庫 (BCL) 介面。 您可以使用 range_adapter 來操控 STL/CLR 範圍，就如同它是 BCL 集合一樣。
 
 ### <a name="syntax"></a>語法
 
@@ -1012,30 +1012,30 @@ template<typename Iter>
 
 ### <a name="members"></a>成員
 
-|成員函式|說明|
+|成員函式|描述|
 |---------------------|-----------------|
-|[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|結構介面卡物件。|
+|[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|構造介面卡物件。|
 
-|運算子|說明|
+|運算子|描述|
 |--------------|-----------------|
-|[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|取代預存反覆運算器配對。|
+|[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|取代預存反覆運算器的配對。|
 
 ### <a name="interfaces"></a>介面
 
-|介面|說明|
+|介面|描述|
 |---------------|-----------------|
 |<xref:System.Collections.IEnumerable>|逐一查看集合中的元素。|
-|<xref:System.Collections.ICollection>|維護一組元素。|
-|<xref:System.Collections.Generic.IEnumerable%601>|逐一查看集合中具類型的元素。|
+|<xref:System.Collections.ICollection>|維護元素群組。|
+|<xref:System.Collections.Generic.IEnumerable%601>|逐一查看集合中的類型元素。|
 |<xref:System.Collections.Generic.ICollection%601>|維護一組具類型的元素。|
 
 ### <a name="remarks"></a>備註
 
-Range_adapter 會儲存一對反覆運算器，然後再將專案序列分隔。 物件會執行四個 BCL 介面，讓您依序逐一查看元素。 您可以使用此範本類別來操作 STL/CLR 範圍，就像 BCL 容器一樣。
+Range_adapter 會儲存一組反覆運算器，進而分隔一系列的元素。 物件會實作為四個 BCL 介面，可讓您依序逐一查看元素。 您可以使用這個範本類別來操作 STL/CLR 範圍，就像 BCL 容器一樣。
 
-## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a>range_adapter：： operator = （STL/CLR）
+## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a> range_adapter：： operator = (STL/CLR) 
 
-取代預存反覆運算器配對。
+取代預存反覆運算器的配對。
 
 ### <a name="syntax"></a>語法
 
@@ -1045,12 +1045,12 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要複製的介面卡。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它來取代預存反覆運算器配對，並在*右邊*加上預存反覆運算器配對的複本。
+成員運算子會將 *右移* 至物件，然後傳回 **`*this`** 。 您可以使用它，將預存 iterator 組取代為 *右邊*的預存反覆運算器組複本。
 
 ### <a name="example"></a>範例
 
@@ -1090,9 +1090,9 @@ a b c
 a b c
 ```
 
-## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a>range_adapter：： range_adapter （STL/CLR）
+## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a> range_adapter：： range_adapter (STL/CLR) 
 
-結構介面卡物件。
+構造介面卡物件。
 
 ### <a name="syntax"></a>語法
 
@@ -1111,34 +1111,34 @@ range_adapter(Iter first, Iter last);
 *last*<br/>
 要包裝的第二個反覆運算器。
 
-*再*<br/>
+*對*<br/>
 要複製的物件。
 
 ### <a name="remarks"></a>備註
 
-此構造函式：
+函數：
 
 `range_adapter();`
 
-使用預設的結構化反覆運算器，初始化預存反覆運算器配對。
+使用預設的結構化反覆運算器，初始化預存反覆運算器的配對。
 
-此構造函式：
+函數：
 
 `range_adapter(range_adapter<Iter>% right);`
 
-複製儲存在*右方*的配對，初始化預存反覆運算器配對。
+藉由複製儲存于 *右邊*的配對，初始化預存反覆運算器的配對。
 
-此構造函式：
+函數：
 
 `range_adapter(range_adapter<Iter>^ right);`
 
-藉由複製儲存在中的配對，初始化預存反覆運算器配對 `*right` 。
+藉由複製儲存在中的配對，初始化預存反覆運算器的配對 `*right` 。
 
-此構造函式：
+函數：
 
 `range_adapter(Iter^ first, last);`
 
-以*first*和*last*初始化預存反覆運算器配對。
+使用 *first* 和 *last*初始化預存反覆運算器的配對。
 
 ### <a name="example"></a>範例
 

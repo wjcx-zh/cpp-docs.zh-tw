@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845584"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501830"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
 
@@ -75,9 +75,9 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 衍生自的類別 `ICommandImpl` 。
 
 *CommandBase*<br/>
-命令介面。 預設為 `ICommand`。
+命令介面。 預設值為 `ICommand`。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -124,7 +124,7 @@ STDMETHOD(Cancel)();
 
 取消目前的命令執行。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT CancelExecution();
@@ -132,7 +132,7 @@ HRESULT CancelExecution();
 
 ## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl：： CreateRowset
 
-由 [Execute](../../data/oledb/icommandimpl-execute.md) 呼叫以建立單一資料列集。
+由 [Execute](#execute) 呼叫以建立單一資料列集。
 
 ### <a name="syntax"></a>語法
 
@@ -201,7 +201,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 要求的輸出介面將會是從這個函式所建立的資料列集物件取得的介面。
 
-`Execute` 呼叫 [CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 覆寫預設值來建立一個以上的資料列集，或提供您自己的條件來建立不同的資料列集。
+`Execute` 呼叫 [CreateRowset](#createrowset)。 覆寫預設值來建立一個以上的資料列集，或提供您自己的條件來建立不同的資料列集。
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl：： GetDBSession
 
@@ -226,7 +226,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 建構函式。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 ICommandImpl();

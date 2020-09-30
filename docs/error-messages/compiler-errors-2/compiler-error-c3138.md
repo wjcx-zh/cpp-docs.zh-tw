@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: aca5c78c07852317308427d935eef5942523512b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761245"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501393"
 ---
 # <a name="compiler-error-c3138"></a>編譯器錯誤 C3138
 
-' interface '： ' attribute ' 介面必須繼承自 IDispatch，或來自繼承自 IDispatch 的介面
+' interface '： ' attribute ' 介面必須繼承自 IDispatch，或繼承自 IDispatch 的介面
 
-具有[雙重](../../windows/dual.md)或分派介面屬性的介面沒有做為[直接或間接](../../windows/dispinterface.md)基底介面的 `IDispatch`。
+具有 [雙重](../../windows/attributes/dual.md) 或產生 [介面](../../windows/attributes/dispinterface.md) 屬性的介面沒有 `IDispatch` 直接或間接基底介面。
 
 下列範例會產生 C3138：
 

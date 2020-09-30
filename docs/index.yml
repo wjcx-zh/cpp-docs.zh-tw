@@ -10,12 +10,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 06/04/2020
-  ms.openlocfilehash: ac1e391207037bf88fd866181533662aa5856b69
-  ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+  ms.openlocfilehash: 6bfbf763e738a5c53f0b6df0b4790b762ab901f2
+  ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88836968"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91509729"
 highlightedContent:
   items:
   - title: 安裝 Visual Studio 並選擇 C++ 工作負載
@@ -36,23 +36,23 @@ conceptualContent:
   - title: 歡迎使用 Visual Studio IDE
     links:
     - text: 開始 Visual Studio 引導式導覽
-      url: https://docs.microsoft.com/visualstudio/ide/visual-studio-ide
+      url: /visualstudio/ide/visual-studio-ide
       itemType: overview
     - text: 從存放庫開啟程式碼
-      url: https://docs.microsoft.com/visualstudio/get-started/tutorial-open-project-from-repo
+      url: /visualstudio/get-started/tutorial-open-project-from-repo
       itemType: tutorial
     - text: 撰寫和編輯程式碼
-      url: https://docs.microsoft.com/visualstudio/ide/index-writing-code
+      url: /visualstudio/ide/index-writing-code
       itemType: tutorial
     - text: 建置程式碼
-      url: https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio
+      url: /visualstudio/ide/compiling-and-building-in-visual-studio
       itemType: tutorial
     - text: 偵錯程式碼
       itemType: tutorial
-      url: https://docs.microsoft.com/visualstudio/debugger/quickstart-debug-with-cplusplus
+      url: /visualstudio/debugger/quickstart-debug-with-cplusplus
     - text: 測試程式碼
       itemType: tutorial
-      url: https://docs.microsoft.com/visualstudio/test/writing-unit-tests-for-c-cpp
+      url: /visualstudio/test/writing-unit-tests-for-c-cpp
   - title: 在 Visual Studio 中撰寫 C++ 與 C 應用程式
     links:
     - text: 建立主控台計算機應用程式
@@ -147,7 +147,7 @@ additionalContent:
       - text: 通用 Windows 平台開發
         url: cppcx/universal-windows-apps-cpp.md
       - text: Windows 傳統型應用程式開發
-        url: windows/windows-desktop-applications-cpp.md
+        url: ./windows/desktop-applications-visual-cpp.md
       - text: Linux 開發
         url: linux/index.yml
       - text: 行動裝置應用程式開發
@@ -161,11 +161,11 @@ additionalContent:
       - text: 建置程式碼專案
         url: build/projects-and-build-systems-cpp.md
       - text: 偵錯程式碼
-        url: https://docs.microsoft.com/visualstudio/debugger/debugging-native-code
+        url: /visualstudio/debugger/debugging-native-code
       - text: 分析您的程式碼
         url: code-quality/index.yml
       - text: 提升應用程式效能
-        url: https://docs.microsoft.com/visualstudio/profiling
+        url: /visualstudio/profiling
       - text: 移植及升級程式碼
         url: porting/visual-cpp-porting-and-upgrading-guide.md
     - title: 程式庫

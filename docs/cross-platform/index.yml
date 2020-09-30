@@ -8,12 +8,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 05/26/2020
-  ms.openlocfilehash: 7a858d9f26c106988156813b3f1f6bbe995e620a
-  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.openlocfilehash: 3d90635c4b1d458369d1d7c9b1cfa9273161b4d2
+  ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84153526"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91509793"
 landingContent:
 - title: 了解如何建置跨平台行動裝置應用程式
   linkLists:
@@ -42,7 +42,7 @@ landingContent:
     - text: C++ 跨平台屬性頁參考
       url: cross-platform-prop-pages.md
     - text: 通用 Windows 平台 (UWP) 文件
-      url: /cpp/cppcx/universal-windows-apps-cpp
+      url: ../cppcx/universal-windows-apps-cpp.md
     - text: iOS API 文件
       url: https://developer.apple.com/reference
     - text: Android API 文件

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844830"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509758"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 類別
 
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 *PropClass*<br/>
 使用者可定義的屬性類別，預設為 *T*。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 ## <a name="remarks"></a>備註
 
-會話上的強制介面。 這個類別會藉由呼叫 [屬性集對應](../../data/oledb/begin-propset-map.md)所定義的靜態函式，來實作為會話屬性。 您應在您的 session 類別中指定屬性集對應。
+會話上的強制介面。 這個類別會藉由呼叫 [屬性集對應](./macros-for-ole-db-provider-templates.md#begin_propset_map)所定義的靜態函式，來實作為會話屬性。 您應在您的 session 類別中指定屬性集對應。
 
 ## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl：： GetProperties
 

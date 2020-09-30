@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: cb19b0d9987ef4ff4624602426930c9f9920dbcd
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2898c06d998653a25ce771c80086ef8aef27a60b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040011"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509940"
 ---
 # <a name="set-class"></a>set 類別
 
@@ -172,14 +172,14 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 |[value_compare](#value_compare)|類型，提供可比較兩個項目之函式物件，以判斷項目在集合中的相對順序。|
 |[value_type](#value_type)|此類型描述在做為值的產能上，做為集合的項目儲存的物件。|
 
-### <a name="functions"></a>函數
+### <a name="functions"></a>函式
 
 |名稱|描述|
 |-|-|
 |[開始](#begin)|傳回迭代器，會定址到`set` 中的第一個項目。|
 |[cbegin](#cbegin)|傳回常數迭代器，為 `set` 中的第一個項目定址。|
 |[cend](#cend)|傳回常數迭代器，為 `set` 中最後一個項目的下一個位置定址。|
-|[清楚](#clear)|清除 `set` 的所有項目。|
+|[清除](#clear)|清除 `set` 的所有項目。|
 |[包含](#contains)<sup>c + + 20</sup>|檢查中是否有具有指定索引鍵的元素 `set` 。|
 |[計數](#count)|傳回 `set` 中索引鍵符合參數指定之索引鍵的項目數目。|
 |[crbegin](#rbegin)|傳回常數迭代器，為反轉 `set` 中的第一個項目定址。|
@@ -187,7 +187,7 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 |[emplace](#emplace)|將就地建構的項目插入 `set` 中。|
 |[emplace_hint](#emplace_hint)|將就地建構的項目 (含位置提示) 插入 `set` 中。|
 |[empty](#empty)|測試 `set` 是否為空白。|
-|[結束](#end)|傳回迭代器，為 `set` 中最後一個項目的下一個位置定址。|
+|[end](#end)|傳回迭代器，為 `set` 中最後一個項目的下一個位置定址。|
 |[equal_range](#equal_range)|傳回成對的迭代器，分別指向 `set` 中索引鍵大於特定索引鍵的第一個項目，以及指向 `set` 中索引鍵等於或大於該索引鍵的第一個項目。|
 |[erase](#erase)|從指定的位置移除集合中的項目或項目範圍，或移除符合指定之索引鍵的項目。|
 |[find](#find)|傳回迭代器，為 `set` 中索引鍵等於指定索引鍵項目位置定址。|
@@ -203,7 +203,7 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 |[upper_bound](#upper_bound)|傳回迭代器，指向 `set` 中索引鍵大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|擷取 `set` 中用於排序項目值之比較物件的複本。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |名稱|描述|
 |-|-|
@@ -490,7 +490,7 @@ template<class K> bool contains(const K& key) const;
 
 `contains()` 是 c + + 20 的新功能。 若要使用它，請指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 的編譯器選項。
 
-`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。 如需詳細資訊，請參閱 [關聯容器中的異類查閱](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 。
+`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。 如需詳細資訊，請參閱 [關聯容器中的異類查閱](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 。
 
 ### <a name="example"></a>範例
 

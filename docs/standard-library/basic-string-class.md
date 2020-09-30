@@ -121,12 +121,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 9012fc8203bf8b54e87e2c21f47f2ef6ef764c2d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0016926ff82be9ef2b52cf55b16bde2a6099f237
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040305"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509991"
 ---
 # <a name="basic_string-class"></a>basic_string 類別
 
@@ -188,7 +188,7 @@ class basic_string;
 |[能力](#capacity)|傳回可儲存在字串中且不增加字串的記憶體配置的最大元素數目。|
 |[cbegin](#cbegin)|傳回定址字串中的第一個元素的 const 迭代器。|
 |[cend](#cend)|傳回定址字串中最後一個元素的下一個位置的 const 迭代器。|
-|[清楚](#clear)|清除字串的所有元素。|
+|[清除](#clear)|清除字串的所有元素。|
 |[比較](#compare)|將某個字串與指定的字串比較，以判斷兩個字串是否相等，或其中一個字串的字數小於另一個字串。|
 |[copy](#copy)|從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。 已取代。 請改用 [basic_string::_Copy_s](#copy_s)。|
 |[crbegin](#crbegin)|傳回定址反轉字串中的第一個元素的 const 迭代器。|
@@ -196,7 +196,7 @@ class basic_string;
 |[_Copy_s](#copy_s)|從來源字串中的索引位置，最多複製指定的字元數到目標字元陣列。|
 |[data](#data)|將字串的內容轉換成字元的陣列。|
 |[empty](#empty)|測試字串是否包含字元。|
-|[結束](#end)|傳回定址字串中最後一個元素的下一個位置的迭代器。|
+|[end](#end)|傳回定址字串中最後一個元素的下一個位置的迭代器。|
 |[ends_with](#ends_with)<sup>c + + 20</sup>|檢查字串是否以指定的尾碼結尾。|
 |[erase](#erase)|從指定位置移除字串中的某個元素或某個元素範圍。|
 |[find](#find)|以正向方向搜尋字串中，第一個符合指定之字元序列的子字串。|
@@ -207,7 +207,7 @@ class basic_string;
 |[前面](#front)|傳回字串中第一個元素的參考。|
 |[get_allocator](#get_allocator)|傳回用來建構字串的 `allocator` 物件複本。|
 |[insert](#insert)|將某個元素或一些元素或某個元素範圍，插入字串的指定位置。|
-|[length](#length)|傳回字串中目前的元素數目。|
+|[length](#length) (長度)|傳回字串中目前的元素數目。|
 |[max_size](#max_size)|傳回字串中可能包含的字元數上限。|
 |[pop_back](#pop_back)|清除字串的最後一個元素。|
 |[push_back](#push_back)|將元素加入至字串結尾。|
@@ -223,7 +223,7 @@ class basic_string;
 |[substr](#substr)|從開始於指定位置的字串，複製最多一定字元數量的子字串。|
 |[交換](#swap)|交換兩個字串的內容。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|
@@ -4765,7 +4765,7 @@ int main()
 {
     std::basic_string<char> str = "abcdefg";
 
-    std::cout << std::boolalpha; // so booleans show as 'true'/'false'     
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'
     std::cout << str.starts_with('b') << '\n';
     std::cout << str.starts_with("aBc") << '\n';
 

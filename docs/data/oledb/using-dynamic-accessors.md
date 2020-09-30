@@ -5,22 +5,22 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: 4539247894c3980464e744c76cea450324372382
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403057"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509416"
 ---
 # <a name="using-dynamic-accessors"></a>使用動態存取子
 
-動態存取子可讓您存取資料來源，當您有不了解資料庫結構描述 （基礎結構）。 OLE DB 樣板程式庫提供數個類別，可協助您。
+當您不知道 (基礎結構) 的資料庫架構時，動態存取子可讓您存取資料來源。 OLE DB 範本程式庫提供數個類別來協助您。
 
-[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)範例示範如何使用動態存取子類別來取得資料行資訊，並以動態方式建立存取子。
+[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)範例顯示如何使用動態存取子類別來取得資料行資訊，以及動態建立存取子。
 
 ## <a name="using-cdynamicaccessor"></a>使用 CDynamicAccessor
 
-[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)可讓您存取資料來源，當您有不了解資料庫結構描述 （資料庫的基礎結構）。 `CDynamicAccessor` 方法會取得資料行名稱、 計數等資料類型的資料行資訊。 您可以使用此資料行資訊在執行階段動態建立存取子。 資料行資訊會儲存在緩衝區中，建立和管理由這個類別。 取得從緩衝區使用的資料[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)方法。
+[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 可讓您在資料庫的基礎結構)  (知道資料庫架構時，存取資料來源。 `CDynamicAccessor` 方法會取得資料行資訊，例如資料行名稱、計數和資料類型。 您可以使用此資料行資訊，在執行時間動態建立存取子。 資料行資訊會儲存在由這個類別所建立和管理的緩衝區中。 使用 [GetValue](./cdynamicaccessor-class.md#getvalue) 方法從緩衝區取得資料。
 
 ## <a name="example"></a>範例
 
@@ -90,9 +90,9 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicstringaccessor"></a>使用 CDynamicStringAccessor
 
-[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)運作方式類似[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，除非有一個重要的差異。 雖然`CDynamicAccessor`要求的資料提供者，報告的原生格式`CDynamicStringAccessor`要求提供者擷取從資料存放區做為字串資料存取的所有資料。 此程序是特別適合不需要計算值的資料存放區，例如顯示或列印的資料存放區內容的簡單工作項目。
+[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) 的運作方式類似 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，但有一個重要的方式。 `CDynamicAccessor`在以提供者所報告的原生格式要求資料時， `CDynamicStringAccessor` 要求提供者會提取從資料存放區存取的所有資料，做為字串資料。 此程式特別適用于不需要計算資料存放區中值的簡單工作，例如顯示或列印資料存放區的內容。
 
-使用`CDynamicStringAccessor`方法，以取得資料行資訊。 您可以使用此資料行資訊在執行階段動態建立存取子。 資料行資訊會儲存在緩衝區中由這個類別建立和管理。 取得從緩衝區使用的資料[cdynamicstringaccessor:: Getstring](../../data/oledb/cdynamicstringaccessor-getstring.md)或將它儲存至緩衝區使用[cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)。
+使用 `CDynamicStringAccessor` 方法來取得資料行資訊。 您可以使用此資料行資訊，在執行時間動態建立存取子。 資料行資訊會儲存在由這個類別所建立和管理的緩衝區中。 使用 [CDynamicStringAccessor：： GetString](./cdynamicstringaccessor-class.md#getstring) 從緩衝區取得資料，或使用 [CDynamicStringAccessor：： SetString](./cdynamicstringaccessor-class.md#setstring)將其儲存到緩衝區。
 
 ## <a name="example"></a>範例
 
@@ -150,11 +150,11 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicparameteraccessor"></a>使用 CDynamicParameterAccessor
 
-[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)大致[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，只不過`CDynamicParameterAccessor`取得要設定呼叫的參數資訊[ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters)介面。 提供者必須支援 `ICommandWithParameters` 讓取用者使用這個類別。
+[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) 與 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)類似，不同之處在于 `CDynamicParameterAccessor` 會藉由呼叫 [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) 介面來取得要設定的參數資訊。 提供者必須支援 `ICommandWithParameters` 讓取用者使用這個類別。
 
-參數資訊會儲存在這個類別建立和管理的緩衝區中。 從緩衝區取得參數資料，使用[cdynamicparameteraccessor:: Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)並[cdynamicparameteraccessor:: Getparamtype](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)。
+參數資訊會儲存在這個類別建立和管理的緩衝區中。 使用 [CDynamicParameterAccessor：： GetParam](./cdynamicparameteraccessor-class.md#getparam) 和 [CDynamicParameterAccessor：： GetParamType](./cdynamicparameteraccessor-class.md#getparamtype)取得緩衝區中的參數資料。
 
-如需示範如何使用這個類別來執行 SQL Server 預存程序，並取得輸出參數值的範例，請參閱[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)中的程式碼範例[Microsoft： 位](https://github.com/Microsoft/VCSamples)在 GitHub 上的存放庫。
+如需示範如何使用這個類別來執行 SQL Server 預存程式和取得輸出參數值的範例，請參閱 GitHub 上[Microsoft >vcsamples](https://github.com/Microsoft/VCSamples)儲存機制中的[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)範例程式碼。
 
 ## <a name="see-also"></a>另請參閱
 

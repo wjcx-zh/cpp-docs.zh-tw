@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 446c1af793b885646dbb5658242e75482ebb92de
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 7399132553205080cc784de78630e30feb0700ba
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353190"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509929"
 ---
 # <a name="multimap-class"></a>multimap 類別
 
@@ -162,7 +162,7 @@ multimap 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `multimap` 類別。|
 |[const_iterator](#const_iterator)|一種類型，提供可讀取中專案的雙向反覆運算器 **`const`** `multimap` 。|
@@ -211,7 +211,7 @@ multimap 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件
 |[upper_bound](#upper_bound)|傳回迭代器，指向 `multimap` 中索引鍵大於特定索引鍵的第一個項目。|
 |[value_comp](#value_comp)|成員函式傳回函式物件，可藉由比較其索引鍵值判斷 `multimap` 中項目的順序。|
 
-|運算子|說明|
+|運算子|描述|
 |-|-|
 |[運算子 =](#op_eq)|用另一個 `multimap` 的複本取代 `multimap` 的項目。|
 
@@ -521,7 +521,7 @@ template<class K> bool contains(const K& key) const;
 
 `contains()` 是 c + + 20 的新功能。 若要使用它，請指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 的編譯器選項。
 
-`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。 如需詳細資訊，請參閱 [關聯容器中的異類查閱](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 。
+`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。 如需詳細資訊，請參閱 [關聯容器中的異類查閱](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 。
 
 ### <a name="example"></a>範例
 
@@ -543,7 +543,7 @@ int main()
     // call template function
     std::multimap<std::string, int, std::less<>> m2 = {{"ten", 10}, {"twenty", 20}, {"thirty", 30}};
     std::cout << m2.contains("ten");
-    
+
     return 0;
 }
 ```

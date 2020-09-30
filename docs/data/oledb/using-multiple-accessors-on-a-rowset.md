@@ -7,44 +7,44 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: d1ab314edeebedef4cff14cd5364a7ca16c74769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48772539b4dda9262a244506a36932d1e752949e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216378"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509398"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>在資料列集上使用多重存取子
 
-有三個基本的情況下，您需要使用多重存取子：
+有三種基本案例，您需要使用多個存取子：
 
-- **多個讀取/寫入資料列集。** 在此案例中，您會有具有主索引鍵的資料表。 您想要能夠讀取的資料列，包括主索引鍵中的所有資料行。 您也要能夠將資料寫入至主索引鍵以外的所有資料行，（因為您無法寫入主要索引鍵資料行）。 在此情況下，您會設定兩個存取子：
+- **多個讀取/寫入資料列集。** 在此案例中，您有一個具有主鍵的資料表。 您想要能夠讀取資料列中的所有資料行，包括主要索引鍵。 您也想要能夠將資料寫入到主鍵 (以外的所有資料行，因為您無法寫入主鍵資料行) 。 在此情況下，您會設定兩個存取子：
 
-  - 包含所有資料行存取子 0。
+  - 存取子0包含所有資料行。
 
-  - 存取子 1 包含的主索引鍵以外的所有資料行。
+  - 存取子1包含主鍵以外的所有資料行。
 
-- **效能。** 在此案例中，一或多個資料行有大量的資料，例如圖形、 音訊或視訊檔。 每次您移至一個資料列，您可能不想要擷取資料行，將大型資料檔案因為這麼做會降低您的應用程式效能。
+- **效能。** 在此案例中，有一或多個資料行有大量的資料，例如，圖形、音效或影片檔案。 每次移至某個資料列時，您可能不會想要使用大型資料檔案抓取資料行，因為這樣做會讓您的應用程式效能變慢。
 
-  您可以設定個別存取子中的第一個存取子包含大型的資料以外的所有資料行和它的資料會從擷取這些資料行，而第一個存取子是自動存取子。 第二個存取子擷取保留大型的資料，資料行，但它不會自動擷取資料從這個資料行。 您可以有其他更新，或依需求擷取大型資料的方法。
+  您可以設定個別存取子，其中第一個存取子包含具有大型資料的所有資料行，而且它會自動從這些資料行中取出資料。第一個存取子是自動存取子。 第二個存取子只會取出保存大型資料的資料行，但不會自動從這個資料行中取出資料。 您可以讓其他方法視需要更新或提取大型資料。
 
-  - 存取子 0 是自動的存取子;它會擷取大型資料以外的所有資料行。
+  - 存取子0是自動存取子;它會抓取包含大型資料的所有資料行。
 
-  - 存取子 1 不是自動的存取子;它會擷取大型資料的資料行。
+  - 存取子1不是自動存取子;它會抓取具有大型資料的資料行。
 
-  若要指定存取子是否自動存取子中使用的自動引數。
+  您可以使用 auto 引數來指定存取子是否為自動存取子。
 
-- **多個的 ISequentialStream 資料行。** 在此案例中，您已經一個以上的資料行保存`ISequentialStream`資料。 不過，每個存取子僅限一份`ISequentialStream`資料流。 若要解決此問題，請設定數個存取子，各自擁有一個`ISequentialStream`指標。
+- **多個 ISequentialStream 資料行。** 在此案例中，您有多個資料行保留 `ISequentialStream` 資料。 不過，每個存取子只能有一個 `ISequentialStream` 資料流程。 若要解決這個問題，請設定數個存取子，每個存取子都有一個 `ISequentialStream` 指標。
 
-您通常會建立使用存取子[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)並[END_ACCESSOR](../../data/oledb/end-accessor.md)巨集。 您也可以使用[db_accessor](../../windows/db-accessor.md)屬性。 (存取子會進一步說明，在[使用者記錄](../../data/oledb/user-records.md)。)巨集或屬性指定是否自動或非自動存取子的存取子：
+您通常會使用 [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) 和 [END_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) 宏來建立存取子。 您也可以使用 [db_accessor](../../windows/attributes/db-accessor.md) 屬性。  (存取子會在 [使用者記錄](../../data/oledb/user-records.md)中進一步描述。 ) 宏或屬性指定存取子是否為自動或非自動存取子：
 
-- 在自動存取子，移動方法這類`MoveFirst`， `MoveLast`， `MoveNext`，和`MovePrev`所有指定自動的資料行擷取資料。 存取子 0 應該是自動的存取子。
+- 在自動存取子中，會自動移動方法（例如 `MoveFirst` 、、和），以 `MoveLast` `MoveNext` `MovePrev` 自動取得所有指定資料行的資料。 存取子0應該是自動存取子。
 
-- 在非自動存取子擷取不會發生直到您明確地呼叫方法這類`Update`， `Insert`， `Fetch`，或`Delete`。 在上面所述的案例中，您可能不想要擷取在每次移動的所有資料行。 您可以將一或多個資料行放在不同的存取子，並將該有非自動存取子，如下所示。
+- 在非自動存取子中，除非您明確呼叫方法（例如 `Update` 、、或），否則不會進行抓取 `Insert` `Fetch` `Delete` 。 在上述案例中，您可能不想要在每次移動時取出所有資料行。 您可以將一或多個資料行放在不同的存取子，並使其成為非自動存取子，如下所示。
 
-下列範例會使用多個存取子來讀取和寫入作業的資料庫資料表的 SQL Server pubs 使用多重存取子。 這個範例是最常用的多個存取子;請參閱上述 「 多個讀取/寫入資料列集 」 案例。
+下列範例會使用多個存取子，以使用多個存取子來讀取和寫入 SQL Server pubs 資料庫的工作資料表。 此範例是多個存取子的最常見用法;請參閱上面的「多個讀取/寫入資料列集」案例。
 
-使用者記錄類別如下所示。 它會設定兩個存取子： 包含僅主要索引鍵資料行 (ID) 的存取子 0 和 1 的存取子包含其他資料行。
+使用者記錄類別如下所示。 它會設定兩個存取子：存取子0只包含主鍵資料行 (識別碼) ，而存取子1則包含其他資料行。
 
 ```cpp
 class CJobs
@@ -79,7 +79,7 @@ END_ACCESSOR_MAP()
 };
 ```
 
-主要的程式碼如下所示。 呼叫`MoveNext`自動將資料擷取使用存取子 0 的主索引鍵資料行識別碼。 請注意如何`Insert`附近會使用存取子 1，來避免寫入主要索引鍵資料行的方法。
+主要程式碼如下所示。 呼叫 `MoveNext` 會自動使用存取子0從主鍵資料行識別碼中取出資料。 請注意， `Insert` 接近 end 的方法如何使用存取子1來避免寫入主鍵資料行。
 
 ```cpp
 int main(int argc, char* argv[])
@@ -159,4 +159,4 @@ int main(int argc, char* argv[])
 ## <a name="see-also"></a>另請參閱
 
 [使用存取子](../../data/oledb/using-accessors.md)<br/>
-[使用者資料錄](../../data/oledb/user-records.md)
+[使用者記錄](../../data/oledb/user-records.md)

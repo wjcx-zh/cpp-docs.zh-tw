@@ -63,16 +63,16 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: 189f97e72f1cb87de7e4c4a388128c2a76c42961
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb0e236a31846e3465d76b6904a7b4c57a2b8cf4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832434"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508999"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 類別
 
-執行 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85))介面、將記錄加入至資料 (成員的記錄，並從**CAtlArray<** 類型的[m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 中取出記錄 `RecordClass` **>** 。
+執行 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85))介面、將記錄加入至資料 (成員的記錄，並從**CAtlArray<** 類型的[m_rgErrors](#rgerrors)) 中取出記錄 `RecordClass` **>** 。
 
 ## <a name="syntax"></a>語法
 
@@ -89,7 +89,7 @@ class IErrorRecordsImpl : public IErrorRecords
 *RecordClass*<br/>
 代表 OLE DB 錯誤物件的類別。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 

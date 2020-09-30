@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9dce5fad3b38b0b0b396ff036f437af90e3e6d38
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753181"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510085"
 ---
 # <a name="compiler-error-c3719"></a>編譯器錯誤 C3719
 
 ' interface '：以介面為基礎的事件來源只能用於 COM 事件
 
-您在非 COM 內容中宣告了介面。
+您已在非 COM 內容中宣告介面。
 
 下列範例會產生 C3719：
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-若要修正此錯誤，請適當地套用[物件](../../windows/object-cpp.md)、 [coclass](../../windows/coclass.md)、 [event_source](../../windows/event-source.md)和[event_receiver](../../windows/event-receiver.md)屬性，以建立您使用介面 COM 類別的類別。 例如：
+若要修正這個錯誤，請適當地套用 [物件](../../windows/attributes/object-cpp.md)、 [coclass](../../windows/attributes/coclass.md)、 [event_source](../../windows/attributes/event-source.md)和 [event_receiver](../../windows/attributes/event-receiver.md) 屬性，以讓您使用介面 COM 類別的類別。 例如：
 
 ```cpp
 // C3719b.cpp

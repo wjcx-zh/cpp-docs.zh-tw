@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212939"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509443"
 ---
 # <a name="updating-rowsets"></a>更新資料列集
 
@@ -20,18 +20,18 @@ ms.locfileid: "87212939"
 
 消費者可以在資料列集資料上完成下列各種更新：在資料列內設定資料行值、插入資料列，以及刪除資料列。 為了完成這些作業，OLE DB 範本類別 [CRowset](../../data/oledb/crowset-class.md) 會實作 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) 介面，並覆寫下列介面方法：
 
-- [SetData](../../data/oledb/crowset-setdata.md) 會在資料列集的資料列中變更資料行值；它相當於 SQL UPDATE 命令。
+- [SetData](./crowset-class.md#setdata) 會在資料列集的資料列中變更資料行值；它相當於 SQL UPDATE 命令。
 
-- [Insert](../../data/oledb/crowset-insert.md) 會將資料列插入至資料列集；它相當於 SQL INSERT 命令。
+- [Insert](./crowset-class.md#insert) 會將資料列插入至資料列集；它相當於 SQL INSERT 命令。
 
-- [Delete](../../data/oledb/crowset-delete.md) 會刪除資料列集的資料列；它相當於 SQL DELETE 命令。
+- [Delete](./crowset-class.md#delete) 會刪除資料列集的資料列；它相當於 SQL DELETE 命令。
 
 ## <a name="supporting-update-operations"></a>支援更新作業
 
 > [!NOTE]
 > Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍能手動新增功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
 
-當您使用**ATL OLE DB 取用者 Wizard**建立取用者時，您可以藉由選取三個核取方塊 [**變更**]、[**插入**] 和 [**刪除**] 中的一或多個，以支援更新作業。 如果您選取這些選項，精靈會適當地修改程式碼以支援您選擇的變更類型。 不過，如果您未使用精靈，則需將下列資料列集屬性設定為 `VARIANT_TRUE` 以支援更新：
+當您使用 **ATL OLE DB 取用者 Wizard**建立取用者時，您可以選取三個核取方塊中的一或多個核取方塊，以支援更新作業： [ **變更**]、[ **插入**] 和 [ **刪除**]。 如果您選取這些選項，精靈會適當地修改程式碼以支援您選擇的變更類型。 不過，如果您未使用精靈，則需將下列資料列集屬性設定為 `VARIANT_TRUE` 以支援更新：
 
 - `DBPROPVAL_UP_CHANGE` 可讓您變更資料列中的資料值。
 
@@ -52,7 +52,7 @@ ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | 
 
 ## <a name="setting-data-in-rows"></a>設定資料列中的資料
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) 可以在目前資料列的一個或多個資料行中設定資料值。 下列程式碼會設定繫結至 `Products` 資料表之 `Name` 和 `Units in Stock` 資料行的資料成員值，接著呼叫 `SetData`，以將那些值寫入至資料列集的第 100 個資料列：
+[CRowset::SetData](./crowset-class.md#setdata) 可以在目前資料列的一個或多個資料行中設定資料值。 下列程式碼會設定繫結至 `Products` 資料表之 `Name` 和 `Units in Stock` 資料行的資料成員值，接著呼叫 `SetData`，以將那些值寫入至資料列集的第 100 個資料列：
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -74,15 +74,15 @@ HRESULT hr = product.SetData();
 
 ## <a name="inserting-rows-into-rowsets"></a>將資料列插入至資料列集
 
-[CRowset::Insert](../../data/oledb/crowset-insert.md) 可以使用存取子資料，以建立和初始化一個新的資料列。 `Insert` 會在目前資料列之後建立一個全新的資料列；您必須指定是否要將目前資料列累加到下一個資料列，或使其保持不變。 您可以設定 *bGetRow* 參數來達到這個目的：
+[CRowset::Insert](./crowset-class.md#insert) 可以使用存取子資料，以建立和初始化一個新的資料列。 `Insert` 會在目前資料列之後建立一個全新的資料列；您必須指定是否要將目前資料列累加到下一個資料列，或使其保持不變。 您可以設定 *bGetRow* 參數來達到這個目的：
 
 ```cpp
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **`false`**（預設值）指定目前的資料列遞增到下一個資料列（在此情況下，它會指向插入的資料列）。
+- **`false`** (預設值) 指定將目前的資料列遞增至下一個資料列 (在這種情況下，它會指向插入的資料列) 。
 
-- **`true`** 指定目前的資料列保持在其所在的位置。
+- **`true`** 指定目前的資料列保持在最新的位置。
 
 下列程式碼會設定繫結至 `Products` 資料表資料行的資料成員值，接著呼叫 `Insert`，以將含那些值的新資料列插入至資料列集的第 100 個資料列之後。 建議您設定所有資料行值，以避免新資料列中出現未定義的資料：
 
@@ -131,13 +131,13 @@ m_dwQuantityPerUnitLength = 10;        // "Pack of 10" has 10 characters
 HRESULT hr = product.Insert();
 ```
 
-如需更詳細的範例，請參閱 [CRowset::Insert](../../data/oledb/crowset-insert.md)。
+如需更詳細的範例，請參閱 [CRowset::Insert](./crowset-class.md#insert)。
 
 如需設定狀態和長度資料成員的詳細資訊，請參閱 [在精靈產生的存取子中的欄位狀態資料成員](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。
 
 ## <a name="deleting-rows-from-rowsets"></a>從資料列集刪除資料列
 
-[CRowset::Delete](../../data/oledb/crowset-delete.md) 可以從資料列集刪除目前的資料列。 下列程式碼會呼叫 `Delete` 來移除資料列集的第 100 個資料列：
+[CRowset::Delete](./crowset-class.md#delete) 可以從資料列集刪除目前的資料列。 下列程式碼會呼叫 `Delete` 來移除資料列集的第 100 個資料列：
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -156,9 +156,9 @@ HRESULT hr = product.Delete();
 
 除非您指定其他方法，否則呼叫 `SetData`、`Insert` 和 `Delete` 方法會立即更新資料存放區。 但是您可以延後更新，以便消費者將所有的變更儲存在本機快取區，然後在您呼叫下列其中一種更新方法時，將它們傳送到資料存放區：
 
-- [CRowset::Update](../../data/oledb/crowset-update.md) 會傳送目前資料列自上次擷取或對其進行 `Update` 呼叫之後所做的任何暫止變更。
+- [CRowset::Update](./crowset-class.md#update) 會傳送目前資料列自上次擷取或對其進行 `Update` 呼叫之後所做的任何暫止變更。
 
-- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md) 會傳送所有資料列自上次擷取或對其進行 `Update` 呼叫之後所做的任何暫止變更。
+- [CRowset::UpdateAll](./crowset-class.md#updateall) 會傳送所有資料列自上次擷取或對其進行 `Update` 呼叫之後所做的任何暫止變更。
 
 更新 (如更新方法所使用) 含有對命令進行變更的特定意義，請勿將其和 SQL **UPDATE** 命令混淆 (`SetData` 相當於 SQL **UPDATE** 命令)。
 
@@ -204,7 +204,7 @@ product.Update();                 // Update row 101 now
 
 例如，如果上述程式碼遺漏了第一個 `Update` 呼叫，則資料列 100 會保持不變，而資料列 101 會遭到變更。 在那之後，應用程式可能必須呼叫 `UpdateAll`，或移回資料列 100 並針對要更新的資料列呼叫 `Update`。
 
-最後，延後變更的主要原因是為了可以復原這些變更。 呼叫 [CRowset::Undo](../../data/oledb/crowset-undo.md) 可以將本機快取區變更的部分復原到任何暫止變更發生之前的資料存放區狀態。 請務必注意，`Undo` 不會使本機快取的狀態復原一個步驟 (即最近一次變更的前一個狀態)；相反地，它會清除該資料列的本機快取。 此外，`Undo` 只會影響目前的資料列。
+最後，延後變更的主要原因是為了可以復原這些變更。 呼叫 [CRowset::Undo](./crowset-class.md#undo) 可以將本機快取區變更的部分復原到任何暫止變更發生之前的資料存放區狀態。 請務必注意，`Undo` 不會使本機快取的狀態復原一個步驟 (即最近一次變更的前一個狀態)；相反地，它會清除該資料列的本機快取。 此外，`Undo` 只會影響目前的資料列。
 
 ## <a name="see-also"></a>另請參閱
 

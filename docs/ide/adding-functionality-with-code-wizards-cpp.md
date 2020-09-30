@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: ab0bf802221bcf3f93469f27f29f86c95877a407
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 651eac8c630636455dd1ffa04fdd02b71fa3cf62
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365338"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509702"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>使用程式碼精靈新增功能 (C++)
 
@@ -28,19 +28,19 @@ ms.locfileid: "81365338"
 - 來自 Type Lib 的 MFC 類別。
 
 > [!NOTE]
-> 您可以添加消息處理程式和映射消息到它們,並使用[MFC 類嚮導覆蓋 MFC](../mfc/reference/mfc-class-wizard.md)虛擬函數。
+> 您可以新增訊息處理常式，並將訊息對應至這些處理常式，並使用 [ [Mfc 類別] Wizard](../mfc/reference/mfc-class-wizard.md)覆寫 mfc 虛擬函式。
 
 ## <a name="accessing-c-code-wizards"></a>存取 C++ 程式碼精靈
 
 您可以從下列三個位置存取 [C++ 程式碼精靈]：
 
-- [專案]**** 功能表上的 [新增項目]**** 命令可讓您顯示 `Add New Item` 對話方塊，以協助您新增檔案至專案。 [新增類別]**** 命令會顯示 [[新增類別]](../ide/add-class-dialog-box.md) 對話方塊，進而開啟適用於您可以新增至專案之每個類別類型的精靈。 對於 MFC 類別,請使用[MFC 類別精靈](../mfc/reference/mfc-class-wizard.md)。 [新增資源]**** 命令會顯示 [[新增資源]](../windows/add-resource-dialog-box.md) 對話方塊，您可以從中建立或選取要新增至專案的資源。
+- [專案]**** 功能表上的 [新增項目]**** 命令可讓您顯示 `Add New Item` 對話方塊，以協助您新增檔案至專案。 [新增類別]**** 命令會顯示 [[新增類別]](./adding-a-class-visual-cpp.md#add-class-dialog-box) 對話方塊，進而開啟適用於您可以新增至專案之每個類別類型的精靈。 若為 MFC 類別，請使用 [Mfc 類別 Wizard](../mfc/reference/mfc-class-wizard.md)。 [新增資源]**** 命令會顯示 [[新增資源]](../windows/how-to-create-a-resource-script-file.md) 對話方塊，您可以從中建立或選取要新增至專案的資源。
 
    如果您在 [類別檢視] 中醒目提示專案的類別或介面，[專案]**** 功能表也會顯示下列命令：
 
   - **實作介面** (僅限來自控制項類別)
 
-  - **新增功能**
+  - **新增函數**
 
   - **加入變數**
 
@@ -69,8 +69,8 @@ ms.locfileid: "81365338"
    |存取程式碼精靈來源|描述|
    |-----------------------------|-----------------|
    |新增項目|「新增項目」程式碼精靈會將原始程式檔新增至您的專案。 如有必要，請建立其他目錄，以包含專案建置引擎預期找到的檔案。 可從新增項目圖示使用的程式碼精靈包括：<br /><br />- 新增 C++ 來源檔案 (.cpp、.h、.idl、.rc、.srf、.def、.rgs)。<br />- 新增網頁程式開發檔案 (.html、.asp、.css、.xml)。<br />- 新增公用程式和資源檔 (.bmp、.cur、.ico、.rct、.sql、.txt)。<br /><br />這些程式碼精靈通常不會要求您提供任何資訊，而是將檔案新增至您的開發樹狀結構。 您可以重新命名屬性視窗中的檔案。|
-   |方案總管|可從 [方案總管] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增]**** 選項，請在開發樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [方案總管] 使用的程式碼精靈包括：<br /><br />- 添加類(打開包含新代碼嚮導的**添加類**對話方塊)。<br />- 新增資源 (新增、匯入或自訂)。<br />- 新增 Web 參考。|
-   |類別檢視|可從 [類別檢視] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增]**** 選項，請在類別樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [類別檢視] 使用的程式碼精靈包括：<br /><br />- [新增成員函式](../ide/adding-a-member-function-visual-cpp.md)。<br />- [新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)。<br />- [新增類別](../ide/adding-a-class-visual-cpp.md)。<br />- [實作介面](../ide/implement-interface-wizard.md) (僅限來自控制項類別)<br />- [新增連線點](../ide/implement-connection-point-wizard.md)(只有限制 ATL 類別)<br />- [新增方法](../ide/add-method-wizard.md) (僅限來自介面)<br />- [加入屬性](../ide/names-add-property-wizard.md) (僅限來自介面)<br />- [新增事件](../ide/add-event-wizard.md) (僅限來自控制項類別)<br /><br />選取 [新增類別] 會開啟 [新增類別]**** 對話方塊，讓您存取所有新的「新增類別」程式碼精靈。|
+   |方案總管|可從 [方案總管] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增]**** 選項，請在開發樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [方案總管] 使用的程式碼精靈包括：<br /><br />-新增類別 (開啟包含新的程式碼嚮導) 的 [ **加入類別** ] 對話方塊。<br />- 新增資源 (新增、匯入或自訂)。<br />- 新增 Web 參考。|
+   |類別檢視|可從 [類別檢視] 使用的程式碼精靈取決於以滑鼠右鍵按一下項目時的游標焦點所在。 如果當您以滑鼠右鍵按一下項目時未顯示 [新增]**** 選項，請在類別樹狀結構中將游標上移一層，然後再試一次。 不論您的游標所在位置，程式碼精靈一律會將額外的程式碼放在開發樹狀結構中的適當位置。 可從 [類別檢視] 使用的程式碼精靈包括：<br /><br />- [新增成員函式](../ide/adding-a-member-function-visual-cpp.md)。<br />- [新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)。<br />- [新增類別](../ide/adding-a-class-visual-cpp.md)。<br />- [實作介面](./implementing-an-interface-visual-cpp.md#implement-interface-wizard) (僅限來自控制項類別)<br />- 只 (ATL 類別[新增連接點](./implementing-a-connection-point-visual-cpp.md#implement-connection-point-wizard)) <br />- [新增方法](./adding-a-method-visual-cpp.md#add-method-wizard) (僅限來自介面)<br />- [加入屬性](./adding-a-property-visual-cpp.md#names-add-property-wizard) (僅限來自介面)<br />- [新增事件](./adding-an-event-visual-cpp.md#add-event-wizard) (僅限來自控制項類別)<br /><br />選取 [新增類別] 會開啟 [新增類別]**** 對話方塊，讓您存取所有新的「新增類別」程式碼精靈。|
 
 ## <a name="see-also"></a>另請參閱
 

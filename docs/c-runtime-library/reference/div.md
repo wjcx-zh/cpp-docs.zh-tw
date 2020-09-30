@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0c87ad44986363e871d68bccde757214f5e2c45
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234220"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509896"
 ---
 # <a name="div-ldiv-lldiv"></a>div、ldiv、lldiv
 
@@ -77,13 +77,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>傳回值
 
-使用類型的引數所呼叫的**div**會傳回 **`int`** **div_t**類型的結構，其中包含商和餘數。 具有類型之引數的傳回值 **`long`** 是**ldiv_t**，而且具有類型之引數的傳回值 **`long long`** 是**lldiv_t**。 **div_t**、 **ldiv_t**和**lldiv_t**定義于中 \<stdlib.h> 。
+使用型別引數呼叫的**div**會傳回 **`int`** 型別**div_t**的結構，其中包含商和餘數。 具有類型之引數的傳回值 **`long`** 為 **ldiv_t**，且具有類型之引數的傳回值 **`long long`** 為 **lldiv_t**。 **div_t**、 **ldiv_t**和 **lldiv_t** 是在中定義 \<stdlib.h> 。
 
 ## <a name="remarks"></a>備註
 
-**Div**函式會將*推*除以*denom* ，因此會計算商和餘數。 [Div_t](../../c-runtime-library/standard-types.md)結構包含**商、...** 和餘數， **rem**。商的正負號與數學商相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會結束並出現錯誤訊息。
+**Div**函數會將*推*除以*denom* ，進而計算商和餘數。 [Div_t](../../c-runtime-library/standard-types.md)結構包含**商、「**」和「餘數」（ **rem**）。商的正負號與數學商的正負號相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會結束並出現錯誤訊息。
 
-採用類型或引數的**div**多載 **`long`** **`long long`** 僅適用于 c + + 程式碼。 傳回類型[ldiv_t](../../c-runtime-library/standard-types.md)和[lldiv_t](../../c-runtime-library/standard-types.md)包含與**div_t**的成員**rem**具有相同意義**的成員。**
+採用型別引數或的 **div** 的多載 **`long`** **`long long`** 僅適用于 c + + 程式碼。 傳回型別 [ldiv_t](../../c-runtime-library/standard-types.md) 和 [lldiv_t](../../c-runtime-library/standard-types.md) 包含成員 **-** 和 **rem**，與 **div_t**的成員具有相同的意義。
 
 ## <a name="requirements"></a>需求
 
@@ -134,5 +134,5 @@ The quotient is 67, and the remainder is 5
 ## <a name="see-also"></a>另請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv、lldiv](ldiv-lldiv.md)<br/>
+[ldiv、lldiv]()<br/>
 [imaxdiv](imaxdiv.md)<br/>

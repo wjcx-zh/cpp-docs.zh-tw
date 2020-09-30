@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: eea0ebeaf83b9203cf57f7b35fe3dd1ec2d63d81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d78aa23469cc0fa94498f93e9a6975e0a7c827e9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843998"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509035"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 類別
 
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 *SessionClass*<br/>
 繼承自 `IDBSchemaRowsetImpl` 的類別。 一般而言，此類別會是使用者的工作階段類別。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -78,13 +78,13 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 | 名稱 | 描述 |
 |-|-|
 |[GetRowset](#getrowset)|傳回結構描述資料列集。|
-|[GetSchemas](#getschemas)|傳回 [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)可存取的結構描述資料列集清單。|
+|[GetSchemas](#getschemas)|傳回 [IDBSchemaRowsetImpl::GetRowset](#getrowset)可存取的結構描述資料列集清單。|
 
 ## <a name="remarks"></a>備註
 
-此類別實作 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 介面和範本化的建立者函式 [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)。
+此類別實作 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 介面和範本化的建立者函式 [CreateSchemaRowset](#createschemarowset)。
 
-OLE DB 使用結構描述資料列集，傳回提供者內部資料的相關資料。 這類資料通常稱為「中繼資料」。 根據預設，提供者一律必須支援 `DBSCHEMA_TABLES` 、 `DBSCHEMA_COLUMNS` 和 `DBSCHEMA_PROVIDER_TYPES` ，如 OLE DB 程式設計*人員參考*中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))所述。 結構描述資料列集是在結構描述對應中指定。 如需結構描述對應項目的資訊，請參閱 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)。
+OLE DB 使用結構描述資料列集，傳回提供者內部資料的相關資料。 這類資料通常稱為「中繼資料」。 根據預設，提供者一律必須支援 `DBSCHEMA_TABLES` 、 `DBSCHEMA_COLUMNS` 和 `DBSCHEMA_PROVIDER_TYPES` ，如 OLE DB 程式設計*人員參考*中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))所述。 結構描述資料列集是在結構描述對應中指定。 如需結構描述對應項目的資訊，請參閱 [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)。
 
 [ATL 物件精靈] 中的 [OLE DB 提供者精靈] 會自動為您專案中的結構描述資料列集產生程式碼 根據預設，此 wizard 支援先前所述的強制架構資料列集 ) 。當您使用 ATL 物件 Wizard 建立取用者時，會使用架構資料列集將正確的資料系結至提供者。 ( 如果您未實作結構描述資料列集以提供正確的中繼資料，此精靈將不會繫結正確的資料。
 
@@ -112,13 +112,13 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 [in] 消費者針對結構描述資料列集傳入的限制數目。
 
 *>rgrestrictions*<br/>
-[in] 要設定之限制值的長度 *cRestrictions* 陣列。 如需詳細資訊，請參閱[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)中 *>rgrestrictions*參數的描述。
+[in] 要設定之限制值的長度 *cRestrictions* 陣列。 如需詳細資訊，請參閱[SetRestrictions](#setrestrictions)中 *>rgrestrictions*參數的描述。
 
 ### <a name="remarks"></a>備註
 
 使用 `CheckRestrictions` 針對結構描述資料列集檢查限制的有效性。 它會檢查 `DBSCHEMA_TABLES` 、和架構資料列集的限制 `DBSCHEMA_COLUMNS` `DBSCHEMA_PROVIDER_TYPES` 。 呼叫它來判斷取用者的呼叫 `IDBSchemaRowset::GetRowset` 是否正確。 如果您想要支援與以上所列不同的結構描述資料列集，您應該建立自己的函式來執行這項工作。
 
-`CheckRestrictions` 判斷取用者是否以正確的限制呼叫 [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) ，以及正確的限制類型 (例如，提供者支援之字串) 的 VT_BSTR。 它也會判斷是否支援正確的限制數目。 根據預設， `CheckRestrictions` 會透過 [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 呼叫，來詢問提供者有關它在指定資料列集上支援的限制。 接著，它會將來自消費者的限制與提供者支援的限制進行比較，以判斷其為成功或失敗。
+`CheckRestrictions` 判斷取用者是否以正確的限制呼叫 [GetRowset](#getrowset) ，以及正確的限制類型 (例如，提供者支援之字串) 的 VT_BSTR。 它也會判斷是否支援正確的限制數目。 根據預設， `CheckRestrictions` 會透過 [SetRestrictions](#setrestrictions) 呼叫，來詢問提供者有關它在指定資料列集上支援的限制。 接著，它會將來自消費者的限制與提供者支援的限制進行比較，以判斷其為成功或失敗。
 
 如需架構資料列集的詳細資訊，請參閱 Windows SDK 中的 OLE DB 程式設計*人員參考* [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
@@ -199,7 +199,7 @@ void SetRestrictions(ULONG cRestrictions,
 
 ### <a name="remarks"></a>備註
 
-`IDBSchemaRowset`物件會呼叫 `SetRestrictions` 以判斷您在特定架構資料列集上支援的限制 (透過 upcasted 指標) 來呼叫[GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) 。 限制允許消費者只擷取相符的資料列 (例如在資料表 "MyTable" 中尋找所有資料行)。 限制是選擇性的，在不支援任何限制的情況下 (預設)，一律會傳回所有資料。
+`IDBSchemaRowset`物件會呼叫 `SetRestrictions` 以判斷您在特定架構資料列集上支援的限制 (透過 upcasted 指標) 來呼叫[GetSchemas](#getschemas) 。 限制允許消費者只擷取相符的資料列 (例如在資料表 "MyTable" 中尋找所有資料行)。 限制是選擇性的，在不支援任何限制的情況下 (預設)，一律會傳回所有資料。
 
 此方法的預設執行會將 *>rgrestrictions* 陣列元素設定為0。 您可以覆寫工作階段類別中的預設，將限制設定為非預設。
 
@@ -254,13 +254,13 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 ### <a name="remarks"></a>備註
 
-此方法需要使用者具有工作階段類別中的結構描述對應。 `GetRowset`如果*rguidSchema*參數等於其中一個對應專案 guid，請使用架構對應資訊建立指定的資料列集物件。 如需對應項目的說明，請參閱 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) 。
+此方法需要使用者具有工作階段類別中的結構描述對應。 `GetRowset`如果*rguidSchema*參數等於其中一個對應專案 guid，請使用架構對應資訊建立指定的資料列集物件。 如需對應項目的說明，請參閱 [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry) 。
 
 請參閱 Windows SDK 中的 [IDBSchemaRowset：： GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) 。
 
 ## <a name="idbschemarowsetimplgetschemas"></a><a name="getschemas"></a> IDBSchemaRowsetImpl：： GetSchemas
 
-傳回 [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)可存取的結構描述資料列集清單。
+傳回 [IDBSchemaRowsetImpl::GetRowset](#getrowset)可存取的結構描述資料列集清單。
 
 ### <a name="syntax"></a>語法
 
@@ -291,5 +291,5 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 
 [架構資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [支援架構資料列集](../../data/oledb/supporting-schema-rowsets.md)<br/>
-[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)<br/>
+[SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)<br/>
 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider)

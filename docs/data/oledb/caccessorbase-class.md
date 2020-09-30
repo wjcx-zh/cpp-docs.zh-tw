@@ -25,12 +25,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843296"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509113"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 類別
 
@@ -54,7 +54,7 @@ OLE DB 範本中的所有存取子都衍生自這個類別。 `CAccessorBase` �
 | [IsAutoAccessor](#isauto) | 測試指定的存取子是否為 autoaccessor。 |
 | [ReleaseAccessors](#release) | 釋放存取子。 |
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -70,7 +70,7 @@ void Close();
 
 ### <a name="remarks"></a>備註
 
-您必須先呼叫 [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) 。
+您必須先呼叫 [ReleaseAccessors](#release) 。
 
 ## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase：： GetHAccessor
 
@@ -145,7 +145,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 ### <a name="remarks"></a>備註
 
-從 [CAccessorRowset：： Close](../../data/oledb/caccessorrowset-close.md)呼叫。
+從 [CAccessorRowset：： Close](./caccessorrowset-class.md#close)呼叫。
 
 ## <a name="see-also"></a>另請參閱
 

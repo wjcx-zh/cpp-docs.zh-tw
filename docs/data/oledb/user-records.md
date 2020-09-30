@@ -15,17 +15,17 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209439"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509434"
 ---
 # <a name="user-records"></a>使用者資料錄
 
 > [!NOTE]
-> Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍然可以手動加入功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
+> Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍能手動新增功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
 
 若要使用靜態存取子 (也就是衍生自 `CAccessor` 的存取子)，您的消費者必須具有使用者記錄。 使用者記錄是一個 C++ 類別，其中包含要處理輸入或輸出的資料元素。 **ATL OLE DB 消費者精靈**會為您的消費者產生使用者記錄。 您可以將方法加入至使用者記錄，以供選擇性的工作 (例如處理命令) 使用。
 
@@ -64,7 +64,7 @@ END_PARAM_MAP()
 
 如需對您必須使用多重存取子的案例進行詳細討論，請參閱[在資料列集上使用多重存取子](../../data/oledb/using-multiple-accessors-on-a-rowset.md)。
 
-下列範例顯示已修改資料記錄，以在資料列集上支援多重存取子。 它不會使用 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP，而是會針對每個存取子改用 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) 和 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)。 BEGIN_ACCESSOR 巨集會指定存取子數目 (從零位移)，以及存取子是否為自動存取子。 自動存取子會呼叫 `GetData`，在對 [MoveNext](../../data/oledb/crowset-movenext.md) 的呼叫上自動擷取資料。 非自動存取子則會要求您明確地擷取資料。 如果您要繫結到大型資料欄位 (例如點陣圖影像)，而且您可能不想針對每個記錄擷取這類欄位，請使用非自動存取子。
+下列範例顯示已修改資料記錄，以在資料列集上支援多重存取子。 它不會使用 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP，而是會針對每個存取子改用 [BEGIN_ACCESSOR_MAP](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor_map) 和 [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor)。 BEGIN_ACCESSOR 巨集會指定存取子數目 (從零位移)，以及存取子是否為自動存取子。 自動存取子會呼叫 `GetData`，在對 [MoveNext](./crowset-class.md#movenext) 的呼叫上自動擷取資料。 非自動存取子則會要求您明確地擷取資料。 如果您要繫結到大型資料欄位 (例如點陣圖影像)，而且您可能不想針對每個記錄擷取這類欄位，請使用非自動存取子。
 
 ```cpp
 class CMultiArtists

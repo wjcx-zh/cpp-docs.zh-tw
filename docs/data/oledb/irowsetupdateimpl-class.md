@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 7a63062a02ebcc6c8a89fadceb36dc81bc9af88c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844921"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509777"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 類別
 
@@ -84,7 +84,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *T*<br/>
 衍生自的類別 `IRowsetUpdateImpl` 。
 
-*Storage*<br/>
+*存放裝置*<br/>
 使用者記錄。
 
 *UpdateArray*<br/>
@@ -96,7 +96,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *MapClass*<br/>
 提供者所保留的所有資料列控制碼的儲存單位。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -163,7 +163,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 ### <a name="remarks"></a>備註
 
-這個方法會覆寫 [IRowsetChangeImpl：： SetData](../../data/oledb/irowsetchangeimpl-setdata.md) 方法，但會包含原始資料的快取，以允許立即或延遲的工作處理。
+這個方法會覆寫 [IRowsetChangeImpl：： SetData](./irowsetchangeimpl-class.md#setdata) 方法，但會包含原始資料的快取，以允許立即或延遲的工作處理。
 
 ## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a> IRowsetUpdateImpl：： GetOriginalData
 
@@ -278,7 +278,7 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 
 ### <a name="remarks"></a>備註
 
-藉由呼叫 [IRowsetChangeImpl：： FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)來傳送變更。 取用者必須呼叫 [CRowset：： Update](../../data/oledb/crowset-update.md) ，變更才會生效。 將*prgRowstatus*設定為適當的值，如《 OLE DB 程式設計*人員參考*》中的資料[列狀態](/previous-versions/windows/desktop/ms722752(v=vs.85))所述。
+藉由呼叫 [IRowsetChangeImpl：： FlushData](./irowsetchangeimpl-class.md#flushdata)來傳送變更。 取用者必須呼叫 [CRowset：： Update](./crowset-class.md#update) ，變更才會生效。 將*prgRowstatus*設定為適當的值，如《 OLE DB 程式設計*人員參考*》中的資料[列狀態](/previous-versions/windows/desktop/ms722752(v=vs.85))所述。
 
 ## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a> IRowsetUpdateImpl：： IsUpdateAllowed
 
@@ -305,7 +305,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 ### <a name="remarks"></a>備註
 
-如果您判斷應該允許更新，則會傳回 S_OK;否則會傳回 E_FAIL。 如果您允許更新，您也必須將 `DBROWSTATUS` [IRowsetUpdateImpl：： update](../../data/oledb/irowsetupdateimpl-update.md) 中的設定為適當的資料 [列狀態](/previous-versions/windows/desktop/ms722752(v=vs.85))。
+如果您判斷應該允許更新，則會傳回 S_OK;否則會傳回 E_FAIL。 如果您允許更新，您也必須將 `DBROWSTATUS` [IRowsetUpdateImpl：： update](#update) 中的設定為適當的資料 [列狀態](/previous-versions/windows/desktop/ms722752(v=vs.85))。
 
 ## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a> IRowsetUpdateImpl：： m_mapCachedData
 

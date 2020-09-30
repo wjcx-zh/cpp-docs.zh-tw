@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845662"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509096"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
 
@@ -52,7 +52,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 *T*<br/>
 包含的類別 `BEGIN_PROPSET_MAP` 。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -72,9 +72,9 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 此類別大部分是實作為的詳細資料。
 
-`CUtlProps` 包含兩個在內部設定屬性的成員： [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) 和 [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。
+`CUtlProps` 包含兩個在內部設定屬性的成員： [GetPropValue](#getpropvalue) 和 [SetPropValue](#setpropvalue)。
 
-如需屬性集對應中所使用之宏的詳細資訊，請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 和 [END_PROPSET_MAP](../../data/oledb/end-propset-map.md)。
+如需屬性集對應中所使用之宏的詳細資訊，請參閱 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) 和 [END_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#end_propset_map)。
 
 ## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps：： GetPropValue
 
@@ -163,7 +163,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 - `IRowsetScroll`
 
-如果您想要處理其他介面，請在您的資料來源、會話、命令或資料列集類別中覆寫此函數，以處理函式。 您的覆寫應該經過一般 set/get 屬性介面，以確保設定屬性也會設定任何連結的屬性 (請參閱 [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)) 。
+如果您想要處理其他介面，請在您的資料來源、會話、命令或資料列集類別中覆寫此函數，以處理函式。 您的覆寫應該經過一般 set/get 屬性介面，以確保設定屬性也會設定任何連結的屬性 (請參閱 [OnPropertyChanged](#onpropertychanged)) 。
 
 ## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps：： OnPropertyChanged
 

@@ -3,12 +3,12 @@ title: Windows Runtime C++ Template Library (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840529"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509794"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -32,11 +32,11 @@ Windows 執行階段 C++ 範本庫和 c + +/CX 提供不同的優點。 以下�
 - C + +/CX 以例外狀況表示 COM HRESULT 值。 如果您已繼承使用 COM 的程式碼基底，或不使用例外狀況的程式碼基底，您可能會發現 Windows 執行階段 C++ 範本庫是使用 Windows 執行階段的自然方式，因為您不需要使用例外狀況。
 
    > [!NOTE]
-   > Windows 執行階段 C++ 範本庫使用 HRESULT 值，而且不會擲回例外狀況。 此外，Windows 執行階段 C++ 範本庫會使用智慧型指標和 RAII 模式，協助保證當您的應用程式程式碼擲回例外狀況時，物件會正確地損毀。 如需智慧型指標和 RAII 的詳細資訊，請參閱 [智慧型指標](../../cpp/smart-pointers-modern-cpp.md) 和 [物件 (RAII) 的資源 ](../../cpp/objects-own-resources-raii.md)。
+   > Windows 執行階段 C++ 範本庫使用 HRESULT 值，而且不會擲回例外狀況。 此外，Windows 執行階段 C++ 範本庫會使用智慧型指標和 RAII 模式，協助保證當您的應用程式程式碼擲回例外狀況時，物件會正確地損毀。 如需智慧型指標和 RAII 的詳細資訊，請參閱 [智慧型指標](../../cpp/smart-pointers-modern-cpp.md) 和 [物件 (RAII) 的資源 ](../../cpp/object-lifetime-and-resource-management-modern-cpp.md)。
 
 - Windows 執行階段 C++ 範本庫的用途和設計是由 Active Template Library (ATL) 所啟發，這是一組可簡化 COM 物件程式設計的範本型 c + + 類別。 因為 Windows 執行階段 C++ 範本庫使用標準 c + + 包裝 Windows 執行階段，所以您可以更輕鬆地移植以 ATL 撰寫的許多現有 COM 元件，並與 Windows 執行階段互動。 如果您已經知道 ATL，您可能會發現 Windows 執行階段 C++ 範本庫程式設計更容易。
 
-## <a name="getting-started"></a>開始使用
+## <a name="getting-started"></a>快速入門
 
 以下是一些可協助您立即開始使用 Windows 執行階段 C++ 範本庫的資源。
 
@@ -76,7 +76,7 @@ Windows 執行階段 C++ 範本庫和 c + +/CX 提供不同的優點。 以下�
 [DirectX 彈珠迷宮遊戲範例](/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 示範如何使用 Windows 執行階段 C++ 範本庫來管理 COM 元件的存留期，例如 DirectX 和媒體基礎在全立體遊戲的內容中。
 
-[傳統型應用程式的快顯通知](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
+[桌面應用程式的快顯通知](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
 示範如何從桌面應用程式傳送快顯通知。
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>相較于 ATL Windows 執行階段 C++ 範本庫

@@ -4,18 +4,18 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 9e93b40313a215dfe5872b33dc7d41641204a2f1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311898"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508975"
 ---
 # <a name="implementing-a-simple-consumer"></a>實作簡單消費者
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍然可以手動加入功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
+Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍能手動新增功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
 
 ::: moniker-end
 
@@ -33,7 +33,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 > [!NOTE]
 > 若要建置消費者應用程式來測試 `MyProv` ([增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)中所述的同一個提供者)，您必須包含書籤支援，如[為消費者加入書籤支援](#bookmark)中所述。
 
-## <a name="retrieve" ></a> 使用消費者擷取資料
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> 使用消費者擷取資料
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>修改主控台應用程式以使用 OLE DB 消費者
 
@@ -64,7 +64,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
     }
     ```
 
-## <a name="bookmark" ></a> 為消費者加入書籤支援
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> 為消費者加入書籤支援
 
 書籤是可在資料表中唯一識別資料列的資料行。 它通常是索引鍵資料行，但並非總是如此；它是提供者專用的。 本節示範如何加入書籤支援。 若要這樣做，您需要在使用者記錄類別中執行下列步驟：
 
@@ -72,7 +72,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 - 透過設定 `DBPROP_IRowsetLocate` 屬性來向提供者要求書籤資料行。
 
-- 使用 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) 巨集，即可將書籤項目加入至資料行對應。
+- 使用 [BOOKMARK_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#bookmark_entry) 巨集，即可將書籤項目加入至資料行對應。
 
 先前的步驟會為您提供書籤支援，以及要一同運作的書籤物件。 此程式碼範例示範一個書籤，如下所示：
 
@@ -80,7 +80,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 - 循列將資料列集資料輸出到檔案。
 
-- 透過呼叫 [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)來將資料列集資料指標移至書籤。
+- 透過呼叫 [MoveToBookmark](./crowset-class.md#movetobookmark)來將資料列集資料指標移至書籤。
 
 - 輸出已標記為書籤的資料列，並將它附加到檔案結尾。
 
@@ -207,4 +207,4 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 ## <a name="see-also"></a>另請參閱
 
-[使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[使用 Wizard 建立 OLE DB 的取用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

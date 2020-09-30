@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 94e44493b9356b3a0717c42aa1bed510ebe460dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039804"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509984"
 ---
 # <a name="ltbitgt-functions"></a>&lt;位 &gt; 函數
 
@@ -106,14 +106,17 @@ std::bit_cat<int>(f) = 7f800000
 低層級程式碼通常需要將一個類型的物件解讀為另一個類型。 重新解譯物件與原始物件具有相同的位標記法，但它是不同的類型。
 
 不使用 `reinterpret_cast` 或 `memcpy()` ， `bit_cast()` 是進行這些轉換的較佳方式。 更好的原因是：
+
 - `bit_cast()` 是 `constexpr`
 - `bit_cast()` 需要完整可複製和相同大小的類型。 這可防止您可能遇到的潛在問題， `reinterpret_cast` 並 `memcpy` 因為它們可以用來不慎且不正確地轉換非完整可複製類型。 此外，也可以 `memcpy()` 用來不慎複製大小不相同的類型。 例如，double (8 個位元組) 為不帶正負號的 int (4 個位元組) 或其他方面。
 
 如果有下列情況，這個多載只會參與多載解析：
--  `sizeof(To) == sizeof(From)`
+
+- `sizeof(To) == sizeof(From)`
 - `To` 和 `From` 都 [is_trivially_copyable](is-trivially-copyable-class.md)。
 
 只有在、和其子類別的類型為時，這個函式範本才是 `constexpr` `To` `From` ：
+
 - 不是等位或指標類型
 - 不是成員類型的指標
 - 非 volatile 限定
@@ -490,7 +493,7 @@ countr_one(0b11111111) = 8
 ## <a name="has_single_bit"></a>`has_single_bit`
 
 檢查某個值是否只有一個位設定。這和測試值是否為2的乘冪一樣。
- 
+
 ```cpp
 template <class T>
 [[nodiscard]] constexpr bool has_single_bit(T value) noexcept;
@@ -544,7 +547,7 @@ has_single_bit(0b1001) = false
 ## <a name="popcount"></a>`popcount`
 
 計算設定為不帶正負號整數值之一的位數。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr int popcount(T value) noexcept;
@@ -603,7 +606,7 @@ popcount(0b1111) = 4
 ## <a name="rotl"></a>`rotl`
 
 將不帶正負號整數值的位向左旋轉指定的次數。 「落在」最左邊的位會旋轉到最右邊的位。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotl(T value, int s) noexcept;
@@ -665,7 +668,7 @@ rotl(0b00000001,-1) = 0b10000000
 ## <a name="rotr"></a>`rotr`
 
 將右邊的位數旋轉 `value` 指定的次數。 最右邊位的「落在」位會旋轉回最左邊的位。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotr(T value, int s) noexcept;

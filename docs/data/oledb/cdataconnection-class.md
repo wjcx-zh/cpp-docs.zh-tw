@@ -61,24 +61,24 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 118b8d09b90899eca0f257e319aabbefd92f359f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838396"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509098"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 類別
 
 管理與資料來源的連接。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CDataConnection
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -108,12 +108,12 @@ class CDataConnection
 
 `CDataConnection` 是用來建立用戶端的實用類別，因為它會封裝必要的物件 (資料來源和會話) ，以及連接到資料來源時所需執行的一些工作。
 
-`CDataConnection`如果沒有，您就必須建立 `CDataSource` 物件、呼叫其[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)方法，然後建立[CSession](../../data/oledb/csession-class.md)物件的實例，呼叫其[Open](../../data/oledb/csession-open.md)方法，然後建立[CCommand](../../data/oledb/ccommand-class.md)物件，並呼叫其 `Open` * 方法。
+`CDataConnection`如果沒有，您就必須建立 `CDataSource` 物件、呼叫其[OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring)方法，然後建立[CSession](../../data/oledb/csession-class.md)物件的實例，呼叫其[Open](./csession-class.md#open)方法，然後建立[CCommand](../../data/oledb/ccommand-class.md)物件，並呼叫其 `Open` * 方法。
 
 使用時 `CDataConnection` ，您只需要建立連線物件、將初始化字串傳遞給它，然後使用該連接來開啟命令。 如果您打算重複使用與資料庫的連接，最好讓連線保持開啟，並 `CDataConnection` 提供便利的方式來進行這項作業。
 
 > [!NOTE]
-> 如果您要建立需要處理多個會話的資料庫應用程式，您將需要使用 [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。
+> 如果您要建立需要處理多個會話的資料庫應用程式，您將需要使用 [OpenNewSession](#opennewsession)。
 
 ## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a> CDataConnection：： CDataConnection
 
@@ -258,7 +258,7 @@ operator const CDataSource*() throw();
 
 這個運算子會將指標傳回至包含的 `CDataSource` 物件，讓您傳遞需要 `CDataConnection` 指標的 `CDataSource` 物件。
 
-如需使用方式範例，請參閱 [運算子 CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) 。
+如需使用方式範例，請參閱 [運算子 CDataSource&](#op_cdata_amp) 。
 
 ## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a> CDataConnection：： operator CSession&amp;
 
@@ -298,7 +298,7 @@ operator const CSession*() throw();
 
 ### <a name="example"></a>範例
 
-如需使用方式範例，請參閱 [運算子 CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md) 。
+如需使用方式範例，請參閱 [運算子 CSession&](#op_csession_amp) 。
 
 ## <a name="see-also"></a>另請參閱
 

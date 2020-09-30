@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: 2b30cef2baf8c13c5001e44901b984aa1293494d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 032274d7dc85aa823cd28cf61e4606903f13ad9e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212299"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509556"
 ---
 # <a name="caccessor-class"></a>CAccessor 類別
 
@@ -35,11 +35,11 @@ class CAccessor : public CAccessorBase, public T
 
 ## <a name="remarks"></a>備註
 
-當記錄以靜態方式系結至資料來源時，會使用它。 記錄包含緩衝區。 這個類別支援資料列集上的多個存取子。
+當記錄靜態系結至資料來源時，就會使用它。 記錄包含緩衝區。 此類別支援資料列集上的多個存取子。
 
 當您知道資料庫的結構和類型時，請使用此存取子類型。
 
-如果您的存取子包含指向必須釋放之記憶體（例如 `BSTR` 或介面）的欄位，則在讀取下一筆記錄之前，請先呼叫成員函式[CAccessorRowset：： FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) 。
+如果存取子包含指向記憶體 (的欄位 `BSTR` ，例如必須釋放的或介面) ，則在讀取下一個記錄之前，請先呼叫成員函式 [CAccessorRowset：： FreeRecordMemory](./caccessorrowset-class.md#freerecordmemory) 。
 
 ## <a name="requirements"></a>需求
 
@@ -48,4 +48,4 @@ class CAccessor : public CAccessorBase, public T
 ## <a name="see-also"></a>另請參閱
 
 [OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB 取用者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

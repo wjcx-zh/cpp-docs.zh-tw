@@ -91,12 +91,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: ee98c7e694912d27585755f0ff29eafd0cdbdbca
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 44e73b422f10c63756c247fc7bbacd2f2de3235a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353099"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509670"
 ---
 # <a name="map-class"></a>map 類別
 
@@ -163,13 +163,13 @@ map 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件，�
 
 ### <a name="constructors"></a>建構函式
 
-|名稱|說明|
+|名稱|描述|
 |-|-|
 |[map](#map)|建構特定大小的清單，或具有特定值之項目的清單，或具有特定 `allocator` 的清單，或是做為其他對應的複本。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|名稱|說明|
+|名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|對應物件之 `allocator` 類別的 typedef。|
 |[const_iterator](#const_iterator)|雙向反覆運算器的 typedef，可以讀取中的 **`const`** 元素 `map` 。|
@@ -221,7 +221,7 @@ map 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件，�
 
 ### <a name="operators"></a>運算子
 
-|名稱|說明|
+|名稱|描述|
 |-|-|
 |[operator&#91;&#93;](#op_at)|將具有特定索引鍵值的項目插入對應中。|
 |[運算子 =](#op_eq)|用另一個對應複本取代對應的項目。|
@@ -645,7 +645,7 @@ template<class K> bool contains(const K& key) const;
 
 `contains()` 是 c + + 20 的新功能。 若要使用它，請指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 的編譯器選項。
 
-`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。 如需詳細資訊，請參閱 [關聯容器中的異類查閱](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 。
+`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。 如需詳細資訊，請參閱 [關聯容器中的異類查閱](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 。
 
 ### <a name="example"></a>範例
 
@@ -667,7 +667,7 @@ int main()
     // call template function
     std::map<std::string, int, std::less<>> m2 = {{"ten", 10}, {"twenty", 20}, {"thirty", 30}};
     std::cout << m2.contains("ten");
-    
+
     return 0;
 }
 ```

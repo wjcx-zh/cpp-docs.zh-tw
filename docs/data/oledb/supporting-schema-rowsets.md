@@ -7,28 +7,28 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 1ad1a91e8a79238eee773d92a756b0238e8901d5
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707494"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509457"
 ---
 # <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
 
-結構描述資料列集可讓消費者取得資料存放區的相關資訊，而不需要知道其基礎結構或結構描述。 例如，資料存放區可能會將資料表組織成使用者定義的階層，因此除了讀取結構描述之外，沒辦法確保知道結構描述 (另一個範例，Visual C++ 精靈會使用結構描述資料列產生存取子以供消費者使用)。若要讓消費者這樣做，提供者的工作階段物件會在 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 介面上公開方法。 在 Visual C++ 應用程式中，您可以使用 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 類別實作 `IDBSchemaRowset`。
+結構描述資料列集可讓消費者取得資料存放區的相關資訊，而不需要知道其基礎結構或結構描述。 例如，資料存放區可能會將資料表組織成使用者定義的階層，因此除了讀取結構描述之外，沒辦法確保知道結構描述   (為另一個範例，Visual C++ 的嚮導會使用架構資料列集來產生取用者的存取子。 ) 允許取用者執行此動作，提供者的會話物件會在 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 介面上公開方法。 在 Visual C++ 應用程式中，您可以使用 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 類別實作 `IDBSchemaRowset`。
 
 `IDBSchemaRowsetImpl` 支援下列方法：
 
-- [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) 會針對結構描述資料列集檢查限制的有效性。
+- [CheckRestrictions](./idbschemarowsetimpl-class.md#checkrestrictions) 會針對結構描述資料列集檢查限制的有效性。
 
-- [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) 會為範本參數所指定的物件實作 COM 物件建立者函式。
+- [CreateSchemaRowset](./idbschemarowsetimpl-class.md#createschemarowset) 會為範本參數所指定的物件實作 COM 物件建立者函式。
 
-- [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 會指定您在特定結構描述資料列集上支援的限制。
+- [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions) 會指定您在特定結構描述資料列集上支援的限制。
 
-- [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) 會傳回 (繼承自介面的) 結構描述資料列集。
+- [IDBSchemaRowset::GetRowset](./idbschemarowsetimpl-class.md#getrowset) 會傳回 (繼承自介面的) 結構描述資料列集。
 
-- [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) 會傳回一份可供 (繼承自介面的) `IDBSchemaRowsetImpl::GetRowset` 存取的結構描述資料列集清單。
+- [GetSchemas](./idbschemarowsetimpl-class.md#getschemas) 會傳回一份可供 (繼承自介面的) `IDBSchemaRowsetImpl::GetRowset` 存取的結構描述資料列集清單。
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>ATL OLE DB 提供者精靈支援
 
@@ -94,7 +94,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` 繼承自 `IDBSchemaRowsetImpl`，因此它擁有處理方法的所有限制。 使用 `CSchemaRowsetImpl` 宣告三個子類別 (列在上述的結構描述對應中)：`CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset` 和 `CUpdateSessionPTSchemaRowset`。 這些子類別中的每一個都有一個 `Execute`，可處理其個別一組限制 (搜尋條件)。 每個 `Execute` 方法都會比較 *cRestrictions* 和 *rgRestrictions* 參數的值。 請參閱 [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 中這些參數的描述。
+`CUpdateSession` 繼承自 `IDBSchemaRowsetImpl`，因此它擁有處理方法的所有限制。 使用 `CSchemaRowsetImpl` 宣告三個子類別 (列在上述的結構描述對應中)：`CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset` 和 `CUpdateSessionPTSchemaRowset`。 這些子類別中的每一個都有一個 `Execute`，可處理其個別一組限制 (搜尋條件)。 每個 `Execute` 方法都會比較 *cRestrictions* 和 *rgRestrictions* 參數的值。 請參閱 [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions) 中這些參數的描述。
 
 如需對應至特定結構描述資料列集之限制的詳細資訊，請參閱 Windows SDK 之 **OLE DB 程式設計人員參考**中的 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))。
 
@@ -115,7 +115,7 @@ class CUpdateSessionTRSchemaRowset :
 
 ### <a name="example"></a>範例
 
-此程式碼取自 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 範例。 `UpdatePv` 支援三個必要的結構描述資料列集：DBSCHEMA_TABLES、DBSCHEMA_COLUMNS 和 DBSCHEMA_PROVIDER_TYPES。 作為如何在提供者中實作結構描述支援的範例，本主題將引導您實作 DBSCHEMA_TABLE 資料列集。
+此程式碼取自 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 範例。 `UpdatePv` 支援三個必要的架構資料列集： DBSCHEMA_TABLES、DBSCHEMA_COLUMNS 和 DBSCHEMA_PROVIDER_TYPES。 作為如何在提供者中實作結構描述支援的範例，本主題將引導您實作 DBSCHEMA_TABLE 資料列集。
 
 > [!NOTE]
 > 範例程式碼可能會與此處所列的不同；您應該將範例程式碼視為更新版本。
@@ -194,7 +194,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-支援第四個限制 (TABLE_TYPE) 類似於第三個限制。 請檢查此值不是 VT_EMPTY。 此限制只會傳回資料表類型 TABLE。 若要判斷 DBSCHEMA_TABLES 的有效值，請查閱 **OLE DB 程式設計人員參考** **附錄 B** 中的 TABLES 資料列集一節。
+支援第四個限制 (TABLE_TYPE) 類似於第三個限制。 請檢查此值不是 VT_EMPTY。 此限制只會傳回資料表類型 TABLE。 若要判斷 DBSCHEMA_TABLES 的有效值，請查閱 **OLE DB 程式設計人員參考****附錄 B** 中的 TABLES 資料列集一節。
 
 ```cpp
 // TABLE_TYPE restriction:
@@ -224,7 +224,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` 僅會設定三個資料行：TABLE_NAME、TABLE_TYPE 和 DESCRIPTION。 請記下您傳回資訊的資料行，因為您在實作 `GetDBStatus` 時，會需要此資訊：
+`UpdatePV` 只設定三個數據行： TABLE_NAME、TABLE_TYPE 和 DESCRIPTION。 請記下您傳回資訊的資料行，因為您在實作 `GetDBStatus` 時，會需要此資訊：
 
 ```cpp
     _ATLTRY
@@ -273,4 +273,4 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 ## <a name="see-also"></a>另請參閱
 
-[進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)
+[Advanced Provider 技術](../../data/oledb/advanced-provider-techniques.md)

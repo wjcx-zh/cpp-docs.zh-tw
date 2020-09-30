@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62913eaadd0f0a88f05ce347a6778062a1e66f17
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317636"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509337"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (命名 .TLB 檔)
 
@@ -27,28 +27,28 @@ ms.locfileid: "62317636"
 ## <a name="arguments"></a>引數
 
 *path*<br/>
-應該在其中建立.tlb 檔案的絕對或相對路徑規格。
+應在其中建立 .tlb 檔案的絕對或相對路徑規格。
 
 *filename*<br/>
-指定 MIDL 編譯器所建立的.tlb 檔案的名稱。 沒有檔案延伸模組會假定;指定*filename*.tlb，如果您想.tlb 副檔名。
+指定 MIDL 編譯器所建立之 .tlb 檔案的名稱。 未採用副檔名：如果您想要副檔名為 .tlb，請指定 *filename*。
 
 ## <a name="remarks"></a>備註
 
-/TLBOUT 選項會指定.tlb 檔案的副檔名與名稱。
+/TLBOUT 選項會指定 .tlb 檔案的名稱和副檔名。
 
-連結有的專案時，將會呼叫 MSVC 連結器的 MIDL 編譯器[模組](../../windows/module-cpp.md)屬性。
+連結具有 [module](../../windows/attributes/module-cpp.md) 屬性的專案時，MSVC 連結器會呼叫 MIDL 編譯器。
 
-如果未指定 /TLBOUT，.tlb 檔案會從其名稱[/IDLOUT](idlout-name-midl-output-files.md) *filename*。 如果未指定 /IDLOUT，.tlb 檔就會呼叫 vc70.tlb。
+如果未指定/TLBOUT，.tlb 檔案將會從 [/IDLOUT](idlout-name-midl-output-files.md) *檔案名*取得其名稱。 如果未指定/IDLOUT，則會將 .tlb 檔案稱為 vc70 .tlb。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] **** 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 **連結器**資料夾。
+1. 按一下 **Linker** 資料夾。
 
-1. 按一下 **內嵌 IDL**屬性頁。
+1. 按一下 [ **內嵌 IDL** ] 屬性頁。
 
-1. 修改**型別程式庫**屬性。
+1. 修改 **類型程式庫** 屬性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
@@ -58,6 +58,6 @@ ms.locfileid: "62317636"
 
 [MSVC 連結器參考](linking.md)<br/>
 [MSVC 連結器選項](linker-options.md)<br/>
-[/IGNOREIDL (不要將屬性處理至 MIDL 中)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (指定 MIDL 命令列選項)](midl-specify-midl-command-line-options.md)<br/>
-[建置屬性化程式](../../windows/building-an-attributed-program.md)
+[/IGNOREIDL (不會將屬性處理至 MIDL) ](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (指定 MIDL 命令列選項) ](midl-specify-midl-command-line-options.md)<br/>
+[建置屬性化程式](../../windows/attributes/cpp-attributes-com-net.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d9ab62d82c231a36a866597c1fad000eb616d835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990122"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510002"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>編譯器警告 (層級 4) C4682
 
 'parameter' : 沒有指定方向參數屬性，預設為 [in]
 
-屬性介面中的參數方法沒有其中一個方向性屬性： [in](../../windows/in-cpp.md)或[out](../../windows/out-cpp.md)。參數預設為中的。
+屬性化介面中參數的方法沒有其中一個方向屬性： [in](../../windows/attributes/in-cpp.md) 或 [out](../../windows/attributes/out-cpp.md)。參數的預設值為中的。
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 16f1a3f8ae9b50e43bfd67d9ac8c65507bf4f147
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d94c5d121386989d223a55b8ce7626444c3f8950
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834332"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509065"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 類別
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 *T*<br/>
 衍生自的類別 `IDBPropertiesImpl` 。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ## <a name="remarks"></a>備註
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) 是資料來源物件的強制介面，以及枚舉器的選擇性介面。 但是，如果列舉值公開 [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))，則必須公開 `IDBProperties` 。 `IDBPropertiesImpl``IDBProperties`使用[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)所定義的靜態函數來執行。
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) 是資料來源物件的強制介面，以及枚舉器的選擇性介面。 但是，如果列舉值公開 [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))，則必須公開 `IDBProperties` 。 `IDBPropertiesImpl``IDBProperties`使用[BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map)所定義的靜態函數來執行。
 
 ## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a> IDBPropertiesImpl：： GetProperties
 
@@ -119,7 +119,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 ### <a name="remarks"></a>備註
 
-使用 [IDBInitializeImpl：： m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) 來執行此功能。
+使用 [IDBInitializeImpl：： m_pCUtlPropInfo](./idbinitializeimpl-class.md#pcutlpropinfo) 來執行此功能。
 
 ## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a> IDBPropertiesImpl：： SetProperties
 

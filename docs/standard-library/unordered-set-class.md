@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 396465b24e9d7cf0facbe324c7b01479fe8e9b6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0feff4e595be7929fd0bc80eb53a0a65a9a61f43
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040037"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502953"
 ---
 # <a name="unordered_set-class"></a>unordered_set 類別
 
@@ -195,7 +195,7 @@ class unordered_set;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|項目的類型。|
 
-### <a name="functions"></a>函數
+### <a name="functions"></a>函式
 
 |名稱|描述|
 |-|-|
@@ -205,13 +205,13 @@ class unordered_set;
 |[bucket_size](#bucket_size)|取得 Bucket 大小。|
 |[cbegin](#cbegin)|指定受控制序列的開頭。|
 |[cend](#cend)|指定受控制序列的結尾。|
-|[清楚](#clear)|移除所有項目。|
+|[清除](#clear)|移除所有項目。|
 |[包含](#contains)<sup>c + + 20</sup>|檢查中是否有具有指定索引鍵的元素 `unordered_set` 。|
 |[計數](#count)|尋找符合指定索引鍵的項目數目。|
 |[emplace](#emplace)|加入就地建構的項目。|
 |[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|
 |[empty](#empty)|測試項目是否不存在。|
-|[結束](#end)|指定受控制序列的結尾。|
+|[end](#end)|指定受控制序列的結尾。|
 |[equal_range](#equal_range)|尋找符合指定之索引鍵的範圍。|
 |[erase](#erase)|移除位於指定位置的項目。|
 |[find](#find)|尋找符合指定之索引鍵的元素。|
@@ -228,7 +228,7 @@ class unordered_set;
 |[交換](#swap)|交換兩個容器的內容。|
 |[unordered_set](#unordered_set)|建構容器物件。|
 
-### <a name="operators"></a>操作員
+### <a name="operators"></a>運算子
 
 |名稱|描述|
 |-|-|
@@ -894,7 +894,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theUnorderedSet.contains(2) << '\n';
     std::cout << theUnorderedSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```

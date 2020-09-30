@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833136"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503556"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -33,7 +33,7 @@ ms.locfileid: "88833136"
 
 ## <a name="remarks"></a>備註
 
-**db_accessor** 定義 `db_column` `db_param` 相同類別或函式中後續和屬性的基礎 OLE DB 存取子。 **db_accessor** 可用於成員層級，而且可用來將 `db_column` 參與 OLE DB 系結的屬性分組 `IAccessor` 。 它會與 `db_table` 或屬性搭配使用 `db_command` 。 呼叫這個屬性類似于呼叫 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) 並 [END_ACCESSOR](../../data/oledb/end-accessor.md) 宏。
+**db_accessor** 定義 `db_column` `db_param` 相同類別或函式中後續和屬性的基礎 OLE DB 存取子。 **db_accessor** 可用於成員層級，而且可用來將 `db_column` 參與 OLE DB 系結的屬性分組 `IAccessor` 。 它會與 `db_table` 或屬性搭配使用 `db_command` 。 呼叫這個屬性類似于呼叫 [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) 並 [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) 宏。
 
 **db_accessor** 會產生資料列集，並將它系結至對應的存取子對應。 如果您未呼叫 **db_accessor**，則會自動產生存取子0，而且所有資料行系結都會對應至此存取子區塊。
 
@@ -65,7 +65,7 @@ public:
 };
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 | 屬性內容 | 值 |
 |-|-|

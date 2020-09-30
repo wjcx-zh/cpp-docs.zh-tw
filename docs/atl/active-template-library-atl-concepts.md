@@ -4,18 +4,18 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: cc96b5ed931713ca64a0582ca1cc18a8526ea8af
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616689"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504269"
 ---
 # <a name="active-template-library-atl-concepts"></a>Active Template Library (ATL) 概念
 
 Active Template Library (ATL) 是一組以範本為基礎的 C++ 類別，可讓您建立小型、快速的元件物件模型 (COM) 物件。 它具有主要 COM 功能的特殊支援，包括內建實作、雙重介面、標準 COM 列舉程式介面、連接點、Tear-Off 介面和 ActiveX 控制項。
 
-如果您執行大量的 ATL 程式設計，您可以深入了解 COM 和 .NET 屬性，因為其設計目的就是要簡化 COM 程式設計。 如需詳細資訊，請參閱[屬性化程式設計](../windows/attributed-programming-concepts.md)。 (COM 和 .NET 屬性不應與 C++ 標準中的 \[\[attribute]] 功能混淆。)
+如果您執行大量的 ATL 程式設計，您可以深入了解 COM 和 .NET 屬性，因為其設計目的就是要簡化 COM 程式設計。 如需詳細資訊，請參閱[屬性化程式設計](../windows/attributes/cpp-attributes-com-net.md)。 (COM 和 .NET 屬性不應與 C++ 標準中的 \[\[attribute]] 功能混淆。)
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -70,7 +70,7 @@ Active Template Library (ATL) 是一組以範本為基礎的 C++ 類別，可讓
 [ATL 登錄元件 (登錄器)](atl-registry-component-registrar.md)<br/>
 討論 ATL 指令碼語法和可置換的參數。 此外也會說明如何設定登錄器的靜態連結。
 
-[使用 ATL 和 C 執行階段程式碼進行程式設計](programming-with-atl-and-c-run-time-code.md)<br/>
+[使用 ATL 和 C 執行時間程式碼進行程式設計](programming-with-atl-and-c-run-time-code.md)<br/>
 討論以靜態或動態方式連結至 C 執行階段程式庫 (CRT) 的優點。
 
 [使用 CComBSTR 進行程式設計](programming-with-ccombstr-atl.md)<br/>
@@ -96,7 +96,7 @@ Active Template Library (ATL) 是一組以範本為基礎的 C++ 類別，可讓
 [ATL 控制項精靈](reference/atl-control-wizard.md)<br/>
 討論如何新增類別。
 
-[屬性化程式設計](../windows/attributed-programming-concepts.md)<br/>
+[屬性化程式設計](../windows/attributes/cpp-attributes-com-net.md)<br/>
 概述如何使用屬性來簡化 COM 程式設計，並提供詳細主題的連結清單。
 
 [ATL 類別總覽](atl-class-overview.md)<br/>

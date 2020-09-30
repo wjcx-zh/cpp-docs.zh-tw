@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: bbd88225249ac18a2bb3ca4006e1edbe62fbddfc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5ec71083c82a71c2b2aaa86a3e9dca37fc37b2b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371660"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502992"
 ---
 # <a name="adding-an-mfc-message-handler"></a>加入 MFC 訊息處理常式
 
-您可以使用[類嚮導](mfc-class-wizard.md)或**CLasS View**中的 **「屬性**」視窗向類添加消息處理程式(處理 Windows 訊息的成員函數),並將 Windows 消息映射到消息處理程式。 您還可以[為任何對話方塊來加入事件處理程式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。
+您可以使用 [[類別] Wizard](mfc-class-wizard.md)或 [**類別視圖**] 中的 [**屬性**] 視窗，將處理 windows 訊息) 的成員函式加入至類別，並將 windows 訊息對應至訊息處理常式，以加入訊息處理常式 (。 您也可以加入 [任何對話方塊控制項的事件處理常式](../../windows/adding-editing-or-deleting-controls.md)。
 
-通過使用**類嚮導**或**屬性**視窗(**在類檢視**中)來定義消息和事件處理函數,可以自動更新消息調度表(或消息映射)和類標頭檔。
+藉由使用 [ **類別目錄]** 或 [ **屬性** ] 視窗中 (**類別檢視**) 來定義訊息和事件處理函式，您可以自動更新訊息分派資料表 (或訊息對應) 和您的類別標頭檔。
 
 > [!NOTE]
-> 您可以使用類嚮導將消息處理程式添加到 ATL 類;但是,某些結果可能會有所不同。 有關詳細資訊,請參閱 ATL 主題[「添加 ATL 消息處理程式](../../atl/adding-an-atl-message-handler.md)」。
+> 您可以使用類別 Wizard 將訊息處理常式新增至 ATL 類別;不過，某些結果可能會有所不同。 如需詳細資訊，請參閱 ATL 主題 [新增 Atl 訊息處理常式](../../atl/adding-an-atl-message-handler.md)。
 
 ## <a name="see-also"></a>另請參閱
 

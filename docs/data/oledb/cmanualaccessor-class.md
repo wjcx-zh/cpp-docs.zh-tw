@@ -30,24 +30,24 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838096"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504108"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 類別
 
 表示專為 advanced 使用而設計的存取子類型。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CManualAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -104,7 +104,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 ### <a name="remarks"></a>備註
 
-若要使用此函數，您必須先呼叫 [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 您無法加入超過所指定之資料行數目的專案 `CreateAccessor` 。
+若要使用此函數，您必須先呼叫 [CreateAccessor](#createaccessor)。 您無法加入超過所指定之資料行數目的專案 `CreateAccessor` 。
 
 ## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor：： AddParameterEntry
 
@@ -148,7 +148,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 ### <a name="remarks"></a>備註
 
-若要使用此函數，您必須先呼叫 [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
+若要使用此函數，您必須先呼叫 [CreateParameterAccessor](#createparameteraccessor)。
 
 ## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor：： CreateAccessor
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>參數
 
 *nBindEntries*<br/>
-在資料行數目。 這個數位應該符合 [CManualAccessor：： AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) 函數的呼叫次數。
+在資料行數目。 這個數位應該符合 [CManualAccessor：： AddBindEntry](#addbindentry) 函數的呼叫次數。
 
 *pBuffer*<br/>
 在儲存輸出資料行之緩衝區的指標。
@@ -210,7 +210,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 ### <a name="remarks"></a>備註
 
-呼叫 [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前，您必須先呼叫此函數。
+呼叫 [AddParameterEntry](#addparameterentry)之前，您必須先呼叫此函數。
 
 ## <a name="see-also"></a>另請參閱
 

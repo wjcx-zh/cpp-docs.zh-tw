@@ -79,16 +79,16 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: a331e310f031462c903546a2896317aae0c0d719
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bbaa008d8dac74588fc15bfebbc7cb2611260349
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843361"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504559"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：建立圖示或其他影像
 
-您可以建立新的影像、點陣圖、圖示、游標或工具列，然後使用 **影像編輯器** 自訂其外觀。 您也可以在 [資源範本](../windows/how-to-use-resource-templates.md)之後建立新的點陣圖。
+您可以建立新的影像、點陣圖、圖示、游標或工具列，然後使用 **影像編輯器** 自訂其外觀。 您也可以在 [資源範本](./how-to-create-a-resource-script-file.md)之後建立新的點陣圖。
 
 ## <a name="icons-and-cursors-image-resources-for-display-devices"></a>圖示和游標：顯示裝置的影像資源
 
@@ -176,7 +176,7 @@ ms.locfileid: "88843361"
 
 1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中，以滑鼠右鍵按一下 *.rc* 檔，然後選擇 [ **插入資源**]。 如果您的 *.rc* 檔中已經有現有的影像資源，例如資料指標，您可以用滑鼠右鍵按一下 **游標** 資料夾，然後選取 [ **插入資料指標**]。
 
-1. 在 [ [插入資源] 對話方塊](../windows/add-resource-dialog-box.md)中，選取 [ **圖示** ] 或 [ **游標** ]，然後選擇 [ **新增**]。 若為圖示，此動作會建立一個具有32×32、16色圖示的圖示資源。 針對資料指標，會建立32×32、單色 (2 色彩) 影像。
+1. 在 [ [插入資源] 對話方塊](./how-to-create-a-resource-script-file.md)中，選取 [ **圖示** ] 或 [ **游標** ]，然後選擇 [ **新增**]。 若為圖示，此動作會建立一個具有32×32、16色圖示的圖示資源。 針對資料指標，會建立32×32、單色 (2 色彩) 影像。
 
    如果加號 (**+**) 出現在 [ **插入資源** ] 對話方塊中的影像資源類型旁邊，則表示工具列範本可以使用。 選取加號展開範本清單、選取範本，然後選擇 [ **新增**]。
 
@@ -205,7 +205,7 @@ ms.locfileid: "88843361"
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>在裝置影像中建立透明或反向區域
 
-在 [ [影像編輯器](../windows/image-editor-for-icons.md)] 中，初始圖示或游標影像具有透明屬性。 雖然圖示和游標影像是矩形，但很多都不會出現，因為影像的元件是透明的，而且螢幕上的基礎影像會透過圖示或游標顯示。 當您拖曳圖示時，影像的部分可能會以反轉的色彩顯示。 您可以藉由在 [ [色彩] 視窗](../windows/colors-window-image-editor-for-icons.md)中設定螢幕色彩和反色來建立此效果。
+在 [ [影像編輯器](../windows/image-editor-for-icons.md)] 中，初始圖示或游標影像具有透明屬性。 雖然圖示和游標影像是矩形，但很多都不會出現，因為影像的元件是透明的，而且螢幕上的基礎影像會透過圖示或游標顯示。 當您拖曳圖示時，影像的部分可能會以反轉的色彩顯示。 您可以藉由在 [ [色彩] 視窗](./image-editor-for-icons.md)中設定螢幕色彩和反色來建立此效果。
 
 您套用至圖示和游標的畫面和反向色彩會將衍生影像成形和色彩，或指派反向區域。 色彩表示影像中具有這些屬性的部分。 您可以在 [編輯] 中變更代表螢幕色彩和反色屬性的色彩。 這些變更不會影響應用程式中圖示或游標的外觀。
 
@@ -227,7 +227,7 @@ ms.locfileid: "88843361"
    系統會自動為其他選取器指派互補色彩。
 
    > [!TIP]
-   > 如果您按兩下 [ **螢幕色彩** ] 或 [ **反色** ] 選取器，就會出現 [ [自訂色彩選取器] 對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) 。
+   > 如果您按兩下 [ **螢幕色彩** ] 或 [ **反色** ] 選取器，就會出現 [ [自訂色彩選取器] 對話方塊](./image-editor-for-icons.md) 。
 
 ### <a name="use-the-256-color-palette"></a>使用256色板
 
@@ -237,13 +237,13 @@ ms.locfileid: "88843361"
 
 1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中，以滑鼠右鍵按一下 *.rc* 檔，然後選擇 [ **插入資源**]。 如果您的 *.rc* 檔中已經有現有的影像資源，例如資料指標，您可以用滑鼠右鍵按一下 **游標** 資料夾，然後選取 [ **插入資料指標**]。
 
-1. 在 [ [插入資源] 對話方塊](../windows/add-resource-dialog-box.md)中，選取 [ **圖示** ] 或 [ **游標** ]，然後選擇 [ **新增**]。
+1. 在 [ [插入資源] 對話方塊](./how-to-create-a-resource-script-file.md)中，選取 [ **圖示** ] 或 [ **游標** ]，然後選擇 [ **新增**]。
 
 1. 移至 [功能表**映射**  >  **新裝置影像**]，然後選取您想要的256色彩影像樣式。
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>針對大型圖示從256色板選擇色彩
 
-若要使用256色調色板中的選取範圍來繪製，您需要從 [[色彩] 視窗](../windows/colors-window-image-editor-for-icons.md)的 [**色彩**] 選擇區中選取色彩。
+若要使用256色調色板中的選取範圍來繪製，您需要從 [[色彩] 視窗](./image-editor-for-icons.md)的 [**色彩**] 選擇區中選取色彩。
 
 1. 選取大型圖示或游標，或建立新的大型圖示或游標。
 
@@ -258,7 +258,7 @@ ms.locfileid: "88843361"
 
 資料指標的作用點是 Windows 在追蹤游標位置時所指的點。 根據預設，作用點會設定為具有座標的游標左上角 `0,0` 。 [屬性視窗](/visualstudio/ide/reference/properties-window)中的**作用**點屬性會顯示作用點座標。
 
-1. 在 [ [影像編輯器] 工具列](../windows/toolbar-image-editor-for-icons.md)上，選擇 [ **設定熱點** ] 工具。
+1. 在 [ [影像編輯器] 工具列](./image-editor-for-icons.md)上，選擇 [ **設定熱點** ] 工具。
 
 1. 選取您要指派為游標作用點的圖元。
 
@@ -284,13 +284,13 @@ ms.locfileid: "88843361"
 1. 在 [ **另存** 新檔] 對話方塊的 [ **檔案名** ] 方塊中，輸入您要為檔案指定的名稱，以及代表您所要檔案格式的副檔名。 例如， *myfile.gif*。
 
    > [!NOTE]
-   > 您必須建立或開啟專案外部的點陣圖，才能將它另存成另一種檔案格式。 如果您在專案中建立或開啟它，[ **另存** 新檔] 命令將無法使用。 如需詳細資訊，請參閱在 [專案以外的資源指令檔中查看資源 (獨立) ](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。
+   > 您必須建立或開啟專案外部的點陣圖，才能將它另存成另一種檔案格式。 如果您在專案中建立或開啟它，[ **另存** 新檔] 命令將無法使用。 如需詳細資訊，請參閱在 [專案以外的資源指令檔中查看資源 (獨立) ](./how-to-create-a-resource-script-file.md)。
 
 1. 選取 [儲存]。
 
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>將影像從某種格式轉換成另一種格式
 
-您可以在 **影像編輯器** 中開啟 GIF 或 JPEG 影像，並將它們儲存為點陣圖。 此外，您還可以開啟點陣圖檔案，然後將它儲存為 GIF 或 JPEG。 您使用的影像不需要屬於專案的一部分，也不能在開發環境中編輯 (請參閱 [獨立的影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)) 。
+您可以在 **影像編輯器** 中開啟 GIF 或 JPEG 影像，並將它們儲存為點陣圖。 此外，您還可以開啟點陣圖檔案，然後將它儲存為 GIF 或 JPEG。 您使用的影像不需要屬於專案的一部分，也不能在開發環境中編輯 (請參閱 [獨立的影像編輯](./selecting-an-area-of-an-image-image-editor-for-icons.md)) 。
 
 1. 在 **影像編輯器**中開啟影像。
 
@@ -304,7 +304,7 @@ ms.locfileid: "88843361"
 
 1. 在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中，以滑鼠右鍵按一下 *.rc* 檔，然後選擇 [ **插入資源**]。 如果您的 *.rc* 檔中已經有現有的影像資源，例如資料指標，您可以直接以滑鼠右鍵按一下 **游標** 資料夾，然後選取 [ **插入資料指標**]。
 
-1. 在 [ [插入資源] 對話方塊](../windows/add-resource-dialog-box.md)中，選取您要建立 (**點陣圖**的影像資源類型，例如) 然後選擇 [ **新增**]。
+1. 在 [ [插入資源] 對話方塊](./how-to-create-a-resource-script-file.md)中，選取您要建立 (**點陣圖**的影像資源類型，例如) 然後選擇 [ **新增**]。
 
    如果加號 (**+**) 出現在 [ **插入資源** ] 對話方塊中的影像資源類型旁邊，則表示工具列範本可以使用。 選取加號展開範本清單、選取範本，然後選擇 [ **新增**]。
 
@@ -320,7 +320,7 @@ ms.locfileid: "88843361"
 
    資源會新增至 **方案總管** 中的專案，而資源會在 [影像編輯器](../windows/image-editor-for-icons.md)中開啟。 您現在可以使用 **影像編輯器** 中所有可用的工具來修改您的影像。 如需有關將影像加入至 managed 專案的詳細資訊，請參閱 [在設計階段載入圖片](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms)。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 無
 
@@ -332,7 +332,7 @@ ms.locfileid: "88843361"
 [如何：使用色彩](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
-[Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>
-[Creating New Toolbars](../windows/creating-new-toolbars.md)<br/>
+[Converting Bitmaps to Toolbars](./toolbar-editor.md)<br/>
+[Creating New Toolbars](./toolbar-editor.md)<br/>
 [Icons](/windows/win32/menurc/icons)<br/>
 [Cursors](/windows/win32/menurc/cursors)<br/>-->

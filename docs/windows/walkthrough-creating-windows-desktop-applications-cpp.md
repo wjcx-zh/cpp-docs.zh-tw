@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 01b1f4a1d021dee6d1d7afbf55bbd13211af247d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c729fa183a03860de012e64d110f3b3ac7e7e8d0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686596"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503659"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說：建立傳統 Windows 桌面應用程式 (c + +) 
 
@@ -23,13 +23,13 @@ Windows API (也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API) �
 > [!IMPORTANT]
 > 為了簡潔起見，文字中會省略某些程式碼語句。 本檔結尾的 [組建程式碼](#build-the-code) 區段會顯示完整程式碼。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 執行 Microsoft Windows 7 或更新版本的電腦。 建議使用 Windows 10 以獲得最佳開發體驗。
 
 - Visual Studio 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確認已選取**使用 C++ 的桌面開發**工作負載。 如果您在安裝 Visual Studio 時未安裝此工作負載，也不用擔心。 您可以再次執行安裝程式並立即安裝。
 
-   ![使用 C++ 開發桌面](../build/media/desktop-development-with-cpp.png "使用 C++ 的傳統型開發")
+   ![使用 C++ 開發桌面](../build/media/desktop-development-with-cpp.png "使用 C++ 的桌面開發")
 
 - 了解使用 Visual Studio IDE 的基本概念。 如果您先前使用過 Windows 傳統型應用程式，您應能輕鬆跟上。 如需簡介，請參閱 [Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
 
@@ -141,7 +141,7 @@ Windows API (也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API) �
    如需此函式之參數和傳回值的相關資訊，請參閱 [WinMain 進入點](/windows/win32/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
-   > 這些額外的單字有哪些，例如 `CALLBACK` 、or 或 `HINSTANCE` `_In_` ？ 傳統的 Windows API 會廣泛地使用 typedef 和預處理器宏，以抽象化一些類型和平臺特定程式碼的詳細資料，例如呼叫慣例、宣告 **`__declspec`** 和編譯器 pragma。 在 Visual Studio 中，您可以使用 IntelliSense [快速](/visualstudio/ide/using-intellisense#quick-info) 諮詢功能來查看這些 typedef 和巨集定義的內容。 將滑鼠停留在感興趣的單字上方，或選取它，然後按 ctrl 鍵，然後按**ctrl** + **K**鍵， **Ctrl** + **I**以取得包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回類型通常會使用 *SAL 注釋* 來協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱 [使用 SAL 注釋減少 C/c + + 程式碼](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)缺失。
+   > 這些額外的單字有哪些，例如 `CALLBACK` 、or 或 `HINSTANCE` `_In_` ？ 傳統的 Windows API 會廣泛地使用 typedef 和預處理器宏，以抽象化一些類型和平臺特定程式碼的詳細資料，例如呼叫慣例、宣告 **`__declspec`** 和編譯器 pragma。 在 Visual Studio 中，您可以使用 IntelliSense [快速](/visualstudio/ide/using-intellisense#quick-info) 諮詢功能來查看這些 typedef 和巨集定義的內容。 將滑鼠停留在感興趣的單字上方，或選取它，然後按 ctrl 鍵，然後按**ctrl** + **K**鍵， **Ctrl** + **I**以取得包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回類型通常會使用 *SAL 注釋* 來協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱 [使用 SAL 注釋減少 C/c + + 程式碼](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)缺失。
 
 1. Windows 桌面程式需要 &lt; windows .h>。 &lt;tchar> 定義 `TCHAR` 宏， **`wchar_t`** 如果 UNICODE 符號是在您的專案中定義，則會解析為，否則會解析為 **`char`** 。  如果您一直都啟用 UNICODE，您就不需要 TCHAR，只要直接使用即可 **`wchar_t`** 。
 
@@ -592,4 +592,4 @@ Windows API (也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API) �
 
 ## <a name="see-also"></a>另請參閱
 
-[Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)
+[Windows 桌面應用程式](./desktop-applications-visual-cpp.md)

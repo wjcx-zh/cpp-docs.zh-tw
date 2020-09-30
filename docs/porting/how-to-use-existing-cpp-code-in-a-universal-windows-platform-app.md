@@ -3,12 +3,12 @@ title: 作法：在通用 Windows 平台應用程式中使用現有的 C++ 程�
 description: 在通用 Windows 平臺應用程式中使用現有程式碼應用程式和程式庫的方法。
 ms.date: 09/04/2020
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 1e946d588f1a14018ebb11a60b319c2d54658f25
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: fd23c875d67654e96a828f4dba412dd74652912a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609133"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503675"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 
@@ -30,7 +30,7 @@ UWP 應用程式會在受保護的環境中執行。 因此，不允許許多可
 
 上述討論不適用於必須以不同方式處理的 COM 元件。 如果您在 EXE 或 DLL 中有 COM 伺服器，則可以在通用 Windows 專案中使用它。 將其封裝為 [免註冊的 COM 元件](/windows/win32/sbscs/creating-registration-free-com-objects)，將其以內容檔案的形式新增至您的專案，並使用將其具現化 [`CoCreateInstanceFromApp`](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) 。 請參閱 [Using Free-COM DLL in Windows Store C++ Project](/archive/blogs/win8devsupport/using-free-com-dll-in-windows-store-c-project) (在 Microsoft Store C++ 專案中使用 Free-COM DLL)。
 
-如果您想要將現有 COM 程式庫移植到 UWP，也可以將它轉換成 Windows 執行階段元件。 針對這類埠，我們建議使用 c + +/WinRT 程式庫，但您也可以使用 [Windows 執行階段 C++ 範本庫 (WRL) ](../windows/windows-runtime-cpp-template-library-wrl.md)。 WRL 已被取代，而且不支援 ATL 和 OLE 的所有功能。 這類埠是否可行，取決於您的元件所需的 COM、ATL 和 OLE 功能。
+如果您想要將現有 COM 程式庫移植到 UWP，也可以將它轉換成 Windows 執行階段元件。 針對這類埠，我們建議使用 c + +/WinRT 程式庫，但您也可以使用 [Windows 執行階段 C++ 範本庫 (WRL) ](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)。 WRL 已被取代，而且不支援 ATL 和 OLE 的所有功能。 這類埠是否可行，取決於您的元件所需的 COM、ATL 和 OLE 功能。
 
 無論您選擇哪一種開發案例，都應該注意一些巨集定義。 您可以在程式碼中使用這些宏，以條件方式在傳統桌面 Win32 和 UWP 下編譯器代碼。
 

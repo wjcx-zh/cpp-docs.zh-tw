@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840384"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504052"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 類別
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 *PropClass*<br/>
 使用者可定義的屬性類別，預設為 *T*。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：** altdb。h
 
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ## <a name="remarks"></a>備註
 
-資料列集上的強制介面。 這個類別會使用您命令類別中定義的 [屬性集對應](../../data/oledb/begin-propset-map.md) 來執行資料列集屬性。 雖然資料列集類別似乎是使用命令類別的屬性集，但是當資料列集是由命令或會話物件建立時，會提供它自己的執行時間屬性複本。
+資料列集上的強制介面。 這個類別會使用您命令類別中定義的 [屬性集對應](./macros-for-ole-db-provider-templates.md#begin_propset_map) 來執行資料列集屬性。 雖然資料列集類別似乎是使用命令類別的屬性集，但是當資料列集是由命令或會話物件建立時，會提供它自己的執行時間屬性複本。
 
 ## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl：： GetProperties
 

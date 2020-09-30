@@ -10,39 +10,39 @@ f1_keywords:
 - _Nullterm_length_
 - _Inexpressible_
 ms.assetid: adf29f8c-89fd-4a5e-9804-35ac83e1c457
-ms.openlocfilehash: 0aed625cfa17c75bbfb36506436e9e2c52a7a13b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d1a7bae43a6fcd875f2e713695969f0d88b0dfe5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216670"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504169"
 ---
 # <a name="intrinsic-functions"></a>內建函式
 
-SAL 中的運算式可以是 C/C++ 運算式 (假設該運算式沒有副作用的話)，例如 ++、-- 和函式呼叫在這個內容中全都有副作用。  不過，SAL 會提供一些類似函式的物件，以及一些可在 SAL 運算式中使用的保留符號。 這些稱為*內建函式*。
+SAL 中的運算式可以是 C/C++ 運算式 (假設該運算式沒有副作用的話)，例如 ++、-- 和函式呼叫在這個內容中全都有副作用。  但是 SAL 確實提供一些類似函式的物件，以及可在 SAL 運算式中使用的一些保留符號。 這些稱為 *內建函式*。
 
 ## <a name="general-purpose"></a>一般用途
 
 下列內建函式註釋提供 SAL 的一般公用程式。
 
-|Annotation|說明|
+|Annotation|描述|
 |----------------|-----------------|
 |`_Curr_`|目前標註之物件的同義字。  正在使用 `_At_` 註釋時，`_Curr_` 和 `_At_` 的第一個參數相同。  否則，它會是與註釋在語彙上相關聯的參數或整個函式/傳回值。|
 |`_Inexpressible_(expr)`|表示緩衝區的大小太複雜而無法使用註釋運算式表示的情況，例如，透過掃描輸入資料集，然後計算所選取成員的方式計算。|
-|`_Nullterm_length_(param)`|`param`這是緩衝區中最多但不包括 null 結束字元的元素數目。 它可以套用至非匯總、非 void 類型的任何緩衝區。|
+|`_Nullterm_length_(param)`|`param` 這是緩衝區中最多（但不包括 null 結束字元）的元素數目。 它可以套用至非匯總、非 void 型別的任何緩衝區。|
 |`_Old_(expr)`|在前置條件下進行評估時，`_Old_` 會傳回輸入值 `expr`。  在後置條件下進行評估時，它會傳回值 `expr`，因為它已在前置條件下進行評估。|
-|`_Param_(n)`|函式的 `n` 第一個參數，從1計數到 `n` ，而 `n` 是常值整數常數。 如果參數名為，則此注釋與依名稱存取參數的方式相同。 **注意：** `n`可能會參考由省略號定義的位置參數，或可用於不使用名稱的函式原型中。  |
-|`return`|C/c + + reserved 關鍵字 **`return`** 可以在 SAL 運算式中用來表示函式的傳回值。  值只能在後置狀態下使用，因此在前置狀態下使用就是語法錯誤。|
+|`_Param_(n)`|`n`函數的第一個參數，從1算到 `n` ，而且 `n` 是常值整數常數。 如果參數名為，這個批註就會與依名稱存取參數相同。 **注意：** `n`可以參考省略號定義的位置參數，或可用於不使用名稱的函式原型。  |
+|`return`|C/c + + 保留關鍵字 **`return`** 可用於 SAL 運算式中，以表示函式的傳回值。  值只能在後置狀態下使用，因此在前置狀態下使用就是語法錯誤。|
 
-## <a name="string-specific"></a>特定字串
+## <a name="string-specific"></a>字串特定
 
 下列內建函式註釋可讓您操作字串。 這四種函式的目的都相同：傳回 null 結束字元之前所找到類型的項目數。 差異在於項目中參考的資料類型。 請注意，如果您要指定不是以字元組成之以 null 終止的緩衝區長度，請使用前一節中的 `_Nullterm_length_(param)` 註釋。
 
-|Annotation|說明|
+|Annotation|描述|
 |----------------|-----------------|
-|`_String_length_(param)`|`param`這是字串中最多但不包括 null 結束字元的元素數目。 此批註會保留給字元字串類型。|
-|`strlen(param)`|`param`這是字串中最多但不包括 null 結束字元的元素數目。 此注釋會保留供字元陣列使用，而且類似 C 執行時間函式[strlen （）](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)。|
-|`wcslen(param)`|`param`這是字串中最多（但不包括） null 結束字元的元素數目。 這個批註已保留供寬字元陣列使用，而且類似 C 執行時間函式[wcslen （）](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)。|
+|`_String_length_(param)`|`param` 這是字串中的元素數目，最多（但不包括 null 結束字元）。 這個注釋會保留給字串字元類型。|
+|`strlen(param)`|`param` 這是字串中的元素數目，最多（但不包括 null 結束字元）。 這個批註是保留供字元陣列使用，而且類似 C 執行時間函式 [strlen ( # B1 ](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)。|
+|`wcslen(param)`|`param` 這是字串中最多可 (但不包括) null 結束字元的元素數目。 此批註已保留供寬字元陣列使用，類似于 C 執行時間函式 [wcslen ( # B1 ](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)。|
 
 ## <a name="see-also"></a>另請參閱
 

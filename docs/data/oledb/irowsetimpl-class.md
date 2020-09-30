@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 470755744783272245ca3aa8e4b57e2943db5fae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27a07d10256147d3c3ed383744ba1ee5fdfd06a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840397"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504073"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 類別
 
@@ -126,7 +126,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 *MapClass*<br/>
 提供者所保留的所有資料列控制碼的儲存單位。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -137,12 +137,12 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 | 名稱 | 描述 |
 |-|-|
 |[AddRefRows](#addrefrows)|將參考次數 (Reference Count) 加入至現有的資料列控制代碼。|
-|[CreateRow](#createrow)|由 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 呼叫以配置新的 `HROW` 。 未直接由使用者呼叫。|
+|[CreateRow](#createrow)|由 [GetNextRows](#getnextrows) 呼叫以配置新的 `HROW` 。 未直接由使用者呼叫。|
 |[GetData](#getdata)|從資料列集的資料列複本擷取資料。|
 |[GetDBStatus](#getdbstatus)|傳回指定之欄位的狀態。|
 |[GetNextRows](#getnextrows)|循序擷取資料列，並且會記住上一個位置。|
 |[IRowsetImpl](#irowsetimpl)|建構函式。 未直接由使用者呼叫。|
-|[RefRows](#refrows)|由 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 和 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)呼叫。 未直接由使用者呼叫。|
+|[RefRows](#refrows)|由 [AddRefRows](#addrefrows) 和 [ReleaseRows](#releaserows)呼叫。 未直接由使用者呼叫。|
 |[ReleaseRows](#releaserows)|釋放資料列。|
 |[RestartPosition](#restartposition)|將下一個提取位置重新置放到其初始位置;也就是說，它是在第一次建立資料列集時的位置。|
 |[SetDBStatus](#setdbstatus)|設定指定之欄位的狀態旗標。|
@@ -153,7 +153,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |-|-|
 |[m_bCanFetchBack](#bcanfetchback)|指出提供者是否支援反向提取。|
 |[m_bCanScrollBack](#bcanscrollback)|指出提供者是否可以將其游標向後滾動。|
-|[m_bReset](#breset)|指出提供者是否已重設其資料指標位置。 在 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)中向前或向後滾動時，這會有特殊意義。|
+|[m_bReset](#breset)|指出提供者是否已重設其資料指標位置。 在 [GetNextRows](#getnextrows)中向前或向後滾動時，這會有特殊意義。|
 |[m_iRowset](#irowset)|資料列集的索引，表示資料指標。|
 |[m_rgRowHandles](#rgrowhandles)|資料列控制碼的清單。|
 
@@ -180,7 +180,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 ## <a name="irowsetimplcreaterow"></a><a name="createrow"></a> IRowsetImpl：： CreateRow
 
-[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)呼叫的 helper 方法，可配置新的 `HROW` 。
+[GetNextRows](#getnextrows)呼叫的 helper 方法，可配置新的 `HROW` 。
 
 ### <a name="syntax"></a>語法
 
@@ -203,7 +203,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 
 ### <a name="remarks"></a>備註
 
-如果資料列存在，這個方法會呼叫 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 並傳回。 否則，它會配置 RowClass 範本變數的新實例，並將它新增至 [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)。
+如果資料列存在，這個方法會呼叫 [AddRefRows](#addrefrows) 並傳回。 否則，它會配置 RowClass 範本變數的新實例，並將它新增至 [m_rgRowHandles](#rgrowhandles)。
 
 ## <a name="irowsetimplgetdata"></a><a name="getdata"></a> IRowsetImpl：：：：的
 
@@ -288,7 +288,7 @@ IRowsetImpl();
 
 ## <a name="irowsetimplrefrows"></a><a name="refrows"></a> IRowsetImpl：： RefRows
 
-由 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 和 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) 呼叫，以將參考計數遞增或釋放至現有的資料列控制碼。
+由 [AddRefRows](#addrefrows) 和 [ReleaseRows](#releaserows) 呼叫，以將參考計數遞增或釋放至現有的資料列控制碼。
 
 ### <a name="syntax"></a>語法
 
@@ -415,13 +415,13 @@ unsigned m_bReset:1;
 
 ### <a name="remarks"></a>備註
 
-如果取用者以負值或 >crows 呼叫[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) ， `lOffset` *cRows*且 `m_bReset` 為 true，則會 `GetNextRows` 移至資料列集的結尾。 如果 `m_bReset` 為 false，取用者會收到錯誤碼，並符合 OLE DB 規格。 `m_bReset` **`true`** 當第一次建立資料列集時，以及當取用者呼叫[IRowsetImpl：： RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)時，旗標會設為。 當您呼叫時，它會設為 **`false`** `GetNextRows` 。
+如果取用者以負值或 >crows 呼叫[GetNextRows](#getnextrows) ， `lOffset` *cRows*且 `m_bReset` 為 true，則會 `GetNextRows` 移至資料列集的結尾。 如果 `m_bReset` 為 false，取用者會收到錯誤碼，並符合 OLE DB 規格。 `m_bReset` **`true`** 當第一次建立資料列集時，以及當取用者呼叫[IRowsetImpl：： RestartPosition](#restartposition)時，旗標會設為。 當您呼叫時，它會設為 **`false`** `GetNextRows` 。
 
 ## <a name="irowsetimplm_irowset"></a><a name="irowset"></a> IRowsetImpl：： m_iRowset
 
 資料列集的索引，表示資料指標。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 DBROWOFFSET m_iRowset;

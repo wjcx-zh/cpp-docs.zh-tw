@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 2f30b5683d8487830d596fc8185430c8a4c4c7b0
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: f8ffd7b3990f2d0ab40f8059e65f0aba4d4c8e0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352403"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503577"
 ---
 # <a name="unordered_map-class"></a>unordered_map 類別
 
@@ -201,7 +201,7 @@ class unordered_map;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|項目的類型。|
 
-|成員函式|說明|
+|成員函式|描述|
 |-|-|
 |[at](#at)|尋找具有指定之索引鍵的項目。|
 |[開始](#begin)|指定受控制序列的開頭。|
@@ -233,7 +233,7 @@ class unordered_map;
 |[交換](#swap)|交換兩個容器的內容。|
 |[unordered_map](#unordered_map)|建構容器物件。|
 
-|運算子|說明|
+|運算子|描述|
 |-|-|
 |[unordered_map：： operator []](#op_at)|尋找或插入具有指定索引鍵的項目。|
 |[unordered_map：： operator =](#op_eq)|複製雜湊資料表。|
@@ -926,7 +926,7 @@ bool contains(const Key& key) const;
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果在容器中找到元素，則為， `false` 否則為。 
+`true` 如果在容器中找到元素，則為， `false` 否則為。
 
 ### <a name="remarks"></a>備註
 
@@ -948,7 +948,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theUnorderedMap.contains(1) << '\n';
     std::cout << theUnorderedMap.contains(2) << '\n';
-    
+
     return 0;
 }
 ```
@@ -2924,6 +2924,4 @@ int main()
 ## <a name="see-also"></a>另請參閱
 
 [<unordered_map>](../standard-library/unordered-map.md)\
-[容器](./stl-containers.md)\
 [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C + + 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

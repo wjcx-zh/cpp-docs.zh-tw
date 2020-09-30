@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 53ea92c2eece31829a7554c0f9accf2e56d727a9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840722"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504008"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供者樣板的巨集
 
@@ -97,7 +97,7 @@ OLE DB 範本提供者宏提供下列類別的功能：
 |[END_SCHEMA_MAP](#end_schema_map)|標記架構對應的結尾。|
 |[SCHEMA_ENTRY](#schema_entry)|將 GUID 與類別產生關聯。|
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -118,7 +118,7 @@ BEGIN_PROPERTY_SET(guid)
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+請參閱 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
 
@@ -140,7 +140,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+請參閱 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="begin_propset_map"></a><a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
 
@@ -208,7 +208,7 @@ END_PROPERTY_SET(guid)
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+請參閱 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="end_propset_map"></a><a name="end_propset_map"></a> END_PROPSET_MAP
 
@@ -222,7 +222,7 @@ END_PROPSET_MAP()
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+請參閱 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="property_info_entry"></a><a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
 
@@ -241,11 +241,11 @@ PROPERTY_INFO_ENTRY(dwPropID)
 
 #### <a name="remarks"></a>備註
 
-此巨集會將 `DWORD` 類型的屬性值設定為 ATLDB 中定義的預設值。 若要將屬性設定為您選擇的值，請使用 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)。 若要 `VARTYPE` 同時設定屬性的和 [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) ，請使用 [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)。
+此巨集會將 `DWORD` 類型的屬性值設定為 ATLDB 中定義的預設值。 若要將屬性設定為您選擇的值，請使用 [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)。 若要 `VARTYPE` 同時設定屬性的和 [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) ，請使用 [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)。
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+請參閱 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
 
@@ -276,11 +276,11 @@ DBPROPOPTIONS_REQUIRED 或 DBPROPOPTIONS_SETIFCHEAP。 一般而言，提供者�
 
 #### <a name="remarks"></a>備註
 
-透過這個巨集，您可以直接指定 `DWORD` 類型的屬性值，以及選項和旗標。 若只要將屬性設定為 ATLDB.H 中定義的預設值，請使用 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)。 若要將屬性設定為您選擇的值，請使用 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)，而不需要設定屬性的選項或旗標。
+透過這個巨集，您可以直接指定 `DWORD` 類型的屬性值，以及選項和旗標。 若只要將屬性設定為 ATLDB.H 中定義的預設值，請使用 [PROPERTY_INFO_ENTRY](#property_info_entry)。 若要將屬性設定為您選擇的值，請使用 [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)，而不需要設定屬性的選項或旗標。
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+請參閱 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
 
@@ -302,11 +302,11 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 
 #### <a name="remarks"></a>備註
 
-使用這個宏，您可以直接指定類型的屬性值 `DWORD` 。 將屬性設定為 ATLDB.H 中定義的預設值。H，使用 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)。 若要設定屬性的值、旗標和選項，請使用 [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)。
+使用這個宏，您可以直接指定類型的屬性值 `DWORD` 。 將屬性設定為 ATLDB.H 中定義的預設值。H，使用 [PROPERTY_INFO_ENTRY](#property_info_entry)。 若要設定屬性的值、旗標和選項，請使用 [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)。
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+請參閱 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
 
@@ -341,7 +341,7 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
+請參閱 [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)。
 
 ### <a name="provider_column_entry"></a><a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
@@ -358,7 +358,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 在資料行名稱。
 
-*序數*<br/>
+*序*<br/>
 [in] 資料行編號。 除非資料行是書簽資料行，否則資料行編號不得為0。
 
 *成員*<br/>
@@ -379,7 +379,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 在資料行名稱。
 
-*序數*<br/>
+*序*<br/>
 [in] 資料行編號。 除非資料行是書簽資料行，否則資料行編號不得為0。
 
 *dbtype*<br/>
@@ -394,7 +394,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
+請參閱 [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)。
 
 ### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
@@ -411,7 +411,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 在資料行名稱。
 
-*序數*<br/>
+*序*<br/>
 [in] 資料行編號。 除非資料行是書簽資料行，否則資料行編號不得為0。
 
 *flags*<br/>
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 在資料行名稱。
 
-*序數*<br/>
+*序*<br/>
 [in] 資料行編號。 除非資料行是書簽資料行，否則資料行編號不得為0。
 
 *size*<br/>
@@ -466,7 +466,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
+請參閱 [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)。
 
 ### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
@@ -483,7 +483,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 在資料行名稱。
 
-*序數*<br/>
+*序*<br/>
 [in] 資料行編號。 除非資料行是書簽資料行，否則資料行編號不得為0。
 
 *成員*<br/>
@@ -495,7 +495,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 
 #### <a name="example"></a>範例
 
-請參閱 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
+請參閱 [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)。
 
 ### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
@@ -512,7 +512,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 在資料行名稱。
 
-*序數*<br/>
+*序*<br/>
 [in] 資料行編號。 除非資料行是書簽資料行，否則資料行編號不得為0。
 
 *dbtype*<br/>
@@ -526,7 +526,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 
 #### <a name="remarks"></a>備註
 
-類似于 [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) ，但也可讓您指定資料行的資料類型和大小。
+類似于 [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) ，但也可讓您指定資料行的資料類型和大小。
 
 ### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
 
@@ -543,7 +543,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 在資料行名稱。
 
-*序數*<br/>
+*序*<br/>
 [in] 資料行編號。 除非資料行是書簽資料行，否則資料行編號不得為0。
 
 *成員*<br/>

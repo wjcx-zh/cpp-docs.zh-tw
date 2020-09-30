@@ -35,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 288d6b0d373a5b318a139b030181c671e2c01048
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556005"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507581"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -80,7 +80,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 依預設，此函式的全域狀態範圍為應用程式。 若要變更此項，請參閱 [CRT 中的全域狀態](../global-state.md)。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 |函式|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------|-|
@@ -114,7 +114,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 ## <a name="see-also"></a>另請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)\
-[ldiv、lldiv](ldiv-lldiv.md)\
+[ldiv、lldiv](./div.md)\
 [imaxdiv](imaxdiv.md)\
 [fmod、fmodf](fmod-fmodf.md)\
 [remquo、remquof、remquol](remquo-remquof-remquol.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 461850b2c1686343f23c77274b8fb2ca6fd9071e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757978"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508005"
 ---
 # <a name="compiler-error-c3706"></a>編譯器錯誤 C3706
 
-' function '：必須是 COM 介面，才能引發 COM 事件
+' function '：必須是用來引發 COM 事件的 COM 介面
 
-您用來引發 COM 事件的事件介面必須是 COM 介面。 在此情況下，應該使用視覺化C++屬性來定義介面，或使用 #import 的 embedded_idl 屬性從類型程式庫匯入[#import](../../preprocessor/hash-import-directive-cpp.md) 。
+您用來引發 COM 事件的事件介面必須是 COM 介面。 在這種情況下，應該使用 Visual C++ 屬性來定義介面，或使用 [#import](../../preprocessor/hash-import-directive-cpp.md) 從具有 #import 之 embedded_idl 屬性的類型程式庫匯入。
 
-請注意，使用 COM 事件時，需要下列範例中所示的 ATL 標頭檔 `#include` 行。 若要修正這個錯誤，請將下列其中一個屬性套用至介面定義，使 `IEvents` （事件介面）成為 COM 介面： [object](../../windows/object-cpp.md)、[雙重](../../windows/dual.md)[或分配介面。](../../windows/dispinterface.md)
+請注意， `#include` 下列範例中所示的 ATL 標頭檔行是使用 COM 事件的必要程式碼。 若要修正這個錯誤，請將 `IEvents` 下列其中一個屬性套用至介面定義，以將事件介面 () COM 介面： [object](../../windows/attributes/object-cpp.md)、 [雙重](../../windows/attributes/dual.md)或分派 [介面](../../windows/attributes/dispinterface.md)。
 
-如果介面來自 MIDL 產生的標頭檔，則編譯器不會將它辨識為 COM 介面。
+如果介面來自 MIDL 所產生的標頭檔，編譯器將不會將它辨識為 COM 介面。
 
 下列範例會產生 C3706：
 

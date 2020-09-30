@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 32926d0ef9343bad9ed73458e4d52d317b628109
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d6179657462325a30de0c4548becff4b4cf86c9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221038"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508071"
 ---
 # <a name="compiler-error-c3541"></a>編譯器錯誤 C3541
 
 ' type '： typeid 無法套用至包含 ' auto ' 的類型
 
-無法將[typeid](../../extensions/typeid-cpp-component-extensions.md)運算子套用至指定的類型，因為它包含 **`auto`** 規範。
+[Typeid](../../extensions/typeid-cpp-component-extensions.md)運算子無法套用至指定的型別，因為它包含 **`auto`** 規範。
 
 ## <a name="example"></a>範例
 
@@ -37,6 +37,6 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[auto 關鍵字](../../cpp/auto-keyword.md)<br/>
-[/Zc： auto （推算變數類型）](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[auto 關鍵字](../../cpp/auto-cpp.md)<br/>
+[/Zc： auto (推算變數類型) ](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [typeid](../../extensions/typeid-cpp-component-extensions.md)

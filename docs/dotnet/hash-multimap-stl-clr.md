@@ -98,26 +98,26 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-ms.openlocfilehash: 7faba79dfcd585e9f397c6ecd0bf594a5fb6c501
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4fa42b53f496f1689523d8881c6f0411e6072aa
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221402"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507188"
 ---
 # <a name="hash_multimap-stlclr"></a>hash_multimap (STL/CLR)
 
-此樣板類別所描述的物件可控制具有雙向存取之元素的變動長度序列。 您可以使用容器 `hash_multimap` 來管理一連串的元素做為雜湊表、每個資料表專案儲存雙向連結的節點清單，以及每個節點儲存一個元素。 元素是由索引鍵所組成，用於排序序列，而對應的值則是用於的方向。
+此樣板類別描述一個物件，該物件可控制具有雙向存取之元素的不同長度序列。 您可以使用容器 `hash_multimap` 來管理一連串的專案做為雜湊表、每個資料表專案儲存雙向連結的節點清單，以及每個節點儲存一個元素。 專案是由索引鍵（用來排序序列）和對應值所組成。
 
-在下面的描述中，與 `GValue` 相同：
+在下列描述中，與 `GValue` 相同：
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
 其中：
 
-`GKey`與索引*鍵*相同，除非後者是 ref 類型，在此情況下為`Key^`
+`GKey` 與索引 *鍵* 相同，除非後者是 ref 型別，在這種情況下，它是 `Key^`
 
-`GMapped`與*對應*相同，除非後者是 ref 類型，在此情況下為`Mapped^`
+`GMapped` 與 *對應* 相同，除非後者是 ref 型別，在這種情況下，它是 `Mapped^`
 
 ## <a name="syntax"></a>語法
 
@@ -141,7 +141,7 @@ template<typename Key,
 *索引鍵*<br/>
 受控制序列中項目的主要元件型別。
 
-*Mapped*<br/>
+*映射*<br/>
 受控制序列中元素的其他元件類型。
 
 ## <a name="requirements"></a>需求
@@ -152,13 +152,13 @@ template<typename Key,
 
 ## <a name="declarations"></a>宣告
 
-|類型定義|說明|
+|類型定義|描述|
 |---------------------|-----------------|
 |[hash_multimap::const_iterator (STL/CLR)](#const_iterator)|用於受控制序列的常數迭代器類型。|
 |[hash_multimap::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|
 |[hash_multimap::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|
-|[hash_multimap::difference_type (STL/CLR)](#difference_type)|兩個元素之間的（可能已簽署）距離的類型。|
-|[hash_multimap::generic_container (STL/CLR)](#generic_container)|容器的泛型介面類別型。|
+|[hash_multimap::difference_type (STL/CLR)](#difference_type)| (的類型可能簽署兩個專案之間的) 距離。|
+|[hash_multimap::generic_container (STL/CLR)](#generic_container)|容器的泛型介面型別。|
 |[hash_multimap::generic_iterator (STL/CLR)](#generic_iterator)|容器之泛型介面的反覆運算器類型。|
 |[hash_multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型介面之反向反覆運算器的類型。|
 |[hash_multimap::generic_value (STL/CLR)](#generic_value)|容器之泛型介面的元素類型。|
@@ -166,14 +166,14 @@ template<typename Key,
 |[hash_multimap::iterator (STL/CLR)](#iterator)|受控制序列之迭代器的類型。|
 |[hash_multimap::key_compare (STL/CLR)](#key_compare)|兩個索引鍵的排序委派。|
 |[hash_multimap::key_type (STL/CLR)](#key_type)|排序索引鍵的類型。|
-|[hash_multimap::mapped_type (STL/CLR)](#mapped_type)|與每個索引鍵相關聯之對應值的類型。|
+|[hash_multimap::mapped_type (STL/CLR)](#mapped_type)|與每個索引鍵相關聯之對應值的型別。|
 |[hash_multimap::reference (STL/CLR)](#reference)|項目的參考類型。|
 |[hash_multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|受控制序列的反向迭代器類型。|
-|[hash_multimap::size_type (STL/CLR)](#size_type)|兩個元素之間的（非負）距離類型。|
+|[hash_multimap::size_type (STL/CLR)](#size_type)|兩個元素之間 (非負) 距離的型別。|
 |[hash_multimap::value_compare (STL/CLR)](#value_compare)|兩個元素值的排序委派。|
 |[hash_multimap::value_type (STL/CLR)](#value_type)|項目的類型。|
 
-|成員函式|說明|
+|成員函式|描述|
 |---------------------|-----------------|
 |[hash_multimap::begin (STL/CLR)](#begin)|指定受控制序列的開頭。|
 |[hash_multimap::bucket_count (STL/CLR)](#bucket_count)|計算值區的數目。|
@@ -189,8 +189,8 @@ template<typename Key,
 |[hash_multimap::insert (STL/CLR)](#insert)|加入項目。|
 |[hash_multimap::key_comp (STL/CLR)](#key_comp)|複製兩個索引鍵的排序委派。|
 |[hash_multimap::load_factor (STL/CLR)](#load_factor)|計算每個值區的平均項目數。|
-|[hash_multimap::lower_bound (STL/CLR)](#lower_bound)|尋找符合指定之索引鍵的範圍開頭。|
-|[hash_multimap::make_value (STL/CLR)](#make_value)|構造值物件。|
+|[hash_multimap::lower_bound (STL/CLR)](#lower_bound)|尋找符合指定索引鍵的範圍開頭。|
+|[hash_multimap::make_value (STL/CLR)](#make_value)|結構值物件。|
 |[hash_multimap::max_load_factor (STL/CLR)](#max_load_factor)|取得或設定每個 Bucket 最大項目數。|
 |[hash_multimap::rbegin (STL/CLR)](#rbegin)|指定反向受控制序列的開頭。|
 |[hash_multimap::rehash (STL/CLR)](#rehash)|重建雜湊資料表。|
@@ -198,61 +198,61 @@ template<typename Key,
 |[hash_multimap::size (STL/CLR)](#size)|計算元素的數目。|
 |[hash_multimap::swap (STL/CLR)](#swap)|交換兩個容器的內容。|
 |[hash_multimap::to_array (STL/CLR)](#to_array)|將受控制序列複製到新的陣列。|
-|[hash_multimap::upper_bound (STL/CLR)](#upper_bound)|尋找符合指定之索引鍵的結束範圍。|
-|[hash_multimap::value_comp (STL/CLR)](#value_comp)|複製兩個元素值的順序委派。|
+|[hash_multimap::upper_bound (STL/CLR)](#upper_bound)|尋找符合指定索引鍵的範圍結尾。|
+|[hash_multimap::value_comp (STL/CLR)](#value_comp)|針對兩個元素值複製順序委派。|
 
-|運算子|說明|
+|運算子|描述|
 |--------------|-----------------|
 |[hash_multimap::operator= (STL/CLR)](#op)|取代受控制的序列。|
 
 ## <a name="interfaces"></a>介面
 
-|介面|說明|
+|介面|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|複製物件。|
-|<xref:System.Collections.IEnumerable>|透過元素進行序列。|
+|<xref:System.Collections.IEnumerable>|排序元素。|
 |<xref:System.Collections.ICollection>|維護元素群組。|
-|<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的專案進行序列。|
+|<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的元素排序。|
 |<xref:System.Collections.Generic.ICollection%601>|維護具類型的元素群組。|
-|IHash\<Key, Value>|維護一般容器。|
+|IHash\<Key, Value>|維護泛型容器。|
 
 ## <a name="remarks"></a>備註
 
-物件會在雙向連結清單中，為它所控制的序列配置並釋出儲存區，以做為個別節點。 若要加快存取速度，物件也會在清單中維護不同長度的指標陣列（雜湊表），有效地將整個清單當做一連串的 sublists 或 bucket 來管理。 它會藉由改變節點間的連結來將元素插入值區中，而不會將一個節點的內容複寫到另一個節點來保持排序。 這表示您可以自由地插入和移除專案，而不會干擾其餘元素。
+物件會在雙向連結清單中，配置並釋放它所控制之序列的儲存體，以作為個別節點。 為了加速存取，物件也會在雜湊表) 的清單中維護不同長度的指標陣列， (雜湊表，有效地將整個清單視為清單子或值區的序列來管理。 它會藉由變更節點之間的連結，而不是藉由將節點的內容複寫到另一個節點的方式，將專案插入至值區，以保持排序。 這表示您可以自由插入和移除專案，而不會干擾其餘的元素。
 
-物件會藉由呼叫類型為[hash_set：： key_compare （STL/CLR）](../dotnet/hash-set-key-compare-stl-clr.md)的預存委派物件，來排序它所控制的每個值區。 當您建立 hash_set 時，可以指定預存的委派物件。如果您沒有指定委派物件，預設值就是比較 `operator<=(key_type, key_type)` 。
+物件會藉由呼叫 hash_set：： key_compare 類型的預存委派物件來排序每個值區， [ (STL/CLR) ](./hash-set-stl-clr.md#key_compare)。 當您建立 hash_set 時，可以指定預存的委派物件。如果您未指定委派物件，預設值就是比較 `operator<=(key_type, key_type)` 。
 
-您可以藉由呼叫成員函式[hash_set：： key_comp （STL/CLR）](../dotnet/hash-set-key-comp-stl-clr.md)來存取預存的委派物件 `()` 。 這類委派物件必須在[hash_set：： key_type （STL/CLR）](../dotnet/hash-set-key-type-stl-clr.md)類型的索引鍵之間定義對等的順序。 這表示，對於任何兩個索引鍵 `X` 和 `Y` ：
+您可以藉由呼叫成員函式[hash_set：： key_comp (STL/CLR) ](./hash-set-stl-clr.md#key_comp)來存取儲存的委派物件 `()` 。 這類委派物件必須在 [hash_set：： key_type (STL/CLR) ](./hash-set-stl-clr.md#key_type)類型的索引鍵之間定義對等順序。 這表示，針對任何兩個金鑰， `X` 以及 `Y` ：
 
-`key_comp()(X, Y)`會在每次呼叫時傳回相同的布林值結果。
+`key_comp()(X, Y)` 每次呼叫時，都會傳回相同的布林值結果。
 
-如果 `key_comp()(X, Y) && key_comp()(Y, X)` 為 true，則 `X` 和 `Y` 會被視為具有對等的順序。
+如果 `key_comp()(X, Y) && key_comp()(Y, X)` 是 true，則 `X` 和 `Y` 也稱為具有對等的排序。
 
-任何行為類似的排序規則 `operator<=(key_type, key_type)` ， `operator>=(key_type, key_type)` 或 `operator==(key_type, key_type)` 定義 eqivalent 順序。
+任何行為類似 `operator<=(key_type, key_type)` `operator>=(key_type, key_type)` 或 `operator==(key_type, key_type)` 定義 eqivalent 順序的排序規則。
 
-請注意，容器只會確保其索引鍵具有對等順序的專案（以及在相同整數值中的雜湊）在值區中是連續的。 不同于樣板類別[hash_map （STL/CLR）](../dotnet/hash-map-stl-clr.md)，樣板類別的物件 `hash_multimap` 不需要所有元素的索引鍵都是唯一的。 （兩個或多個索引鍵可以具有對等的順序）。
+請注意，容器只會確保其索引鍵具有對等順序的專案 (，以及相同整數值) 的雜湊在值區中相鄰。 不同于樣板類別 [hash_map (STL/CLR) ](../dotnet/hash-map-stl-clr.md)，範本類別的物件不 `hash_multimap` 需要所有元素的索引鍵都是唯一的。  (兩個以上的索引鍵可以有對等的順序。 ) 
 
-物件會藉由呼叫類型為[hash_set：： hasher （STL/CLR）](../dotnet/hash-set-hasher-stl-clr.md)的預存委派物件，判斷哪個值區應包含給定的排序索引鍵。 您可以藉由呼叫成員函式[hash_set：： hash_delegate （STL/CLR）](../dotnet/hash-set-hash-delegate-stl-clr.md)來存取這個儲存的物件， `()` 以取得相依于索引鍵值的整數值。 當您建立 hash_set 時，可以指定預存的委派物件。如果您未指定委派物件，則預設值為函式 `System::Object::hash_value(key_type)` 。 這表示對於任何金鑰 `X` 和 `Y` ：
+物件會藉由呼叫 [hash_set：： hasher (STL/CLR) ](./hash-set-stl-clr.md#hasher)類型的預存委派物件，判斷哪些值區應包含指定的排序索引鍵。 您可以藉由呼叫成員函式[hash_set：： hash_delegate (STL/CLR) ](./hash-set-stl-clr.md#hash_delegate) `()` 取得相依于索引鍵值的整數值，來存取這個儲存的物件。 當您建立 hash_set 時，可以指定預存的委派物件。如果您未指定委派物件，則預設值為函數 `System::Object::hash_value(key_type)` 。 這表示對於任何金鑰 `X` 和 `Y` ：
 
-`hash_delegate()(X)`會在每次呼叫時傳回相同的整數結果。
+`hash_delegate()(X)` 每次呼叫時，都會傳回相同的整數結果。
 
-如果 `X` 和 `Y` 具有對等的順序，則應該傳回與 `hash_delegate()(X)` 相同的整數結果 `hash_delegate()(Y)` 。
+如果 `X` 和 `Y` 具有對等順序，則應該傳回與 `hash_delegate()(X)` 相同的整數結果 `hash_delegate()(Y)` 。
 
-每個元素都包含個別的索引鍵和對應的值。 序列的表示方式，允許查閱、插入和移除具有多項作業（不受序列中的專案數目（常數時間））的任意專案，至少是在最佳情況下。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
+每個元素都包含個別的索引鍵和對應的值。 順序的表示方式，可讓您查閱、插入和移除任意專案，而這些作業與序列中的專案數目無關， (常數時間) --至少在案例中的最大值。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
 
-不過，如果雜湊值並未均勻分佈，雜湊表就可以退化。 在極端情況下，如果雜湊函式一律會傳回相同的值--查閱、插入和移除，會與序列中的專案數成正比（線性時間）。 容器會致力於選擇合理的雜湊函數、平均值區大小和雜湊資料表大小（值區總數），但您可以覆寫任何或所有選項。 例如，請參閱函數[hash_set：： max_load_factor （stl/clr）](../dotnet/hash-set-max-load-factor-stl-clr.md)和[hash_set：： rehash （stl/clr）](../dotnet/hash-set-rehash-stl-clr.md)。
+但是，如果雜湊值未一致地散發，雜湊表就可以進行退化。 在最極端的情況下，雜湊函數一律會傳回相同的值（查閱、插入和移除），與序列中的專案數目成正比 (線性時間) 。 容器會致力於選擇合理的雜湊函式、平均值區大小，以及雜湊表大小 (值區的總數) ，但您可以覆寫任何或所有的選項。 例如，請參閱函式 [hash_set：： max_load_factor (stl/clr) ](./hash-set-stl-clr.md#max_load_factor) 和 [hash_set：： rehash (stl/clr) ](./hash-set-stl-clr.md#rehash)。
 
-Hash_multimap 支援雙向反覆運算器，這表示您可以逐步執行指定受控制序列中之專案的反覆運算器，以進入連續的元素。 特殊的前端節點對應至[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)傳回的反覆運算器 `()` 。 您可以遞減這個反覆運算器，使其到達受控制序列中的最後一個元素（如果有的話）。 您可以將 hash_multimap 反覆運算器遞增以達到前端節點，然後再比較等於 `end()` 。 但是，您無法對所傳回的反覆運算器進行取值 `end()` 。
+Hash_multimap 支援雙向反覆運算器，這表示您可以使用反覆運算器逐步執行連續的元素，以指定受控制序列中的元素。 特殊的前端節點對應至[hash_multimap：： end (STL/CLR) ](#end)所傳回的反覆運算器 `()` 。 您可以遞減此反覆運算器，以到達受控制序列中的最後一個元素（如果有的話）。 您可以將 hash_multimap 反覆運算器遞增以到達前端節點，然後再比較是否等於 `end()` 。 但是，您無法取值傳回的反覆運算器 `end()` 。
 
-請注意，您無法直接指定其數值位置（需要隨機存取反覆運算器）的 hash_multimap 元素。
+請注意，您不能直接參考指定其數位位置的 hash_multimap 專案，這需要隨機存取反覆運算器。
 
-Hash_multimap 反覆運算器會將控制碼儲存至其相關聯的 hash_multimap 節點，然後再將控制碼儲存至其相關聯的容器。 您只能將反覆運算器與相關聯的容器物件搭配使用。 Hash_multimap 反覆運算器會保持有效，只要其相關聯的 hash_multimap 節點與某些 hash_multimap 相關聯。 此外，有效的反覆運算器也是 dereferencable--您可以使用它來存取或更改其指定的元素值，只要它不等於即可 `end()` 。
+Hash_multimap 反覆運算器會將控制碼儲存至其相關聯的 hash_multimap 節點，然後再將控制碼儲存至其相關聯的容器。 您只能使用反覆運算器與其相關聯的容器物件。 Hash_multimap 反覆運算器會維持有效，只要其相關聯的 hash_multimap 節點與某些 hash_multimap 相關聯。 此外，有效的 iterator 是 dereferencable--您可以使用它來存取或修改它所指定的元素值，只要它不等於就可以了 `end()` 。
 
-清除或移除元素會呼叫其預存值的析構函式。 終結容器會清除所有元素。 因此，其元素類型為 ref 類別的容器，可確保沒有任何元素 outlive 容器。 不過要注意的是，控制碼容器並*不*會摧毀其元素。
+清除或移除專案會呼叫其預存值的函式。 終結容器會清除所有元素。 因此，其元素類型為 ref 類別的容器可確保沒有任何專案存留時間容器。 不過請注意，控制碼的 *容器不會摧毀其* 元素。
 
 ## <a name="members"></a>成員
 
-## <a name="hash_multimapbegin-stlclr"></a><a name="begin"></a>hash_multimap：： begin （STL/CLR）
+## <a name="hash_multimapbegin-stlclr"></a><a name="begin"></a> hash_multimap：： begin (STL/CLR) 
 
 指定受控制序列的開頭。
 
@@ -264,7 +264,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回雙向反覆運算器，指定受控制序列的第一個元素，或在空序列結尾以外的專案。 您要用它來取得的 Iterator 可指定受控制序列之 `current` 開頭，但是，如果受控制序列的長度變更，它的狀態也可以變更。
+成員函式會傳回雙向反覆運算器，其指定受控制序列的第一個專案，或空白序列結尾以外的第一個元素。 您要用它來取得的 Iterator 可指定受控制序列之 `current` 開頭，但是，如果受控制序列的長度變更，它的狀態也可以變更。
 
 ### <a name="example"></a>範例
 
@@ -303,7 +303,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="hash_multimapbucket_count-stlclr"></a><a name="bucket_count"></a>hash_multimap：： bucket_count （STL/CLR）
+## <a name="hash_multimapbucket_count-stlclr"></a><a name="bucket_count"></a> hash_multimap：： bucket_count (STL/CLR) 
 
 計算值區的數目。
 
@@ -315,7 +315,7 @@ int bucket_count();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回目前的值區數目。 您可以使用它來判斷雜湊表的大小。
+成員函式會傳回目前的 bucket 數目。 您可以使用它來判斷雜湊表的大小。
 
 ### <a name="example"></a>範例
 
@@ -377,7 +377,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimapclear-stlclr"></a><a name="clear"></a>hash_multimap：： clear （STL/CLR）
+## <a name="hash_multimapclear-stlclr"></a><a name="clear"></a> hash_multimap：： clear (STL/CLR) 
 
 移除所有項目。
 
@@ -389,7 +389,7 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會有效地呼叫[hash_multimap：： erase （stl/clr）](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap：： begin （stl/clr）](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap：： end （stl/clr）](../dotnet/hash-multimap-end-stl-clr.md) `())` 。 您可以使用它來確保受控制的序列是空的。
+成員函式會有效地呼叫[hash_multimap：： erase (stl/clr) ](#erase) `(` [hash_multimap：： begin (stl/clr) ](#begin) `(),` [hash_multimap：： end (stl/clr) ](#end) `())` 。 您可以使用它來確保受控制的序列是空的。
 
 ### <a name="example"></a>範例
 
@@ -435,7 +435,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="hash_multimapconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_multimap：： const_iterator （STL/CLR）
+## <a name="hash_multimapconst_iterator-stlclr"></a><a name="const_iterator"></a> hash_multimap：： const_iterator (STL/CLR) 
 
 用於受控制序列的常數迭代器類型。
 
@@ -447,7 +447,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型的物件 `T2` ，可做為受控制序列的常數雙向反覆運算器。
+型別描述未指定類型的物件 `T2` ，可作為受控制序列的常數雙向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -477,7 +477,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapconst_reference-stlclr"></a><a name="const_reference"></a>hash_multimap：： const_reference （STL/CLR）
+## <a name="hash_multimapconst_reference-stlclr"></a><a name="const_reference"></a> hash_multimap：： const_reference (STL/CLR) 
 
 項目的常數參考類型。
 
@@ -489,7 +489,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述專案的常數參考。
+型別描述元素的常數參考。
 
 ### <a name="example"></a>範例
 
@@ -522,7 +522,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_multimap：： const_reverse_iterator （STL/CLR）
+## <a name="hash_multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> hash_multimap：： const_reverse_iterator (STL/CLR) 
 
 受控制序列的常數反向反覆運算器類型。
 
@@ -534,7 +534,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型的物件 `T4` ，可做為受控制序列的常數反向反覆運算器。
+型別描述未指定類型的物件 `T4` ，可作為受控制序列的常數反向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -564,7 +564,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="hash_multimapcount-stlclr"></a><a name="count"></a>hash_multimap：： count （STL/CLR）
+## <a name="hash_multimapcount-stlclr"></a><a name="count"></a> hash_multimap：： count (STL/CLR) 
 
 尋找符合指定索引鍵的項目數目。
 
@@ -581,7 +581,7 @@ size_type count(key_type key);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回受控制序列中具有對等順序與索引*鍵*的元素數目。 您會用它來判斷目前在受控制序列中，符合指定之索引鍵的項目數目。
+成員函式會傳回受控制序列中的專案數目，其具有與索引 *鍵*相等的排序。 您會用它來判斷目前在受控制序列中，符合指定之索引鍵的項目數目。
 
 ### <a name="example"></a>範例
 
@@ -617,9 +617,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="hash_multimapdifference_type-stlclr"></a><a name="difference_type"></a>hash_multimap：:d ifference_type （STL/CLR）
+## <a name="hash_multimapdifference_type-stlclr"></a><a name="difference_type"></a> hash_multimap：:d ifference_type (STL/CLR) 
 
-兩個元素之間帶正負號距離的類型。
+兩個元素之間的帶正負號距離類型。
 
 ### <a name="syntax"></a>語法
 
@@ -629,7 +629,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述可能為負的元素計數。
+此類型描述可能的負元素計數。
 
 ### <a name="example"></a>範例
 
@@ -672,7 +672,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="hash_multimapempty-stlclr"></a><a name="empty"></a>hash_multimap：： empty （STL/CLR）
+## <a name="hash_multimapempty-stlclr"></a><a name="empty"></a> hash_multimap：： empty (STL/CLR) 
 
 測試項目是否不存在。
 
@@ -684,7 +684,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[hash_multimap：： size （STL/CLR）](../dotnet/hash-multimap-size-stl-clr.md) `() == 0` 。 您可以使用它來測試 hash_multimap 是否為空白。
+成員函式會對空的受控制序列傳回 true。 它相當於[hash_multimap：： size (STL/CLR) ](#size) `() == 0` 。 您可以使用它來測試 hash_multimap 是否為空白。
 
 ### <a name="example"></a>範例
 
@@ -724,7 +724,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="hash_multimapend-stlclr"></a><a name="end"></a>hash_multimap：： end （STL/CLR）
+## <a name="hash_multimapend-stlclr"></a><a name="end"></a> hash_multimap：： end (STL/CLR) 
 
 指定受控制序列的結尾。
 
@@ -736,7 +736,7 @@ iterator end();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回指向受控制序列結尾之外的雙向反覆運算器。 您可以使用它來取得反覆運算器，以指定受控制序列的結尾;如果受控制序列的長度變更，其狀態不會變更。
+成員函式會傳回雙向反覆運算器，指向受控制序列的結尾以外的位置。 您可以使用它來取得反覆運算器，以指定受控制序列的結尾。如果受控制序列的長度變更，其狀態不會變更。
 
 ### <a name="example"></a>範例
 
@@ -777,7 +777,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="hash_multimapequal_range-stlclr"></a><a name="equal_range"></a>hash_multimap：： equal_range （STL/CLR）
+## <a name="hash_multimapequal_range-stlclr"></a><a name="equal_range"></a> hash_multimap：： equal_range (STL/CLR) 
 
 尋找符合指定之索引鍵的範圍。
 
@@ -794,7 +794,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回一對反覆運算器， `cliext::pair<iterator, iterator>(` [hash_multimap：： lower_bound （stl/clr）](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap：： upper_bound （stl/clr）](../dotnet/hash-multimap-upper-bound-stl-clr.md) `(key))` 。 您可以使用它來判斷目前在受控制序列中符合指定索引鍵的元素範圍。
+成員函式會傳回一對反覆運算器 `cliext::pair<iterator, iterator>(` [hash_multimap：： lower_bound (stl/clr) ](#lower_bound) `(key),` [hash_multimap：： upper_bound (stl/clr) ](#upper_bound) `(key))` 。 您可以使用它來判斷目前在受控制序列中，符合指定索引鍵的元素範圍。
 
 ### <a name="example"></a>範例
 
@@ -838,7 +838,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="hash_multimaperase-stlclr"></a><a name="erase"></a>hash_multimap：： erase （STL/CLR）
+## <a name="hash_multimaperase-stlclr"></a><a name="erase"></a> hash_multimap：： erase (STL/CLR) 
 
 移除位於指定位置的項目。
 
@@ -853,10 +853,10 @@ bool erase(key_type key)
 #### <a name="parameters"></a>參數
 
 *first*<br/>
-要清除之範圍的開頭。
+要清除的範圍開頭。
 
 *key*<br/>
-要清除的機碼值。
+要清除的索引鍵值。
 
 *last*<br/>
 要清除的範圍結尾。
@@ -866,13 +866,13 @@ bool erase(key_type key)
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會移除所指向之受控制序列的*專案，並*傳回反覆運算器，指定移除的元素之後剩餘的第一個元素，或如果沒有這類元素，則為[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md) `()` 。 您可以使用它來移除單一元素。
+第一個成員函式會移除由*where*所指向之受控制序列的元素，並傳回反覆運算器，指定移除專案之後的第一個元素，或[hash_multimap：： end (STL/CLR) ](#end) （ `()` 如果沒有這類專案存在）。 您可以使用它來移除單一專案。
 
-第二個成員函式會移除範圍 [，）中受控制序列的專案 `first` `last` ，並傳回反覆運算器，指定移除任何元素之後剩餘的第一個元素，或 `end()` 如果沒有這類元素存在，則為。 您可以使用它來移除零個或多個連續元素。
+第二個成員函式會移除範圍 [，) 中受控制序列的元素， `first` `last` 並傳回反覆運算器，此反覆運算器會指定移除任何專案之後剩餘的第一個元素，或 `end()` 如果沒有這類專案存在，則為。 您可以使用它來移除零個或多個連續元素。
 
-第三個成員函式會移除受控制序列中的任何專案，其索引鍵對索引鍵具有對等的*順序，並*傳回已移除的元素數計數。 您可以使用它來移除和計算符合指定索引鍵的所有元素。
+第三個成員函式會移除其索引鍵對索引 *鍵*具有對等排序之受控制序列的任何元素，並傳回已移除的元素數目計數。 您可以使用它來移除和計算所有符合指定索引鍵的元素。
 
-每個專案抹除的時間會與受控制序列中專案數的對數成正比。
+每個專案清除都會花費時間與受控制序列中專案數目的對數成正比。
 
 ### <a name="example"></a>範例
 
@@ -931,7 +931,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="hash_multimapfind-stlclr"></a><a name="find"></a>hash_multimap：： find （STL/CLR）
+## <a name="hash_multimapfind-stlclr"></a><a name="find"></a> hash_multimap：： find (STL/CLR) 
 
 尋找符合指定之索引鍵的元素。
 
@@ -948,7 +948,7 @@ iterator find(key_type key);
 
 ### <a name="remarks"></a>備註
 
-如果受控制序列中至少有一個專案具有對*等的順序，則*成員函式會傳回指定其中一個元素的反覆運算器;否則，它會傳回[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md) `()` 。 您可以使用它來找出目前在受控制序列中且符合指定索引鍵的元素。
+如果受控制序列中至少有一個專案具有與索引*鍵*相等的排序，則成員函式會傳回反覆運算器，指定其中一個元素;否則，它會傳回[hash_multimap：： end (STL/CLR) ](#end) `()` 。 您可以使用它來找出目前在受控制序列中且符合指定索引鍵的元素。
 
 ### <a name="example"></a>範例
 
@@ -990,9 +990,9 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="hash_multimapgeneric_container-stlclr"></a><a name="generic_container"></a>hash_multimap：： generic_container （STL/CLR）
+## <a name="hash_multimapgeneric_container-stlclr"></a><a name="generic_container"></a> hash_multimap：： generic_container (STL/CLR) 
 
-容器的泛型介面類別型。
+容器的泛型介面型別。
 
 ### <a name="syntax"></a>語法
 
@@ -1054,9 +1054,9 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="hash_multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_multimap：： generic_iterator （STL/CLR）
+## <a name="hash_multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> hash_multimap：： generic_iterator (STL/CLR) 
 
-用於容器之泛型介面的反覆運算器類型。
+反覆運算器的類型，用於容器的泛型介面。
 
 ### <a name="syntax"></a>語法
 
@@ -1068,7 +1068,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>備註
 
-此類型描述的泛型反覆運算器可與此樣板容器類別的泛型介面搭配使用。
+此類型描述可搭配此樣板容器類別的泛型介面使用的泛型反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -1111,9 +1111,9 @@ int main()
 [a 1]
 ```
 
-## <a name="hash_multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_multimap：： generic_reverse_iterator （STL/CLR）
+## <a name="hash_multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> hash_multimap：： generic_reverse_iterator (STL/CLR) 
 
-要與容器的泛型介面搭配使用的反向反覆運算器類型。
+反向反覆運算器的類型，用於容器的泛型介面。
 
 ### <a name="syntax"></a>語法
 
@@ -1125,7 +1125,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>備註
 
-此類型描述的泛型反向反覆運算器可與此樣板容器類別的泛型介面搭配使用。
+此類型描述可搭配此樣板容器類別的泛型介面使用的泛型反向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -1167,9 +1167,9 @@ int main()
 [c 3]
 ```
 
-## <a name="hash_multimapgeneric_value-stlclr"></a><a name="generic_value"></a>hash_multimap：： generic_value （STL/CLR）
+## <a name="hash_multimapgeneric_value-stlclr"></a><a name="generic_value"></a> hash_multimap：： generic_value (STL/CLR) 
 
-要與容器的泛型介面搭配使用之元素的類型。
+要搭配容器的泛型介面使用的元素類型。
 
 ### <a name="syntax"></a>語法
 
@@ -1179,7 +1179,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類型的物件 `GValue` ，其描述要與這個樣板容器類別的泛型介面搭配使用的預存元素值。
+型別描述型別的物件，此物件 `GValue` 描述與這個樣板容器類別的泛型介面搭配使用的預存專案值。
 
 ### <a name="example"></a>範例
 
@@ -1221,7 +1221,7 @@ int main()
 [a 1]
 ```
 
-## <a name="hash_multimaphash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_multimap：： hash_delegate （STL/CLR）
+## <a name="hash_multimaphash_delegate-stlclr"></a><a name="hash_delegate"></a> hash_multimap：： hash_delegate (STL/CLR) 
 
 尋找符合指定之索引鍵的元素。
 
@@ -1233,7 +1233,7 @@ hasher^ hash_delegate();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回用來將金鑰值轉換為整數的委派。 您可以使用它來雜湊索引鍵。
+成員函式會傳回用來將索引鍵值轉換為整數的委派。 您可以使用它來雜湊索引鍵。
 
 ### <a name="example"></a>範例
 
@@ -1259,7 +1259,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multimaphash_multimap-stlclr"></a><a name="hash_multimap"></a>hash_multimap：： hash_multimap （STL/CLR）
+## <a name="hash_multimaphash_multimap-stlclr"></a><a name="hash_multimap"></a> hash_multimap：： hash_multimap (STL/CLR) 
 
 建構容器物件。
 
@@ -1297,79 +1297,79 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *last*<br/>
 要插入的範圍結尾。
 
-*pred*<br/>
+*Pred*<br/>
 受控制序列的順序述詞。
 
-*再*<br/>
+*對*<br/>
 要插入的物件或範圍。
 
 ### <a name="remarks"></a>備註
 
-此構造函式：
+函數：
 
 `hash_multimap();`
 
-使用預設的排序述詞 `key_compare()` ，以及預設的雜湊函式，初始化受控制的序列，而不含任何元素。 您可以使用它來指定空的初始受控制序列，以及預設排序述詞和雜湊函數。
+使用預設的順序述詞 `key_compare()` 和預設雜湊函式，初始化受控制的序列，但不含任何元素。 您可以使用它來指定空的初始受控制序列，以及預設順序述詞和雜湊函數。
 
-此構造函式：
+函數：
 
 `explicit hash_multimap(key_compare^ pred);`
 
-使用沒有專案、順序述詞*pred*和預設雜湊函數，初始化受控制的序列。 您可以使用它來指定空的初始受控制序列，並指定順序述詞和預設雜湊函數。
+使用順序述詞 *pred*和預設雜湊函式，初始化受控制的序列，但不含任何元素。 您可以使用它來指定空的初始受控制序列，以及指定的順序述詞和預設雜湊函數。
 
-此構造函式：
+函數：
 
 `hash_multimap(key_compare^ pred, hasher^ hashfn);`
 
-使用沒有專案、順序述詞*pred*，以及雜湊函數*hashfn*，初始化受控制的序列。 您可以使用指定的順序述詞和雜湊函式，來指定空的初始受控制序列。
+使用順序述詞 *pred*，以及雜湊函數 *hashfn*，初始化受控制的序列。 您可以使用它來指定空的初始受控制序列，以及指定的順序述詞和雜湊函數。
 
-此構造函式：
+函數：
 
 `hash_multimap(hash_multimap<Key, Mapped>% right);`
 
-使用順序 [ `right.begin()` ， `right.end()` ）以預設的排序述詞和預設的雜湊函數，初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 hash_multimap 物件*許可權*所控制的序列複本，並具有預設排序述詞和雜湊函數。
+使用序列 [ `right.begin()` 、 `right.end()`) 、預設排序述詞和預設雜湊函數，初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 hash_multimap 物件 *許可權*所控制之序列的複本，以及預設排序述詞和雜湊函數。
 
-此構造函式：
+函數：
 
 `hash_multimap(hash_multimap<Key, Mapped>^ right);`
 
-使用順序 [ `right->begin()` ， `right->end()` ）以預設的排序述詞和預設的雜湊函數，初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 hash_multimap 物件*許可權*所控制的序列複本，並具有預設排序述詞和雜湊函數。
+使用序列 [ `right->begin()` 、 `right->end()`) 、預設排序述詞和預設雜湊函數，初始化受控制的序列。 您可以使用它來指定初始受控制序列，這是由 hash_multimap 物件 *許可權*所控制之序列的複本，以及預設排序述詞和雜湊函數。
 
-此構造函式：
+函數：
 
 `template<typename InIter> hash_multimap(InIter first, InIter last);`
 
-使用順序 [ `first` ， `last` ）以預設的排序述詞和預設的雜湊函數，初始化受控制的序列。 您可以使用它，以預設排序述詞和雜湊函式，將受控制序列設為另一個序列的複本。
+使用序列 [ `first` 、 `last`) 、預設排序述詞和預設雜湊函數，初始化受控制的序列。 您可以使用它，將受控制的序列設為另一個序列的複本，並使用預設順序述詞和雜湊函數。
 
-此構造函式：
+函數：
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`
 
-以順序 [，）初始化受控制的序列 `first` `last` ，並使用順序述詞*pred*和預設雜湊函數。 您可以使用它，讓受控制的序列成為另一個序列的複本，並具有指定的排序述詞和預設的雜湊函數。
+使用) 順序述詞 `first` `last` *pred*和預設雜湊函數，初始化受控制的序列。 您可以使用它，以指定的順序述詞和預設雜湊函數，讓受控制的序列成為另一個序列的複本。
 
-此構造函式：
+函數：
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-使用序列 [，）初始化受控制的序列，並搭配順序述詞 `first` `last` *pred*和雜湊函數*hashfn*。 您可以使用它，讓受控制的序列成為另一個序列的複本，並具有指定的排序述詞和雜湊函式。
+使用) 順序述詞 `first` `last` *pred*和雜湊函數 *hashfn*，初始化受控制的序列。 您可以使用它，以指定的順序述詞和雜湊函式，讓受控制的序列成為另一個序列的複本。
 
-此構造函式：
+函數：
 
 `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-使用預設的排序述詞，以及預設的雜湊函*式，初始化具有枚舉器*所指定順序的受控制序列。 您可以使用它，以預設排序述詞和雜湊函式，讓受控制的序列成為枚舉器所描述之另一個序列的複本。
+使用列舉值 *右邊*指定的序列、預設順序述詞和預設雜湊函數，初始化受控制的序列。 您可以使用它來讓受控制的序列成為列舉值所描述之另一個順序的複本，以及預設排序述詞和雜湊函數。
 
-此構造函式：
+函數：
 
 `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-使用枚舉器*許可權*所指定的順序，以排序述詞*pred*和預設雜湊函數，初始化受控制的序列。 您可以使用它，透過指定的排序述詞和預設雜湊函式，讓受控制的序列成為枚舉器所描述之另一個序列的複本。
+使用列舉值 *右邊*所指定的序列、順序述詞 *pred*和預設雜湊函數，初始化受控制的序列。 您可以使用它來讓受控制的序列成為列舉值所描述之另一個順序的複本，以及指定的順序述詞和預設雜湊函數。
 
-此構造函式：
+函數：
 
 `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-使用由列舉值*許可權*所指定的順序，搭配排序述詞*pred*和雜湊函數*hashfn*，初始化受控制的序列。 您可以使用它，透過指定的排序述詞和雜湊函式，讓受控制的序列成為枚舉器所描述之另一個序列的複本。
+使用列舉值 *右邊*所指定的序列、順序述詞 *pred*，以及雜湊函數 *hashfn*，初始化受控制的序列。 您可以使用它來讓受控制的序列成為列舉值所描述之另一個順序的複本，以及指定的順序述詞和雜湊函數。
 
 ### <a name="example"></a>範例
 
@@ -1502,7 +1502,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaphasher-stlclr"></a><a name="hasher"></a>hash_multimap：： hasher （STL/CLR）
+## <a name="hash_multimaphasher-stlclr"></a><a name="hasher"></a> hash_multimap：： hasher (STL/CLR) 
 
 索引鍵的雜湊委派。
 
@@ -1515,7 +1515,7 @@ Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>
 
 ### <a name="remarks"></a>備註
 
-此類型描述將金鑰值轉換為整數的委派。
+此類型說明將索引鍵值轉換為整數的委派。
 
 ### <a name="example"></a>範例
 
@@ -1541,7 +1541,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multimapinsert-stlclr"></a><a name="insert"></a>hash_multimap：： insert （STL/CLR）
+## <a name="hash_multimapinsert-stlclr"></a><a name="insert"></a> hash_multimap：： insert (STL/CLR) 
 
 加入項目。
 
@@ -1563,28 +1563,28 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 要插入的範圍結尾。
 
-*再*<br/>
+*對*<br/>
 要插入的列舉。
 
-*初始值*<br/>
-要插入的機碼值。
+*瓦爾*<br/>
+要插入的索引鍵值。
 
 *where*<br/>
-在容器中要插入的位置（僅提示）。
+在容器中插入 (提示僅) 。
 
 ### <a name="remarks"></a>備註
 
-每個成員函式都會插入由其餘運算元所指定的序列。
+每個成員函式都會插入其餘運算元所指定的序列。
 
-第一個成員函式會插入具有值*val*的元素，並傳回反覆運算器，指定新插入的專案。 您可以使用它來插入單一元素。
+第一個成員函式會插入具有值 *val*的元素，並傳回指定新插入之元素的反覆運算器。 您可以使用它來插入單一元素。
 
-第二個成員函式會插入具有值*val*的元素，並使用*where*做為提示（以改善效能），並傳回反覆運算器，指定新插入的專案。 您可以使用它來插入單一專案，這可能會與您知道的元素相鄰。
+第二個成員函式會插入具有值 *val*的元素，並使用 *where* 作為提示 (來改善效能) ，並傳回反覆運算器，以指定新插入的元素。 您可以使用它來插入單一元素，這可能與您知道的元素相鄰。
 
-第三個成員函式會插入序列 [ `first` ， `last` ）。 您可以使用它來插入從另一個序列複製的零個或多個元素。
+第三個成員函式會將序列 [ `first` ， `last`) 插入。 您可以使用它來插入從另一個序列複製的零或多個元素。
 
-第四個成員函式會插入*右邊*指定的序列。 您可以使用它來插入列舉值所描述的序列。
+第四個成員函式會插入 *右邊*指定的順序。 您可以使用它來插入列舉值所描述的序列。
 
-每個專案插入所花的時間，會與受控制序列中專案數的對數成正比。 不過，若指定的提示會指定插入點旁邊的元素，則插入可能會在分攤的常數時間內發生。
+每個插入的專案都需要時間與受控制序列中專案數目的對數成正比。 但是，如果指定的提示指定插入點連續的元素，則可能會在分攤的常數時間內進行插入。
 
 ### <a name="example"></a>範例
 
@@ -1659,7 +1659,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="hash_multimapiterator-stlclr"></a><a name="iterator"></a>hash_multimap：： iterator （STL/CLR）
+## <a name="hash_multimapiterator-stlclr"></a><a name="iterator"></a> hash_multimap：： iterator (STL/CLR) 
 
 受控制序列之迭代器的類型。
 
@@ -1671,7 +1671,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型描述未指定類型的物件 `T1` ，可做為受控制序列的雙向反覆運算器。
+型別描述未指定類型的物件 `T1` ，可作為受控制序列的雙向反覆運算器。
 
 ### <a name="example"></a>範例
 
@@ -1701,7 +1701,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapkey_comp-stlclr"></a><a name="key_comp"></a>hash_multimap：： key_comp （STL/CLR）
+## <a name="hash_multimapkey_comp-stlclr"></a><a name="key_comp"></a> hash_multimap：： key_comp (STL/CLR) 
 
 複製兩個索引鍵的排序委派。
 
@@ -1713,7 +1713,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回用來排序受控制序列的排序委派。 您會用它來比較兩個索引鍵。
+成員函式會傳回排序委派，用來排序受控制的序列。 您會用它來比較兩個索引鍵。
 
 ### <a name="example"></a>範例
 
@@ -1760,7 +1760,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_multimapkey_compare-stlclr"></a><a name="key_compare"></a>hash_multimap：： key_compare （STL/CLR）
+## <a name="hash_multimapkey_compare-stlclr"></a><a name="key_compare"></a> hash_multimap：： key_compare (STL/CLR) 
 
 兩個索引鍵的排序委派。
 
@@ -1820,7 +1820,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_multimapkey_type-stlclr"></a><a name="key_type"></a>hash_multimap：： key_type （STL/CLR）
+## <a name="hash_multimapkey_type-stlclr"></a><a name="key_type"></a> hash_multimap：： key_type (STL/CLR) 
 
 排序索引鍵的類型。
 
@@ -1832,7 +1832,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是樣板參數索引*鍵*的同義字。
+此類型是樣板參數索引 *鍵*的同義字。
 
 ### <a name="example"></a>範例
 
@@ -1865,7 +1865,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multimapload_factor-stlclr"></a><a name="load_factor"></a>hash_multimap：： load_factor （STL/CLR）
+## <a name="hash_multimapload_factor-stlclr"></a><a name="load_factor"></a> hash_multimap：： load_factor (STL/CLR) 
 
 計算每個值區的平均項目數。
 
@@ -1877,7 +1877,7 @@ float load_factor();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `(float)` [hash_multimap：： size （stl/clr）](../dotnet/hash-multimap-size-stl-clr.md) `() /` [hash_multimap：： bucket_count （stl/clr）](../dotnet/hash-multimap-bucket-count-stl-clr.md) `()` 。 您可以使用它來判斷平均 bucket 大小。
+成員函式會傳回 `(float)` [hash_multimap：： size (stl/clr) ](#size) `() /` [hash_multimap：： bucket_count (stl/clr) ](#bucket_count) `()` 。 您可以使用它來判斷平均 bucket 大小。
 
 ### <a name="example"></a>範例
 
@@ -1939,9 +1939,9 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimaplower_bound-stlclr"></a><a name="lower_bound"></a>hash_multimap：： lower_bound （STL/CLR）
+## <a name="hash_multimaplower_bound-stlclr"></a><a name="lower_bound"></a> hash_multimap：： lower_bound (STL/CLR) 
 
-尋找符合指定之索引鍵的範圍開頭。
+尋找符合指定索引鍵的範圍開頭。
 
 ### <a name="syntax"></a>語法
 
@@ -1956,7 +1956,7 @@ iterator lower_bound(key_type key);
 
 ### <a name="remarks"></a>備註
 
-成員函式 `X` 會判斷受控制序列中的第一個專案，該專案會雜湊至與索引*鍵*相同的值區，並具有對索引*鍵*的對等順序 如果沒有這類元素存在，則會傳回[hash_multimap：： end （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)， `()` 否則會傳回指定的反覆運算器 `X` 。 您可以使用它來尋找目前在受控制序列中符合指定索引鍵之專案序列的開頭。
+成員函式會決定受控制序列中的第一個專案，此專案 `X` 會雜湊到與索引 *鍵* 相同的值區，並對索引 *鍵*具有對等的排序 如果沒有這類專案存在，則會傳回[hash_multimap：： end (STL/CLR) ](#end) `()` ; 否則會傳回指定的 iterator `X` 。 您可以使用它來找出目前在受控制序列中，符合指定索引鍵的一連串元素。
 
 ### <a name="example"></a>範例
 
@@ -1998,9 +1998,9 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="hash_multimapmake_value-stlclr"></a><a name="make_value"></a>hash_multimap：： make_value （STL/CLR）
+## <a name="hash_multimapmake_value-stlclr"></a><a name="make_value"></a> hash_multimap：： make_value (STL/CLR) 
 
-構造值物件。
+結構值物件。
 
 ### <a name="syntax"></a>語法
 
@@ -2013,12 +2013,12 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 要使用的索引鍵值。
 
-*映射*<br/>
+*已對應*<br/>
 要搜尋的對應值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式 `value_type` 會傳回物件，其索引鍵是*key* ，而其對應的值是*對應*的。 您可以使用它來撰寫適合搭配數個其他成員函式使用的物件。
+成員函式會傳回 `value_type` 其索引鍵為 *索引鍵* 且對應值為 *對應*的物件。 您可以使用它來撰寫一個適合與其他數個成員函式搭配使用的物件。
 
 ### <a name="example"></a>範例
 
@@ -2047,7 +2047,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapmapped_type-stlclr"></a><a name="mapped_type"></a>hash_multimap：： mapped_type （STL/CLR）
+## <a name="hash_multimapmapped_type-stlclr"></a><a name="mapped_type"></a> hash_multimap：： mapped_type (STL/CLR) 
 
 與每個索引鍵關聯的對應值類型。
 
@@ -2059,7 +2059,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是*對應*之樣板參數的同義字。
+此類型與 *對應*的範本參數同義。
 
 ### <a name="example"></a>範例
 
@@ -2092,7 +2092,7 @@ int main()
 1 2 3
 ```
 
-## <a name="hash_multimapmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_multimap：： max_load_factor （STL/CLR）
+## <a name="hash_multimapmax_load_factor-stlclr"></a><a name="max_load_factor"></a> hash_multimap：： max_load_factor (STL/CLR) 
 
 取得或設定每個 Bucket 最大項目數。
 
@@ -2110,9 +2110,9 @@ void max_load_factor(float new_factor);
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會傳回目前儲存的最大載入因數。 您可以使用它來判斷平均 bucket 大小的最大值。
+第一個成員函式會傳回目前儲存的最大載入因數。 您可以使用它來判斷平均 bucket 大小上限。
 
-第二個成員函式會以*new_factor*取代存放區的最大載入因數。 在後續的插入之前，不會發生自動重新雜湊。
+第二個成員函式會以 *new_factor*取代儲存區的最大載入因數。 在後續的插入之前，不會發生自動重新雜湊。
 
 ### <a name="example"></a>範例
 
@@ -2174,7 +2174,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimapoperator-stlclr"></a><a name="op"></a>hash_multimap：： operator = （STL/CLR）
+## <a name="hash_multimapoperator-stlclr"></a><a name="op"></a> hash_multimap：： operator = (STL/CLR) 
 
 取代受控制的序列。
 
@@ -2186,12 +2186,12 @@ hash_multimap<Key, Mapped>% operator=(hash_multimap<Key, Mapped>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要複製的容器。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將*許可權*複製到物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
+成員運算子會將 *右移* 至物件，然後傳回 **`*this`** 。 您可以使用它，將受控制序列取代為 *right*中受控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -2229,7 +2229,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaprbegin-stlclr"></a><a name="rbegin"></a>hash_multimap：： rbegin （STL/CLR）
+## <a name="hash_multimaprbegin-stlclr"></a><a name="rbegin"></a> hash_multimap：： rbegin (STL/CLR) 
 
 指定反向受控制序列的開頭。
 
@@ -2241,7 +2241,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回反向反覆運算器，指定受控制序列的最後一個元素，或只在空白序列開頭以外的專案。 因此，它會指定反向序列的 `beginning`。 您會用它來取得指定以反向順序顯示之受控制序列 `current` 開頭的 Iterator，但是如果受控制序列的長度變更，它的狀態也會變更。
+成員函式會傳回反向反覆運算器，此反覆運算器會指定受控制序列的最後一個專案，或在空白序列的開頭之外。 因此，它會指定反向序列的 `beginning`。 您會用它來取得指定以反向順序顯示之受控制序列 `current` 開頭的 Iterator，但是如果受控制序列的長度變更，它的狀態也會變更。
 
 ### <a name="example"></a>範例
 
@@ -2280,7 +2280,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="hash_multimapreference-stlclr"></a><a name="reference"></a>hash_multimap：： reference （STL/CLR）
+## <a name="hash_multimapreference-stlclr"></a><a name="reference"></a> hash_multimap：： reference (STL/CLR) 
 
 項目的參考類型。
 
@@ -2292,7 +2292,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>備註
 
-此類型描述專案的參考。
+型別描述對元素的參考。
 
 ### <a name="example"></a>範例
 
@@ -2325,7 +2325,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaprehash-stlclr"></a><a name="rehash"></a>hash_multimap：： rehash （STL/CLR）
+## <a name="hash_multimaprehash-stlclr"></a><a name="rehash"></a> hash_multimap：： rehash (STL/CLR) 
 
 重建雜湊資料表。
 
@@ -2337,7 +2337,7 @@ void rehash();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會重建雜湊表，以確保[hash_multimap：： load_factor （stl/clr）](../dotnet/hash-multimap-load-factor-stl-clr.md) `() <=` [hash_multimap：： max_load_factor （stl/clr）](../dotnet/hash-multimap-max-load-factor-stl-clr.md)。 否則，雜湊表只會在插入後視需要增加大小。 （它不會自動減少大小）。您可以使用它來調整雜湊表的大小。
+成員函式會重建雜湊表，以確保[hash_multimap：： load_factor (stl/clr) ](#load_factor) `() <=` [hash_multimap：： max_load_factor (stl/clr) ](#max_load_factor)。 否則，雜湊表只會在插入之後視需要增加大小。  (不會自動縮減大小。 ) 您使用它來調整雜湊表的大小。
 
 ### <a name="example"></a>範例
 
@@ -2399,7 +2399,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimaprend-stlclr"></a><a name="rend"></a>hash_multimap：： rend （STL/CLR）
+## <a name="hash_multimaprend-stlclr"></a><a name="rend"></a> hash_multimap：： rend (STL/CLR) 
 
 指定反向受控制序列的結尾。
 
@@ -2411,7 +2411,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回指向受控制序列開頭以外的反向反覆運算器。 因此，它會指定反向序列的 `end`。 您要用它來取得的 Iterator 可指定以相反順序顯示的受控制序列之 `current` 結尾，但是，如果受控制序列的長度變更，它的狀態也可以變更。
+成員函式會傳回指向受控制序列開頭以外的反向反覆運算器。 因此，它會指定反向序列的 `end`。 您要用它來取得的 Iterator 可指定以相反順序顯示的受控制序列之 `current` 結尾，但是，如果受控制序列的長度變更，它的狀態也可以變更。
 
 ### <a name="example"></a>範例
 
@@ -2452,7 +2452,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="hash_multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_multimap：： reverse_iterator （STL/CLR）
+## <a name="hash_multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> hash_multimap：： reverse_iterator (STL/CLR) 
 
 受控制序列的反向迭代器類型。
 
@@ -2494,7 +2494,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="hash_multimapsize-stlclr"></a><a name="size"></a>hash_multimap：： size （STL/CLR）
+## <a name="hash_multimapsize-stlclr"></a><a name="size"></a> hash_multimap：： size (STL/CLR) 
 
 計算元素的數目。
 
@@ -2506,7 +2506,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[hash_multimap：： empty （STL/CLR）](../dotnet/hash-multimap-empty-stl-clr.md) `()` 。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[hash_multimap：： empty (STL/CLR) ](#empty) `()` 。
 
 ### <a name="example"></a>範例
 
@@ -2546,9 +2546,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="hash_multimapsize_type-stlclr"></a><a name="size_type"></a>hash_multimap：： size_type （STL/CLR）
+## <a name="hash_multimapsize_type-stlclr"></a><a name="size_type"></a> hash_multimap：： size_type (STL/CLR) 
 
-兩個元素之間帶正負號距離的類型。
+兩個元素之間的帶正負號距離類型。
 
 ### <a name="syntax"></a>語法
 
@@ -2558,7 +2558,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述非負的元素計數。
+型別描述非負的元素計數。
 
 ### <a name="example"></a>範例
 
@@ -2594,7 +2594,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="hash_multimapswap-stlclr"></a><a name="swap"></a>hash_multimap：： swap （STL/CLR）
+## <a name="hash_multimapswap-stlclr"></a><a name="swap"></a> hash_multimap：： swap (STL/CLR) 
 
 交換兩個容器的內容。
 
@@ -2606,12 +2606,12 @@ void swap(hash_multimap<Key, Mapped>% right);
 
 #### <a name="parameters"></a>參數
 
-*再*<br/>
+*對*<br/>
 要交換內容的容器。
 
 ### <a name="remarks"></a>備註
 
-成員函式會在和 right 之間交換受控制的序列 **`this`** 。 *right* 它會以常數時間執行，而且不會擲回任何例外狀況。 您可以用它來快速交換兩個容器的內容。
+成員函式會交換和右邊的受控制序列 **`this`** 。 *right* 它會以常數時間來執行，且不會擲回任何例外狀況。 您可以使用它來快速交換兩個容器的內容。
 
 ### <a name="example"></a>範例
 
@@ -2662,7 +2662,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapto_array-stlclr"></a><a name="to_array"></a>hash_multimap：： to_array （STL/CLR）
+## <a name="hash_multimapto_array-stlclr"></a><a name="to_array"></a> hash_multimap：： to_array (STL/CLR) 
 
 將受控制序列複製到新的陣列。
 
@@ -2674,7 +2674,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回陣列，其中包含受控制的序列。 您可以用它來取得陣列表單中受控制序列的複本。
+成員函式會傳回陣列，其中包含受控制的序列。 您可以使用它，以陣列形式取得受控制序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -2712,9 +2712,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapupper_bound-stlclr"></a><a name="upper_bound"></a>hash_multimap：： upper_bound （STL/CLR）
+## <a name="hash_multimapupper_bound-stlclr"></a><a name="upper_bound"></a> hash_multimap：： upper_bound (STL/CLR) 
 
-尋找符合指定之索引鍵的結束範圍。
+尋找符合指定索引鍵的範圍結尾。
 
 ### <a name="syntax"></a>語法
 
@@ -2729,7 +2729,7 @@ iterator upper_bound(key_type key);
 
 ### <a name="remarks"></a>備註
 
-成員函式 `X` 會判斷受控制序列中的最後一個專案，該專案會雜湊至與索引*鍵*相同的值區，並具有對索引*鍵*的對等順序 如果沒有這類元素存在，或如果 `X` 是受控制序列中的最後一個專案，則會傳回[hash_multimap：： END （STL/CLR）](../dotnet/hash-multimap-end-stl-clr.md)， `()` 否則會傳回反覆運算器，指定超出的第一個元素 `X` 。 您可以使用它來找出目前在受控制序列中符合指定索引鍵之專案序列的結尾。
+成員函式會決定受控制序列中的最後一個專案，此專案 `X` 會雜湊到與索引 *鍵* 相同的值區，並對索引 *鍵*具有對等的排序 如果沒有這類專案，或 `X` 為受控制序列中的最後一個專案，則會傳回[hash_multimap：： END (STL/CLR) ](#end) `()` ; 否則會傳回反覆運算器，指定超過的第一個元素 `X` 。 您可以使用它來找出目前在受控制序列中，符合指定索引鍵的專案序列結尾。
 
 ### <a name="example"></a>範例
 
@@ -2771,9 +2771,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="hash_multimapvalue_comp-stlclr"></a><a name="value_comp"></a>hash_multimap：： value_comp （STL/CLR）
+## <a name="hash_multimapvalue_comp-stlclr"></a><a name="value_comp"></a> hash_multimap：： value_comp (STL/CLR) 
 
-複製兩個元素值的順序委派。
+針對兩個元素值複製順序委派。
 
 ### <a name="syntax"></a>語法
 
@@ -2783,7 +2783,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回用來排序受控制序列的排序委派。 您可以使用它來比較兩個元素的值。
+成員函式會傳回排序委派，用來排序受控制的序列。 您可以使用它來比較兩個元素值。
 
 ### <a name="example"></a>範例
 
@@ -2818,7 +2818,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="hash_multimapvalue_compare-stlclr"></a><a name="value_compare"></a>hash_multimap：： value_compare （STL/CLR）
+## <a name="hash_multimapvalue_compare-stlclr"></a><a name="value_compare"></a> hash_multimap：： value_compare (STL/CLR) 
 
 兩個元素值的排序委派。
 
@@ -2866,7 +2866,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="hash_multimapvalue_type-stlclr"></a><a name="value_type"></a>hash_multimap：： value_type （STL/CLR）
+## <a name="hash_multimapvalue_type-stlclr"></a><a name="value_type"></a> hash_multimap：： value_type (STL/CLR) 
 
 項目的類型。
 

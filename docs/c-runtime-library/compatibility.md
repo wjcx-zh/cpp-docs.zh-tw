@@ -7,19 +7,20 @@ helpviewer_keywords:
 - compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: d6562be0abde8e9d51260b2d230f225ed159c199
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 711d5b3c95269413a0d94f568d3e3cb7b7dff721
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075746"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506880"
 ---
 # <a name="compatibility"></a>相容性
 
 通用 C 執行時間程式庫 (UCRT) 支援 c + + 符合性所需的大部分 C 標準程式庫。 它會實 C99 (ISO/IEC 9899:1999) 程式庫，但有一些例外狀況：
-- 中的 strict 型別相容性 \<complex.h> 。 
+
+- 中的 strict 型別相容性 \<complex.h> 。
 - `aligned_alloc`，由於 Windows 作業系統不支援對齊的配置，因此可能不會執行。 請改用非標準的 `_aligned_malloc` 。
--  `strerrorlen_s`
+- `strerrorlen_s`
 - 中的不可部分完成支援 \<stdatomic.h>
 - 中的執行緒支援 \<threads.h>
 
@@ -39,7 +40,7 @@ C++ 標準在全域命名空間中，會保留以底線開頭的名稱供實作�
 |-----------|-----------------|
 |[UWP 應用程式、Windows 執行階段及 C 執行時間](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|說明 UCRT 常式與通用 Windows 應用程式或 Microsoft Store 應用程式不相容的時機。|
 |[ANSI C 合規性](../c-runtime-library/ansi-c-compliance.md)|說明 UCRT 中符合規範的命名。|
-|[UNIX](../c-runtime-library/unix.md)|提供移植程式至 UNIX 的指導方針。|
+|[Unix](../c-runtime-library/unix.md)|提供移植程式至 UNIX 的指導方針。|
 |[Windows 平臺 (CRT) ](../c-runtime-library/windows-platforms-crt.md)|列出此 CRT 支援的作業系統。|
 |[回溯相容性](../c-runtime-library/backward-compatibility.md)|描述如何將舊的 CRT 名稱對應到新的 CRT 名稱。|
 |[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)|提供 CRT 程式庫 (.lib) 檔案和相關聯之編譯器選項的概觀。|

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3037
 ms.assetid: 9ba8a890-d3c7-4cce-93c5-d358e2bfad28
-ms.openlocfilehash: d11f1419fdaac5e2283d0ae53a1ed068214e437e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f7a2e4cfe40366db06e2418616825ef467a2271a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754988"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508461"
 ---
 # <a name="compiler-error-c3037"></a>編譯器錯誤 C3037
 
 'var': 'reduction' 子句中的變數在封入內容中必須為共用
 
-[reduction](../../parallel/openmp/reference/reduction.md) 子句中指定的變數，對內容中的每個執行緒而言可能都不是私用。
+[reduction](../../parallel/openmp/reference/openmp-clauses.md#reduction) 子句中指定的變數，對內容中的每個執行緒而言可能都不是私用。
 
 下列範例會產生 C3037：
 

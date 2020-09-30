@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 991cce4cfa6810f35c2ccb3ec1ed45adf2d849ac
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988116"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508690"
 ---
 # <a name="lock_when-enum"></a>lock_when 列舉
 
@@ -30,11 +30,11 @@ enum lock_when {
 
 ## <a name="remarks"></a>備註
 
-當傳遞至[lock：： lock](../dotnet/lock-lock.md)時，`lock_later` 指定不要立即採取鎖定。
+傳遞至 [lock：： lock](./lock-class.md#lock)時， `lock_later` 指定目前不會執行鎖定。
 
 ## <a name="example"></a>範例
 
-這個範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保對每個執行緒而言，對其內部資料的存取都是一致的。  主要的應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何背景工作執行緒仍然存在，並等候結束，直到所有工作者執行緒完成其工作為止。
+此範例會在多個執行緒中使用類別的單一實例。  類別會對本身使用鎖定，以確保其內部資料的存取對每個執行緒都是一致的。  主應用程式執行緒會在類別的相同實例上使用鎖定，以定期檢查是否有任何背景工作執行緒仍然存在，並等候結束，直到所有背景工作執行緒都完成其工作為止。
 
 ```cpp
 // msl_lock_lock_when.cpp
@@ -124,10 +124,10 @@ All threads completed.
 
 ## <a name="requirements"></a>需求
 
-**標頭檔**\<msclr\lock.h >
+**標頭檔** \<msclr\lock.h>
 
-**命名空間**msclr
+**命名空間** msclr
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[lock](../dotnet/lock.md)
+[鎖](../dotnet/lock.md)

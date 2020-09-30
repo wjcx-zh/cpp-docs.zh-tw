@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: 290faa1a227920cd46f32a4adf0dd6a6f3687c6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1e1f131d551440e44e1a2ed9ed9b9c18c71eb22d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233362"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508162"
 ---
 # <a name="compiler-error-c3538"></a>編譯器錯誤 C3538
 
@@ -21,11 +21,11 @@ ms.locfileid: "87233362"
 
 ### <a name="to-correct-this-error"></a>更正這個錯誤
 
-1. 請確定清單中的所有宣告都會推算 **`auto`** 成相同的類型。
+1. 確定清單中的所有宣告都推算 **`auto`** 為相同的類型。
 
 ## <a name="example"></a>範例
 
-下列陳述式會產生 C3538。 每個語句都會宣告多個變數，但每次使用 **`auto`** 關鍵字並不會推算成相同的類型。
+下列陳述式會產生 C3538。 每個語句會宣告多個變數，但每次使用關鍵字時，都 **`auto`** 不會推算為相同的類型。
 
 ```cpp
 // C3538.cpp
@@ -47,4 +47,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[auto 關鍵字](../../cpp/auto-keyword.md)
+[auto 關鍵字](../../cpp/auto-cpp.md)

@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 8cacbd6d188b3453c0111cca6565b7def9e3aa1e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b351530326e0dc4ed0b72db50d17717824eb6bb4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831563"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507278"
 ---
 # <a name="crowset-class"></a>CRowset 類別
 
@@ -249,9 +249,9 @@ class CRowset
 ### <a name="parameters"></a>參數
 
 *TAccessor*<br/>
-存取子類別。 預設為 `CAccessorBase`。
+存取子類別。 預設值為 `CAccessorBase`。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標題:** atldbcli.h
 
@@ -282,7 +282,7 @@ class CRowset
 |[MoveToRatio](#movetoratio)|從資料列集中的小數位置開始提取資料列。|
 |[ReleaseRows](#releaserows)|呼叫 [IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) 釋放目前的資料列控制碼。|
 |[SetData](#setdata)|使用 [IRowsetChange： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85))，在資料列的一個或多個資料行中設定資料值。|
-|[復原](#undo)|復原自上次提取或 [更新](../../data/oledb/crowset-update.md)之後對資料列所做的任何變更。|
+|[復原](#undo)|復原自上次提取或 [更新](#update)之後對資料列所做的任何變更。|
 |[更新](#update)|在上次提取或更新之後，傳輸對目前資料列所做的任何暫止變更。|
 |[UpdateAll](#updateall)|傳輸自上次提取或更新之後對所有資料列所做的任何暫止變更。|
 
@@ -308,7 +308,7 @@ HRESULT AddRefRows() throw();
 
 ### <a name="remarks"></a>備註
 
-這個方法會遞增目前資料列控制碼的參考計數。 呼叫 [ReleaseRows](../../data/oledb/crowset-releaserows.md) 以遞減計數。 移動方法所傳回的資料列的參考計數為1。
+這個方法會遞增目前資料列控制碼的參考計數。 呼叫 [ReleaseRows](#releaserows) 以遞減計數。 移動方法所傳回的資料列的參考計數為1。
 
 ## <a name="crowsetclose"></a><a name="close"></a> CRowset：： Close
 
@@ -497,7 +497,7 @@ HRESULT GetData(int nAccessor) throw();
 
 ### <a name="remarks"></a>備註
 
-如果您指定的存取子不是 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)中的 autoaccessor，請使用這個方法，藉由傳遞存取子編號來明確取得資料。
+如果您指定的存取子不是 [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor)中的 autoaccessor，請使用這個方法，藉由傳遞存取子編號來明確取得資料。
 
 ## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a> CRowset：： GetDataHere
 
@@ -820,7 +820,7 @@ HRESULT SetData(int nAccessor) const throw();
 
 ### <a name="remarks"></a>備註
 
-若為 `SetData` 不接受引數的表單，則會使用所有存取子進行更新。 您通常會呼叫 `SetData` ，以在資料列的資料行中設定資料值，然後呼叫 [Update](../../data/oledb/crowset-update.md) 來傳輸這些變更。
+若為 `SetData` 不接受引數的表單，則會使用所有存取子進行更新。 您通常會呼叫 `SetData` ，以在資料列的資料行中設定資料值，然後呼叫 [Update](#update) 來傳輸這些變更。
 
 這個方法需要選用的介面 `IRowsetChange` ，在所有提供者上可能都不支援; 如果是這種情況，則方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetChange` `Open` 集的資料表或命令上呼叫之前，您也必須設定為 VARIANT_TRUE。
 
@@ -828,7 +828,7 @@ HRESULT SetData(int nAccessor) const throw();
 
 ## <a name="crowsetundo"></a><a name="undo"></a> CRowset：： Undo
 
-復原自上次提取或 [更新](../../data/oledb/crowset-update.md)之後對資料列所做的任何變更。
+復原自上次提取或 [更新](#update)之後對資料列所做的任何變更。
 
 ### <a name="syntax"></a>語法
 
@@ -886,7 +886,7 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>備註
 
-傳送對目前資料列所做的任何暫止變更，因為該資料列上次被提取或更新 (使用 `Update` 或 [UpdateAll](../../data/oledb/crowset-updateall.md)) 。 您通常會呼叫 [SetData](../../data/oledb/crowset-setdata.md) 來設定資料列中資料行的資料值，然後呼叫 `Update` 以傳送這些變更。
+傳送對目前資料列所做的任何暫止變更，因為該資料列上次被提取或更新 (使用 `Update` 或 [UpdateAll](#updateall)) 。 您通常會呼叫 [SetData](#setdata) 來設定資料列中資料行的資料值，然後呼叫 `Update` 以傳送這些變更。
 
 這個方法需要選用的介面 `IRowsetUpdate` ，在所有提供者上可能都不支援; 如果是這種情況，則方法會傳回 E_NOINTERFACE。 在包含資料列 `DBPROP_IRowsetUpdate` `Open` 集的資料表或命令上呼叫之前，您也必須設定為 VARIANT_TRUE。
 
@@ -915,7 +915,7 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>備註
 
-傳送對所有資料列所做的任何暫止變更，因為上次使用 [Update](../../data/oledb/crowset-update.md) 或更新這些資料列的資料列 `UpdateAll` 。 `UpdateAll` 將會更新每個已修改的資料列，不論您是否仍有其控制碼 (請參閱 *pphRow*) 。
+傳送對所有資料列所做的任何暫止變更，因為上次使用 [Update](#update) 或更新這些資料列的資料列 `UpdateAll` 。 `UpdateAll` 將會更新每個已修改的資料列，不論您是否仍有其控制碼 (請參閱 *pphRow*) 。
 
 例如，如果您用 `Insert` 來在資料列集中插入五個數據列，您可以呼叫 `Update` 五次或呼叫 `UpdateAll` 一次，以將它們全部更新。
 

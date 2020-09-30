@@ -1,5 +1,5 @@
 ---
-title: 檔案處理和 I-o (C++/CLI)
+title: '檔案處理和 i/o (c + +/CLI) '
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1cfdc4239506f22368753d8c37765e550d9b835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324996"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508940"
 ---
 # <a name="file-handling-and-io-ccli"></a>檔案處理和 I/O (C++/CLI)
 
-示範如何使用.NET Framework 的各種檔案作業。
+示範使用 .NET Framework 的各種檔案作業。
 
-下列主題示範如何使用類別中定義<xref:System.IO>命名空間，以執行各種檔案作業。
+下列主題示範如何使用命名空間中定義的類別 <xref:System.IO> 來執行各種檔案作業。
 
-## <a name="enumerate"></a> 列舉目錄中的檔案
+## <a name="enumerate-files-in-a-directory"></a><a name="enumerate"></a> 列舉目錄中的檔案
 
-下列程式碼範例示範如何擷取目錄中檔案的清單。 此外，也會列舉子目錄。 下列程式碼範例會使用<xref:System.IO.Directory.GetFiles%2A><xref:System.IO.Directory.GetFiles%2A>和<xref:System.IO.Directory.GetDirectories%2A>方法以顯示 C:\Windows 目錄的內容。
+下列程式碼範例示範如何取出目錄中的檔案清單。 此外，也會列舉子目錄。 下列程式碼範例會使用 <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> 和 <xref:System.IO.Directory.GetDirectories%2A> 方法來顯示 C：\Windows 目錄的內容。
 
 ### <a name="example"></a>範例
 
@@ -66,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="monitor"></a> 監視檔案系統變更
+## <a name="monitor-file-system-changes"></a><a name="monitor"></a> 監視檔案系統變更
 
-下列程式碼範例使用<xref:System.IO.FileSystemWatcher>註冊建立、 變更、 刪除或重新命名的檔案對應的事件。 除了定期輪詢變更檔案的目錄，您可以使用<xref:System.IO.FileSystemWatcher>類別來引發事件時偵測到變更。
+下列程式碼範例會使用 <xref:System.IO.FileSystemWatcher> 來註冊對應至所建立、變更、刪除或重新命名之檔案的事件。 您可以使用 <xref:System.IO.FileSystemWatcher> 類別，在偵測到變更時引發事件，而不是定期輪詢目錄以變更檔案。
 
 ### <a name="example"></a>範例
 
@@ -132,11 +132,11 @@ int main()
 }
 ```
 
-## <a name="read_binary"></a> 讀取二進位檔案
+## <a name="read-a-binary-file"></a><a name="read_binary"></a> 讀取二進位檔案
 
-下列程式碼範例示範如何從檔案讀取二進位資料，藉由使用中的兩個類別<xref:System.IO?displayProperty=fullName>命名空間：<xref:System.IO.FileStream>和<xref:System.IO.BinaryReader>。 <xref:System.IO.FileStream> 代表實際的檔案。 <xref:System.IO.BinaryReader> 提供可進行二進位存取的資料流介面。
+下列程式碼範例顯示如何使用命名空間中的兩個類別，從檔案讀取二進位資料 <xref:System.IO?displayProperty=fullName> ： <xref:System.IO.FileStream> 和 <xref:System.IO.BinaryReader> 。 <xref:System.IO.FileStream> 表示實際的檔案。 <xref:System.IO.BinaryReader> 提供允許二進位存取之資料流程的介面。
 
-在程式碼範例會讀取名為 data.bin 且包含二進位格式整數的檔案。 如需這類檔案的詳細資訊，請參閱[How to:寫入二進位檔案 (C++/CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)。
+程式碼範例會讀取名為 data 的檔案，並包含二進位格式的整數。 如需這種檔案的相關資訊，請參閱 [如何： (c + +/Cli 寫入二進位檔案) ](#write_binary)。
 
 ### <a name="example"></a>範例
 
@@ -173,11 +173,11 @@ int main()
 }
 ```
 
-## <a name="read_text"></a> 讀取文字檔
+## <a name="read-a-text-file"></a><a name="read_text"></a> 讀取文字檔
 
-下列程式碼範例示範如何開啟並讀取一次的文字檔案的一行，使用<xref:System.IO.StreamReader>中所定義的類別<xref:System.IO?displayProperty=fullName>命名空間。 此類別的執行個體用來開啟文字檔案，然後<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>方法用來擷取每一行。
+下列程式碼範例示範如何使用 <xref:System.IO.StreamReader> 命名空間中定義的類別，一次開啟和讀取文字檔 <xref:System.IO?displayProperty=fullName> 。 這個類別的實例是用來開啟文字檔，然後 <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> 使用方法來取出每一行。
 
-此程式碼範例會讀取名為 textfile.txt 且包含文字的檔案。 如需這類檔案的詳細資訊，請參閱[How to:寫入文字檔 (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)。
+這個程式碼範例會讀取名為 textfile.txt 的檔案，並包含文字。 如需這種檔案的相關資訊，請參閱 [如何： (c + +/Cli 撰寫文字檔) ](#write_text)。
 
 ### <a name="example"></a>範例
 
@@ -216,11 +216,11 @@ int main()
 }
 ```
 
-## <a name="retrieve"></a> 擷取檔案資訊
+## <a name="retrieve-file-information"></a><a name="retrieve"></a> 取出檔案資訊
 
-下列程式碼範例示範<xref:System.IO.FileInfo>類別。 當您有檔案的名稱時，您可以使用這個類別來擷取相關的檔案，例如檔案大小、 目錄、 完整名稱，以及日期和時間的資訊建立和上次修改。
+下列程式碼範例將示範 <xref:System.IO.FileInfo> 類別。 當您擁有檔案的名稱時，您可以使用這個類別來取得檔案的相關資訊，例如檔案大小、目錄、完整名稱，以及建立的日期和時間，以及上次修改的日期和時間。
 
-此程式碼會擷取為 Notepad.exe 的檔案資訊。
+此程式碼會抓取 Notepad.exe 的檔案資訊。
 
 ### <a name="example"></a>範例
 
@@ -257,11 +257,11 @@ int main()
 }
 ```
 
-## <a name="write_binary"></a> 寫入二進位檔案
+## <a name="write-a-binary-file"></a><a name="write_binary"></a> 寫入二進位檔案
 
-下列程式碼範例示範如何將二進位資料寫入檔案。 兩個類別<xref:System.IO>會使用命名空間：<xref:System.IO.FileStream>和<xref:System.IO.BinaryWriter>。 <xref:System.IO.FileStream> 表示實際的檔案，而<xref:System.IO.BinaryWriter>提供介面來進行二進位存取的資料流。
+下列程式碼範例示範如何將二進位資料寫入檔案。 使用命名空間的兩個類別 <xref:System.IO> ： <xref:System.IO.FileStream> 和 <xref:System.IO.BinaryWriter> 。 <xref:System.IO.FileStream> 表示實際的檔案，並 <xref:System.IO.BinaryWriter> 提供允許二進位存取之資料流程的介面。
 
-下列程式碼範例會寫入檔案，包含以二進位格式的整數。 可以讀取此檔案中的程式碼[How to:讀取二進位檔案 (C++/CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)。
+下列程式碼範例會寫入檔案，其中包含二進位格式的整數。 您可以使用 [如何：讀取二進位檔案 (c + +/cli) ](#read_binary)中的程式碼來讀取此檔案。
 
 ### <a name="example"></a>範例
 
@@ -300,11 +300,11 @@ int main()
 }
 ```
 
-## <a name="write_text"></a> 寫入文字檔
+## <a name="write-a-text-file"></a><a name="write_text"></a> 寫入文字檔
 
-下列程式碼範例示範如何建立文字檔案，並將文字寫入至使用<xref:System.IO.StreamWriter>類別，其定義於<xref:System.IO>命名空間。 <xref:System.IO.StreamWriter>建構函式會採用要建立之檔案的名稱。 如果檔案存在，它會覆寫 (除非您傳遞 True 做為第二個<xref:System.IO.StringWriter>建構函式引數)。
+下列程式碼範例示範如何建立文字檔，並使用在 <xref:System.IO.StreamWriter> 命名空間中定義的類別，將文字寫入其中 <xref:System.IO> 。 此函式 <xref:System.IO.StreamWriter> 會使用要建立的檔案名。 如果檔案存在，則會覆寫 (除非您傳遞 True 做為第二個函式 <xref:System.IO.StringWriter> 引數) 。
 
-檔案然後歸檔的方式使用<xref:System.IO.StreamWriter.Write%2A>和<xref:System.IO.TextWriter.WriteLine%2A>函式。
+然後，會使用和函式來將檔案歸檔 <xref:System.IO.StreamWriter.Write%2A> <xref:System.IO.TextWriter.WriteLine%2A> 。
 
 ### <a name="example"></a>範例
 
@@ -334,6 +334,6 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
-[檔案和資料流 I/O](/dotnet/standard/io/index)<br/>
+[使用 c + +/CLI 進行 .NET 程式設計 (Visual C++) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[檔案和資料流程 i/o](/dotnet/standard/io/index)<br/>
 [System.IO 命名空間](/dotnet/api/system.io)

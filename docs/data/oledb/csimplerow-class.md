@@ -34,24 +34,24 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841073"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507230"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 類別
 
 提供用於 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) 類別的資料列控制碼預設實作為。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CSimpleRow
 ```
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **Header:** atldb.h
 
@@ -75,13 +75,13 @@ class CSimpleRow
 
 ## <a name="remarks"></a>備註
 
-資料列控制碼在邏輯上是結果資料列的唯一標記。 `IRowsetImpl``CSimpleRow`針對[IRowsetImpl：： GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)中要求的每個資料列建立新的。 `CSimpleRow` 也可以取代為您自己的資料列控制碼的執行，因為這是的預設樣板引數 `IRowsetImpl` 。 取代這個類別的唯一需求是讓取代類別提供接受 **LONG**類型之單一參數的函式。
+資料列控制碼在邏輯上是結果資料列的唯一標記。 `IRowsetImpl``CSimpleRow`針對[IRowsetImpl：： GetNextRows](./irowsetimpl-class.md#getnextrows)中要求的每個資料列建立新的。 `CSimpleRow` 也可以取代為您自己的資料列控制碼的執行，因為這是的預設樣板引數 `IRowsetImpl` 。 取代這個類別的唯一需求是讓取代類別提供接受 **LONG**類型之單一參數的函式。
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow：： AddRefRow
 
 以安全線程的方式，將參考計數加入現有的資料列控制碼。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 DWORD AddRefRow();
@@ -123,13 +123,13 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 ### <a name="remarks"></a>備註
 
-將 [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) 設定為 *iRowsetCur*。
+將 [m_iRowset](#irowset) 設定為 *iRowsetCur*。
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow：： ReleaseRow
 
 以安全線程的方式釋放資料列。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 DWORD ReleaseRow();
@@ -139,7 +139,7 @@ DWORD ReleaseRow();
 
 現有資料列控制碼的參考計數。
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 
 ```cpp
 DWORD m_dwRef;

@@ -95,12 +95,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-ms.openlocfilehash: a7db6367ae7d5096c47666a1ea930720f061c9dd
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: c6df41836433b952d7d2e0e7d744270174c5768a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743122"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508742"
 ---
 # <a name="hash_set-stlclr"></a>hash_set (STL/CLR)
 
@@ -129,7 +129,7 @@ template<typename Key>
 *索引鍵*<br/>
 受控制序列中項目的主要元件型別。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 **標頭：**\<cliext/hash_set>
 
@@ -204,9 +204,9 @@ template<typename Key>
 
 物件會在雙向連結清單中，配置並釋放它所控制之序列的儲存體，以作為個別節點。 為了加速存取，物件也會在雜湊表) 的清單中維護不同長度的指標陣列， (雜湊表，有效地將整個清單視為清單子或值區的序列來管理。 它會藉由變更節點之間的連結，而不是藉由將節點的內容複寫到另一個節點的方式，將專案插入至值區，以保持排序。 這表示您可以自由插入和移除專案，而不會干擾其餘的元素。
 
-物件會藉由呼叫 hash_set：： key_compare 類型的預存委派物件來排序每個值區， [ (STL/CLR) ](../dotnet/hash-set-key-compare-stl-clr.md)。 當您建立 hash_set 時，可以指定預存的委派物件。如果您未指定委派物件，預設值就是比較 `operator<=(key_type, key_type)` 。
+物件會藉由呼叫 hash_set：： key_compare 類型的預存委派物件來排序每個值區， [ (STL/CLR) ](#key_compare)。 當您建立 hash_set 時，可以指定預存的委派物件。如果您未指定委派物件，預設值就是比較 `operator<=(key_type, key_type)` 。
 
-您可以藉由呼叫成員函式[hash_set：： key_comp (STL/CLR) ](../dotnet/hash-set-key-comp-stl-clr.md)來存取儲存的委派物件 `()` 。 這類委派物件必須在 [hash_set：： key_type (STL/CLR) ](../dotnet/hash-set-key-type-stl-clr.md)類型的索引鍵之間定義對等順序。 這表示，針對任何兩個金鑰， `X` 以及 `Y` ：
+您可以藉由呼叫成員函式[hash_set：： key_comp (STL/CLR) ](#key_comp)來存取儲存的委派物件 `()` 。 這類委派物件必須在 [hash_set：： key_type (STL/CLR) ](#key_type)類型的索引鍵之間定義對等順序。 這表示，針對任何兩個金鑰， `X` 以及 `Y` ：
 
 `key_comp()(X, Y)` 每次呼叫時，都會傳回相同的布林值結果。
 
@@ -216,7 +216,7 @@ template<typename Key>
 
 請注意，容器只會確保其索引鍵具有對等順序的專案 (，以及相同整數值) 的雜湊在值區中相鄰。 不同于樣板類別 [hash_multiset (STL/CLR) ](../dotnet/hash-multiset-stl-clr.md)，樣板類別的物件 `hash_set` 可確保所有元素的索引鍵都是唯一的。  (沒有任何兩個索引鍵具有對等的排序。 ) 
 
-物件會藉由呼叫 [hash_set：： hasher (STL/CLR) ](../dotnet/hash-set-hasher-stl-clr.md)類型的預存委派物件，判斷哪些值區應包含指定的排序索引鍵。 您可以藉由呼叫成員函式[hash_set：： hash_delegate (STL/CLR) ](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` 取得相依于索引鍵值的整數值，來存取這個儲存的物件。 當您建立 hash_set 時，可以指定預存的委派物件。如果您未指定委派物件，則預設值為函數 `System::Object::hash_value(key_type)` 。 這表示對於任何金鑰 `X` 和 `Y` ：
+物件會藉由呼叫 [hash_set：： hasher (STL/CLR) ](#hasher)類型的預存委派物件，判斷哪些值區應包含指定的排序索引鍵。 您可以藉由呼叫成員函式[hash_set：： hash_delegate (STL/CLR) ](#hash_delegate) `()` 取得相依于索引鍵值的整數值，來存取這個儲存的物件。 當您建立 hash_set 時，可以指定預存的委派物件。如果您未指定委派物件，則預設值為函數 `System::Object::hash_value(key_type)` 。 這表示對於任何金鑰 `X` 和 `Y` ：
 
 `hash_delegate()(X)` 每次呼叫時，都會傳回相同的整數結果。
 
@@ -224,9 +224,9 @@ template<typename Key>
 
 每個元素都可作為索引鍵和值。 順序的表示方式，可讓您查閱、插入和移除任意專案，而這些作業與序列中的專案數目無關， (常數時間) --至少在案例中的最大值。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
 
-但是，如果雜湊值未一致地散發，雜湊表就可以進行退化。 在最極端的情況下，雜湊函數一律會傳回相同的值（查閱、插入和移除），與序列中的專案數目成正比 (線性時間) 。 容器會致力於選擇合理的雜湊函式、平均值區大小，以及雜湊表大小 (值區的總數) ，但您可以覆寫任何或所有的選項。 例如，請參閱函式 [hash_set：： max_load_factor (stl/clr) ](../dotnet/hash-set-max-load-factor-stl-clr.md) 和 [hash_set：： rehash (stl/clr) ](../dotnet/hash-set-rehash-stl-clr.md)。
+但是，如果雜湊值未一致地散發，雜湊表就可以進行退化。 在最極端的情況下，雜湊函數一律會傳回相同的值（查閱、插入和移除），與序列中的專案數目成正比 (線性時間) 。 容器會致力於選擇合理的雜湊函式、平均值區大小，以及雜湊表大小 (值區的總數) ，但您可以覆寫任何或所有的選項。 例如，請參閱函式 [hash_set：： max_load_factor (stl/clr) ](#max_load_factor) 和 [hash_set：： rehash (stl/clr) ](#rehash)。
 
-Hash_set 支援雙向反覆運算器，這表示您可以使用反覆運算器逐步執行連續的元素，以指定受控制序列中的元素。 特殊的前端節點對應至[hash_set：： end (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md)所傳回的反覆運算器 `()` 。 您可以遞減此反覆運算器，以到達受控制序列中的最後一個元素（如果有的話）。 您可以將 hash_set 反覆運算器遞增以到達前端節點，然後再比較是否等於 `end()` 。 但是，您無法取值傳回的反覆運算器 `end()` 。
+Hash_set 支援雙向反覆運算器，這表示您可以使用反覆運算器逐步執行連續的元素，以指定受控制序列中的元素。 特殊的前端節點對應至[hash_set：： end (STL/CLR) ](#end)所傳回的反覆運算器 `()` 。 您可以遞減此反覆運算器，以到達受控制序列中的最後一個元素（如果有的話）。 您可以將 hash_set 反覆運算器遞增以到達前端節點，然後再比較是否等於 `end()` 。 但是，您無法取值傳回的反覆運算器 `end()` 。
 
 請注意，您不能直接參考指定其數位位置的 hash_set 專案，這需要隨機存取反覆運算器。
 
@@ -364,7 +364,7 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-成員函式會有效地呼叫[hash_set：： erase (stl/clr) ](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set：： begin (stl/clr) ](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set：： end (stl/clr) ](../dotnet/hash-set-end-stl-clr.md) `())` 。 您可以使用它來確保受控制的序列是空的。
+成員函式會有效地呼叫[hash_set：： erase (stl/clr) ](#erase) `(` [hash_set：： begin (stl/clr) ](#begin) `(),` [hash_set：： end (stl/clr) ](#end) `())` 。 您可以使用它來確保受控制的序列是空的。
 
 ### <a name="example"></a>範例
 
@@ -659,7 +659,7 @@ bool empty();
 
 ### <a name="remarks"></a>備註
 
-成員函式會對空的受控制序列傳回 true。 它相當於[hash_set：： size (STL/CLR) ](../dotnet/hash-set-size-stl-clr.md) `() == 0` 。 您可以使用它來測試 hash_set 是否為空白。
+成員函式會對空的受控制序列傳回 true。 它相當於[hash_set：： size (STL/CLR) ](#size) `() == 0` 。 您可以使用它來測試 hash_set 是否為空白。
 
 ### <a name="example"></a>範例
 
@@ -765,7 +765,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回一對反覆運算器 `cliext::pair<iterator, iterator>(` [hash_set：： lower_bound (stl/clr) ](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set：： upper_bound (stl/clr) ](../dotnet/hash-set-upper-bound-stl-clr.md) `(key))` 。 您可以使用它來判斷目前在受控制序列中，符合指定索引鍵的元素範圍。
+成員函式會傳回一對反覆運算器 `cliext::pair<iterator, iterator>(` [hash_set：： lower_bound (stl/clr) ](#lower_bound) `(key),` [hash_set：： upper_bound (stl/clr) ](#upper_bound) `(key))` 。 您可以使用它來判斷目前在受控制序列中，符合指定索引鍵的元素範圍。
 
 ### <a name="example"></a>範例
 
@@ -836,7 +836,7 @@ bool erase(key_type key)
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會移除由*where*所指向之受控制序列的元素，並傳回反覆運算器，指定移除專案之後的第一個元素，或[hash_set：： end (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md) （ `()` 如果沒有這類專案存在）。 您可以使用它來移除單一專案。
+第一個成員函式會移除由*where*所指向之受控制序列的元素，並傳回反覆運算器，指定移除專案之後的第一個元素，或[hash_set：： end (STL/CLR) ](#end) （ `()` 如果沒有這類專案存在）。 您可以使用它來移除單一專案。
 
 第二個成員函式會移除範圍 [，) 中受控制序列的元素， `first` `last` 並傳回反覆運算器，此反覆運算器會指定移除任何專案之後剩餘的第一個元素，或 `end()` 如果沒有這類專案存在，則為。 您可以使用它來移除零個或多個連續元素。
 
@@ -909,7 +909,7 @@ iterator find(key_type key);
 
 ### <a name="remarks"></a>備註
 
-如果受控制序列中至少有一個專案具有與索引*鍵*相等的排序，則成員函式會傳回反覆運算器，指定其中一個元素;否則，它會傳回[hash_set：： end (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md) `()` 。 您可以使用它來找出目前在受控制序列中且符合指定索引鍵的元素。
+如果受控制序列中至少有一個專案具有與索引*鍵*相等的排序，則成員函式會傳回反覆運算器，指定其中一個元素;否則，它會傳回[hash_set：： end (STL/CLR) ](#end) `()` 。 您可以使用它來找出目前在受控制序列中且符合指定索引鍵的元素。
 
 ### <a name="example"></a>範例
 
@@ -1257,7 +1257,7 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 *Pred*<br/>
 受控制序列的順序述詞。
 
-*向右*<br/>
+*對*<br/>
 要插入的物件或範圍。
 
 ### <a name="remarks"></a>備註
@@ -1517,7 +1517,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 要插入的範圍結尾。
 
-*向右*<br/>
+*對*<br/>
 要插入的列舉。
 
 *瓦爾*<br/>
@@ -1829,7 +1829,7 @@ float load_factor();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 `(float)` [hash_set：： size (stl/clr) ](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set：： bucket_count (stl/clr) ](../dotnet/hash-set-bucket-count-stl-clr.md) `()` 。 您可以使用它來判斷平均 bucket 大小。
+成員函式會傳回 `(float)` [hash_set：： size (stl/clr) ](#size) `() /` [hash_set：： bucket_count (stl/clr) ](#bucket_count) `()` 。 您可以使用它來判斷平均 bucket 大小。
 
 ### <a name="example"></a>範例
 
@@ -1908,7 +1908,7 @@ iterator lower_bound(key_type key);
 
 ### <a name="remarks"></a>備註
 
-成員函式會決定受控制序列中的第一個專案，此專案 `X` 會雜湊到與索引 *鍵* 相同的值區，並對索引 *鍵*具有對等的排序 如果沒有這類專案存在，則會傳回[hash_set：： end (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md) `()` ; 否則會傳回指定的 iterator `X` 。 您可以使用它來找出目前在受控制序列中，符合指定索引鍵的一連串元素。
+成員函式會決定受控制序列中的第一個專案，此專案 `X` 會雜湊到與索引 *鍵* 相同的值區，並對索引 *鍵*具有對等的排序 如果沒有這類專案存在，則會傳回[hash_set：： end (STL/CLR) ](#end) `()` ; 否則會傳回指定的 iterator `X` 。 您可以使用它來找出目前在受控制序列中，符合指定索引鍵的一連串元素。
 
 ### <a name="example"></a>範例
 
@@ -2073,7 +2073,7 @@ hash_set<Key>% operator=(hash_set<Key>% right);
 
 #### <a name="parameters"></a>參數
 
-*向右*<br/>
+*對*<br/>
 要複製的容器。
 
 ### <a name="remarks"></a>備註
@@ -2221,7 +2221,7 @@ void rehash();
 
 ### <a name="remarks"></a>備註
 
-成員函式會重建雜湊表，以確保[hash_set：： load_factor (stl/clr) ](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set：： max_load_factor (stl/clr) ](../dotnet/hash-set-max-load-factor-stl-clr.md)。 否則，雜湊表只會在插入之後視需要增加大小。  (不會自動縮減大小。 ) 您使用它來調整雜湊表的大小。
+成員函式會重建雜湊表，以確保[hash_set：： load_factor (stl/clr) ](#load_factor) `() <=` [hash_set：： max_load_factor (stl/clr) ](#max_load_factor)。 否則，雜湊表只會在插入之後視需要增加大小。  (不會自動縮減大小。 ) 您使用它來調整雜湊表的大小。
 
 ### <a name="example"></a>範例
 
@@ -2386,7 +2386,7 @@ size_type size();
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[hash_set：： empty (STL/CLR) ](../dotnet/hash-set-empty-stl-clr.md) `()` 。
+成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的元素數目。 如果您只在意順序是否有非零的大小，請參閱[hash_set：： empty (STL/CLR) ](#empty) `()` 。
 
 ### <a name="example"></a>範例
 
@@ -2488,7 +2488,7 @@ void swap(hash_set<Key>% right);
 
 #### <a name="parameters"></a>參數
 
-*向右*<br/>
+*對*<br/>
 要交換內容的容器。
 
 ### <a name="remarks"></a>備註
@@ -2611,7 +2611,7 @@ iterator upper_bound(key_type key);
 
 ### <a name="remarks"></a>備註
 
-成員函式會決定受控制序列中的最後一個專案，此專案 `X` 會雜湊到與索引 *鍵* 相同的值區，並對索引 *鍵*具有對等的排序 如果沒有這類專案，或 `X` 為受控制序列中的最後一個專案，則會傳回[hash_set：： END (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md) `()` ; 否則會傳回反覆運算器，指定超過的第一個元素 `X` 。 您可以使用它來找出目前在受控制序列中，符合指定索引鍵的專案序列結尾。
+成員函式會決定受控制序列中的最後一個專案，此專案 `X` 會雜湊到與索引 *鍵* 相同的值區，並對索引 *鍵*具有對等的排序 如果沒有這類專案，或 `X` 為受控制序列中的最後一個專案，則會傳回[hash_set：： END (STL/CLR) ](#end) `()` ; 否則會傳回反覆運算器，指定超過的第一個元素 `X` 。 您可以使用它來找出目前在受控制序列中，符合指定索引鍵的專案序列結尾。
 
 ### <a name="example"></a>範例
 

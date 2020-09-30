@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833396"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507775"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>教學課程： vcperf 和 Windows Performance Analyzer
 
@@ -123,10 +123,10 @@ WPA 是 Windows 評定及部署套件 (ADK) 所提供的追蹤檢視器。 它�
 [教學課程： Windows Performance Analyzer 基本概念](wpa-basics.md)\
 深入瞭解可協助您分析組建追蹤的一般 WPA 作業。
 
-[參考： vcperf 命令](/cpp/build-insights/reference/vcperf-commands)\
+[參考： vcperf 命令](../reference/vcperf-commands.md)\
 *vcperf.exe*命令參考會列出所有可用的命令選項。
 
-[參考： Windows Performance Analyzer 視圖](/cpp/build-insights/reference/wpa-views)\
+[參考： Windows Performance Analyzer 視圖](../reference/wpa-views.md)\
 請參閱這篇文章，以取得有關 WPA 中 c + + 組建見解視圖的詳細資料。
 
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)\

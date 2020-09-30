@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
-ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
+ms.openlocfilehash: 5a791b5d0be218a49be28930c191de3eb4acf4be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89933823"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505543"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -135,9 +135,9 @@ double wcstod_l(
 *基數* 是基本點字元，可能是句點 (。 ) 預設的 "C" 地區設定中，如果目前的地區設定不同或指定了 *地區* 設定，則為地區設定特有的值。
  *序列*是一連串的英數位元或底線字元。
 
-在十進位和十六進位數位形式中，如果基本點字元之前沒有任何數位，則基本點字元之後至少必須有一個數位。 
+在十進位和十六進位數位形式中，如果基本點字元之前沒有任何數位，則基本點字元之後至少必須有一個數位。
 
-在十進位格式中，小數位數後面可以加上開頭字母 (**e** 或 **e**) 和選擇性帶正負號的整數。 
+在十進位格式中，小數位數後面可以加上開頭字母 (**e** 或 **e**) 和選擇性帶正負號的整數。
 
 在十六進位格式中，十六進位數位後面可以加上開頭字母 (**p** 或 **p**) ，以及選擇性的帶正負號的十進位整數（表示指數為2的乘冪）。
 
@@ -147,7 +147,7 @@ double wcstod_l(
 
 這些函式的 UCRT 版本不支援將 Fortran 樣式的 (**d** 或 **d**) 的指數位母轉換。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。 UCRT 版本支援十六進位字串和來回往返的 INF 和 NAN 值，但在舊版中不支援。 這也會導致程式碼中的重大變更。 例如，在舊版中， **strtod** 會將字串 "0x1a" 解釋為0.0，但在 UCRT 版本中則是26.0。
 
-## <a name="requirements"></a>規格需求
+## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|

@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: bea22a0d9fdc5c1ddbd9da2af7078228a6315e80
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 9abe97e3ec2b04bf631dcad7644f3c7dd668440e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414135"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505996"
 ---
 # <a name="consuming-generics-ccli"></a>使用泛型 (C++/CLI)
 
 以某一種 .NET (或 UWP) 語言撰寫的泛型可以在其他語言中使用。 與範本不同的是，泛型在編譯的組件中仍然保持為泛型。 因此，您可以在不同組件中，甚至以與定義泛型類型的組件不同的語言，將泛型類型具現化。
 
-## <a name="example-generic-class-defined-in-c"></a>範例：在 C 中定義的泛型類別#
+## <a name="example-generic-class-defined-in-c"></a>範例：在 C 中定義的泛型類別 #
 
 ### <a name="description"></a>描述
 
@@ -80,7 +80,7 @@ public class CircularList<ItemType> {
 }
 ```
 
-## <a name="example-consume-assembly-authored-in-c"></a>範例：使用以 C 撰寫的元件#
+## <a name="example-consume-assembly-authored-in-c"></a>範例：使用以 C 撰寫的元件 #
 
 ### <a name="description"></a>描述
 

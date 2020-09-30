@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中設定 Linux CMake 專案
 description: 如何在 Visual Studio 中設定 Linux CMake 設定
 ms.date: 08/08/2020
-ms.openlocfilehash: 762f135988587e777c2a33a1bd402770c297226b
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 32c851791402b59c941ae088fa637d3d9953dd1b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414530"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504724"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>在 Visual Studio 中設定 Linux CMake 專案
 
@@ -53,6 +53,7 @@ Linux 的預設設定 Visual Studio 2017 (和 Visual Studio 2019 16.0 版) 看�
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -97,6 +98,7 @@ Visual Studio 2019 16.1 版和更新版本中的預設 Linux-Debug 設定看起�
 如需有關這些設定的詳細資訊，請參閱 [CMakeSettings.json 參考](../build/cmakesettings-reference.md)。
 
 當您執行組建時：
+
 - 如果您是以遠端系統為目標，Visual Studio 預設會針對遠端目標，在 [**工具**選項] 下的 [ > **Options** > **跨平臺** > **連線管理員**] 清單中選擇第一個遠端系統。
 - 如果找不到任何遠端連線，系統會提示您建立一個。 如需詳細資訊，請參閱[連線到您的遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)。
 

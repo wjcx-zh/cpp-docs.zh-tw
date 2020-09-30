@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0a78d5074c37f4fbbfb736125626fa4b7fc7e275
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042052"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505751"
 ---
 # <a name="pair-structure"></a>pair 結構
 
@@ -75,7 +75,6 @@ template<class T1, class T2>
 第二個函式會將配對的第一個元素初始化為 *Val1* ，而第二個則初始化為 *Val2。*  如果這兩種類型都是複製可建構，則會定義它。
 
 第三個 (範本) 的函式會將該配對的第一個專案初始化為 `Right` 。 **第一個** 和第二個至 `Right` 。 **第二個**。  如果這兩個配對類型都是從提供的實值型別可建構，則會定義它。
-
 
 第四個函式會將該配對的第一個專案初始化為 *Val1* ，而第二個則是使用右值參考宣告子來 *Val2* [：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。  如果這兩個配對類型都是從提供的實值型別可建構，則會定義它。
 

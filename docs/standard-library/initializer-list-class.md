@@ -1,6 +1,6 @@
 ---
 title: initializer_list 類別
-description: C++標準庫中initializer_list類的引用,由 Microsoft 在 Visual Studio 中實現。
+description: C + + 標準程式庫中 initializer_list 類別的參考，由 Microsoft 在 Visual Studio 中執行。
 ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: b1d33ce484948e731f8d3062b7a99df06ef26073
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 232855fbcac1e4df9af7cf956fda80201326a401
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373352"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504637"
 ---
 # <a name="initializer_list-class"></a>initializer_list 類別
 
@@ -44,7 +44,7 @@ class initializer_list
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-每當函式簽章需要 `initializer_list` 時，編譯器會將以大括號括住且具有同質項目的初始設定式清單轉換至 `initializer_list`。 有關使用`initializer_list`的詳細資訊,請參閱[統一初始化和委派構造函數](../cpp/uniform-initialization-and-delegating-constructors.md)
+每當函式簽章需要 `initializer_list` 時，編譯器會將以大括號括住且具有同質項目的初始設定式清單轉換至 `initializer_list`。 如需使用的詳細資訊 `initializer_list` ，請參閱[統一初始化和委派](../cpp/initializing-classes-and-structs-without-constructors-cpp.md)函式
 
 ### <a name="constructors"></a>建構函式
 
@@ -68,16 +68,16 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 |成員函數|描述|
 |-|-|
 |[開始](#begin)|傳回 `initializer_list` 中第一個項目的指標。|
-|[結束](#end)|傳回超出 `initializer_list` 中最後一個項目的項目指標。|
-|[大小](#size)|傳回 `initializer_list` 中項目的數目。|
+|[end](#end)|傳回超出 `initializer_list` 中最後一個項目的項目指標。|
+|[size](#size)|傳回 `initializer_list` 中項目的數目。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<initializer_list>
+**標頭：**\<initializer_list>
 
 **命名空間：** std
 
-## <a name="initializer_listbegin"></a><a name="begin"></a>initializer_list:開始
+## <a name="initializer_listbegin"></a><a name="begin"></a> initializer_list：： begin
 
 傳回 `initializer_list` 中第一個項目的指標。
 
@@ -89,7 +89,7 @@ constexpr const InputIterator* begin() const noexcept;
 
 指向 `initializer_list` 第一個項目的指標。 如果此清單是空的，則該清單開頭和結尾的指標相同。
 
-## <a name="initializer_listend"></a><a name="end"></a>initializer_list:結束
+## <a name="initializer_listend"></a><a name="end"></a> initializer_list：： end
 
 傳回超出 `initializer list` 中最後一個項目的項目指標。
 
@@ -99,9 +99,9 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-超出清單中最後一個項目的項目指標。 如果清單為空,則與指向清單中第一個元素的指標相同。
+超出清單中最後一個項目的項目指標。 如果清單是空的，它會與清單中第一個元素的指標相同。
 
-## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a>initializer_list::initializer_list
+## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a> initializer_list：： initializer_list
 
 建構類型 `initializer_list` 的物件。
 
@@ -120,7 +120,7 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="remarks"></a>備註
 
-`initializer_list` 的基礎為指定類型的物件陣列。 複製`initializer_list`a 將創建指向相同物件的清單的第二個實例;不會複製基礎物件。
+`initializer_list` 的基礎為指定類型的物件陣列。 複製會 `initializer_list` 建立指向相同物件之清單的第二個實例; 不會複製基礎物件。
 
 ### <a name="example"></a>範例
 
@@ -183,7 +183,7 @@ c3 = 5 4 3 2 1
 c5 = 5 4
 ```
 
-## <a name="initializer_listsize"></a><a name="size"></a>initializer_list::大小
+## <a name="initializer_listsize"></a><a name="size"></a> initializer_list：： size
 
 傳回清單中項目的數目。
 

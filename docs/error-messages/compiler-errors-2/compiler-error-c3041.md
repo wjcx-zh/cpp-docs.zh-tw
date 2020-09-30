@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3041
 ms.assetid: 9df1ae44-3ac7-4c6c-899f-f35ffe7ccf0d
-ms.openlocfilehash: f9f9b9a598760b251d911f3f0a5ddd1114dd764c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 06233369bfd813d53e895a559fa8a6cf8f885fa7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754936"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506413"
 ---
 # <a name="compiler-error-c3041"></a>編譯器錯誤 C3041
 
 'var'：'copyprivate' 子句中的變數在封入內容中必須是私用
 
-在封入內容中不能共用傳遞給 [copyprivate](../../parallel/openmp/reference/copyprivate.md) 的變數。
+在封入內容中不能共用傳遞給 [copyprivate](../../parallel/openmp/reference/openmp-clauses.md#copyprivate) 的變數。
 
 下列範例會產生 C3041：
 

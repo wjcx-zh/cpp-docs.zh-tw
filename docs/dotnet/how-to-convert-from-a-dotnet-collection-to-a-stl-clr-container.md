@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: a7b2ee94f02e663690287ecfa6bc8a7230830a95
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 4993571d479924edc71a277887a8bd95fc4fd463
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686453"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506430"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>如何：從 .NET 集合轉換為 STL/CLR 容器
 
@@ -24,7 +24,7 @@ ms.locfileid: "90686453"
 
 -或-
 
-1. 藉由建立 [collection_adapter](../dotnet/collection-adapter-stl-clr.md) 物件，建立泛型 STL/CLR 容器。 此範本類別會將 .NET 集合介面視為引數。 若要確認支援的介面，請參閱 [collection_adapter (STL/CLR) ](../dotnet/collection-adapter-stl-clr.md)。
+1. 藉由建立 [collection_adapter](./adapter-stl-clr.md#collection_adapter) 物件，建立泛型 STL/CLR 容器。 此範本類別會將 .NET 集合介面視為引數。 若要確認支援的介面，請參閱 [collection_adapter (STL/CLR) ](./adapter-stl-clr.md#collection_adapter)。
 
 1. 將 .NET 集合的內容複寫到容器。 這可以藉由使用 STL/CLR [演算法](../dotnet/algorithm-stl-clr.md)來完成，或逐一查看 .net 集合，並將每個元素的複本插入 STL/clr 容器中。
 

@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: cb28b0b31188fcf7fefef95ddb44c9aab813e6ac
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: cf7f071ab98cb872537af076b89e0a1b07a1a6a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353177"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505879"
 ---
 # <a name="multiset-class"></a>multiset 類別
 
@@ -154,7 +154,7 @@ C + + 標準程式庫 `multiset` 類別為：
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 物件之 `multiset` 類別的 typedef。|
 |[const_iterator](#const_iterator)|雙向反覆運算器的 typedef，可以讀取中的 **`const`** 元素 `multiset` 。|
@@ -205,7 +205,7 @@ C + + 標準程式庫 `multiset` 類別為：
 
 ### <a name="operators"></a>運算子
 
-|運算子|說明|
+|運算子|描述|
 |-|-|
 |[運算子 =](#op_eq)|用另一個 `multiset` 的複本取代 `multiset` 的項目。|
 
@@ -490,7 +490,7 @@ template<class K> bool contains(const K& key) const;
 
 `contains()` 是 c + + 20 的新功能。 若要使用它，請指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 的編譯器選項。
 
-`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。 如需詳細資訊，請參閱 [關聯容器中的異類查閱](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 。
+`template<class K> bool contains(const K& key) const` 如果是透明的，則只會參與多載解析 `key_compare` 。 如需詳細資訊，請參閱 [關聯容器中的異類查閱](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 。
 
 ### <a name="example"></a>範例
 
@@ -506,7 +506,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theMultiSet.contains(2) << '\n';
     std::cout << theMultiSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```

@@ -1,5 +1,5 @@
 ---
-title: C/c + + 的程式碼分析警告
+title: C/c + + 警告的程式碼分析
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - native code analysis
 - warnings, C/C++ analysis
 ms.assetid: 28f3fda6-35e8-485b-9755-1991aaccec3f
-ms.openlocfilehash: 5562df8b6f0cfba6799e208acb9c1c223fb53e5e
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 7982be29ba458a040239387b65d46c7b240cb7b7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389970"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504854"
 ---
-# <a name="code-analysis-for-cc-warnings"></a>C/c + + 的程式碼分析警告
+# <a name="code-analysis-for-cc-warnings"></a>C/c + + 警告的程式碼分析
 
-本節列出 C/c + + 程式碼分析警告，但[C++ Core Guidelines 檢查](code-analysis-for-cpp-corecheck.md)程式所引發的例外狀況除外。 如需程式碼分析的詳細資訊，請參閱[ `/analyze` （程式碼分析）](/cpp/build/reference/analyze-code-analysis)和[快速入門： C/c + + 的程式碼分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
+本節列出 C/c + + 程式碼分析警告，但 [C++ Core Guidelines 檢查](code-analysis-for-cpp-corecheck.md)器引發的警告除外。 如需程式碼分析的詳細資訊，請參閱 (程式碼分析[ `/analyze`) ](../build/reference/analyze-code-analysis.md)和[快速入門： c/c + + 的程式碼分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

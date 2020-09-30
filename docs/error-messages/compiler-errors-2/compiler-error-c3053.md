@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3053
 ms.assetid: ab9a25f3-e341-4f6e-8e69-069b4a963a64
-ms.openlocfilehash: 07514dfb931dcb5bf45bb8526cd19cf19103a56f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8889388dc07f871bb60de44d317f9c8882795b03
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761200"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506193"
 ---
 # <a name="compiler-error-c3053"></a>編譯器錯誤 C3053
 
 'symbol': 'threadprivate' 只對全域或靜態資料項目有效
 
-傳遞至 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 的符號必須是全域或靜態的。
+傳遞至 [threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) 的符號必須是全域或靜態的。
 
 下列範例會產生 C3053：
 
@@ -34,7 +34,7 @@ void Test() {
 }
 ```
 
-可能的解決方案：
+可能的解決方式：
 
 ```cpp
 // C3053b.cpp

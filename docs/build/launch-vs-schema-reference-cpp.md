@@ -3,16 +3,16 @@ title: '架構參考上的 launch.vs.js(c + +) '
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841983"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505669"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>架構參考上的 launch.vs.js(c + +) 
 
-使用檔案 * 上的launch.vs.js* 來設定調試參數。 建立檔案。 以滑鼠右鍵按一下 **方案總管** 中的可執行檔，然後選擇 [ **Debug] 和 [啟動設定**]。 選擇最符合您專案的選項，然後使用下列屬性，視需要修改設定。 如需有關偵錯工具 CMake 專案的詳細資訊，請參閱 [設定 CMake 調試](/cpp/build/configure-cmake-debugging-sessions)程式。
+使用檔案 * 上的launch.vs.js* 來設定調試參數。 建立檔案。 以滑鼠右鍵按一下 **方案總管** 中的可執行檔，然後選擇 [ **Debug] 和 [啟動設定**]。 選擇最符合您專案的選項，然後使用下列屬性，視需要修改設定。 如需有關偵錯工具 CMake 專案的詳細資訊，請參閱 [設定 CMake 調試](./configure-cmake-debugging-sessions.md)程式。
 
 ## <a name="default-properties"></a>預設屬性
 
@@ -38,7 +38,7 @@ ms.locfileid: "88841983"
 |屬性|類型|描述|
 |-|-|-|
 |`program`|字串|遠端電腦上程式可執行檔的完整路徑。 使用 CMake 時，宏 `${debugInfo.fullTargetPath}` 可以用來做為此欄位的值。|
-|`processId`|integer|要附加偵錯工具的選擇性處理序識別碼。|
+|`processId`|整數|要附加偵錯工具的選擇性處理序識別碼。|
 |`sourceFileMap`|物件 (object)|傳遞至調試引擎的選擇性來源檔案對應。 格式： `{ "\<Compiler source location>": "\<Editor source location>" }` 或 `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }` 。 範例：`{ "/home/user/foo": "C:\\foo" }` 或 `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`。 請參閱 [原始檔對應選項](#source_file_map_options)。|
 |`additionalProperties`|字串|其中一個 sourceFileMapOptions。 (請參閱下方。)|
 |`MIMode`|字串|表示 MIDebugEngine 將連接之 MI 的主控台偵錯工具類型。 允許的值為 "gdb"、"lldb"。|

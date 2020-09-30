@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3047
 ms.assetid: 91c14566-5958-433d-8549-0e8bc3196f76
-ms.openlocfilehash: c6b8530aa1a1d5b8a0bfa735a9cc759a698ae841
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 41312e09996e2fe007cdc13c0369b5154e720841
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761321"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506218"
 ---
 # <a name="compiler-error-c3047"></a>編譯器錯誤 C3047
 
 OpenMP 'sections' 區域中的結構化區塊，前面必須是 '#pragma omp section'
 
-由 [sections](../../parallel/openmp/reference/sections-openmp.md) 指示詞引入之程式碼區塊中的任何程式碼，都必須位於由 `section` 指示詞引入的程式碼區塊中。
+由 [sections](../../parallel/openmp/reference/openmp-directives.md#sections-openmp) 指示詞引入之程式碼區塊中的任何程式碼，都必須位於由 `section` 指示詞引入的程式碼區塊中。
 
 下列範例會產生 C3047：
 

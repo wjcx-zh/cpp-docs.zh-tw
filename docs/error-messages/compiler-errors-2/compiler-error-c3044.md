@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3044
 ms.assetid: 9f3e25b2-4676-49ab-97bf-6c88cd0fa377
-ms.openlocfilehash: 74e931d8110c1104125b977e45ad0c6fd3ffd5f0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0ac2a6a86ffd719dbb5f39fc085d3f5cbca0567d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761360"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506353"
 ---
 # <a name="compiler-error-c3044"></a>編譯器錯誤 C3044
 
 'section' : 只允許以巢狀方式直接放在 OpenMP 'sections' 指示詞之下
 
-編譯器發現 `section` 指示詞的使用方式錯誤。 如需詳細資訊，請參閱 [章節](../../parallel/openmp/reference/sections-openmp.md)。
+編譯器發現 `section` 指示詞的使用方式錯誤。 如需詳細資訊，請參閱 [章節](../../parallel/openmp/reference/openmp-directives.md#sections-openmp)。
 
 下列範例會產生 C3044：
 

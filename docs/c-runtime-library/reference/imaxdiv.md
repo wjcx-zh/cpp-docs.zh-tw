@@ -24,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954639"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505637"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -54,11 +54,11 @@ imaxdiv_t imaxdiv(
 
 ## <a name="return-value"></a>傳回值
 
-以[intmax_t](../../c-runtime-library/standard-types.md)類型的引數呼叫的**imaxdiv**會傳回包含商和餘數的[imaxdiv_t](../../c-runtime-library/standard-types.md)類型結構。
+使用[intmax_t](../../c-runtime-library/standard-types.md)類型的引數呼叫的**imaxdiv**會傳回包含商和餘數的型別[imaxdiv_t](../../c-runtime-library/standard-types.md)結構。
 
 ## <a name="remarks"></a>備註
 
-**Imaxdiv**函數會將*推*除以*denom* ，進而計算商和餘數。 **Imaxdiv_t**結構包含商、 **intmax_t** **，以及**餘數**intmax_t** **rem**。商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。
+**Imaxdiv**函式會將*推*除以*denom* ，進而計算商和餘數。 **Imaxdiv_t**結構包含商、 **intmax_t** **，以及**餘數**intmax_t** **rem**。商的正負號與數學商的正負號相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會結束並出現錯誤訊息。
 
 ## <a name="requirements"></a>需求
 
@@ -107,4 +107,4 @@ results in a quotient of 1079252848505, and a remainder of 5170
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
-[ldiv、lldiv](ldiv-lldiv.md)<br/>
+[ldiv、lldiv](./div.md)<br/>
